@@ -3,14 +3,84 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=./20260501-stock-news-kelvin.html">
   <title>Kelvin Wiggly｜2026/05/01 市場晨報</title>
+  <style>
+    :root { color-scheme: light; --bg:#f8f1e7; --card:#fffaf2; --ink:#2d241c; --muted:#8a7764; --line:#eadcc8; --accent:#b88746; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Segoe UI",sans-serif; background:var(--bg); color:var(--ink); }
+    main { max-width: 880px; margin: 0 auto; padding: 28px 18px 48px; }
+    .hero, .water-log { background:var(--card); border:1px solid var(--line); border-radius:24px; padding:22px; box-shadow:0 10px 30px rgba(72,48,24,.08); }
+    .eyebrow { color:var(--accent); font-weight:700; letter-spacing:.08em; font-size:.85rem; }
+    h1 { margin:.35rem 0 .75rem; line-height:1.2; }
+    p { color:var(--muted); line-height:1.7; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:18px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; min-height:42px; padding:0 16px; border-radius:999px; text-decoration:none; font-weight:700; border:1px solid var(--accent); }
+    .btn.primary { background:var(--accent); color:white; }
+    .btn.secondary { color:var(--accent); background:transparent; }
+    .water-log { margin-top:26px; }
+    table { width:100%; border-collapse:collapse; margin-top:12px; font-size:.92rem; }
+    th, td { padding:10px 8px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { color:var(--accent); white-space:nowrap; }
+    .empty { padding:14px 0; color:var(--muted); }
+  </style>
 </head>
 <body>
   <main>
-    <h1>Kelvin Wiggly｜2026/05/01 市場晨報</h1>
-    <p>正在前往今日晨報。如果沒有自動跳轉，請點選下方連結。</p>
-    <p><a href="./20260501-stock-news-kelvin.html">閱讀今日晨報</a></p>
+    <section class="hero">
+      <div class="eyebrow">LATEST MORNING BRIEF</div>
+      <h1>Kelvin Wiggly｜2026/05/01 市場晨報</h1>
+      <p>今日正式晨報目前仍保留在獨立頁面。之後自動化會改成每天直接覆蓋首頁，並在下方保留 rolling 30 days 水位紀錄。</p>
+      <div class="actions">
+        <a class="btn primary" href="./20260501-stock-news-kelvin.html">閱讀今日晨報</a>
+        <a class="btn secondary" href="#water-level-log">查看歷史水位</a>
+      </div>
+    </section>
+
+    <section class="water-log" id="water-level-log">
+      <div class="eyebrow">ROLLING 30 DAYS</div>
+      <h2>最近一個月水位紀錄</h2>
+      <div id="waterLevelContent" class="empty">讀取水位紀錄中…</div>
+    </section>
   </main>
+
+  <script>
+    const fallback = [{
+      date: '2026-05-01',
+      holding_level: '63.8%',
+      market_state: '高檔分化',
+      cover: '02 高檔分化',
+      systemic_risk: '中',
+      vix: '17.41 / -7.44%',
+      taifex_night: '39337 / -142',
+      foreign_futures_net: '-44,044 口',
+      main_theme: 'AI / 半導體 / PCB',
+      strategy: '看財報與量價接棒',
+      risk_control: '中性偏謹慎'
+    }];
+
+    function renderWaterLog(records) {
+      const root = document.getElementById('waterLevelContent');
+      const rows = (records || []).slice(-30).reverse();
+      if (!rows.length) {
+        root.textContent = '目前尚無水位紀錄。';
+        return;
+      }
+      root.classList.remove('empty');
+      root.innerHTML = `<table aria-label="最近一個月水位紀錄">
+        <thead><tr><th>日期</th><th>水位</th><th>盤勢</th><th>風險</th><th>主線 / 策略</th></tr></thead>
+        <tbody>${rows.map(r => `<tr>
+          <td>${r.date || '待補'}</td>
+          <td>${r.holding_level || '待補'}</td>
+          <td>${r.market_state || '待補'}<br><small>${r.cover || '待補'}</small></td>
+          <td>${r.systemic_risk || '待補'}<br><small>VIX ${r.vix || '待補'}</small></td>
+          <td>${r.main_theme || '待補'}<br><small>${r.strategy || '待補'}｜${r.risk_control || '待補'}</small></td>
+        </tr>`).join('')}</tbody>
+      </table>`;
+    }
+
+    fetch('./water-level-log.json', { cache: 'no-store' })
+      .then(r => r.ok ? r.json() : fallback)
+      .then(renderWaterLog)
+      .catch(() => renderWaterLog(fallback));
+  </script>
 </body>
 </html>
