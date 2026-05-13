@@ -9,108 +9,87 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Noto+Sans+TC:wght@400;600;800;900&family=Noto+Serif+TC:wght@700;900&family=Playfair+Display:ital,wght@0,800;0,900;1,900&display=swap" rel="stylesheet">
 <style>
 :root{--paper:#F1E8D0;--paper-warm:#E8DCB9;--paper-dark:#D9C99E;--ink:#1A1311;--ink-soft:#4A3D34;--ink-mute:#6B5D54;--blood:#C8102E;--blood-deep:#8B1419;--blood-soft:rgba(200,16,46,.08);--rule:rgba(26,19,17,.18);--serif:'Noto Serif TC','Playfair Display',serif;--sans:'Noto Sans TC',sans-serif;--mono:'JetBrains Mono',monospace;--display:'Playfair Display','Noto Serif TC',serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.7}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:99;opacity:.18;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='4' seed='31' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 10% 8%,rgba(200,16,46,.075),transparent 42%),radial-gradient(ellipse at 88% 90%,rgba(26,19,17,.085),transparent 48%)}
-main{max-width:1180px;margin:auto;padding:28px 18px 80px}.masthead{position:sticky;top:0;z-index:20;background:rgba(241,232,208,.94);backdrop-filter:blur(4px);border-bottom:3px double var(--ink);font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase}.masthead-inner{max-width:1180px;margin:auto;padding:12px 18px;display:flex;justify-content:space-between;gap:16px;align-items:center}.kw-mark{display:inline-grid;place-items:center;width:28px;height:28px;background:var(--ink);color:var(--paper);font-family:var(--display);font-weight:900;font-style:italic;margin-right:10px}.nav-link{display:inline-block;border:1.5px solid var(--ink);padding:5px 9px;background:var(--paper);box-shadow:3px 3px 0 var(--ink);text-decoration:none;color:var(--ink);margin-left:8px}.nav-link:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--blood-deep)}
-header{border:2px solid var(--ink);padding:28px clamp(18px,4vw,46px);box-shadow:8px 8px 0 var(--ink);background:rgba(232,220,185,.64);position:relative;overflow:hidden}header:before{content:'RADAR';position:absolute;right:-.08em;bottom:-.36em;font-family:var(--display);font-size:clamp(6rem,17vw,14rem);font-weight:900;color:rgba(200,16,46,.075);line-height:1;pointer-events:none}.eyebrow,.label{font-family:var(--mono);letter-spacing:.11em;text-transform:uppercase;font-weight:800;color:var(--blood)}h1,h2,h3{font-family:var(--serif);line-height:1.15;text-align:left}h1{font-size:clamp(2.15rem,6vw,5rem);margin:18px 0 12px;max-width:960px}.subtitle{font-size:1.08rem;color:var(--ink-soft);max-width:880px;position:relative;z-index:1}.mark{color:var(--blood);background:var(--blood-soft);padding:0 .18em;font-weight:900}
-section{margin-top:38px;border-top:2px solid var(--ink);padding-top:24px}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card,.tool-card,.result{border:2px solid var(--ink);background:rgba(241,232,208,.92);padding:18px;box-shadow:5px 5px 0 var(--ink);transition:transform .16s,box-shadow .16s}.card:hover,.tool-card:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--blood-deep)}.step{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:start}.num{font-family:var(--mono);display:grid;place-items:center;width:46px;height:46px;background:var(--ink);color:var(--paper);font-weight:900}.pill{display:inline-block;border:1.5px solid var(--ink);padding:4px 8px;margin:4px 4px 0 0;background:var(--paper-warm);font-family:var(--mono);font-size:.78rem;font-weight:800}.warning{border-color:var(--blood);background:var(--blood-soft);box-shadow:5px 5px 0 var(--blood-deep)}
-.checklist label{display:block;border-bottom:1px solid var(--rule);padding:9px 0}.checklist input{accent-color:var(--blood);transform:scale(1.15);margin-right:8px}input[type="text"],select,textarea{width:100%;border:2px solid var(--ink);background:var(--paper);padding:10px 12px;font-family:var(--sans);font-size:1rem}textarea{min-height:94px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.score{font-family:var(--mono);font-size:3rem;font-weight:900;color:var(--blood-deep);line-height:1}.tier{font-family:var(--serif);font-size:1.55rem;font-weight:900}.result{background:var(--blood-soft);margin-top:14px}.action-list li{margin:.45rem 0}.muted{color:var(--ink-mute)}table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid var(--rule);padding:10px 8px;text-align:left;vertical-align:top}th{font-family:var(--mono);font-size:.76rem;color:var(--blood);letter-spacing:.08em}.output{white-space:pre-wrap;font-family:var(--mono);font-size:.86rem;background:var(--paper-warm);border:2px solid var(--ink);padding:14px;box-shadow:4px 4px 0 var(--ink)}footer{margin-top:46px;border-top:3px double var(--ink);padding-top:16px;color:var(--ink-mute);font-size:.9rem}@media(max-width:860px){.masthead-inner{display:block}.grid-2,.grid-3,.form-grid{grid-template-columns:1fr}.step{grid-template-columns:1fr}.num{margin-bottom:8px}}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.7}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:99;opacity:.18;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='4' seed='41' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}main{max-width:1120px;margin:auto;padding:28px 18px 80px}.masthead{position:sticky;top:0;z-index:20;background:rgba(241,232,208,.94);backdrop-filter:blur(4px);border-bottom:3px double var(--ink);font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase}.masthead-inner{max-width:1120px;margin:auto;padding:12px 18px;display:flex;justify-content:space-between;gap:16px}.kw-mark{display:inline-grid;place-items:center;width:28px;height:28px;background:var(--ink);color:var(--paper);font-family:var(--display);font-weight:900;font-style:italic;margin-right:10px}.nav-link{display:inline-block;border:1.5px solid var(--ink);padding:5px 9px;background:var(--paper);box-shadow:3px 3px 0 var(--ink);text-decoration:none;color:var(--ink);margin-left:8px}.nav-link:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--blood-deep)}
+header{border:2px solid var(--ink);padding:28px clamp(18px,4vw,46px);box-shadow:8px 8px 0 var(--ink);background:rgba(232,220,185,.64);position:relative;overflow:hidden}header:before{content:'START';position:absolute;right:-.08em;bottom:-.36em;font-family:var(--display);font-size:clamp(6rem,17vw,14rem);font-weight:900;color:rgba(200,16,46,.075);line-height:1;pointer-events:none}.eyebrow,.label{font-family:var(--mono);letter-spacing:.11em;text-transform:uppercase;font-weight:800;color:var(--blood)}h1,h2,h3{font-family:var(--serif);line-height:1.15}h1{font-size:clamp(2.15rem,6vw,5rem);margin:18px 0 12px;max-width:960px}h2{font-size:clamp(1.55rem,4vw,2.8rem);margin:0 0 14px}.subtitle{font-size:1.08rem;color:var(--ink-soft);max-width:880px}.mark{color:var(--blood);background:var(--blood-soft);padding:0 .18em;font-weight:900}section{margin-top:36px;border-top:2px solid var(--ink);padding-top:24px}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card,.tool-card,.result{border:2px solid var(--ink);background:rgba(241,232,208,.92);padding:18px;box-shadow:5px 5px 0 var(--ink)}.step-no{font-family:var(--mono);display:inline-grid;place-items:center;width:38px;height:38px;background:var(--ink);color:var(--paper);font-weight:900;margin-bottom:8px}.pill{display:inline-block;border:1.5px solid var(--ink);padding:4px 8px;margin:4px 4px 0 0;background:var(--paper-warm);font-family:var(--mono);font-size:.78rem;font-weight:800}.warning{border-color:var(--blood);background:var(--blood-soft);box-shadow:5px 5px 0 var(--blood-deep)}input[type="text"],select{width:100%;border:2px solid var(--ink);background:var(--paper);padding:11px 12px;font-family:var(--sans);font-size:1rem}.choice label{display:block;border:2px solid var(--rule);padding:10px;margin:8px 0;background:rgba(232,220,185,.45);cursor:pointer}.choice input{accent-color:var(--blood);transform:scale(1.15);margin-right:8px}.score{font-family:var(--mono);font-size:3.2rem;font-weight:900;color:var(--blood-deep);line-height:1}.tier{font-family:var(--serif);font-size:1.65rem;font-weight:900}.output{white-space:pre-wrap;font-family:var(--mono);font-size:.9rem;background:var(--paper-warm);border:2px solid var(--ink);padding:14px;box-shadow:4px 4px 0 var(--ink)}.example{border-left:6px solid var(--blood);padding-left:14px}.muted{color:var(--ink-mute)}table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid var(--rule);padding:10px 8px;text-align:left;vertical-align:top}th{font-family:var(--mono);font-size:.76rem;color:var(--blood);letter-spacing:.08em}footer{margin-top:46px;border-top:3px double var(--ink);padding-top:16px;color:var(--ink-mute);font-size:.9rem}@media(max-width:860px){.masthead-inner{display:block}.grid-2,.grid-3{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <nav class="masthead"><div class="masthead-inner"><div><span class="kw-mark">K</span>Kelvin Wiggly</div><div><a class="nav-link" href="./">晨報首頁</a><a class="nav-link" href="20260513-stock-news-kelvin.html">今日晨報</a></div></div></nav>
 <main>
 <header>
-  <div class="eyebrow">Kelvin Wiggly × Practical Radar</div>
-  <h1>飆股雷達煞車器：盤前 5 分鐘篩選，開盤 15 分鐘煞車。</h1>
-  <p class="subtitle">這一頁不是概念說明，也不是明牌清單。它是讀者可以每天照著做的工作台：先選主線、再評估候選股、最後用開高與過熱條件決定「可觀察、等回測、或禁止追價」。</p>
+  <div class="eyebrow">Kelvin Wiggly × Radar Brake</div>
+  <h1>先不用懂模型：照三步驟，判斷一檔股票今天能不能追。</h1>
+  <p class="subtitle">看到熱門題材或強勢股時，不要直接問「會不會漲」。先問三件事：<span class="mark">是不是今日主線？有沒有同族群一起動？開盤有沒有過熱？</span> 這頁會把答案轉成「可觀察、等回測、禁止追價」。</p>
 </header>
 
-<section aria-label="daily workflow">
-  <h2>今天怎麼用</h2>
+<section aria-label="quick start">
+  <h2>第一次使用，只做這 3 步</h2>
   <div class="grid-3">
-    <article class="card step"><div class="num">1</div><div><h3>盤前：只選 1–3 條主線</h3><p>從晨報主線、ETF 升溫區、產業升溫區中選出今天最明確的族群。沒有主線，就不硬找股票。</p><span class="pill">AI</span><span class="pill">半導體</span><span class="pill">PCB/CCL</span><span class="pill">記憶體</span><span class="pill">MLCC</span></div></article>
-    <article class="card step"><div class="num">2</div><div><h3>開盤：只看有承接的候選</h3><p>開盤前 15 分鐘先不急著追。確認量能、族群同步、突破品質與是否開高過頭。</p><span class="pill">量能 1.5–3x</span><span class="pill">平台突破</span><span class="pill">同族群同步</span></div></article>
-    <article class="card step"><div class="num">3</div><div><h3>煞車：先排除不能追的</h3><p>只要出現開高過大、連續急漲、爆量長上影、離支撐太遠，就算題材正確，也先降級。</p><span class="pill">開高過大不追</span><span class="pill">爆量長上影降級</span><span class="pill">回測不守排除</span></div></article>
+    <article class="card"><span class="step-no">1</span><h3>先從晨報圈主線</h3><p>只選今天晨報裡反覆出現的 1–3 條主線。例如：AI、半導體、PCB/CCL、記憶體、MLCC。不是主線，就先不要放進雷達。</p></article>
+    <article class="card"><span class="step-no">2</span><h3>只放最多 3 檔候選</h3><p>從升溫區或你盤中看到的強勢股挑 1–3 檔。候選太多會變成追新聞；雷達的目的不是找最多，是排除不能追的。</p></article>
+    <article class="card warning"><span class="step-no">3</span><h3>開盤 15 分鐘再決定</h3><p>如果開高太多、沒有換手、或出現長上影，就算題材正確也先不追。強股可以錯過，不要買在情緒最熱的位置。</p></article>
   </div>
 </section>
 
-<section aria-label="radar calculator">
-  <h2>候選股評分器</h2>
+<section aria-label="simple checker">
+  <h2>新手判斷器：填一檔股票就好</h2>
   <div class="grid-2">
     <article class="tool-card">
-      <div class="form-grid">
-        <label>股票代號 / 名稱<input id="ticker" type="text" placeholder="例：3037 欣興"></label>
-        <label>今日主線<select id="theme"><option>AI / 伺服器</option><option>半導體 / IC 設計</option><option>PCB / CCL / IC 載板</option><option>記憶體 / MLCC</option><option>散熱 / 電源 / 連接器</option><option>其他，需自行驗證</option></select></label>
-      </div>
-      <div class="checklist" id="checks">
-        <h3>加分條件</h3>
-        <label><input type="checkbox" data-score="15">屬於今日明確主線，而不是單一新聞股</label>
-        <label><input type="checkbox" data-score="12">同族群至少 2–3 檔同步轉強</label>
-        <label><input type="checkbox" data-score="14">突破近期平台、箱型或關鍵高點</label>
-        <label><input type="checkbox" data-score="10">均線收斂後轉強，位置未明顯失控</label>
-        <label><input type="checkbox" data-score="14">量能放大約 1.5–3 倍，但不是爆天量</label>
-        <label><input type="checkbox" data-score="10">價漲量增，沒有明顯長上影出貨感</label>
-        <label><input type="checkbox" data-score="8">法人 / 主力 / 籌碼具連續性</label>
-        <label><input type="checkbox" data-score="7">融資或社群討論尚未明顯過熱</label>
-        <h3>煞車扣分</h3>
-        <label><input type="checkbox" data-score="-12">已連續急漲 2–3 天以上</label>
-        <label><input type="checkbox" data-score="-15">開盤跳空過大，接近或超過 5%</label>
-        <label><input type="checkbox" data-score="-15">爆量長上影或開高走低</label>
-        <label><input type="checkbox" data-score="-10">距離最近支撐 / 停損點太遠</label>
+      <label>股票代號 / 名稱<input id="ticker" type="text" placeholder="例：3037 欣興"></label>
+      <label>今日主線<select id="theme"><option>AI / 伺服器</option><option>半導體 / IC 設計</option><option>PCB / CCL / IC 載板</option><option>記憶體 / MLCC</option><option>散熱 / 電源 / 連接器</option><option>其他，需更保守</option></select></label>
+      <div class="choice" id="checks">
+        <h3>A. 它是不是今天的主線？</h3>
+        <label><input type="checkbox" data-score="30">有出現在今日晨報主線 / 升溫族群</label>
+        <label><input type="checkbox" data-score="20">同族群至少 2 檔一起轉強</label>
+        <h3>B. 它是不是剛啟動，而不是已經太熱？</h3>
+        <label><input type="checkbox" data-score="20">突破平台或近期高點，且不是連續噴出很多天</label>
+        <label><input type="checkbox" data-score="15">量能放大但沒有爆量長上影</label>
+        <h3>C. 追價煞車</h3>
+        <label><input type="checkbox" data-score="-35">開盤跳空超過 5%，或 15 分鐘內沒有換手承接</label>
+        <label><input type="checkbox" data-score="-30">已連續急漲、社群很熱、離停損位置太遠</label>
       </div>
     </article>
     <aside class="tool-card warning">
-      <div class="label">Radar Result</div>
+      <div class="label">Result</div>
       <div class="score" id="score">0</div>
-      <div class="tier" id="tier">尚未評分</div>
-      <p id="advice" class="muted">勾選條件後，這裡會產生今日操作語言。</p>
-      <h3>輸出文字</h3>
+      <div class="tier" id="tier">先不要做</div>
+      <p id="advice" class="muted">先填股票，再勾選上面的條件。</p>
+      <h3>你可以直接照這句執行</h3>
       <div class="output" id="output">請先輸入股票並勾選條件。</div>
     </aside>
   </div>
 </section>
 
-<section aria-label="open rules">
-  <h2>開盤煞車規則</h2>
-  <div class="grid-2">
-    <article class="card">
-      <h3>可以列入觀察</h3>
-      <ul class="action-list">
-        <li>開盤沒有跳太高，或開高後能橫盤換手。</li>
-        <li>同族群有 2–3 檔同步，而不是只有單一股票硬拉。</li>
-        <li>量能放大但 K 線沒有失控，價格仍靠近可定義的風險點。</li>
-        <li>回測平台或均線時有承接，沒有跌回突破區。</li>
-      </ul>
-    </article>
-    <article class="card warning">
-      <h3>禁止追價</h3>
-      <ul class="action-list">
-        <li>開高超過 5%，但 15 分鐘內沒有換手承接。</li>
-        <li>爆量長上影、開高走低，或跌回突破平台。</li>
-        <li>已經連續急漲，市場討論度突然暴增。</li>
-        <li>找不到明確停損 / 失效位置，只剩「看起來很強」。</li>
-      </ul>
-    </article>
+<section aria-label="decision map">
+  <h2>看結果後怎麼做</h2>
+  <div class="grid-3">
+    <article class="card"><h3>85 分以上：可觀察</h3><p>不是立刻買。意思是：它有資格進入今日 1–3 檔觀察名單。開盤若回測不破、量縮不跌，才有討論空間。</p></article>
+    <article class="card"><h3>60–84 分：等回測</h3><p>主線可能對，但條件還不完整。不要追第一段，等回測平台、均線或開盤震盪後再看。</p></article>
+    <article class="card warning"><h3>60 分以下：禁止追價</h3><p>不是說它不會漲，而是新進風險不划算。看得到的強，不等於買得到的好位置。</p></article>
+  </div>
+</section>
+
+<section aria-label="example">
+  <h2>範例：看到一檔 PCB 強勢股時</h2>
+  <div class="card example">
+    <p><b>不要這樣想：</b>「它很強，今天是不是會飆？」</p>
+    <p><b>改成這樣做：</b>先確認 PCB/CCL 是否是今日主線；再看同族群是否同步；最後看開盤是否跳太高。如果開高超過 5% 且 15 分鐘沒有承接，今天就算它很強，也先列為「禁止追價」。</p>
+    <p><b>最簡單的一句話：</b><span class="mark">主線對，只代表可以觀察；買點對，才代表可以行動。</span></p>
   </div>
 </section>
 
 <section aria-label="daily worksheet">
-  <h2>每日紀錄表</h2>
+  <h2>每日只記這 4 欄</h2>
   <div class="card">
-    <table>
-      <thead><tr><th>欄位</th><th>填寫方式</th><th>判斷語言</th></tr></thead>
-      <tbody>
-        <tr><td>今日主線</td><td>從晨報挑 1–3 條最明確族群</td><td>沒有主線，不硬做雷達</td></tr>
-        <tr><td>候選股</td><td>只放主線內、且有量價表態者</td><td>不是主線內的強股，先排除</td></tr>
-        <tr><td>分數</td><td>用上方評分器產生</td><td>85+ 強雷達；70–84 觀察；55–69 潛伏；55 以下排除</td></tr>
-        <tr><td>開盤條件</td><td>寫清楚「開高多少不追、跌破哪裡失效」</td><td>沒有條件，就不交易</td></tr>
-        <tr><td>盤後回顧</td><td>記錄是否符合劇本、是否被煞車器擋下</td><td>目標是修正流程，不是合理化追價</td></tr>
-      </tbody>
-    </table>
+    <table><thead><tr><th>欄位</th><th>怎麼填</th></tr></thead><tbody>
+      <tr><td>今日主線</td><td>從晨報抄 1–3 個族群，例如 AI / 半導體 / PCB。</td></tr>
+      <tr><td>候選股</td><td>最多 3 檔；太多就代表你不是在篩選。</td></tr>
+      <tr><td>判斷結果</td><td>可觀察 / 等回測 / 禁止追價。</td></tr>
+      <tr><td>煞車理由</td><td>開高太多、無承接、長上影、連續急漲、離停損太遠。</td></tr>
+    </tbody></table>
   </div>
 </section>
-
-<footer>Kelvin Wiggly｜飆股雷達煞車器。此頁為讀者每日實作工作台；所有候選都必須服從 Ark 水位與風控紀律。</footer>
+<footer>Kelvin Wiggly｜飆股雷達煞車器。先排除追價，再談加速機會。</footer>
 </main>
 <script>
 (function(){
@@ -122,24 +101,17 @@ section{margin-top:38px;border-top:2px solid var(--ink);padding-top:24px}.grid-2
   const tickerEl=document.getElementById('ticker');
   const themeEl=document.getElementById('theme');
   function render(){
-    let score=0;
-    boxes.forEach(b=>{ if(b.checked) score+=Number(b.dataset.score||0); });
+    let score=0; boxes.forEach(b=>{ if(b.checked) score+=Number(b.dataset.score||0); });
     score=Math.max(0,Math.min(100,score));
-    let tier='排除', advice='分數不足，先排除或等待更多確認。';
-    if(score>=85){tier='強雷達'; advice='可列入今日核心觀察，但仍需通過開盤煞車規則。';}
-    else if(score>=70){tier='觀察名單'; advice='條件不錯，但至少還缺一個確認；優先等回測或換手。';}
-    else if(score>=55){tier='潛伏池'; advice='有題材但啟動不足，只觀察，不急著追。';}
-    const t=(tickerEl.value||'候選股').trim();
+    let tier='禁止追價', advice='今天先不要追。若真的看好，等回測或明天重新評估。';
+    if(score>=85){tier='可觀察'; advice='可以放進今日觀察名單，但仍要等開盤承接，不追第一根急拉。';}
+    else if(score>=60){tier='等回測'; advice='題材或量價有一部分成立，但買點還不夠好，先等回測或換手。';}
+    const t=(tickerEl.value||'這檔股票').trim();
     const theme=themeEl.value;
-    scoreEl.textContent=score;
-    tierEl.textContent=tier;
-    adviceEl.textContent=advice;
-    outputEl.textContent=`${t}\n主線：${theme}\n雷達分數：${score}｜${tier}\n操作語言：${advice}\n追價煞車：若開高超過 5%、15 分鐘內無承接，或跌回突破平台，今日不追。`;
+    scoreEl.textContent=score; tierEl.textContent=tier; adviceEl.textContent=advice;
+    outputEl.textContent=`${t}\n主線：${theme}\n結果：${score} 分｜${tier}\n今天做法：${advice}\n煞車線：開高超過 5%、15 分鐘無承接、爆量長上影、跌回突破平台，任一出現就不追。`;
   }
-  boxes.forEach(b=>b.addEventListener('change',render));
-  tickerEl.addEventListener('input',render);
-  themeEl.addEventListener('change',render);
-  render();
+  boxes.forEach(b=>b.addEventListener('change',render)); tickerEl.addEventListener('input',render); themeEl.addEventListener('change',render); render();
 })();
 </script>
 </body>

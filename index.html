@@ -10,60 +10,57 @@
 <style>
 :root{--paper:#F1E8D0;--paper-warm:#E8DCB9;--paper-dark:#D9C99E;--ink:#1A1311;--ink-soft:#4A3D34;--ink-mute:#6B5D54;--blood:#C8102E;--blood-deep:#8B1419;--blood-soft:rgba(200,16,46,.08);--rule:rgba(26,19,17,.18);--serif:'Noto Serif TC','Playfair Display',serif;--sans:'Noto Sans TC',sans-serif;--mono:'JetBrains Mono',monospace;--display:'Playfair Display','Noto Serif TC',serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.72}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:99;opacity:.18;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='4' seed='21' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 14% 5%,rgba(200,16,46,.075),transparent 42%),radial-gradient(ellipse at 90% 88%,rgba(26,19,17,.085),transparent 48%)}
-main{max-width:1120px;margin:auto;padding:34px 18px 80px}.masthead{border-bottom:3px double var(--ink);font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase}.masthead-inner{max-width:1120px;margin:auto;padding:12px 18px;display:flex;justify-content:space-between;gap:16px}.kw-mark{display:inline-grid;place-items:center;width:28px;height:28px;background:var(--ink);color:var(--paper);font-family:var(--display);font-weight:900;font-style:italic;margin-right:10px}
-.hero{border:2px solid var(--ink);padding:32px clamp(18px,4vw,52px);box-shadow:8px 8px 0 var(--ink);background:rgba(232,220,185,.64);position:relative;overflow:hidden}.hero:before{content:'HOME';position:absolute;right:-.08em;bottom:-.38em;font-family:var(--display);font-size:clamp(7rem,18vw,15rem);font-weight:900;color:rgba(200,16,46,.075);line-height:1;pointer-events:none}.eyebrow,.label{font-family:var(--mono);letter-spacing:.11em;text-transform:uppercase;font-weight:800;color:var(--blood)}h1,h2,h3{font-family:var(--serif);line-height:1.15}h1{font-size:clamp(2.35rem,7vw,5.4rem);margin:16px 0 12px}h2{font-size:clamp(1.65rem,4vw,3rem);margin:0 0 16px}h3{font-size:1.28rem;margin:8px 0}.subtitle{max-width:860px;color:var(--ink-soft);font-size:1.1rem}.mark{background:var(--blood-soft);color:var(--blood-deep);font-weight:900;padding:0 .18em}
-.section{margin-top:34px}.intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}.panel,.brief-card,.link-card{border:2px solid var(--ink);background:rgba(241,232,208,.92);padding:22px;box-shadow:5px 5px 0 var(--ink)}.panel p,.brief-card p,.link-card p{color:var(--ink-soft);margin:.35rem 0}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.service{border:1px solid var(--rule);padding:12px;background:rgba(232,220,185,.5);font-weight:800}
-.link-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}a.link-card{display:block;text-decoration:none;color:var(--ink);min-height:210px;transition:transform .16s,box-shadow .16s}a.link-card:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--blood-deep)}.arrow{font-family:var(--mono);font-weight:900;margin-top:18px;color:var(--blood)}.brief-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.meta{font-family:var(--mono);font-size:.82rem;color:var(--blood-deep);font-weight:800;letter-spacing:.04em}.statline{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.pill{border:1px solid var(--ink);padding:4px 8px;font-family:var(--mono);font-size:.78rem;background:var(--paper-warm)}.rule-note{margin-top:24px;border:2px solid var(--blood);background:var(--blood-soft);padding:16px;box-shadow:5px 5px 0 var(--blood-deep);font-weight:800}footer{margin-top:54px;border-top:3px double var(--ink);padding-top:18px;color:var(--ink-mute);font-size:.88rem}@media(max-width:860px){.masthead-inner{display:block}.intro-grid,.brief-grid,.link-grid,.services{grid-template-columns:1fr}}
+main{max-width:1120px;margin:auto;padding:34px 18px 80px}.masthead{border-bottom:3px double var(--ink);font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase}.masthead-inner{max-width:1120px;margin:auto;padding:12px 18px;display:flex;justify-content:space-between;gap:16px}.kw-mark{display:inline-grid;place-items:center;width:28px;height:28px;background:var(--ink);color:var(--paper);font-family:var(--display);font-weight:900;font-style:italic;margin-right:10px}.hero{border:2px solid var(--ink);padding:32px clamp(18px,4vw,52px);box-shadow:8px 8px 0 var(--ink);background:rgba(232,220,185,.64);position:relative;overflow:hidden}.hero:before{content:'HOME';position:absolute;right:-.08em;bottom:-.38em;font-family:var(--display);font-size:clamp(7rem,18vw,15rem);font-weight:900;color:rgba(200,16,46,.075);line-height:1;pointer-events:none}.eyebrow,.label{font-family:var(--mono);letter-spacing:.11em;text-transform:uppercase;font-weight:800;color:var(--blood)}h1,h2,h3{font-family:var(--serif);line-height:1.15}h1{font-size:clamp(2.35rem,7vw,5.4rem);margin:16px 0 12px}h2{font-size:clamp(1.65rem,4vw,3rem);margin:0 0 16px}h3{font-size:1.28rem;margin:8px 0}.subtitle{max-width:860px;color:var(--ink-soft);font-size:1.1rem}.mark{background:var(--blood-soft);color:var(--blood-deep);font-weight:900;padding:0 .18em}.section{margin-top:34px}.intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}.panel,.brief-card,.link-card{border:2px solid var(--ink);background:rgba(241,232,208,.92);padding:22px;box-shadow:5px 5px 0 var(--ink)}.panel p,.brief-card p,.link-card p{color:var(--ink-soft);margin:.35rem 0}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.service{border:1px solid var(--rule);padding:12px;background:rgba(232,220,185,.5);font-weight:800}.link-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}a.link-card{display:block;text-decoration:none;color:var(--ink);min-height:210px;transition:transform .16s,box-shadow .16s}a.link-card:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--blood-deep)}.arrow{font-family:var(--mono);font-weight:900;margin-top:18px;color:var(--blood)}.brief-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.meta{font-family:var(--mono);font-size:.82rem;color:var(--blood-deep);font-weight:800;letter-spacing:.04em}.statline{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.pill{border:1px solid var(--ink);padding:4px 8px;font-family:var(--mono);font-size:.78rem;background:var(--paper-warm)}footer{margin-top:54px;border-top:3px double var(--ink);padding-top:18px;color:var(--ink-mute);font-size:.88rem}@media(max-width:860px){.masthead-inner{display:block}.intro-grid,.brief-grid,.link-grid,.services{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<nav class="masthead"><div class="masthead-inner"><div><span class="kw-mark">K</span>Kelvin Wiggly</div><div>HOME / SITE HUB</div></div></nav>
+<nav class="masthead"><div class="masthead-inner"><div><span class="kw-mark">K</span>Kelvin Wiggly</div><div>Morning Brief / Risk Budget / Radar</div></div></nav>
 <main>
 <header class="hero">
   <div class="eyebrow">Kelvin Wiggly × Morning Brief</div>
-  <h1>市場晨報的中樞：知道我是誰、我提供什麼、今天該去哪裡看。</h1>
-  <p class="subtitle">這裡不是完整晨報頁，也不是單一模組頁；這裡是網站首頁。你可以從這裡進入當日晨報、查看水位紀錄，或打開獨立的飆股雷達煞車器。</p>
+  <h1>每天開盤前，先把風險、主線與買點想清楚。</h1>
+  <p class="subtitle">這裡整理每日市場晨報、方舟水位紀錄與短線雷達工具。先看今日晨報掌握盤勢，再用水位確認風險預算；若要找加速機會，再進雷達煞車器檢查是否能追、該等、或直接放棄。</p>
 </header>
 
 <section class="section intro-grid" aria-label="brand and services">
   <article class="panel">
     <div class="label">Who I Am</div>
     <h2>我是 Kelvin Wiggly</h2>
-    <p>我把市場資訊整理成可執行的晨間判斷：先看風險，再看主線，最後才看個股與加速機會。</p>
-    <p>核心不是追逐題材，而是用固定框架把情緒、部位與買點紀律分開。</p>
+    <p>我把美股、台指夜盤、方舟水位與台股產業名單整理成開盤前可以快速閱讀的判斷。</p>
+    <p>我的核心原則是：<span class="mark">先控制風險，再確認主線，最後才決定要不要出手。</span></p>
   </article>
   <article class="panel">
-    <div class="label">What I Provide</div>
-    <h2>我提供的服務</h2>
+    <div class="label">What You Can Use</div>
+    <h2>你可以從這裡做三件事</h2>
     <div class="services">
-      <div class="service">每日市場晨報</div>
-      <div class="service">方舟水位紀錄</div>
-      <div class="service">加速模組 / 雷達煞車器</div>
+      <div class="service">讀今日晨報</div>
+      <div class="service">追蹤水位變化</div>
+      <div class="service">檢查追價風險</div>
     </div>
-    <p>晨報負責穩定決策，水位紀錄負責追蹤風險預算，雷達模組只作為獨立加速工具，不混入晨報主體。</p>
+    <p>如果時間很少，閱讀順序很簡單：先點「今日晨報」，再看「水位記錄」；只有在想找短線候選時，才使用「雷達煞車器」。</p>
   </article>
 </section>
 
 <section class="section" aria-label="primary links">
-  <h2>三個主要入口</h2>
+  <h2>今日入口</h2>
   <div class="link-grid">
     <a class="link-card" href="20260513-stock-news-kelvin.html">
       <div class="label">Daily Report</div>
       <h3>5/13 當日晨報</h3>
-      <p>完整 Kelvin Wiggly 每日晨報：水位、風控、主線、ETF / 個股清單與市場判斷。</p>
+      <p>看今天的市場主線、方舟水位、風控狀態、ETF / 個股清單與開盤前操作節奏。</p>
       <div class="arrow">進入晨報 →</div>
     </a>
     <a class="link-card" href="water-level.html">
       <div class="label">Water Level</div>
       <h3>水位記錄</h3>
-      <p>最近水位、風險預算、主線與策略紀錄，用來看方舟系統是否正在加速或收斂。</p>
+      <p>追蹤方舟持股配置建議的升降，判斷風險預算正在放大還是收斂。</p>
       <div class="arrow">查看水位 →</div>
     </a>
     <a class="link-card" href="radar-brake.html">
-      <div class="label">Experimental Module</div>
+      <div class="label">Radar Brake</div>
       <h3>飆股雷達煞車器</h3>
-      <p>獨立加速模組：辨認啟動候選與追價風險，不混入每日晨報本文。</p>
-      <div class="arrow">進入雷達 →</div>
+      <p>當你看到熱門題材或強勢股時，用它快速判斷：可觀察、等回測，還是禁止追價。</p>
+      <div class="arrow">打開工具 →</div>
     </a>
   </div>
 </section>
@@ -85,9 +82,7 @@ main{max-width:1120px;margin:auto;padding:34px 18px 80px}.masthead{border-bottom
     </article>
   </div>
 </section>
-
-<div class="rule-note">首頁定位：網站中樞與服務介紹。晨報全文、完整水位表、雷達模組各自獨立成頁；首頁只放大綱與入口，不混用全文內容。</div>
-<footer>Kelvin Wiggly Morning Brief｜Site hub, service overview, recent outlines, and primary navigation.</footer>
+<footer>Kelvin Wiggly Morning Brief｜每日晨報、水位紀錄與雷達煞車工具。</footer>
 </main>
 </body>
 </html>
