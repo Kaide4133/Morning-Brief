@@ -35,7 +35,7 @@ header{border:2px solid var(--ink);padding:28px clamp(18px,4vw,46px);box-shadow:
   <h2>新手判斷器：填一檔股票就好</h2>
   <div class="grid-2">
     <article class="tool-card">
-      <label>股票代號 / 名稱<input id="ticker" type="text" placeholder="例：3037 欣興"></label>
+      <label>股票代號 / 名稱<input id="ticker" type="text" aria-label="股票代號或名稱"><small>例：3037 欣興</small></label>
       <label>今日主線<select id="theme"><option>AI / 伺服器</option><option>半導體 / IC 設計</option><option>PCB / CCL / IC 載板</option><option>記憶體 / MLCC</option><option>散熱 / 電源 / 連接器</option><option>其他，需更保守</option></select></label>
       <div class="choice" id="checks">
         <h3>A. 它是不是今天的主線？</h3>
