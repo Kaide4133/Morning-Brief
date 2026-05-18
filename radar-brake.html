@@ -26,7 +26,7 @@ header{border:2px solid var(--ink);padding:28px clamp(18px,4vw,46px);box-shadow:
   <h2>第一次使用，只做這 3 步</h2>
   <div class="grid-3">
     <article class="card"><span class="step-no">1</span><h3>輸入一檔股票</h3><p>先從今日主線、升溫區、或盤中看到的強勢股挑一檔。不要一次看太多，雷達的第一任務是排除不能追的。</p></article>
-    <article class="card"><span class="step-no">2</span><h3>讓線圖先判讀</h3><p>系統會看近 20 日壓力、5/10/20 日均線、布林通道 (BOLL)、量能放大、上影線與連漲過熱。</p></article>
+    <article class="card"><span class="step-no">2</span><h3>讓線圖先判讀</h3><p>系統會綜合判讀近 20 日壓力、日線/週線均線多空、日線/週線布林通道 (BOLL)、以及連漲過熱訊號。</p></article>
     <article class="card warning"><span class="step-no">3</span><h3>只照結果行動</h3><p>可觀察不等於立刻買；等回測就不要追第一段；禁止追價就算它繼續漲，也先當作錯過。</p></article>
   </div>
 </section>
@@ -78,7 +78,7 @@ header{border:2px solid var(--ink);padding:28px clamp(18px,4vw,46px);box-shadow:
     <p><span class="mark">主線對，只代表可以觀察；買點對，才代表可以行動。</span></p>
     <ul>
       <li>開高超過 5%，且 15 分鐘內沒有換手承接：不追。</li>
-      <li>布林上軌極度過熱，或爆量長上影、跌回突破平台：不追。</li>
+      <li>日線或週線布林上軌極度過熱，或爆量長上影：不追。</li>
       <li>連續急漲後社群過熱：即使分數不低，也改成等回測。</li>
     </ul>
   </div>
@@ -110,7 +110,7 @@ header{border:2px solid var(--ink);padding:28px clamp(18px,4vw,46px);box-shadow:
     else if(a.stage==='等回測') advice='線圖有部分條件成立，但買點還不乾淨，先等平台、均線或開盤換手。';
     $('advice').textContent=advice;
     const brakes=(a.brakes||[]).join('；') || '開高超過5%或跌回突破平台，不追';
-    $('output').textContent=`${rec.code}\n主線：${theme}\n資料：${rec.market}｜${a.date}\n結果：${a.score} 分｜${a.stage}\n今天做法：${advice}\n壓力：${a.resistance||'—'}｜支撐：${a.support||'—'}\n煞車線：${brakes}`;
+    $('output').textContent=`${rec.code}\n主線：${theme}\n資料：${rec.market}｜${a.date}\n結果：${a.score} 分｜${a.stage}\n今天做法：${advice}\n壓力：${a.resistance||'—'}\n支撐：${a.support||'—'}\n煞車線：${brakes}`;
   }
   $('analyzeBtn').addEventListener('click',render); $('ticker').addEventListener('keydown',e=>{if(e.key==='Enter')render();}); $('theme').addEventListener('change',render);
 })();
