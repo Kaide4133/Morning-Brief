@@ -45,6 +45,10 @@ header{border:2px solid var(--ink);padding:28px clamp(18px,4vw,46px);box-shadow:
         <div class="metric"><span class="label">量比</span><b id="mVol">—</b></div>
         <div class="metric"><span class="label">布林上軌</span><b id="mBoll">—</b></div>
       </div>
+      <div class="metric-row" style="margin-top:-6px">
+        <div class="metric" style="grid-column:span 2"><span class="label">關鍵壓力</span><b id="mRes">—</b></div>
+        <div class="metric" style="grid-column:span 2"><span class="label">關鍵支撐</span><b id="mSup">—</b></div>
+      </div>
       <h3>線圖讀到什麼</h3>
       <ul class="status-list" id="flags"><li>輸入股票後自動判讀。</li></ul>
     </article>
@@ -98,6 +102,7 @@ header{border:2px solid var(--ink);padding:28px clamp(18px,4vw,46px);box-shadow:
     const rec=findRecord($('ticker').value); const theme=$('theme').value;
     if(!rec){$('score').textContent='0';$('tier').textContent='等待判讀';$('advice').textContent='請輸入資料池內的股票代號，例如 3037。';$('output').textContent='尚未找到這檔的線圖資料。';return;}
     const a=rec.analysis; $('mClose').textContent=fmt(a.close); $('mChange').textContent=`${fmt(a.change_pct)}%`; $('mVol').textContent=a.vol_ratio?`${fmt(a.vol_ratio)}×`:'—'; $('mBoll').textContent=fmt(a.boll_ub);
+    $('mRes').textContent=a.resistance||'—'; $('mSup').textContent=a.support||'—';
     $('score').textContent=a.score; $('tier').textContent=a.stage;
     const flags=[...(a.flags||[]),...(a.brakes||[]).map(x=>'煞車：'+x)]; $('flags').innerHTML=flags.map(x=>`<li>${x}</li>`).join('')||'<li>沒有明確啟動訊號。</li>';
     let advice='今天先不要追。若真的看好，等回測或明天重新評估。';
@@ -105,7 +110,7 @@ header{border:2px solid var(--ink);padding:28px clamp(18px,4vw,46px);box-shadow:
     else if(a.stage==='等回測') advice='線圖有部分條件成立，但買點還不乾淨，先等平台、均線或開盤換手。';
     $('advice').textContent=advice;
     const brakes=(a.brakes||[]).join('；') || '開高超過5%或跌回突破平台，不追';
-    $('output').textContent=`${rec.code}\n主線：${theme}\n資料：${rec.market}｜${a.date}\n結果：${a.score} 分｜${a.stage}\n今天做法：${advice}\n線圖重點：收盤 ${fmt(a.close)}，布林上軌 ${fmt(a.boll_ub)}，量比 ${a.vol_ratio?fmt(a.vol_ratio)+'×':'—'}，MA20 ${fmt(a.ma20)}\n煞車線：${brakes}`;
+    $('output').textContent=`${rec.code}\n主線：${theme}\n資料：${rec.market}｜${a.date}\n結果：${a.score} 分｜${a.stage}\n今天做法：${advice}\n壓力：${a.resistance||'—'}｜支撐：${a.support||'—'}\n煞車線：${brakes}`;
   }
   $('analyzeBtn').addEventListener('click',render); $('ticker').addEventListener('keydown',e=>{if(e.key==='Enter')render();}); $('theme').addEventListener('change',render);
 })();
