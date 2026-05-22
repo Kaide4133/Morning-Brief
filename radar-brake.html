@@ -19,7 +19,7 @@ header{border:2px solid var(--ink);padding:28px clamp(18px,4vw,46px);box-shadow:
 <header>
   <div class="eyebrow">Kelvin Wiggly × Technical Radar Brake</div>
   <h1>先讓線圖說話，再決定能不能追。</h1>
-  <p class="subtitle">這頁把技術線圖放在飆股雷達的前端：輸入股票後，先讀取近期日線、均線、量能、突破、上影線與過熱距離，再輸出 <span class="mark">可觀察 / 等回測 / 禁止追價</span>。它不併入方舟，也不併入晨報；只負責替強勢題材踩煞車。</p>
+  <p class="subtitle">這頁把技術線圖放在飆股雷達的前端：輸入股票後，先讀取近期日線、均線、量能、突破、上影線與過熱距離，再同時輸出 <span class="mark">新進者：可觀察 / 等回測 / 禁止追價</span> 與 <span class="mark">持有者：續抱 / 分批調節 / 強制收割 / 留底倉</span>。它不併入方舟，也不併入晨報；只負責替強勢題材踩煞車、替既有獲利守住效率。</p>
 </header>
 
 <section aria-label="quick start">
@@ -27,7 +27,7 @@ header{border:2px solid var(--ink);padding:28px clamp(18px,4vw,46px);box-shadow:
   <div class="grid-3">
     <article class="card"><span class="step-no">1</span><h3>輸入一檔股票</h3><p>先從今日主線、升溫區、或盤中看到的強勢股挑一檔。不要一次看太多，雷達的第一任務是排除不能追的。</p></article>
     <article class="card"><span class="step-no">2</span><h3>讓線圖先判讀</h3><p>系統會綜合判讀近 20 日壓力、日線/週線均線多空、日線/週線布林通道 (BOLL)、以及連漲過熱訊號。</p></article>
-    <article class="card warning"><span class="step-no">3</span><h3>只照結果行動</h3><p>可觀察不等於立刻買；等回測就不要追第一段；禁止追價就算它繼續漲，也先當作錯過。</p></article>
+    <article class="card warning"><span class="step-no">3</span><h3>新進、持有分開看</h3><p>想買的人看追價煞車；已持有的人看獲利了結。可觀察不等於立刻買；分批調節也不等於看空。</p></article>
   </div>
 </section>
 
@@ -65,8 +65,10 @@ header{border:2px solid var(--ink);padding:28px clamp(18px,4vw,46px);box-shadow:
       <div class="score" id="score">0</div>
       <div class="tier" id="tier">等待判讀</div>
       <p id="advice" class="muted">先輸入股票代號，再按下讀取線圖狀態。</p>
-      <h3>你可以直接照這句執行</h3>
+      <h3>新進者：追價煞車</h3>
       <div class="output" id="output">尚未判讀。</div>
+      <h3>持有者：獲利了結</h3>
+      <div class="output" id="profitOutput">尚未判讀。</div>
     </aside>
   </div>
 </section>
@@ -74,29 +76,48 @@ header{border:2px solid var(--ink);padding:28px clamp(18px,4vw,46px);box-shadow:
 <section aria-label="decision map">
   <h2>看結果後怎麼做</h2>
   <div class="grid-3">
-    <article class="card"><h3>75 分以上：可觀察</h3><p>線圖具備啟動條件，但仍不是立刻追價。開盤若回測不破、量縮不跌，才有討論空間。</p></article>
-    <article class="card"><h3>55–74 分：等回測</h3><p>有一部分條件成立，但不是乾淨買點。等平台、均線或開盤震盪後再看。</p></article>
-    <article class="card warning"><h3>55 分以下：禁止追價</h3><p>不是說它不會漲，而是新進風險不划算。看得到的強，不等於買得到的好位置。</p></article>
+    <article class="card"><h3>新進：可觀察</h3><p>線圖具備啟動條件，但仍不是立刻追價。開盤若回測不破、量縮不跌，才有討論空間。</p></article>
+    <article class="card"><h3>新進：等回測</h3><p>有一部分條件成立，但不是乾淨買點。等平台、均線或開盤震盪後再看。</p></article>
+    <article class="card warning"><h3>新進：禁止追價</h3><p>不是說它不會漲，而是新進風險不划算。看得到的強，不等於買得到的好位置。</p></article>
+  </div>
+  <div class="grid-3" style="margin-top:14px">
+    <article class="card"><h3>持有：續抱</h3><p>趨勢仍在、未碰壓力、離支撐不遠。不要因為小漲就太早賣掉強勢股。</p></article>
+    <article class="card"><h3>持有：分批調節</h3><p>已有獲利且接近壓力、BOLL 上軌或乖離偏大。這不是看空，是先把部分獲利放入口袋。</p></article>
+    <article class="card warning"><h3>持有：強制收割 / 留底倉</h3><p>連續急漲、爆量長上影、接近漲停卻收不住，或槓桿商品單日急漲時，先收割一部分，只留底倉觀察。</p></article>
   </div>
 </section>
 
 <section aria-label="brake rules">
   <h2>開盤煞車規則</h2>
-  <div class="card">
-    <p><span class="mark">主線對，只代表可以觀察；買點對，才代表可以行動。</span></p>
-    <ul>
-      <li>開高超過 5%，且 15 分鐘內沒有換手承接：不追。</li>
-      <li>日線或週線布林上軌極度過熱，或爆量長上影：不追。</li>
-      <li>連續急漲後社群過熱：即使分數不低，也改成等回測。</li>
-    </ul>
+  <div class="grid-2">
+    <div class="card">
+      <h3>追價煞車器：給想買的人</h3>
+      <p><span class="mark">主線對，只代表可以觀察；買點對，才代表可以行動。</span></p>
+      <ul>
+        <li>開高超過 5%，且 15 分鐘內沒有換手承接：不追。</li>
+        <li>日線或週線布林上軌極度過熱，或爆量長上影：不追。</li>
+        <li>連續急漲後社群過熱：即使分數不低，也改成等回測。</li>
+        <li>股價離 MA20 / 最近支撐太遠：不追，等回測。</li>
+      </ul>
+    </div>
+    <div class="card warning">
+      <h3>獲利了結器：給已持有的人</h3>
+      <p><span class="mark">追價煞車管不要買貴；獲利了結管不要賺了又吐回去。</span></p>
+      <ul>
+        <li>已獲利且靠近前高、週線壓力或 BOLL 上軌：開始分批調節觀察。</li>
+        <li>連續急漲、爆量長上影、族群集體噴出：強制收割一部分。</li>
+        <li>核心 ETF / 權值股：小幅調節，保留主部位。</li>
+        <li>題材股 / 槓桿 ETF：獲利了結規則更嚴格，必要時留底倉。</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <section aria-label="daily worksheet">
-  <h2>每日只記這 4 欄</h2>
-  <div class="card"><table><thead><tr><th>欄位</th><th>怎麼填</th></tr></thead><tbody><tr><td>今日主線</td><td>從晨報抄 1–3 個族群，例如 AI / 半導體 / PCB。</td></tr><tr><td>候選股</td><td>最多 3 檔；太多就代表你不是在篩選。</td></tr><tr><td>線圖結果</td><td>可觀察 / 等回測 / 禁止追價。</td></tr><tr><td>煞車理由</td><td>開高太多、無承接、長上影、連續急漲、離支撐太遠。</td></tr></tbody></table></div>
+  <h2>每日只記這 5 欄</h2>
+  <div class="card"><table><thead><tr><th>欄位</th><th>怎麼填</th></tr></thead><tbody><tr><td>今日主線</td><td>從晨報抄 1–3 個族群，例如 AI / 半導體 / PCB。</td></tr><tr><td>候選股</td><td>最多 3 檔；太多就代表你不是在篩選。</td></tr><tr><td>新進者結果</td><td>可觀察 / 等回測 / 禁止追價。</td></tr><tr><td>持有者結果</td><td>續抱 / 分批調節 / 強制收割 / 留底倉。</td></tr><tr><td>理由</td><td>壓力、支撐、BOLL、開高、長上影、連續急漲、離支撐太遠。</td></tr></tbody></table></div>
 </section>
-<footer>Kelvin Wiggly｜飆股雷達煞車器。技術線圖只放在本獨立模組，不併入方舟或每日晨報。</footer>
+<footer>Kelvin Wiggly｜飆股雷達煞車器。技術線圖與獲利了結只放在本獨立模組，不併入方舟或每日晨報。</footer>
 </main>
 <script>
 (function(){
@@ -133,9 +154,24 @@ header{border:2px solid var(--ink);padding:28px clamp(18px,4vw,46px);box-shadow:
     </svg>`;
     $('chartNote').textContent=`圖上紅點為最新收盤 ${fmt(a.close)}；虛線為近20日壓力 / BOLL 區，接近上軌仍以禁止追價優先。`;
   }
+  function profitPlan(a, rec){
+    const brakes=a.brakes||[], flags=a.flags||[];
+    const dist=Number(a.distance_ma20_pct)||0;
+    const chg=Number(a.change_pct)||0;
+    const shadow=Number(a.upper_shadow_ratio)||0;
+    const up=Number(a.consecutive_up)||0;
+    const isLeveraged=/L$/.test(rec.code)||/正2|槓桿/.test((a.support||'')+(a.resistance||''));
+    const nearCeiling=brakes.some(x=>/布林|BOLL|上軌|過熱|長上影/.test(x)) || flags.some(x=>/布林|BOLL|前高|突破|壓力/.test(x));
+    let action='續抱';
+    let reason='趨勢未出現明確過熱或壓力訊號；以原本部位規劃續抱觀察。';
+    if(isLeveraged && chg>=5){action='強制收割一部分 / 留底倉'; reason='槓桿商品單日急漲，獲利波動會被放大，先收一部分比賭隔日續強更重要。';}
+    else if(shadow>=0.35 || (chg>=7 && up>=2)){action='強制收割一部分 / 留底倉'; reason='急漲或長上影代表短線籌碼開始分歧，先把部分獲利放入口袋。';}
+    else if(nearCeiling || dist>=8 || chg>=5){action='分批調節'; reason='靠近壓力 / BOLL 區或離 MA20 偏遠，趨勢可續抱，但不宜讓獲利完全暴露在回檔裡。';}
+    return {action, reason};
+  }
   function render(){
     const rec=findRecord($('ticker').value); const theme=$('theme').value;
-    if(!rec){$('score').textContent='0';$('tier').textContent='等待判讀';$('advice').textContent='請輸入資料池內的股票代號，例如 3037。';$('output').textContent='尚未找到這檔的線圖資料。';$('chartWrap').innerHTML='<div class="chart-note">找不到資料池內股票，無法畫線圖。</div>';return;}
+    if(!rec){$('score').textContent='0';$('tier').textContent='等待判讀';$('advice').textContent='請輸入資料池內的股票代號，例如 3037。';$('output').textContent='尚未找到這檔的線圖資料。';$('profitOutput').textContent='尚未找到這檔的線圖資料。';$('chartWrap').innerHTML='<div class="chart-note">找不到資料池內股票，無法畫線圖。</div>';return;}
     const a=rec.analysis; renderChart(a); $('mClose').textContent=fmt(a.close); $('mChange').textContent=`${fmt(a.change_pct)}%`; $('mVol').textContent=a.vol_ratio?`${fmt(a.vol_ratio)}×`:'—'; $('mBoll').textContent=fmt(a.boll_ub);
     $('mRes').textContent=a.resistance||'—'; $('mSup').textContent=a.support||'—';
     $('score').textContent=a.score; $('tier').textContent=a.stage;
@@ -145,7 +181,9 @@ header{border:2px solid var(--ink);padding:28px clamp(18px,4vw,46px);box-shadow:
     else if(a.stage==='等回測') advice='線圖有部分條件成立，但買點還不乾淨，先等平台、均線或開盤換手。';
     $('advice').textContent=advice;
     const brakes=(a.brakes||[]).join('；') || '開高超過5%或跌回突破平台，不追';
-    $('output').textContent=`${rec.code}\n主線：${theme}\n資料：${rec.market}｜${a.date}\n結果：${a.score} 分｜${a.stage}\n今天做法：${advice}\n壓力：${a.resistance||'—'}\n支撐：${a.support||'—'}\n煞車線：${brakes}`;
+    $('output').textContent=`${rec.code}\n主線：${theme}\n資料：${rec.market}｜${a.date}\n新進者結果：${a.score} 分｜${a.stage}\n今天做法：${advice}\n壓力：${a.resistance||'—'}\n支撐：${a.support||'—'}\n煞車線：${brakes}`;
+    const p=profitPlan(a, rec);
+    $('profitOutput').textContent=`持有者結果：${p.action}\n判斷理由：${p.reason}\n執行口徑：核心 ETF / 權值股以小幅調節為主；題材股與槓桿 ETF 較嚴格。若尚未獲利，這格不視為賣出訊號。`;
   }
   $('analyzeBtn').addEventListener('click',render); $('ticker').addEventListener('keydown',e=>{if(e.key==='Enter')render();}); $('theme').addEventListener('change',render);
 })();
