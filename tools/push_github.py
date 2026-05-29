@@ -33,7 +33,13 @@ load_dotenv()
 
 
 def run(cmd: list[str], cwd: Path, env: dict | None = None) -> None:
-    print("+", " ".join(cmd))
+    display = []
+    for part in cmd:
+        if "github_pat_" in part or "ghp_" in part or "gho_" in part:
+            display.append("<redacted>")
+        else:
+            display.append(part)
+    print("+", " ".join(display))
     subprocess.run(cmd, cwd=cwd, env=env, check=True)
 
 
