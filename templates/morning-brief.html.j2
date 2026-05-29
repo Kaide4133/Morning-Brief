@@ -1,0 +1,401 @@
+{% import 'macros.html.j2' as m with context %}
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kelvin Wiggly｜{{ date_display }} 市場晨報</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/morning-brief.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <span class="kw-mark">K</span>
+      <span>Kelvin Wiggly · Morning Brief</span>
+    </div>
+    <div>
+      <a class="nav-link" href="index.html">首頁</a>
+      <a class="nav-link" href="water-level.html">｜ 水位紀錄</a>
+      {{ date_display }} PRE-OPEN BRIEF
+      <a class="nav-link" href="#">飆股雷達煞車器 →</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero-zone">
+    <div class="container">
+      <div class="hero-panel" data-issue-watermark="No.{{ issue_no_padded }}">
+        <p class="brand-line">Kelvin Wiggly × 每日市場晨報</p>
+        <div class="issue-pills">
+          <span>{{ date_display }}</span>
+          <span>Issue No.{{ issue_no_padded }}</span>
+          <span>Taipei pre-open</span>
+          <span>{{ scenario.id }} {{ scenario.name }}</span>
+        </div>
+        <p class="hero-kicker">— Today's Thesis —</p>
+        <h1 class="hero-headline">{{ hero.headline | safe }}</h1>
+        <p class="hero-subhead">{{ hero.subhead }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cover-zone">
+    <div class="container">
+      <p class="plate-label">Plate I — Cover · Risograph Print —</p>
+      <div class="cover-frame">
+        <span class="crop-br" aria-hidden="true"></span>
+        <span class="crop-bl" aria-hidden="true"></span>
+        <div class="cover-img cover-sprite" style="background-image:url('assets/covers/market-scenarios-8.png');background-position:{{ scenario.position }}'" role="img" aria-label="{{ scenario.id }} {{ scenario.name }} — 晨報封面情境">
+          <div class="cover-sprite-label">
+            <span class="cover-num">{{ scenario.id }}</span>
+            <span class="cover-name">{{ scenario.name }}</span>
+            <span class="cover-sub">{{ scenario.subtitle }}</span>
+          </div>
+        </div>
+      </div>
+      <p class="cover-caption">{{ cover_caption }}</p>
+      <p class="scenario-reason">情境判定：{{ scenario.reason }}</p>
+    </div>
+  </section>
+
+  <section class="data-zone">
+    <div class="container">
+      <div class="dataline">
+        <div class="data-cell">
+          <div class="data-label">SOX · 費半</div>
+          <div class="data-value">{{ market.sox.value }}</div>
+          <div class="{{ m.delta_class(market.sox.change_pct) }}">{{ m.fmt_pct(market.sox.change_pct) }}</div>
+        </div>
+        <div class="data-cell">
+          <div class="data-label">台指夜盤</div>
+          <div class="data-value">加權 <span class="{{ m.delta_class(market.tw_index.change_pct) }}" style="display:inline">{{ market.tw_index.line }}</span></div>
+          <div class="data-value" style="font-size:.9rem;margin-top:4px">{{ market.futures.line }}</div>
+        </div>
+        <div class="data-cell">
+          <div class="data-label">外資台指期淨額</div>
+          <div class="data-value">{{ market.foreign_oi.value }}</div>
+          <div class="data-label" style="margin-top:6px">{{ market.foreign_oi.note }}</div>
+        </div>
+        <div class="data-cell">
+          <div class="data-label">系統性風險</div>
+          <div class="data-value">{{ market.systemic_risk }}</div>
+        </div>
+      </div>
+      <div class="strategy-line">
+        <div>
+          <div class="strat-label">主線 / Thesis</div>
+          <div class="strat-value">{{ strategy.thesis }}</div>
+        </div>
+        <div>
+          <div class="strat-label">盤勢 / Tape</div>
+          <div class="strat-value">{{ strategy.tape }}</div>
+        </div>
+        <div>
+          <div class="strat-label">策略 / Playbook</div>
+          <div class="strat-value">{{ strategy.playbook }}</div>
+        </div>
+        <div>
+          <div class="strat-label">風控 / Risk</div>
+          <div class="strat-value">{{ strategy.risk }}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-zone" id="s1">
+    <div class="container">
+      {{ m.section_head('I', 'SECTION', '持股配置水位', 'Ark Water Level', 'I') }}
+      <div class="dashboard-grid">
+        <div>
+          <div class="water-level-head">方舟建議持股水位</div>
+          <div class="wl-percent">{{ ark.water_level }}<span>%</span></div>
+          <div class="wl-bar" role="meter" aria-valuenow="{{ ark.water_level }}" aria-valuemin="0" aria-valuemax="100">
+            <div class="wl-fill" style="inset: 0 {{ ark.water_inset_right }}% 0 0"></div>
+          </div>
+          <div class="wl-scale"><span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span></div>
+          <p style="margin-top:20px;color:var(--ink-soft)">{{ ark.note | safe }}</p>
+        </div>
+        <div class="countdown-panel">
+          <div class="countdown-label">更新倒數 · Next Update</div>
+          <div class="countdown-time" id="holdingCountdown" aria-live="polite">30<span class="blink">:</span>00</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-zone" id="s2">
+    <div class="container">
+      {{ m.section_head('II', 'SECTION', '市場溫度', 'Market Temperature', 'II') }}
+      <div class="temp-grid">
+        <div class="temp-card">
+          <div class="temp-name">VIX 恐慌指數</div>
+          <div class="temp-value">{{ market.vix.value }}</div>
+          <div class="{{ m.delta_class(market.vix.change_pct) }}">{{ m.fmt_pct(market.vix.change_pct) }}</div>
+          <p style="margin:12px 0 0;font-size:.9rem;color:var(--ink-soft)">{{ temperature.vix_note }}</p>
+        </div>
+        <div class="temp-card">
+          <div class="temp-name">SOX · 費半</div>
+          <div class="temp-value">{{ market.sox.value }}</div>
+          <div class="{{ m.delta_class(market.sox.change_pct) }}">{{ m.fmt_pct(market.sox.change_pct) }}</div>
+        </div>
+        <div class="temp-card">
+          <div class="temp-name">Today's Signal</div>
+          <div class="temp-value" style="font-size:1.1rem;font-family:var(--serif);font-style:italic;font-weight:700">{{ temperature.signal_headline }}</div>
+          <p style="margin:12px 0 0;font-size:.9rem;color:var(--ink-soft)">{{ temperature.signal_note }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-zone" id="s3">
+    <div class="container">
+      {{ m.section_head('III', 'SECTION', '今日晨報總結', 'Editorial Summary', 'III') }}
+      <div class="editorial-grid">
+        <div class="pull-quote-wrap">
+          <span class="pull-quote-mark" aria-hidden="true">"</span>
+          <blockquote class="pull-quote">{{ editorial.pull_quote }}</blockquote>
+        </div>
+        <div>
+          <div class="feel-tag">操作感受</div>
+          <p style="margin:0;color:var(--ink-soft)">{{ editorial.body | safe }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-zone" id="s4">
+    <div class="container">
+      {{ m.section_head('IV', 'SECTION', 'ETF 觀察清單', 'ETF Watchlist', 'IV') }}
+      <h3 class="zone-subtitle">價值區｜{{ etf.value | length }} 檔</h3>
+      <div class="card-grid">
+        {%- for item in etf.value %}
+        {{ m.trading_card(item, item.code in etf.overlap) }}
+        {%- endfor %}
+      </div>
+      <p class="zone-note">{{ etf.value_note }}</p>
+      <h3 class="zone-subtitle">純升溫區｜{{ etf.rising | length }} 檔</h3>
+      <div class="card-grid">
+        {%- for item in etf.rising %}
+        {{ m.trading_card(item) }}
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-zone" id="s5">
+    <div class="container">
+      {{ m.section_head('V', 'SECTION', '產業個股雙區', 'Sector Dual Zone', 'V') }}
+      <h3 class="zone-subtitle">價值區｜{{ stocks.value | length }} 檔</h3>
+      <div class="card-grid">
+        {%- for item in stocks.value %}
+        {{ m.trading_card(item, item.code in stocks.overlap) }}
+        {%- endfor %}
+      </div>
+      <h3 class="zone-subtitle">純升溫區｜{{ stocks.rising | length }} 檔</h3>
+      <div class="card-grid">
+        {%- for item in stocks.rising %}
+        {{ m.trading_card(item, item.code in stocks.overlap) }}
+        {%- endfor %}
+      </div>
+      {%- if stocks.overlap %}
+      <div class="overlap-box">
+        <span class="overlap-stamp">★ OVERLAP · 雙區重疊</span>
+        <div class="overlap-list">
+          {%- for code in stocks.overlap %}
+          <span class="overlap-item">{{ code }}<span class="name">{{ stocks.overlap_names[code] }}</span></span>
+          {%- endfor %}
+        </div>
+        <p class="overlap-note" style="margin:0;color:var(--ink-mute);font-size:.9rem">同時具備價值區與升溫區訊號的核心觀察名單。</p>
+      </div>
+      {%- endif %}
+    </div>
+  </section>
+
+  <section class="section-zone" id="s6">
+    <div class="container">
+      {{ m.section_head('VI', 'SECTION', '主線交叉驗證', 'Thesis Validation', 'VI') }}
+      <div class="validate-grid">
+        <div class="validate-col">
+          <div class="validate-head">已強化主線</div>
+          <ul>{%- for line in validation.strengthened %}<li>{{ line }}</li>{%- endfor %}</ul>
+        </div>
+        <div class="validate-col">
+          <div class="validate-head">短線壓力</div>
+          <ul>{%- for line in validation.pressure %}<li>{{ line }}</li>{%- endfor %}</ul>
+        </div>
+        <div class="validate-col">
+          <div class="validate-head">中長線題材</div>
+          <ul>{%- for line in validation.long_term %}<li>{{ line }}</li>{%- endfor %}</ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-zone" id="s7">
+    <div class="container">
+      {{ m.section_head('VII', 'SECTION', '川普 X 訊號', 'Trump Signal', 'VII') }}
+      <div class="content-card">
+        {%- for item in intelligence.trump %}
+        <div class="feed-item">
+          <div class="feed-time">{{ item.time }}</div>
+          <div class="feed-content">{{ item.content | safe }}</div>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-zone" id="s8">
+    <div class="container">
+      {{ m.section_head('VIII', 'SECTION', '馬斯克 X 訊號', 'Musk Signal', 'VIII') }}
+      <div class="content-card">
+        <p style="margin:0;color:var(--ink-soft)">{{ intelligence.musk | safe }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-zone" id="s9">
+    <div class="container">
+      {{ m.section_head('IX', 'SECTION', '關鍵科技 &amp; 政策訊號', 'Tech &amp; Policy', 'IX') }}
+      <div class="prose content-card">
+        {%- for para in intelligence.policy %}
+        <p>{{ para | safe }}</p>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-zone" id="s10">
+    <div class="container">
+      {{ m.section_head('X', 'SECTION', '七巨頭收盤與本日訊號', 'Magnificent Seven', 'X') }}
+      <div class="mag7-grid">
+        {%- for item in mag7 %}
+        {{ m.mag7_card(item) }}
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-zone" id="s11">
+    <div class="container">
+      {{ m.section_head('XI', 'SECTION', '前一晚美股行情解析', 'US Close', 'XI') }}
+      <div class="prose content-card"><p>{{ analysis.us_close }}</p></div>
+    </div>
+  </section>
+
+  <section class="section-zone" id="s12">
+    <div class="container">
+      {{ m.section_head('XII', 'SECTION', '台指夜盤走勢解析', 'TX Night Session', 'XII') }}
+      <div class="prose content-card"><p>{{ analysis.tx_night }}</p></div>
+    </div>
+  </section>
+
+  <section class="section-zone" id="s13">
+    <div class="container">
+      {{ m.section_head('XIII', 'SECTION', '影響因素三軸拆解', 'Three Axes', 'XIII') }}
+      <div class="validate-grid">
+        <div class="validate-col"><div class="validate-head">主線軸</div><p>{{ analysis.axes.thesis }}</p></div>
+        <div class="validate-col"><div class="validate-head">政策軸</div><p>{{ analysis.axes.policy }}</p></div>
+        <div class="validate-col"><div class="validate-head">風控軸</div><p>{{ analysis.axes.risk }}</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-zone" id="s14">
+    <div class="container">
+      {{ m.section_head('XIV', 'SECTION', '系統性風險判斷', 'Systemic Risk', 'XIV') }}
+      <div class="verdict-grid content-card">
+        <div>
+          <div class="verdict-label">VERDICT</div>
+          <div class="verdict-stamp">{{ verdict.level }}</div>
+          <div class="verdict-label">{{ verdict.level_en }}</div>
+        </div>
+        <p style="margin:0;color:var(--ink-soft)">{{ verdict.reason }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="conclusion">
+    <div class="container">
+      <div class="conclusion-label">— THE BOTTOM LINE —</div>
+      <div class="conclusion-text">{{ conclusion | safe }}</div>
+    </div>
+  </section>
+
+  <section class="section-zone" id="sa">
+    <div class="container">
+      {{ m.section_head('A', 'APPENDIX', '美股盤後重點分析', 'After Hours', 'A') }}
+      <div class="prose content-card"><p>{{ appendix.after_hours }}</p></div>
+    </div>
+  </section>
+
+  <section class="section-zone" id="sb">
+    <div class="container">
+      {{ m.section_head('B', 'APPENDIX', '美股 → 台股產業對照', 'US → TW Map', 'B') }}
+      <div class="validate-grid">
+        <div class="validate-col prose">
+          <h3>國際事件 → 台股族群</h3>
+          <ul>{%- for line in appendix.map_bullets %}<li>{{ line }}</li>{%- endfor %}</ul>
+        </div>
+        <div class="validate-col">
+          <div class="validate-head">今日執行語句</div>
+          <p>{{ appendix.execution }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-zone">
+    <div class="container">
+      <div class="colophon-grid">
+        <div class="colophon-block">
+          <h4>Sources</h4>
+          <p>X (formerly Twitter)<br>Bloomberg<br>TAIFEX 期交所<br>方舟運算 · 持股水位<br>Yahoo Finance</p>
+        </div>
+        <div class="colophon-block">
+          <h4>Masthead</h4>
+          <p>Kelvin Wiggly<br>Morning Brief · Daily<br>Issue No.{{ issue_no_padded }}<br>{{ masthead_roman }} · {{ masthead_month }} · {{ masthead_day }}</p>
+        </div>
+      </div>
+      <p class="disclaimer">{{ disclaimer }}</p>
+      <div class="end-mark">END</div>
+    </div>
+  </footer>
+</main>
+
+<script>
+(function () {
+  const timer = document.getElementById('holdingCountdown');
+  if (!timer) return;
+  const DURATION_MS = 30 * 60 * 1000;
+  const KEY = 'kelvin-holding-countdown-v1';
+  function deadline() {
+    const saved = Number(localStorage.getItem(KEY));
+    const now = Date.now();
+    if (Number.isFinite(saved) && saved > now && saved <= now + DURATION_MS) return saved;
+    const next = now + DURATION_MS;
+    localStorage.setItem(KEY, String(next));
+    return next;
+  }
+  let end = deadline();
+  function tick() {
+    const now = Date.now();
+    let left = end - now;
+    if (left <= 0) { end = now + DURATION_MS; localStorage.setItem(KEY, String(end)); left = DURATION_MS; }
+    const s = Math.ceil(left / 1000);
+    const mm = String(Math.floor(s / 60)).padStart(2, '0');
+    const ss = String(s % 60).padStart(2, '0');
+    timer.innerHTML = `${mm}<span class="blink">:</span>${ss}`;
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+</script>
+</body>
+</html>

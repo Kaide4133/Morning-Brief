@@ -1,0 +1,99 @@
+{
+  "date": "YYYY-MM-DD",
+  "issue_no": 0,
+  "scenario_id": "02",
+  "scenario_reason": "一句話說明為何選此封面（02–08 見 scenario-map.json）",
+
+  "hero": {
+    "headline": "<span class=\"mark\">一句話先看：</span>…",
+    "subhead": "操作感受：…"
+  },
+
+  "market": {
+    "sox": { "value": "0", "change_pct": 0 },
+    "vix": { "value": "0", "change_pct": 0 },
+    "tw_index": { "line": "加權 …", "change_pct": 0 },
+    "futures": { "line": "期貨 …" },
+    "foreign_oi": { "value": "待補", "note": "MM/DD TAIFEX 最新可得" },
+    "systemic_risk": "中"
+  },
+
+  "strategy": {
+    "thesis": "主線關鍵字",
+    "tape": "盤勢一句",
+    "playbook": "策略一句",
+    "risk": "風控一句"
+  },
+
+  "ark": {
+    "water_level": 0,
+    "note": "水位說明（可含 HTML span.mark）"
+  },
+
+  "temperature": {
+    "vix_note": "",
+    "signal_headline": "",
+    "signal_note": ""
+  },
+
+  "editorial": {
+    "pull_quote": "",
+    "body": "操作感受段落（可含 HTML）"
+  },
+
+  "home": {
+    "water_note": "首頁「今日水位」卡片摘要（可省略，建置時自動推導）",
+    "thesis_blurb": "首頁「今日主線」卡片摘要（可省略，預設用 strategy.playbook）",
+    "risk_tagline": "首頁「風險姿態」卡片摘要（可省略）",
+    "recent_summary": "首頁「最近兩日晨報大綱」中本期的摘要段落"
+  },
+
+  "etf": {
+    "value": [{ "code": "0050", "name": "元大台灣50", "meta": "台灣 / +0.00%", "stamp": "value" }],
+    "rising": [{ "code": "00929", "name": "復華台灣科技優息", "meta": "科技 / +0.00%", "stamp": "rising" }],
+    "overlap": ["00830"],
+    "value_note": "紅框代表同時在升溫區。"
+  },
+
+  "stocks": {
+    "value": [{ "code": "2330", "name": "台積電", "meta": "2295 / +0.00%", "stamp": "value" }],
+    "rising": [{ "code": "2327", "name": "國巨*", "meta": "742 / +0.00%", "stamp": "rising" }],
+    "overlap": [],
+    "overlap_names": {}
+  },
+
+  "validation": {
+    "strengthened": ["已強化主線列點"],
+    "pressure": ["短線壓力列點"],
+    "long_term": ["中長線題材列點"]
+  },
+
+  "intelligence": {
+    "trump": [{ "time": "24h", "content": "…<em>市場可能反應：…</em>" }],
+    "musk": "馬斯克 X 訊號段落",
+    "policy": ["<strong>標題：</strong>內容"]
+  },
+
+  "mag7": [{
+    "name": "Apple", "ticker": "AAPL", "price": "0", "change_pct": 0, "change_abs": "+0",
+    "tier": "weak", "tier_label": "NEUTRAL", "signal": "Today's Signal 內容"
+  }],
+
+  "analysis": {
+    "us_close": "",
+    "tx_night": "",
+    "axes": { "thesis": "", "policy": "", "risk": "" }
+  },
+
+  "verdict": { "level": "中", "level_en": "MID", "reason": "" },
+
+  "conclusion": "一句話結論，<em>強調詞</em>可用 HTML",
+
+  "appendix": {
+    "after_hours": "",
+    "map_bullets": ["列點"],
+    "execution": "今日執行語句"
+  },
+
+  "disclaimer": "Kelvin Wiggly Morning Brief｜YYYY/MM/DD 市場晨報。資料來源：…"
+}

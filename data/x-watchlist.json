@@ -1,0 +1,129 @@
+{
+  "lookback_hours": 48,
+  "min_score": 2,
+  "max_items": {
+    "trump": 2,
+    "musk": 2,
+    "policy": 3
+  },
+  "market_keywords": {
+    "tariff": 5,
+    "trade": 3,
+    "sanction": 4,
+    "china": 3,
+    "taiwan": 4,
+    "rate": 5,
+    "rates": 4,
+    "fed": 5,
+    "federal reserve": 5,
+    "inflation": 4,
+    "cpi": 4,
+    "jobs": 3,
+    "employment": 3,
+    "gdp": 3,
+    "recession": 4,
+    "ai": 4,
+    "semiconductor": 5,
+    "chip": 4,
+    "chips": 4,
+    "nvidia": 3,
+    "tsmc": 4,
+    "tesla": 3,
+    "spacex": 2,
+    "bitcoin": 2,
+    "crypto": 2,
+    "oil": 3,
+    "opec": 3,
+    "war": 3,
+    "defense": 2,
+    "export": 3,
+    "ban": 3,
+    "regulation": 3,
+    "executive order": 4,
+    "interest": 3,
+    "yield": 3,
+    "dollar": 2,
+    "關稅": 5,
+    "通膨": 4,
+    "降息": 5,
+    "半導體": 5
+  },
+  "noise_patterns": [
+    "happy birthday",
+    "congratulations",
+    "watch live",
+    "join us",
+    "podcast",
+    "merry christmas",
+    "thank you for"
+  ],
+  "reaction_templates": [
+    {
+      "terms": ["tariff", "trade", "sanction", "export", "ban", "關稅"],
+      "text": "出口链与供应链预期可能波动，台股先看电子与传产敏感度"
+    },
+    {
+      "terms": ["rate", "rates", "fed", "inflation", "cpi", "yield", "降息", "通膨"],
+      "text": "估值与利率路径预期可能重定价，成长股溢价扩张有顶"
+    },
+    {
+      "terms": ["ai", "semiconductor", "chip", "nvidia", "tsmc", "半導體"],
+      "text": "AI／半导体 capex 主線可能获叙事支撑，但追高仍须看量能"
+    },
+    {
+      "terms": ["tesla", "spacex", "ev", "fsd"],
+      "text": "电动车与 AI 应用链情绪可能联动，硬件链关注订单能见度"
+    },
+    {
+      "terms": ["war", "defense", "oil", "opec"],
+      "text": "风险偏好可能短期受压，留意 VIX 与避险资产"
+    }
+  ],
+  "accounts": [
+    {
+      "username": "realDonaldTrump",
+      "label": "Trump",
+      "section": "trump"
+    },
+    {
+      "username": "WhiteHouse",
+      "label": "White House",
+      "section": "trump"
+    },
+    {
+      "username": "elonmusk",
+      "label": "Musk",
+      "section": "musk"
+    },
+    {
+      "username": "federalreserve",
+      "label": "Federal Reserve",
+      "section": "policy"
+    },
+    {
+      "username": "USTreasury",
+      "label": "U.S. Treasury",
+      "section": "policy"
+    },
+    {
+      "username": "SecYellen",
+      "label": "Treasury",
+      "section": "policy"
+    },
+    {
+      "username": "nvidia",
+      "label": "NVIDIA",
+      "section": "policy"
+    },
+    {
+      "username": "AMD",
+      "label": "AMD",
+      "section": "policy"
+    },
+    {
+      "username": "SECGov",
+      "label": "SEC",
+      "section": "policy"
+    }
+  ]
+}

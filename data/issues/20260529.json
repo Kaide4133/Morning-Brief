@@ -1,0 +1,241 @@
+{
+  "date": "2026-05-29",
+  "issue_no": 22,
+  "scenario_id": "02",
+  "scenario_reason": "指數與內部結構背離：升溫強、價值區弱。",
+  "market_summary": "加權 -1.4% · 期貨 -2.13%",
+  "hero": {
+    "headline": "<span class=\"mark\">一句話先看：</span>方舟持股配置建議 <em>67.7%</em>，較前次 66.3% 上升 1.4 個百分點。加權 ▼620.36（-1.4%）、期貨 ▼952（-2.13%），定調「<em>高檔分化</em>」：權值回檔、被動元件強勢、汰弱留強。",
+    "subhead": "操作感受：大盤回檔但 MLCC／電容／電阻升溫區多檔接近漲停；外資情緒儀表偏低、量能暴衝偏高。保留被動元件主線，AI 權值等回測承接，不追開盤急拉。"
+  },
+  "market": {
+    "sox": {
+      "value": "12,829.14",
+      "change_pct": 1.0
+    },
+    "vix": {
+      "value": "15.74",
+      "change_pct": -3.38
+    },
+    "tw_index": {
+      "line": "▼620.36 (-1.40%)",
+      "change_pct": -1.4
+    },
+    "futures": {
+      "line": "期貨 ▼952 (-2.13%)"
+    },
+    "foreign_oi": {
+      "value": "-58,196 口",
+      "note": "5/28 TAIFEX 最新可得"
+    },
+    "systemic_risk": "中"
+  },
+  "strategy": {
+    "thesis": "AI / 半導體 / IC封測 / MLCC / 電容 / 電阻 / IC基板 / 電源散熱 / Agentic AI",
+    "tape": "加權 ▼620.36、期貨 ▼952；指數回檔但被動元件升溫區強勢，屬回檔中的結構分化。",
+    "playbook": "權值回檔調節、被動元件續抱；不追漲停與第一段急拉，等回測量縮再佈局 AI／半導體權值。",
+    "risk": "水位 67.7%，較前次 66.3% 上升 1.4 個百分點；升溫區只做有量的續強。"
+  },
+  "ark": {
+    "water_level": 67.7,
+    "prev": 66.3,
+    "delta": 1.4,
+    "note": "67.7%，較前次 66.3% <span class=\"mark\">上升 1.4 個百分點</span>。方舟水位仍屬可持股；五維儀表顯示<span class=\"mark\">全球散戶偏高、外資情緒偏低、位階增溫偏高、社交反指偏高、量能暴衝偏高</span>——代表資金在做結構換手，而非全面撤退。"
+  },
+  "temperature": {
+    "vix_note": "恐慌續降，短線風險偏好未收縮；但台股創高後長上影線，追價仍須降速。",
+    "signal_headline": "回檔中結構分化，不是全面 risk-off。",
+    "signal_note": "外資情緒儀表偏低、量能暴衝偏高；升溫區被動元件與價值區權值背離。"
+  },
+  "editorial": {
+    "pull_quote": "指數回檔、被動元件卻強；水位微升但外資情緒儀表偏弱。",
+    "body": "ETF 價值區普跌（台灣50、半導體、5G 等 -1%～-4%），升溫區亦同步修正；產業價值區權值全面回檔（台積電 2295、聯發科 4410、台光電 5055、智邦 2435 等），但升溫區 MLCC、電容、電阻多檔 +8%～+10% 強勢（華新科、立隆電、興勤、勤凱、倉佑等）。核心不是撤退，而是<span class=\"mark\">保留被動元件升溫主線，AI 權值回檔調節、等承接</span>。"
+  },
+  "home": {
+    "water_note": "5/29 方舟水位 67.7%，較前次 66.3% 上升 1.4 個百分點；指數回檔但被動元件升溫強，外資情緒儀表偏低。",
+    "thesis_blurb": "權值回檔調節、被動元件續抱；不追漲停與第一段急拉，等回測量縮再佈局 AI／半導體權值。",
+    "risk_tagline": "02 高檔分化｜指數回檔、零組件強，開盤不追急拉",
+    "recent_summary": "方舟水位 67.7% 微升；加權回檔 -1.4%、期貨 -2.13%，被動元件升溫區多檔接近漲停。今日重點：權值調節、零組件續抱、不追開盤急拉。"
+  },
+  "etf": {
+    "value": [
+      {"code": "00988A", "name": "主動統一全球創新", "meta": "全球 / -3.90%", "stamp": "value"},
+      {"code": "0050", "name": "元大台灣50", "meta": "台灣 / -2.00%", "stamp": "value"},
+      {"code": "0052", "name": "富邦科技", "meta": "台灣 / -1.74%", "stamp": "value"},
+      {"code": "00631L", "name": "元大台灣50正2", "meta": "台灣 / -3.53%", "stamp": "value"},
+      {"code": "00911", "name": "兆豐洲際半導體", "meta": "全球半導體 / -3.26%", "stamp": "value"},
+      {"code": "0053", "name": "元大電子", "meta": "台灣 / -2.07%", "stamp": "value"},
+      {"code": "00861", "name": "元大全球未來通訊", "meta": "全球 / -2.11%", "stamp": "value"},
+      {"code": "00876", "name": "元大全球5G", "meta": "全球 / -2.53%", "stamp": "value"},
+      {"code": "00830", "name": "國泰費城半導體", "meta": "美國半導體 / -3.42%", "stamp": "value"},
+      {"code": "00910", "name": "第一金太空衛星", "meta": "已開發國家 / -1.38%", "stamp": "value"}
+    ],
+    "rising": [
+      {"code": "00929", "name": "復華台灣科技優息", "meta": "科技 / -2.13%", "stamp": "rising"},
+      {"code": "00927", "name": "群益半導體收益", "meta": "半導體 / -1.86%", "stamp": "rising"},
+      {"code": "00888", "name": "永豐台灣ESG", "meta": "台灣ESG / -2.85%", "stamp": "rising"},
+      {"code": "00913", "name": "兆豐台灣晶圓製造", "meta": "台灣 / -2.04%", "stamp": "rising"},
+      {"code": "00887", "name": "永豐中國科技50大", "meta": "中國科技 / -1.01%", "stamp": "rising"}
+    ],
+    "overlap": ["00830", "00910"],
+    "value_note": "紅框代表同時在升溫區（00910、00830）。ETF 價值區 10 檔、升溫區 5 檔（不含雙區重疊），骨架仍偏科技與大型權值。"
+  },
+  "stocks": {
+    "value": [
+      {"code": "2330", "name": "台積電", "meta": "2295 / -0.22%", "stamp": "value"},
+      {"code": "2454", "name": "聯發科", "meta": "4410 / -4.96%", "stamp": "value"},
+      {"code": "3711", "name": "日月光投控", "meta": "627 / -2.34%", "stamp": "value"},
+      {"code": "2383", "name": "台光電", "meta": "5055 / -4.71%", "stamp": "value"},
+      {"code": "3037", "name": "欣興", "meta": "1025 / -5.09%", "stamp": "value"},
+      {"code": "3189", "name": "景碩", "meta": "681 / -2.99%", "stamp": "value"},
+      {"code": "2308", "name": "台達電", "meta": "2390 / -5.16%", "stamp": "value"},
+      {"code": "6274", "name": "台燿", "meta": "1540 / -5.52%", "stamp": "value"},
+      {"code": "2345", "name": "智邦", "meta": "2435 / -7.06%", "stamp": "value"},
+      {"code": "3665", "name": "貿聯-KY", "meta": "2115 / 0.00%", "stamp": "value"}
+    ],
+    "rising": [
+      {"code": "2327", "name": "國巨*", "meta": "742 / +5.85%", "stamp": "rising"},
+      {"code": "2492", "name": "華新科", "meta": "390 / +8.03%", "stamp": "rising"},
+      {"code": "2472", "name": "立隆電", "meta": "371 / +9.93%", "stamp": "rising"},
+      {"code": "2428", "name": "興勤", "meta": "292.5 / +9.96%", "stamp": "rising"},
+      {"code": "4760", "name": "勤凱", "meta": "425.5 / +9.95%", "stamp": "rising"},
+      {"code": "6284", "name": "佳邦", "meta": "124 / +9.73%", "stamp": "rising"},
+      {"code": "6239", "name": "力成", "meta": "357.5 / +4.99%", "stamp": "rising"},
+      {"code": "1568", "name": "倉佑", "meta": "41.25 / +10.00%", "stamp": "rising"},
+      {"code": "6141", "name": "柏承", "meta": "43.2 / +9.92%", "stamp": "rising"},
+      {"code": "8291", "name": "尚茂", "meta": "133 / +9.92%", "stamp": "rising"}
+    ],
+    "overlap": ["6239", "2327"],
+    "overlap_names": {
+      "6239": "力成",
+      "2327": "國巨*"
+    }
+  },
+  "validation": {
+    "strengthened": [
+      "MLCC／電容／電阻升溫區多檔逼近漲停（勤凱、興勤、立隆電、華新科等）。",
+      "力成、國巨同時在價值與升溫區，為雙區重疊核心。",
+      "ETF 00830、00910 價值／升溫雙區重疊，半導體 ETF 仍列觀察。"
+    ],
+    "pressure": [
+      "加權 ▼620（-1.4%）、期貨 ▼952（-2.13%），指數與期貨同步修正。",
+      "外資台指期淨空單 -58,196 口（5/28），較前日增加 1,894 口，與升溫區強勢形成背離。",
+      "價值區智邦 -7.06%、穎崴 -6.89%、華通 -8.16%，AI 伺服器鏈承壓。"
+    ],
+    "long_term": [
+      "AI capex、先進封裝、測試設備、CCL / IC 基板仍是中長線主軸。",
+      "電源、散熱、連接線、網通與工業電腦仍是資料中心延伸鏈。",
+      "MLCC / 電容 / 電阻升溫，代表電子零組件進入補漲觀察。"
+    ]
+  },
+  "intelligence": {
+    "trump": [
+      {
+        "time": "5/21 ET",
+        "content": "White House 原訂 AI 模型審查行政命令在簽署前撤回；政策圈對「創新優先 vs. 安全審查」仍分裂。<em>市場可能反應：估值追價仍受政策不確定性限制，但對半導體 capex 主線無直接逆風</em>。"
+      }
+    ],
+    "musk": "xAI / Grok Build、Tesla FSD 與 Agentic AI 敘事延續；AI 代理人與本地 AI 開發需求仍是硬體、GPU、散熱、封測、電源與通訊鏈的中期支撐。White House AI 命令爭議期間，Musk 在 X 上否認曾直接遊說阻擋該命令，但矽谷對監管尺度的拉扯仍是中期變數。",
+    "policy": [
+      "<strong>AMD / Lisa Su：</strong>宣佈在台投資 100 億美元深耕先進封裝；Ryzen AI「Agent Computer」顯示與 NVIDIA 在 Agentic AI 市場的全面開戰。",
+      "<strong>St. Louis Fed / Musalem（5/28）：</strong>AI capex 推升需求端，但生產力紅利尚未足以讓 Fed 把抗通膨交給科技敘事——降息空間仍受壓制。今日結論：主線強勁但估值擴張有頂，回測守住、量縮換手後再布局。"
+    ]
+  },
+  "mag7": [
+    {
+      "name": "Apple",
+      "ticker": "AAPL",
+      "price": "312.51",
+      "change_pct": 0.53,
+      "change_abs": "+1.66",
+      "tier": "weak",
+      "tier_label": "NEUTRAL",
+      "signal": "5/28 收小紅，硬體周期平穩"
+    },
+    {
+      "name": "Microsoft",
+      "ticker": "MSFT",
+      "price": "426.99",
+      "change_pct": 3.47,
+      "change_abs": "+14.32",
+      "tier": "strong",
+      "tier_label": "STRONG",
+      "signal": "雲端與 AI 訂閱續強，七巨頭中領漲"
+    },
+    {
+      "name": "Nvidia",
+      "ticker": "NVDA",
+      "price": "214.25",
+      "change_pct": 0.78,
+      "change_abs": "+1.65",
+      "tier": "weak",
+      "tier_label": "NEUTRAL",
+      "signal": "SOX 鏈情緒指標，漲幅溫和"
+    },
+    {
+      "name": "Amazon",
+      "ticker": "AMZN",
+      "price": "274.00",
+      "change_pct": 0.79,
+      "change_abs": "+2.15",
+      "tier": "weak",
+      "tier_label": "NEUTRAL",
+      "signal": "零售與雲分化，續抱觀察"
+    },
+    {
+      "name": "Alphabet",
+      "ticker": "GOOGL",
+      "price": "390.13",
+      "change_pct": 0.33,
+      "change_abs": "+1.30",
+      "tier": "weak",
+      "tier_label": "NEUTRAL",
+      "signal": "搜尋與雲續強但漲幅收斂"
+    },
+    {
+      "name": "Meta",
+      "ticker": "META",
+      "price": "635.29",
+      "change_pct": 0.0,
+      "change_abs": "+0.03",
+      "tier": "weak",
+      "tier_label": "NEUTRAL",
+      "signal": "高檔整理，廣告與 AI 投資敘事不變"
+    },
+    {
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "price": "442.10",
+      "change_pct": 0.4,
+      "change_abs": "+1.74",
+      "tier": "weak",
+      "tier_label": "NEUTRAL",
+      "signal": "FSD 敘事延續，漲幅有限"
+    }
+  ],
+  "analysis": {
+    "us_close": "前一晚（5/28）美股續偏多：道瓊 +0.05%、S&P 500 +0.58%、NASDAQ +0.91%、SOX +1.00%。風險偏好未轉弱，半導體提供台股電子鏈參考；但七巨頭僅 MSFT 明顯領漲（+3.47%），其餘分化，台股今日以結構換手為主。",
+    "tx_night": "5/28 台股收 43,636.44 / ▼620.36（-1.40%），創高後留 713 點上影線、成交 1.59 兆天量；夜盤期貨續弱約 -2.13%（▼952），與價值區權值修正一致。升溫區被動元件若開盤續強，主線在零組件；權值開低後看量縮承接，不追急拉。",
+    "axes": {
+      "thesis": "MLCC / 電容 / 電阻 / 被動元件是今日升溫區最明確資金方向。",
+      "policy": "關稅、出口管制與 Fed 路徑仍限制估值擴張速度。",
+      "risk": "水位 67.7% 微升；權值回檔調節、零組件續抱，不追開盤第一段。"
+    }
+  },
+  "verdict": {
+    "level": "中",
+    "level_en": "MID",
+    "reason": "加權創高後長上影線回檔、外資期貨淨空單 -58,196 口偏高，系統性風險維持中性；方舟水位 67.7% 仍可持股，但外資情緒儀表偏低、量能暴衝偏高，今日宜採高檔分化心態，被動元件續抱、權值不追跌。"
+  },
+  "conclusion": "大盤回檔但被動元件升溫強；方舟水位 <em>67.7%</em>，今日紀律是權值調節、零組件續抱、不追漲停。",
+  "appendix": {
+    "after_hours": "半導體權值回檔但升溫區被動元件強勢。台股優先看國巨、華新科、勤凱、力成等升溫名單，以及台積電、聯發科、日月光等價值區回測承接。",
+    "map_bullets": [
+      "被動元件強：國巨、華新科、勤凱、興勤、立隆電、凱美。",
+      "封測／基板：力成、日月光、景碩、欣興（價值區回檔觀察）。",
+      "AI 權值回檔：台積電、聯發科、智邦、台達電——等量縮再佈局。"
+    ],
+    "execution": "今天不是全面撤退盤，是結構分化盤。零組件升溫續抱、權值回檔調節；開盤第一段不追漲停，回測守住再佈局。"
+  },
+  "disclaimer": "Kelvin Wiggly Morning Brief｜2026/05/29 市場晨報。資料來源：方舟運算持股水位與 ETF／產業價值／升溫區截圖（11 張）、Yahoo Finance、臺灣期貨交易所公開資料。本文為開盤前風險與主線整理，不是個股買賣保證。"
+}

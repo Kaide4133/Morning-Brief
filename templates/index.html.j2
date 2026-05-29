@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kelvin Wiggly｜Morning Brief Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500&family=JetBrains+Mono:wght@500;800&family=Playfair+Display:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/morning-brief.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner container">
+    <div><span class="kw-mark">K</span> Kelvin Wiggly</div>
+    <div class="nav-links">
+      <span>首頁</span>
+      <a href="water-level.html">｜ 水位紀錄</a>
+      <a href="#">｜ 飆股雷達煞車器</a>
+    </div>
+  </div>
+</header>
+
+<main class="container" style="padding-top:30px;padding-bottom:72px">
+  <header class="home-header">
+    <p class="home-eyebrow">Taiwan pre-open decision brief</p>
+    <h1>Kelvin Wiggly 每日市場晨報</h1>
+    <p class="home-subtitle">以方舟水位為母系統，早上先判斷風險預算，再看主線、換手與調節。這裡整理台股開盤前需要先讀完的市場邊界：水位、主線、風險、以及不追價的操作提醒。</p>
+    <div class="home-btns">
+      <a class="home-btn primary" href="{{ latest.filename }}">閱讀今日晨報</a>
+      <a class="home-btn" href="water-level.html">水位紀錄</a>
+      <a class="home-btn" href="#">飆股雷達煞車器</a>
+    </div>
+  </header>
+
+  <div class="grid3">
+    <div class="home-card">
+      <div class="label">今日水位</div>
+      <div class="num">{{ latest.ark.water_level }}%</div>
+      <p>{{ home.water_note }}</p>
+    </div>
+    <div class="home-card">
+      <div class="label">今日主線</div>
+      <h3>{{ latest.strategy.thesis }}</h3>
+      <p>{{ home.thesis_blurb }}</p>
+    </div>
+    <div class="home-card">
+      <div class="label">風險姿態</div>
+      <div class="num" style="font-size:1.5rem">{{ latest.market.systemic_risk }}</div>
+      <p>{{ home.risk_tagline }}</p>
+    </div>
+  </div>
+
+  <section>
+    <p class="section-eyebrow">Recent issues</p>
+    <h2 class="section-title-home">最近兩日晨報大綱</h2>
+    <div class="grid2">
+      {%- for item in recent_issues %}
+      <a class="recent-card" href="{{ item.filename }}">
+        <h3>{{ item.date_display }}｜{{ item.scenario_name }}</h3>
+        <p>{{ item.summary }}</p>
+      </a>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section style="margin-top:36px">
+    <p class="section-eyebrow">Service</p>
+    <h2 class="section-title-home">我提供的市場整理方式</h2>
+    <div class="grid3">
+      <div class="home-card">
+        <div class="label">開盤前晨報</div>
+        <p>把美股與高權重訊號壓縮成台股可執行的主線、風險與換手觀察。</p>
+      </div>
+      <div class="home-card">
+        <div class="label">方舟水位紀錄</div>
+        <p>保留水位變化，讓每一天的風險預算與調節理由有脈絡可追。</p>
+      </div>
+      <div class="home-card">
+        <div class="label">追價煞車器</div>
+        <p>把強勢題材拆成可觀察、等回測、禁止追價三種狀態，避免情緒加速。</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="home-footer">
+    Kelvin Wiggly｜以水位、位階與紀律為核心的台股開盤前市場整理。
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>水位紀錄｜Kelvin Wiggly Morning Brief</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500&family=JetBrains+Mono:wght@500;800&family=Playfair+Display:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/morning-brief.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner container">
+    <div><span class="kw-mark">K</span> Kelvin Wiggly</div>
+    <div class="nav-links">
+      <a href="index.html">首頁</a>
+      <span>｜ 水位紀錄</span>
+      <a href="#">｜ 飆股雷達煞車器</a>
+    </div>
+  </div>
+</header>
+
+<main class="container" style="padding-top:30px;padding-bottom:72px">
+  <header class="home-header" style="margin-bottom:0">
+    <p class="home-eyebrow">Ark Water Level Archive</p>
+    <h1 style="font-size:clamp(1.8rem,4vw,2.8rem)">方舟持股水位紀錄</h1>
+    <p class="home-subtitle">每日晨報建置時自動同步。最新一筆：<strong style="color:var(--blood)">{{ latest.water_level }}%</strong>（{{ latest.date_display }} · {{ latest.scenario_label }}）</p>
+    <div class="home-btns">
+      <a class="home-btn primary" href="{{ latest_brief_url }}">閱讀最新晨報</a>
+      <a class="home-btn" href="index.html">返回首頁</a>
+    </div>
+  </header>
+
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>日期</th>
+          <th>持股水位</th>
+          <th>狀態</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%- for row in records %}
+        <tr>
+          <td>{{ row.date_display }}</td>
+          <td class="wl">{{ row.water_level }}%</td>
+          <td>{{ row.scenario_label }}</td>
+        </tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="home-footer">
+    Kelvin Wiggly Morning Brief · 資料來源：方舟運算持股水位截圖
+  </footer>
+</main>
+</body>
+</html>

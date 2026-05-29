@@ -1,0 +1,48 @@
+{# Kelvin Wiggly Morning Brief — reusable macros #}
+
+{% macro delta_class(pct) -%}
+{%- if pct is none -%}{%- elif pct >= 0 -%}delta-pos{%- else -%}delta-neg{%- endif -%}
+{%- endmacro %}
+
+{% macro delta_arrow(pct) -%}
+{%- if pct is none -%}{%- elif pct >= 0 -%}▲{%- else -%}▼{%- endif -%}
+{%- endmacro %}
+
+{% macro fmt_pct(pct, signed=true) -%}
+{%- if pct is none -%}—{%- elif signed -%}{{ "%+.2f"|format(pct) }}%{%- else -%}{{ "%.2f"|format(pct|abs) }}%{%- endif -%}
+{%- endmacro %}
+
+{% macro section_head(section_id, num_label, title, tag, icon_key) -%}
+<div class="section-head">
+  <div class="section-num-block">
+    {{ icons[icon_key] | safe }}
+    <div class="section-num"><small>{{ num_label }}</small>{{ section_id }}</div>
+  </div>
+  <h2 class="section-title">{{ title }}</h2>
+  <span class="section-tag">{{ tag }}</span>
+</div>
+{%- endmacro %}
+
+{% macro trading_card(item, overlap=false) -%}
+<div class="card{% if overlap or item.overlap %} card-overlap{% endif %}">
+  <div class="card-code">{{ item.code }}</div>
+  <div class="card-name">{{ item.name }}</div>
+  <p class="card-meta">{{ item.meta }}</p>
+  <span class="card-stamp stamp-{{ item.stamp }}">{{ '價值' if item.stamp == 'value' else '升溫' }}</span>
+</div>
+{%- endmacro %}
+
+{% macro mag7_card(item) -%}
+<article class="mag7-card {{ item.tier }}">
+  <div class="mag7-rank">— {{ item.tier_label }} —</div>
+  <div class="mag7-name">{{ item.name }}</div>
+  <div class="mag7-ceo">{{ item.ticker }}</div>
+  <div class="mag7-price">
+    <span class="v">{{ item.price }}</span>
+    {%- if item.change_pct is not none %}
+    <span class="d {{ delta_class(item.change_pct) }}">{{ fmt_pct(item.change_pct, false) }} / {{ item.change_abs }}</span>
+    {%- endif %}
+  </div>
+  <div class="mag7-signal"><strong>Today's Signal</strong>{{ item.signal }}</div>
+</article>
+{%- endmacro %}
