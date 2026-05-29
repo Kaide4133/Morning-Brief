@@ -65,7 +65,7 @@ def main() -> int:
         run(["git", "branch", "-M", args.branch], ROOT)
 
     # Stage site + templates + data + tools (not secrets)
-    run(["git", "add", "docs", "templates", "data", "tools", "requirements.txt", ".gitignore", "README.md"], ROOT)
+    run(["git", "add", "docs", "templates", "data", "tools", ".github", "requirements.txt", ".gitignore", "README.md"], ROOT)
 
     status = subprocess.run(["git", "status", "--porcelain"], cwd=ROOT, capture_output=True, text=True)
     if not status.stdout.strip():

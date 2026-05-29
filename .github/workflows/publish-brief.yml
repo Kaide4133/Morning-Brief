@@ -1,0 +1,69 @@
+name: Publish Morning Brief
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Issue date YYYYMMDD (blank = rebuild all)"
+        required: false
+        default: ""
+  push:
+    paths:
+      - "data/issues/*.json"
+      - "templates/**"
+      - "tools/**"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch X signals (optional)
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+        run: |
+          if [ -n "$X_BEARER_TOKEN" ]; then
+            DATE="${{ github.event.inputs.date }}"
+            if [ -n "$DATE" ] && [ -f "data/issues/${DATE}.json" ]; then
+              python tools/x_fetch.py "data/issues/${DATE}.json"
+            else
+              LATEST=$(ls data/issues/*.json 2>/dev/null | grep -v _template | sort | tail -1)
+              if [ -n "$LATEST" ]; then
+                python tools/x_fetch.py "$LATEST"
+              fi
+            fi
+          else
+            echo "X_BEARER_TOKEN not set — skip x_fetch"
+          fi
+
+      - name: Build HTML
+        run: |
+          DATE="${{ github.event.inputs.date }}"
+          if [ -n "$DATE" ] && [ -f "data/issues/${DATE}.json" ]; then
+            python tools/build_brief.py "data/issues/${DATE}.json"
+          else
+            python tools/build_brief.py --all
+          fi
+
+      - name: Commit and push docs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs data/water-level-history.json
+          if git diff --staged --quiet; then
+            echo "No changes to publish."
+            exit 0
+          fi
+          git commit -m "Publish morning brief [skip ci]"
+          git push
