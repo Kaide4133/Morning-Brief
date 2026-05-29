@@ -38,7 +38,51 @@ GitHub Pages：**Settings → Pages → Branch `main` → Folder `/docs`**
 
 （GitHub 介面只有 **root** 和 **docs** 兩種，沒有 site。）
 
-## 每日流程
+## 手機操作（推薦）
+
+電腦不在身邊時，用 **GitHub App + 自動建置** 即可發布晨報。
+
+### 事前準備（做一次）
+
+1. 手機安裝 **GitHub** App（iOS / Android）
+2. Repo → **Settings → Secrets → Actions** → 新增：
+   - `X_BEARER_TOKEN`（選填，自動抓 X 訊號用）
+3. 確認 Pages 設為 **`main` + `/docs`**
+4. 把晨報網址加到手機主畫面：
+   - https://kaide4133.github.io/Morning-Brief/
+
+### 每日手機流程
+
+**① 填資料**
+
+- 方式 A：手機把 **11 張方舟截圖** 丟給 Cursor / AI，請它產出 JSON，再貼到 GitHub
+- 方式 B：在 GitHub App 編輯  
+  `data/issues/YYYYMMDD.json`（可複製前一日 JSON 再改）
+
+路徑：Repo → 檔案 → `data/issues/20260530.json` → 鉛筆圖示編輯 → Commit
+
+**② 一鍵發布**
+
+Repo → **Actions** → **Publish Morning Brief** → **Run workflow**
+
+- `date` 可填 `20260530`（只建置該日）或留空（重建全部）
+- 約 1–2 分鐘後，網站自動更新
+
+**③ 預覽**
+
+打開 https://kaide4133.github.io/Morning-Brief/
+
+> 推送 JSON 到 `data/issues/` 也會自動觸發建置；手動 Run workflow 可強制重建。
+
+### 手機 vs 電腦
+
+| 項目 | 手機 | 電腦 |
+|------|------|------|
+| 看晨報 | ✅ 瀏覽器 | ✅ |
+| 編輯 JSON | ✅ GitHub App | ✅ Cursor |
+| 上傳截圖給 AI | ✅ | ✅ 較方便 |
+| 一鍵發布 | ✅ Actions | ✅ `daily.ps1` |
+
 
 ### 1. 上傳 11 張方舟截圖給 AI / 自行填 JSON
 
