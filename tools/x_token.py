@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exchange X Client ID + Secret for Bearer Token (OAuth 2.0 app-only)."""
+"""Obtain / verify X Bearer Token for x_fetch.py."""
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ import re
 import sys
 from pathlib import Path
 
-from x_auth import fetch_bearer_token
+from x_auth import fetch_bearer_token, verify_bearer_token
 
 ROOT = Path(__file__).resolve().parents[1]
 ENV_PATH = ROOT / ".env"
@@ -53,17 +53,32 @@ def upsert_env_key(path: Path, key: str, value: str) -> None:
 
 def main() -> int:
     load_dotenv()
-    client_id = get_env("X_CLIENT_ID")
-    client_secret = get_env("X_CLIENT_SECRET")
-    if not client_id or not client_secret:
-        print("請在 .env 填入 X_CLIENT_ID 和 X_CLIENT_SECRET", file=sys.stderr)
-        return 1
 
-    token = fetch_bearer_token(client_id, client_secret)
-    upsert_env_key(ENV_PATH, "X_BEARER_TOKEN", token)
-    print(f"OK — Bearer Token 已寫入 {ENV_PATH}")
-    print("接下來執行: python tools\\x_fetch.py --dry-run")
-    return 0
+    bearer = get_env("X_BEARER_TOKEN")
+    if bearer and verify_bearer_token(bearer):
+        print("OK — 現有 X_BEARER_TOKEN 可用")
+        return 0
+
+    api_key = get_env("X_API_KEY")
+    api_secret = get_env("X_API_KEY_SECRET")
+    if api_key and api_secret:
+        token = fetch_bearer_token(api_key, api_secret)
+        upsert_env_key(ENV_PATH, "X_BEARER_TOKEN", token)
+        print(f"OK — 已用 API Key 換取 Bearer Token 並寫入 {ENV_PATH}")
+        return 0
+
+    print(
+        "無法取得 Bearer Token。\n"
+        "\n"
+        "Developer Console → 你的 App → Keys and tokens，擇一：\n"
+        "  A) 直接複製「Bearer Token」→ 寫入 .env 的 X_BEARER_TOKEN\n"
+        "  B) 複製「API Key」+「API Key Secret」→ 寫入 X_API_KEY / X_API_KEY_SECRET\n"
+        "\n"
+        "注意：OAuth 2.0 Client ID / Client Secret（你截圖那組）\n"
+        "      是給使用者登入用，不能拿來抓公開貼文。\n",
+        file=sys.stderr,
+    )
+    return 1
 
 
 if __name__ == "__main__":

@@ -60,15 +60,15 @@ def resolve_bearer_token() -> str | None:
     token = _get_env("X_BEARER_TOKEN")
     if token:
         return token
-    client_id = _get_env("X_CLIENT_ID")
-    client_secret = _get_env("X_CLIENT_SECRET")
-    if not client_id or not client_secret:
-        return None
-    from x_auth import fetch_bearer_token
+    api_key = _get_env("X_API_KEY")
+    api_secret = _get_env("X_API_KEY_SECRET")
+    if api_key and api_secret:
+        from x_auth import fetch_bearer_token
 
-    token = fetch_bearer_token(client_id, client_secret)
-    os.environ["X_BEARER_TOKEN"] = token
-    return token
+        token = fetch_bearer_token(api_key, api_secret)
+        os.environ["X_BEARER_TOKEN"] = token
+        return token
+    return None
 
 
 def load_json(path: Path) -> dict:
@@ -171,7 +171,7 @@ def fetch_user_tweets(username: str, max_results: int = 10) -> list[dict]:
         "max_results": str(max(max_results, 10)),
         "tweet.fields": "created_at,text,lang",
     })
-    url = f"https://api.twitter.com/2/tweets/search/recent?{query}"
+    url = f"https://api.x.com/2/tweets/search/recent?{query}"
     req = urllib.request.Request(url, headers={"Authorization": f"Bearer {token}"})
     try:
         with urllib.request.urlopen(req, timeout=25) as resp:
@@ -327,7 +327,10 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     if not resolve_bearer_token():
-        print("SKIP: X API 未設定 — 请在 .env 填入 X_CLIENT_ID + X_CLIENT_SECRET，或 X_BEARER_TOKEN")
+        print(
+            "SKIP: X API 未設定 — 请在 .env 填入 X_BEARER_TOKEN，"
+            "或 X_API_KEY + X_API_KEY_SECRET（见 Developer Console → Keys and tokens）"
+        )
         return 0
 
     watchlist_path = Path(args.watchlist)
@@ -347,7 +350,7 @@ def main(argv: list[str] | None = None) -> int:
         print("No market-relevant posts found — issue JSON unchanged.")
         return 0
 
-    print(json.dumps(intelligence, ensure_ascii=False, indent=2))
+    print(json.dumps(intelligence, ensure_ascii=True, indent=2))
 
     if args.dry_run:
         return 0

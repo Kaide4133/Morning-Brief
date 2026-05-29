@@ -59,53 +59,234 @@
   },
   "etf": {
     "value": [
-      {"code": "00988A", "name": "主動統一全球創新", "meta": "全球 / -3.90%", "stamp": "value"},
-      {"code": "0050", "name": "元大台灣50", "meta": "台灣 / -2.00%", "stamp": "value"},
-      {"code": "0052", "name": "富邦科技", "meta": "台灣 / -1.74%", "stamp": "value"},
-      {"code": "00631L", "name": "元大台灣50正2", "meta": "台灣 / -3.53%", "stamp": "value"},
-      {"code": "00911", "name": "兆豐洲際半導體", "meta": "全球半導體 / -3.26%", "stamp": "value"},
-      {"code": "0053", "name": "元大電子", "meta": "台灣 / -2.07%", "stamp": "value"},
-      {"code": "00861", "name": "元大全球未來通訊", "meta": "全球 / -2.11%", "stamp": "value"},
-      {"code": "00876", "name": "元大全球5G", "meta": "全球 / -2.53%", "stamp": "value"},
-      {"code": "00830", "name": "國泰費城半導體", "meta": "美國半導體 / -3.42%", "stamp": "value"},
-      {"code": "00910", "name": "第一金太空衛星", "meta": "已開發國家 / -1.38%", "stamp": "value"}
+      {
+        "code": "00988A",
+        "name": "主動統一全球創新",
+        "meta": "全球 / -3.90%",
+        "stamp": "value"
+      },
+      {
+        "code": "0050",
+        "name": "元大台灣50",
+        "meta": "台灣 / -2.00%",
+        "stamp": "value"
+      },
+      {
+        "code": "0052",
+        "name": "富邦科技",
+        "meta": "台灣 / -1.74%",
+        "stamp": "value"
+      },
+      {
+        "code": "00631L",
+        "name": "元大台灣50正2",
+        "meta": "台灣 / -3.53%",
+        "stamp": "value"
+      },
+      {
+        "code": "00911",
+        "name": "兆豐洲際半導體",
+        "meta": "全球半導體 / -3.26%",
+        "stamp": "value"
+      },
+      {
+        "code": "0053",
+        "name": "元大電子",
+        "meta": "台灣 / -2.07%",
+        "stamp": "value"
+      },
+      {
+        "code": "00861",
+        "name": "元大全球未來通訊",
+        "meta": "全球 / -2.11%",
+        "stamp": "value"
+      },
+      {
+        "code": "00876",
+        "name": "元大全球5G",
+        "meta": "全球 / -2.53%",
+        "stamp": "value"
+      },
+      {
+        "code": "00830",
+        "name": "國泰費城半導體",
+        "meta": "美國半導體 / -3.42%",
+        "stamp": "value"
+      },
+      {
+        "code": "00910",
+        "name": "第一金太空衛星",
+        "meta": "已開發國家 / -1.38%",
+        "stamp": "value"
+      }
     ],
     "rising": [
-      {"code": "00929", "name": "復華台灣科技優息", "meta": "科技 / -2.13%", "stamp": "rising"},
-      {"code": "00927", "name": "群益半導體收益", "meta": "半導體 / -1.86%", "stamp": "rising"},
-      {"code": "00888", "name": "永豐台灣ESG", "meta": "台灣ESG / -2.85%", "stamp": "rising"},
-      {"code": "00913", "name": "兆豐台灣晶圓製造", "meta": "台灣 / -2.04%", "stamp": "rising"},
-      {"code": "00887", "name": "永豐中國科技50大", "meta": "中國科技 / -1.01%", "stamp": "rising"}
+      {
+        "code": "00929",
+        "name": "復華台灣科技優息",
+        "meta": "科技 / -2.13%",
+        "stamp": "rising"
+      },
+      {
+        "code": "00927",
+        "name": "群益半導體收益",
+        "meta": "半導體 / -1.86%",
+        "stamp": "rising"
+      },
+      {
+        "code": "00888",
+        "name": "永豐台灣ESG",
+        "meta": "台灣ESG / -2.85%",
+        "stamp": "rising"
+      },
+      {
+        "code": "00913",
+        "name": "兆豐台灣晶圓製造",
+        "meta": "台灣 / -2.04%",
+        "stamp": "rising"
+      },
+      {
+        "code": "00887",
+        "name": "永豐中國科技50大",
+        "meta": "中國科技 / -1.01%",
+        "stamp": "rising"
+      }
     ],
-    "overlap": ["00830", "00910"],
+    "overlap": [
+      "00830",
+      "00910"
+    ],
     "value_note": "紅框代表同時在升溫區（00910、00830）。ETF 價值區 10 檔、升溫區 5 檔（不含雙區重疊），骨架仍偏科技與大型權值。"
   },
   "stocks": {
     "value": [
-      {"code": "2330", "name": "台積電", "meta": "2295 / -0.22%", "stamp": "value"},
-      {"code": "2454", "name": "聯發科", "meta": "4410 / -4.96%", "stamp": "value"},
-      {"code": "3711", "name": "日月光投控", "meta": "627 / -2.34%", "stamp": "value"},
-      {"code": "2383", "name": "台光電", "meta": "5055 / -4.71%", "stamp": "value"},
-      {"code": "3037", "name": "欣興", "meta": "1025 / -5.09%", "stamp": "value"},
-      {"code": "3189", "name": "景碩", "meta": "681 / -2.99%", "stamp": "value"},
-      {"code": "2308", "name": "台達電", "meta": "2390 / -5.16%", "stamp": "value"},
-      {"code": "6274", "name": "台燿", "meta": "1540 / -5.52%", "stamp": "value"},
-      {"code": "2345", "name": "智邦", "meta": "2435 / -7.06%", "stamp": "value"},
-      {"code": "3665", "name": "貿聯-KY", "meta": "2115 / 0.00%", "stamp": "value"}
+      {
+        "code": "2330",
+        "name": "台積電",
+        "meta": "2295 / -0.22%",
+        "stamp": "value"
+      },
+      {
+        "code": "2454",
+        "name": "聯發科",
+        "meta": "4410 / -4.96%",
+        "stamp": "value"
+      },
+      {
+        "code": "3711",
+        "name": "日月光投控",
+        "meta": "627 / -2.34%",
+        "stamp": "value"
+      },
+      {
+        "code": "2383",
+        "name": "台光電",
+        "meta": "5055 / -4.71%",
+        "stamp": "value"
+      },
+      {
+        "code": "3037",
+        "name": "欣興",
+        "meta": "1025 / -5.09%",
+        "stamp": "value"
+      },
+      {
+        "code": "3189",
+        "name": "景碩",
+        "meta": "681 / -2.99%",
+        "stamp": "value"
+      },
+      {
+        "code": "2308",
+        "name": "台達電",
+        "meta": "2390 / -5.16%",
+        "stamp": "value"
+      },
+      {
+        "code": "6274",
+        "name": "台燿",
+        "meta": "1540 / -5.52%",
+        "stamp": "value"
+      },
+      {
+        "code": "2345",
+        "name": "智邦",
+        "meta": "2435 / -7.06%",
+        "stamp": "value"
+      },
+      {
+        "code": "3665",
+        "name": "貿聯-KY",
+        "meta": "2115 / 0.00%",
+        "stamp": "value"
+      }
     ],
     "rising": [
-      {"code": "2327", "name": "國巨*", "meta": "742 / +5.85%", "stamp": "rising"},
-      {"code": "2492", "name": "華新科", "meta": "390 / +8.03%", "stamp": "rising"},
-      {"code": "2472", "name": "立隆電", "meta": "371 / +9.93%", "stamp": "rising"},
-      {"code": "2428", "name": "興勤", "meta": "292.5 / +9.96%", "stamp": "rising"},
-      {"code": "4760", "name": "勤凱", "meta": "425.5 / +9.95%", "stamp": "rising"},
-      {"code": "6284", "name": "佳邦", "meta": "124 / +9.73%", "stamp": "rising"},
-      {"code": "6239", "name": "力成", "meta": "357.5 / +4.99%", "stamp": "rising"},
-      {"code": "1568", "name": "倉佑", "meta": "41.25 / +10.00%", "stamp": "rising"},
-      {"code": "6141", "name": "柏承", "meta": "43.2 / +9.92%", "stamp": "rising"},
-      {"code": "8291", "name": "尚茂", "meta": "133 / +9.92%", "stamp": "rising"}
+      {
+        "code": "2327",
+        "name": "國巨*",
+        "meta": "742 / +5.85%",
+        "stamp": "rising"
+      },
+      {
+        "code": "2492",
+        "name": "華新科",
+        "meta": "390 / +8.03%",
+        "stamp": "rising"
+      },
+      {
+        "code": "2472",
+        "name": "立隆電",
+        "meta": "371 / +9.93%",
+        "stamp": "rising"
+      },
+      {
+        "code": "2428",
+        "name": "興勤",
+        "meta": "292.5 / +9.96%",
+        "stamp": "rising"
+      },
+      {
+        "code": "4760",
+        "name": "勤凱",
+        "meta": "425.5 / +9.95%",
+        "stamp": "rising"
+      },
+      {
+        "code": "6284",
+        "name": "佳邦",
+        "meta": "124 / +9.73%",
+        "stamp": "rising"
+      },
+      {
+        "code": "6239",
+        "name": "力成",
+        "meta": "357.5 / +4.99%",
+        "stamp": "rising"
+      },
+      {
+        "code": "1568",
+        "name": "倉佑",
+        "meta": "41.25 / +10.00%",
+        "stamp": "rising"
+      },
+      {
+        "code": "6141",
+        "name": "柏承",
+        "meta": "43.2 / +9.92%",
+        "stamp": "rising"
+      },
+      {
+        "code": "8291",
+        "name": "尚茂",
+        "meta": "133 / +9.92%",
+        "stamp": "rising"
+      }
     ],
-    "overlap": ["6239", "2327"],
+    "overlap": [
+      "6239",
+      "2327"
+    ],
     "overlap_names": {
       "6239": "力成",
       "2327": "國巨*"
@@ -131,14 +312,15 @@
   "intelligence": {
     "trump": [
       {
-        "time": "5/21 ET",
-        "content": "White House 原訂 AI 模型審查行政命令在簽署前撤回；政策圈對「創新優先 vs. 安全審查」仍分裂。<em>市場可能反應：估值追價仍受政策不確定性限制，但對半導體 capex 主線無直接逆風</em>。"
+        "time": "5/29 ET",
+        "content": "<strong>White House：</strong>THE FASTEST GROWING NON-AI APP 🚀 Download now to set your children up for success: 📲 📲<em>市場可能反應：AI／半导体 capex 主線可能获叙事支撑，但追高仍须看量能</em>"
       }
     ],
-    "musk": "xAI / Grok Build、Tesla FSD 與 Agentic AI 敘事延續；AI 代理人與本地 AI 開發需求仍是硬體、GPU、散熱、封測、電源與通訊鏈的中期支撐。White House AI 命令爭議期間，Musk 在 X 上否認曾直接遊說阻擋該命令，但矽谷對監管尺度的拉扯仍是中期變數。",
+    "musk": "<strong>Musk：</strong>@willdepue Accurate",
     "policy": [
-      "<strong>AMD / Lisa Su：</strong>宣佈在台投資 100 億美元深耕先進封裝；Ryzen AI「Agent Computer」顯示與 NVIDIA 在 Agentic AI 市場的全面開戰。",
-      "<strong>St. Louis Fed / Musalem（5/28）：</strong>AI capex 推升需求端，但生產力紅利尚未足以讓 Fed 把抗通膨交給科技敘事——降息空間仍受壓制。今日結論：主線強勁但估值擴張有頂，回測守住、量縮換手後再布局。"
+      "<strong>Federal Reserve：</strong>Did you get an unsolicited call from the Federal Reserve? Scammers will call posing as Federal Reserve officials claiming that your bank account was compromised and will ask for personal information to confirm your…<em>市場可能反應：出口链与供应链预期可能波动，台股先看电子与传产敏感度</em>",
+      "<strong>NVIDIA：</strong>We're honored Colette Kress, our CFO, was recognized among @FortuneMagazine's Most Powerful Women in Business. She’s appeared on the list three years running, reflecting the strategic role she plays in positioning our…<em>市場可能反應：估值与利率路径预期可能重定价，成长股溢价扩张有顶</em>",
+      "<strong>NVIDIA：</strong>Don't miss the livestream of NVIDIA CEO Jensen Huang's keynote at #NVIDIAGTC Taipei. Hear Jensen unveil the breakthroughs in physical AI, scaling infrastructure, science, and more — and what's driving the next…<em>市場可能反應：AI／半导体 capex 主線可能获叙事支撑，但追高仍须看量能</em>"
     ]
   },
   "mag7": [
