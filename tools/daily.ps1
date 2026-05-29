@@ -19,4 +19,4 @@ python tools\fetch_market.py
 python tools\x_token.py 2>$null
 python tools\x_fetch.py $Json
 python tools\build_brief.py $Json
-Write-Host "完成：site\$Date-stock-news-kelvin.html"
+Write-Host "完成：docs\$Date-stock-news-kelvin.html"

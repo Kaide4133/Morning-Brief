@@ -1,0 +1,72 @@
+{
+  "sprite": "market-scenarios-8.png",
+  "grid": { "cols": 4, "rows": 2 },
+  "backgroundSize": "400% 200%",
+  "scenarios": [
+    {
+      "id": "01",
+      "slug": "bullish",
+      "name": "強多頭 / 突破",
+      "subtitle": "突破關鍵 · 趨勢向上",
+      "position": "0% 0%",
+      "when": "Breakout day, sustained risk-on, broad participation"
+    },
+    {
+      "id": "02",
+      "slug": "divergence",
+      "name": "高檔分化",
+      "subtitle": "指數高檔 · 個股分化",
+      "position": "33.33% 0%",
+      "when": "Index and internals diverge; some sectors strong while leaders or value zone weak"
+    },
+    {
+      "id": "03",
+      "slug": "consolidation",
+      "name": "震盪整理",
+      "subtitle": "多空拉鋸 · 等待方向",
+      "position": "66.67% 0%",
+      "when": "Range-bound, no clear direction, bulls and bears stalled"
+    },
+    {
+      "id": "04",
+      "slug": "pullback",
+      "name": "回檔修正",
+      "subtitle": "漲多回檔 · 調整修正",
+      "position": "100% 0%",
+      "when": "Healthy pullback in an ongoing uptrend; broad but orderly correction"
+    },
+    {
+      "id": "05",
+      "slug": "bearish",
+      "name": "空頭 / 風險升高",
+      "subtitle": "風險升高 · 保守應對",
+      "position": "0% 100%",
+      "when": "Risk-off day, broad selling, VIX spike, systemic risk elevated"
+    },
+    {
+      "id": "06",
+      "slug": "aftermarket",
+      "name": "盤後觀望",
+      "subtitle": "靜待消息 · 謹慎觀望",
+      "position": "33.33% 100%",
+      "when": "Weekend, pre-event, or waiting day with no clear tape"
+    },
+    {
+      "id": "07",
+      "slug": "earnings",
+      "name": "財報週 / 等待",
+      "subtitle": "財報公布 · 靜待結果",
+      "position": "66.67% 100%",
+      "when": "Major earnings ahead; tape held hostage to results"
+    },
+    {
+      "id": "08",
+      "slug": "ai-surge",
+      "name": "AI 主線爆發",
+      "subtitle": "AI 浪潮 · 引領未來",
+      "position": "100% 100%",
+      "when": "AI/semi names breaking out specifically as the dominant theme"
+    }
+  ],
+  "selectionRule": "If two scenarios fit, prefer the one closer to the day's risk posture than the day's price action alone."
+}

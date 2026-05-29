@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Push site/ to GitHub Pages (Morning-Brief repo)."""
+"""Push docs/ to GitHub Pages (Morning-Brief repo)."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SITE = ROOT / "site"
+DOCS = ROOT / "docs"
 DEFAULT_REMOTE = "https://github.com/kaide4133/Morning-Brief.git"
 ENV_PATH = ROOT / ".env"
 
@@ -65,7 +65,7 @@ def main() -> int:
         run(["git", "branch", "-M", args.branch], ROOT)
 
     # Stage site + templates + data + tools (not secrets)
-    run(["git", "add", "site", "templates", "data", "tools", "requirements.txt", ".gitignore", "README.md"], ROOT)
+    run(["git", "add", "docs", "templates", "data", "tools", "requirements.txt", ".gitignore", "README.md"], ROOT)
 
     status = subprocess.run(["git", "status", "--porcelain"], cwd=ROOT, capture_output=True, text=True)
     if not status.stdout.strip():

@@ -14,7 +14,7 @@ Kelvin-Morning-Brief/
 │   ├── index.html.j2
 │   ├── macros.html.j2
 │   └── icons.json
-├── site/                  ← 建置輸出（GitHub Pages 發布此資料夾）
+├── docs/                  ← 建置輸出（GitHub Pages 選 /docs 發布）
 │   ├── assets/
 │   ├── index.html
 │   └── YYYYMMDD-stock-news-kelvin.html
@@ -34,9 +34,9 @@ copy .env.example .env
 # 編輯 .env，填入 GITHUB_PAT
 ```
 
-GitHub Pages：**Settings → Pages → Branch `main` → Folder `/site`**
+GitHub Pages：**Settings → Pages → Branch `main` → Folder `/docs`**
 
-（若舊版 repo 是根目錄發布，請改為 `/site` 或聯繫我協助遷移。）
+（GitHub 介面只有 **root** 和 **docs** 兩種，沒有 site。）
 
 ## 每日流程
 
@@ -60,7 +60,7 @@ python tools\build_brief.py data\issues\20260530.json
 
 ### 2. 預覽
 
-用瀏覽器開啟 `site\20260530-stock-news-kelvin.html`
+用瀏覽器開啟 `docs\20260530-stock-news-kelvin.html`
 
 ### 3. 推送 GitHub
 
@@ -72,8 +72,8 @@ python tools\push_github.py --init -m "2026/05/30 morning brief"
 
 ## 封面 8 情境
 
-合圖：`site/assets/covers/market-scenarios-8.png`  
-對照：`site/assets/covers/scenario-map.json`
+合圖：`docs/assets/covers/market-scenarios-8.png`  
+對照：`docs/assets/covers/scenario-map.json`
 
 在 JSON 設 `scenario_id`: `"01"`–`"08"`，模板自動裁切封面。
 

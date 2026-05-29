@@ -14,7 +14,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATES = ROOT / "templates"
-SITE = ROOT / "site"
+SITE = ROOT / "docs"
 DATA = ROOT / "data" / "issues"
 WATER_HISTORY = ROOT / "data" / "water-level-history.json"
 SCENARIO_MAP = SITE / "assets" / "covers" / "scenario-map.json"
