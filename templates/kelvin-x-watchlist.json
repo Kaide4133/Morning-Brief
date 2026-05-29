@@ -1,0 +1,80 @@
+[
+  {
+    "bucket": "Trump/policy",
+    "tier": 1,
+    "query": "from:realDonaldTrump",
+    "why": "tariffs, China, tax, chips/export control, geopolitical risk"
+  },
+  {
+    "bucket": "US policy",
+    "tier": 1,
+    "query": "from:WhiteHouse",
+    "why": "official White House policy statements"
+  },
+  {
+    "bucket": "US policy/rates",
+    "tier": 1,
+    "query": "from:USTreasury",
+    "why": "Treasury, fiscal/tax/debt issuance signals"
+  },
+  {
+    "bucket": "Musk",
+    "tier": 1,
+    "query": "from:elonmusk",
+    "why": "Tesla, xAI, SpaceX, chips, robots, policy responses"
+  },
+  {
+    "bucket": "Musk/Tesla",
+    "tier": 1,
+    "query": "from:Tesla",
+    "why": "Tesla delivery/product/robotics/energy official updates"
+  },
+  {
+    "bucket": "AI",
+    "tier": 1,
+    "query": "from:xai",
+    "why": "xAI model, infra, datacenter and GPU demand signals"
+  },
+  {
+    "bucket": "AI",
+    "tier": 2,
+    "query": "from:OpenAI",
+    "why": "AI model/product/capex demand context"
+  },
+  {
+    "bucket": "AI/semi",
+    "tier": 1,
+    "query": "from:nvidia",
+    "why": "GPU, datacenter, ecosystem announcements"
+  },
+  {
+    "bucket": "AI/semi",
+    "tier": 2,
+    "query": "from:AMD",
+    "why": "AI accelerator and semi demand signal"
+  },
+  {
+    "bucket": "Mag7 CEO",
+    "tier": 1,
+    "query": "from:sundarpichai",
+    "why": "Google AI/cloud/search narrative"
+  },
+  {
+    "bucket": "Mag7 CEO",
+    "tier": 2,
+    "query": "from:tim_cook",
+    "why": "Apple supply chain/AI/device demand"
+  },
+  {
+    "bucket": "Fed",
+    "tier": 1,
+    "query": "from:federalreserve",
+    "why": "official Fed policy/publication signal"
+  },
+  {
+    "bucket": "Fed",
+    "tier": 2,
+    "query": "from:NewYorkFed",
+    "why": "rates/liquidity/market operations context"
+  }
+]
