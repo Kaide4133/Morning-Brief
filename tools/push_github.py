@@ -68,11 +68,17 @@ def main() -> int:
     run(["git", "add", "docs", "templates", "data", "tools", ".github", "requirements.txt", ".gitignore", "README.md"], ROOT)
 
     status = subprocess.run(["git", "status", "--porcelain"], cwd=ROOT, capture_output=True, text=True)
-    if not status.stdout.strip():
-        print("Nothing to commit.")
-        return 0
-
-    run(["git", "commit", "-m", args.message], ROOT)
+    if status.stdout.strip():
+        run(["git", "commit", "-m", args.message], ROOT)
+    else:
+        ahead = subprocess.run(
+            ["git", "rev-list", "--count", f"origin/{args.branch}..HEAD"],
+            cwd=ROOT, capture_output=True, text=True,
+        )
+        if ahead.returncode != 0 or ahead.stdout.strip() in ("", "0"):
+            print("Nothing to commit or push.")
+            return 0
+        print("No file changes — pushing existing commits.")
 
     remote_url = args.remote.replace("https://", f"https://{pat}@")
     remotes = subprocess.run(["git", "remote"], cwd=ROOT, capture_output=True, text=True)

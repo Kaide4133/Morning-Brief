@@ -55,28 +55,35 @@
     "join us",
     "podcast",
     "merry christmas",
-    "thank you for"
+    "thank you for",
+    "download now",
+    "unsolicited call",
+    "scammers will call",
+    "set your children",
+    "non-ai app",
+    "most powerful women",
+    "honored"
   ],
   "reaction_templates": [
     {
       "terms": ["tariff", "trade", "sanction", "export", "ban", "關稅"],
-      "text": "出口链与供应链预期可能波动，台股先看电子与传产敏感度"
+      "text": "出口鏈與供應鏈預期可能波動，台股先看電子與傳產敏感度"
     },
     {
       "terms": ["rate", "rates", "fed", "inflation", "cpi", "yield", "降息", "通膨"],
-      "text": "估值与利率路径预期可能重定价，成长股溢价扩张有顶"
+      "text": "估值與利率路徑預期可能重定價，成長股溢價擴張有頂"
     },
     {
       "terms": ["ai", "semiconductor", "chip", "nvidia", "tsmc", "半導體"],
-      "text": "AI／半导体 capex 主線可能获叙事支撑，但追高仍须看量能"
+      "text": "AI／半導體 capex 主線可能獲敘事支撐，但追高仍須看量能"
     },
     {
-      "terms": ["tesla", "spacex", "ev", "fsd"],
-      "text": "电动车与 AI 应用链情绪可能联动，硬件链关注订单能见度"
+      "terms": ["tesla", "spacex", "ev", "fsd", "grok", "xai", "agentic"],
+      "text": "電動車與 AI 應用鏈情緒可能聯動，硬體鏈關注訂單能見度"
     },
     {
       "terms": ["war", "defense", "oil", "opec"],
-      "text": "风险偏好可能短期受压，留意 VIX 与避险资产"
+      "text": "風險偏好可能短期受壓，留意 VIX 與避險資產"
     }
   ],
   "accounts": [

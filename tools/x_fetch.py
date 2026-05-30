@@ -124,8 +124,40 @@ def format_time_et(dt: datetime) -> str:
 
 def clean_tweet_text(text: str) -> str:
     text = re.sub(r"https?://\S+", "", text)
+    text = re.sub(r"@\w+", "", text)
+    text = re.sub(r"[\U0001F300-\U0001FAFF]", "", text)
     text = re.sub(r"\s+", " ", text).strip()
     return text
+
+
+def is_low_quality_tweet(text: str, raw_text: str) -> bool:
+    """過濾回覆、廣告、詐騙提醒等不適合上晨報的貼文。"""
+    stripped = raw_text.strip()
+    lower = stripped.lower()
+
+    if len(stripped) < 60:
+        return True
+
+    # 幾乎只剩 @某人 + 一兩個字（例如 @willdepue Accurate）
+    without_urls = re.sub(r"https?://\S+", "", stripped)
+    mention_only = re.sub(r"@\w+", "", without_urls).strip()
+    if len(mention_only) < 35:
+        return True
+
+    junk_phrases = (
+        "download now",
+        "unsolicited call",
+        "scammers",
+        "non-ai app",
+        "most powerful women",
+        "we're honored",
+        "livestream of",
+        "don't miss the",
+    )
+    if any(p in lower for p in junk_phrases):
+        return True
+
+    return False
 
 
 def score_tweet(text: str, cfg: dict) -> int:
@@ -150,7 +182,7 @@ def infer_market_reaction(text: str, cfg: dict) -> str:
     for rule in cfg.get("reaction_templates", []):
         if any(term.lower() in lower for term in rule.get("terms", [])):
             return rule["text"]
-    return "留意开盘前风险预算与主線是否需微调"
+    return "留意開盤前風險預算與主線是否需微調"
 
 
 def summarize_for_brief(text: str, max_len: int = 220) -> str:
@@ -204,7 +236,8 @@ def collect_scored_tweets(cfg: dict, lookback_hours: int) -> list[ScoredTweet]:
             if created < cutoff:
                 continue
             text = clean_tweet_text(tw.get("text", ""))
-            if not text:
+            raw = tw.get("text", "")
+            if not text or is_low_quality_tweet(text, raw):
                 continue
             score = score_tweet(text, cfg)
             if score < min_score:
@@ -278,9 +311,11 @@ def build_intelligence(scored: list[ScoredTweet], cfg: dict) -> dict:
     if musk_items:
         parts = []
         for item in musk_items:
-            snippet = summarize_for_brief(item.text, max_len=180)
-            parts.append(f"<strong>{item.label}：</strong>{snippet}")
-        intelligence["musk"] = " ".join(parts)
+            snippet = summarize_for_brief(item.text, max_len=200)
+            if len(snippet) >= 40:
+                parts.append(snippet)
+        if parts:
+            intelligence["musk"] = "；".join(parts)
 
     if policy_items:
         intelligence["policy"] = [
