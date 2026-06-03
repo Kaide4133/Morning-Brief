@@ -1,5 +1,5 @@
 /**
- * KW Technical Spider v0.4.1 — 形態學校準 + 延伸量測
+ * KW Technical Spider v0.4.2 — 形態結構視覺化 + 資料品質
  * 僅輸出技術狀態與風險提示，不提供買賣建議。
  */
 (function (root, factory) {
@@ -485,6 +485,7 @@
       item.morphologyType = extra.morphologyType;
       item.morphologyState = extra.morphologyState;
       item.morphologyConfidence = extra.morphologyConfidence;
+      item.measuredLabel = extra.measuredLabel;
       item.measuredExtension = extra.measuredExtension;
     }
     if (extra && extra.riskConditionCount != null) {
@@ -783,12 +784,11 @@
       const { hits, reasons, sortKeys, extras } = classifyRecord(norm, analysis);
       const morph = detectMorphology(raw);
       const mm = morph.measuredMove || {};
-      const extLabel =
-        mm.currentExtensionPct != null && mm.direction === 'up'
-          ? '+' + Math.round(mm.currentExtensionPct) + '%'
-          : mm.currentExtensionPct != null && mm.direction === 'down'
-            ? Math.round(mm.currentExtensionPct) + '%'
-            : null;
+      const measuredLabel =
+        mm.label ||
+        (mm.measuredPct != null
+          ? (mm.direction === 'up' ? '+' : '-') + Math.round(mm.measuredPct) + '% projection'
+          : null);
 
       SCANNER_BUCKETS.forEach(({ key }) => {
         if (!hits[key]) return;
@@ -801,7 +801,8 @@
               morphologyType: morph.primary.type,
               morphologyState: morph.primary.state,
               morphologyConfidence: morph.primary.confidence,
-              measuredExtension: extLabel,
+              measuredLabel: measuredLabel,
+              measuredExtension: mm.currentExtensionPct,
             })
           ),
           sortKey: sortKeys[key],
@@ -1080,8 +1081,14 @@ function detectFalseBreakout(series, norm, diag) {
     summary: '盤中突破前高但收盤未能有效站穩，且伴隨長上影，需降權解讀。',
     reasons: ['觸及前高壓力', failedClose ? '收盤回到壓力線下' : '長上影偏高', longUpper ? '上影比例偏高' : ''].filter(Boolean),
     annotations: [
-      { kind: 'horizontal', label: '前高壓力線', price: pressure },
-      { kind: 'marker', label: '假突破', index: n, price: last.high },
+      { kind: 'horizontal', label: '前高壓力線', price: pressure, style: 'neckline' },
+      {
+        kind: 'marker',
+        label: '假突破',
+        index: n,
+        price: last.high,
+        style: failedClose ? 'failed' : 'breakout',
+      },
     ],
   };
 }
@@ -1148,6 +1155,7 @@ function detectDescendingBreakout(series, norm, diag) {
     confidence: norm.volume_ratio >= 1.2 ? 74 : 60,
     summary: '收盤站上下降壓力線，結構由壓制轉向修復。',
     reasons: ['高點連線下壓', '收盤站上下降壓力線', norm.volume_ratio >= 1.2 ? '量能配合' : ''].filter(Boolean),
+    structure: { resistance: lineP, neckline: lineP },
     annotations: [
       {
         kind: 'trendline',
@@ -1341,171 +1349,276 @@ function detectBox(series, norm) {
   };
 }
 
-function buildMeasuredMove(candidate, series, norm) {
-  const empty = {
+function emptyMeasuredMove() {
+  return {
     direction: null,
     baseStartIndex: null,
     baseEndIndex: null,
     breakoutIndex: null,
     baseLow: null,
     baseHigh: null,
+    breakoutPrice: null,
     measuredPct: null,
     currentExtensionPct: null,
+    projectionPrice: null,
+    label: '',
     targets: [],
   };
+}
+
+function resolveMorphBaseRange(candidate, series) {
+  const st = candidate.structure || {};
+  const n = series.length - 1;
+  const look = series.slice(Math.max(0, n - 45), n);
+  let baseHigh = st.neckline || st.resistance || st.channelUpper;
+  let baseLow = st.support || st.cupLow || st.channelLower;
+  if (!Number.isFinite(baseLow) && look.length) {
+    baseLow = Math.min.apply(null, look.map((r) => r.low));
+  }
+  if (!Number.isFinite(baseHigh) && look.length) {
+    baseHigh = Math.max.apply(null, look.map((r) => r.high));
+  }
+  return { baseHigh, baseLow };
+}
+
+function buildMeasuredMove(candidate, series, norm) {
+  const empty = emptyMeasuredMove();
   if (!candidate || !series.length) return empty;
   const n = series.length - 1;
   const close = norm.close;
   const type = candidate.type;
-  if (type === '平台突破' || type === '杯柄型態') {
-    let baseHigh = null;
-    let baseLow = null;
+  const st = candidate.structure || {};
+  const upTypes = ['平台突破', '杯柄型態', '下降壓力線突破', 'U型底', '圓弧底', '上升通道'];
+  const brokeUp =
+    upTypes.indexOf(type) >= 0 &&
+    (candidate.state === '已突破' ||
+      candidate.state === '突破延伸' ||
+      candidate.state === '頸線突破' ||
+      candidate.state === '通道突破' ||
+      (type === '下降壓力線突破' && close > (st.neckline || st.resistance || 0)) ||
+      (type === '杯柄型態' && close >= (st.neckline || 0) * 1.01) ||
+      (type === '平台突破' && close >= (st.neckline || st.resistance || 0) * 1.01));
+
+  if (brokeUp) {
+    let { baseHigh, baseLow } = resolveMorphBaseRange(candidate, series);
     if (type === '平台突破') {
       const look = series.slice(Math.max(0, n - 40), n - 5);
-      baseHigh = Math.max.apply(null, look.map((r) => r.high));
-      baseLow = Math.min.apply(null, look.map((r) => r.low));
-    } else {
-      const left = series.slice(0, Math.floor(series.length * 0.45));
-      baseHigh = Math.max.apply(null, left.map((r) => r.high));
-      baseLow = Math.min.apply(null, series.map((r) => r.low));
+      baseHigh = st.neckline || st.resistance || Math.max.apply(null, look.map((r) => r.high));
+      baseLow = st.support || Math.min.apply(null, look.map((r) => r.low));
     }
-    if (!Number.isFinite(baseHigh) || !Number.isFinite(baseLow) || baseHigh <= baseLow) return empty;
+    if (type === '杯柄型態') {
+      baseHigh = st.neckline || baseHigh;
+      baseLow = st.cupLow || st.support || baseLow;
+      if (close < baseHigh * 1.01) return empty;
+    }
+    if (type === '上升通道' && candidate.state !== '通道突破') return empty;
+    if ((type === 'U型底' || type === '圓弧底') && close < (st.neckline || 0) * 0.99) {
+      return empty;
+    }
+    if (!Number.isFinite(baseHigh) || !Number.isFinite(baseLow) || baseHigh <= baseLow) {
+      return empty;
+    }
     const height = baseHigh - baseLow;
-    const measuredPct = (height / baseLow) * 100;
-    const target = baseHigh + height;
+    const measuredPct = (height / baseHigh) * 100;
+    const projectionPrice = close + height;
     const ext = relPct(close, baseHigh);
+    const tag =
+      type === '杯柄型態'
+        ? 'cup depth'
+        : type === '上升通道'
+          ? 'channel'
+          : 'range';
+    const label = '+' + Math.round(measuredPct) + '% ' + tag + ' projection';
     return {
       direction: 'up',
-      baseStartIndex: 0,
-      baseEndIndex: n - 5,
+      baseStartIndex: Math.max(0, n - 45),
+      baseEndIndex: n - 1,
       breakoutIndex: n,
       baseLow,
       baseHigh,
+      breakoutPrice: close,
       measuredPct: Math.round(measuredPct * 10) / 10,
       currentExtensionPct: ext != null ? Math.round(ext * 10) / 10 : null,
-      targets: [{ price: target, label: '+' + Math.round(measuredPct) + '%' }],
+      projectionPrice: Math.round(projectionPrice * 100) / 100,
+      label,
+      targets: [{ price: projectionPrice, label }],
     };
   }
-  if (type === '反彈旗形' || type === '下降通道') {
-    const box = recentRange(series, 30);
-    if (!box) return empty;
-    const height = box.width;
-    const measuredPct = (height / box.high) * 100;
+
+  const downBroke =
+    type === '反彈旗形' ||
+    (type === '下降通道' && candidate.state && candidate.state.indexOf('跌破') >= 0);
+  if (downBroke) {
+    const baseHigh = st.resistance || st.channelUpper || (recentRange(series, 30) || {}).high;
+    const baseLow = st.support || st.channelLower || (recentRange(series, 30) || {}).low;
+    if (!Number.isFinite(baseHigh) || !Number.isFinite(baseLow) || baseHigh <= baseLow) {
+      return empty;
+    }
+    const height = baseHigh - baseLow;
+    const measuredPct = (height / baseHigh) * 100;
+    const projectionPrice = close - height;
+    const label = '-' + Math.round(measuredPct) + '% channel projection';
     return {
       direction: 'down',
-      baseStartIndex: box.start,
+      baseStartIndex: Math.max(0, n - 30),
       baseEndIndex: n,
       breakoutIndex: n,
-      baseLow: box.low,
-      baseHigh: box.high,
+      baseLow,
+      baseHigh,
+      breakoutPrice: close,
       measuredPct: Math.round(measuredPct * 10) / 10,
-      currentExtensionPct: relPct(close, box.low),
-      targets: [{ price: box.low - height, label: '-' + Math.round(measuredPct) + '%' }],
+      currentExtensionPct: relPct(close, baseLow),
+      projectionPrice: Math.round(projectionPrice * 100) / 100,
+      label,
+      targets: [{ price: projectionPrice, label }],
     };
   }
   return empty;
 }
 
-function buildFibExtensions(candidate, series) {
+function buildFibExtensions(candidate, series, norm) {
   const out = [];
-  if (!candidate) return out;
+  if (!candidate || series.length < MORPH_MIN_BARS) return out;
   const ok = ['杯柄型態', '圓弧底', '平台突破', 'U型底'];
-  if (ok.indexOf(candidate.type) < 0 || series.length < MORPH_MIN_BARS) return out;
-  const left = series.slice(0, Math.floor(series.length * 0.5));
-  const baseLow = Math.min.apply(null, series.map((r) => r.low));
-  let neckline = null;
+  if (ok.indexOf(candidate.type) < 0) return out;
+  const st = candidate.structure || {};
+  const baseLow = st.support || Math.min.apply(null, series.map((r) => r.low));
+  let baseHigh = st.neckline || st.resistance;
   if (candidate.type === '平台突破') {
     const look = series.slice(Math.max(0, series.length - 45), series.length - 5);
-    neckline = Math.max.apply(null, look.map((r) => r.high));
-  } else {
-    neckline = Math.max.apply(null, left.map((r) => r.high));
+    baseHigh = Math.max.apply(null, look.map((r) => r.high));
   }
-  if (!Number.isFinite(baseLow) || !Number.isFinite(neckline) || neckline <= baseLow) return out;
-  const span = neckline - baseLow;
+  if (!Number.isFinite(baseLow) || !Number.isFinite(baseHigh) || baseHigh <= baseLow) return out;
+  if (
+    (candidate.type === '杯柄型態' || candidate.type === '平台突破') &&
+    norm.close < baseHigh * 1.01
+  ) {
+    return out;
+  }
+  const range = baseHigh - baseLow;
+  const up = norm.close >= baseHigh * 0.99;
   [1.618, 2.618].forEach((lv) => {
+    const price = up
+      ? baseLow + range * lv
+      : baseHigh - range * lv;
     out.push({
       level: lv,
-      price: Math.round((neckline + span * (lv - 1)) * 100) / 100,
-      label: String(lv) + ' extension',
+      price: Math.round(price * 100) / 100,
+      label: lv + ' extension reference',
     });
   });
   return out;
 }
 
 function mergeMorphAnnotations(primary, measuredMove, fibExtensions) {
-  const ann = (primary.annotations || []).slice();
-  if (measuredMove && measuredMove.direction && measuredMove.targets) {
-    measuredMove.targets.forEach((t) => {
-      ann.push({ kind: 'horizontal', label: t.label, price: t.price, style: 'measure' });
-      ann.push({
-        kind: 'measure',
-        label: t.label,
-        fromIndex: measuredMove.breakoutIndex,
-        fromPrice: measuredMove.baseHigh,
-        toPrice: t.price,
-      });
+  const ann = (primary.annotations || []).slice(0, 10);
+  if (measuredMove && measuredMove.direction && measuredMove.projectionPrice != null) {
+    ann.push({
+      kind: 'horizontal',
+      label: '量測參考',
+      price: measuredMove.projectionPrice,
+      style: 'measure',
+    });
+    ann.push({
+      kind: 'measure',
+      label: measuredMove.label || '',
+      fromIndex: measuredMove.breakoutIndex,
+      fromPrice: measuredMove.breakoutPrice || measuredMove.baseHigh,
+      toPrice: measuredMove.projectionPrice,
     });
   }
-  fibExtensions.forEach((f) => {
-    ann.push({ kind: 'horizontal', label: f.label, price: f.price, style: 'fib' });
+  fibExtensions.slice(0, 2).forEach((f) => {
+    ann.push({
+      kind: 'horizontal',
+      label: f.label,
+      price: f.price,
+      style: 'fib',
+    });
   });
   return ann;
 }
 
 function detectCupHandle(series, norm, meta) {
-  if (!meta.sufficient || series.length < 120) return null;
+  if (series.length < 120) return null;
+  if (!meta.sufficient && series.length < 120) return null;
   const n = series.length;
-  const leftEnd = Math.floor(n * 0.35);
-  const cupEnd = Math.floor(n * 0.72);
+  const leftEnd = Math.floor(n * 0.38);
+  const cupEnd = Math.floor(n * 0.7);
   const left = series.slice(0, leftEnd);
   const cup = series.slice(leftEnd, cupEnd);
   const handle = series.slice(cupEnd);
-  if (left.length < 20 || cup.length < 30 || handle.length < 10) return null;
-  const leftHigh = Math.max.apply(null, left.map((r) => r.high));
+  if (left.length < 15 || cup.length < 25 || handle.length < 5) return null;
+
+  const leftRim = Math.max.apply(null, left.map((r) => r.high));
   const cupLow = Math.min.apply(null, cup.map((r) => r.low));
-  if (left[0].close <= cupLow * 1.08) return null;
-  const cupDepth = leftHigh - cupLow;
-  if (cupDepth / leftHigh < 0.12 || cupDepth / leftHigh > 0.45) return null;
-  const cupLows = cup.map((r) => r.low);
-  const mid = Math.floor(cupLows.length / 2);
-  const avgFirst = cupLows.slice(0, mid).reduce((s, v) => s + v, 0) / mid;
-  const avgLast = cupLows.slice(mid).reduce((s, v) => s + v, 0) / (cupLows.length - mid);
-  if (avgLast < avgFirst * 0.98) return null;
-  const neckline = leftHigh;
+  const cupLowIdx = leftEnd + cup.findIndex((r) => r.low === cupLow);
+  const rightRim = Math.max.apply(null, handle.map((r) => r.high));
+  const neckline = Math.max(leftRim, rightRim * 0.92);
+  const depthPct = (neckline - cupLow) / neckline;
+  if (depthPct < 0.15 || depthPct > 0.65) return null;
+  if (left[0].close <= cupLow * 1.05) return null;
+
+  const cupSlice = cup.map((r) => r.low);
+  const mid = Math.floor(cupSlice.length / 2);
+  const flatBottom =
+    Math.abs(cupSlice[mid] - cupLow) / cupLow < 0.04 ||
+    (cupSlice.slice(0, mid).reduce((s, v) => s + v, 0) / mid >= cupLow * 0.98 &&
+      cupSlice.slice(mid).reduce((s, v) => s + v, 0) / (cupSlice.length - mid) >= cupLow * 0.98);
+  if (!flatBottom) return null;
+
+  const vShape = cupLowIdx > leftEnd + 2 && cupLowIdx < cupEnd - 2 && cup.length < 18;
   const handleLow = Math.min.apply(null, handle.map((r) => r.low));
-  const handlePullback =
-    (Math.max.apply(null, handle.map((r) => r.high)) - handleLow) / cupDepth;
-  if (handlePullback > 0.38) return null;
+  const handlePull = (Math.max.apply(null, handle.map((r) => r.high)) - handleLow) / (neckline - cupLow);
+  if (handlePull > 0.55) return null;
+
   const close = norm.close;
   let state = '杯底成形';
-  if (relPct(close, neckline) >= -5 && close < neckline) state = '柄部整理';
-  if (relPct(close, neckline) >= -3 && close < neckline) state = '頸線附近';
+  if (handle.length >= 5 && close < neckline) state = '柄部整理';
+  if (relPct(close, neckline) >= -10 && close < neckline) state = '頸線附近';
+  if (rightRim >= leftRim * 0.85 && close < neckline) state = '右側回升';
   if (close >= neckline * 1.01) state = '頸線突破';
   if (close >= neckline * 1.05) state = '突破延伸';
+
+  let confidence = 60;
+  if (handle.length >= 5) confidence += 10;
+  if (norm.volume_ratio >= 1.1) confidence += 5;
+  if (close >= neckline) confidence += 10;
+  if (flatBottom) confidence += 5;
+  if (vShape) confidence -= 15;
+  if (!meta.sufficient) confidence = Math.min(confidence, 45);
+
+  const cupPoints = [
+    { index: 0, price: left[0].close },
+    { index: cupLowIdx, price: cupLow },
+    { index: cupEnd, price: series[cupEnd].close },
+  ];
+
   return {
     type: '杯柄型態',
     state,
-    confidence: close >= neckline ? 76 : 68,
-    summary: '中期形成杯狀底部，右側回升後進入柄部整理，頸線為主要結構壓力。',
-    reasons: ['左側回落', '杯底低點鈍化', '右側回升', '柄部整理'],
+    confidence: Math.min(88, Math.max(0, confidence)),
+    summary:
+      '中期形成杯狀底部，右側回升後在頸線附近整理，屬杯柄型態雛形。',
+    reasons: [
+      '左側高點與右側高點形成杯口',
+      '中段低點鈍化',
+      '右側回升接近頸線',
+      handle.length >= 5 ? '柄部整理幅度未破壞杯型' : '杯底成形中',
+    ],
     annotations: [
       { kind: 'horizontal', label: '頸線', price: neckline, style: 'neckline' },
-      {
-        kind: 'polyline',
-        label: '杯體',
-        points: [
-          { index: 0, price: left[0].close },
-          { index: leftEnd + Math.floor(cup.length / 2), price: cupLow },
-          { index: cupEnd, price: series[cupEnd].close },
-        ],
-        style: 'cup',
-      },
-      { kind: 'zone', label: '柄部', startIndex: cupEnd, endIndex: n, style: 'handle' },
+      { kind: 'cupcurve', label: '杯體', points: cupPoints, style: 'cup' },
+      { kind: 'zone', label: '柄部', startIndex: cupEnd, endIndex: n - 1, style: 'handle' },
       ...(close >= neckline
-        ? [{ kind: 'marker', label: '突破', index: n, price: close, style: 'breakout' }]
+        ? [{ kind: 'marker', label: '突破', index: n - 1, price: close, style: 'breakout' }]
         : []),
     ],
-    structure: { neckline, support: cupLow, resistance: neckline },
+    structure: {
+      neckline,
+      support: cupLow,
+      resistance: neckline,
+      cupLow,
+    },
   };
 }
 
@@ -1519,19 +1632,26 @@ function detectChannel(series, norm, diag, ascending) {
   const regH = linearRegression(hiPts);
   const regL = linearRegression(loPts);
   if (!regH || !regL) return null;
-  if (Math.abs(regH.slope - regL.slope) > 0.35) return null;
-  if (ascending && (regH.slope < 0.04 || regL.slope < 0.04)) return null;
-  if (!ascending && (regH.slope > -0.04 || regL.slope > -0.04)) return null;
+  if (Math.abs(regH.slope - regL.slope) > 0.25) return null;
+  if (ascending && (regH.slope < 0.06 || regL.slope < 0.06)) return null;
+  if (!ascending && (regH.slope > -0.06 || regL.slope > -0.06)) return null;
   const n = series.length - 1;
   const top = linePriceAt(regH, n);
   const bot = linePriceAt(regL, n);
+  if (!Number.isFinite(top) || !Number.isFinite(bot) || top <= bot) return null;
   const close = norm.close;
+  const span = top - bot;
   let state = '通道中段';
-  if (Number.isFinite(top) && relPct(close, top) >= -3) state = '通道上緣';
-  if (Number.isFinite(bot) && relPct(close, bot) <= 3) state = '通道下緣';
-  if (close > top) state = '通道突破';
-  if (close < bot) state = '通道跌破';
+  if (span > 0) {
+    const pos = ((close - bot) / span) * 100;
+    if (pos < 0) state = '通道跌破';
+    else if (pos > 100) state = '通道突破';
+    else if (pos <= 25) state = '通道下緣';
+    else if (pos >= 75) state = '通道上緣';
+    else state = '通道中段';
+  }
   const label = ascending ? '上升通道' : '下降通道';
+  const zoneLabel = ascending ? '上升通道' : label === '下降通道' ? '下降通道' : '通道';
   return {
     type: label,
     state,
@@ -1563,19 +1683,29 @@ function detectChannel(series, norm, diag, ascending) {
         ],
         style: 'support',
       },
-      { kind: 'zone', label: '通道', startIndex: Math.max(0, n - 50), endIndex: n, style: 'channel' },
+      {
+        kind: 'zone',
+        label: zoneLabel,
+        startIndex: Math.max(0, n - 55),
+        endIndex: n,
+        style: 'channel',
+        topPrice: top,
+        bottomPrice: bot,
+      },
     ],
-    structure: { resistance: top, support: bot },
+    structure: { resistance: top, support: bot, channelUpper: top, channelLower: bot },
   };
 }
 
 function detectBearFlag(series, norm) {
   if (series.length < 50) return null;
   const n = series.length - 1;
-  const pole = series.slice(Math.max(0, n - 45), Math.max(0, n - 25));
-  const flag = series.slice(Math.max(0, n - 25));
-  if (pole.length < 10 || flag.length < 12) return null;
-  if (pole[0].close <= pole[pole.length - 1].close * 1.08) return null;
+  const poleLen = 25;
+  const pole = series.slice(Math.max(0, n - poleLen - 15), Math.max(0, n - 15));
+  const flag = series.slice(Math.max(0, n - 15));
+  if (pole.length < 12 || flag.length < 8) return null;
+  const dropPct = ((pole[0].close - pole[pole.length - 1].close) / pole[0].close) * 100;
+  if (dropPct < 12) return null;
   const hi = findSwingHighs(flag, 2);
   const lo = findSwingLows(flag, 2);
   if (hi.length < 2 || lo.length < 2) return null;
@@ -1585,7 +1715,7 @@ function detectBearFlag(series, norm) {
   const flagLow = Math.min.apply(null, flag.map((r) => r.low));
   const close = norm.close;
   let state = '旗形反彈中';
-  if (close < flagLow) state = '跌破下緣';
+  if (close < flagLow) state = dropPct > 15 ? '跌破延伸' : '跌破下緣';
   const avgVol = averageVolume(series, n - 12, n);
   const poleVol = averageVolume(series, n - 40, n - 20);
   if (poleVol > 0 && avgVol / poleVol > 1.4) return null;
@@ -1612,10 +1742,20 @@ function detectBearFlag(series, norm) {
           { index: n, price: linePriceAt(regL, n) },
         ],
       },
+      {
+        kind: 'zone',
+        label: '反彈旗形',
+        startIndex: Math.max(0, n - 15),
+        endIndex: n,
+        style: 'channel',
+        topPrice: linePriceAt(regH, n),
+        bottomPrice: flagLow,
+      },
       ...(close < flagLow
         ? [{ kind: 'marker', label: '跌破', index: n, price: close, style: 'breakdown' }]
         : []),
     ],
+    structure: { resistance: linePriceAt(regH, n), support: flagLow },
   };
 }
 
@@ -1667,7 +1807,7 @@ function detectMorphology(record) {
 
   const pick = candidates[0];
   const measuredMove = buildMeasuredMove(pick, series, norm);
-  const fibExtensions = buildFibExtensions(pick, series);
+  const fibExtensions = buildFibExtensions(pick, series, norm);
   const primary = {
     type: pick.type,
     state: pick.state,

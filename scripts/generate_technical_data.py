@@ -30,6 +30,32 @@ STOCK_NAMES: dict[str, str] = {
     "2345": "智邦",
     "2327": "國巨*",
     "0050": "元大台灣50",
+    "0052": "富邦科技",
+    "0053": "元大電子",
+    "0057": "富邦摩台",
+    "00631L": "元大台灣50正2",
+    "006203": "元大MSCI台灣",
+    "00830": "國泰費城半導體",
+    "00850": "元大臺灣ESG永續",
+    "00861": "元大全球未來通訊",
+    "00876": "元大全球5G",
+    "00887": "永豐中國科技50大",
+    "00888": "永豐台灣ESG",
+    "00910": "第一金太空衛星",
+    "00911": "兆豐洲際半導體",
+    "00913": "兆豐台灣晶圓製造",
+    "00920": "富邦ESG綠色電力",
+    "00927": "群益半導體收益",
+    "00929": "復華台灣科技優息",
+    "00946": "群益科技高息成長",
+    "009808": "永豐美國科技",
+    "00988A": "主動統一全球創新",
+    "3665": "貿聯-KY",
+    "6274": "台燿",
+    "3189": "景碩",
+    "2449": "京元電子",
+    "2382": "廣達",
+    "2324": "仁寶",
 }
 
 
@@ -86,7 +112,7 @@ def resolve_universe(args: argparse.Namespace) -> list[str]:
     return out
 
 
-def fetch_yahoo_daily(code: str, range_days: str = "2y") -> tuple[list[dict], str]:
+def fetch_yahoo_daily(code: str, range_days: str = "2y") -> tuple[list[dict], str, str | None]:
     for suffix, market in ((".TW", "TWSE"), (".TWO", "TPEX")):
         url = (
             f"https://query2.finance.yahoo.com/v8/finance/chart/{code}{suffix}"
@@ -118,11 +144,15 @@ def fetch_yahoo_daily(code: str, range_days: str = "2y") -> tuple[list[dict], st
                         "volume": int(v or 0),
                     }
                 )
+            meta = result.get("meta") or {}
+            yahoo_name = meta.get("shortName") or meta.get("longName") or meta.get("symbol")
+            if yahoo_name:
+                yahoo_name = str(yahoo_name).strip()
             if len(rows) >= 30:
-                return rows, market
+                return rows, market, yahoo_name
         except Exception:
             continue
-    return [], "UNKNOWN"
+    return [], "UNKNOWN", None
 
 
 def sma(values: list[float], n: int) -> float | None:
@@ -298,7 +328,7 @@ def build_record(code: str, rows: list[dict], market: str, as_of: str) -> dict |
     extension_score = min(95, max(20, int(abs(dist) * 6 + (15 if ext == "偏熱" else 0) + (25 if ext == "過熱" else 0))))
     risk_score = min(95, 35 + len(warnings) * 12 + (15 if ext in ("偏熱", "過熱", "觸及上軌") else 0))
 
-    name = STOCK_NAMES.get(code, code)
+    name = code
 
     summary_parts = [
         f"趨勢{trend}，延伸{ext}。",
@@ -362,18 +392,47 @@ def build_record(code: str, rows: list[dict], market: str, as_of: str) -> dict |
     return record
 
 
-def extract_name_from_html(code: str, html_paths: list[Path]) -> str | None:
+def build_html_name_map(html_paths: list[Path]) -> dict[str, str]:
+    """從晨報 HTML 建立 code→name 對照（整檔掃描，避免單一代號誤配）。"""
+    names: dict[str, str] = {}
     for path in html_paths:
         if not path.exists():
             continue
         text = path.read_text(encoding="utf-8")
-        m = re.search(
-            rf'<div class="card-code">{re.escape(code)}</div>\s*<div class="card-name">([^<]+)</div>',
+        for code, name in re.findall(
+            r'<div class="card-code">([^<]+)</div>\s*<div class="card-name">([^<]+)</div>',
             text,
-        )
-        if m:
-            return m.group(1).strip()
-    return None
+            flags=re.I,
+        ):
+            c = code.strip().upper()
+            n = name.strip()
+            if c and n and n != c:
+                names[c] = n
+        for code, name in re.findall(
+            r'data-code="([^"]+)"[^>]*>\s*<div class="code">[^<]*</div>\s*<b>([^<]+)</b>',
+            text,
+            flags=re.I | re.S,
+        ):
+            c = code.strip().upper()
+            n = name.strip()
+            if c and n and n != c:
+                names[c] = n
+    return names
+
+
+def resolve_stock_name(
+    code: str,
+    html_map: dict[str, str],
+    yahoo_name: str | None,
+) -> str:
+    code = code.strip().upper()
+    if code in STOCK_NAMES:
+        return STOCK_NAMES[code]
+    if code in html_map and html_map[code] and html_map[code] != code:
+        return html_map[code]
+    if yahoo_name and yahoo_name != code and not yahoo_name.endswith(code):
+        return yahoo_name
+    return code
 
 
 def validate_output(doc: dict) -> list[str]:
@@ -385,6 +444,10 @@ def validate_output(doc: dict) -> list[str]:
         for key in ("code", "name"):
             if not rec.get(key):
                 issues.append(f"{rec.get('code','?')} 缺少 {key}")
+        if rec.get("name") == rec.get("code"):
+            issues.append(f"{rec.get('code')} name 等於 code（待補）")
+        if not rec.get("weekly_series"):
+            issues.append(f"{rec.get('code')} 缺少 weekly_series")
         close = rec.get("latest", {}).get("close")
         daily = rec.get("daily", {})
         if close is None:
@@ -410,7 +473,9 @@ def main() -> int:
 
     html_paths = [Path(p) for p in (args.html or [])]
     if not html_paths:
-        html_paths = sorted(ROOT.glob("*-stock-news-kelvin.html"), reverse=True)[:1]
+        html_paths = sorted(ROOT.glob("*-stock-news-kelvin.html"), reverse=True)
+        html_paths = sorted(ROOT.glob("docs/*-stock-news-kelvin.html"), reverse=True) + html_paths
+    html_map = build_html_name_map(html_paths)
 
     universe = resolve_universe(args)
     if args.max and args.max > 0:
@@ -428,12 +493,10 @@ def main() -> int:
     warnings_log: list[str] = []
 
     for i, code in enumerate(universe):
-        rows, market = fetch_yahoo_daily(code)
-        name_override = extract_name_from_html(code, html_paths)
+        rows, market, yahoo_name = fetch_yahoo_daily(code)
         rec = build_record(code, rows, market, as_of) if rows else None
         if rec:
-            if name_override:
-                rec["name"] = name_override
+            rec["name"] = resolve_stock_name(code, html_map, yahoo_name)
             records.append(rec)
             if rec.get("_series_warning"):
                 warnings_log.append(rec["_series_warning"])

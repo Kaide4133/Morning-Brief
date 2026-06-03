@@ -16,8 +16,8 @@
 <nav class="masthead"><div class="masthead-inner"><div><span class="kw-mark">K</span>Kelvin Wiggly</div><div><a class="nav-link" href="/Morning-Brief/">晨報首頁</a><a class="nav-link" href="/Morning-Brief/technical-spider.html">技術線圖</a></div></div></nav>
 <main>
 <header class="hero">
-  <div class="eyebrow">KW Technical Spider v0.4.1</div>
-  <h1>Morphology Calibration</h1>
+  <div class="eyebrow">KW Technical Spider v0.4.2</div>
+  <h1>Morphology Visual & Data Quality</h1>
   <p class="subtitle">單檔優先 · 形態學校準 · 60／120／250 日線圖 · 今日技術掃描 — 本地資料池</p>
   <p class="note">獨立技術分析核心，不是方舟晨報，也不是雷達。僅讀取本地 technical-data.json；不提供買賣建議。</p>
 </header>
@@ -68,6 +68,8 @@
       <p id="morphStructure">—</p>
       <h4>量測資訊</h4>
       <p id="morphMeasure">—</p>
+      <h4>Fibonacci 延伸參考</h4>
+      <p id="morphFib">—</p>
       <h4>連續 K 線</h4>
       <p id="morphCandles">—</p>
       <p id="morphCandleNote" class="label" style="margin-top:6px"></p>
@@ -135,7 +137,7 @@
   <div id="scannerBuckets" class="scanner-grid"></div>
 </section>
 
-<footer>KW Technical Spider v0.4.1 · Morphology Calibration · technical-data.json</footer>
+<footer>KW Technical Spider v0.4.2 · Morphology Visual · technical-data.json</footer>
 </main>
 
 <script src="technical-engine.js"></script>
@@ -225,19 +227,25 @@
     return rel;
   }
 
+  function drawLabelRight(ctx, text, y, W, pad) {
+    if (!text) return;
+    ctx.fillStyle = '#1A1311';
+    ctx.font = '10px JetBrains Mono, monospace';
+    ctx.fillText(text, W - pad.r - Math.min(120, text.length * 6.5), y - 4);
+  }
+
   function drawMorphologyAnnotations(ctx, annotations, idxToX, yAt, pad, W, priceH, morphLen, chartLen) {
     if (!annotations || !annotations.length) return;
     annotations.forEach(function (ann) {
       const style = ann.style || '';
       const isSupport = style === 'support';
       const isFib = style === 'fib';
-      const isMeasure = style === 'measure' || ann.kind === 'measure';
+      const isNeck = style === 'neckline' || style === 'measure';
       ctx.save();
-      ctx.lineWidth = isFib ? 1 : 2;
-      ctx.setLineDash(isSupport ? [6, 4] : isFib ? [3, 5] : [7, 4]);
+      ctx.lineWidth = isFib ? 1.2 : 2.5;
+      ctx.setLineDash(isSupport ? [8, 5] : isFib ? [4, 6] : [9, 5]);
       ctx.strokeStyle = isSupport ? '#1A1311' : '#C8102E';
       ctx.fillStyle = '#1A1311';
-      ctx.font = '10px JetBrains Mono, monospace';
 
       if (ann.kind === 'horizontal' && ann.price != null) {
         const y = yAt(ann.price);
@@ -245,35 +253,57 @@
         ctx.moveTo(pad.l, y);
         ctx.lineTo(W - pad.r, y);
         ctx.stroke();
-        if (ann.label) ctx.fillText(ann.label, pad.l + 4, y - 5);
-      } else if (ann.kind === 'trendline' && ann.points && ann.points.length >= 2) {
+        drawLabelRight(ctx, ann.label || '', y, W, pad);
+      } else if (
+        (ann.kind === 'trendline' || ann.kind === 'channel') &&
+        ann.points &&
+        ann.points.length >= 2
+      ) {
         const p0 = ann.points[0];
         const p1 = ann.points[1];
-        const i0 = mapAnnIndex(p0.index, morphLen, chartLen);
-        const i1 = mapAnnIndex(p1.index, morphLen, chartLen);
+        const i0 = Math.max(0, mapAnnIndex(p0.index, morphLen, chartLen));
+        const i1 = Math.max(0, mapAnnIndex(p1.index, morphLen, chartLen));
         if (i1 < 0 && i0 < 0) {
           ctx.restore();
           return;
         }
         ctx.beginPath();
-        ctx.moveTo(idxToX(Math.max(0, i0)), yAt(p0.price));
-        ctx.lineTo(idxToX(Math.max(0, i1)), yAt(p1.price));
+        ctx.moveTo(idxToX(i0), yAt(p0.price));
+        ctx.lineTo(idxToX(i1), yAt(p1.price));
         ctx.stroke();
-        if (ann.label) ctx.fillText(ann.label, idxToX(Math.max(0, i1)) + 4, yAt(p1.price) - 5);
-      } else if (ann.kind === 'polyline' && ann.points && ann.points.length) {
-        ctx.beginPath();
-        let started = false;
-        ann.points.forEach(function (pt) {
-          const ri = mapAnnIndex(pt.index, morphLen, chartLen);
-          if (ri < 0) return;
-          const x = idxToX(ri);
-          const y = yAt(pt.price);
-          if (!started) {
-            ctx.moveTo(x, y);
-            started = true;
-          } else ctx.lineTo(x, y);
-        });
-        if (started) ctx.stroke();
+        drawLabelRight(ctx, ann.label, yAt(p1.price), W, pad);
+      } else if (
+        (ann.kind === 'polyline' || ann.kind === 'cupcurve') &&
+        ann.points &&
+        ann.points.length >= 2
+      ) {
+        const pts = ann.points
+          .map(function (pt) {
+            return {
+              x: idxToX(Math.max(0, mapAnnIndex(pt.index, morphLen, chartLen))),
+              y: yAt(pt.price),
+              ok: mapAnnIndex(pt.index, morphLen, chartLen) >= 0,
+            };
+          })
+          .filter(function (p) {
+            return p.ok;
+          });
+        if (pts.length >= 2) {
+          ctx.beginPath();
+          ctx.moveTo(pts[0].x, pts[0].y);
+          if (ann.kind === 'cupcurve' && pts.length >= 3) {
+            for (let i = 1; i < pts.length - 1; i++) {
+              const cpx = (pts[i].x + pts[i + 1].x) / 2;
+              const cpy = (pts[i].y + pts[i + 1].y) / 2;
+              ctx.quadraticCurveTo(pts[i].x, pts[i].y, cpx, cpy);
+            }
+            ctx.lineTo(pts[pts.length - 1].x, pts[pts.length - 1].y);
+          } else {
+            for (let j = 1; j < pts.length; j++) ctx.lineTo(pts[j].x, pts[j].y);
+          }
+          ctx.stroke();
+          drawLabelRight(ctx, ann.label, pts[pts.length - 1].y, W, pad);
+        }
       } else if (ann.kind === 'marker' && ann.index != null && ann.price != null) {
         const ri = mapAnnIndex(ann.index, morphLen, chartLen);
         if (ri < 0) {
@@ -283,23 +313,37 @@
         const mx = idxToX(ri);
         const my = yAt(ann.price);
         ctx.setLineDash([]);
-        ctx.fillStyle = style === 'breakdown' ? '#1A1311' : '#C8102E';
-        if (style === 'breakdown') {
+        ctx.lineWidth = 1.5;
+        if (style === 'failed') {
+          ctx.strokeStyle = '#C8102E';
           ctx.beginPath();
-          ctx.moveTo(mx, my + 6);
-          ctx.lineTo(mx - 5, my - 4);
-          ctx.lineTo(mx + 5, my - 4);
+          ctx.arc(mx, my, 7, 0, Math.PI * 2);
+          ctx.stroke();
+          ctx.beginPath();
+          ctx.moveTo(mx - 4, my - 4);
+          ctx.lineTo(mx + 4, my + 4);
+          ctx.moveTo(mx + 4, my - 4);
+          ctx.lineTo(mx - 4, my + 4);
+          ctx.stroke();
+        } else if (style === 'breakdown') {
+          ctx.fillStyle = '#1A1311';
+          ctx.beginPath();
+          ctx.moveTo(mx, my + 8);
+          ctx.lineTo(mx - 6, my - 5);
+          ctx.lineTo(mx + 6, my - 5);
           ctx.closePath();
           ctx.fill();
         } else {
+          ctx.fillStyle = '#C8102E';
           ctx.beginPath();
-          ctx.moveTo(mx, my - 7);
-          ctx.lineTo(mx - 5, my + 3);
-          ctx.lineTo(mx + 5, my + 3);
+          ctx.moveTo(mx, my - 8);
+          ctx.lineTo(mx - 6, my + 5);
+          ctx.lineTo(mx + 6, my + 5);
           ctx.closePath();
           ctx.fill();
         }
-        if (ann.label) ctx.fillText(ann.label, mx + 6, my - 8);
+        ctx.fillStyle = '#1A1311';
+        ctx.fillText(ann.label || '', mx + 8, my - 10);
       } else if (ann.kind === 'zone' && ann.startIndex != null && ann.endIndex != null) {
         const x0 = idxToX(Math.max(0, mapAnnIndex(ann.startIndex, morphLen, chartLen)));
         const x1 = idxToX(mapAnnIndex(ann.endIndex, morphLen, chartLen));
@@ -307,28 +351,56 @@
           ctx.restore();
           return;
         }
-        ctx.fillStyle = 'rgba(200,16,46,.1)';
-        ctx.fillRect(x0, pad.t, Math.max(4, x1 - x0), priceH);
-        ctx.setLineDash([4, 3]);
-        ctx.strokeStyle = 'rgba(200,16,46,.35)';
-        ctx.strokeRect(x0, pad.t, Math.max(4, x1 - x0), priceH);
-        if (ann.label) ctx.fillText(ann.label, x0 + 4, pad.t + 12);
+        const zw = Math.max(6, x1 - x0);
+        if (ann.topPrice != null && ann.bottomPrice != null) {
+          const yt = yAt(ann.topPrice);
+          const yb = yAt(ann.bottomPrice);
+          ctx.fillStyle = 'rgba(200,16,46,.06)';
+          ctx.fillRect(x0, yt, zw, yb - yt);
+          ctx.setLineDash([5, 4]);
+          ctx.strokeStyle = 'rgba(200,16,46,.4)';
+          ctx.strokeRect(x0, yt, zw, yb - yt);
+        } else {
+          ctx.fillStyle =
+            style === 'handle' ? 'rgba(200,16,46,.12)' : 'rgba(200,16,46,.06)';
+          ctx.fillRect(x0, pad.t, zw, priceH);
+          if (style === 'handle') {
+            ctx.setLineDash([]);
+            ctx.strokeStyle = 'rgba(200,16,46,.55)';
+            ctx.strokeRect(x0, pad.t, zw, priceH);
+          }
+        }
+        ctx.fillStyle = '#1A1311';
+        ctx.font = '10px JetBrains Mono, monospace';
+        ctx.fillText(ann.label || '', x0 + 4, pad.t + 14);
       } else if (ann.kind === 'measure' && ann.fromPrice != null && ann.toPrice != null) {
         const fi = mapAnnIndex(ann.fromIndex, morphLen, chartLen);
         if (fi < 0) {
           ctx.restore();
           return;
         }
-        const x = idxToX(fi);
+        const x = idxToX(fi) + 14;
         const y0 = yAt(ann.fromPrice);
         const y1 = yAt(ann.toPrice);
         ctx.setLineDash([]);
-        ctx.strokeStyle = '#C8102E';
+        ctx.strokeStyle = '#1A1311';
+        ctx.lineWidth = 2;
         ctx.beginPath();
-        ctx.moveTo(x + 8, y0);
-        ctx.lineTo(x + 8, y1);
+        ctx.moveTo(x, y0);
+        ctx.lineTo(x, y1);
         ctx.stroke();
-        ctx.fillText(ann.label || '', x + 12, (y0 + y1) / 2);
+        const ah = y1 < y0 ? 1 : -1;
+        ctx.fillStyle = '#1A1311';
+        ctx.beginPath();
+        ctx.moveTo(x, y1);
+        ctx.lineTo(x - 4, y1 - 6 * ah);
+        ctx.lineTo(x + 4, y1 - 6 * ah);
+        ctx.closePath();
+        ctx.fill();
+        ctx.fillStyle = '#C8102E';
+        ctx.font = '10px JetBrains Mono, monospace';
+        const lbl = (ann.label || '').slice(0, 28);
+        ctx.fillText(lbl, x + 6, (y0 + y1) / 2);
       }
       ctx.restore();
     });
@@ -375,12 +447,22 @@
     const annPrices = [];
     annList.forEach(function (a) {
       if (a.price != null) annPrices.push(a.price);
+      if (a.topPrice != null) annPrices.push(a.topPrice);
+      if (a.bottomPrice != null) annPrices.push(a.bottomPrice);
       if (a.points) {
         a.points.forEach(function (p) {
           if (p.price != null) annPrices.push(p.price);
         });
       }
     });
+    if (morph && morph.measuredMove && morph.measuredMove.projectionPrice != null) {
+      annPrices.push(morph.measuredMove.projectionPrice);
+    }
+    if (morph && morph.fibExtensions) {
+      morph.fibExtensions.forEach(function (f) {
+        if (f.price != null) annPrices.push(f.price);
+      });
+    }
 
     let yMin = Math.min.apply(null, lows.concat(bollLbs.length ? bollLbs : lows));
     let yMax = Math.max.apply(null, highs.concat(bollUbs.length ? bollUbs : highs));
@@ -523,6 +605,7 @@
     hide($('morphSecondary'));
     $('morphStructure').textContent = '';
     $('morphMeasure').textContent = '';
+    $('morphFib').textContent = '';
     $('morphCandles').textContent = '';
     $('morphCandleNote').textContent = '';
     lastNorm = null;
@@ -551,7 +634,8 @@
       $('morphStructure').textContent = dm.length
         ? '資料 ' + dm.length + ' 根（形態學需 ≥120 根）'
         : '—';
-      $('morphMeasure').textContent = '—';
+      $('morphMeasure').textContent = '尚無明確量測結構';
+      $('morphFib').textContent = '尚無延伸參考';
       $('morphCandles').textContent = '—';
       $('morphCandleNote').textContent = '';
       return;
@@ -575,21 +659,35 @@
     if (st.neckline != null) structParts.push('頸線 ' + Math.round(st.neckline));
     if (st.support != null) structParts.push('支撐 ' + Math.round(st.support));
     if (st.resistance != null) structParts.push('壓力 ' + Math.round(st.resistance));
+    if (st.channelUpper != null) structParts.push('通道上緣 ' + Math.round(st.channelUpper));
+    if (st.channelLower != null) structParts.push('通道下緣 ' + Math.round(st.channelLower));
+    if (st.cupLow != null) structParts.push('杯底 ' + Math.round(st.cupLow));
     $('morphStructure').textContent = structParts.length
       ? structParts.join(' · ')
-      : '—';
-    const measParts = [];
-    if (mm.baseLow != null && mm.baseHigh != null) {
-      measParts.push('區間 ' + Math.round(mm.baseLow) + '–' + Math.round(mm.baseHigh));
+      : '尚無明確通道／頸線';
+    if (mm.label) {
+      $('morphMeasure').textContent =
+        mm.label +
+        (mm.projectionPrice != null
+          ? ' · 量測參考 ' + Math.round(mm.projectionPrice)
+          : '');
+    } else if (mm.measuredPct != null) {
+      $('morphMeasure').textContent =
+        '量測幅度約 ' + mm.measuredPct + '%' + (mm.currentExtensionPct != null ? ' · 目前延伸 ' + mm.currentExtensionPct + '%' : '');
+    } else {
+      $('morphMeasure').textContent = '尚無明確量測結構';
     }
-    if (mm.measuredPct != null) measParts.push('量測幅度約 ' + mm.measuredPct + '%');
-    if (mm.currentExtensionPct != null) {
-      measParts.push('目前延伸 ' + (mm.direction === 'up' ? '+' : '') + mm.currentExtensionPct + '%');
+    if (fib.length) {
+      $('morphFib').textContent =
+        '延伸參考：' +
+        fib.map(function (f) {
+          return f.label + ' ' + Math.round(f.price);
+        }).join(' · ');
+      show($('morphFib'));
+    } else {
+      $('morphFib').textContent = '尚無延伸參考';
+      show($('morphFib'));
     }
-    fib.forEach(function (f) {
-      measParts.push(f.label + ' ' + Math.round(f.price));
-    });
-    $('morphMeasure').textContent = measParts.length ? measParts.join(' · ') : '—';
     $('morphCandles').textContent =
       '連續上漲 ' +
       (cs.upCloses || 0) +
@@ -755,11 +853,10 @@
                 (item.morphologyState || '—') +
                 ' · 信心 ' +
                 (item.morphologyConfidence != null ? item.morphologyConfidence : '—') +
-                (item.measuredExtension
-                  ? '<br>延伸：' + item.measuredExtension
-                  : '') +
+                '<br>量測：' +
+                (item.measuredLabel || '無明確量測') +
                 '</p>'
-              : '') +
+              : '<p class="stock-card-morph">形態：無明確形態</p>') +
             '<div class="stock-card-tags"></div>';
 
           const tagBox = card.querySelector('.stock-card-tags');
