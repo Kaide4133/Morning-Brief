@@ -12,9 +12,11 @@ def get_tickers_from_html(html_path):
     m = re.search(r'<section id="s5".*?</section>\s*<section id="s6"', html, re.S)
     section = m.group(0) if m else html
     codes = []
-    for code in re.findall(r'data-code="(\d{4})"', section):
-        if code not in codes:
-            codes.append(code)
+    patterns = [r'data-code="(\d{4})"', r'<div class="card-code">\s*(\d{4})\s*</div>']
+    for pat in patterns:
+        for code in re.findall(pat, section):
+            if code not in codes:
+                codes.append(code)
     return codes
 
 

@@ -17,8 +17,8 @@
     <div><span class="kw-mark">K</span> Kelvin Wiggly</div>
     <div class="nav-links">
       <span>首頁</span>
-      <a href="water-level.html">｜ 水位紀錄</a>
-      <a href="#">｜ 飆股雷達煞車器</a>
+      <a href="/Morning-Brief/water-level.html">｜ 水位紀錄</a>
+      <a href="/Morning-Brief/radar-brake.html">｜ 飆股雷達煞車器</a>
     </div>
   </div>
 </header>
@@ -29,9 +29,9 @@
     <h1>Kelvin Wiggly 每日市場晨報</h1>
     <p class="home-subtitle">以方舟水位為母系統，早上先判斷風險預算，再看主線、換手與調節。這裡整理台股開盤前需要先讀完的市場邊界：水位、主線、風險、以及不追價的操作提醒。</p>
     <div class="home-btns">
-      <a class="home-btn primary" href="{{ latest.filename }}">閱讀今日晨報</a>
-      <a class="home-btn" href="water-level.html">水位紀錄</a>
-      <a class="home-btn" href="#">飆股雷達煞車器</a>
+      <a class="home-btn primary" href="/Morning-Brief/{{ latest.filename }}">閱讀今日晨報</a>
+      <a class="home-btn" href="/Morning-Brief/water-level.html">水位紀錄</a>
+      <a class="home-btn" href="/Morning-Brief/radar-brake.html">飆股雷達煞車器</a>
     </div>
   </header>
 
@@ -58,7 +58,7 @@
     <h2 class="section-title-home">最近兩日晨報大綱</h2>
     <div class="grid2">
       {%- for item in recent_issues %}
-      <a class="recent-card" href="{{ item.filename }}">
+      <a class="recent-card" href="/Morning-Brief/{{ item.filename }}">
         <h3>{{ item.date_display }}｜{{ item.scenario_name }}</h3>
         <p>{{ item.summary }}</p>
       </a>
