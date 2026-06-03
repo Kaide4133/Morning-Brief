@@ -86,7 +86,7 @@ def resolve_universe(args: argparse.Namespace) -> list[str]:
     return out
 
 
-def fetch_yahoo_daily(code: str, range_days: str = "1y") -> tuple[list[dict], str]:
+def fetch_yahoo_daily(code: str, range_days: str = "2y") -> tuple[list[dict], str]:
     for suffix, market in ((".TW", "TWSE"), (".TWO", "TPEX")):
         url = (
             f"https://query2.finance.yahoo.com/v8/finance/chart/{code}{suffix}"
@@ -162,7 +162,7 @@ def resample_weekly(daily: list[dict]) -> list[dict]:
     return weeks
 
 
-def enrich_series_tail(rows: list[dict], tail: int = 60) -> list[dict]:
+def enrich_series_tail(rows: list[dict], tail: int = 250) -> list[dict]:
     out: list[dict] = []
     for i, row in enumerate(rows):
         prefix = rows[: i + 1]
@@ -271,7 +271,8 @@ def build_record(code: str, rows: list[dict], market: str, as_of: str) -> dict |
     support = [f"MA20 {round(ma20)}", f"10日低點 {round(recent_low10)}"]
     resistance = [f"20日前高 {round(prev_high20)}", f"BOLL上緣 {round(boll_ub or mid or 0)}"]
 
-    series = enrich_series_tail(clean, 60)
+    series = enrich_series_tail(clean, 250)
+    weekly_series = enrich_series_tail(resample_weekly(clean), 52)
     flags: list[str] = []
     warnings: list[str] = []
     if last["close"] > ma20:
@@ -351,10 +352,12 @@ def build_record(code: str, rows: list[dict], market: str, as_of: str) -> dict |
             "warnings": warnings[:6],
         },
         "series": series,
+        "weekly_series": weekly_series,
+        "chart_window": 120,
     }
 
-    if len(series) < 60:
-        record["_series_warning"] = f"series 僅 {len(series)} 筆，少於 60"
+    if len(series) < 180:
+        record["_series_warning"] = f"series 僅 {len(series)} 筆，少於 180"
 
     return record
 
@@ -389,8 +392,11 @@ def validate_output(doc: dict) -> list[str]:
         for k in ("ma20", "boll_ub", "boll_lb"):
             if daily.get(k) is None:
                 issues.append(f"{rec.get('code')} 缺少 daily.{k}")
-        if len(rec.get("series") or []) < 60:
+        slen = len(rec.get("series") or [])
+        if slen < 60:
             issues.append(f"{rec.get('code')} series < 60")
+        elif slen < 180:
+            issues.append(f"{rec.get('code')} series < 180 (morphology 降權)")
     return issues
 
 

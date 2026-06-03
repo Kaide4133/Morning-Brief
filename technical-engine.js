@@ -1,5 +1,5 @@
 /**
- * KW Technical Spider v0.4 — 技術分析 + 形態學辨識核心
+ * KW Technical Spider v0.4.1 — 形態學校準 + 延伸量測
  * 僅輸出技術狀態與風險提示，不提供買賣建議。
  */
 (function (root, factory) {
@@ -483,6 +483,9 @@
     };
     if (extra && extra.morphologyType) {
       item.morphologyType = extra.morphologyType;
+      item.morphologyState = extra.morphologyState;
+      item.morphologyConfidence = extra.morphologyConfidence;
+      item.measuredExtension = extra.measuredExtension;
     }
     if (extra && extra.riskConditionCount != null) {
       item.riskConditionCount = extra.riskConditionCount;
@@ -779,11 +782,28 @@
 
       const { hits, reasons, sortKeys, extras } = classifyRecord(norm, analysis);
       const morph = detectMorphology(raw);
+      const mm = morph.measuredMove || {};
+      const extLabel =
+        mm.currentExtensionPct != null && mm.direction === 'up'
+          ? '+' + Math.round(mm.currentExtensionPct) + '%'
+          : mm.currentExtensionPct != null && mm.direction === 'down'
+            ? Math.round(mm.currentExtensionPct) + '%'
+            : null;
 
       SCANNER_BUCKETS.forEach(({ key }) => {
         if (!hits[key]) return;
         buckets[key].push({
-          item: makeScanItem(norm, analysis, reasons[key], Object.assign({}, extras[key], { morphologyType: morph.primary.type })),
+          item: makeScanItem(
+            norm,
+            analysis,
+            reasons[key],
+            Object.assign({}, extras[key], {
+              morphologyType: morph.primary.type,
+              morphologyState: morph.primary.state,
+              morphologyConfidence: morph.primary.confidence,
+              measuredExtension: extLabel,
+            })
+          ),
           sortKey: sortKeys[key],
         });
       });
@@ -817,11 +837,65 @@
   }
 
 
-function getSeries(record) {
+const MORPH_MIN_BARS = 120;
+const MORPH_LOOKBACK = 180;
+
+function getMorphSeries(record) {
   const norm = normalizeRecord(record);
-  if (!norm || !norm.series) return { norm, series: [] };
-  const series = norm.series.filter((r) => r.close != null).slice(-60);
-  return { norm, series };
+  if (!norm || !norm.series) {
+    return { norm, series: [], meta: { length: 0, sufficient: false, lookback: 0 } };
+  }
+  const all = norm.series.filter((r) => r.close != null);
+  const lookback = Math.min(MORPH_LOOKBACK, all.length);
+  const series = all.slice(-lookback);
+  return {
+    norm,
+    series,
+    meta: { length: all.length, lookback: series.length, sufficient: all.length >= MORPH_MIN_BARS },
+  };
+}
+
+function getSeries(record) {
+  return getMorphSeries(record);
+}
+
+function countConsecutiveCandles(series) {
+  const out = {
+    upCloses: 0,
+    downCloses: 0,
+    greenCandles: 0,
+    redCandles: 0,
+    consecutiveHigherHighs: 0,
+    consecutiveLowerLows: 0,
+  };
+  if (!series || series.length < 2) return out;
+  for (let i = series.length - 1; i > 0; i--) {
+    if (series[i].close > series[i - 1].close) out.upCloses++;
+    else break;
+  }
+  for (let i = series.length - 1; i > 0; i--) {
+    if (series[i].close < series[i - 1].close) out.downCloses++;
+    else break;
+  }
+  for (let i = series.length - 1; i >= 0; i--) {
+    const o = series[i].open != null ? series[i].open : series[i].close;
+    if (series[i].close >= o) out.greenCandles++;
+    else break;
+  }
+  for (let i = series.length - 1; i >= 0; i--) {
+    const o = series[i].open != null ? series[i].open : series[i].close;
+    if (series[i].close < o) out.redCandles++;
+    else break;
+  }
+  for (let i = series.length - 1; i > 0; i--) {
+    if (series[i].high > series[i - 1].high) out.consecutiveHigherHighs++;
+    else break;
+  }
+  for (let i = series.length - 1; i > 0; i--) {
+    if (series[i].low < series[i - 1].low) out.consecutiveLowerLows++;
+    else break;
+  }
+  return out;
 }
 
 function findSwingHighs(series, window) {
@@ -923,6 +997,21 @@ function emptyMorphology(summary) {
       annotations: [],
     },
     secondary: [],
+    structure: {},
+    measuredMove: {
+      direction: null,
+      baseStartIndex: null,
+      baseEndIndex: null,
+      breakoutIndex: null,
+      baseLow: null,
+      baseHigh: null,
+      measuredPct: null,
+      currentExtensionPct: null,
+      targets: [],
+    },
+    fibExtensions: [],
+    candleStats: countConsecutiveCandles([]),
+    dataMeta: { sufficient: false },
     diagnostics: {
       swingHighs: [],
       swingLows: [],
@@ -960,8 +1049,12 @@ function buildDiagnostics(series, norm) {
 
 const MORPH_PRIORITY = [
   '假突破風險',
-  '平台突破',
+  '杯柄型態',
+  '上升通道',
+  '下降通道',
+  '反彈旗形',
   '下降壓力線突破',
+  '平台突破',
   '三角收斂',
   'BOLL壓縮',
   'U型底',
@@ -993,31 +1086,48 @@ function detectFalseBreakout(series, norm, diag) {
   };
 }
 
+function touchesLevel(series, level, pct, start, end) {
+  let n = 0;
+  for (let i = start; i < end; i++) {
+    const h = series[i].high;
+    if (Number.isFinite(h) && relPct(h, level) != null && Math.abs(relPct(h, level)) <= pct) n++;
+  }
+  return n;
+}
+
 function detectPlatformBreakout(series, norm) {
   const n = series.length;
-  const look = series.slice(Math.max(0, n - 40), n - 5);
-  if (look.length < 10) return null;
+  const baseStart = Math.max(0, n - 45);
+  const look = series.slice(baseStart, n - 1);
+  if (look.length < 15) return null;
   const platform = Math.max.apply(null, look.map((r) => r.high));
+  const touches = touchesLevel(series, platform, 2.5, baseStart, n - 1);
+  if (touches < 3) return null;
   const close = norm.close;
   const dist = relPct(close, platform);
   if (!Number.isFinite(close) || !Number.isFinite(platform) || dist == null || dist < 1) return null;
   if (!Number.isFinite(norm.ma20) || close <= norm.ma20) return null;
   const last = series[n - 1];
-  const state =
-    dist <= 5 ? '已突破' : dist <= 10 ? '突破延伸' : '已突破';
-  if (last.close < platform && last.high > platform && norm.upper_shadow_ratio > 0.35) {
-    return null;
-  }
+  if (last.close < platform && last.high > platform && norm.upper_shadow_ratio > 0.35) return null;
+  const state = dist <= 5 ? '已突破' : dist <= 10 ? '突破延伸' : '已突破';
+  let summary = '價格收盤站上近期平台壓力，屬平台突破結構。';
+  const extended =
+    (Number.isFinite(norm.distance_ma20_pct) && norm.distance_ma20_pct > 10) ||
+    (norm.boll_ub && close >= norm.boll_ub * 0.97);
+  if (extended) summary += '但已進入延伸區，突破品質需降權。';
+  let confidence = norm.volume_ratio >= 1.2 ? 72 : 58;
+  if (extended) confidence = Math.min(confidence, 62);
   return {
     type: '平台突破',
     state,
-    confidence: norm.volume_ratio >= 1.2 ? 75 : 62,
-    summary: '價格收盤站上近期平台壓力，屬平台突破結構。',
-    reasons: ['多次測試同一壓力區', '收盤站上平台壓力', close > norm.ma20 ? '站上 MA20' : ''].filter(Boolean),
+    confidence,
+    summary,
+    reasons: ['至少三次測試平台壓力', '整理區間至少15根', '收盤站上平台壓力', close > norm.ma20 ? '站上 MA20' : ''].filter(Boolean),
     annotations: [
-      { kind: 'horizontal', label: '平台壓力線', price: platform },
-      { kind: 'marker', label: '突破點', index: n - 1, price: close },
+      { kind: 'horizontal', label: '平台壓力線', price: platform, style: 'neckline' },
+      { kind: 'marker', label: '突破點', index: n - 1, price: close, style: 'breakout' },
     ],
+    structure: { neckline: platform, resistance: platform },
   };
 }
 
@@ -1164,33 +1274,43 @@ function detectUBottom(series, norm) {
   };
 }
 
-function detectArcBottom(series, norm) {
+function detectArcBottom(series, norm, meta) {
+  if (!meta || !meta.sufficient || series.length < 120) return null;
   const n = series.length;
-  const lows = series.map((r, i) => ({ index: i, price: r.low }));
-  const third = Math.floor(n / 3);
-  const l1 = lows.slice(0, third);
-  const l2 = lows.slice(third, third * 2);
-  const l3 = lows.slice(third * 2);
-  const avg = (arr) => arr.reduce((s, p) => s + p.price, 0) / arr.length;
-  if (!(avg(l2) >= avg(l1) * 0.98 && avg(l3) > avg(l2) * 1.02)) return null;
+  const t1 = Math.floor(n / 3);
+  const t2 = t1 * 2;
+  const seg1 = series.slice(0, t1);
+  const seg2 = series.slice(t1, t2);
+  const seg3 = series.slice(t2);
+  const drop1 = seg1[0].close > seg1[seg1.length - 1].close * 1.06;
+  const avgLow = (arr) => arr.reduce((s, r) => s + r.low, 0) / arr.length;
+  const flatMid = Math.abs(relPct(avgLow(seg2), avgLow(seg1))) < 6;
+  const rise3 = avgLow(seg3) > avgLow(seg2) * 1.03;
+  if (!drop1 || !flatMid || !rise3) return null;
   const ma20End = series[n - 1].ma20;
-  const ma20Mid = series[Math.floor(n / 2)].ma20;
-  if (ma20End && ma20Mid && ma20End < ma20Mid) return null;
-  const neckline = Math.max.apply(null, series.slice(0, third * 2).map((r) => r.high));
+  const ma20Mid = series[t1].ma20;
+  const ma60End = series[n - 1].ma60 || ma20End;
+  if (ma20End && ma20Mid && ma20End < ma20Mid * 0.998) return null;
+  if (ma60End && ma20End && ma20End < ma60End * 0.995) return null;
+  const neckline = Math.max.apply(null, series.slice(0, t2).map((r) => r.high));
   const close = norm.close;
+  const midClose = (Math.max.apply(null, seg1.map((r) => r.high)) + Math.min.apply(null, seg2.map((r) => r.low))) / 2;
+  if (close < midClose) return null;
   let state = '右側成形';
   if (relPct(close, neckline) >= -3 && close < neckline) state = '頸線附近';
   if (close >= neckline) state = '已突破';
+  const confidence = close >= neckline ? 62 : 56;
   return {
     type: '圓弧底',
     state,
-    confidence: 58,
+    confidence,
     summary: '下跌後低點逐步鈍化，右側回升，具圓弧底雛形。',
-    reasons: ['低點逐步墊高', 'MA20 轉平或上彎', '右側回升'],
+    reasons: ['前段下跌', '中段低點鈍化', '後段低點墊高', 'MA20 轉平或上彎'],
     annotations: [
-      { kind: 'horizontal', label: '頸線', price: neckline },
-      { kind: 'zone', label: '弧形底部區', startIndex: 0, endIndex: Math.floor(n * 0.65) },
+      { kind: 'horizontal', label: '頸線', price: neckline, style: 'neckline' },
+      { kind: 'zone', label: '弧形底部區', startIndex: 0, endIndex: t2, style: 'cup' },
     ],
+    structure: { neckline, support: Math.min.apply(null, seg2.map((r) => r.low)) },
   };
 }
 
@@ -1221,23 +1341,316 @@ function detectBox(series, norm) {
   };
 }
 
+function buildMeasuredMove(candidate, series, norm) {
+  const empty = {
+    direction: null,
+    baseStartIndex: null,
+    baseEndIndex: null,
+    breakoutIndex: null,
+    baseLow: null,
+    baseHigh: null,
+    measuredPct: null,
+    currentExtensionPct: null,
+    targets: [],
+  };
+  if (!candidate || !series.length) return empty;
+  const n = series.length - 1;
+  const close = norm.close;
+  const type = candidate.type;
+  if (type === '平台突破' || type === '杯柄型態') {
+    let baseHigh = null;
+    let baseLow = null;
+    if (type === '平台突破') {
+      const look = series.slice(Math.max(0, n - 40), n - 5);
+      baseHigh = Math.max.apply(null, look.map((r) => r.high));
+      baseLow = Math.min.apply(null, look.map((r) => r.low));
+    } else {
+      const left = series.slice(0, Math.floor(series.length * 0.45));
+      baseHigh = Math.max.apply(null, left.map((r) => r.high));
+      baseLow = Math.min.apply(null, series.map((r) => r.low));
+    }
+    if (!Number.isFinite(baseHigh) || !Number.isFinite(baseLow) || baseHigh <= baseLow) return empty;
+    const height = baseHigh - baseLow;
+    const measuredPct = (height / baseLow) * 100;
+    const target = baseHigh + height;
+    const ext = relPct(close, baseHigh);
+    return {
+      direction: 'up',
+      baseStartIndex: 0,
+      baseEndIndex: n - 5,
+      breakoutIndex: n,
+      baseLow,
+      baseHigh,
+      measuredPct: Math.round(measuredPct * 10) / 10,
+      currentExtensionPct: ext != null ? Math.round(ext * 10) / 10 : null,
+      targets: [{ price: target, label: '+' + Math.round(measuredPct) + '%' }],
+    };
+  }
+  if (type === '反彈旗形' || type === '下降通道') {
+    const box = recentRange(series, 30);
+    if (!box) return empty;
+    const height = box.width;
+    const measuredPct = (height / box.high) * 100;
+    return {
+      direction: 'down',
+      baseStartIndex: box.start,
+      baseEndIndex: n,
+      breakoutIndex: n,
+      baseLow: box.low,
+      baseHigh: box.high,
+      measuredPct: Math.round(measuredPct * 10) / 10,
+      currentExtensionPct: relPct(close, box.low),
+      targets: [{ price: box.low - height, label: '-' + Math.round(measuredPct) + '%' }],
+    };
+  }
+  return empty;
+}
+
+function buildFibExtensions(candidate, series) {
+  const out = [];
+  if (!candidate) return out;
+  const ok = ['杯柄型態', '圓弧底', '平台突破', 'U型底'];
+  if (ok.indexOf(candidate.type) < 0 || series.length < MORPH_MIN_BARS) return out;
+  const left = series.slice(0, Math.floor(series.length * 0.5));
+  const baseLow = Math.min.apply(null, series.map((r) => r.low));
+  let neckline = null;
+  if (candidate.type === '平台突破') {
+    const look = series.slice(Math.max(0, series.length - 45), series.length - 5);
+    neckline = Math.max.apply(null, look.map((r) => r.high));
+  } else {
+    neckline = Math.max.apply(null, left.map((r) => r.high));
+  }
+  if (!Number.isFinite(baseLow) || !Number.isFinite(neckline) || neckline <= baseLow) return out;
+  const span = neckline - baseLow;
+  [1.618, 2.618].forEach((lv) => {
+    out.push({
+      level: lv,
+      price: Math.round((neckline + span * (lv - 1)) * 100) / 100,
+      label: String(lv) + ' extension',
+    });
+  });
+  return out;
+}
+
+function mergeMorphAnnotations(primary, measuredMove, fibExtensions) {
+  const ann = (primary.annotations || []).slice();
+  if (measuredMove && measuredMove.direction && measuredMove.targets) {
+    measuredMove.targets.forEach((t) => {
+      ann.push({ kind: 'horizontal', label: t.label, price: t.price, style: 'measure' });
+      ann.push({
+        kind: 'measure',
+        label: t.label,
+        fromIndex: measuredMove.breakoutIndex,
+        fromPrice: measuredMove.baseHigh,
+        toPrice: t.price,
+      });
+    });
+  }
+  fibExtensions.forEach((f) => {
+    ann.push({ kind: 'horizontal', label: f.label, price: f.price, style: 'fib' });
+  });
+  return ann;
+}
+
+function detectCupHandle(series, norm, meta) {
+  if (!meta.sufficient || series.length < 120) return null;
+  const n = series.length;
+  const leftEnd = Math.floor(n * 0.35);
+  const cupEnd = Math.floor(n * 0.72);
+  const left = series.slice(0, leftEnd);
+  const cup = series.slice(leftEnd, cupEnd);
+  const handle = series.slice(cupEnd);
+  if (left.length < 20 || cup.length < 30 || handle.length < 10) return null;
+  const leftHigh = Math.max.apply(null, left.map((r) => r.high));
+  const cupLow = Math.min.apply(null, cup.map((r) => r.low));
+  if (left[0].close <= cupLow * 1.08) return null;
+  const cupDepth = leftHigh - cupLow;
+  if (cupDepth / leftHigh < 0.12 || cupDepth / leftHigh > 0.45) return null;
+  const cupLows = cup.map((r) => r.low);
+  const mid = Math.floor(cupLows.length / 2);
+  const avgFirst = cupLows.slice(0, mid).reduce((s, v) => s + v, 0) / mid;
+  const avgLast = cupLows.slice(mid).reduce((s, v) => s + v, 0) / (cupLows.length - mid);
+  if (avgLast < avgFirst * 0.98) return null;
+  const neckline = leftHigh;
+  const handleLow = Math.min.apply(null, handle.map((r) => r.low));
+  const handlePullback =
+    (Math.max.apply(null, handle.map((r) => r.high)) - handleLow) / cupDepth;
+  if (handlePullback > 0.38) return null;
+  const close = norm.close;
+  let state = '杯底成形';
+  if (relPct(close, neckline) >= -5 && close < neckline) state = '柄部整理';
+  if (relPct(close, neckline) >= -3 && close < neckline) state = '頸線附近';
+  if (close >= neckline * 1.01) state = '頸線突破';
+  if (close >= neckline * 1.05) state = '突破延伸';
+  return {
+    type: '杯柄型態',
+    state,
+    confidence: close >= neckline ? 76 : 68,
+    summary: '中期形成杯狀底部，右側回升後進入柄部整理，頸線為主要結構壓力。',
+    reasons: ['左側回落', '杯底低點鈍化', '右側回升', '柄部整理'],
+    annotations: [
+      { kind: 'horizontal', label: '頸線', price: neckline, style: 'neckline' },
+      {
+        kind: 'polyline',
+        label: '杯體',
+        points: [
+          { index: 0, price: left[0].close },
+          { index: leftEnd + Math.floor(cup.length / 2), price: cupLow },
+          { index: cupEnd, price: series[cupEnd].close },
+        ],
+        style: 'cup',
+      },
+      { kind: 'zone', label: '柄部', startIndex: cupEnd, endIndex: n, style: 'handle' },
+      ...(close >= neckline
+        ? [{ kind: 'marker', label: '突破', index: n, price: close, style: 'breakout' }]
+        : []),
+    ],
+    structure: { neckline, support: cupLow, resistance: neckline },
+  };
+}
+
+function detectChannel(series, norm, diag, ascending) {
+  if (series.length < 60) return null;
+  const hi = diag.swingHighs;
+  const lo = diag.swingLows;
+  if (hi.length < 3 || lo.length < 3) return null;
+  const hiPts = hi.slice(-4);
+  const loPts = lo.slice(-4);
+  const regH = linearRegression(hiPts);
+  const regL = linearRegression(loPts);
+  if (!regH || !regL) return null;
+  if (Math.abs(regH.slope - regL.slope) > 0.35) return null;
+  if (ascending && (regH.slope < 0.04 || regL.slope < 0.04)) return null;
+  if (!ascending && (regH.slope > -0.04 || regL.slope > -0.04)) return null;
+  const n = series.length - 1;
+  const top = linePriceAt(regH, n);
+  const bot = linePriceAt(regL, n);
+  const close = norm.close;
+  let state = '通道中段';
+  if (Number.isFinite(top) && relPct(close, top) >= -3) state = '通道上緣';
+  if (Number.isFinite(bot) && relPct(close, bot) <= 3) state = '通道下緣';
+  if (close > top) state = '通道突破';
+  if (close < bot) state = '通道跌破';
+  const label = ascending ? '上升通道' : '下降通道';
+  return {
+    type: label,
+    state,
+    confidence: 66,
+    summary: ascending
+      ? '高點與低點同步墊高，價格沿上升通道運行。'
+      : '高點與低點同步下移，價格沿下降通道運行。',
+    reasons: [
+      ascending ? '低點墊高' : '高點下壓',
+      ascending ? '高點墊高' : '低點下移',
+      '通道平行度尚可',
+    ],
+    annotations: [
+      {
+        kind: 'trendline',
+        label: ascending ? '上升壓力線' : '下降壓力線',
+        points: [
+          { index: hiPts[0].index, price: linePriceAt(regH, hiPts[0].index) },
+          { index: n, price: top },
+        ],
+        style: 'resistance',
+      },
+      {
+        kind: 'trendline',
+        label: ascending ? '上升支撐線' : '下降支撐線',
+        points: [
+          { index: loPts[0].index, price: linePriceAt(regL, loPts[0].index) },
+          { index: n, price: bot },
+        ],
+        style: 'support',
+      },
+      { kind: 'zone', label: '通道', startIndex: Math.max(0, n - 50), endIndex: n, style: 'channel' },
+    ],
+    structure: { resistance: top, support: bot },
+  };
+}
+
+function detectBearFlag(series, norm) {
+  if (series.length < 50) return null;
+  const n = series.length - 1;
+  const pole = series.slice(Math.max(0, n - 45), Math.max(0, n - 25));
+  const flag = series.slice(Math.max(0, n - 25));
+  if (pole.length < 10 || flag.length < 12) return null;
+  if (pole[0].close <= pole[pole.length - 1].close * 1.08) return null;
+  const hi = findSwingHighs(flag, 2);
+  const lo = findSwingLows(flag, 2);
+  if (hi.length < 2 || lo.length < 2) return null;
+  const regH = linearRegression(hi);
+  const regL = linearRegression(lo);
+  if (!regH || !regL || regH.slope < 0.02 || regL.slope < 0.01) return null;
+  const flagLow = Math.min.apply(null, flag.map((r) => r.low));
+  const close = norm.close;
+  let state = '旗形反彈中';
+  if (close < flagLow) state = '跌破下緣';
+  const avgVol = averageVolume(series, n - 12, n);
+  const poleVol = averageVolume(series, n - 40, n - 20);
+  if (poleVol > 0 && avgVol / poleVol > 1.4) return null;
+  return {
+    type: '反彈旗形',
+    state,
+    confidence: close < flagLow ? 72 : 58,
+    summary: '急跌後形成小型反彈通道，若跌破下緣，屬反彈旗形失敗結構。',
+    reasons: ['前段急跌', '小型反彈通道', '反彈量能偏弱'],
+    annotations: [
+      {
+        kind: 'trendline',
+        label: '旗形上緣',
+        points: [
+          { index: hi[0].index, price: linePriceAt(regH, hi[0].index) },
+          { index: n, price: linePriceAt(regH, n) },
+        ],
+      },
+      {
+        kind: 'trendline',
+        label: '旗形下緣',
+        points: [
+          { index: lo[0].index, price: linePriceAt(regL, lo[0].index) },
+          { index: n, price: linePriceAt(regL, n) },
+        ],
+      },
+      ...(close < flagLow
+        ? [{ kind: 'marker', label: '跌破', index: n, price: close, style: 'breakdown' }]
+        : []),
+    ],
+  };
+}
+
 function detectMorphology(record) {
-  const { norm, series } = getSeries(record);
+  const { norm, series, meta } = getMorphSeries(record);
   if (series.length < 40) {
     return emptyMorphology('此股票尚無足夠形態學資料。');
+  }
+  if (!meta.sufficient) {
+    const empty = emptyMorphology(
+      'series 僅 ' + meta.length + ' 根，不足以辨識杯柄／通道等中期形態。'
+    );
+    empty.candleStats = countConsecutiveCandles(series);
+    empty.dataMeta = meta;
+    empty.morphSeriesLength = series.length;
+    return empty;
   }
   const diagnostics = buildDiagnostics(series, norm);
   const candidates = [];
   const add = (c) => {
-    if (c && c.type) candidates.push(c);
+    if (!c || !c.type) return;
+    if (c.type === '圓弧底' && c.confidence < 55) return;
+    candidates.push(c);
   };
   add(detectFalseBreakout(series, norm, diagnostics));
-  add(detectPlatformBreakout(series, norm));
+  add(detectCupHandle(series, norm, meta));
+  add(detectChannel(series, norm, diagnostics, true));
+  add(detectChannel(series, norm, diagnostics, false));
+  add(detectBearFlag(series, norm));
   add(detectDescendingBreakout(series, norm, diagnostics));
+  add(detectPlatformBreakout(series, norm));
   add(detectTriangle(series, norm, diagnostics));
   add(detectBollCompression(series, norm));
   add(detectUBottom(series, norm));
-  add(detectArcBottom(series, norm));
+  add(detectArcBottom(series, norm, meta));
   add(detectBox(series, norm));
 
   candidates.sort(
@@ -1245,16 +1658,24 @@ function detectMorphology(record) {
   );
 
   if (!candidates.length) {
-    return emptyMorphology('目前沒有足夠明確的形態學結構。');
+    const empty = emptyMorphology('目前沒有足夠明確的形態學結構。');
+    empty.candleStats = countConsecutiveCandles(series);
+    empty.dataMeta = meta;
+    empty.morphSeriesLength = series.length;
+    return empty;
   }
 
+  const pick = candidates[0];
+  const measuredMove = buildMeasuredMove(pick, series, norm);
+  const fibExtensions = buildFibExtensions(pick, series);
   const primary = {
-    type: candidates[0].type,
-    state: candidates[0].state,
-    confidence: candidates[0].confidence,
-    summary: candidates[0].summary,
-    reasons: candidates[0].reasons || [],
-    annotations: candidates[0].annotations || [],
+    type: pick.type,
+    state: pick.state,
+    confidence: pick.confidence,
+    summary: pick.summary,
+    reasons: pick.reasons || [],
+    annotations: mergeMorphAnnotations(pick, measuredMove, fibExtensions),
+    structure: pick.structure || {},
   };
   const secondary = candidates.slice(1, 4).map((c) => ({
     type: c.type,
@@ -1262,7 +1683,17 @@ function detectMorphology(record) {
     confidence: c.confidence,
   }));
 
-  return { primary, secondary, diagnostics };
+  return {
+    primary,
+    secondary,
+    structure: pick.structure || {},
+    measuredMove,
+    fibExtensions,
+    candleStats: countConsecutiveCandles(series),
+    dataMeta: meta,
+    diagnostics,
+    morphSeriesLength: series.length,
+  };
 }
 
 
@@ -1272,6 +1703,8 @@ function detectMorphology(record) {
     findRecord,
     scan,
     detectMorphology,
+    countConsecutiveCandles,
+    getMorphSeries,
     SCANNER_BUCKETS,
     SCANNER_OPPORTUNITY_KEYS,
     SCANNER_RISK_KEYS,
