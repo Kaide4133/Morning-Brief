@@ -474,6 +474,136 @@
     });
   }
 
+  /** 主圖價格帶：僅用 K 線／MA20／合理 BOLL，排除異常指標值 */
+  function computeBasePriceRange(series, prevHigh) {
+    const lows = [];
+    const highs = [];
+    const closes = [];
+    series.forEach(function (r) {
+      if (r.low != null) lows.push(r.low);
+      if (r.high != null) highs.push(r.high);
+      if (r.close != null) closes.push(r.close);
+    });
+    let baseMin = Math.min.apply(null, lows.concat(closes));
+    let baseMax = Math.max.apply(null, highs.concat(closes));
+    if (!Number.isFinite(baseMin) || !Number.isFinite(baseMax)) {
+      baseMin = 0;
+      baseMax = 1;
+    }
+
+    function inBand(v, marginPct) {
+      if (!Number.isFinite(v)) return false;
+      const span = baseMax - baseMin || 1;
+      return v >= baseMin - span * marginPct && v <= baseMax + span * marginPct;
+    }
+
+    series.forEach(function (r) {
+      if (r.ma20 != null && inBand(r.ma20, 0.2)) {
+        baseMin = Math.min(baseMin, r.ma20);
+        baseMax = Math.max(baseMax, r.ma20);
+      }
+      if (r.boll_lb != null && inBand(r.boll_lb, 0.2)) {
+        baseMin = Math.min(baseMin, r.boll_lb);
+      }
+      if (r.boll_ub != null && inBand(r.boll_ub, 0.2)) {
+        baseMax = Math.max(baseMax, r.boll_ub);
+      }
+    });
+    if (prevHigh != null && inBand(prevHigh, 0.15)) {
+      baseMax = Math.max(baseMax, prevHigh);
+    }
+    return { baseMin, baseMax };
+  }
+
+  function priceWithinRange(v, baseMin, baseMax, marginPct) {
+    if (!Number.isFinite(v)) return false;
+    const span = baseMax - baseMin || 1;
+    return v >= baseMin - span * marginPct && v <= baseMax + span * marginPct;
+  }
+
+  function expandYRange(baseMin, baseMax, padPct) {
+    const span = baseMax - baseMin || 1;
+    const pad = span * (padPct != null ? padPct : 0.06);
+    return {
+      yMin: Math.max(0, baseMin - pad),
+      yMax: baseMax + pad,
+    };
+  }
+
+  function collectAnnotationPrices(annList, morph, baseMin, baseMax) {
+    const extra = [];
+    const annMargin = 0.2;
+    const projMargin = 0.25;
+
+    function tryPush(v, margin) {
+      if (priceWithinRange(v, baseMin, baseMax, margin)) extra.push(v);
+    }
+
+    annList.forEach(function (a) {
+      if (a.kind === 'zone' && a.topPrice != null && a.bottomPrice != null) {
+        tryPush(a.topPrice, annMargin);
+        tryPush(a.bottomPrice, annMargin);
+        return;
+      }
+      if (a.kind === 'horizontal' && a.price != null) {
+        tryPush(a.price, annMargin);
+        return;
+      }
+      if (a.kind === 'bracket') {
+        tryPush(a.baseLow, annMargin);
+        tryPush(a.baseHigh, annMargin);
+        return;
+      }
+      if (a.kind === 'measure') {
+        tryPush(a.fromPrice, annMargin);
+        tryPush(a.toPrice, projMargin);
+        return;
+      }
+      if (a.points) {
+        a.points.forEach(function (p) {
+          tryPush(p.price, annMargin);
+        });
+      }
+      if (a.price != null) tryPush(a.price, annMargin);
+    });
+
+    const mm = morph && morph.measuredMove;
+    if (mm && mm.direction) {
+      tryPush(mm.baseLow, annMargin);
+      tryPush(mm.baseHigh, annMargin);
+      tryPush(mm.breakoutPrice, annMargin);
+      if (mm.projectionPrice != null) tryPush(mm.projectionPrice, projMargin);
+    }
+    return extra;
+  }
+
+  function filterAnnotationsForDraw(annList, baseMin, baseMax, morph) {
+    const annMargin = 0.2;
+    const projMargin = 0.25;
+    return annList.filter(function (a) {
+      if (a.kind === 'horizontal' && (a.style === 'fib' || a.style === 'measure')) {
+        return priceWithinRange(a.price, baseMin, baseMax, annMargin);
+      }
+      if (a.kind === 'measure' && a.toPrice != null) {
+        return (
+          priceWithinRange(a.fromPrice, baseMin, baseMax, annMargin) &&
+          priceWithinRange(a.toPrice, baseMin, baseMax, projMargin)
+        );
+      }
+      if (a.kind === 'bracket') {
+        return (
+          priceWithinRange(a.baseLow, baseMin, baseMax, annMargin) &&
+          priceWithinRange(a.baseHigh, baseMin, baseMax, annMargin)
+        );
+      }
+      return true;
+    });
+  }
+
+  function valuePlottable(v, yMin, yMax) {
+    return Number.isFinite(v) && v >= yMin && v <= yMax;
+  }
+
   function drawChart(norm, morph) {
     const canvas = $('chartCanvas');
     const emptyEl = $('chartEmpty');
@@ -498,50 +628,35 @@
 
     ctx.clearRect(0, 0, W, H);
 
-    const lows = series.map((r) => r.low != null ? r.low : r.close);
-    const highs = series.map((r) => r.high != null ? r.high : r.close);
-    const bollLbs = series.map((r) => r.boll_lb).filter((v) => v != null);
-    const bollUbs = series.map((r) => r.boll_ub).filter((v) => v != null);
     const prevHigh = norm.prev_high20;
     const vols = series.map((r) => r.volume || 0);
     const maxV = Math.max.apply(null, vols.concat([1]));
 
     const morphLen = (morph && morph.morphSeriesLength) || full.length;
-    const annList =
+    const annListRaw =
       morph && (morph.chartAnnotations || (morph.primary && morph.primary.annotations))
         ? (morph.chartAnnotations || morph.primary.annotations).slice(0, 16)
         : [];
     $('chartTitle').textContent = '近 ' + chartDays + ' 日線圖';
-    const annPrices = [];
-    annList.forEach(function (a) {
-      if (a.price != null) annPrices.push(a.price);
-      if (a.topPrice != null) annPrices.push(a.topPrice);
-      if (a.bottomPrice != null) annPrices.push(a.bottomPrice);
-      if (a.points) {
-        a.points.forEach(function (p) {
-          if (p.price != null) annPrices.push(p.price);
-        });
-      }
-    });
-    if (morph && morph.measuredMove && morph.measuredMove.projectionPrice != null) {
-      annPrices.push(morph.measuredMove.projectionPrice);
-    }
-    if (morph && morph.fibExtensions) {
-      morph.fibExtensions.forEach(function (f) {
-        if (f.price != null) annPrices.push(f.price);
-      });
-    }
 
-    let yMin = Math.min.apply(null, lows.concat(bollLbs.length ? bollLbs : lows));
-    let yMax = Math.max.apply(null, highs.concat(bollUbs.length ? bollUbs : highs));
-    if (prevHigh != null) yMax = Math.max(yMax, prevHigh);
-    if (annPrices.length) {
-      yMin = Math.min(yMin, Math.min.apply(null, annPrices));
-      yMax = Math.max(yMax, Math.max.apply(null, annPrices));
-    }
-    const yPad = (yMax - yMin) * 0.06 || 1;
-    yMin -= yPad;
-    yMax += yPad;
+    const base = computeBasePriceRange(series, prevHigh);
+    const annExtra = collectAnnotationPrices(annListRaw, morph, base.baseMin, base.baseMax);
+    let yMin = base.baseMin;
+    let yMax = base.baseMax;
+    annExtra.forEach(function (p) {
+      yMin = Math.min(yMin, p);
+      yMax = Math.max(yMax, p);
+    });
+    const expanded = expandYRange(yMin, yMax, 0.06);
+    yMin = expanded.yMin;
+    yMax = expanded.yMax;
+
+    const annList = filterAnnotationsForDraw(
+      annListRaw,
+      base.baseMin,
+      base.baseMax,
+      morph
+    );
 
     const n = series.length;
     const xAt = (i) => pad.l + (i / (n - 1)) * (W - pad.l - pad.r);
@@ -566,7 +681,7 @@
       let started = false;
       series.forEach((row, i) => {
         const v = row[key];
-        if (v == null) return;
+        if (v == null || !valuePlottable(v, yMin, yMax)) return;
         const x = xAt(i);
         const y = yAt(v);
         if (!started) {
@@ -744,7 +859,8 @@
     if (fib.length) {
       $('morphFib').textContent = fib
         .map(function (f) {
-          const tag = f.drawOnChart === false ? '（超出圖表範圍）' : '';
+          const tag =
+            f.drawOnChart === false ? '（延伸參考超出目前圖表範圍）' : '';
           return f.level + '：' + Math.round(f.price) + tag;
         })
         .join(' · ');
@@ -775,6 +891,37 @@
     if ((cs.upCloses || 0) >= 7 || (cs.consecutiveHigherHighs || 0) >= 7) note = '延伸需降權';
     else if ((cs.upCloses || 0) >= 5 || (cs.consecutiveHigherHighs || 0) >= 5) note = '突破後加速';
     $('morphCandleNote').textContent = note;
+  }
+
+  function updateMorphChartNotes(norm, morph) {
+    if (!morph || !norm) return;
+    const series = (norm.series || []).filter((r) => r.close != null).slice(-chartDays);
+    if (series.length < 2) return;
+    const base = computeBasePriceRange(series, norm.prev_high20);
+    const notes = [];
+    const mm = morph.measuredMove || {};
+    if (
+      mm.projectionPrice != null &&
+      mm.direction &&
+      !priceWithinRange(mm.projectionPrice, base.baseMin, base.baseMax, 0.25)
+    ) {
+      notes.push('量測延伸超出目前圖表範圍');
+    }
+    (morph.fibExtensions || []).forEach(function (f) {
+      if (f.drawOnChart === false) notes.push('延伸參考超出目前圖表範圍');
+    });
+    const el = $('morphMeasure');
+    el.textContent = (el.textContent || '')
+      .replace(/ · 量測延伸超出目前圖表範圍/g, '')
+      .replace(/ · 延伸參考超出目前圖表範圍/g, '');
+    if (notes.length) {
+      const uniq = notes.filter(function (n, i, a) {
+        return a.indexOf(n) === i;
+      });
+      if (el.textContent && el.textContent !== '尚無明確量測結構') {
+        el.textContent += ' · ' + uniq[0];
+      }
+    }
   }
 
   function showErrorOnly(msg) {
@@ -850,6 +997,7 @@
     lastMorph = morph;
     renderMorphology(morph);
     drawChart(norm, morph);
+    updateMorphChartNotes(norm, morph);
     $('resultBlock').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
@@ -1048,7 +1196,10 @@
       document.querySelectorAll('.chart-range-btn').forEach(function (b) {
         b.classList.toggle('is-active', b === btn);
       });
-      if (lastNorm) drawChart(lastNorm, lastMorph);
+      if (lastNorm) {
+        drawChart(lastNorm, lastMorph);
+        updateMorphChartNotes(lastNorm, lastMorph);
+      }
     });
   });
 

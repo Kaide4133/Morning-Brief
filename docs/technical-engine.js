@@ -1506,9 +1506,12 @@ function buildMeasuredMove(candidate, series, norm) {
   return empty;
 }
 
-function fibDrawOnChart(price, close) {
-  if (!Number.isFinite(price) || !Number.isFinite(close) || close === 0) return false;
-  return Math.abs(price - close) / close <= 1;
+function fibDrawOnChart(price, baseLow, baseHigh) {
+  if (!Number.isFinite(price) || !Number.isFinite(baseLow) || !Number.isFinite(baseHigh)) {
+    return false;
+  }
+  const span = baseHigh - baseLow || 1;
+  return price >= baseLow - span * 0.2 && price <= baseHigh + span * 0.2;
 }
 
 function buildFibExtensions(candidate, series, norm, measuredMove) {
@@ -1565,7 +1568,7 @@ function buildFibExtensions(candidate, series, norm, measuredMove) {
       level: lv,
       price: Math.round(price * 100) / 100,
       label: lv + ' extension reference',
-      drawOnChart: fibDrawOnChart(price, close),
+      drawOnChart: fibDrawOnChart(price, baseLow, baseHigh),
     });
   });
   return out;
