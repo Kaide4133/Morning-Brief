@@ -30,6 +30,9 @@
     <button id="analyzeBtn" type="button">分析線圖</button>
     <p id="loadStatus">載入技術資料池中…</p>
   </div>
+  <article id="errorBlock" class="panel is-hidden" aria-live="polite">
+    <p id="errorMessage" class="err"></p>
+  </article>
 </section>
 
 <section id="resultBlock" class="block is-hidden" aria-label="results">
@@ -285,29 +288,52 @@
     ctx.fillText(series[n - 1].date || '', W - pad.r - 80, H - 10);
   }
 
-  function showMessage(msg, isError) {
-    hide($('resultBlock'));
-    hide($('chartBlock'));
-    show($('resultBlock'));
-    hide($('summaryCard'));
-    const box = document.createElement('article');
-    box.className = 'panel';
-    box.innerHTML = '<p class="' + (isError ? 'err' : '') + '">' + msg + '</p>';
-    const existing = $('resultBlock').querySelector('.msg-only');
-    if (existing) existing.remove();
-    box.classList.add('msg-only');
-    $('resultBlock').insertBefore(box, $('resultBlock').firstChild.nextSibling);
+  function clearChart() {
+    const canvas = $('chartCanvas');
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    hide($('chartEmpty'));
+    canvas.classList.remove('is-hidden');
   }
 
-  function clearMessage() {
-    const m = $('resultBlock').querySelector('.msg-only');
-    if (m) m.remove();
-    show($('summaryCard'));
+  function clearAllResults() {
+    $('stockTitle').textContent = '';
+    $('stockMeta').textContent = '';
+    $('stockClose').textContent = '';
+    $('stockChange').textContent = '';
+    $('techSummary').textContent = '';
+    $('trendState').textContent = '';
+    $('positionState').textContent = '';
+    $('extensionState').textContent = '';
+    $('volumeState').textContent = '';
+    fillReasons($('trendReason'), []);
+    fillReasons($('positionReason'), []);
+    fillReasons($('extensionReason'), []);
+    fillReasons($('volumeReason'), []);
+    fillList($('supportList'), []);
+    fillList($('resistanceList'), []);
+    $('warningsBox').textContent = '';
+    $('labelsBox').textContent = '';
+    $('scoresLine').textContent = '';
+    clearChart();
+    hide($('resultBlock'));
+    hide($('chartBlock'));
+  }
+
+  function showErrorOnly(msg) {
+    clearAllResults();
+    $('errorMessage').textContent = msg;
+    show($('errorBlock'));
+  }
+
+  function hideError() {
+    hide($('errorBlock'));
+    $('errorMessage').textContent = '';
   }
 
   function renderResult(norm) {
     if (typeof TechnicalEngine === 'undefined') {
-      showMessage('technical-engine.js 未載入，請確認與本頁同目錄。', true);
+      showErrorOnly('technical-engine.js 未載入，請確認與本頁同目錄。');
       return;
     }
 
@@ -316,11 +342,12 @@
       out = TechnicalEngine.analyze(norm.raw || norm);
     } catch (err) {
       console.error(err);
-      showMessage('分析時發生錯誤：' + err.message, true);
+      showErrorOnly('分析時發生錯誤：' + err.message);
       return;
     }
 
-    clearMessage();
+    hideError();
+    clearChart();
     show($('resultBlock'));
     show($('chartBlock'));
 
@@ -361,21 +388,21 @@
   function runAnalyze() {
     const q = $('codeInput').value.trim();
     if (!q) {
-      showMessage('請輸入股票代號', true);
+      showErrorOnly('請輸入股票代號');
       return;
     }
     if (!loaded) {
-      showMessage('技術資料尚未載入完成，請稍候再試。', true);
+      showErrorOnly('技術資料尚未載入完成，請稍候再試。');
       return;
     }
     if (typeof TechnicalEngine === 'undefined') {
-      showMessage('technical-engine.js 未載入。', true);
+      showErrorOnly('technical-engine.js 未載入。');
       return;
     }
 
     const norm = TechnicalEngine.findRecord(pool, q);
     if (!norm) {
-      showMessage('此股票尚未在技術資料池中', true);
+      showErrorOnly('此股票尚未在技術資料池中');
       return;
     }
 
