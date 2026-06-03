@@ -1,5 +1,5 @@
 /**
- * KW Technical Spider v0.2 — 可重用技術分析核心
+ * KW Technical Spider v0.4 — 技術分析 + 形態學辨識核心
  * 僅輸出技術狀態與風險提示，不提供買賣建議。
  */
 (function (root, factory) {
@@ -481,6 +481,9 @@
       labels: (analysis.labels || []).slice(0, 4),
       scores: { ...analysis.scores },
     };
+    if (extra && extra.morphologyType) {
+      item.morphologyType = extra.morphologyType;
+    }
     if (extra && extra.riskConditionCount != null) {
       item.riskConditionCount = extra.riskConditionCount;
     }
@@ -775,11 +778,12 @@
       }
 
       const { hits, reasons, sortKeys, extras } = classifyRecord(norm, analysis);
+      const morph = detectMorphology(raw);
 
       SCANNER_BUCKETS.forEach(({ key }) => {
         if (!hits[key]) return;
         buckets[key].push({
-          item: makeScanItem(norm, analysis, reasons[key], extras[key]),
+          item: makeScanItem(norm, analysis, reasons[key], Object.assign({}, extras[key], { morphologyType: morph.primary.type })),
           sortKey: sortKeys[key],
         });
       });
@@ -812,11 +816,462 @@
     };
   }
 
+
+function getSeries(record) {
+  const norm = normalizeRecord(record);
+  if (!norm || !norm.series) return { norm, series: [] };
+  const series = norm.series.filter((r) => r.close != null).slice(-60);
+  return { norm, series };
+}
+
+function findSwingHighs(series, window) {
+  const w = window || 3;
+  const out = [];
+  for (let i = w; i < series.length - w; i++) {
+    const h = series[i].high;
+    let ok = true;
+    for (let j = 1; j <= w; j++) {
+      if (series[i - j].high >= h || series[i + j].high >= h) ok = false;
+    }
+    if (ok) out.push({ index: i, price: h });
+  }
+  return out;
+}
+
+function findSwingLows(series, window) {
+  const w = window || 3;
+  const out = [];
+  for (let i = w; i < series.length - w; i++) {
+    const l = series[i].low;
+    let ok = true;
+    for (let j = 1; j <= w; j++) {
+      if (series[i - j].low <= l || series[i + j].low <= l) ok = false;
+    }
+    if (ok) out.push({ index: i, price: l });
+  }
+  return out;
+}
+
+function linearRegression(points) {
+  if (!points || points.length < 2) return null;
+  const n = points.length;
+  let sx = 0;
+  let sy = 0;
+  let sxx = 0;
+  let sxy = 0;
+  points.forEach((p) => {
+    sx += p.index;
+    sy += p.price;
+    sxx += p.index * p.index;
+    sxy += p.index * p.price;
+  });
+  const denom = n * sxx - sx * sx;
+  if (denom === 0) return null;
+  const slope = (n * sxy - sx * sy) / denom;
+  const intercept = (sy - slope * sx) / n;
+  return { slope, intercept };
+}
+
+function relPct(a, b) {
+  if (!Number.isFinite(a) || !Number.isFinite(b) || b === 0) return null;
+  return ((a - b) / b) * 100;
+}
+
+function averageVolume(series, start, end) {
+  const s = Math.max(0, start);
+  const e = Math.min(series.length, end);
+  let sum = 0;
+  let n = 0;
+  for (let i = s; i < e; i++) {
+    sum += series[i].volume || 0;
+    n++;
+  }
+  return n ? sum / n : 0;
+}
+
+function bollBandwidthAt(row) {
+  const ub = row.boll_ub;
+  const lb = row.boll_lb;
+  const mid = row.ma20 || (ub + lb) / 2;
+  if (!Number.isFinite(ub) || !Number.isFinite(lb) || !mid) return null;
+  return (ub - lb) / mid;
+}
+
+function recentRange(series, length) {
+  const tail = series.slice(-length);
+  if (!tail.length) return null;
+  const highs = tail.map((r) => r.high);
+  const lows = tail.map((r) => r.low);
+  const high = Math.max.apply(null, highs);
+  const low = Math.min.apply(null, lows);
+  return { high, low, width: high - low, start: series.length - length };
+}
+
+function linePriceAt(reg, index) {
+  if (!reg) return null;
+  return reg.slope * index + reg.intercept;
+}
+
+function emptyMorphology(summary) {
+  return {
+    primary: {
+      type: '無明確形態',
+      state: '無明確狀態',
+      confidence: 0,
+      summary: summary || '目前沒有足夠明確的形態學結構。',
+      reasons: [],
+      annotations: [],
+    },
+    secondary: [],
+    diagnostics: {
+      swingHighs: [],
+      swingLows: [],
+      rangeCompression: null,
+      volumeCompression: null,
+      slopeHigh: null,
+      slopeLow: null,
+    },
+  };
+}
+
+function buildDiagnostics(series, norm) {
+  const swingHighs = findSwingHighs(series, 3);
+  const swingLows = findSwingLows(series, 3);
+  const recent = recentRange(series, 20);
+  const prior = recentRange(series.slice(0, -20), 20);
+  let rangeCompression = null;
+  if (recent && prior && prior.width > 0) {
+    rangeCompression = recent.width / prior.width;
+  }
+  const volRecent = averageVolume(series, series.length - 15, series.length);
+  const volPrior = averageVolume(series, series.length - 35, series.length - 15);
+  const volumeCompression = volPrior > 0 ? volRecent / volPrior : null;
+  const hiPts = swingHighs.slice(-3);
+  const loPts = swingLows.slice(-3);
+  return {
+    swingHighs,
+    swingLows,
+    rangeCompression,
+    volumeCompression,
+    slopeHigh: hiPts.length >= 2 ? linearRegression(hiPts) : null,
+    slopeLow: loPts.length >= 2 ? linearRegression(loPts) : null,
+  };
+}
+
+const MORPH_PRIORITY = [
+  '假突破風險',
+  '平台突破',
+  '下降壓力線突破',
+  '三角收斂',
+  'BOLL壓縮',
+  'U型底',
+  '圓弧底',
+  '箱型整理',
+  '無明確形態',
+];
+
+function detectFalseBreakout(series, norm, diag) {
+  const close = norm.close;
+  const last = series[series.length - 1];
+  const pressure = num(norm.prev_high20, null);
+  if (!Number.isFinite(pressure)) return null;
+  const broke = last.high > pressure * 1.002;
+  const failedClose = close < pressure;
+  const longUpper = norm.upper_shadow_ratio > 0.35;
+  if (!broke || (!failedClose && !longUpper)) return null;
+  const n = series.length - 1;
+  return {
+    type: '假突破風險',
+    state: '假突破風險',
+    confidence: longUpper && failedClose ? 78 : 65,
+    summary: '盤中突破前高但收盤未能有效站穩，且伴隨長上影，需降權解讀。',
+    reasons: ['觸及前高壓力', failedClose ? '收盤回到壓力線下' : '長上影偏高', longUpper ? '上影比例偏高' : ''].filter(Boolean),
+    annotations: [
+      { kind: 'horizontal', label: '前高壓力線', price: pressure },
+      { kind: 'marker', label: '假突破', index: n, price: last.high },
+    ],
+  };
+}
+
+function detectPlatformBreakout(series, norm) {
+  const n = series.length;
+  const look = series.slice(Math.max(0, n - 40), n - 5);
+  if (look.length < 10) return null;
+  const platform = Math.max.apply(null, look.map((r) => r.high));
+  const close = norm.close;
+  const dist = relPct(close, platform);
+  if (!Number.isFinite(close) || !Number.isFinite(platform) || dist == null || dist < 1) return null;
+  if (!Number.isFinite(norm.ma20) || close <= norm.ma20) return null;
+  const last = series[n - 1];
+  const state =
+    dist <= 5 ? '已突破' : dist <= 10 ? '突破延伸' : '已突破';
+  if (last.close < platform && last.high > platform && norm.upper_shadow_ratio > 0.35) {
+    return null;
+  }
+  return {
+    type: '平台突破',
+    state,
+    confidence: norm.volume_ratio >= 1.2 ? 75 : 62,
+    summary: '價格收盤站上近期平台壓力，屬平台突破結構。',
+    reasons: ['多次測試同一壓力區', '收盤站上平台壓力', close > norm.ma20 ? '站上 MA20' : ''].filter(Boolean),
+    annotations: [
+      { kind: 'horizontal', label: '平台壓力線', price: platform },
+      { kind: 'marker', label: '突破點', index: n - 1, price: close },
+    ],
+  };
+}
+
+function detectDescendingBreakout(series, norm, diag) {
+  const hi = diag.swingHighs;
+  if (hi.length < 3) return null;
+  const pts = hi.slice(-3);
+  const reg = linearRegression(pts);
+  if (!reg || reg.slope >= -0.02) return null;
+  const n = series.length - 1;
+  const lineP = linePriceAt(reg, n);
+  const close = norm.close;
+  if (!Number.isFinite(lineP) || close <= lineP) return null;
+  if (!Number.isFinite(norm.ma20) || close <= norm.ma20) return null;
+  return {
+    type: '下降壓力線突破',
+    state: close > lineP * 1.02 ? '已突破' : '回測中',
+    confidence: norm.volume_ratio >= 1.2 ? 74 : 60,
+    summary: '收盤站上下降壓力線，結構由壓制轉向修復。',
+    reasons: ['高點連線下壓', '收盤站上下降壓力線', norm.volume_ratio >= 1.2 ? '量能配合' : ''].filter(Boolean),
+    annotations: [
+      {
+        kind: 'trendline',
+        label: '下降壓力線',
+        points: [
+          { index: pts[0].index, price: linePriceAt(reg, pts[0].index) },
+          { index: n, price: lineP },
+        ],
+      },
+      { kind: 'marker', label: '突破點', index: n, price: close },
+    ],
+  };
+}
+
+function detectTriangle(series, norm, diag) {
+  const hi = diag.swingHighs.slice(-3);
+  const lo = diag.swingLows.slice(-3);
+  if (hi.length < 3 || lo.length < 3) return null;
+  const regH = linearRegression(hi);
+  const regL = linearRegression(lo);
+  if (!regH || !regL || regH.slope > -0.05 || regL.slope < 0.05) return null;
+  const recent = recentRange(series, 15);
+  const prior = recentRange(series.slice(0, -15), 15);
+  if (!recent || !prior || prior.width <= 0 || recent.width >= prior.width * 0.92) return null;
+  const n = series.length - 1;
+  const close = norm.close;
+  const top = linePriceAt(regH, n);
+  const bot = linePriceAt(regL, n);
+  let state = '壓縮中';
+  if (Number.isFinite(top) && relPct(close, top) != null && relPct(close, top) >= -3 && close < top) {
+    state = '接近突破';
+  }
+  if (Number.isFinite(top) && close >= top) state = '已突破';
+  if (Number.isFinite(bot) && close < bot) state = '失敗跌破';
+  return {
+    type: '三角收斂',
+    state,
+    confidence: 68,
+    summary: '高點下壓、低點墊高，價格進入三角收斂末端。',
+    reasons: ['高點斜率下降', '低點斜率上升', '區間寬度收斂', diag.volumeCompression < 0.9 ? '成交量收斂' : ''].filter(Boolean),
+    annotations: [
+      {
+        kind: 'trendline',
+        label: '下降壓力線',
+        points: [
+          { index: hi[0].index, price: linePriceAt(regH, hi[0].index) },
+          { index: n, price: top },
+        ],
+      },
+      {
+        kind: 'trendline',
+        label: '上升支撐線',
+        points: [
+          { index: lo[0].index, price: linePriceAt(regL, lo[0].index) },
+          { index: n, price: bot },
+        ],
+      },
+      { kind: 'zone', label: '收斂區', startIndex: Math.max(0, n - 25), endIndex: n },
+    ],
+  };
+}
+
+function detectBollCompression(series, norm) {
+  const widths = series.map((r, i) => ({ i, w: bollBandwidthAt(r) })).filter((x) => x.w != null);
+  if (widths.length < 40) return null;
+  const vals = widths.map((x) => x.w).sort((a, b) => a - b);
+  const p25 = vals[Math.floor(vals.length * 0.25)];
+  const recent = widths.slice(-20);
+  const avgRecent = recent.reduce((s, x) => s + x.w, 0) / recent.length;
+  if (avgRecent > p25 * 1.05) return null;
+  if (norm.volume_ratio > 3) return null;
+  const n = series.length - 1;
+  const last = series[n];
+  let state = '壓縮中';
+  if (last.boll_ub && last.close >= last.boll_ub * 0.99) state = '向上擴張';
+  if (last.boll_lb && last.close <= last.boll_lb * 1.01) state = '向下擴張';
+  return {
+    type: 'BOLL壓縮',
+    state,
+    confidence: 64,
+    summary: 'BOLL 頻寬降至近期低位，價格進入波動壓縮區。',
+    reasons: ['BOLL 頻寬偏低', '波動區間收斂', '未見爆量'],
+    annotations: [
+      { kind: 'zone', label: 'BOLL壓縮區', startIndex: n - 20, endIndex: n },
+    ],
+  };
+}
+
+function detectUBottom(series, norm) {
+  const n = series.length;
+  if (n < 50) return null;
+  const left = series.slice(0, 18);
+  const mid = series.slice(18, 35);
+  const right = series.slice(35);
+  const leftDrop = left[0].close > left[left.length - 1].close * 1.05;
+  const midFlat = Math.abs(relPct(mid[mid.length - 1].close, mid[0].close)) < 8;
+  const rightUp = right[right.length - 1].close > right[0].close * 1.05;
+  const neckline = Math.max.apply(null, left.map((r) => r.high));
+  if (!leftDrop || !midFlat || !rightUp) return null;
+  const close = norm.close;
+  let state = '右側成形';
+  if (relPct(close, neckline) != null && relPct(close, neckline) >= -3 && close < neckline) {
+    state = '頸線附近';
+  }
+  if (close >= neckline) state = '已突破';
+  return {
+    type: 'U型底',
+    state,
+    confidence: 62,
+    summary: '左側急跌後橫盤築底，右側回升形成 U 型修復。',
+    reasons: ['左側急跌', '中段橫盤', '右側回升', '接近左側高點區'],
+    annotations: [
+      { kind: 'horizontal', label: '頸線', price: neckline },
+      {
+        kind: 'polyline',
+        label: 'U型輪廓',
+        points: [
+          { index: 0, price: left[0].close },
+          { index: 22, price: mid[Math.floor(mid.length / 2)].low },
+          { index: n - 1, price: close },
+        ],
+      },
+    ],
+  };
+}
+
+function detectArcBottom(series, norm) {
+  const n = series.length;
+  const lows = series.map((r, i) => ({ index: i, price: r.low }));
+  const third = Math.floor(n / 3);
+  const l1 = lows.slice(0, third);
+  const l2 = lows.slice(third, third * 2);
+  const l3 = lows.slice(third * 2);
+  const avg = (arr) => arr.reduce((s, p) => s + p.price, 0) / arr.length;
+  if (!(avg(l2) >= avg(l1) * 0.98 && avg(l3) > avg(l2) * 1.02)) return null;
+  const ma20End = series[n - 1].ma20;
+  const ma20Mid = series[Math.floor(n / 2)].ma20;
+  if (ma20End && ma20Mid && ma20End < ma20Mid) return null;
+  const neckline = Math.max.apply(null, series.slice(0, third * 2).map((r) => r.high));
+  const close = norm.close;
+  let state = '右側成形';
+  if (relPct(close, neckline) >= -3 && close < neckline) state = '頸線附近';
+  if (close >= neckline) state = '已突破';
+  return {
+    type: '圓弧底',
+    state,
+    confidence: 58,
+    summary: '下跌後低點逐步鈍化，右側回升，具圓弧底雛形。',
+    reasons: ['低點逐步墊高', 'MA20 轉平或上彎', '右側回升'],
+    annotations: [
+      { kind: 'horizontal', label: '頸線', price: neckline },
+      { kind: 'zone', label: '弧形底部區', startIndex: 0, endIndex: Math.floor(n * 0.65) },
+    ],
+  };
+}
+
+function detectBox(series, norm) {
+  const box = recentRange(series, 50);
+  if (!box || box.width <= 0) return null;
+  const mid = (box.high + box.low) / 2;
+  if (box.width / mid < 0.04 || box.width / mid > 0.22) return null;
+  const close = norm.close;
+  let state = '箱內';
+  if (relPct(close, box.high) >= -3 && close <= box.high) state = '接近上緣';
+  if (relPct(close, box.low) <= 3 && close >= box.low) state = '接近下緣';
+  if (close > box.high) state = '已突破';
+  if (close < box.low) state = '失敗跌破';
+  const bw = bollBandwidthAt(series[series.length - 1]);
+  if (bw != null && bw < 0.08) return null;
+  return {
+    type: '箱型整理',
+    state,
+    confidence: 60,
+    summary: '價格多次在固定上下緣之間震盪，呈現箱型整理。',
+    reasons: ['上緣相對穩定', '下緣相對穩定', '收盤於箱內來回'],
+    annotations: [
+      { kind: 'horizontal', label: '箱型上緣', price: box.high },
+      { kind: 'horizontal', label: '箱型下緣', price: box.low },
+      { kind: 'horizontal', label: '中線', price: mid },
+    ],
+  };
+}
+
+function detectMorphology(record) {
+  const { norm, series } = getSeries(record);
+  if (series.length < 40) {
+    return emptyMorphology('此股票尚無足夠形態學資料。');
+  }
+  const diagnostics = buildDiagnostics(series, norm);
+  const candidates = [];
+  const add = (c) => {
+    if (c && c.type) candidates.push(c);
+  };
+  add(detectFalseBreakout(series, norm, diagnostics));
+  add(detectPlatformBreakout(series, norm));
+  add(detectDescendingBreakout(series, norm, diagnostics));
+  add(detectTriangle(series, norm, diagnostics));
+  add(detectBollCompression(series, norm));
+  add(detectUBottom(series, norm));
+  add(detectArcBottom(series, norm));
+  add(detectBox(series, norm));
+
+  candidates.sort(
+    (a, b) => MORPH_PRIORITY.indexOf(a.type) - MORPH_PRIORITY.indexOf(b.type)
+  );
+
+  if (!candidates.length) {
+    return emptyMorphology('目前沒有足夠明確的形態學結構。');
+  }
+
+  const primary = {
+    type: candidates[0].type,
+    state: candidates[0].state,
+    confidence: candidates[0].confidence,
+    summary: candidates[0].summary,
+    reasons: candidates[0].reasons || [],
+    annotations: candidates[0].annotations || [],
+  };
+  const secondary = candidates.slice(1, 4).map((c) => ({
+    type: c.type,
+    state: c.state,
+    confidence: c.confidence,
+  }));
+
+  return { primary, secondary, diagnostics };
+}
+
+
   return {
     analyze,
     normalizeRecord,
     findRecord,
     scan,
+    detectMorphology,
     SCANNER_BUCKETS,
     SCANNER_OPPORTUNITY_KEYS,
     SCANNER_RISK_KEYS,
