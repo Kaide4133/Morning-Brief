@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KW Technical Spider｜技術線圖分析</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Noto+Sans+TC:wght@400;600;800;900&family=Noto+Serif+TC:wght@700;900&family=Playfair+Display:ital,wght@0,800;0,900;1,900&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F1E8D0;--paper-warm:#E8DCB9;--ink:#1A1311;--ink-soft:#4A3D34;--ink-mute:#6B5D54;--blood:#C8102E;--blood-deep:#8B1419;--blood-soft:rgba(200,16,46,.08);--rule:rgba(26,19,17,.18);--serif:'Noto Serif TC','Playfair Display',serif;--sans:'Noto Sans TC',sans-serif;--mono:'JetBrains Mono',monospace;--display:'Playfair Display','Noto Serif TC',serif}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.7}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:99;opacity:.16;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='4' seed='22' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}a{color:var(--blood-deep);font-weight:900;text-decoration:none}main{max-width:1120px;margin:auto;padding:28px 18px 80px}.masthead{position:sticky;top:0;z-index:20;background:rgba(241,232,208,.94);backdrop-filter:blur(4px);border-bottom:3px double var(--ink);font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase}.masthead-inner{max-width:1120px;margin:auto;padding:12px 18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.kw-mark{display:inline-grid;place-items:center;width:28px;height:28px;background:var(--ink);color:var(--paper);font-family:var(--display);font-weight:900;font-style:italic;margin-right:10px}.nav-link{display:inline-block;border:1.5px solid var(--ink);padding:5px 9px;background:var(--paper);box-shadow:3px 3px 0 var(--ink);margin-left:8px}header{border:2px solid var(--ink);padding:28px clamp(18px,4vw,46px);box-shadow:8px 8px 0 var(--ink);background:rgba(232,220,185,.64);position:relative;overflow:hidden}header:before{content:'SPIDER';position:absolute;right:-.06em;bottom:-.34em;font-family:var(--display);font-size:clamp(5rem,14vw,12rem);font-weight:900;color:rgba(200,16,46,.07);pointer-events:none}.eyebrow,.label{font-family:var(--mono);letter-spacing:.11em;text-transform:uppercase;font-weight:800;color:var(--blood)}h1,h2,h3{font-family:var(--serif);line-height:1.15}h1{font-size:clamp(2rem,5.5vw,4.2rem);margin:14px 0 10px}.subtitle{color:var(--ink-soft);max-width:900px}.note{font-size:.92rem;color:var(--ink-mute);border-left:3px solid var(--blood);padding-left:12px;margin-top:14px}section{margin-top:32px;border-top:2px solid var(--ink);padding-top:22px}.tool-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{border:2px solid var(--ink);background:rgba(241,232,208,.92);padding:18px;box-shadow:5px 5px 0 var(--ink)}input[type="text"],button{width:100%;border:2px solid var(--ink);padding:11px 12px;font-size:1rem;font-family:var(--sans)}button{margin-top:10px;background:var(--ink);color:var(--paper);font-weight:900;cursor:pointer;box-shadow:4px 4px 0 var(--blood-deep)}button:hover{transform:translate(-2px,-2px)}.result-head{display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;margin-bottom:12px}.result-head .price{font-family:var(--mono);font-size:2rem;font-weight:900;color:var(--blood-deep)}.grid-states{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}.state-box{border:1.5px solid var(--ink);padding:12px;background:rgba(232,220,185,.45)}.state-box .val{font-family:var(--mono);font-weight:900;font-size:1.1rem}.reason{font-size:.88rem;color:var(--ink-mute);margin:6px 0 0;padding-left:1em}ul.clean{margin:8px 0;padding-left:1.2em}ul.clean li{margin:5px 0}.tag{display:inline-block;border:1.5px solid var(--ink);padding:3px 8px;margin:4px 6px 0 0;font-family:var(--mono);font-size:.78rem;font-weight:800}.warn{background:var(--blood-soft);border-color:var(--blood)}#chartCanvas{width:100%;height:auto;border:1.5px solid var(--ink);background:rgba(241,232,208,.75);display:block}.chart-legend{display:flex;flex-wrap:wrap;gap:12px;font-family:var(--mono);font-size:.72rem;color:var(--ink-mute);margin:8px 0}.chart-legend i{display:inline-block;width:18px;height:3px;margin-right:4px;vertical-align:middle}.leg-close i{background:var(--ink)}.leg-ma i{background:#6B5344}.leg-boll i{background:var(--blood)}.leg-high i{background:rgba(200,16,46,.5)}.leg-vol i{background:rgba(26,19,17,.25);height:8px;width:10px}.empty-msg{color:var(--ink-mute);padding:24px;text-align:center}.err{color:var(--blood-deep);font-weight:900}footer{margin-top:40px;font-family:var(--mono);font-size:.82rem;color:var(--ink-mute)}@media(max-width:820px){.tool-row,.grid-states{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="masthead"><div class="masthead-inner"><div><span class="kw-mark">K</span>Kelvin Wiggly</div><div><a class="nav-link" href="/Morning-Brief/">晨報首頁</a><a class="nav-link" href="/Morning-Brief/technical-spider.html">技術線圖</a></div></div></nav>
+<main>
+<header>
+  <div class="eyebrow">KW Technical Spider</div>
+  <h1>自動線圖判讀核心</h1>
+  <p class="subtitle">支撐、壓力、趨勢、過熱與多週期位置</p>
+  <p class="note">這是獨立技術分析核心，不是方舟晨報，也不是雷達。它只負責讀線圖狀態；未來可被雷達、個股頁或回測工具調用。</p>
+</header>
+
+<section aria-label="input">
+  <h2>分析線圖</h2>
+  <div class="tool-row">
+    <article class="card">
+      <label for="codeInput">股票代號</label>
+      <input id="codeInput" type="text" inputmode="numeric" autocomplete="off" aria-label="股票代號，例如 2330">
+      <button id="analyzeBtn" type="button">分析線圖</button>
+      <p id="loadStatus" class="note" style="border:none;padding:0;margin-top:12px">載入技術資料池中…</p>
+    </article>
+    <article class="card" id="summaryCard" hidden>
+      <div class="result-head">
+        <div>
+          <h3 id="stockTitle">—</h3>
+          <span class="label" id="stockMeta">—</span>
+        </div>
+        <div class="price" id="stockClose">—</div>
+      </div>
+      <p id="techSummary">—</p>
+    </article>
+  </div>
+</section>
+
+<section id="resultSection" hidden aria-label="results">
+  <h2>技術判讀</h2>
+  <div class="grid-states">
+    <div class="state-box"><span class="label">趨勢狀態</span><div class="val" id="trendState">—</div><ul class="reason clean" id="trendReason"></ul></div>
+    <div class="state-box"><span class="label">位置狀態</span><div class="val" id="positionState">—</div><ul class="reason clean" id="positionReason"></ul></div>
+    <div class="state-box"><span class="label">延伸／過熱</span><div class="val" id="extensionState">—</div><ul class="reason clean" id="extensionReason"></ul></div>
+    <div class="state-box"><span class="label">量能狀態</span><div class="val" id="volumeState">—</div><ul class="reason clean" id="volumeReason"></ul></div>
+  </div>
+  <div class="tool-row">
+    <article class="card">
+      <h3>支撐</h3>
+      <ul class="clean" id="supportList"></ul>
+      <h3>壓力</h3>
+      <ul class="clean" id="resistanceList"></ul>
+    </article>
+    <article class="card">
+      <h3>風險提示</h3>
+      <div id="warningsBox"></div>
+      <h3>技術標籤</h3>
+      <div id="labelsBox"></div>
+      <p class="label" style="margin-top:14px">評分（僅狀態量化，非買賣建議）</p>
+      <p id="scoresLine" style="font-family:var(--mono);font-size:.9rem">—</p>
+    </article>
+  </div>
+</section>
+
+<section id="chartSection" hidden aria-label="chart">
+  <h2>近 60 日線圖</h2>
+  <div class="card">
+    <div class="chart-legend">
+      <span class="leg-close"><i></i>收盤</span>
+      <span class="leg-ma"><i></i>MA20</span>
+      <span class="leg-boll"><i></i>BOLL 上下軌</span>
+      <span class="leg-high"><i></i>20 日前高</span>
+      <span class="leg-vol"><i></i>成交量</span>
+    </div>
+    <canvas id="chartCanvas" width="1060" height="420" role="img" aria-label="近60日技術線圖"></canvas>
+  </div>
+</section>
+
+<footer>KW Technical Spider · 本地 technical-data.json · 不提供買賣建議</footer>
+</main>
+
+<script src="technical-engine.js"></script>
+<script>
+(function () {
+  const base = location.pathname.includes('/Morning-Brief/') ? '/Morning-Brief/' : '';
+  const pool = { records: [] };
+  let loaded = false;
+
+  const $ = (id) => document.getElementById(id);
+
+  function fillList(el, items) {
+    el.innerHTML = '';
+    if (!items || !items.length) {
+      el.innerHTML = '<li class="muted">—</li>';
+      return;
+    }
+    items.forEach((t) => {
+      const li = document.createElement('li');
+      li.textContent = t;
+      el.appendChild(li);
+    });
+  }
+
+  function fillReasons(el, reasons) {
+    el.innerHTML = '';
+    (reasons || []).forEach((r) => {
+      const li = document.createElement('li');
+      li.textContent = r;
+      el.appendChild(li);
+    });
+  }
+
+  function renderTags(container, items, warn) {
+    container.innerHTML = '';
+    if (!items || !items.length) {
+      container.textContent = '—';
+      return;
+    }
+    items.forEach((t) => {
+      const s = document.createElement('span');
+      s.className = 'tag' + (warn ? ' warn' : '');
+      s.textContent = t;
+      container.appendChild(s);
+    });
+  }
+
+  function drawChart(record) {
+    const series = (record.series || []).slice(-60);
+    const canvas = $('chartCanvas');
+    const ctx = canvas.getContext('2d');
+    const W = canvas.width;
+    const H = canvas.height;
+    const pad = { t: 16, r: 16, b: 72, l: 52 };
+    const priceH = H - pad.b - 50;
+    const volTop = H - pad.b - 42;
+
+    ctx.clearRect(0, 0, W, H);
+    if (series.length < 2) {
+      ctx.fillStyle = '#6B5D54';
+      ctx.font = '14px sans-serif';
+      ctx.fillText('資料不足，無法繪圖', W / 2 - 70, H / 2);
+      return;
+    }
+
+    const highs = series.map((r) => r.high);
+    const lows = series.map((r) => r.low);
+    const closes = series.map((r) => r.close);
+    const ma20s = series.map((r) => r.ma20).filter((v) => v != null);
+    const bollUbs = series.map((r) => r.boll_ub).filter((v) => v != null);
+    const bollLbs = series.map((r) => r.boll_lb).filter((v) => v != null);
+    const prevHigh = record.daily?.prev_high20;
+    const vols = series.map((r) => r.volume || 0);
+    const maxV = Math.max(...vols, 1);
+
+    let yMin = Math.min(...lows, ...(bollLbs.length ? bollLbs : lows));
+    let yMax = Math.max(...highs, ...(bollUbs.length ? bollUbs : highs));
+    if (prevHigh) yMax = Math.max(yMax, prevHigh);
+    const yPad = (yMax - yMin) * 0.06 || 1;
+    yMin -= yPad;
+    yMax += yPad;
+
+    const n = series.length;
+    const xAt = (i) => pad.l + (i / (n - 1)) * (W - pad.l - pad.r);
+    const yAt = (v) => pad.t + (1 - (v - yMin) / (yMax - yMin)) * priceH;
+
+    ctx.strokeStyle = 'rgba(26,19,17,.12)';
+    for (let g = 0; g < 4; g++) {
+      const gy = pad.t + (g / 3) * priceH;
+      ctx.beginPath();
+      ctx.moveTo(pad.l, gy);
+      ctx.lineTo(W - pad.r, gy);
+      ctx.stroke();
+    }
+
+    function strokeLine(key, color, width) {
+      ctx.strokeStyle = color;
+      ctx.lineWidth = width || 1.5;
+      ctx.beginPath();
+      let started = false;
+      series.forEach((row, i) => {
+        const v = row[key];
+        if (v == null) return;
+        const x = xAt(i);
+        const y = yAt(v);
+        if (!started) {
+          ctx.moveTo(x, y);
+          started = true;
+        } else ctx.lineTo(x, y);
+      });
+      ctx.stroke();
+    }
+
+    strokeLine('boll_lb', 'rgba(200,16,46,.35)', 1);
+    strokeLine('boll_ub', 'rgba(200,16,46,.55)', 1);
+    strokeLine('ma20', '#6B5344', 2);
+    strokeLine('close', '#1A1311', 2.2);
+
+    if (prevHigh != null) {
+      const y = yAt(prevHigh);
+      ctx.setLineDash([6, 4]);
+      ctx.strokeStyle = 'rgba(200,16,46,.45)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(pad.l, y);
+      ctx.lineTo(W - pad.r, y);
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
+
+    const last = series[series.length - 1];
+    const lx = xAt(n - 1);
+    const ly = yAt(last.close);
+    ctx.fillStyle = '#C8102E';
+    ctx.beginPath();
+    ctx.arc(lx, ly, 5, 0, Math.PI * 2);
+    ctx.fill();
+
+    vols.forEach((v, i) => {
+      const x = xAt(i);
+      const bw = Math.max(2, (W - pad.l - pad.r) / n * 0.55);
+      const bh = (v / maxV) * 38;
+      ctx.fillStyle = 'rgba(26,19,17,.28)';
+      ctx.fillRect(x - bw / 2, volTop + 40 - bh, bw, bh);
+    });
+
+    ctx.fillStyle = '#6B5D54';
+    ctx.font = '11px JetBrains Mono, monospace';
+    ctx.fillText(String(Math.round(yMax)), 4, pad.t + 8);
+    ctx.fillText(String(Math.round(yMin)), 4, pad.t + priceH);
+    ctx.fillText(series[0].date, pad.l, H - 8);
+    ctx.fillText(series[n - 1].date, W - pad.r - 72, H - 8);
+  }
+
+  function showError(msg) {
+    $('summaryCard').hidden = false;
+    $('resultSection').hidden = true;
+    $('chartSection').hidden = true;
+    $('stockTitle').textContent = '—';
+    $('stockMeta').textContent = '';
+    $('stockClose').textContent = '';
+    $('techSummary').innerHTML = '<span class="err">' + msg + '</span>';
+  }
+
+  function renderResult(record) {
+    const out = TechnicalEngine.analyze(record);
+    const close = record.latest?.close;
+    const chg = record.latest?.change_pct;
+
+    $('summaryCard').hidden = false;
+    $('resultSection').hidden = false;
+    $('chartSection').hidden = false;
+
+    $('stockTitle').textContent = record.name + '（' + record.code + '）';
+    $('stockMeta').textContent =
+      (record.market || '') + ' · 資料截至 ' + (record.as_of || '—');
+    $('stockClose').textContent =
+      close != null
+        ? close.toLocaleString() + (chg != null ? ' · ' + (chg >= 0 ? '+' : '') + chg.toFixed(2) + '%' : '')
+        : '—';
+
+    $('techSummary').textContent = out.summary;
+
+    $('trendState').textContent = out.trend.state;
+    fillReasons($('trendReason'), out.trend.reason);
+    $('positionState').textContent = out.position.state;
+    fillReasons($('positionReason'), out.position.reason);
+    $('extensionState').textContent = out.extension.state;
+    fillReasons($('extensionReason'), out.extension.reason);
+    $('volumeState').textContent = out.volume.state;
+    fillReasons($('volumeReason'), out.volume.reason);
+
+    fillList($('supportList'), out.supportResistance.support);
+    fillList($('resistanceList'), out.supportResistance.resistance);
+
+    const warnings = out.warnings.length ? out.warnings : record.analysis?.warnings || [];
+    renderTags($('warningsBox'), warnings, true);
+    const labels = out.labels.length ? out.labels : record.analysis?.labels || [];
+    renderTags($('labelsBox'), labels, false);
+
+    const sc = out.scores;
+    $('scoresLine').textContent =
+      '趨勢 ' + sc.trend + ' · 位置 ' + sc.position + ' · 延伸 ' + sc.extension + ' · 風險 ' + sc.risk;
+
+    drawChart(record);
+  }
+
+  function runAnalyze() {
+    const q = $('codeInput').value.trim();
+    if (!q) {
+      showError('請輸入股票代號');
+      return;
+    }
+    if (!loaded) {
+      showError('技術資料尚未載入完成');
+      return;
+    }
+    const record = TechnicalEngine.findRecord(pool, q);
+    if (!record) {
+      showError('此股票尚未在技術資料池中');
+      return;
+    }
+    renderResult(record);
+  }
+
+  async function loadPool() {
+    try {
+      const res = await fetch(base + 'technical-data.json', { cache: 'no-store' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      pool.records = data.records || [];
+      pool.as_of = data.as_of;
+      loaded = true;
+      $('loadStatus').textContent =
+        '資料池已載入 ' + pool.records.length + ' 檔 · 截至 ' + (data.as_of || '—');
+    } catch (e) {
+      $('loadStatus').textContent = '無法載入 technical-data.json：' + e.message;
+    }
+  }
+
+  $('analyzeBtn').addEventListener('click', runAnalyze);
+  $('codeInput').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') runAnalyze();
+  });
+  loadPool();
+})();
+</script>
+</body>
+</html>
