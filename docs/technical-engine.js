@@ -471,8 +471,8 @@
     return d != null && d >= -pct && d <= 0;
   }
 
-  function makeScanItem(norm, analysis, reason) {
-    return {
+  function makeScanItem(norm, analysis, reason, extra) {
+    const item = {
       code: norm.code,
       name: norm.name,
       close: norm.close,
@@ -481,7 +481,81 @@
       labels: (analysis.labels || []).slice(0, 4),
       scores: { ...analysis.scores },
     };
+    if (extra && extra.riskConditionCount != null) {
+      item.riskConditionCount = extra.riskConditionCount;
+    }
+    return item;
   }
+
+  /** 高風險延伸條件計數（與 scanner 一致） */
+  function countHighRiskConditions(norm) {
+    const close = norm.close;
+    const parts = [];
+    let count = 0;
+
+    if (Number.isFinite(norm.distance_ma20_pct) && norm.distance_ma20_pct > 10) {
+      count += 1;
+      parts.push('距 MA20 過遠');
+    }
+    if (Number.isFinite(norm.boll_ub) && close >= norm.boll_ub) {
+      count += 1;
+      parts.push('接近 BOLL 上緣');
+    }
+    if (Number.isFinite(norm.w_boll_ub) && close >= norm.w_boll_ub) {
+      count += 1;
+      parts.push('接近週線 BOLL 上緣');
+    }
+    if (norm.upper_shadow_ratio > 0.35) {
+      count += 1;
+      parts.push('長上影');
+    }
+    if (norm.consecutive_up >= 3) {
+      count += 1;
+      parts.push('連續上漲');
+    }
+    if (Number.isFinite(norm.volume_ratio) && norm.volume_ratio > 3) {
+      count += 1;
+      parts.push('爆量');
+    }
+
+    return { count, parts };
+  }
+
+  function hasLabel(analysis, text) {
+    return (analysis.labels || []).some((l) => String(l).includes(text));
+  }
+
+  /** 機會型 bucket 排除：過熱 / 高位延伸 */
+  function isTooHotForOpportunity(norm, analysis, riskFlags) {
+    const close = norm.close;
+    return (
+      analysis.extension.state === '過熱' ||
+      hasLabel(analysis, '延伸過熱') ||
+      (Number.isFinite(norm.boll_ub) && close >= norm.boll_ub) ||
+      (Number.isFinite(norm.w_boll_ub) && close >= norm.w_boll_ub) ||
+      (Number.isFinite(norm.distance_ma20_pct) && norm.distance_ma20_pct > 10) ||
+      norm.upper_shadow_ratio > 0.35 ||
+      riskFlags.count >= 2 ||
+      analysis.scores.risk >= 85
+    );
+  }
+
+  function lastDayChangePct(norm) {
+    const s = norm.series;
+    if (!s || s.length < 2) return null;
+    const last = s[s.length - 1].close;
+    const prev = s[s.length - 2].close;
+    if (!Number.isFinite(last) || !Number.isFinite(prev) || prev === 0) return null;
+    return (last / prev - 1) * 100;
+  }
+
+  const SCANNER_OPPORTUNITY_KEYS = [
+    'bullishTrend',
+    'nearBreakout',
+    'nearSupport',
+    'healthyVolume',
+  ];
+  const SCANNER_RISK_KEYS = ['extendedHot', 'bollRisk', 'highRiskExtension'];
 
   const SCANNER_BUCKETS = [
     { key: 'bullishTrend', title: '趨勢偏多', desc: '站上 MA20、短均線偏多，且尚未觸及 BOLL 上緣。' },
@@ -524,89 +598,12 @@
     const reasons = {};
     const sortKeys = {};
 
-    if (!Number.isFinite(close)) return { hits, reasons, sortKeys };
+    if (!Number.isFinite(close)) return { hits, reasons, sortKeys, extras: {} };
 
-    // A. 趨勢偏多
-    if (
-      Number.isFinite(ma20) &&
-      close > ma20 &&
-      Number.isFinite(ma5) &&
-      Number.isFinite(ma10) &&
-      ma5 >= ma10 &&
-      scores.trend >= 70 &&
-      (!Number.isFinite(bollUb) || close < bollUb) &&
-      scores.risk < 85
-    ) {
-      hits.bullishTrend = true;
-      reasons.bullishTrend = '收盤站上 MA20，短均線維持多頭排列。';
-      sortKeys.bullishTrend = scores.trend;
-    }
+    const riskFlags = countHighRiskConditions(norm);
+    const tooHot = isTooHotForOpportunity(norm, analysis, riskFlags);
+    const dayChg = lastDayChangePct(norm);
 
-    // B. 接近突破
-    if (Number.isFinite(prevHigh) && Number.isFinite(ma20) && close > ma20) {
-      const dHigh = relPct(close, prevHigh);
-      if (dHigh != null && dHigh >= -3 && dHigh <= 1) {
-        hits.nearBreakout = true;
-        reasons.nearBreakout = '接近 20 日前高，仍需觀察是否有效突破。';
-        sortKeys.nearBreakout = Math.abs(dHigh);
-      }
-    }
-
-    // C. 支撐附近
-    const nearMa20 =
-      Number.isFinite(ma20) && Math.abs(relPct(close, ma20)) <= 3;
-    const nearLow =
-      Number.isFinite(recentLow) &&
-      close >= recentLow &&
-      relPct(close, recentLow) != null &&
-      relPct(close, recentLow) >= 0 &&
-      relPct(close, recentLow) <= 5;
-    const nearBollLb =
-      Number.isFinite(bollLb) &&
-      close >= bollLb &&
-      relPct(close, bollLb) != null &&
-      relPct(close, bollLb) >= 0 &&
-      relPct(close, bollLb) <= 5;
-    const bearExclude =
-      Number.isFinite(ma60) && close < ma60 && trend.state === '空頭';
-
-    if ((nearMa20 || nearLow || nearBollLb) && !bearExclude) {
-      hits.nearSupport = true;
-      reasons.nearSupport =
-        '股價回到 MA20 / 近期低點附近，屬技術支撐觀察區。';
-      const dists = [];
-      if (nearMa20) dists.push(Math.abs(relPct(close, ma20)));
-      if (nearLow) dists.push(Math.abs(relPct(close, recentLow)));
-      if (nearBollLb) dists.push(Math.abs(relPct(close, bollLb)));
-      sortKeys.nearSupport = Math.min.apply(null, dists);
-    }
-
-    // D. 健康放量
-    if (
-      Number.isFinite(vr) &&
-      vr >= 1.3 &&
-      vr <= 3 &&
-      Number.isFinite(ma20) &&
-      close > ma20 &&
-      (!Number.isFinite(upper) || upper < 0.35)
-    ) {
-      hits.healthyVolume = true;
-      reasons.healthyVolume = '量能放大但未達爆量，價量結構仍屬健康。';
-      sortKeys.healthyVolume = vr;
-    }
-
-    // E. 延伸偏熱
-    const extHot =
-      (Number.isFinite(distMa20) && distMa20 >= 5 && distMa20 <= 10) ||
-      extension.state === '偏熱' ||
-      consec >= 3;
-    if (extHot) {
-      hits.extendedHot = true;
-      reasons.extendedHot = '距 MA20 已有一段距離，短線追價風險升高。';
-      sortKeys.extendedHot = Number.isFinite(distMa20) ? distMa20 : 5;
-    }
-
-    // F. BOLL 風險
     const nearDailyBoll =
       Number.isFinite(bollUb) &&
       (close >= bollUb ||
@@ -620,6 +617,26 @@
           relPct(close, wBollUb) >= -3 &&
           relPct(close, wBollUb) <= 3));
 
+    const extHot =
+      (Number.isFinite(distMa20) && distMa20 >= 5 && distMa20 <= 10) ||
+      extension.state === '偏熱' ||
+      consec >= 3;
+
+    const extras = {};
+
+    // G. 高風險延伸（先算，供其他 bucket 排除）
+    if (riskFlags.count >= 2) {
+      hits.highRiskExtension = true;
+      const main =
+        riskFlags.parts.length > 0
+          ? riskFlags.parts.join('、') + '。'
+          : '多項過熱條件同時出現，不適合以新進追價角度解讀。';
+      reasons.highRiskExtension = main;
+      sortKeys.highRiskExtension = riskFlags.count;
+      extras.highRiskExtension = { riskConditionCount: riskFlags.count };
+    }
+
+    // F. BOLL 風險
     if (nearDailyBoll || nearWeeklyBoll) {
       hits.bollRisk = true;
       reasons.bollRisk = '接近日線或週線 BOLL 上緣，需留意延伸風險。';
@@ -628,23 +645,100 @@
       sortKeys.bollRisk = Math.min(d1, d2);
     }
 
-    // G. 高風險延伸（任二）
-    let riskCount = 0;
-    if (Number.isFinite(distMa20) && distMa20 > 10) riskCount += 1;
-    if (Number.isFinite(bollUb) && close >= bollUb) riskCount += 1;
-    if (Number.isFinite(wBollUb) && close >= wBollUb) riskCount += 1;
-    if (upper > 0.35) riskCount += 1;
-    if (consec >= 3) riskCount += 1;
-    if (Number.isFinite(vr) && vr > 3) riskCount += 1;
-
-    if (riskCount >= 2) {
-      hits.highRiskExtension = true;
-      reasons.highRiskExtension =
-        '多項過熱條件同時出現，不適合以新進追價角度解讀。';
-      sortKeys.highRiskExtension = riskCount;
+    // E. 延伸偏熱
+    if (extHot) {
+      hits.extendedHot = true;
+      reasons.extendedHot = '距 MA20 已有一段距離，短線追價風險升高。';
+      sortKeys.extendedHot = Number.isFinite(distMa20) ? distMa20 : 5;
     }
 
-    return { hits, reasons, sortKeys };
+    // A. 趨勢偏多（排除過熱與高風險）
+    if (
+      Number.isFinite(ma20) &&
+      close > ma20 &&
+      Number.isFinite(ma5) &&
+      Number.isFinite(ma10) &&
+      ma5 >= ma10 &&
+      scores.trend >= 70 &&
+      !tooHot &&
+      !hits.highRiskExtension
+    ) {
+      hits.bullishTrend = true;
+      reasons.bullishTrend = '收盤站上 MA20，短均線維持多頭排列。';
+      sortKeys.bullishTrend = scores.trend;
+    }
+
+    // B. 接近突破（可含高位，但 reason / 排序降權）
+    if (Number.isFinite(prevHigh) && Number.isFinite(ma20) && close > ma20) {
+      const dHigh = relPct(close, prevHigh);
+      if (dHigh != null && dHigh >= -3 && dHigh <= 1) {
+        hits.nearBreakout = true;
+        const breakoutRisky =
+          hits.bollRisk ||
+          hits.extendedHot ||
+          hits.highRiskExtension ||
+          extension.state === '過熱' ||
+          extension.state === '偏熱' ||
+          riskFlags.count >= 2;
+        reasons.nearBreakout = breakoutRisky
+          ? '接近 20 日前高，但已進入延伸區，突破觀察需降權。'
+          : '接近 20 日前高，仍需觀察是否有效突破。';
+        sortKeys.nearBreakout = {
+          tier: breakoutRisky ? 1 : 0,
+          dist: Math.abs(dHigh),
+        };
+      }
+    }
+
+    // C. 支撐附近（排除破線轉弱）
+    const nearMa20 =
+      Number.isFinite(ma20) && Math.abs(relPct(close, ma20)) <= 3;
+    const nearLow =
+      Number.isFinite(recentLow) &&
+      close >= recentLow &&
+      relPct(close, recentLow) != null &&
+      relPct(close, recentLow) >= 0 &&
+      relPct(close, recentLow) <= 5;
+    const nearBollLbZone =
+      Number.isFinite(bollLb) &&
+      close >= bollLb &&
+      relPct(close, bollLb) != null &&
+      relPct(close, bollLb) >= 0 &&
+      relPct(close, bollLb) <= 5;
+
+    const supportExclude =
+      (Number.isFinite(ma60) && close < ma60) ||
+      trend.state === '空頭' ||
+      (Number.isFinite(bollLb) && close < bollLb) ||
+      (dayChg != null && dayChg < -7 && Number.isFinite(ma20) && close <= ma20);
+
+    if ((nearMa20 || nearLow || nearBollLbZone) && !supportExclude) {
+      hits.nearSupport = true;
+      reasons.nearSupport =
+        '股價回到 MA20 / 近期低點附近，屬技術支撐觀察區。';
+      const dists = [];
+      if (nearMa20) dists.push(Math.abs(relPct(close, ma20)));
+      if (nearLow) dists.push(Math.abs(relPct(close, recentLow)));
+      if (nearBollLbZone) dists.push(Math.abs(relPct(close, bollLb)));
+      sortKeys.nearSupport = Math.min.apply(null, dists);
+    }
+
+    // D. 健康放量（排除過熱）
+    if (
+      Number.isFinite(vr) &&
+      vr >= 1.3 &&
+      vr <= 3 &&
+      Number.isFinite(ma20) &&
+      close > ma20 &&
+      !tooHot &&
+      !hits.highRiskExtension
+    ) {
+      hits.healthyVolume = true;
+      reasons.healthyVolume = '量能放大但未達爆量，價量結構仍屬健康。';
+      sortKeys.healthyVolume = vr;
+    }
+
+    return { hits, reasons, sortKeys, extras };
   }
 
   function scan(poolOrRecords, asOf) {
@@ -680,19 +774,24 @@
         return;
       }
 
-      const { hits, reasons, sortKeys } = classifyRecord(norm, analysis);
+      const { hits, reasons, sortKeys, extras } = classifyRecord(norm, analysis);
 
       SCANNER_BUCKETS.forEach(({ key }) => {
         if (!hits[key]) return;
         buckets[key].push({
-          item: makeScanItem(norm, analysis, reasons[key]),
+          item: makeScanItem(norm, analysis, reasons[key], extras[key]),
           sortKey: sortKeys[key],
         });
       });
     });
 
     buckets.bullishTrend.sort((a, b) => b.sortKey - a.sortKey);
-    buckets.nearBreakout.sort((a, b) => a.sortKey - b.sortKey);
+    buckets.nearBreakout.sort((a, b) => {
+      const ta = a.sortKey.tier != null ? a.sortKey.tier : 0;
+      const tb = b.sortKey.tier != null ? b.sortKey.tier : 0;
+      if (ta !== tb) return ta - tb;
+      return a.sortKey.dist - b.sortKey.dist;
+    });
     buckets.nearSupport.sort((a, b) => a.sortKey - b.sortKey);
     buckets.healthyVolume.sort((a, b) => b.sortKey - a.sortKey);
     buckets.extendedHot.sort((a, b) => b.sortKey - a.sortKey);
@@ -708,6 +807,8 @@
       as_of,
       total: records.length,
       buckets: trimmed,
+      opportunityKeys: SCANNER_OPPORTUNITY_KEYS,
+      riskKeys: SCANNER_RISK_KEYS,
     };
   }
 
@@ -717,6 +818,8 @@
     findRecord,
     scan,
     SCANNER_BUCKETS,
+    SCANNER_OPPORTUNITY_KEYS,
+    SCANNER_RISK_KEYS,
     NEAR_PCT,
     BOLL_NEAR,
   };

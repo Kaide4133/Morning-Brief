@@ -60,6 +60,23 @@ TE.SCANNER_BUCKETS.forEach((m) => {
   bucketCounts[m.key] = (scan.buckets[m.key] || []).length;
 });
 
+let bullishHasOverheatLabel = false;
+(scan.buckets.bullishTrend || []).forEach((item) => {
+  if ((item.labels || []).some((l) => String(l).includes('延伸過熱'))) {
+    bullishHasOverheatLabel = true;
+  }
+});
+if (bullishHasOverheatLabel) {
+  console.error('FAIL: bullishTrend contains 延伸過熱 label');
+  errors += 1;
+}
+
+const hre = (scan.buckets.highRiskExtension || [])[0];
+if (!hre || hre.riskConditionCount == null) {
+  console.error('FAIL: highRiskExtension missing riskConditionCount');
+  errors += 1;
+}
+
 console.log(JSON.stringify({
   records: data.records.length,
   as_of: data.as_of,
