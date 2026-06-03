@@ -1,5 +1,5 @@
 /**
- * KW Technical Spider v0.4.4 — 形態線繪製強化
+ * KW Technical Spider v0.4.5 — 形態繪圖細節打磨
  * 僅輸出技術狀態與風險提示，不提供買賣建議。
  */
 (function (root, factory) {
@@ -1083,10 +1083,10 @@ function detectFalseBreakout(series, norm, diag) {
   if (!broke || (!failedClose && !longUpper)) return null;
   const n = series.length - 1;
   const ann = [
-    { kind: 'horizontal', label: '前高壓力', price: pressure, style: 'neckline', layer: 'primary' },
+    { kind: 'horizontal', label: 'prior high', price: pressure, style: 'prior-high', layer: 'primary' },
     {
       kind: 'marker',
-      label: '假突破風險',
+      label: 'failed breakout',
       index: n,
       price: last.high,
       style: 'failed',
@@ -1096,7 +1096,7 @@ function detectFalseBreakout(series, norm, diag) {
   if (longUpper) {
     ann.push({
       kind: 'wick',
-      label: '長上影',
+      label: 'upper wick',
       index: n,
       price: last.high,
       closePrice: close,
@@ -1180,7 +1180,7 @@ function detectDescendingBreakout(series, norm, diag) {
     annotations: [
       {
         kind: 'trendline',
-        label: '下降壓力線',
+        label: 'descending resistance',
         points: [
           { index: pts[0].index, price: linePriceAt(reg, pts[0].index) },
           { index: n, price: lineP },
@@ -1190,7 +1190,7 @@ function detectDescendingBreakout(series, norm, diag) {
       },
       {
         kind: 'marker',
-        label: close > lineP * 1.02 ? '突破點' : '回測中',
+        label: 'breakout',
         index: n,
         price: close,
         style: 'breakout',
@@ -1633,15 +1633,13 @@ function detectCupLikeShape(series, norm, meta) {
     state = '尚未突破';
   }
 
-  const cupPoints = buildCupCurvePoints(
-    n,
-    leftEnd,
+  const cupPoints = buildBowlCupCurvePoints(
+    0,
     leftEnd + cupLowRel,
-    midEnd,
+    midEnd - 1,
     leftHigh,
     cupLow,
-    Math.max.apply(null, right.map((r) => r.high)),
-    close
+    Math.max.apply(null, right.map((r) => r.high))
   );
 
   return {
@@ -1676,17 +1674,61 @@ function countLowPlateau(segment, cupLow, tolPct) {
   return n;
 }
 
-function buildCupCurvePoints(n, leftEnd, cupLowIdx, cupEnd, leftRim, cupLow, rightRim, close) {
-  const midLeft = Math.floor(leftEnd * 0.45);
-  const riseIdx = Math.floor((cupEnd + cupLowIdx) / 2);
-  return [
-    { index: 0, price: leftRim },
-    { index: midLeft, price: (leftRim + cupLow) / 2 },
-    { index: cupLowIdx, price: cupLow },
-    { index: riseIdx, price: (cupLow + rightRim) / 2 },
-    { index: cupEnd, price: rightRim },
-    { index: n - 1, price: close },
-  ];
+function buildBowlCupCurvePoints(leftIdx, cupLowIdx, rightIdx, leftRim, cupLow, rightRim) {
+  const pts = [];
+  const steps = 18;
+  for (let i = 0; i <= steps; i++) {
+    const t = i / steps;
+    let index;
+    let price;
+    if (t <= 0.38) {
+      const u = t / 0.38;
+      index = leftIdx + (cupLowIdx - leftIdx) * u;
+      const ease = 1 - Math.cos(u * Math.PI * 0.5);
+      price = leftRim + (cupLow - leftRim) * ease;
+    } else if (t <= 0.52) {
+      index = cupLowIdx;
+      price = cupLow;
+    } else {
+      const u = (t - 0.52) / 0.48;
+      index = cupLowIdx + (rightIdx - cupLowIdx) * u;
+      const ease = Math.sin(u * Math.PI * 0.5);
+      price = cupLow + (rightRim - cupLow) * ease;
+    }
+    pts.push({ index: Math.round(index), price });
+  }
+  return pts;
+}
+
+function morphPriceInBand(v, baseMin, baseMax, marginPct) {
+  if (!Number.isFinite(v)) return false;
+  const span = baseMax - baseMin || 1;
+  return v >= baseMin - span * marginPct && v <= baseMax + span * marginPct;
+}
+
+function buildChartBadges(measuredMove, fibExtensions, series, norm) {
+  const badges = [];
+  const closes = series.map((r) => r.close).filter(Number.isFinite);
+  const lows = series.map((r) => r.low || r.close);
+  const highs = series.map((r) => r.high || r.close);
+  let baseMin = Math.min.apply(null, lows.concat(closes));
+  let baseMax = Math.max.apply(null, highs.concat(closes));
+  const fibOff = [];
+  (fibExtensions || []).forEach((f) => {
+    if (!f.drawOnChart) fibOff.push(String(f.level));
+  });
+  if (fibOff.length) {
+    badges.push({ text: fibOff.join(' / ') + ' beyond view', kind: 'fib' });
+  }
+  const mm = measuredMove || {};
+  if (
+    mm.projectionPrice != null &&
+    mm.direction &&
+    !morphPriceInBand(mm.projectionPrice, baseMin, baseMax, 0.25)
+  ) {
+    badges.push({ text: 'projection beyond view', kind: 'projection' });
+  }
+  return badges;
 }
 
 function buildChartAnnotations(pick, measuredMove, fibExtensions, allCandidates, norm, series, cupLike) {
@@ -1743,24 +1785,17 @@ function buildChartAnnotations(pick, measuredMove, fibExtensions, allCandidates,
     });
   }
 
-  let secondaryAdded = 0;
-  if (
-    cupLike &&
-    secondaryAdded < 1 &&
-    NO_CUP_SECONDARY.indexOf(pick.type) < 0 &&
-    pick.type !== '杯柄型態'
-  ) {
+  if (pick.type === '無明確形態' && cupLike) {
     (cupLike.annotations || []).slice(0, 2).forEach((a) => {
       ann.push(
         Object.assign({ layer: 'secondary', faint: true }, a, {
-          style: a.style === 'cup' ? 'cup-faint' : a.style || 'cup-faint',
+          style: 'cup-faint',
         })
       );
     });
-    secondaryAdded = 1;
   }
 
-  return ann.slice(0, 14);
+  return ann.slice(0, 18);
 }
 
 function mergeMorphAnnotations(pick, measuredMove, fibExtensions, allCandidates, norm, series, cupLike) {
@@ -1830,18 +1865,67 @@ function detectCupHandle(series, norm, meta) {
   if (close >= neckline) confidence += 8;
   if (!meta.sufficient) confidence = Math.min(confidence, 48);
 
-  const cupPoints = buildCupCurvePoints(
-    n,
-    leftEnd,
+  let leftRimIdx = 0;
+  left.forEach((r, i) => {
+    if (r.high >= left[leftRimIdx].high) leftRimIdx = i;
+  });
+  const rightRimIdx = cupEnd - 1;
+  const cupPoints = buildBowlCupCurvePoints(
+    leftRimIdx,
     cupLowIdx,
-    cupEnd,
+    rightRimIdx,
     leftRim,
     cupLow,
-    rightRim,
-    close
+    rightRim
   );
   const handleTop = handleHigh;
   const handleBot = handleLow;
+  const cupAnn = [
+    {
+      kind: 'cupfill',
+      startIndex: leftRimIdx,
+      endIndex: rightRimIdx,
+      cupLowIdx,
+      leftRim,
+      cupLow,
+      rightRim,
+      layer: 'primary',
+    },
+    { kind: 'cupcurve', label: '', points: cupPoints, style: 'cup', layer: 'primary' },
+    { kind: 'horizontal', label: 'neckline', price: neckline, style: 'neckline', layer: 'primary' },
+    { kind: 'marker', label: 'left rim', index: leftRimIdx, price: leftRim, style: 'rim-left', layer: 'primary' },
+    { kind: 'marker', label: 'cup low', index: cupLowIdx, price: cupLow, style: 'cup-low', layer: 'primary' },
+    { kind: 'marker', label: 'right rim', index: rightRimIdx, price: rightRim, style: 'rim-right', layer: 'primary' },
+    {
+      kind: 'zone',
+      label: 'handle',
+      startIndex: cupEnd,
+      endIndex: n - 1,
+      style: 'handle',
+      topPrice: handleTop,
+      bottomPrice: handleBot,
+      layer: 'primary',
+    },
+  ];
+  if (state === '頸線附近') {
+    cupAnn.push({
+      kind: 'marker',
+      label: 'near neckline',
+      index: n - 1,
+      price: close,
+      style: 'near-neck',
+      layer: 'primary',
+    });
+  } else if (close >= neckline * 1.005) {
+    cupAnn.push({
+      kind: 'marker',
+      label: 'breakout',
+      index: n - 1,
+      price: close,
+      style: 'breakout',
+      layer: 'primary',
+    });
+  }
 
   return {
     type: '杯柄型態',
@@ -1855,27 +1939,17 @@ function detectCupHandle(series, norm, meta) {
       '右側回升接近頸線',
       handle.length >= 5 ? '柄部整理未破壞杯型深度' : '杯底成形中',
     ],
-    annotations: [
-      { kind: 'horizontal', label: '頸線', price: neckline, style: 'neckline' },
-      { kind: 'cupcurve', label: '杯體', points: cupPoints, style: 'cup' },
-      {
-        kind: 'zone',
-        label: '柄部',
-        startIndex: cupEnd,
-        endIndex: n - 1,
-        style: 'handle',
-        topPrice: handleTop,
-        bottomPrice: handleBot,
-      },
-      ...(close >= neckline * 1.005
-        ? [{ kind: 'marker', label: '突破', index: n - 1, price: close, style: 'breakout' }]
-        : []),
-    ],
+    annotations: cupAnn,
     structure: {
       neckline,
       support: cupLow,
       resistance: neckline,
       cupLow,
+      leftRim,
+      rightRim,
+      leftRimIdx,
+      rightRimIdx,
+      cupDepthPct: Math.round(depthPct * 1000) / 10,
       handleStart: cupEnd,
       handleEnd: n - 1,
     },
@@ -1915,8 +1989,8 @@ function detectChannel(series, norm, diag, ascending) {
   let posLabel = state;
   if (state === '通道突破') posLabel = '通道突破';
   else if (state === '通道跌破') posLabel = '通道跌破';
-  else if (state === '通道上緣') posLabel = '通道上緣';
-  else if (state === '通道下緣') posLabel = '通道下緣';
+  else if (state === '通道上緣') posLabel = 'near upper channel';
+  else if (state === '通道下緣') posLabel = 'near lower channel';
   return {
     type: label,
     state,
@@ -2102,6 +2176,7 @@ function detectMorphology(record) {
     series,
     cupLike
   );
+  const chartBadges = buildChartBadges(measuredMove, fibExtensions, series, norm);
   const primary = {
     type: pick.type,
     state: pick.state,
@@ -2134,6 +2209,7 @@ function detectMorphology(record) {
     measuredMove,
     fibExtensions,
     chartAnnotations,
+    chartBadges,
     candleStats: countConsecutiveCandles(series),
     dataMeta: meta,
     diagnostics,

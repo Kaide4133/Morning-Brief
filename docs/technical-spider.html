@@ -16,9 +16,9 @@
 <nav class="masthead"><div class="masthead-inner"><div><span class="kw-mark">K</span>Kelvin Wiggly</div><div><a class="nav-link" href="/Morning-Brief/">晨報首頁</a><a class="nav-link" href="/Morning-Brief/technical-spider.html">技術線圖</a></div></div></nav>
 <main>
 <header class="hero">
-  <div class="eyebrow">KW Technical Spider v0.4.4</div>
-  <h1>形態線繪製強化</h1>
-  <p class="subtitle">單檔優先 · 形態學判讀 · 60／120／250 日線圖 · 今日技術掃描 — 本地資料池</p>
+  <div class="eyebrow">KW Technical Spider v0.4.5</div>
+  <h1>形態繪圖細節打磨</h1>
+  <p class="subtitle">Pattern Drawing Polish · 單檔優先 · 形態學判讀 · 60／120／250 日線圖 · 今日技術掃描 — 本地資料池</p>
   <p class="note">獨立技術分析核心，不是方舟晨報，也不是雷達。僅讀取本地 technical-data.json；不提供買賣建議。</p>
 </header>
 
@@ -137,7 +137,7 @@
   <div id="scannerBuckets" class="scanner-grid"></div>
 </section>
 
-<footer>KW Technical Spider v0.4.4 · Morphology Drawing · technical-data.json</footer>
+<footer>KW Technical Spider v0.4.5 · Pattern Drawing Polish · technical-data.json</footer>
 </main>
 
 <script src="technical-engine.js"></script>
@@ -228,21 +228,42 @@
   }
 
   let morphLabelCount = 0;
+  let morphLabelMax = 5;
 
-  function drawLabelBg(ctx, text, x, y, alignRight, W, pad) {
-    if (!text || morphLabelCount >= 4) return;
+  function drawLabelBg(ctx, text, x, y, alignRight, W, pad, borderColor) {
+    if (!text || morphLabelCount >= morphLabelMax) return;
     morphLabelCount += 1;
     ctx.font = '11px JetBrains Mono, monospace';
     const tw = ctx.measureText(text).width;
     const px = alignRight ? W - pad.r - tw - 10 : x;
     const py = y - 12;
-    ctx.fillStyle = 'rgba(241,232,208,.88)';
+    ctx.fillStyle = 'rgba(241,232,208,.85)';
     ctx.fillRect(px - 4, py - 2, tw + 8, 16);
-    ctx.strokeStyle = 'rgba(26,19,17,.15)';
+    ctx.strokeStyle = borderColor || 'rgba(26,19,17,.18)';
     ctx.lineWidth = 1;
     ctx.strokeRect(px - 4, py - 2, tw + 8, 16);
     ctx.fillStyle = '#1A1311';
     ctx.fillText(text, px, py + 10);
+  }
+
+  function drawChartBadges(ctx, badges, W, pad) {
+    if (!badges || !badges.length) return;
+    const text = badges.map(function (b) {
+      return b.text;
+    }).join(' · ');
+    ctx.save();
+    ctx.font = '10px JetBrains Mono, monospace';
+    const tw = ctx.measureText(text).width;
+    const bx = W - pad.r - tw - 14;
+    const by = pad.t + 6;
+    ctx.fillStyle = 'rgba(241,232,208,.9)';
+    ctx.fillRect(bx - 6, by - 2, tw + 12, 18);
+    ctx.strokeStyle = '#C8102E';
+    ctx.lineWidth = 1;
+    ctx.strokeRect(bx - 6, by - 2, tw + 12, 18);
+    ctx.fillStyle = '#1A1311';
+    ctx.fillText(text, bx, by + 10);
+    ctx.restore();
   }
 
   function drawMorphologyAnnotations(
@@ -256,22 +277,70 @@
     morphLen,
     chartLen,
     yMin,
-    yMax
+    yMax,
+    phase,
+    primaryType
   ) {
     if (!annotations || !annotations.length) return;
     morphLabelCount = 0;
+    morphLabelMax = primaryType === '假突破風險' ? 3 : 5;
+    const drawZones = !phase || phase === 'zones';
+    const drawRest = !phase || phase === 'rest';
     const zones = [];
     const lines = [];
     const marks = [];
     annotations.forEach(function (ann) {
-      if (ann.kind === 'zone') zones.push(ann);
+      if (ann.kind === 'zone' || ann.kind === 'cupfill') zones.push(ann);
       else if (ann.kind === 'bracket') lines.push(ann);
       else if (ann.kind === 'measure' || ann.kind === 'marker' || ann.kind === 'position' || ann.kind === 'wick') {
         marks.push(ann);
       } else lines.push(ann);
     });
 
+    if (!drawZones) zones.length = 0;
+    if (!drawRest) {
+      lines.length = 0;
+      marks.length = 0;
+    }
+
     zones.forEach(function (ann) {
+      if (ann.kind === 'cupfill') {
+        const li = mapAnnIndex(ann.startIndex, morphLen, chartLen);
+        const ri = mapAnnIndex(ann.endIndex, morphLen, chartLen);
+        const cli = mapAnnIndex(ann.cupLowIdx, morphLen, chartLen);
+        if (ri < 0 || li < 0) return;
+        const xL = idxToX(Math.max(0, li));
+        const xR = idxToX(ri);
+        const yL = yAt(ann.leftRim);
+        const yLow = yAt(ann.cupLow);
+        const yR = yAt(ann.rightRim);
+        const steps = 16;
+        ctx.save();
+        ctx.fillStyle = 'rgba(200,16,46,.06)';
+        ctx.beginPath();
+        ctx.moveTo(xL, yL);
+        for (let s = 1; s <= steps; s++) {
+          const t = s / steps;
+          const u = t <= 0.5 ? t * 2 : (t - 0.5) * 2;
+          const idx = li + (cli - li) * (t <= 0.5 ? u : 1) + (ri - cli) * (t > 0.5 ? u : 0);
+          const x = idxToX(Math.round(t <= 0.5 ? li + (cli - li) * u : cli + (ri - cli) * u));
+          let py;
+          if (t <= 0.5) {
+            const ease = Math.sin(u * Math.PI * 0.5);
+            py = yAt(ann.leftRim + (ann.cupLow - ann.leftRim) * ease);
+          } else {
+            const ease = Math.sin(u * Math.PI * 0.5);
+            py = yAt(ann.cupLow + (ann.rightRim - ann.cupLow) * ease);
+          }
+          ctx.lineTo(x, py);
+        }
+        ctx.lineTo(xR, yR);
+        ctx.lineTo(xL, yL);
+        ctx.closePath();
+        ctx.fill();
+        ctx.restore();
+        return;
+      }
       const style = ann.style || '';
       const x0 = idxToX(Math.max(0, mapAnnIndex(ann.startIndex, morphLen, chartLen)));
       const x1 = idxToX(mapAnnIndex(ann.endIndex, morphLen, chartLen));
@@ -281,20 +350,22 @@
       if (style === 'squeeze') {
         ctx.fillStyle = 'rgba(200,16,46,.07)';
         ctx.fillRect(x0, pad.t, zw, priceH);
-        drawLabelBg(ctx, ann.label || 'BOLL壓縮區', x0 + 4, pad.t + 12, false, W, pad);
+        drawLabelBg(ctx, ann.label || 'BOLL壓縮區', x0 + 4, pad.t + 12, false, W, pad, '#C8102E');
       } else if (ann.topPrice != null && ann.bottomPrice != null) {
         const yt = yAt(ann.topPrice);
         const yb = yAt(ann.bottomPrice);
         ctx.fillStyle =
-          style === 'handle' ? 'rgba(200,16,46,.12)' : 'rgba(200,16,46,.08)';
+          style === 'handle' ? 'rgba(200,16,46,.1)' : 'rgba(200,16,46,.08)';
         ctx.fillRect(x0, yt, zw, yb - yt);
         if (style === 'handle') {
-          ctx.strokeStyle = 'rgba(200,16,46,.45)';
+          ctx.strokeStyle = '#C8102E';
           ctx.lineWidth = 1.5;
+          ctx.setLineDash([5, 4]);
           ctx.strokeRect(x0, yt, zw, yb - yt);
-        }
-        if (style !== 'channel') {
-          drawLabelBg(ctx, ann.label || '', x0 + 4, yt + 12, false, W, pad);
+          ctx.setLineDash([]);
+          drawLabelBg(ctx, ann.label || 'handle', x0 + 4, yt + 12, false, W, pad, '#C8102E');
+        } else if (style !== 'channel') {
+          drawLabelBg(ctx, ann.label || '', x0 + 4, yt + 12, false, W, pad, '#C8102E');
         }
       }
       ctx.restore();
@@ -303,6 +374,7 @@
     lines.forEach(function (ann) {
       const style = ann.style || '';
       const isSupport = style === 'support';
+      const isPriorHigh = style === 'prior-high';
       const isFib161 = style === 'fib161';
       const isFib262 = style === 'fib262';
       const isNeck = style === 'neckline';
@@ -310,19 +382,24 @@
       const isPrimary = ann.layer === 'primary' && !ann.faint;
       const isBracket = ann.kind === 'bracket';
       const isFaint = ann.faint || style === 'cup-faint';
+      const isCupCurve = ann.kind === 'cupcurve' || style === 'cup';
       ctx.save();
-      if (isFib161) ctx.lineWidth = 1.5;
-      else if (isFib262) ctx.lineWidth = 1;
+      if (isFib161) ctx.lineWidth = 2;
+      else if (isFib262) ctx.lineWidth = 1.5;
+      else if (isPriorHigh) ctx.lineWidth = 2.5;
       else if (isNeck) ctx.lineWidth = 2.5;
+      else if (isCupCurve) ctx.lineWidth = 3;
       else if (isProj) ctx.lineWidth = 1.2;
       else ctx.lineWidth = isPrimary ? 3 : 1.8;
-      if (isFib262) ctx.setLineDash([2, 4]);
+      if (isFib262) ctx.setLineDash([2, 5]);
       else if (isFib161) ctx.setLineDash([7, 5]);
-      else if (isNeck || isProj) ctx.setLineDash([9, 5]);
+      else if (isNeck || isProj || isPriorHigh) ctx.setLineDash([9, 5]);
       else ctx.setLineDash(isSupport ? [10, 6] : [11, 6]);
       ctx.strokeStyle =
-        isSupport || (isBracket && ann.direction === 'down') ? '#1A1311' : '#C8102E';
-      ctx.globalAlpha = isFaint ? 0.42 : ann.layer === 'secondary' ? 0.72 : 1;
+        isSupport || (isBracket && ann.direction === 'down') || (isProj && ann.direction === 'down')
+          ? '#1A1311'
+          : '#C8102E';
+      ctx.globalAlpha = isFaint ? 0.42 : isCupCurve ? 0.9 : ann.layer === 'secondary' ? 0.72 : 1;
 
       if (ann.kind === 'horizontal' && ann.price != null) {
         const y = yAt(ann.price);
@@ -331,34 +408,36 @@
         ctx.lineTo(W - pad.r, y);
         ctx.stroke();
         const lbl = ann.label || '';
-        if (isFib161 || isFib262 || isProj) drawLabelBg(ctx, lbl, 0, y, true, W, pad);
-        else if (isPrimary) drawLabelBg(ctx, lbl, pad.l + 8, y, false, W, pad);
+        const fibBorder = '#C8102E';
+        if (isFib161 || isFib262) drawLabelBg(ctx, lbl, 0, y, true, W, pad, fibBorder);
+        else if (isProj) drawLabelBg(ctx, lbl, pad.l + 8, y, false, W, pad, '#1A1311');
+        else if (isPriorHigh) drawLabelBg(ctx, lbl, 0, y, true, W, pad, fibBorder);
+        else if (isPrimary) drawLabelBg(ctx, lbl, 0, y, true, W, pad, fibBorder);
         else drawLabelBg(ctx, lbl, 0, y, true, W, pad);
       } else if (ann.kind === 'bracket' && ann.baseLow != null && ann.baseHigh != null) {
         const bi = mapAnnIndex(
-          ann.fromIndex != null ? ann.fromIndex : chartLen - 25,
+          ann.toIndex != null ? ann.toIndex : ann.fromIndex != null ? ann.fromIndex : chartLen - 25,
           morphLen,
           chartLen
         );
-        const x = idxToX(Math.max(0, bi)) - 26;
+        const x = idxToX(Math.max(0, bi)) + 14;
         const yTop = yAt(ann.baseHigh);
         const yBot = yAt(ann.baseLow);
         ctx.setLineDash([]);
         ctx.lineWidth = 2.5;
-        ctx.strokeStyle = ann.direction === 'down' ? '#1A1311' : '#C8102E';
+        ctx.strokeStyle = '#1A1311';
         ctx.beginPath();
         ctx.moveTo(x, yTop);
-        ctx.lineTo(x + 12, yTop);
-        ctx.lineTo(x + 12, yBot);
         ctx.lineTo(x, yBot);
         ctx.stroke();
         ctx.beginPath();
-        ctx.moveTo(x, yTop);
-        ctx.lineTo(x - 4, yTop);
-        ctx.moveTo(x, yBot);
-        ctx.lineTo(x - 4, yBot);
+        ctx.moveTo(x - 6, yTop);
+        ctx.lineTo(x + 6, yTop);
+        ctx.moveTo(x - 6, yBot);
+        ctx.lineTo(x + 6, yBot);
         ctx.stroke();
-        drawLabelBg(ctx, ann.label || 'base range', x + 16, (yTop + yBot) / 2, false, W, pad);
+        const bBorder = ann.direction === 'down' ? '#1A1311' : '#C8102E';
+        drawLabelBg(ctx, ann.label || 'base range', x + 10, (yTop + yBot) / 2, false, W, pad, bBorder);
       } else if (ann.kind === 'trendline' && ann.points && ann.points.length >= 2) {
         const p0 = ann.points[0];
         const p1 = ann.points[1];
@@ -390,23 +469,13 @@
             return p.ok;
           });
         if (pts.length >= 2) {
-          ctx.lineWidth = style === 'cup' || style === 'cup-faint' ? 2.5 : isPrimary ? 3 : 2;
+          ctx.lineWidth = isCupCurve ? 3 : isPrimary ? 3 : 2;
+          ctx.globalAlpha = isCupCurve ? 0.9 : ctx.globalAlpha;
+          ctx.strokeStyle = isCupCurve ? '#C8102E' : ctx.strokeStyle;
           ctx.beginPath();
           ctx.moveTo(pts[0].x, pts[0].y);
-          if (ann.kind === 'cupcurve' && pts.length >= 3) {
-            for (let i = 1; i < pts.length - 1; i++) {
-              const cpx = (pts[i].x + pts[i + 1].x) / 2;
-              const cpy = (pts[i].y + pts[i + 1].y) / 2;
-              ctx.quadraticCurveTo(pts[i].x, pts[i].y, cpx, cpy);
-            }
-            ctx.lineTo(pts[pts.length - 1].x, pts[pts.length - 1].y);
-          } else {
-            for (let j = 1; j < pts.length; j++) ctx.lineTo(pts[j].x, pts[j].y);
-          }
+          for (let j = 1; j < pts.length; j++) ctx.lineTo(pts[j].x, pts[j].y);
           ctx.stroke();
-          if (style === 'cup' || style === 'cup-faint') {
-            drawLabelBg(ctx, ann.label || '杯體', pts[pts.length - 1].x + 6, pts[pts.length - 1].y, false, W, pad);
-          }
         }
       }
       ctx.restore();
@@ -435,7 +504,7 @@
         ctx.moveTo(mx - 5, topY - 4);
         ctx.lineTo(mx + 5, topY - 4);
         ctx.stroke();
-        drawLabelBg(ctx, ann.label || '長上影', mx + 10, topY, false, W, pad);
+        drawLabelBg(ctx, ann.label || 'upper wick', mx + 10, topY, false, W, pad, '#C8102E');
         ctx.restore();
         return;
       }
@@ -469,11 +538,34 @@
         const mx = idxToX(ri);
         const my = yAt(ann.price);
         ctx.lineWidth = 2;
-        if (style === 'failed') {
+        if (style === 'rim-left' || style === 'rim-right') {
+          ctx.strokeStyle = '#C8102E';
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          ctx.arc(mx, my, 6, 0, Math.PI * 2);
+          ctx.stroke();
+        } else if (style === 'cup-low') {
+          ctx.fillStyle = '#1A1311';
+          ctx.beginPath();
+          ctx.moveTo(mx, my - 5);
+          ctx.lineTo(mx + 5, my);
+          ctx.lineTo(mx, my + 5);
+          ctx.lineTo(mx - 5, my);
+          ctx.closePath();
+          ctx.fill();
+        } else if (style === 'near-neck') {
+          ctx.fillStyle = '#C8102E';
+          ctx.beginPath();
+          ctx.moveTo(mx, my - 7);
+          ctx.lineTo(mx - 5, my + 4);
+          ctx.lineTo(mx + 5, my + 4);
+          ctx.closePath();
+          ctx.fill();
+        } else if (style === 'failed') {
           ctx.strokeStyle = '#C8102E';
           ctx.lineWidth = 2.5;
           ctx.beginPath();
-          ctx.arc(mx, my, 10, 0, Math.PI * 2);
+          ctx.arc(mx, my, 8, 0, Math.PI * 2);
           ctx.stroke();
           ctx.beginPath();
           ctx.moveTo(mx - 6, my - 6);
@@ -498,38 +590,42 @@
           ctx.closePath();
           ctx.fill();
         }
-        drawLabelBg(ctx, ann.label || '', mx + 10, my - 6, false, W, pad);
+        const mBorder = style === 'failed' ? '#C8102E' : style === 'breakdown' ? '#1A1311' : '#C8102E';
+        drawLabelBg(ctx, ann.label || '', mx + 10, my - 6, false, W, pad, mBorder);
       } else if (ann.kind === 'measure' && ann.fromPrice != null && ann.toPrice != null) {
         const fi = mapAnnIndex(ann.fromIndex, morphLen, chartLen);
         if (fi < 0) {
           ctx.restore();
           return;
         }
-        const x = idxToX(fi) + 20;
+        const x = idxToX(fi) + 22;
         const y0 = yAt(ann.fromPrice);
         const up = ann.direction === 'up';
-        const beyond =
-          ann.toPrice > yMax * 1.02 || ann.toPrice < yMin * 0.98;
+        const beyond = up
+          ? ann.toPrice > yMax * 1.01
+          : ann.toPrice < yMin * 0.99;
+        const edgePad = (yMax - yMin) * 0.05;
         const y1 = beyond
-          ? yAt(up ? yMax - (yMax - yMin) * 0.04 : yMin + (yMax - yMin) * 0.04)
+          ? pad.t + (up ? edgePad : priceH - edgePad)
           : yAt(ann.toPrice);
         ctx.strokeStyle = up ? '#C8102E' : '#1A1311';
-        ctx.lineWidth = 3.5;
+        ctx.lineWidth = 3;
         ctx.beginPath();
         ctx.moveTo(x, y0);
         ctx.lineTo(x, y1);
         ctx.stroke();
         const ah = y1 < y0 ? 1 : -1;
         ctx.fillStyle = up ? '#C8102E' : '#1A1311';
+        const head = 10;
         ctx.beginPath();
         ctx.moveTo(x, y1);
-        ctx.lineTo(x - 6, y1 - 9 * ah);
-        ctx.lineTo(x + 6, y1 - 9 * ah);
+        ctx.lineTo(x - head, y1 - head * ah);
+        ctx.lineTo(x + head, y1 - head * ah);
         ctx.closePath();
         ctx.fill();
-        let mLbl = (ann.label || '').slice(0, 22);
+        let mLbl = (ann.label || '').slice(0, 28);
         if (beyond) mLbl += ' · beyond view';
-        drawLabelBg(ctx, mLbl, x + 10, (y0 + y1) / 2, false, W, pad);
+        drawLabelBg(ctx, mLbl, x + 12, (y0 + y1) / 2, false, W, pad, up ? '#C8102E' : '#1A1311');
       }
       ctx.restore();
     });
@@ -601,6 +697,7 @@
     }
 
     annList.forEach(function (a) {
+      if (a.kind === 'cupfill' || a.kind === 'cupcurve') return;
       if (a.kind === 'zone' && a.topPrice != null && a.bottomPrice != null) {
         tryPush(a.topPrice, annMargin);
         tryPush(a.bottomPrice, annMargin);
@@ -641,16 +738,13 @@
 
   function filterAnnotationsForDraw(annList, baseMin, baseMax, morph) {
     const annMargin = 0.2;
-    const projMargin = 0.25;
     return annList.filter(function (a) {
-      if (a.kind === 'horizontal' && (a.style === 'fib' || a.style === 'measure')) {
+      if (a.kind === 'measure') return true;
+      if (a.kind === 'horizontal' && (a.style === 'fib161' || a.style === 'fib262')) {
         return priceWithinRange(a.price, baseMin, baseMax, annMargin);
       }
-      if (a.kind === 'measure' && a.toPrice != null) {
-        return (
-          priceWithinRange(a.fromPrice, baseMin, baseMax, annMargin) &&
-          priceWithinRange(a.toPrice, baseMin, baseMax, projMargin)
-        );
+      if (a.kind === 'horizontal' && a.style === 'projection') {
+        return priceWithinRange(a.price, baseMin, baseMax, 0.25);
       }
       if (a.kind === 'bracket') {
         return (
@@ -695,9 +789,10 @@
     const maxV = Math.max.apply(null, vols.concat([1]));
 
     const morphLen = (morph && morph.morphSeriesLength) || full.length;
+    const primaryType = morph && morph.primary ? morph.primary.type : '';
     const annListRaw =
       morph && (morph.chartAnnotations || (morph.primary && morph.primary.annotations))
-        ? (morph.chartAnnotations || morph.primary.annotations).slice(0, 16)
+        ? (morph.chartAnnotations || morph.primary.annotations).slice(0, 18)
         : [];
     $('chartTitle').textContent = '近 ' + chartDays + ' 日線圖';
 
@@ -724,6 +819,22 @@
     const xAt = (i) => pad.l + (i / (n - 1)) * (W - pad.l - pad.r);
     const idxToX = (i) => indexToX(i, n, pad, W);
     const yAt = (v) => pad.t + (1 - (v - yMin) / (yMax - yMin)) * priceH;
+
+    drawMorphologyAnnotations(
+      ctx,
+      annList,
+      idxToX,
+      yAt,
+      pad,
+      W,
+      priceH,
+      morphLen,
+      n,
+      yMin,
+      yMax,
+      'zones',
+      primaryType
+    );
 
     ctx.strokeStyle = 'rgba(26,19,17,.1)';
     for (let g = 0; g <= 3; g++) {
@@ -797,8 +908,11 @@
       morphLen,
       n,
       yMin,
-      yMax
+      yMax,
+      'rest',
+      primaryType
     );
+    drawChartBadges(ctx, morph && morph.chartBadges, W, pad);
 
     vols.forEach((v, i) => {
       const x = xAt(i);
@@ -900,19 +1014,32 @@
       p.confidence != null ? String(Math.round(p.confidence)) : '—';
     $('morphSummary').textContent = p.summary || '—';
     const structParts = [];
-    if (st.neckline != null) structParts.push('頸線 ' + Math.round(st.neckline));
-    if (st.support != null) structParts.push('支撐 ' + Math.round(st.support));
-    if (st.resistance != null) structParts.push('壓力 ' + Math.round(st.resistance));
-    if (st.channelUpper != null) structParts.push('通道上緣 ' + Math.round(st.channelUpper));
-    if (st.channelLower != null) structParts.push('通道下緣 ' + Math.round(st.channelLower));
-    if (st.cupLow != null) structParts.push('杯底 ' + Math.round(st.cupLow));
-    if (st.handleStart != null && st.handleEnd != null) {
-      structParts.push('柄部區間 ' + st.handleStart + '–' + st.handleEnd);
+    if (p.type === '杯柄型態') {
+      if (st.leftRim != null) structParts.push('左杯口 ' + Math.round(st.leftRim));
+      if (st.cupLow != null) structParts.push('杯底 ' + Math.round(st.cupLow));
+      if (st.rightRim != null) structParts.push('右杯口 ' + Math.round(st.rightRim));
+      if (st.neckline != null) structParts.push('頸線 ' + Math.round(st.neckline));
+      if (st.handleStart != null && st.handleEnd != null) {
+        structParts.push('柄部區間 ' + st.handleStart + '–' + st.handleEnd);
+      }
+    } else {
+      if (st.neckline != null) structParts.push('頸線 ' + Math.round(st.neckline));
+      if (st.support != null) structParts.push('支撐 ' + Math.round(st.support));
+      if (st.resistance != null) structParts.push('壓力 ' + Math.round(st.resistance));
+      if (st.channelUpper != null) structParts.push('通道上緣 ' + Math.round(st.channelUpper));
+      if (st.channelLower != null) structParts.push('通道下緣 ' + Math.round(st.channelLower));
+      if (st.cupLow != null) structParts.push('杯底 ' + Math.round(st.cupLow));
+      if (st.handleStart != null && st.handleEnd != null) {
+        structParts.push('柄部區間 ' + st.handleStart + '–' + st.handleEnd);
+      }
     }
     $('morphStructure').textContent = structParts.length
       ? structParts.join(' · ')
       : '尚無明確通道／頸線';
     const measParts = [];
+    if (p.type === '杯柄型態' && st.cupDepthPct != null) {
+      measParts.push('杯深 ' + st.cupDepthPct + '%');
+    }
     if (mm.label) measParts.push('量測參考：' + mm.label);
     if (mm.currentExtensionPct != null) {
       measParts.push('目前延伸：' + (mm.direction === 'up' ? '+' : '') + mm.currentExtensionPct + '%');
@@ -925,7 +1052,7 @@
       : '尚無明確量測結構';
     if (fib.length) {
       $('morphFib').textContent =
-        'Fibonacci 延伸參考：' +
+        'Fibonacci 延伸參考 · ' +
         fib
           .map(function (f) {
             const tag =
