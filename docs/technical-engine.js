@@ -1,5 +1,5 @@
 /**
- * KW Technical Spider v0.4.3 — 形態線可視化與訊號清理
+ * KW Technical Spider v0.4.4 — 形態線繪製強化
  * 僅輸出技術狀態與風險提示，不提供買賣建議。
  */
 (function (root, factory) {
@@ -1269,7 +1269,13 @@ function detectBollCompression(series, norm) {
     summary: 'BOLL 頻寬降至近期低位，價格進入波動壓縮區。',
     reasons: ['BOLL 頻寬偏低', '波動區間收斂', '未見爆量'],
     annotations: [
-      { kind: 'zone', label: 'BOLL壓縮區', startIndex: n - 20, endIndex: n },
+      {
+        kind: 'zone',
+        label: 'BOLL壓縮區',
+        startIndex: Math.max(0, n - 28),
+        endIndex: n,
+        style: 'squeeze',
+      },
     ],
   };
 }
@@ -1426,7 +1432,11 @@ function buildMeasuredMove(candidate, series, norm) {
       candidate.state === '頸線突破' ||
       candidate.state === '通道突破' ||
       (type === '下降壓力線突破' && close > (st.neckline || st.resistance || 0)) ||
-      (type === '杯柄型態' && close >= (st.neckline || 0) * 1.01) ||
+      (type === '杯柄型態' &&
+        (close >= (st.neckline || 0) * 1.01 ||
+          candidate.state === '頸線突破' ||
+          candidate.state === '突破延伸' ||
+          (candidate.state === '頸線附近' && close >= (st.neckline || 0) * 0.96))) ||
       (type === '平台突破' && close >= (st.neckline || st.resistance || 0) * 1.01));
 
   if (brokeUp) {
@@ -1439,7 +1449,7 @@ function buildMeasuredMove(candidate, series, norm) {
     if (type === '杯柄型態') {
       baseHigh = st.neckline || baseHigh;
       baseLow = st.cupLow || st.support || baseLow;
-      if (close < baseHigh * 1.01) return empty;
+      if (close < baseHigh * 0.95) return empty;
     }
     if (type === '上升通道' && candidate.state !== '通道突破') return empty;
     if ((type === 'U型底' || type === '圓弧底') && close < (st.neckline || 0) * 0.99) {
@@ -1546,11 +1556,19 @@ function buildFibExtensions(candidate, series, norm, measuredMove) {
     if (!Number.isFinite(baseLow) || !Number.isFinite(baseHigh) || baseHigh <= baseLow) {
       return out;
     }
+    const nearNeck =
+      candidate.type === '杯柄型態' &&
+      Number.isFinite(baseHigh) &&
+      relPct(close, baseHigh) != null &&
+      relPct(close, baseHigh) >= -5 &&
+      close < baseHigh * 1.02;
     const broke =
       candidate.state === '已突破' ||
       candidate.state === '突破延伸' ||
       candidate.state === '頸線突破' ||
-      candidate.state === '通道突破';
+      candidate.state === '通道突破' ||
+      candidate.state === '頸線附近' ||
+      nearNeck;
     if (!broke) return out;
     direction = close >= baseHigh * 0.98 ? 'up' : close <= baseLow * 1.02 ? 'down' : 'up';
   }
@@ -1615,6 +1633,17 @@ function detectCupLikeShape(series, norm, meta) {
     state = '尚未突破';
   }
 
+  const cupPoints = buildCupCurvePoints(
+    n,
+    leftEnd,
+    leftEnd + cupLowRel,
+    midEnd,
+    leftHigh,
+    cupLow,
+    Math.max.apply(null, right.map((r) => r.high)),
+    close
+  );
+
   return {
     type: '杯型底雛形',
     state,
@@ -1623,37 +1652,58 @@ function detectCupLikeShape(series, norm, meta) {
     reasons: ['左側相對偏高', '中段低點整理', '右側回升至區間上段'],
     annotations: [
       { kind: 'horizontal', label: '頸線', price: neckline, style: 'neckline' },
-      {
-        kind: 'cupcurve',
-        label: '杯型輪廓',
-        points: [
-          { index: 0, price: left[0].close },
-          { index: leftEnd + cupLowRel, price: cupLow },
-          { index: n - 1, price: close },
-        ],
-      },
+      { kind: 'cupcurve', label: '杯型輪廓', points: cupPoints, style: 'cup-faint' },
     ],
     structure: { neckline, support: cupLow, cupLow },
   };
 }
 
-const CROWDED_PRIMARY = ['假突破風險', '上升通道', '下降通道', '反彈旗形', '下降壓力線突破'];
+const NO_CUP_SECONDARY = [
+  '假突破風險',
+  '上升通道',
+  '下降通道',
+  '反彈旗形',
+  '下降壓力線突破',
+  'BOLL壓縮',
+];
 
-function buildChartAnnotations(pick, measuredMove, fibExtensions, allCandidates, norm, series) {
+function countLowPlateau(segment, cupLow, tolPct) {
+  if (!segment.length || !Number.isFinite(cupLow)) return 0;
+  let n = 0;
+  segment.forEach((r) => {
+    if (r.low != null && Math.abs(r.low - cupLow) / cupLow <= tolPct) n++;
+  });
+  return n;
+}
+
+function buildCupCurvePoints(n, leftEnd, cupLowIdx, cupEnd, leftRim, cupLow, rightRim, close) {
+  const midLeft = Math.floor(leftEnd * 0.45);
+  const riseIdx = Math.floor((cupEnd + cupLowIdx) / 2);
+  return [
+    { index: 0, price: leftRim },
+    { index: midLeft, price: (leftRim + cupLow) / 2 },
+    { index: cupLowIdx, price: cupLow },
+    { index: riseIdx, price: (cupLow + rightRim) / 2 },
+    { index: cupEnd, price: rightRim },
+    { index: n - 1, price: close },
+  ];
+}
+
+function buildChartAnnotations(pick, measuredMove, fibExtensions, allCandidates, norm, series, cupLike) {
   const ann = [];
-  const primaryAnn = (pick.annotations || []).slice();
-  primaryAnn.forEach((a) => {
-    ann.push(Object.assign({ layer: a.layer || 'primary' }, a));
+  (pick.annotations || []).forEach((a) => {
+    ann.push(Object.assign({ layer: 'primary' }, a));
   });
 
   if (measuredMove && measuredMove.direction && measuredMove.baseHigh != null && measuredMove.baseLow != null) {
     ann.push({
       kind: 'bracket',
-      label: measuredMove.label || '',
+      label: 'base range',
       fromIndex: measuredMove.baseStartIndex,
-      toIndex: measuredMove.breakoutIndex,
+      toIndex: measuredMove.baseEndIndex != null ? measuredMove.baseEndIndex : measuredMove.breakoutIndex,
       baseLow: measuredMove.baseLow,
       baseHigh: measuredMove.baseHigh,
+      direction: measuredMove.direction,
       layer: 'primary',
     });
     ann.push({
@@ -1668,106 +1718,156 @@ function buildChartAnnotations(pick, measuredMove, fibExtensions, allCandidates,
   }
 
   fibExtensions.forEach((f) => {
-    if (f.drawOnChart) {
-      ann.push({
-        kind: 'horizontal',
-        label: f.label,
-        price: f.price,
-        style: 'fib',
-        layer: 'secondary',
-      });
-    }
+    if (!f.drawOnChart) return;
+    ann.push({
+      kind: 'horizontal',
+      label: String(f.level),
+      price: f.price,
+      style: f.level >= 2.5 ? 'fib262' : 'fib161',
+      layer: 'secondary',
+    });
   });
 
-  const primaryCount = (pick.annotations || []).filter((a) => a.layer !== 'secondary').length;
-  if (primaryCount <= 2 && CROWDED_PRIMARY.indexOf(pick.type) >= 0) {
-    const desc = allCandidates.find((c) => c && c.type === '下降壓力線突破');
-    if (desc && pick.type !== '下降壓力線突破') {
-      (desc.annotations || []).slice(0, 2).forEach((a) => {
-        ann.push(Object.assign({ layer: 'secondary' }, a));
-      });
-    }
+  if (
+    measuredMove &&
+    measuredMove.projectionPrice != null &&
+    measuredMove.direction &&
+    fibExtensions.length
+  ) {
+    ann.push({
+      kind: 'horizontal',
+      label: 'projection',
+      price: measuredMove.projectionPrice,
+      style: 'projection',
+      layer: 'secondary',
+    });
   }
 
-  return ann.slice(0, 16);
+  let secondaryAdded = 0;
+  if (
+    cupLike &&
+    secondaryAdded < 1 &&
+    NO_CUP_SECONDARY.indexOf(pick.type) < 0 &&
+    pick.type !== '杯柄型態'
+  ) {
+    (cupLike.annotations || []).slice(0, 2).forEach((a) => {
+      ann.push(
+        Object.assign({ layer: 'secondary', faint: true }, a, {
+          style: a.style === 'cup' ? 'cup-faint' : a.style || 'cup-faint',
+        })
+      );
+    });
+    secondaryAdded = 1;
+  }
+
+  return ann.slice(0, 14);
 }
 
-function mergeMorphAnnotations(pick, measuredMove, fibExtensions, allCandidates, norm, series) {
-  return buildChartAnnotations(pick, measuredMove, fibExtensions, allCandidates, norm, series);
+function mergeMorphAnnotations(pick, measuredMove, fibExtensions, allCandidates, norm, series, cupLike) {
+  return buildChartAnnotations(
+    pick,
+    measuredMove,
+    fibExtensions,
+    allCandidates,
+    norm,
+    series,
+    cupLike
+  );
 }
 
 function detectCupHandle(series, norm, meta) {
-  if (series.length < 120) return null;
-  if (!meta.sufficient && series.length < 120) return null;
+  if (series.length < 150) return null;
   const n = series.length;
-  const leftEnd = Math.floor(n * 0.38);
-  const cupEnd = Math.floor(n * 0.7);
+  const handleLen = Math.min(28, Math.max(5, Math.floor(n * 0.1)));
+  const cupEnd = n - handleLen;
+  const leftEnd = Math.floor(cupEnd * 0.42);
   const left = series.slice(0, leftEnd);
   const cup = series.slice(leftEnd, cupEnd);
   const handle = series.slice(cupEnd);
-  if (left.length < 15 || cup.length < 25 || handle.length < 5) return null;
+  if (left.length < 16 || cup.length < 24 || handle.length < 5 || handle.length > 30) return null;
 
   const leftRim = Math.max.apply(null, left.map((r) => r.high));
   const cupLow = Math.min.apply(null, cup.map((r) => r.low));
   const cupLowIdx = leftEnd + cup.findIndex((r) => r.low === cupLow);
   const rightRim = Math.max.apply(null, handle.map((r) => r.high));
-  const neckline = Math.max(leftRim, rightRim * 0.92);
+  const neckline = Math.max(leftRim, rightRim);
   const depthPct = (neckline - cupLow) / neckline;
   if (depthPct < 0.15 || depthPct > 0.65) return null;
-  if (left[0].close <= cupLow * 1.05) return null;
+  if (cupLowIdx <= leftEnd + 3 || cupLowIdx >= cupEnd - 3) return null;
+  if (rightRim < leftRim * 0.78) return null;
 
-  const cupSlice = cup.map((r) => r.low);
-  const mid = Math.floor(cupSlice.length / 2);
-  const flatBottom =
-    Math.abs(cupSlice[mid] - cupLow) / cupLow < 0.04 ||
-    (cupSlice.slice(0, mid).reduce((s, v) => s + v, 0) / mid >= cupLow * 0.98 &&
-      cupSlice.slice(mid).reduce((s, v) => s + v, 0) / (cupSlice.length - mid) >= cupLow * 0.98);
-  if (!flatBottom) return null;
+  const plateau = countLowPlateau(cup, cupLow, 0.06);
+  if (plateau < 6) return null;
 
-  const vShape = cupLowIdx > leftEnd + 2 && cupLowIdx < cupEnd - 2 && cup.length < 18;
+  const cupSpan = cup.length;
+  const vShape = cupSpan < 16 && cupLowIdx > leftEnd + 4 && cupLowIdx < cupEnd - 4;
+  if (vShape) return null;
+
+  const handleHigh = Math.max.apply(null, handle.map((r) => r.high));
   const handleLow = Math.min.apply(null, handle.map((r) => r.low));
-  const handlePull = (Math.max.apply(null, handle.map((r) => r.high)) - handleLow) / (neckline - cupLow);
-  if (handlePull > 0.55) return null;
+  const handlePull = (handleHigh - handleLow) / (neckline - cupLow);
+  if (handlePull > 0.5) return null;
+
+  const ma20 = series[n - 1].ma20;
+  if (Number.isFinite(ma20) && handleLow < ma20 * 0.85) return null;
 
   const close = norm.close;
   let state = '杯底成形';
+  if (rightRim >= leftRim * 0.8 && close < neckline * 0.98) state = '右側回升';
   if (handle.length >= 5 && close < neckline) state = '柄部整理';
-  if (relPct(close, neckline) >= -10 && close < neckline) state = '頸線附近';
-  if (rightRim >= leftRim * 0.85 && close < neckline) state = '右側回升';
+  if (relPct(close, neckline) != null && relPct(close, neckline) >= -5 && close < neckline * 1.01) {
+    state = '頸線附近';
+  }
   if (close >= neckline * 1.01) state = '頸線突破';
   if (close >= neckline * 1.05) state = '突破延伸';
 
-  let confidence = 60;
-  if (handle.length >= 5) confidence += 10;
-  if (norm.volume_ratio >= 1.1) confidence += 5;
-  if (close >= neckline) confidence += 10;
-  if (flatBottom) confidence += 5;
-  if (vShape) confidence -= 15;
-  if (!meta.sufficient) confidence = Math.min(confidence, 45);
+  let confidence = 58;
+  if (plateau >= 10) confidence += 8;
+  if (handle.length >= 5 && handle.length <= 25) confidence += 8;
+  if (rightRim >= leftRim * 0.88) confidence += 6;
+  if (norm.volume_ratio >= 1.05) confidence += 4;
+  if (relPct(close, neckline) != null && relPct(close, neckline) >= -5) confidence += 6;
+  if (close >= neckline) confidence += 8;
+  if (!meta.sufficient) confidence = Math.min(confidence, 48);
 
-  const cupPoints = [
-    { index: 0, price: left[0].close },
-    { index: cupLowIdx, price: cupLow },
-    { index: cupEnd, price: series[cupEnd].close },
-  ];
+  const cupPoints = buildCupCurvePoints(
+    n,
+    leftEnd,
+    cupLowIdx,
+    cupEnd,
+    leftRim,
+    cupLow,
+    rightRim,
+    close
+  );
+  const handleTop = handleHigh;
+  const handleBot = handleLow;
 
   return {
     type: '杯柄型態',
     state,
-    confidence: Math.min(88, Math.max(0, confidence)),
+    confidence: Math.min(90, Math.max(0, confidence)),
     summary:
-      '中期形成杯狀底部，右側回升後在頸線附近整理，屬杯柄型態雛形。',
+      '中期杯狀底部成形，右側回升並在頸線區整理，具杯柄型態結構。',
     reasons: [
-      '左側高點與右側高點形成杯口',
-      '中段低點鈍化',
+      '左側杯口與右側杯口形成頸線區',
+      '杯底低位鈍化',
       '右側回升接近頸線',
-      handle.length >= 5 ? '柄部整理幅度未破壞杯型' : '杯底成形中',
+      handle.length >= 5 ? '柄部整理未破壞杯型深度' : '杯底成形中',
     ],
     annotations: [
       { kind: 'horizontal', label: '頸線', price: neckline, style: 'neckline' },
       { kind: 'cupcurve', label: '杯體', points: cupPoints, style: 'cup' },
-      { kind: 'zone', label: '柄部', startIndex: cupEnd, endIndex: n - 1, style: 'handle' },
-      ...(close >= neckline
+      {
+        kind: 'zone',
+        label: '柄部',
+        startIndex: cupEnd,
+        endIndex: n - 1,
+        style: 'handle',
+        topPrice: handleTop,
+        bottomPrice: handleBot,
+      },
+      ...(close >= neckline * 1.005
         ? [{ kind: 'marker', label: '突破', index: n - 1, price: close, style: 'breakout' }]
         : []),
     ],
@@ -1776,6 +1876,8 @@ function detectCupHandle(series, norm, meta) {
       support: cupLow,
       resistance: neckline,
       cupLow,
+      handleStart: cupEnd,
+      handleEnd: n - 1,
     },
   };
 }
@@ -1972,9 +2074,12 @@ function detectMorphology(record) {
   add(detectArcBottom(series, norm, meta));
   add(detectBox(series, norm));
 
-  candidates.sort(
-    (a, b) => MORPH_PRIORITY.indexOf(a.type) - MORPH_PRIORITY.indexOf(b.type)
-  );
+  candidates.sort((a, b) => {
+    const pa = MORPH_PRIORITY.indexOf(a.type);
+    const pb = MORPH_PRIORITY.indexOf(b.type);
+    if (pa !== pb) return pa - pb;
+    return (b.confidence || 0) - (a.confidence || 0);
+  });
 
   if (!candidates.length) {
     const empty = emptyMorphology('目前沒有足夠明確的形態學結構。');
@@ -1985,6 +2090,7 @@ function detectMorphology(record) {
   }
 
   const pick = candidates[0];
+  const cupLike = detectCupLikeShape(series, norm, meta);
   const measuredMove = buildMeasuredMove(pick, series, norm);
   const fibExtensions = buildFibExtensions(pick, series, norm, measuredMove);
   const chartAnnotations = mergeMorphAnnotations(
@@ -1993,7 +2099,8 @@ function detectMorphology(record) {
     fibExtensions,
     candidates,
     norm,
-    series
+    series,
+    cupLike
   );
   const primary = {
     type: pick.type,
@@ -2009,7 +2116,6 @@ function detectMorphology(record) {
     state: c.state,
     confidence: c.confidence,
   }));
-  const cupLike = detectCupLikeShape(series, norm, meta);
   if (
     cupLike &&
     !secondary.some((s) => s.type === '杯柄型態' || s.type === '杯型底雛形')
@@ -2019,16 +2125,6 @@ function detectMorphology(record) {
       state: cupLike.state,
       confidence: cupLike.confidence,
     });
-  }
-  const drawCupOnChart =
-    cupLike &&
-    CROWDED_PRIMARY.indexOf(pick.type) < 0 &&
-    chartAnnotations.length <= 8;
-  if (drawCupOnChart && cupLike.annotations) {
-    cupLike.annotations.forEach((a) => {
-      chartAnnotations.push(Object.assign({ layer: 'secondary' }, a));
-    });
-    primary.annotations = chartAnnotations;
   }
 
   return {
