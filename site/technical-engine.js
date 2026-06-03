@@ -458,10 +458,265 @@
     return hit ? normalizeRecord(hit) : null;
   }
 
+  /** 相對目標價的偏離百分比：(close - target) / target * 100 */
+  function relPct(close, target) {
+    if (!Number.isFinite(close) || !Number.isFinite(target) || target === 0) return null;
+    return ((close - target) / target) * 100;
+  }
+
+  /** 接近目標（在 target 下方 0～pct% 或已達/超過） */
+  function nearBelow(close, target, pct) {
+    if (!Number.isFinite(close) || !Number.isFinite(target)) return false;
+    const d = relPct(close, target);
+    return d != null && d >= -pct && d <= 0;
+  }
+
+  function makeScanItem(norm, analysis, reason) {
+    return {
+      code: norm.code,
+      name: norm.name,
+      close: norm.close,
+      change_pct: norm.change_pct,
+      reason,
+      labels: (analysis.labels || []).slice(0, 4),
+      scores: { ...analysis.scores },
+    };
+  }
+
+  const SCANNER_BUCKETS = [
+    { key: 'bullishTrend', title: '趨勢偏多', desc: '站上 MA20、短均線偏多，且尚未觸及 BOLL 上緣。' },
+    { key: 'nearBreakout', title: '接近突破', desc: '接近 20 日前高，觀察是否有效突破。' },
+    { key: 'nearSupport', title: '支撐附近', desc: '回到 MA20、近期低點或 BOLL 下緣附近的技術支撐區。' },
+    { key: 'healthyVolume', title: '健康放量', desc: '量能放大但未達爆量，價量結構仍屬健康。' },
+    { key: 'extendedHot', title: '延伸偏熱', desc: '距 MA20 已拉開或連漲，短線追價風險升高。' },
+    { key: 'bollRisk', title: 'BOLL 風險', desc: '接近日線或週線 BOLL 上緣，需留意延伸風險。' },
+    { key: 'highRiskExtension', title: '高風險延伸', desc: '多項過熱條件同時出現，不宜以新進追價角度解讀。' },
+  ];
+
+  function classifyRecord(norm, analysis) {
+    const close = norm.close;
+    const ma5 = norm.ma5;
+    const ma10 = norm.ma10;
+    const ma20 = norm.ma20;
+    const ma60 = norm.ma60;
+    const bollUb = norm.boll_ub;
+    const bollLb = norm.boll_lb;
+    const wBollUb = norm.w_boll_ub;
+    const prevHigh = norm.prev_high20;
+    const recentLow = norm.recent_low10;
+    const vr = norm.volume_ratio;
+    const distMa20 = norm.distance_ma20_pct;
+    const upper = norm.upper_shadow_ratio;
+    const consec = norm.consecutive_up;
+    const scores = analysis.scores;
+    const trend = analysis.trend;
+    const extension = analysis.extension;
+
+    const hits = {
+      bullishTrend: false,
+      nearBreakout: false,
+      nearSupport: false,
+      healthyVolume: false,
+      extendedHot: false,
+      bollRisk: false,
+      highRiskExtension: false,
+    };
+    const reasons = {};
+    const sortKeys = {};
+
+    if (!Number.isFinite(close)) return { hits, reasons, sortKeys };
+
+    // A. 趨勢偏多
+    if (
+      Number.isFinite(ma20) &&
+      close > ma20 &&
+      Number.isFinite(ma5) &&
+      Number.isFinite(ma10) &&
+      ma5 >= ma10 &&
+      scores.trend >= 70 &&
+      (!Number.isFinite(bollUb) || close < bollUb) &&
+      scores.risk < 85
+    ) {
+      hits.bullishTrend = true;
+      reasons.bullishTrend = '收盤站上 MA20，短均線維持多頭排列。';
+      sortKeys.bullishTrend = scores.trend;
+    }
+
+    // B. 接近突破
+    if (Number.isFinite(prevHigh) && Number.isFinite(ma20) && close > ma20) {
+      const dHigh = relPct(close, prevHigh);
+      if (dHigh != null && dHigh >= -3 && dHigh <= 1) {
+        hits.nearBreakout = true;
+        reasons.nearBreakout = '接近 20 日前高，仍需觀察是否有效突破。';
+        sortKeys.nearBreakout = Math.abs(dHigh);
+      }
+    }
+
+    // C. 支撐附近
+    const nearMa20 =
+      Number.isFinite(ma20) && Math.abs(relPct(close, ma20)) <= 3;
+    const nearLow =
+      Number.isFinite(recentLow) &&
+      close >= recentLow &&
+      relPct(close, recentLow) != null &&
+      relPct(close, recentLow) >= 0 &&
+      relPct(close, recentLow) <= 5;
+    const nearBollLb =
+      Number.isFinite(bollLb) &&
+      close >= bollLb &&
+      relPct(close, bollLb) != null &&
+      relPct(close, bollLb) >= 0 &&
+      relPct(close, bollLb) <= 5;
+    const bearExclude =
+      Number.isFinite(ma60) && close < ma60 && trend.state === '空頭';
+
+    if ((nearMa20 || nearLow || nearBollLb) && !bearExclude) {
+      hits.nearSupport = true;
+      reasons.nearSupport =
+        '股價回到 MA20 / 近期低點附近，屬技術支撐觀察區。';
+      const dists = [];
+      if (nearMa20) dists.push(Math.abs(relPct(close, ma20)));
+      if (nearLow) dists.push(Math.abs(relPct(close, recentLow)));
+      if (nearBollLb) dists.push(Math.abs(relPct(close, bollLb)));
+      sortKeys.nearSupport = Math.min.apply(null, dists);
+    }
+
+    // D. 健康放量
+    if (
+      Number.isFinite(vr) &&
+      vr >= 1.3 &&
+      vr <= 3 &&
+      Number.isFinite(ma20) &&
+      close > ma20 &&
+      (!Number.isFinite(upper) || upper < 0.35)
+    ) {
+      hits.healthyVolume = true;
+      reasons.healthyVolume = '量能放大但未達爆量，價量結構仍屬健康。';
+      sortKeys.healthyVolume = vr;
+    }
+
+    // E. 延伸偏熱
+    const extHot =
+      (Number.isFinite(distMa20) && distMa20 >= 5 && distMa20 <= 10) ||
+      extension.state === '偏熱' ||
+      consec >= 3;
+    if (extHot) {
+      hits.extendedHot = true;
+      reasons.extendedHot = '距 MA20 已有一段距離，短線追價風險升高。';
+      sortKeys.extendedHot = Number.isFinite(distMa20) ? distMa20 : 5;
+    }
+
+    // F. BOLL 風險
+    const nearDailyBoll =
+      Number.isFinite(bollUb) &&
+      (close >= bollUb ||
+        (relPct(close, bollUb) != null &&
+          relPct(close, bollUb) >= -3 &&
+          relPct(close, bollUb) <= 3));
+    const nearWeeklyBoll =
+      Number.isFinite(wBollUb) &&
+      (close >= wBollUb ||
+        (relPct(close, wBollUb) != null &&
+          relPct(close, wBollUb) >= -3 &&
+          relPct(close, wBollUb) <= 3));
+
+    if (nearDailyBoll || nearWeeklyBoll) {
+      hits.bollRisk = true;
+      reasons.bollRisk = '接近日線或週線 BOLL 上緣，需留意延伸風險。';
+      const d1 = Number.isFinite(bollUb) ? Math.abs(relPct(close, bollUb)) : 999;
+      const d2 = Number.isFinite(wBollUb) ? Math.abs(relPct(close, wBollUb)) : 999;
+      sortKeys.bollRisk = Math.min(d1, d2);
+    }
+
+    // G. 高風險延伸（任二）
+    let riskCount = 0;
+    if (Number.isFinite(distMa20) && distMa20 > 10) riskCount += 1;
+    if (Number.isFinite(bollUb) && close >= bollUb) riskCount += 1;
+    if (Number.isFinite(wBollUb) && close >= wBollUb) riskCount += 1;
+    if (upper > 0.35) riskCount += 1;
+    if (consec >= 3) riskCount += 1;
+    if (Number.isFinite(vr) && vr > 3) riskCount += 1;
+
+    if (riskCount >= 2) {
+      hits.highRiskExtension = true;
+      reasons.highRiskExtension =
+        '多項過熱條件同時出現，不適合以新進追價角度解讀。';
+      sortKeys.highRiskExtension = riskCount;
+    }
+
+    return { hits, reasons, sortKeys };
+  }
+
+  function scan(poolOrRecords, asOf) {
+    const records = Array.isArray(poolOrRecords)
+      ? poolOrRecords
+      : poolOrRecords && poolOrRecords.records
+        ? poolOrRecords.records
+        : [];
+    const as_of =
+      asOf ||
+      (poolOrRecords && poolOrRecords.as_of) ||
+      (records[0] && normalizeRecord(records[0])?.as_of) ||
+      '';
+
+    const buckets = {
+      bullishTrend: [],
+      nearBreakout: [],
+      nearSupport: [],
+      healthyVolume: [],
+      extendedHot: [],
+      bollRisk: [],
+      highRiskExtension: [],
+    };
+
+    records.forEach((raw) => {
+      const norm = normalizeRecord(raw);
+      if (!norm || !Number.isFinite(norm.close)) return;
+
+      let analysis;
+      try {
+        analysis = analyze(raw);
+      } catch (e) {
+        return;
+      }
+
+      const { hits, reasons, sortKeys } = classifyRecord(norm, analysis);
+
+      SCANNER_BUCKETS.forEach(({ key }) => {
+        if (!hits[key]) return;
+        buckets[key].push({
+          item: makeScanItem(norm, analysis, reasons[key]),
+          sortKey: sortKeys[key],
+        });
+      });
+    });
+
+    buckets.bullishTrend.sort((a, b) => b.sortKey - a.sortKey);
+    buckets.nearBreakout.sort((a, b) => a.sortKey - b.sortKey);
+    buckets.nearSupport.sort((a, b) => a.sortKey - b.sortKey);
+    buckets.healthyVolume.sort((a, b) => b.sortKey - a.sortKey);
+    buckets.extendedHot.sort((a, b) => b.sortKey - a.sortKey);
+    buckets.bollRisk.sort((a, b) => a.sortKey - b.sortKey);
+    buckets.highRiskExtension.sort((a, b) => b.sortKey - a.sortKey);
+
+    const trimmed = {};
+    SCANNER_BUCKETS.forEach(({ key }) => {
+      trimmed[key] = buckets[key].slice(0, 8).map((x) => x.item);
+    });
+
+    return {
+      as_of,
+      total: records.length,
+      buckets: trimmed,
+    };
+  }
+
   return {
     analyze,
     normalizeRecord,
     findRecord,
+    scan,
+    SCANNER_BUCKETS,
     NEAR_PCT,
     BOLL_NEAR,
   };

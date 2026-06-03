@@ -54,10 +54,17 @@ assert(nf.close === 100 && nf.w_boll_ub === 115, 'flat normalize');
 const miss = TE.findRecord(pool, '999999');
 assert(miss === null, '999999 not found');
 
+const scan = TE.scan(data.records, data.as_of);
+const bucketCounts = {};
+TE.SCANNER_BUCKETS.forEach((m) => {
+  bucketCounts[m.key] = (scan.buckets[m.key] || []).length;
+});
+
 console.log(JSON.stringify({
   records: data.records.length,
   as_of: data.as_of,
   test2330: { name: n2330.name, close: n2330.close, trend: a2330.trend.state, series: n2330.series.length },
+  bucketCounts,
   errors,
 }, null, 2));
 
