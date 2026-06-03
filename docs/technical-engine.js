@@ -1,5 +1,5 @@
 /**
- * KW Technical Spider v0.4.2 — 形態結構視覺化 + 資料品質
+ * KW Technical Spider v0.4.3 — 形態線可視化與訊號清理
  * 僅輸出技術狀態與風險提示，不提供買賣建議。
  */
 (function (root, factory) {
@@ -789,6 +789,13 @@
         (mm.measuredPct != null
           ? (mm.direction === 'up' ? '+' : '-') + Math.round(mm.measuredPct) + '% projection'
           : null);
+      const fibUi =
+        morph.fibExtensions && morph.fibExtensions.length
+          ? morph.fibExtensions
+              .map((f) => (f.level != null ? String(f.level) : ''))
+              .filter(Boolean)
+              .join('、')
+          : '';
 
       SCANNER_BUCKETS.forEach(({ key }) => {
         if (!hits[key]) return;
@@ -803,6 +810,7 @@
               morphologyConfidence: morph.primary.confidence,
               measuredLabel: measuredLabel,
               measuredExtension: mm.currentExtensionPct,
+              fibUi: fibUi,
             })
           ),
           sortKey: sortKeys[key],
@@ -1074,22 +1082,35 @@ function detectFalseBreakout(series, norm, diag) {
   const longUpper = norm.upper_shadow_ratio > 0.35;
   if (!broke || (!failedClose && !longUpper)) return null;
   const n = series.length - 1;
+  const ann = [
+    { kind: 'horizontal', label: '前高壓力', price: pressure, style: 'neckline', layer: 'primary' },
+    {
+      kind: 'marker',
+      label: '假突破風險',
+      index: n,
+      price: last.high,
+      style: 'failed',
+      layer: 'primary',
+    },
+  ];
+  if (longUpper) {
+    ann.push({
+      kind: 'wick',
+      label: '長上影',
+      index: n,
+      price: last.high,
+      closePrice: close,
+      layer: 'primary',
+    });
+  }
   return {
     type: '假突破風險',
     state: '假突破風險',
     confidence: longUpper && failedClose ? 78 : 65,
     summary: '盤中突破前高但收盤未能有效站穩，且伴隨長上影，需降權解讀。',
     reasons: ['觸及前高壓力', failedClose ? '收盤回到壓力線下' : '長上影偏高', longUpper ? '上影比例偏高' : ''].filter(Boolean),
-    annotations: [
-      { kind: 'horizontal', label: '前高壓力線', price: pressure, style: 'neckline' },
-      {
-        kind: 'marker',
-        label: '假突破',
-        index: n,
-        price: last.high,
-        style: failedClose ? 'failed' : 'breakout',
-      },
-    ],
+    annotations: ann,
+    structure: { resistance: pressure, neckline: pressure },
   };
 }
 
@@ -1164,8 +1185,17 @@ function detectDescendingBreakout(series, norm, diag) {
           { index: pts[0].index, price: linePriceAt(reg, pts[0].index) },
           { index: n, price: lineP },
         ],
+        style: 'resistance',
+        layer: 'primary',
       },
-      { kind: 'marker', label: '突破點', index: n, price: close },
+      {
+        kind: 'marker',
+        label: close > lineP * 1.02 ? '突破點' : '回測中',
+        index: n,
+        price: close,
+        style: 'breakout',
+        layer: 'primary',
+      },
     ],
   };
 }
@@ -1476,48 +1506,152 @@ function buildMeasuredMove(candidate, series, norm) {
   return empty;
 }
 
-function buildFibExtensions(candidate, series, norm) {
+function fibDrawOnChart(price, close) {
+  if (!Number.isFinite(price) || !Number.isFinite(close) || close === 0) return false;
+  return Math.abs(price - close) / close <= 1;
+}
+
+function buildFibExtensions(candidate, series, norm, measuredMove) {
   const out = [];
-  if (!candidate || series.length < MORPH_MIN_BARS) return out;
-  const ok = ['杯柄型態', '圓弧底', '平台突破', 'U型底'];
-  if (ok.indexOf(candidate.type) < 0) return out;
-  const st = candidate.structure || {};
-  const baseLow = st.support || Math.min.apply(null, series.map((r) => r.low));
-  let baseHigh = st.neckline || st.resistance;
-  if (candidate.type === '平台突破') {
-    const look = series.slice(Math.max(0, series.length - 45), series.length - 5);
-    baseHigh = Math.max.apply(null, look.map((r) => r.high));
-  }
-  if (!Number.isFinite(baseLow) || !Number.isFinite(baseHigh) || baseHigh <= baseLow) return out;
+  if (!candidate || !series.length) return out;
+  const close = norm.close;
+  let baseHigh;
+  let baseLow;
+  let direction = 'up';
+
   if (
-    (candidate.type === '杯柄型態' || candidate.type === '平台突破') &&
-    norm.close < baseHigh * 1.01
+    measuredMove &&
+    measuredMove.direction &&
+    Number.isFinite(measuredMove.baseHigh) &&
+    Number.isFinite(measuredMove.baseLow) &&
+    measuredMove.baseHigh > measuredMove.baseLow
   ) {
-    return out;
+    baseHigh = measuredMove.baseHigh;
+    baseLow = measuredMove.baseLow;
+    direction = measuredMove.direction;
+  } else {
+    const noisy = ['假突破風險', 'BOLL壓縮', '箱型整理', '三角收斂'];
+    if (noisy.indexOf(candidate.type) >= 0) return out;
+    const st = candidate.structure || {};
+    baseLow = st.support || st.cupLow || st.channelLower;
+    baseHigh = st.neckline || st.resistance || st.channelUpper;
+    if (!Number.isFinite(baseLow) || !Number.isFinite(baseHigh)) {
+      const rr = resolveMorphBaseRange(candidate, series);
+      baseHigh = rr.baseHigh;
+      baseLow = rr.baseLow;
+    }
+    if (!Number.isFinite(baseLow) || !Number.isFinite(baseHigh) || baseHigh <= baseLow) {
+      return out;
+    }
+    const broke =
+      candidate.state === '已突破' ||
+      candidate.state === '突破延伸' ||
+      candidate.state === '頸線突破' ||
+      candidate.state === '通道突破';
+    if (!broke) return out;
+    direction = close >= baseHigh * 0.98 ? 'up' : close <= baseLow * 1.02 ? 'down' : 'up';
   }
+
   const range = baseHigh - baseLow;
-  const up = norm.close >= baseHigh * 0.99;
-  [1.618, 2.618].forEach((lv) => {
-    const price = up
-      ? baseLow + range * lv
-      : baseHigh - range * lv;
+  if (range / baseHigh < 0.03 || range / baseHigh > 0.85) return out;
+
+  const levels = [1.618, 2.618];
+  levels.forEach((lv) => {
+    const price =
+      direction === 'down'
+        ? baseHigh - range * lv
+        : baseLow + range * lv;
     out.push({
       level: lv,
       price: Math.round(price * 100) / 100,
       label: lv + ' extension reference',
+      drawOnChart: fibDrawOnChart(price, close),
     });
   });
   return out;
 }
 
-function mergeMorphAnnotations(primary, measuredMove, fibExtensions) {
-  const ann = (primary.annotations || []).slice(0, 10);
-  if (measuredMove && measuredMove.direction && measuredMove.projectionPrice != null) {
+function detectCupLikeShape(series, norm, meta) {
+  if (!meta || series.length < 120) return null;
+  const n = series.length;
+  const leftEnd = Math.floor(n * 0.32);
+  const midEnd = Math.floor(n * 0.72);
+  const left = series.slice(0, leftEnd);
+  const mid = series.slice(leftEnd, midEnd);
+  const right = series.slice(midEnd);
+  if (left.length < 12 || mid.length < 20 || right.length < 8) return null;
+
+  const leftHigh = Math.max.apply(null, left.map((r) => r.high));
+  const cupLow = Math.min.apply(null, mid.map((r) => r.low));
+  const cupLowRel = mid.findIndex((r) => r.low === cupLow);
+  const rangeHigh = Math.max.apply(null, series.map((r) => r.high));
+  const rangeLow = Math.min.apply(null, series.map((r) => r.low));
+  const span = rangeHigh - rangeLow;
+  if (span <= 0) return null;
+
+  const recovery = (norm.close - cupLow) / span;
+  if (recovery < 0.6) return null;
+  if (leftHigh < cupLow * 1.08) return null;
+
+  const nearLow = mid.slice(Math.max(0, cupLowRel - 5), Math.min(mid.length, cupLowRel + 6));
+  if (nearLow.length < 5) return null;
+  const avgNear = nearLow.reduce((s, r) => s + r.low, 0) / nearLow.length;
+  if (Math.abs(avgNear - cupLow) / cupLow > 0.06) return null;
+
+  const vTurn = cupLowRel > 2 && cupLowRel < mid.length - 2 && mid.length < 14;
+  if (vTurn) return null;
+
+  const neckline = Math.max(leftHigh, rangeHigh * 0.92);
+  const close = norm.close;
+  let state = '右側回升';
+  const handleZone = right.length >= 5 && close < neckline;
+  if (handleZone) state = '柄部整理';
+  else if (relPct(close, neckline) != null && relPct(close, neckline) >= -8 && close < neckline) {
+    state = '頸線附近';
+  } else if (close < neckline * 0.95) {
+    state = '尚未突破';
+  }
+
+  return {
+    type: '杯型底雛形',
+    state,
+    confidence: 52,
+    summary: '中期低點鈍化後右側回升，具杯型底雛形，尚未達正式杯柄標準。',
+    reasons: ['左側相對偏高', '中段低點整理', '右側回升至區間上段'],
+    annotations: [
+      { kind: 'horizontal', label: '頸線', price: neckline, style: 'neckline' },
+      {
+        kind: 'cupcurve',
+        label: '杯型輪廓',
+        points: [
+          { index: 0, price: left[0].close },
+          { index: leftEnd + cupLowRel, price: cupLow },
+          { index: n - 1, price: close },
+        ],
+      },
+    ],
+    structure: { neckline, support: cupLow, cupLow },
+  };
+}
+
+const CROWDED_PRIMARY = ['假突破風險', '上升通道', '下降通道', '反彈旗形', '下降壓力線突破'];
+
+function buildChartAnnotations(pick, measuredMove, fibExtensions, allCandidates, norm, series) {
+  const ann = [];
+  const primaryAnn = (pick.annotations || []).slice();
+  primaryAnn.forEach((a) => {
+    ann.push(Object.assign({ layer: a.layer || 'primary' }, a));
+  });
+
+  if (measuredMove && measuredMove.direction && measuredMove.baseHigh != null && measuredMove.baseLow != null) {
     ann.push({
-      kind: 'horizontal',
-      label: '量測參考',
-      price: measuredMove.projectionPrice,
-      style: 'measure',
+      kind: 'bracket',
+      label: measuredMove.label || '',
+      fromIndex: measuredMove.baseStartIndex,
+      toIndex: measuredMove.breakoutIndex,
+      baseLow: measuredMove.baseLow,
+      baseHigh: measuredMove.baseHigh,
+      layer: 'primary',
     });
     ann.push({
       kind: 'measure',
@@ -1525,17 +1659,38 @@ function mergeMorphAnnotations(primary, measuredMove, fibExtensions) {
       fromIndex: measuredMove.breakoutIndex,
       fromPrice: measuredMove.breakoutPrice || measuredMove.baseHigh,
       toPrice: measuredMove.projectionPrice,
+      direction: measuredMove.direction,
+      layer: 'primary',
     });
   }
-  fibExtensions.slice(0, 2).forEach((f) => {
-    ann.push({
-      kind: 'horizontal',
-      label: f.label,
-      price: f.price,
-      style: 'fib',
-    });
+
+  fibExtensions.forEach((f) => {
+    if (f.drawOnChart) {
+      ann.push({
+        kind: 'horizontal',
+        label: f.label,
+        price: f.price,
+        style: 'fib',
+        layer: 'secondary',
+      });
+    }
   });
-  return ann;
+
+  const primaryCount = (pick.annotations || []).filter((a) => a.layer !== 'secondary').length;
+  if (primaryCount <= 2 && CROWDED_PRIMARY.indexOf(pick.type) >= 0) {
+    const desc = allCandidates.find((c) => c && c.type === '下降壓力線突破');
+    if (desc && pick.type !== '下降壓力線突破') {
+      (desc.annotations || []).slice(0, 2).forEach((a) => {
+        ann.push(Object.assign({ layer: 'secondary' }, a));
+      });
+    }
+  }
+
+  return ann.slice(0, 16);
+}
+
+function mergeMorphAnnotations(pick, measuredMove, fibExtensions, allCandidates, norm, series) {
+  return buildChartAnnotations(pick, measuredMove, fibExtensions, allCandidates, norm, series);
 }
 
 function detectCupHandle(series, norm, meta) {
@@ -1651,7 +1806,12 @@ function detectChannel(series, norm, diag, ascending) {
     else state = '通道中段';
   }
   const label = ascending ? '上升通道' : '下降通道';
-  const zoneLabel = ascending ? '上升通道' : label === '下降通道' ? '下降通道' : '通道';
+  const zoneLabel = ascending ? '上升通道' : '下降通道';
+  let posLabel = state;
+  if (state === '通道突破') posLabel = '通道突破';
+  else if (state === '通道跌破') posLabel = '通道跌破';
+  else if (state === '通道上緣') posLabel = '通道上緣';
+  else if (state === '通道下緣') posLabel = '通道下緣';
   return {
     type: label,
     state,
@@ -1667,21 +1827,23 @@ function detectChannel(series, norm, diag, ascending) {
     annotations: [
       {
         kind: 'trendline',
-        label: ascending ? '上升壓力線' : '下降壓力線',
+        label: '通道上緣',
         points: [
           { index: hiPts[0].index, price: linePriceAt(regH, hiPts[0].index) },
           { index: n, price: top },
         ],
         style: 'resistance',
+        layer: 'primary',
       },
       {
         kind: 'trendline',
-        label: ascending ? '上升支撐線' : '下降支撐線',
+        label: '通道下緣',
         points: [
           { index: loPts[0].index, price: linePriceAt(regL, loPts[0].index) },
           { index: n, price: bot },
         ],
         style: 'support',
+        layer: 'primary',
       },
       {
         kind: 'zone',
@@ -1691,6 +1853,20 @@ function detectChannel(series, norm, diag, ascending) {
         style: 'channel',
         topPrice: top,
         bottomPrice: bot,
+        layer: 'primary',
+      },
+      {
+        kind: 'position',
+        label: posLabel,
+        index: n,
+        price: close,
+        style:
+          state === '通道突破'
+            ? 'breakout'
+            : state === '通道跌破'
+              ? 'breakdown'
+              : 'neutral',
+        layer: 'primary',
       },
     ],
     structure: { resistance: top, support: bot, channelUpper: top, channelLower: bot },
@@ -1807,14 +1983,22 @@ function detectMorphology(record) {
 
   const pick = candidates[0];
   const measuredMove = buildMeasuredMove(pick, series, norm);
-  const fibExtensions = buildFibExtensions(pick, series, norm);
+  const fibExtensions = buildFibExtensions(pick, series, norm, measuredMove);
+  const chartAnnotations = mergeMorphAnnotations(
+    pick,
+    measuredMove,
+    fibExtensions,
+    candidates,
+    norm,
+    series
+  );
   const primary = {
     type: pick.type,
     state: pick.state,
     confidence: pick.confidence,
     summary: pick.summary,
     reasons: pick.reasons || [],
-    annotations: mergeMorphAnnotations(pick, measuredMove, fibExtensions),
+    annotations: chartAnnotations,
     structure: pick.structure || {},
   };
   const secondary = candidates.slice(1, 4).map((c) => ({
@@ -1822,6 +2006,27 @@ function detectMorphology(record) {
     state: c.state,
     confidence: c.confidence,
   }));
+  const cupLike = detectCupLikeShape(series, norm, meta);
+  if (
+    cupLike &&
+    !secondary.some((s) => s.type === '杯柄型態' || s.type === '杯型底雛形')
+  ) {
+    secondary.push({
+      type: cupLike.type,
+      state: cupLike.state,
+      confidence: cupLike.confidence,
+    });
+  }
+  const drawCupOnChart =
+    cupLike &&
+    CROWDED_PRIMARY.indexOf(pick.type) < 0 &&
+    chartAnnotations.length <= 8;
+  if (drawCupOnChart && cupLike.annotations) {
+    cupLike.annotations.forEach((a) => {
+      chartAnnotations.push(Object.assign({ layer: 'secondary' }, a));
+    });
+    primary.annotations = chartAnnotations;
+  }
 
   return {
     primary,
@@ -1829,6 +2034,7 @@ function detectMorphology(record) {
     structure: pick.structure || {},
     measuredMove,
     fibExtensions,
+    chartAnnotations,
     candleStats: countConsecutiveCandles(series),
     dataMeta: meta,
     diagnostics,
