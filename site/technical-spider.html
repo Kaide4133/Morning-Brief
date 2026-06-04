@@ -16,9 +16,9 @@
 <nav class="masthead"><div class="masthead-inner"><div><span class="kw-mark">K</span>Kelvin Wiggly</div><div><a class="nav-link" href="/Morning-Brief/">晨報首頁</a><a class="nav-link" href="/Morning-Brief/technical-spider.html">技術線圖</a></div></div></nav>
 <main>
 <header class="hero">
-  <div class="eyebrow">KW Technical Spider v0.4.6-hotfix-3</div>
-  <h1>Annotation Label Layout Cleanup</h1>
-  <p class="subtitle">v0.4.6-hotfix-3 · 標籤排版清理 · 單檔優先 · 形態學判讀 · 60／120／250 日線圖 · 今日技術掃描 — 本地資料池</p>
+  <div class="eyebrow">KW Technical Spider v0.4.6-hotfix-4</div>
+  <h1>Latest Zone Label Thinning</h1>
+  <p class="subtitle">v0.4.6-hotfix-4 · 最新價區標籤瘦身 · 單檔優先 · 形態學判讀 · 60／120／250 日線圖 · 今日技術掃描 — 本地資料池</p>
   <p class="note">獨立技術分析核心，不是方舟晨報，也不是雷達。僅讀取本地 technical-data.json；不提供買賣建議。</p>
 </header>
 
@@ -137,7 +137,7 @@
   <div id="scannerBuckets" class="scanner-grid"></div>
 </section>
 
-<footer>KW Technical Spider v0.4.6-hotfix-3 · Annotation Label Layout Cleanup · technical-data.json</footer>
+<footer>KW Technical Spider v0.4.6-hotfix-4 · Latest Zone Label Thinning · technical-data.json</footer>
 </main>
 
 <script src="technical-engine.js"></script>
@@ -284,6 +284,56 @@
     default: 48,
   };
 
+  function shortChartLabel(text, kind) {
+    if (!text) return '';
+    const raw = String(text).trim();
+    const t = raw.toLowerCase();
+    if (t.indexOf('measured move') >= 0) {
+      return t.indexOf('beyond') >= 0 ? 'Projection beyond' : 'Projection';
+    }
+    if (t.indexOf('fibonacci') >= 0 && t.indexOf('1.618') >= 0) return 'Fib 1.618 beyond';
+    if (t.indexOf('fibonacci') >= 0 && t.indexOf('2.618') >= 0) return 'Fib 2.618 beyond';
+    if (t.indexOf('projection beyond') >= 0) return 'Projection beyond';
+    if (t === 'projection' || kind === 'projection') return 'Projection';
+    if (t.indexOf('descending resistance') >= 0) return 'resistance';
+    if (t.indexOf('failed breakout') >= 0 || kind === 'failed') return 'failed break';
+    if (t.indexOf('channel upper') >= 0 || t.indexOf('通道上緣') >= 0) return 'upper';
+    if (t.indexOf('channel lower') >= 0 || t.indexOf('通道下緣') >= 0) return 'lower';
+    if (t === '1.618') return 'Fib 1.618';
+    if (t === '2.618') return 'Fib 2.618';
+    const byKind = {
+      'rim-left': 'left rim',
+      'rim-right': 'right rim',
+      'cup-low': 'cup low',
+      neckline: 'neckline',
+      handle: 'handle',
+      breakout: 'breakout',
+      retest: 'retest',
+      'upper-wick': 'upper wick',
+      'prior-high': 'prior high',
+      'base-range': 'base range',
+    };
+    if (kind && byKind[kind]) return byKind[kind];
+    return raw.length > 22 ? raw.slice(0, 20) + '…' : raw;
+  }
+
+  function shortBadgeText(text) {
+    if (!text) return '';
+    const t = String(text);
+    if (t.indexOf('Projection') >= 0) return 'Projection beyond view';
+    if (t.indexOf('Fibonacci') >= 0 && t.indexOf('1.618') >= 0) return 'Fib 1.618 beyond';
+    if (t.indexOf('Fibonacci') >= 0 && t.indexOf('2.618') >= 0) return 'Fib 2.618 beyond';
+    return t.length > 36 ? t.slice(0, 34) + '…' : t;
+  }
+
+  function badgePriority(text) {
+    const t = String(text || '');
+    if (t.indexOf('Projection') >= 0) return 100;
+    if (t.indexOf('1.618') >= 0) return 90;
+    if (t.indexOf('2.618') >= 0) return 85;
+    return 50;
+  }
+
   function labelPriorityFor(spec) {
     const k = (spec.kind || '').toLowerCase();
     const t = (spec.text || '').toLowerCase();
@@ -313,10 +363,17 @@
       top: pad.t,
       bottom: pad.t + priceH,
     };
+    const latestZoneLabelLimit = 1;
+    let latestZoneLabelCount = 0;
     const occupied = [];
     const queue = [];
+    const pendingBadges = [];
     let maxLabels = 8;
     let placedCount = 0;
+
+    function anchorInLatestZone(ax) {
+      return ax >= latestZone.left - 4;
+    }
 
     function measure(text) {
       ctx.font = '11px JetBrains Mono, monospace';
@@ -442,16 +499,138 @@
 
     function scoreCandidate(box, spec) {
       let score = 100 - (spec.tryIndex || 0) * 3;
-      if (hitsLatestZone(box, spec.allowLatestZone)) score -= 120;
+      const inLz = hitsLatestZone(box, false);
+      if (inLz) {
+        if (latestZoneLabelCount >= latestZoneLabelLimit && !spec.preferLatestZone) {
+          return -Infinity;
+        }
+        if (!spec.preferLatestZone) score -= 140;
+        else score += 8;
+      }
       if (box.right > bounds.right - 10) score -= 35;
       if (box.left < bounds.left + 2) score -= 5;
-      if (spec.preferLeft && box.left < spec.anchorX) score += 12;
+      if (spec.preferLeft && box.left < spec.anchorX) score += 14;
+      if (spec.disallowLatestZone && inLz) return -Infinity;
       return score;
     }
 
+    function placementsFor(spec) {
+      let places = spec.placements || [
+        'left-up',
+        'above',
+        'left-down',
+        'below',
+        'left-gutter',
+        'top-band',
+      ];
+      if (spec.disallowLatestZone) {
+        places = places.filter(function (p) {
+          return p !== 'right-up' && p !== 'right-down';
+        });
+      }
+      if (spec.preferLeft && places.indexOf('left-gutter') < 0) {
+        places = ['left-gutter', 'left-up', 'above', 'top-band'].concat(places);
+      }
+      return places;
+    }
+
+    function tryPlaceSpec(spec) {
+      if (placedCount >= maxLabels) return false;
+      const text = shortChartLabel(spec.text, spec.kind);
+      if (!text) return false;
+      spec = Object.assign({}, spec, { text: text });
+      let best = null;
+      let bestScore = -Infinity;
+      const tryList = placementsFor(spec);
+      tryList.forEach(function (place, idx) {
+        const cands = candidatePositions(Object.assign({}, spec, { placements: [place] }));
+        cands.forEach(function (cand) {
+          const b = cand.box;
+          if (!Number.isFinite(b.left)) return;
+          if (overlapsAny(b, GAP)) return;
+          const sc = scoreCandidate(b, Object.assign({ tryIndex: idx }, spec));
+          if (sc > bestScore) {
+            bestScore = sc;
+            best = b;
+          }
+        });
+      });
+      if (!best && (spec.priority || 0) >= LABEL_PRIORITY.measure) {
+        const gutter = candidatePositions(
+          Object.assign({}, spec, { placements: ['left-gutter', 'top-band'] })
+        );
+        for (let gi = 0; gi < gutter.length; gi++) {
+          const b = gutter[gi].box;
+          if (!overlapsAny(b, GAP) && scoreCandidate(b, spec) > -Infinity) {
+            best = b;
+            break;
+          }
+        }
+      }
+      if (!best) {
+        if (spec.badgeOnSkip) {
+          pendingBadges.push({
+            text: shortChartLabel(spec.badgeOnSkip, spec.kind),
+            priority: spec.priority || 50,
+          });
+        }
+        return false;
+      }
+      const ax = spec.anchorX;
+      const ay = spec.anchorY;
+      const inLz = hitsLatestZone(best, false);
+      if (inLz) latestZoneLabelCount += 1;
+      const drawLeader =
+        Math.abs(best.textX - ax) > 28 || Math.abs(best.textY - ay) > 24;
+      if (drawLeader) {
+        ctx.strokeStyle = spec.borderColor || 'rgba(26,19,17,.28)';
+        ctx.lineWidth = 1;
+        ctx.setLineDash([3, 3]);
+        ctx.beginPath();
+        ctx.moveTo(ax, ay);
+        ctx.lineTo(best.textX + 4, best.textY - 6);
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+      ctx.fillStyle = 'rgba(241,232,208,.92)';
+      ctx.fillRect(best.left, best.top, best.right - best.left, best.bottom - best.top);
+      ctx.strokeStyle = spec.borderColor || 'rgba(26,19,17,.22)';
+      ctx.lineWidth = 1;
+      ctx.strokeRect(best.left, best.top, best.right - best.left, best.bottom - best.top);
+      ctx.fillStyle = '#1A1311';
+      ctx.fillText(spec.text, best.textX, best.textY);
+      occupied.push({
+        left: best.left,
+        top: best.top,
+        right: best.right,
+        bottom: best.bottom,
+      });
+      placedCount += 1;
+      return true;
+    }
+
     return {
+      latestZone: latestZone,
       setMaxLabels: function (n) {
         maxLabels = n;
+      },
+      reserveLatestClose: function (x, y) {
+        occupied.push({
+          left: x - 16,
+          top: y - 16,
+          right: x + 22,
+          bottom: y + 16,
+        });
+      },
+      queueBadge: function (text, priority) {
+        if (!text) return;
+        pendingBadges.push({
+          text: shortChartLabel(text, null),
+          priority: priority != null ? priority : 50,
+        });
+      },
+      getPendingBadges: function () {
+        return pendingBadges.slice();
       },
       occupy: function (box) {
         occupied.push({
@@ -462,89 +641,28 @@
         });
       },
       register: function (spec) {
-        if (!spec || !spec.text) return;
+        if (!spec || spec.markerOnly || !spec.text) return;
         const pri = labelPriorityFor(spec);
         if (pri <= LABEL_PRIORITY.secondary && placedCount >= maxLabels - 1) return;
         queue.push(
           Object.assign({}, spec, {
             priority: pri,
-            allowLatestZone: spec.allowLatestZone || false,
+            text: shortChartLabel(spec.text, spec.kind),
+            anchorInLatest: anchorInLatestZone(spec.anchorX),
           })
         );
       },
       flush: function () {
         queue.sort(function (a, b) {
+          const aLz = a.preferLatestZone ? 1 : 0;
+          const bLz = b.preferLatestZone ? 1 : 0;
+          if (bLz !== aLz) return bLz - aLz;
           return (b.priority || 0) - (a.priority || 0);
         });
         ctx.save();
         ctx.font = '11px JetBrains Mono, monospace';
         queue.forEach(function (spec) {
-          if (placedCount >= maxLabels) return;
-          const m = measure(spec.text);
-          const candidates = candidatePositions(spec);
-          let best = null;
-          let bestScore = -Infinity;
-          candidates.forEach(function (cand, idx) {
-            const b = cand.box;
-            if (!Number.isFinite(b.left)) return;
-            if (overlapsAny(b, GAP)) return;
-            const sc = scoreCandidate(b, Object.assign({ tryIndex: idx }, spec));
-            if (sc > bestScore) {
-              bestScore = sc;
-              best = b;
-            }
-          });
-          if (!best && (spec.priority || 0) >= LABEL_PRIORITY.measure) {
-            const gutter = candidatePositions(
-              Object.assign({}, spec, { placements: ['left-gutter', 'top-band'] })
-            );
-            for (let gi = 0; gi < gutter.length; gi++) {
-              const b = gutter[gi].box;
-              if (!overlapsAny(b, GAP)) {
-                best = b;
-                break;
-              }
-            }
-          }
-          if (!best) return;
-          const ax = spec.anchorX;
-          const ay = spec.anchorY;
-          const drawLeader =
-            Math.abs(best.textX - ax) > 28 || Math.abs(best.textY - ay) > 24;
-          if (drawLeader) {
-            ctx.strokeStyle = spec.borderColor || 'rgba(26,19,17,.28)';
-            ctx.lineWidth = 1;
-            ctx.setLineDash([3, 3]);
-            ctx.beginPath();
-            ctx.moveTo(ax, ay);
-            ctx.lineTo(best.textX + 4, best.textY - 6);
-            ctx.stroke();
-            ctx.setLineDash([]);
-          }
-          ctx.fillStyle = 'rgba(241,232,208,.92)';
-          ctx.fillRect(
-            best.left,
-            best.top,
-            best.right - best.left,
-            best.bottom - best.top
-          );
-          ctx.strokeStyle = spec.borderColor || 'rgba(26,19,17,.22)';
-          ctx.lineWidth = 1;
-          ctx.strokeRect(
-            best.left,
-            best.top,
-            best.right - best.left,
-            best.bottom - best.top
-          );
-          ctx.fillStyle = '#1A1311';
-          ctx.fillText(spec.text, best.textX, best.textY);
-          occupied.push({
-            left: best.left,
-            top: best.top,
-            right: best.right,
-            bottom: best.bottom,
-          });
-          placedCount += 1;
+          tryPlaceSpec(spec);
         });
         ctx.restore();
       },
@@ -552,13 +670,32 @@
   }
 
   function drawChartBadges(ctx, badges, W, pad, priceH, layout) {
-    if (!badges || !badges.length) return;
+    const items = [];
+    (badges || []).forEach(function (b) {
+      if (!b || !b.text) return;
+      items.push({ text: shortBadgeText(b.text), priority: badgePriority(b.text) });
+    });
+    if (layout && layout.getPendingBadges) {
+      layout.getPendingBadges().forEach(function (b) {
+        items.push({ text: shortBadgeText(b.text), priority: b.priority || 50 });
+      });
+    }
+    items.sort(function (a, b) {
+      return (b.priority || 0) - (a.priority || 0);
+    });
+    const seen = {};
+    const unique = [];
+    items.forEach(function (it) {
+      if (seen[it.text]) return;
+      seen[it.text] = true;
+      unique.push(it);
+    });
+    if (!unique.length) return;
     ctx.save();
     ctx.font = '10px JetBrains Mono, monospace';
     let by = pad.t + 28;
-    badges.slice(0, 3).forEach(function (b) {
-      const text = b.text;
-      if (!text) return;
+    unique.slice(0, 3).forEach(function (it) {
+      const text = it.text;
       const tw = ctx.measureText(text).width;
       const bx = pad.l + 8;
       const box = { left: bx - 6, top: by - 2, right: bx + tw + 6, bottom: by + 16 };
@@ -570,7 +707,7 @@
       ctx.strokeRect(box.left, box.top, box.right - box.left, box.bottom - box.top);
       ctx.fillStyle = '#1A1311';
       ctx.fillText(text, bx, by + 10);
-      by += 18 + 4;
+      by += 18 + 6;
     });
     ctx.restore();
   }
@@ -601,6 +738,9 @@
     }
     morphPlotBounds = plotBounds(pad, W, priceH);
     const bounds = morphPlotBounds;
+    const isLatestBar = function (ri) {
+      return ri >= 0 && ri >= chartLen - 12;
+    };
     const safeX = function (i) {
       const ri = mapAnnIndex(i, morphLen, chartLen);
       if (ri < 0) return bounds.left;
@@ -702,9 +842,10 @@
               text: ann.label || 'handle',
               anchorX: x0 + zw * 0.22,
               anchorY: yt + (yb - yt) * 0.35,
-              placements: ['left-up', 'above', 'left-gutter', 'top-band'],
+              placements: ['left-up', 'left-gutter', 'above', 'top-band'],
               kind: 'handle',
               preferLeft: true,
+              preferLatestZone: primaryType === '杯柄型態',
               borderColor: '#C8102E',
             });
           }
@@ -780,44 +921,39 @@
           }
         } else if (isProj) {
           if (!labelOpts.skipProjInPlot) {
-            labelLayout.register({
-              text: 'Projection beyond view',
-              anchorX: bounds.left + 40,
-              anchorY: y,
-              placements: ['left-gutter', 'left-up'],
-              kind: 'projection',
-              preferLeft: true,
-              borderColor: '#1A1311',
-            });
+            labelLayout.queueBadge('Projection beyond view', 100);
           }
         } else if (isNeck) {
           labelLayout.register({
             text: lbl || 'neckline',
-            anchorX: bounds.left + (bounds.right - bounds.left) * 0.32,
+            anchorX: bounds.left + (bounds.right - bounds.left) * 0.28,
             anchorY: y,
             placements: ['above', 'left-up', 'left-gutter'],
             kind: 'neckline',
             preferLeft: true,
+            disallowLatestZone: true,
             borderColor: fibBorder,
           });
         } else if (isPriorHigh) {
           labelLayout.register({
             text: lbl || 'prior high',
-            anchorX: bounds.left + (bounds.right - bounds.left) * 0.38,
+            anchorX: bounds.left + (bounds.right - bounds.left) * 0.32,
             anchorY: y,
             placements: ['left-up', 'above', 'left-gutter'],
             kind: 'prior-high',
             preferLeft: true,
+            disallowLatestZone: true,
             borderColor: fibBorder,
           });
         } else if (isPrimary && !isSecondary) {
           labelLayout.register({
             text: lbl,
-            anchorX: bounds.left + (bounds.right - bounds.left) * 0.55,
+            anchorX: bounds.left + (bounds.right - bounds.left) * 0.42,
             anchorY: y,
-            placements: ['left-up', 'above', 'left-gutter'],
+            placements: ['left-up', 'left-gutter', 'above'],
             kind: 'trendline',
             preferLeft: true,
+            disallowLatestZone: true,
             borderColor: fibBorder,
           });
         } else if (!isSecondary && lbl) {
@@ -882,16 +1018,28 @@
         ctx.stroke();
         if (isPrimary && labelLayout && ann.label) {
           const ty = yAt(p1.price);
-          const tx = idxToX(i1);
-          labelLayout.register({
-            text: ann.label,
-            anchorX: tx,
-            anchorY: ty,
-            placements: ['left-up', 'above', 'left-gutter'],
-            kind: 'channel-upper',
-            preferLeft: true,
-            borderColor: '#C8102E',
-          });
+          const midI = Math.floor((i0 + i1) / 2);
+          const tx = idxToX(midI);
+          const isRes =
+            style === 'resistance' ||
+            String(ann.label).indexOf('上') >= 0 ||
+            String(ann.label).indexOf('upper') >= 0;
+          const chKind = isRes ? 'channel-upper' : 'channel-lower';
+          if (!isRes || !labelOpts.channelUpperSkipped) {
+            if (isRes) labelOpts.channelUpperSkipped = true;
+            labelLayout.register({
+              text: ann.label,
+              anchorX: tx,
+              anchorY: ty,
+              placements: isRes
+                ? ['left-up', 'top-band', 'left-gutter', 'above']
+                : ['left-gutter', 'left-down', 'below', 'left-up'],
+              kind: chKind,
+              preferLeft: true,
+              disallowLatestZone: true,
+              borderColor: '#C8102E',
+            });
+          }
         }
       } else if (
         (ann.kind === 'polyline' || ann.kind === 'cupcurve') &&
@@ -945,14 +1093,15 @@
         ctx.moveTo(mx - 5, topY - 4);
         ctx.lineTo(mx + 5, topY - 4);
         ctx.stroke();
-        if (labelLayout) {
+        if (labelLayout && primaryType !== '假突破風險') {
           labelLayout.register({
             text: ann.label || 'upper wick',
             anchorX: mx,
             anchorY: topY,
-            placements: ['left-up', 'above', 'left-gutter'],
+            placements: ['left-up', 'left-gutter', 'above'],
             kind: 'upper-wick',
             preferLeft: true,
+            disallowLatestZone: true,
             borderColor: '#C8102E',
           });
         }
@@ -976,16 +1125,8 @@
         ctx.beginPath();
         ctx.arc(mx, my, 4, 0, Math.PI * 2);
         ctx.fill();
-        if (labelLayout && ann.label) {
-          labelLayout.register({
-            text: ann.label,
-            anchorX: mx,
-            anchorY: my,
-            placements: ['left-up', 'above', 'left-down'],
-            kind: style === 'breakdown' ? 'breakout' : 'retest',
-            preferLeft: true,
-            borderColor: '#C8102E',
-          });
+        if (labelLayout && ann.label && primaryType === '上升通道') {
+          /* channel position: marker only */
         }
         ctx.restore();
         return;
@@ -1055,36 +1196,72 @@
         const mText = ann.label || '';
         if (labelLayout && mText) {
           let kind = 'default';
-          let placements = ['left-up', 'above', 'left-gutter'];
+          let placements = ['left-up', 'left-gutter', 'above'];
+          let preferLatestZone = false;
+          let disallowLatestZone = false;
+          let preferLeft = false;
           if (style === 'rim-left') {
             kind = 'rim-left';
             placements = ['left-up', 'above', 'top-band'];
+            preferLeft = true;
           } else if (style === 'rim-right') {
             kind = 'rim-right';
-            placements = ['left-up', 'above', 'left-down'];
+            placements = ['left-up', 'above', 'top-band', 'left-gutter'];
+            preferLeft = true;
+            disallowLatestZone = true;
           } else if (style === 'cup-low') {
             kind = 'cup-low';
-            placements = ['below', 'left-down', 'right-down', 'left-up'];
+            placements = ['below', 'left-down', 'left-up'];
+            preferLeft = true;
           } else if (style === 'near-neck') {
-            kind = 'near-neck';
-            placements = ['left-up', 'above'];
+            kind = 'retest';
+            placements = ['left-up', 'left-gutter', 'above'];
+            preferLeft = true;
+            if (primaryType === '下降壓力線突破' && isLatestBar(ri)) {
+              preferLatestZone = true;
+            }
           } else if (style === 'failed') {
             kind = 'failed';
-            placements = ['left-up', 'above', 'left-gutter'];
+            placements = ['left-up', 'left-gutter', 'above'];
+            preferLeft = true;
+            preferLatestZone = primaryType === '假突破風險';
           } else if (style === 'breakout' || style === 'breakdown') {
             kind = 'breakout';
-            placements = ['left-up', 'left-gutter'];
+            if (primaryType === '杯柄型態') {
+              labelLayout.queueBadge('breakout', 85);
+            } else if (primaryType === '下降壓力線突破') {
+              labelLayout.queueBadge('breakout', 80);
+            } else if (!isLatestBar(ri)) {
+              placements = ['left-up', 'left-gutter'];
+              preferLeft = true;
+              labelLayout.register({
+                text: mText,
+                anchorX: mx,
+                anchorY: my,
+                placements: placements,
+                kind: kind,
+                preferLeft: preferLeft,
+                disallowLatestZone: disallowLatestZone,
+                borderColor: mBorder,
+                layer: ann.layer,
+              });
+            }
+            kind = null;
           }
-          labelLayout.register({
-            text: mText,
-            anchorX: mx,
-            anchorY: my,
-            placements: placements,
-            kind: kind,
-            preferLeft: style === 'rim-right' || style === 'near-neck',
-            borderColor: mBorder,
-            layer: ann.layer,
-          });
+          if (kind) {
+            labelLayout.register({
+              text: mText,
+              anchorX: mx,
+              anchorY: my,
+              placements: placements,
+              kind: kind,
+              preferLeft: preferLeft,
+              preferLatestZone: preferLatestZone,
+              disallowLatestZone: disallowLatestZone,
+              borderColor: mBorder,
+              layer: ann.layer,
+            });
+          }
         }
       } else if (ann.kind === 'measure' && ann.fromPrice != null && ann.toPrice != null) {
         const fi = mapAnnIndex(ann.fromIndex, morphLen, chartLen);
@@ -1118,17 +1295,19 @@
         ctx.closePath();
         ctx.fill();
         if (labelLayout) {
-          const mLbl = beyond
-            ? 'Projection beyond view'
-            : (ann.label || '').slice(0, 22);
-          if (!(beyond && labelOpts.skipProjInPlot)) {
+          if (beyond) {
+            if (!labelOpts.skipProjInPlot) {
+              labelLayout.queueBadge('Projection beyond view', 100);
+            }
+          } else {
             labelLayout.register({
-              text: mLbl,
-              anchorX: x - 8,
+              text: 'Projection',
+              anchorX: x - 12,
               anchorY: (y0 + y1) / 2,
               placements: ['left-gutter', 'left-up', 'left-down'],
-              kind: beyond ? 'projection' : 'measure',
+              kind: 'measure',
               preferLeft: true,
+              disallowLatestZone: true,
               borderColor: up ? '#C8102E' : '#1A1311',
             });
           }
@@ -1354,8 +1533,10 @@
       skipProjInPlot: chartBadges.some(function (b) {
         return b.text && b.text.indexOf('Projection') >= 0;
       }),
+      channelUpperSkipped: false,
     };
     const labelLayout = createLabelLayoutManager(ctx, W, pad, priceH, n, idxToX);
+    labelLayout.reserveLatestClose(xAt(n - 1), yAt(series[n - 1].close));
 
     drawMorphologyAnnotations(
       ctx,
