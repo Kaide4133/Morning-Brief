@@ -14,6 +14,54 @@
   const NEAR_PCT = 2.5;
   const BOLL_NEAR = 0.97;
 
+  /** 產品 UI 文案：結構量測／延伸參考（非投資建議） */
+  function localizeMeasureLabel(mmOrText) {
+    if (mmOrText == null) return null;
+    if (typeof mmOrText === 'object') {
+      if (mmOrText.label) return localizeMeasureLabel(mmOrText.label);
+      if (mmOrText.measuredPct != null) {
+        const sign = mmOrText.direction === 'down' ? '-' : '+';
+        return '結構量測：' + sign + Math.round(mmOrText.measuredPct) + '%';
+      }
+      return null;
+    }
+    let s = String(mmOrText).trim();
+    if (!s) return null;
+    if (/^結構量測：/.test(s)) return s;
+    s = s.replace(/^Measured move\s+/i, '');
+    const cup = /cup\s*depth/i.test(s);
+    const chan = /\bchannel\b/i.test(s);
+    const pct = s.match(/([+-]?\d+)\s*%/);
+    if (cup && pct) return '結構量測：' + pct[1] + '% 杯深';
+    if (chan && pct) return '結構量測：' + pct[1] + '% 通道';
+    if (pct) return '結構量測：' + pct[1] + '%';
+    return (
+      '結構量測：' +
+      s.replace(/cup depth/gi, '杯深').replace(/\bchannel\b/gi, '通道')
+    );
+  }
+
+  function localizeFibUiLine(f) {
+    if (!f) return '';
+    const lvl = f.level != null ? String(f.level) : '';
+    if (f.drawOnChart === false) {
+      return 'Fibonacci ' + lvl + '：超出可視範圍';
+    }
+    return lvl;
+  }
+
+  function localizeChartBadgeText(text) {
+    if (!text) return text;
+    const t = String(text);
+    if (/Projection beyond/i.test(t)) return '延伸參考：超出可視範圍';
+    if (/Fibonacci/i.test(t) && /beyond/i.test(t)) {
+      return t
+        .replace(/Fibonacci\s+([\d./\s]+)\s+beyond view/i, 'Fibonacci $1：超出可視範圍')
+        .replace(/beyond view/gi, '超出可視範圍');
+    }
+    return t;
+  }
+
   function num(v, fallback) {
     if (v === null || v === undefined || v === '') return fallback;
     const n = Number(v);
@@ -793,18 +841,11 @@
       const { hits, reasons, sortKeys, extras } = classifyRecord(norm, analysis);
       const morph = detectMorphology(raw);
       const mm = morph.measuredMove || {};
-      const measuredLabel =
-        mm.label ||
-        (mm.measuredPct != null
-          ? 'Measured move ' +
-            (mm.direction === 'up' ? '+' : '-') +
-            Math.round(mm.measuredPct) +
-            '%'
-          : null);
+      const measuredLabel = localizeMeasureLabel(mm);
       const fibUi =
         morph.fibExtensions && morph.fibExtensions.length
           ? morph.fibExtensions
-              .map((f) => (f.level != null ? String(f.level) : ''))
+              .map((f) => localizeFibUiLine(f))
               .filter(Boolean)
               .join('、')
           : '';
@@ -1900,7 +1941,10 @@ function buildMeasuredMove(candidate, series, norm) {
           ? 'channel'
           : 'range';
     const label =
-      'Measured move +' + Math.round(measuredPct) + '%' + (tag === 'cup depth' ? ' cup depth' : '');
+      '結構量測：+' +
+      Math.round(measuredPct) +
+      '%' +
+      (tag === 'cup depth' ? ' 杯深' : tag === 'channel' ? ' 通道' : '');
     return {
       direction: 'up',
       baseStartIndex: Math.max(0, n - 45),
@@ -1929,7 +1973,7 @@ function buildMeasuredMove(candidate, series, norm) {
     const height = baseHigh - baseLow;
     const measuredPct = (height / baseHigh) * 100;
     const projectionPrice = close - height;
-    const label = 'Measured move -' + Math.round(measuredPct) + '%';
+    const label = '結構量測：-' + Math.round(measuredPct) + '%';
     return {
       direction: 'down',
       baseStartIndex: Math.max(0, n - 30),
@@ -2198,7 +2242,7 @@ function buildChartBadges(measuredMove, fibExtensions, series, norm) {
   });
   if (fibOff.length) {
     badges.push({
-      text: 'Fibonacci ' + fibOff.join(' / ') + ' beyond view',
+      text: 'Fibonacci ' + fibOff.join(' / ') + '：超出可視範圍',
       kind: 'fib',
     });
   }
@@ -2208,7 +2252,7 @@ function buildChartBadges(measuredMove, fibExtensions, series, norm) {
     mm.direction &&
     !morphPriceInBand(mm.projectionPrice, baseMin, baseMax, 0.25)
   ) {
-    badges.push({ text: 'Projection beyond view', kind: 'projection' });
+    badges.push({ text: '延伸參考：超出可視範圍', kind: 'projection' });
   }
   return badges;
 }
@@ -2826,5 +2870,8 @@ function detectMorphology(record) {
     SCANNER_RISK_KEYS,
     NEAR_PCT,
     BOLL_NEAR,
+    localizeMeasureLabel,
+    localizeFibUiLine,
+    localizeChartBadgeText,
   };
 });
