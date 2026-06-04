@@ -1,0 +1,450 @@
+{
+  "date": "2026-06-04",
+  "issue_no": 25,
+  "scenario_id": "02",
+  "scenario_reason": "方舟水位回升至 63.6%，SOX 續強，且 NVIDIA / xAI / Fed 同日訊號延續 AI 與政策主線；但台股即時個股與 Mag7 仍分化，外資台指期淨空單維持高檔，因此定調高檔分化。",
+  "market_summary": "SOX +1.39% 續創高，但 S&P 500 -0.74%、Nasdaq -0.89%、VIX +1.84%，大盤不是全面 risk-on；台股現貨 +1.98%，水位小升下仍以高檔分化處理。",
+  "hero": {
+    "headline": "<span class=\"mark\">一句話先看：</span>方舟水位回升至 <em>63.6%</em>，SOX 續強且 NVIDIA / xAI 訊號支撐 AI 主線，但即時股價分化擴大；今日仍是「<em>高檔分化</em>」中的換手盤。",
+    "subhead": "操作感受：6/4 以盤前即時報價、台指期外資部位與主要帳號公開訊號為基礎。水位上升給主線一點彈性，但個股現價已出現強弱落差，追價速度必須被外資空單與盤中換手限制。"
+  },
+  "market": {
+    "sox": {
+      "label": "SOX · 費半",
+      "value": "13,916.96",
+      "change_pct": 1.39
+    },
+    "vix": {
+      "label": "VIX · 恐慌",
+      "value": "16.06",
+      "change_pct": 1.84
+    },
+    "spx": {
+      "label": "S&P 500",
+      "value": "7,553.68",
+      "delta": -0.74
+    },
+    "tw_index": {
+      "label": "TWSE · 加權",
+      "value": "45,989.13",
+      "line": "▼-470.03 (-1.01%)",
+      "change_pct": -1.01
+    },
+    "nasdaq": {
+      "label": "NASDAQ",
+      "value": "26,853.98",
+      "delta": -0.89
+    },
+    "taifex_net_oi": {
+      "label": "外資台指期淨額",
+      "value": "-66,772 口",
+      "delta": null,
+      "line": "TAIFEX 6/3 臺股期貨外資未平倉多空淨額 -66,772 口"
+    },
+    "systemic_risk": "中",
+    "futures": {
+      "line": "期貨外資淨空單 -66,772 口"
+    },
+    "foreign_oi": {
+      "value": "-66,772 口",
+      "note": "6/3 TAIFEX 臺股期貨外資未平倉淨額"
+    }
+  },
+  "strategy": {
+    "thesis": "AI · 半導體 · 伺服器 · 連接線材",
+    "posture": "保留主線、降低追價",
+    "risk": "外資空單壓境，防範高檔劇烈波動；水位上升不等於解除風控。",
+    "playbook": "水位回升到 63.6%，主線可留；但即時股價顯示 3665、2330、2382、3017 等強勢股有不同程度回落，新增部位只等換手，不追第一段急拉。",
+    "tape": "SOX +1.39%、VIX +1.84%；NVIDIA agentic AI、xAI/Grok 與 Fed Beige Book/Bowman 訊號同日出現。台股即時股價分化，外資空單仍在高位。"
+  },
+  "ark": {
+    "water_level": 63.6,
+    "prev": 62.8,
+    "delta": 0.8,
+    "global_dispersion": "neutral",
+    "foreign_sentiment": "neutral",
+    "position_heating_up": "neutral",
+    "social_rebound": "neutral",
+    "energy_storm": "neutral",
+    "note": "63.6%，較前次 62.8% <span class=\"mark\">上升 0.8 個百分點</span>。水位回升代表風險預算略放大，但外資空單仍高、即時股價已有分化；今日策略仍是保留主線、等換手，不追第一段急拉。"
+  },
+  "temperature": {
+    "vix_note": "VIX 16.06、日升 +1.84%，恐慌沒有失控，但波動邊際回升；搭配即時個股分化，仍不能用水位上升直接翻譯成追價。",
+    "signal_headline": "NVIDIA / xAI 訊號支撐 AI 主線；即時股價提醒高檔換手。",
+    "signal_note": "NVIDIA / xAI 訊號強化 AI PC、edge inference、資料中心與 GPU networking 題材；但台股即時價格已出現分化，今日重點是等換手而不是追開高第一段。"
+  },
+  "editorial": {
+    "pull_quote": "一句話先看：水位 63.6% 讓主線不用撤退，但公開訊號與即時股價給出的不是全面進攻，而是 AI 主線續強下的高檔換手。",
+    "body": "操作感受：這一版重新把股票現價抓進來後，盤面語氣要比單看水位更細。京元電子相對抗跌，力成還有轉強，但貿聯、啟碁、台積電、廣達、奇鋐、欣興等主線股在即時報價上已有分化，表示主線沒有壞，卻不能無差別追價。<br><br>NVIDIA 對 agentic AI、OpenShell、RTX PC、AI factory 與 sovereign AI 的訊號仍強；xAI / Grok 也有 Cloudflare AI Gateway 與應用層訊號；Fed 則發布 Beige Book 與 Bowman 監管證詞預告。結論是題材端還在，但風控端要看外資空單與盤中換手。"
+  },
+  "home": {
+    "water_note": "6/4 方舟水位修正為 63.6%，較前次 62.8% 上升 0.8 個百分點；主線保留，但用即時股價與主要帳號公開訊號重新校正追價風險。",
+    "thesis_blurb": "AI / 半導體主線由 SOX 與 NVIDIA / xAI 訊號支撐；但即時股價分化，新增部位只等換手確認，不追第一段急拉。",
+    "risk_tagline": "02 高檔分化｜水位 63.6%、外資空單高位",
+    "recent_summary": "水位回升至 63.6%；NVIDIA / xAI / Fed 同日公開訊號延續，但即時股價已有分化，今日重點是保留主線、降低追價。"
+  },
+  "etf": {
+    "value": [
+      {
+        "code": "00910",
+        "name": "第一金太空衛星",
+        "meta": "即時 74.75 / -6.56% · 折溢價 +0.30% · 已開發國家",
+        "stamp": "value"
+      },
+      {
+        "code": "00988A",
+        "name": "主動創新全球",
+        "meta": "22.28 / +2.67% · 折溢價 -0.85% · 全球",
+        "stamp": "value"
+      },
+      {
+        "code": "00911",
+        "name": "兆豐洲際半導體",
+        "meta": "即時 64.65 / -0.92% · 折溢價 -0.03% · 全球",
+        "stamp": "value"
+      },
+      {
+        "code": "00876",
+        "name": "元大全球5G",
+        "meta": "即時 94.9 / -0.68% · 折溢價 -0.69% · 全球",
+        "stamp": "value"
+      },
+      {
+        "code": "00631L",
+        "name": "元大台灣50正2",
+        "meta": "39.09 / +3.11% · 折溢價 +0.10% · 台灣",
+        "stamp": "value"
+      },
+      {
+        "code": "0050",
+        "name": "元大台灣50",
+        "meta": "即時 106.6 / -0.93% · 折溢價 -0.07% · 台灣",
+        "stamp": "value"
+      },
+      {
+        "code": "0052",
+        "name": "富邦科技",
+        "meta": "即時 62.65 / -1.49% · 折溢價 -0.14% · 台灣",
+        "stamp": "value"
+      },
+      {
+        "code": "0053",
+        "name": "元大電子",
+        "meta": "即時 243.5 / -2.01% · 折溢價 +0.30% · 台灣",
+        "stamp": "value"
+      },
+      {
+        "code": "00830",
+        "name": "國泰費城半導體",
+        "meta": "即時 95.7 / -1.34% · 折溢價 +0.62% · 美國",
+        "stamp": "value"
+      },
+      {
+        "code": "00861",
+        "name": "元大全球未來通訊",
+        "meta": "即時 94.45 / -2.33% · 折溢價 -0.02% · 全球",
+        "stamp": "value"
+      }
+    ],
+    "rising": [
+      {
+        "code": "00946",
+        "name": "群益科技高息成長",
+        "meta": "即時 15.44 / -0.64% · 折溢價 -0.26% · 台灣",
+        "stamp": "rising"
+      },
+      {
+        "code": "00861",
+        "name": "元大全球未來通訊",
+        "meta": "即時 94.45 / -2.33% · 折溢價 +0.00% · 全球",
+        "stamp": "rising"
+      },
+      {
+        "code": "009808",
+        "name": "華南永昌優選50",
+        "meta": "即時 31.26 / -1.26% · 折溢價 -0.50% · 台灣",
+        "stamp": "rising"
+      },
+      {
+        "code": "00850",
+        "name": "元大台灣ESG永續",
+        "meta": "即時 91.65 / -1.03% · 折溢價 -0.67% · 台灣",
+        "stamp": "rising"
+      },
+      {
+        "code": "006203",
+        "name": "元大MSCI台灣",
+        "meta": "即時 193 / -1.03% · 折溢價 -0.54% · 台灣",
+        "stamp": "rising"
+      },
+      {
+        "code": "00830",
+        "name": "國泰費城半導體",
+        "meta": "即時 95.7 / -1.34% · 折溢價 +0.62% · 美國",
+        "stamp": "rising"
+      },
+      {
+        "code": "0057",
+        "name": "富邦摩台",
+        "meta": "即時 315.25 / -1.25% · 折溢價 +0.32% · 台灣",
+        "stamp": "rising"
+      }
+    ],
+    "overlap": [
+      "00830",
+      "00861"
+    ],
+    "value_note": "ETF 觀察延續前一日結構：半導體、台灣50與科技型 ETF 仍是主線承接；今日重點不是新增追價，而是確認 SOX 續強是否帶動台股科技 ETF 換手。"
+  },
+  "stocks": {
+    "value": [
+      {
+        "code": "2449",
+        "name": "京元電子",
+        "meta": "即時 325.5 / +0.93% · IC測試",
+        "stamp": "value"
+      },
+      {
+        "code": "3665",
+        "name": "貿聯-KY",
+        "meta": "即時 2160 / -6.29% · 連接線材",
+        "stamp": "value"
+      },
+      {
+        "code": "6285",
+        "name": "啟碁",
+        "meta": "即時 295.5 / -3.43% · 網通 / AI邊緣設備",
+        "stamp": "value"
+      },
+      {
+        "code": "2330",
+        "name": "台積電",
+        "meta": "即時 2400 / -1.03% · 晶圓代工",
+        "stamp": "value"
+      },
+      {
+        "code": "2382",
+        "name": "廣達",
+        "meta": "即時 404.5 / -3.00% · 伺服器組裝代工",
+        "stamp": "value"
+      },
+      {
+        "code": "3017",
+        "name": "奇鋐",
+        "meta": "即時 2700 / -5.43% · 散熱模組",
+        "stamp": "value"
+      },
+      {
+        "code": "6239",
+        "name": "力成",
+        "meta": "即時 360 / +4.96% · 高檔換手觀察",
+        "stamp": "value"
+      },
+      {
+        "code": "3037",
+        "name": "欣興",
+        "meta": "即時 982 / -1.80% · 主線延伸",
+        "stamp": "value"
+      }
+    ],
+    "rising": [
+      {
+        "code": "3665",
+        "name": "貿聯-KY",
+        "meta": "即時 2160 / -6.29% · 連接線材",
+        "stamp": "rising"
+      },
+      {
+        "code": "2449",
+        "name": "京元電子",
+        "meta": "即時 325.5 / +0.93% · IC測試",
+        "stamp": "rising"
+      },
+      {
+        "code": "6285",
+        "name": "啟碁",
+        "meta": "即時 295.5 / -3.43% · 網通設備",
+        "stamp": "rising"
+      },
+      {
+        "code": "2356",
+        "name": "英業達",
+        "meta": "即時 80.1 / -6.21% · AI PC / server",
+        "stamp": "rising"
+      },
+      {
+        "code": "6197",
+        "name": "佳必琪",
+        "meta": "即時 318 / -3.34% · 換手觀察",
+        "stamp": "rising"
+      },
+      {
+        "code": "6548",
+        "name": "長科*",
+        "meta": "即時 89.3 / +0.11% · 升溫延伸",
+        "stamp": "rising"
+      },
+      {
+        "code": "2327",
+        "name": "國巨*",
+        "meta": "即時 756 / -7.80% · 高檔分化觀察",
+        "stamp": "rising"
+      },
+      {
+        "code": "2492",
+        "name": "華新科",
+        "meta": "即時 400.5 / -5.32% · 被動元件輪動",
+        "stamp": "rising"
+      }
+    ],
+    "overlap": [
+      "2449",
+      "3665",
+      "6285"
+    ],
+    "overlap_names": {
+      "2449": "京元電子",
+      "3665": "貿聯-KY",
+      "6285": "啟碁"
+    }
+  },
+  "validation": {
+    "strengthened": [
+      "SOX +1.39% 續強，半導體仍是盤前最清楚的外部驗證。",
+      "方舟水位修正為 63.6%，較前次 62.8% 上升 0.8 個百分點，代表主線風險預算略回升。",
+      "NVIDIA agentic AI、OpenShell / RTX PC、sovereign AI 與 xAI / Grok 訊號延續，支撐 AI PC、edge inference 與資料中心鏈。"
+    ],
+    "pressure": [
+      "台股即時個股價格已分化：部分 AI / 半導體核心股高檔回落，不能把水位上升直接等同追價。",
+      "VIX +1.84%，恐慌沒有失控，但波動邊際回升。",
+      "TAIFEX 6/3 外資臺股期貨淨空單 -66,772 口，外資空單壓境，防範高檔劇烈波動。"
+    ],
+    "long_term": [
+      "AI agent、AI PC、GPU / networking、資料中心與 sovereign AI 仍是中長線題材。",
+      "台股映射仍在台積電、IC測試、封裝設備、伺服器組裝、散熱、電源、PCB / CCL、IC基板與連接線材。",
+      "若盤中換手健康，主線可留；若開高急拉無量，回到低買高賣、正打負與修剪枯枝。"
+    ]
+  },
+  "intelligence": {
+    "trump": [
+      {
+        "time": "6/3 19:57 ET",
+        "content": "WhiteHouse 發布「President Trump Signs Executive Orders」官方訊號（<a href=\"https://x.com/WhiteHouse/status/2062262351370309967\">@WhiteHouse</a>）。<em>市場可能反應：政策標題偏行政與內政，對台股科技鏈不是直接加速訊號；只作風險邊際處理。</em>"
+      },
+      {
+        "time": "6/3 18:03 ET",
+        "content": "WhiteHouse 強調 national security first（<a href=\"https://x.com/WhiteHouse/status/2062233745386565841\">@WhiteHouse</a>）。<em>市場可能反應：若延伸到供應鏈安全，半導體與 AI 基建仍需留意政策溢價，但今日不作追價理由。</em>"
+      }
+    ],
+    "musk": "xAI 發布 Grok models on Cloudflare AI Gateway（<a href=\"https://x.com/xai/status/2062294202625696081\">@xai</a>），並出現 Grok shopping assistant 應用訊號（<a href=\"https://x.com/xai/status/2062252902438342735\">@xai</a>）。<em>市場可能反應：AI 應用與推論入口持續擴散，對資料中心、edge inference、AI PC 與 GPU demand 形成中長線支撐；Tesla 本身仍看股價與風險偏好。</em>",
+    "policy": [
+      "<strong>NVIDIA / Microsoft：</strong>NVIDIA 發布 Jensen Huang 與 Satya Nadella 談 agentic AI era，從 Windows devices 到 AI factories at scale（<a href=\"https://x.com/nvidia/status/2062228974273716457\">@nvidia</a>）。<em>市場可能反應：AI PC、Windows 裝置、資料中心與伺服器鏈獲得直接題材驗證。</em>",
+      "<strong>NVIDIA OpenShell / RTX PC：</strong>NVIDIA 指出 Local AI Agents across DGX Spark & RTX PCs，OpenShell coming to Windows（<a href=\"https://x.com/nvidia/status/2062232852561891718\">@nvidia</a>）。<em>市場可能反應：edge AI、AI PC、GPU module、散熱與終端硬體鏈延續。</em>",
+      "<strong>NVIDIA sovereign AI：</strong>NVIDIA Nemotron / sovereign AI 訊號（<a href=\"https://x.com/nvidia/status/2062263049952674211\">@nvidia</a>）強化區域 AI 基建敘事。<em>市場可能反應：資料中心、網通、伺服器、GPU networking 與電源散熱鏈仍是中長線題材。</em>",
+      "<strong>Fed：</strong>Federal Reserve 發布 Beige Book（<a href=\"https://x.com/federalreserve/status/2062233219739897942\">@federalreserve</a>）與 Bowman 監管證詞預告（<a href=\"https://x.com/federalreserve/status/2062270850636927184\">@federalreserve</a>）。<em>市場可能反應：利率與監管訊號未直接翻多估值，風險資產仍需看殖利率與企業獲利。</em>"
+    ]
+  },
+  "mag7": [
+    {
+      "name": "Apple",
+      "ticker": "AAPL",
+      "price": "310.26",
+      "change_pct": -1.57,
+      "change_abs": "-4.94",
+      "tier": "weak",
+      "tier_label": "WEAK",
+      "signal": "回落 1.57%，顯示大型權值內部分化；今日訊號用來限制追價，而不是否定 AI 主線。"
+    },
+    {
+      "name": "Microsoft",
+      "ticker": "MSFT",
+      "price": "427.34",
+      "change_pct": -3.17,
+      "change_abs": "-13.97",
+      "tier": "weak",
+      "tier_label": "WEAK",
+      "signal": "Microsoft 回落，但 NVIDIA 與 Satya Nadella / MSBuild 的 agentic AI factory 訊號仍支撐 Windows AI PC 與雲端鏈敘事。"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "price": "214.75",
+      "change_pct": -3.62,
+      "change_abs": "-8.07",
+      "tier": "weak",
+      "tier_label": "WEAK",
+      "signal": "NVIDIA 雖回落，但同日出現 agentic AI、OpenShell / RTX PC、sovereign AI 訊號；股價短線降溫、題材中線仍強。"
+    },
+    {
+      "name": "Alphabet",
+      "ticker": "GOOGL",
+      "price": "358.99",
+      "change_pct": -0.79,
+      "change_abs": "-2.86",
+      "tier": "weak",
+      "tier_label": "WEAK",
+      "signal": "回落 0.79%，顯示大型權值內部分化；今日訊號用來限制追價，而不是否定 AI 主線。"
+    },
+    {
+      "name": "Amazon",
+      "ticker": "AMZN",
+      "price": "250.02",
+      "change_pct": -2.53,
+      "change_abs": "-6.50",
+      "tier": "weak",
+      "tier_label": "WEAK",
+      "signal": "回落 2.53%，顯示大型權值內部分化；今日訊號用來限制追價，而不是否定 AI 主線。"
+    },
+    {
+      "name": "Meta",
+      "ticker": "META",
+      "price": "622.98",
+      "change_pct": 4.24,
+      "change_abs": "+25.35",
+      "tier": "strong",
+      "tier_label": "STRONG",
+      "signal": "上漲 4.24%，大型權值中相對強勢；可支撐主線情緒，但仍需搭配台股換手。"
+    },
+    {
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "price": "423.70",
+      "change_pct": -0.01,
+      "change_abs": "-0.04",
+      "tier": "weak",
+      "tier_label": "WEAK",
+      "signal": "回落 0.01%，顯示大型權值內部分化；今日訊號用來限制追價，而不是否定 AI 主線。"
+    }
+  ],
+  "analysis": {
+    "us_close": "前一晚美股的核心是「半導體強、權值分化」。SOX +1.39% 續強，NVIDIA / xAI 也提供 AI 題材驗證；但 VIX +1.84%、Mag7 內部轉弱，代表風險偏好不是全面擴散。",
+    "tx_night": "台股即時報價顯示主線股並非全面上攻：京元電子相對抗跌，力成仍強，但貿聯、啟碁、台積電、廣達、奇鋐等高位股已出現回落；TAIFEX 6/3 外資臺股期貨未平倉淨額 -66,772 口，開高仍先看換手。",
+    "axes": {
+      "thesis": "AI / 半導體 / 伺服器 / 連接線材仍是最清楚結構，SOX 續強提供外部驗證。",
+      "policy": "NVIDIA / Microsoft agentic AI、OpenShell / RTX PC、sovereign AI、xAI / Grok 以及 Fed Beige Book / Bowman 訊號同時出現；題材端支撐 AI 主線，但政策端未解除估值風險。",
+      "risk": "水位升至 63.6%，但即時股價分化、VIX 回升、外資期貨空單仍重；策略仍是保留主線、降低追價。"
+    }
+  },
+  "verdict": {
+    "level": "中",
+    "level_en": "MID",
+    "reason": "系統性風險維持中：水位 63.6% 與 AI 主線訊號支撐盤面，但即時股價分化、VIX 回升、外資台指期淨空單仍在 -66,772 口，因此不能升級為全面進攻。"
+  },
+  "conclusion": "水位修正為 <em>63.6%</em>，NVIDIA / xAI 訊號補強 AI 主線；但即時股價分化表示今天是換手盤，不是無差別追價盤。",
+  "appendix": {
+    "after_hours": "SOX +1.39% 與 NVIDIA / xAI 訊號共同支撐 AI、半導體、資料中心與 edge inference 敘事；但即時台股現價顯示主線內部已分化，操作上仍需分辨強勢換手與高檔轉弱。",
+    "map_bullets": [
+      "NVIDIA agentic AI / OpenShell / RTX PC → AI PC、edge AI、GPU module、散熱與終端硬體鏈。",
+      "NVIDIA sovereign AI / AI factories → 資料中心、伺服器組裝、網通、電源與散熱鏈。",
+      "xAI / Grok on Cloudflare AI Gateway → 推論入口、AI 應用、雲端與邊緣運算題材。",
+      "Fed Beige Book / Bowman testimony → 利率與監管變數仍在，估值擴張不能只看題材。",
+      "水位 63.6% + 外資空單高位 → 主線保留，新增部位等換手，弱勢高位股優先汰弱。"
+    ],
+    "execution": "保留主線、降低追價。用即時股價確認強弱：抗跌與換手健康者續留；高檔回落且量能不接者先修剪。"
+  },
+  "disclaimer": "Kelvin Wiggly Morning Brief｜2026/06/04 市場晨報。資料來源：方舟水位、Yahoo Finance、TAIFEX 期交所、主要公開帳號訊號。本文為開盤前風險與主線整理，不是個股買賣保證。",
+  "title": "SOX 續強，但權值股分化擴大",
+  "headline": "半導體還在走，追價仍要 <em>降低速度</em>",
+  "kicker": "— Today’s Thesis —",
+  "subhead": "水位回到 63.1%，不是解除警戒，而是讓核心主線保留彈性；美股大盤轉弱、VIX 回升、NVIDIA / Microsoft 回落，今天重點是換手確認與汰弱留強。"
+}
