@@ -16,9 +16,9 @@
 <nav class="masthead"><div class="masthead-inner"><div><span class="kw-mark">K</span>Kelvin Wiggly</div><div><a class="nav-link" href="/Morning-Brief/">晨報首頁</a><a class="nav-link" href="/Morning-Brief/technical-spider.html">技術線圖</a></div></div></nav>
 <main>
 <header class="hero">
-  <div class="eyebrow">KW Technical Spider v0.4.6-hotfix-4</div>
-  <h1>Latest Zone Label Thinning</h1>
-  <p class="subtitle">v0.4.6-hotfix-4 · 最新價區標籤瘦身 · 單檔優先 · 形態學判讀 · 60／120／250 日線圖 · 今日技術掃描 — 本地資料池</p>
+  <div class="eyebrow">KW Technical Spider v0.4.7</div>
+  <h1>Annotation Minimal Mode</h1>
+  <p class="subtitle">v0.4.7 · 形態標註極簡模式 · 單檔優先 · 形態學判讀 · 60／120／250 日線圖 · 今日技術掃描 — 本地資料池</p>
   <p class="note">獨立技術分析核心，不是方舟晨報，也不是雷達。僅讀取本地 technical-data.json；不提供買賣建議。</p>
 </header>
 
@@ -63,9 +63,9 @@
     <div class="morph-extra">
       <h4>結構元素</h4>
       <p id="morphStructure">—</p>
-      <h4>量測參考</h4>
+      <h4>結構量測參考</h4>
       <p id="morphMeasure">—</p>
-      <h4>延伸參考</h4>
+      <h4>Fibonacci 延伸參考</h4>
       <p id="morphFib">—</p>
       <h4>連續 K 線</h4>
       <p id="morphCandles">—</p>
@@ -137,7 +137,7 @@
   <div id="scannerBuckets" class="scanner-grid"></div>
 </section>
 
-<footer>KW Technical Spider v0.4.6-hotfix-4 · Latest Zone Label Thinning · technical-data.json</footer>
+<footer>KW Technical Spider v0.4.7 · Annotation Minimal Mode · technical-data.json</footer>
 </main>
 
 <script src="technical-engine.js"></script>
@@ -157,6 +157,8 @@
   let chartDays = 120;
   let lastNorm = null;
   let lastMorph = null;
+  /** @type {'minimal'|'full'} */
+  const annotationMode = 'minimal';
 
   const $ = (id) => document.getElementById(id);
 
@@ -258,6 +260,117 @@
   }
 
   let morphPlotBounds = null;
+
+  function isMinimalAnnotation() {
+    return annotationMode === 'minimal';
+  }
+
+  function buildMinimalLabelOpts(primaryType) {
+    if (!isMinimalAnnotation()) {
+      return {
+        minimal: false,
+        skipChartBadges: false,
+        faintMeasure: false,
+        maxLabels: null,
+        allowedLabelKinds: null,
+      };
+    }
+    const cup = new Set(['neckline', 'handle', 'cup-low']);
+    const risk = new Set(['failed', 'prior-high']);
+    const desc = new Set(['resistance', 'retest']);
+    const channel = new Set(['channel-upper']);
+    let allowed = cup;
+    let maxLabels = 3;
+    if (primaryType === '假突破風險') {
+      allowed = risk;
+      maxLabels = 2;
+    } else if (primaryType === '下降壓力線突破') {
+      allowed = desc;
+      maxLabels = 2;
+    } else if (primaryType === '上升通道' || primaryType === '下降通道') {
+      allowed = channel;
+      maxLabels = 2;
+    } else if (primaryType === '杯柄型態') {
+      allowed = cup;
+      maxLabels = 3;
+    }
+    return {
+      minimal: true,
+      skipChartBadges: true,
+      skipFibInPlot: true,
+      skipProjInPlot: true,
+      faintMeasure: true,
+      maxLabels: maxLabels,
+      allowedLabelKinds: allowed,
+    };
+  }
+
+  function filterAnnotationsMinimal(annList, primaryType) {
+    if (!isMinimalAnnotation()) return annList;
+    return annList.filter(function (a) {
+      if (a.kind === 'cupfill' || a.kind === 'cupcurve') return true;
+      if (a.faint || a.layer === 'secondary') return false;
+      if (a.kind === 'horizontal' && (a.style === 'fib161' || a.style === 'fib262')) {
+        return false;
+      }
+      if (primaryType === '假突破風險' && a.style === 'cup-faint') return false;
+      return true;
+    });
+  }
+
+  function formatStructureMeasureLines(mm, st, primaryType, norm) {
+    const lines = [];
+    if (primaryType === '杯柄型態' && st.cupDepthPct != null) {
+      lines.push('杯深 ' + st.cupDepthPct + '%');
+    }
+    if (mm.label) {
+      lines.push('Measured move：' + String(mm.label).replace(/^Measured move\s*/i, ''));
+    } else if (mm.measuredPct != null) {
+      lines.push(
+        'Measured move：' +
+          (mm.direction === 'up' ? '+' : '-') +
+          Math.round(mm.measuredPct) +
+          '%'
+      );
+    }
+    if (mm.currentExtensionPct != null) {
+      lines.push(
+        '目前延伸：' + (mm.direction === 'up' ? '+' : '') + mm.currentExtensionPct + '%'
+      );
+    }
+    if (mm.projectionPrice != null) {
+      let beyond = false;
+      if (norm && norm.series) {
+        const series = norm.series.filter(function (r) {
+          return r.close != null;
+        });
+        if (series.length >= 2) {
+          const base = computeBasePriceRange(series.slice(-chartDays), norm.prev_high20);
+          beyond = !priceWithinRange(mm.projectionPrice, base.baseMin, base.baseMax, 0.22);
+        }
+      }
+      lines.push(
+        'Projection：' +
+          (beyond ? 'beyond visible range' : Math.round(mm.projectionPrice))
+      );
+    }
+    return lines;
+  }
+
+  function formatFibonacciLines(fib) {
+    if (!fib || !fib.length) return '';
+    return fib
+      .map(function (f) {
+        const beyond = f.drawOnChart === false;
+        return (
+          '  · ' +
+          f.level +
+          '：' +
+          (beyond ? 'beyond visible range' : Math.round(f.price))
+        );
+      })
+      .join('\n');
+  }
 
   const LABEL_PRIORITY = {
     neckline: 100,
@@ -368,6 +481,7 @@
     const occupied = [];
     const queue = [];
     const pendingBadges = [];
+    let policy = {};
     let maxLabels = 8;
     let placedCount = 0;
 
@@ -611,8 +725,11 @@
 
     return {
       latestZone: latestZone,
+      setPolicy: function (p) {
+        policy = p || {};
+      },
       setMaxLabels: function (n) {
-        maxLabels = n;
+        if (n != null) maxLabels = n;
       },
       reserveLatestClose: function (x, y) {
         occupied.push({
@@ -642,6 +759,13 @@
       },
       register: function (spec) {
         if (!spec || spec.markerOnly || !spec.text) return;
+        if (
+          policy.minimal &&
+          policy.allowedLabelKinds &&
+          !policy.allowedLabelKinds.has(spec.kind || 'default')
+        ) {
+          return;
+        }
         const pri = labelPriorityFor(spec);
         if (pri <= LABEL_PRIORITY.secondary && placedCount >= maxLabels - 1) return;
         queue.push(
@@ -669,7 +793,9 @@
     };
   }
 
-  function drawChartBadges(ctx, badges, W, pad, priceH, layout) {
+  function drawChartBadges(ctx, badges, W, pad, priceH, layout, labelOpts) {
+    if (labelOpts && labelOpts.skipChartBadges) return;
+    if (isMinimalAnnotation()) return;
     const items = [];
     (badges || []).forEach(function (b) {
       if (!b || !b.text) return;
@@ -730,12 +856,20 @@
     labelOpts
   ) {
     if (!annotations || !annotations.length) return;
-    labelOpts = labelOpts || {};
+    labelOpts = Object.assign({}, buildMinimalLabelOpts(primaryType), labelOpts || {});
     if (labelLayout) {
+      labelLayout.setPolicy(labelOpts);
       labelLayout.setMaxLabels(
-        primaryType === '假突破風險' ? 5 : primaryType === '杯柄型態' ? 8 : 7
+        labelOpts.maxLabels != null
+          ? labelOpts.maxLabels
+          : primaryType === '假突破風險'
+            ? 5
+            : primaryType === '杯柄型態'
+              ? 8
+              : 7
       );
     }
+    const minimal = labelOpts.minimal;
     morphPlotBounds = plotBounds(pad, W, priceH);
     const bounds = morphPlotBounds;
     const isLatestBar = function (ri) {
@@ -829,7 +963,13 @@
         const yt = yAt(ann.topPrice);
         const yb = yAt(ann.bottomPrice);
         ctx.fillStyle =
-          style === 'handle' ? 'rgba(200,16,46,.1)' : 'rgba(200,16,46,.08)';
+          style === 'handle'
+            ? minimal
+              ? 'rgba(200,16,46,.07)'
+              : 'rgba(200,16,46,.1)'
+            : minimal
+              ? 'rgba(200,16,46,.05)'
+              : 'rgba(200,16,46,.08)';
         ctx.fillRect(x0, yt, zw, yb - yt);
         if (style === 'handle') {
           ctx.strokeStyle = '#C8102E';
@@ -845,11 +985,11 @@
               placements: ['left-up', 'left-gutter', 'above', 'top-band'],
               kind: 'handle',
               preferLeft: true,
-              preferLatestZone: primaryType === '杯柄型態',
+              preferLatestZone: primaryType === '杯柄型態' && !minimal,
               borderColor: '#C8102E',
             });
           }
-        } else if (style !== 'channel' && labelLayout && ann.label) {
+        } else if (style !== 'channel' && labelLayout && ann.label && !minimal) {
           labelLayout.register({
             text: ann.label,
             anchorX: x0 + zw * 0.3,
@@ -920,7 +1060,7 @@
             });
           }
         } else if (isProj) {
-          if (!labelOpts.skipProjInPlot) {
+          if (!minimal && !labelOpts.skipProjInPlot) {
             labelLayout.queueBadge('Projection beyond view', 100);
           }
         } else if (isNeck) {
@@ -946,12 +1086,16 @@
             borderColor: fibBorder,
           });
         } else if (isPrimary && !isSecondary) {
+          let tlKind = 'trendline';
+          if (minimal && primaryType === '下降壓力線突破') {
+            tlKind = 'resistance';
+          }
           labelLayout.register({
             text: lbl,
             anchorX: bounds.left + (bounds.right - bounds.left) * 0.42,
             anchorY: y,
             placements: ['left-up', 'left-gutter', 'above'],
-            kind: 'trendline',
+            kind: tlKind,
             preferLeft: true,
             disallowLatestZone: true,
             borderColor: fibBorder,
@@ -990,9 +1134,12 @@
         ctx.lineTo(x + 6, yBot);
         ctx.stroke();
         const bBorder = ann.direction === 'down' ? '#1A1311' : '#C8102E';
+        if (minimal) {
+          ctx.globalAlpha = 0.55;
+        }
         const bracketMid = (yTop + yBot) / 2;
         const bracketX = clampX(idxToX(Math.max(0, bi)) - 18, bounds);
-        if (labelLayout) {
+        if (labelLayout && !minimal) {
           labelLayout.register({
             text: ann.label || 'base range',
             anchorX: bracketX,
@@ -1025,10 +1172,15 @@
             String(ann.label).indexOf('上') >= 0 ||
             String(ann.label).indexOf('upper') >= 0;
           const chKind = isRes ? 'channel-upper' : 'channel-lower';
-          if (!isRes || !labelOpts.channelUpperSkipped) {
+          const regChannel = minimal ? isRes : true;
+          if (regChannel && (!isRes || !labelOpts.channelUpperSkipped)) {
             if (isRes) labelOpts.channelUpperSkipped = true;
+            const lbl =
+              minimal && isRes
+                ? 'channel'
+                : ann.label;
             labelLayout.register({
-              text: ann.label,
+              text: lbl,
               anchorX: tx,
               anchorY: ty,
               placements: isRes
@@ -1227,11 +1379,11 @@
             preferLatestZone = primaryType === '假突破風險';
           } else if (style === 'breakout' || style === 'breakdown') {
             kind = 'breakout';
-            if (primaryType === '杯柄型態') {
+            if (!minimal && primaryType === '杯柄型態') {
               labelLayout.queueBadge('breakout', 85);
-            } else if (primaryType === '下降壓力線突破') {
+            } else if (!minimal && primaryType === '下降壓力線突破') {
               labelLayout.queueBadge('breakout', 80);
-            } else if (!isLatestBar(ri)) {
+            } else if (!isLatestBar(ri) && !minimal) {
               placements = ['left-up', 'left-gutter'];
               preferLeft = true;
               labelLayout.register({
@@ -1279,22 +1431,25 @@
         const y1 = beyond
           ? clampY(pad.t + (up ? edgePad : priceH - edgePad), bounds)
           : safeY(ann.toPrice);
-        ctx.strokeStyle = up ? '#C8102E' : '#1A1311';
-        ctx.lineWidth = 3;
+        ctx.save();
+        if (minimal) ctx.globalAlpha = 0.52;
+        ctx.strokeStyle = up ? 'rgba(200,16,46,.75)' : 'rgba(26,19,17,.65)';
+        ctx.lineWidth = minimal ? 1.5 : 3;
         ctx.beginPath();
         ctx.moveTo(x, y0);
         ctx.lineTo(x, y1);
         ctx.stroke();
         const ah = y1 < y0 ? 1 : -1;
-        ctx.fillStyle = up ? '#C8102E' : '#1A1311';
-        const head = 10;
+        ctx.fillStyle = up ? 'rgba(200,16,46,.75)' : 'rgba(26,19,17,.65)';
+        const head = minimal ? 7 : 10;
         ctx.beginPath();
         ctx.moveTo(x, y1);
         ctx.lineTo(x - head, y1 - head * ah);
         ctx.lineTo(x + head, y1 - head * ah);
         ctx.closePath();
         ctx.fill();
-        if (labelLayout) {
+        ctx.restore();
+        if (labelLayout && !minimal) {
           if (beyond) {
             if (!labelOpts.skipProjInPlot) {
               labelLayout.queueBadge('Projection beyond view', 100);
@@ -1375,8 +1530,9 @@
 
   function collectAnnotationPrices(annList, morph, baseMin, baseMax) {
     const extra = [];
+    const minimal = isMinimalAnnotation();
     const annMargin = 0.2;
-    const projMargin = 0.25;
+    const projMargin = minimal ? 0.12 : 0.25;
 
     function tryPush(v, margin) {
       if (priceWithinRange(v, baseMin, baseMax, margin)) extra.push(v);
@@ -1390,6 +1546,7 @@
         return;
       }
       if (a.kind === 'horizontal' && a.price != null) {
+        if (minimal && a.style === 'projection') return;
         const m = a.style === 'projection' ? projMargin : annMargin;
         tryPush(a.price, m);
         return;
@@ -1401,7 +1558,9 @@
       }
       if (a.kind === 'measure') {
         tryPush(a.fromPrice, annMargin);
-        tryPush(a.toPrice, projMargin);
+        if (!minimal || priceWithinRange(a.toPrice, baseMin, baseMax, 0.12)) {
+          tryPush(a.toPrice, projMargin);
+        }
         return;
       }
       if (a.points) {
@@ -1417,7 +1576,11 @@
       tryPush(mm.baseLow, annMargin);
       tryPush(mm.baseHigh, annMargin);
       tryPush(mm.breakoutPrice, annMargin);
-      if (mm.projectionPrice != null) tryPush(mm.projectionPrice, projMargin);
+      if (mm.projectionPrice != null) {
+        if (!minimal || priceWithinRange(mm.projectionPrice, baseMin, baseMax, 0.12)) {
+          tryPush(mm.projectionPrice, projMargin);
+        }
+      }
     }
     return extra;
   }
@@ -1516,7 +1679,12 @@
 
     const n = series.length;
     const annList = filterAnnotationsByChartDays(
-      filterAnnotationsForDraw(annListRaw, base.baseMin, base.baseMax, morph),
+      filterAnnotationsForDraw(
+        filterAnnotationsMinimal(annListRaw, primaryType),
+        base.baseMin,
+        base.baseMax,
+        morph
+      ),
       chartDays,
       primaryType,
       morphLen,
@@ -1526,16 +1694,21 @@
     const idxToX = (i) => indexToX(i, n, pad, W);
     const yAt = (v) => pad.t + (1 - (v - yMin) / (yMax - yMin)) * priceH;
     const chartBadges = morph && morph.chartBadges ? morph.chartBadges : [];
-    const labelOpts = {
-      skipFibInPlot: chartBadges.some(function (b) {
-        return b.text && b.text.indexOf('Fibonacci') >= 0;
-      }),
-      skipProjInPlot: chartBadges.some(function (b) {
-        return b.text && b.text.indexOf('Projection') >= 0;
-      }),
-      channelUpperSkipped: false,
-    };
+    const labelOpts = Object.assign(
+      { channelUpperSkipped: false },
+      buildMinimalLabelOpts(primaryType)
+    );
     const labelLayout = createLabelLayoutManager(ctx, W, pad, priceH, n, idxToX);
+    labelLayout.setPolicy(labelOpts);
+    labelLayout.setMaxLabels(
+      labelOpts.maxLabels != null
+        ? labelOpts.maxLabels
+        : primaryType === '假突破風險'
+          ? 5
+          : primaryType === '杯柄型態'
+            ? 8
+            : 7
+    );
     labelLayout.reserveLatestClose(xAt(n - 1), yAt(series[n - 1].close));
 
     drawMorphologyAnnotations(
@@ -1634,7 +1807,7 @@
       labelLayout,
       labelOpts
     );
-    drawChartBadges(ctx, chartBadges, W, pad, priceH, labelLayout);
+    drawChartBadges(ctx, chartBadges, W, pad, priceH, labelLayout, labelOpts);
     labelLayout.flush();
 
     vols.forEach((v, i) => {
@@ -1699,7 +1872,7 @@
     hide($('chartBlock'));
   }
 
-  function renderMorphology(morph) {
+  function renderMorphology(morph, norm) {
     const p = morph && morph.primary ? morph.primary : null;
     const st = morph && morph.structure ? morph.structure : {};
     const mm = morph && morph.measuredMove ? morph.measuredMove : {};
@@ -1759,33 +1932,14 @@
     $('morphStructure').textContent = structParts.length
       ? structParts.join(' · ')
       : '尚無明確通道／頸線';
-    const measParts = [];
-    if (p.type === '杯柄型態' && st.cupDepthPct != null) {
-      measParts.push('杯深 ' + st.cupDepthPct + '%');
-    }
-    if (mm.label) measParts.push('量測參考：' + mm.label);
-    if (mm.currentExtensionPct != null) {
-      measParts.push('目前延伸：' + (mm.direction === 'up' ? '+' : '') + mm.currentExtensionPct + '%');
-    }
-    if (mm.projectionPrice != null) {
-      measParts.push('結構量測參考：' + Math.round(mm.projectionPrice));
-    }
-    $('morphMeasure').textContent = measParts.length
-      ? measParts.join(' · ')
+    const measureLines = formatStructureMeasureLines(mm, st, p.type, norm);
+    $('morphMeasure').textContent = measureLines.length
+      ? measureLines.join(' · ')
       : '尚無明確量測結構';
-    if (fib.length) {
-      $('morphFib').textContent =
-        'Fibonacci 延伸參考 · ' +
-        fib
-          .map(function (f) {
-            const tag =
-              f.drawOnChart === false ? '（超出目前圖表範圍）' : '';
-            return f.level + '：' + Math.round(f.price) + tag;
-          })
-          .join(' · ');
-    } else {
-      $('morphFib').textContent = '尚無延伸參考';
-    }
+    const fibText = formatFibonacciLines(fib);
+    $('morphFib').textContent = fibText
+      ? 'Fibonacci 延伸參考 · ' + fibText.replace(/\n\s*·\s*/g, ' · ')
+      : '尚無延伸參考';
     fillReasons($('morphReasons'), p.reasons || []);
     const sec = morph.secondary || [];
     if (sec.length) {
@@ -1930,7 +2084,7 @@
     }
     lastNorm = norm;
     lastMorph = morph;
-    renderMorphology(morph);
+    renderMorphology(morph, norm);
     drawChart(norm, morph);
     updateMorphChartNotes(norm, morph);
     $('resultBlock').scrollIntoView({ behavior: 'smooth', block: 'start' });
