@@ -16,9 +16,9 @@
 <nav class="masthead"><div class="masthead-inner"><div><span class="kw-mark">K</span>Kelvin Wiggly</div><div><a class="nav-link" href="/Morning-Brief/">晨報首頁</a><a class="nav-link" href="/Morning-Brief/technical-spider.html">技術線圖</a></div></div></nav>
 <main>
 <header class="hero">
-  <div class="eyebrow">KW Technical Spider v0.4.5</div>
-  <h1>形態繪圖細節打磨</h1>
-  <p class="subtitle">Pattern Drawing Polish · 單檔優先 · 形態學判讀 · 60／120／250 日線圖 · 今日技術掃描 — 本地資料池</p>
+  <div class="eyebrow">KW Technical Spider v0.4.5-hotfix</div>
+  <h1>Annotation Coordinate & Label Cleanup</h1>
+  <p class="subtitle">v0.4.5-hotfix · 形態繪圖細節打磨 · 單檔優先 · 形態學判讀 · 60／120／250 日線圖 · 今日技術掃描 — 本地資料池</p>
   <p class="note">獨立技術分析核心，不是方舟晨報，也不是雷達。僅讀取本地 technical-data.json；不提供買賣建議。</p>
 </header>
 
@@ -137,7 +137,7 @@
   <div id="scannerBuckets" class="scanner-grid"></div>
 </section>
 
-<footer>KW Technical Spider v0.4.5 · Pattern Drawing Polish · technical-data.json</footer>
+<footer>KW Technical Spider v0.4.5-hotfix · Annotation Coordinate & Label Cleanup · technical-data.json</footer>
 </main>
 
 <script src="technical-engine.js"></script>
@@ -230,39 +230,66 @@
   let morphLabelCount = 0;
   let morphLabelMax = 5;
 
-  function drawLabelBg(ctx, text, x, y, alignRight, W, pad, borderColor) {
+  function clampNum(v, min, max) {
+    if (!Number.isFinite(v)) return min;
+    return Math.max(min, Math.min(max, v));
+  }
+
+  function plotBox(pad, W, priceH) {
+    return { left: pad.l, right: W - pad.r, top: pad.t, bottom: pad.t + priceH };
+  }
+
+  function clampPlotX(x, pad, W) {
+    return clampNum(x, pad.l, W - pad.r);
+  }
+
+  function clampPlotY(y, pad, priceH) {
+    return clampNum(y, pad.t, pad.t + priceH);
+  }
+
+  function drawLabelBg(ctx, text, x, y, alignRight, W, pad, borderColor, priceH) {
     if (!text || morphLabelCount >= morphLabelMax) return;
     morphLabelCount += 1;
     ctx.font = '11px JetBrains Mono, monospace';
     const tw = ctx.measureText(text).width;
-    const px = alignRight ? W - pad.r - tw - 10 : x;
-    const py = y - 12;
-    ctx.fillStyle = 'rgba(241,232,208,.85)';
-    ctx.fillRect(px - 4, py - 2, tw + 8, 16);
-    ctx.strokeStyle = borderColor || 'rgba(26,19,17,.18)';
+    const labelW = tw + 8;
+    const labelH = 16;
+    const right = W - pad.r;
+    const left = pad.l;
+    const bottom = priceH ? pad.t + priceH : 9999;
+    let px = alignRight ? right - labelW - 6 : x;
+    let py = y - 12;
+    px = clampNum(px, left + 4, right - labelW - 4);
+    py = clampNum(py, pad.t + 4, bottom - labelH - 4);
+    // Stagger labels that naturally land on the same right edge.
+    if (alignRight && morphLabelCount > 1) py = clampNum(py + (morphLabelCount - 1) * 14, pad.t + 4, bottom - labelH - 4);
+    ctx.fillStyle = 'rgba(241,232,208,.92)';
+    ctx.fillRect(px - 4, py - 2, labelW, labelH);
+    ctx.strokeStyle = borderColor || 'rgba(26,19,17,.22)';
     ctx.lineWidth = 1;
-    ctx.strokeRect(px - 4, py - 2, tw + 8, 16);
+    ctx.strokeRect(px - 4, py - 2, labelW, labelH);
     ctx.fillStyle = '#1A1311';
     ctx.fillText(text, px, py + 10);
   }
 
   function drawChartBadges(ctx, badges, W, pad) {
     if (!badges || !badges.length) return;
-    const text = badges.map(function (b) {
-      return b.text;
-    }).join(' · ');
     ctx.save();
     ctx.font = '10px JetBrains Mono, monospace';
-    const tw = ctx.measureText(text).width;
-    const bx = W - pad.r - tw - 14;
-    const by = pad.t + 6;
-    ctx.fillStyle = 'rgba(241,232,208,.9)';
-    ctx.fillRect(bx - 6, by - 2, tw + 12, 18);
-    ctx.strokeStyle = '#C8102E';
-    ctx.lineWidth = 1;
-    ctx.strokeRect(bx - 6, by - 2, tw + 12, 18);
-    ctx.fillStyle = '#1A1311';
-    ctx.fillText(text, bx, by + 10);
+    let by = pad.t + 26;
+    badges.slice(0, 2).forEach(function (b) {
+      const text = b.text;
+      const tw = ctx.measureText(text).width;
+      const bx = pad.l + 8;
+      ctx.fillStyle = 'rgba(241,232,208,.92)';
+      ctx.fillRect(bx - 6, by - 2, tw + 12, 18);
+      ctx.strokeStyle = b.kind === 'projection' ? '#1A1311' : '#C8102E';
+      ctx.lineWidth = 1;
+      ctx.strokeRect(bx - 6, by - 2, tw + 12, 18);
+      ctx.fillStyle = '#1A1311';
+      ctx.fillText(text, bx, by + 10);
+      by += 22;
+    });
     ctx.restore();
   }
 
@@ -342,18 +369,21 @@
         return;
       }
       const style = ann.style || '';
-      const x0 = idxToX(Math.max(0, mapAnnIndex(ann.startIndex, morphLen, chartLen)));
-      const x1 = idxToX(mapAnnIndex(ann.endIndex, morphLen, chartLen));
-      if (x1 <= pad.l) return;
+      const raw0 = mapAnnIndex(ann.startIndex, morphLen, chartLen);
+      const raw1 = mapAnnIndex(ann.endIndex, morphLen, chartLen);
+      if (raw1 < 0 || raw0 > chartLen - 1) return;
+      const x0 = clampPlotX(idxToX(Math.max(0, raw0)), pad, W);
+      const x1 = clampPlotX(idxToX(Math.min(chartLen - 1, raw1)), pad, W);
+      if (x1 <= pad.l || x0 >= W - pad.r) return;
       const zw = Math.max(8, x1 - x0);
       ctx.save();
       if (style === 'squeeze') {
         ctx.fillStyle = 'rgba(200,16,46,.07)';
         ctx.fillRect(x0, pad.t, zw, priceH);
-        drawLabelBg(ctx, ann.label || 'BOLL壓縮區', x0 + 4, pad.t + 12, false, W, pad, '#C8102E');
+        drawLabelBg(ctx, ann.label || 'BOLL壓縮區', x0 + 4, pad.t + 12, false, W, pad, '#C8102E', priceH);
       } else if (ann.topPrice != null && ann.bottomPrice != null) {
-        const yt = yAt(ann.topPrice);
-        const yb = yAt(ann.bottomPrice);
+        const yt = clampPlotY(yAt(Math.max(ann.topPrice, ann.bottomPrice)), pad, priceH);
+        const yb = clampPlotY(yAt(Math.min(ann.topPrice, ann.bottomPrice)), pad, priceH);
         ctx.fillStyle =
           style === 'handle' ? 'rgba(200,16,46,.1)' : 'rgba(200,16,46,.08)';
         ctx.fillRect(x0, yt, zw, yb - yt);
@@ -363,9 +393,9 @@
           ctx.setLineDash([5, 4]);
           ctx.strokeRect(x0, yt, zw, yb - yt);
           ctx.setLineDash([]);
-          drawLabelBg(ctx, ann.label || 'handle', x0 + 4, yt + 12, false, W, pad, '#C8102E');
+          drawLabelBg(ctx, ann.label || 'handle', x0 + 4, yt + 12, false, W, pad, '#C8102E', priceH);
         } else if (style !== 'channel') {
-          drawLabelBg(ctx, ann.label || '', x0 + 4, yt + 12, false, W, pad, '#C8102E');
+          drawLabelBg(ctx, ann.label || '', x0 + 4, yt + 12, false, W, pad, '#C8102E', priceH);
         }
       }
       ctx.restore();
@@ -402,27 +432,31 @@
       ctx.globalAlpha = isFaint ? 0.42 : isCupCurve ? 0.9 : ann.layer === 'secondary' ? 0.72 : 1;
 
       if (ann.kind === 'horizontal' && ann.price != null) {
-        const y = yAt(ann.price);
+        if (!valuePlottable(ann.price, yMin, yMax)) {
+          ctx.restore();
+          return;
+        }
+        const y = clampPlotY(yAt(ann.price), pad, priceH);
         ctx.beginPath();
         ctx.moveTo(pad.l, y);
         ctx.lineTo(W - pad.r, y);
         ctx.stroke();
         const lbl = ann.label || '';
         const fibBorder = '#C8102E';
-        if (isFib161 || isFib262) drawLabelBg(ctx, lbl, 0, y, true, W, pad, fibBorder);
-        else if (isProj) drawLabelBg(ctx, lbl, pad.l + 8, y, false, W, pad, '#1A1311');
-        else if (isPriorHigh) drawLabelBg(ctx, lbl, 0, y, true, W, pad, fibBorder);
-        else if (isPrimary) drawLabelBg(ctx, lbl, 0, y, true, W, pad, fibBorder);
-        else drawLabelBg(ctx, lbl, 0, y, true, W, pad);
+        if (isFib161 || isFib262) drawLabelBg(ctx, lbl, 0, y, true, W, pad, fibBorder, priceH);
+        else if (isProj) drawLabelBg(ctx, lbl, pad.l + 8, y, false, W, pad, '#1A1311', priceH);
+        else if (isPriorHigh) drawLabelBg(ctx, lbl, 0, y, true, W, pad, fibBorder, priceH);
+        else if (isPrimary) drawLabelBg(ctx, lbl, 0, y, true, W, pad, fibBorder, priceH);
+        else drawLabelBg(ctx, lbl, 0, y, true, W, pad, null, priceH);
       } else if (ann.kind === 'bracket' && ann.baseLow != null && ann.baseHigh != null) {
         const bi = mapAnnIndex(
           ann.toIndex != null ? ann.toIndex : ann.fromIndex != null ? ann.fromIndex : chartLen - 25,
           morphLen,
           chartLen
         );
-        const x = idxToX(Math.max(0, bi)) + 14;
-        const yTop = yAt(ann.baseHigh);
-        const yBot = yAt(ann.baseLow);
+        const x = clampPlotX(idxToX(Math.max(0, bi)) + 14, pad, W);
+        const yTop = clampPlotY(yAt(ann.baseHigh), pad, priceH);
+        const yBot = clampPlotY(yAt(ann.baseLow), pad, priceH);
         ctx.setLineDash([]);
         ctx.lineWidth = 2.5;
         ctx.strokeStyle = '#1A1311';
@@ -437,21 +471,29 @@
         ctx.lineTo(x + 6, yBot);
         ctx.stroke();
         const bBorder = ann.direction === 'down' ? '#1A1311' : '#C8102E';
-        drawLabelBg(ctx, ann.label || 'base range', x + 10, (yTop + yBot) / 2, false, W, pad, bBorder);
+        drawLabelBg(ctx, ann.label || 'base range', x + 10, (yTop + yBot) / 2, false, W, pad, bBorder, priceH);
       } else if (ann.kind === 'trendline' && ann.points && ann.points.length >= 2) {
         const p0 = ann.points[0];
         const p1 = ann.points[1];
-        const i0 = Math.max(0, mapAnnIndex(p0.index, morphLen, chartLen));
-        const i1 = Math.max(0, mapAnnIndex(p1.index, morphLen, chartLen));
-        if (i1 < 0 && i0 < 0) {
+        let i0 = mapAnnIndex(p0.index, morphLen, chartLen);
+        let i1 = mapAnnIndex(p1.index, morphLen, chartLen);
+        if ((i0 < 0 && i1 < 0) || (i0 > chartLen - 1 && i1 > chartLen - 1) || i0 === i1) {
           ctx.restore();
           return;
         }
+        const priceAtIndex = function (i) {
+          const t = (i - i0) / (i1 - i0);
+          return p0.price + (p1.price - p0.price) * t;
+        };
+        const ci0 = clampNum(i0, 0, chartLen - 1);
+        const ci1 = clampNum(i1, 0, chartLen - 1);
+        const y0 = clampPlotY(yAt(priceAtIndex(ci0)), pad, priceH);
+        const y1 = clampPlotY(yAt(priceAtIndex(ci1)), pad, priceH);
         ctx.beginPath();
-        ctx.moveTo(idxToX(i0), yAt(p0.price));
-        ctx.lineTo(idxToX(i1), yAt(p1.price));
+        ctx.moveTo(clampPlotX(idxToX(ci0), pad, W), y0);
+        ctx.lineTo(clampPlotX(idxToX(ci1), pad, W), y1);
         ctx.stroke();
-        if (isPrimary) drawLabelBg(ctx, ann.label || '', 0, yAt(p1.price), true, W, pad);
+        if (isPrimary) drawLabelBg(ctx, ann.label || '', 0, y1, true, W, pad, null, priceH);
       } else if (
         (ann.kind === 'polyline' || ann.kind === 'cupcurve') &&
         ann.points &&
@@ -460,8 +502,8 @@
         const pts = ann.points
           .map(function (pt) {
             return {
-              x: idxToX(Math.max(0, mapAnnIndex(pt.index, morphLen, chartLen))),
-              y: yAt(pt.price),
+              x: clampPlotX(idxToX(Math.max(0, mapAnnIndex(pt.index, morphLen, chartLen))), pad, W),
+              y: clampPlotY(yAt(pt.price), pad, priceH),
               ok: mapAnnIndex(pt.index, morphLen, chartLen) >= 0,
             };
           })
@@ -491,11 +533,11 @@
           ctx.restore();
           return;
         }
-        const mx = idxToX(ri);
-        const topY = yAt(ann.price);
-        const closeY = yAt(ann.closePrice != null ? ann.closePrice : ann.price * 0.98);
+        const mx = clampPlotX(idxToX(ri), pad, W);
+        const topY = clampPlotY(yAt(ann.price), pad, priceH);
+        const closeY = clampPlotY(yAt(ann.closePrice != null ? ann.closePrice : ann.price * 0.98), pad, priceH);
         ctx.strokeStyle = '#C8102E';
-        ctx.lineWidth = 2.5;
+        ctx.lineWidth = 4;
         ctx.beginPath();
         ctx.moveTo(mx, closeY);
         ctx.lineTo(mx, topY - 4);
@@ -504,7 +546,7 @@
         ctx.moveTo(mx - 5, topY - 4);
         ctx.lineTo(mx + 5, topY - 4);
         ctx.stroke();
-        drawLabelBg(ctx, ann.label || 'upper wick', mx + 10, topY, false, W, pad, '#C8102E');
+        drawLabelBg(ctx, ann.label || 'upper wick', mx - 92, topY - 20, false, W, pad, '#C8102E', priceH);
         ctx.restore();
         return;
       }
@@ -514,8 +556,8 @@
           ctx.restore();
           return;
         }
-        const mx = idxToX(ri);
-        const my = yAt(ann.price);
+        const mx = clampPlotX(idxToX(ri), pad, W);
+        const my = clampPlotY(yAt(ann.price), pad, priceH);
         ctx.lineWidth = 2;
         ctx.strokeStyle = style === 'breakdown' ? '#1A1311' : '#C8102E';
         ctx.beginPath();
@@ -525,7 +567,7 @@
         ctx.beginPath();
         ctx.arc(mx, my, 4, 0, Math.PI * 2);
         ctx.fill();
-        drawLabelBg(ctx, ann.label || '', mx + 12, my, false, W, pad);
+        drawLabelBg(ctx, ann.label || '', mx - 96, my + 18, false, W, pad, null, priceH);
         ctx.restore();
         return;
       }
@@ -535,8 +577,8 @@
           ctx.restore();
           return;
         }
-        const mx = idxToX(ri);
-        const my = yAt(ann.price);
+        const mx = clampPlotX(idxToX(ri), pad, W);
+        const my = clampPlotY(yAt(ann.price), pad, priceH);
         ctx.lineWidth = 2;
         if (style === 'rim-left' || style === 'rim-right') {
           ctx.strokeStyle = '#C8102E';
@@ -565,13 +607,13 @@
           ctx.strokeStyle = '#C8102E';
           ctx.lineWidth = 2.5;
           ctx.beginPath();
-          ctx.arc(mx, my, 8, 0, Math.PI * 2);
+          ctx.arc(mx, my, 12, 0, Math.PI * 2);
           ctx.stroke();
           ctx.beginPath();
-          ctx.moveTo(mx - 6, my - 6);
-          ctx.lineTo(mx + 6, my + 6);
-          ctx.moveTo(mx + 6, my - 6);
-          ctx.lineTo(mx - 6, my + 6);
+          ctx.moveTo(mx - 9, my - 9);
+          ctx.lineTo(mx + 9, my + 9);
+          ctx.moveTo(mx + 9, my - 9);
+          ctx.lineTo(mx - 9, my + 9);
           ctx.stroke();
         } else if (style === 'breakdown') {
           ctx.fillStyle = '#1A1311';
@@ -591,15 +633,15 @@
           ctx.fill();
         }
         const mBorder = style === 'failed' ? '#C8102E' : style === 'breakdown' ? '#1A1311' : '#C8102E';
-        drawLabelBg(ctx, ann.label || '', mx + 10, my - 6, false, W, pad, mBorder);
+        drawLabelBg(ctx, ann.label || '', mx - 112, my - 18, false, W, pad, mBorder, priceH);
       } else if (ann.kind === 'measure' && ann.fromPrice != null && ann.toPrice != null) {
         const fi = mapAnnIndex(ann.fromIndex, morphLen, chartLen);
         if (fi < 0) {
           ctx.restore();
           return;
         }
-        const x = idxToX(fi) + 22;
-        const y0 = yAt(ann.fromPrice);
+        const x = clampPlotX(idxToX(fi) - 18, pad, W);
+        const y0 = clampPlotY(yAt(ann.fromPrice), pad, priceH);
         const up = ann.direction === 'up';
         const beyond = up
           ? ann.toPrice > yMax * 1.01
@@ -607,7 +649,7 @@
         const edgePad = (yMax - yMin) * 0.05;
         const y1 = beyond
           ? pad.t + (up ? edgePad : priceH - edgePad)
-          : yAt(ann.toPrice);
+          : clampPlotY(yAt(ann.toPrice), pad, priceH);
         ctx.strokeStyle = up ? '#C8102E' : '#1A1311';
         ctx.lineWidth = 3;
         ctx.beginPath();
@@ -625,7 +667,7 @@
         ctx.fill();
         let mLbl = (ann.label || '').slice(0, 28);
         if (beyond) mLbl += ' · beyond view';
-        drawLabelBg(ctx, mLbl, x + 12, (y0 + y1) / 2, false, W, pad, up ? '#C8102E' : '#1A1311');
+        drawLabelBg(ctx, mLbl, x - 150, (y0 + y1) / 2, false, W, pad, up ? '#C8102E' : '#1A1311', priceH);
       }
       ctx.restore();
     });
@@ -852,15 +894,31 @@
       if (dash) ctx.setLineDash(dash);
       ctx.beginPath();
       let started = false;
+      let prev = null;
       series.forEach((row, i) => {
         const v = row[key];
-        if (v == null || !valuePlottable(v, yMin, yMax)) return;
+        if (v == null || !valuePlottable(v, yMin, yMax)) {
+          started = false;
+          prev = null;
+          return;
+        }
+        // Guard against stale adjusted indicators that create one-candle vertical spikes
+        // (e.g. ETF MA/BOLL values briefly left from the pre-adjusted scale).
+        if (key !== 'close' && row.close && Math.abs(v - row.close) / row.close > 0.28) {
+          started = false;
+          prev = null;
+          return;
+        }
+        if (prev != null && row.close && Math.abs(v - prev) / row.close > 0.18) {
+          started = false;
+        }
         const x = xAt(i);
         const y = yAt(v);
         if (!started) {
           ctx.moveTo(x, y);
           started = true;
         } else ctx.lineTo(x, y);
+        prev = v;
       });
       if (started) ctx.stroke();
       ctx.restore();
