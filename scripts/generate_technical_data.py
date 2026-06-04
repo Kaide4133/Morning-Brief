@@ -435,11 +435,13 @@ def resolve_stock_name(
     return code
 
 
-def validate_output(doc: dict) -> list[str]:
+def validate_output(doc: dict, expect_as_of: str | None = None) -> list[str]:
     issues: list[str] = []
     records = doc.get("records") or []
     if not records:
         issues.append("records 為空")
+    if expect_as_of and doc.get("as_of") != expect_as_of:
+        issues.append(f"as_of 應為 {expect_as_of}，實際 {doc.get('as_of')}")
     for rec in records:
         for key in ("code", "name"):
             if not rec.get(key):
@@ -460,6 +462,21 @@ def validate_output(doc: dict) -> list[str]:
             issues.append(f"{rec.get('code')} series < 60")
         elif slen < 180:
             issues.append(f"{rec.get('code')} series < 180 (morphology 降權)")
+        series = rec.get("series") or []
+        if series:
+            last = series[-1]
+            if expect_as_of and last.get("date") != expect_as_of:
+                issues.append(
+                    f"{rec.get('code')} 最後一根日期 {last.get('date')} != {expect_as_of}"
+                )
+            o, h, l, c = last.get("open"), last.get("high"), last.get("low"), last.get("close")
+            if not all(isinstance(x, (int, float)) for x in (o, h, l, c)):
+                issues.append(f"{rec.get('code')} OHLC 無效")
+            elif h < max(o, c, l) - 1e-6 or l > min(o, c, h) + 1e-6:
+                issues.append(f"{rec.get('code')} OHLC 邏輯錯誤")
+        wlen = len(rec.get("weekly_series") or [])
+        if wlen < 10:
+            issues.append(f"{rec.get('code')} weekly_series 過短")
     return issues
 
 
@@ -469,20 +486,38 @@ def main() -> int:
     parser.add_argument("--watchlist", help="自訂 watchlist JSON")
     parser.add_argument("--codes", help="逗號分隔代號")
     parser.add_argument("--max", type=int, default=0, help="最多處理檔數，0=全部")
+    parser.add_argument("--as-of", dest="as_of", help="資料截至日 YYYY-MM-DD")
+    parser.add_argument(
+        "--pool",
+        help="從既有 technical-data.json 讀取 universe（保留 78 檔代號）",
+    )
     args = parser.parse_args()
 
     html_paths = [Path(p) for p in (args.html or [])]
-    if not html_paths:
+    if not html_paths and not args.pool:
         html_paths = sorted(ROOT.glob("*-stock-news-kelvin.html"), reverse=True)
         html_paths = sorted(ROOT.glob("docs/*-stock-news-kelvin.html"), reverse=True) + html_paths
-    html_map = build_html_name_map(html_paths)
+    html_map = build_html_name_map(html_paths) if html_paths else {}
 
     universe = resolve_universe(args)
+    if args.pool:
+        pool_path = Path(args.pool)
+        pool_doc = json.loads(pool_path.read_text(encoding="utf-8"))
+        pool_codes = [str(r.get("code", "")).strip() for r in pool_doc.get("records") or []]
+        pool_codes = [c for c in pool_codes if c]
+        seen: set[str] = set()
+        merged: list[str] = []
+        for c in pool_codes:
+            if c not in seen:
+                seen.add(c)
+                merged.append(c)
+        if merged:
+            universe = merged
     if args.max and args.max > 0:
         universe = universe[: args.max]
 
-    as_of = datetime.now().strftime("%Y-%m-%d")
-    if html_paths:
+    as_of = args.as_of or datetime.now().strftime("%Y-%m-%d")
+    if not args.as_of and html_paths:
         m = re.search(r"(20\d{6})", html_paths[0].name)
         if m:
             d = m.group(1)
@@ -521,7 +556,7 @@ def main() -> int:
         },
     }
 
-    issues = validate_output(doc)
+    issues = validate_output(doc, expect_as_of=as_of)
     if not records:
         print("ERROR: records == 0，中止寫入", file=sys.stderr)
         return 1

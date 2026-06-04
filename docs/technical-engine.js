@@ -1,5 +1,5 @@
 /**
- * KW Technical Spider v0.4.5 — 形態繪圖細節打磨
+ * KW Technical Spider v0.4.6 — 形態圖像語言升級
  * 僅輸出技術狀態與風險提示，不提供買賣建議。
  */
 (function (root, factory) {
@@ -787,7 +787,10 @@
       const measuredLabel =
         mm.label ||
         (mm.measuredPct != null
-          ? (mm.direction === 'up' ? '+' : '-') + Math.round(mm.measuredPct) + '% projection'
+          ? 'Measured move ' +
+            (mm.direction === 'up' ? '+' : '-') +
+            Math.round(mm.measuredPct) +
+            '%'
           : null);
       const fibUi =
         morph.fibExtensions && morph.fibExtensions.length
@@ -811,6 +814,9 @@
               measuredLabel: measuredLabel,
               measuredExtension: mm.currentExtensionPct,
               fibUi: fibUi,
+              trendState: analysis.trend && analysis.trend.state,
+              volumeState: analysis.volume && analysis.volume.state,
+              extensionState: analysis.extension && analysis.extension.state,
             })
           ),
           sortKey: sortKeys[key],
@@ -1468,7 +1474,8 @@ function buildMeasuredMove(candidate, series, norm) {
         : type === '上升通道'
           ? 'channel'
           : 'range';
-    const label = '+' + Math.round(measuredPct) + '% ' + tag + ' projection';
+    const label =
+      'Measured move +' + Math.round(measuredPct) + '%' + (tag === 'cup depth' ? ' cup depth' : '');
     return {
       direction: 'up',
       baseStartIndex: Math.max(0, n - 45),
@@ -1497,7 +1504,7 @@ function buildMeasuredMove(candidate, series, norm) {
     const height = baseHigh - baseLow;
     const measuredPct = (height / baseHigh) * 100;
     const projectionPrice = close - height;
-    const label = '-' + Math.round(measuredPct) + '% channel projection';
+    const label = 'Measured move -' + Math.round(measuredPct) + '%';
     return {
       direction: 'down',
       baseStartIndex: Math.max(0, n - 30),
@@ -1676,28 +1683,75 @@ function countLowPlateau(segment, cupLow, tolPct) {
 
 function buildBowlCupCurvePoints(leftIdx, cupLowIdx, rightIdx, leftRim, cupLow, rightRim) {
   const pts = [];
-  const steps = 18;
-  for (let i = 0; i <= steps; i++) {
-    const t = i / steps;
-    let index;
-    let price;
-    if (t <= 0.38) {
-      const u = t / 0.38;
-      index = leftIdx + (cupLowIdx - leftIdx) * u;
-      const ease = 1 - Math.cos(u * Math.PI * 0.5);
-      price = leftRim + (cupLow - leftRim) * ease;
-    } else if (t <= 0.52) {
-      index = cupLowIdx;
-      price = cupLow;
-    } else {
-      const u = (t - 0.52) / 0.48;
-      index = cupLowIdx + (rightIdx - cupLowIdx) * u;
-      const ease = Math.sin(u * Math.PI * 0.5);
-      price = cupLow + (rightRim - cupLow) * ease;
-    }
-    pts.push({ index: Math.round(index), price });
+  const leftSteps = 10;
+  const rightSteps = 10;
+  for (let i = 0; i <= leftSteps; i++) {
+    const u = i / leftSteps;
+    const index = Math.round(leftIdx + (cupLowIdx - leftIdx) * u);
+    const ease = 1 - Math.cos(u * Math.PI * 0.5);
+    pts.push({ index, price: leftRim + (cupLow - leftRim) * ease });
+  }
+  for (let i = 1; i <= rightSteps; i++) {
+    const u = i / rightSteps;
+    const index = Math.round(cupLowIdx + (rightIdx - cupLowIdx) * u);
+    const ease = Math.sin(u * Math.PI * 0.5);
+    pts.push({ index, price: cupLow + (rightRim - cupLow) * ease });
   }
   return pts;
+}
+
+function pickCupRimPoints(series, leftEnd, cupEnd, cupLowIdx, cupLow) {
+  const cupSpan = Math.max(8, cupEnd - leftEnd);
+  const minGap = Math.max(4, Math.floor(cupSpan * 0.18));
+  const leftSearchEnd = Math.max(0, cupLowIdx - minGap);
+  let leftRimIdx = 0;
+  let leftRim = -Infinity;
+  for (let i = 0; i <= leftSearchEnd; i++) {
+    const bar = series[i];
+    const score = Math.max(bar.high, bar.close) * 0.65 + bar.close * 0.35;
+    if (score > leftRim) {
+      leftRim = bar.high;
+      leftRimIdx = i;
+    }
+  }
+  const rightSearchStart = Math.min(series.length - 1, cupLowIdx + minGap);
+  const cupHighs = [];
+  for (let i = rightSearchStart; i < cupEnd; i++) {
+    if (series[i].high != null) cupHighs.push(series[i].high);
+  }
+  cupHighs.sort((a, b) => a - b);
+  const cupHighCap =
+    cupHighs.length > 4
+      ? cupHighs[Math.floor(cupHighs.length * 0.88)]
+      : Math.max.apply(null, cupHighs.concat([cupLow]));
+  let rightRimIdx = rightSearchStart;
+  let rightRim = -Infinity;
+  for (let i = rightSearchStart; i < cupEnd; i++) {
+    const bar = series[i];
+    if (bar.high > cupHighCap * 1.04) continue;
+    const score = Math.max(bar.high, bar.close) * 0.6 + bar.close * 0.4;
+    if (score >= rightRim) {
+      rightRim = bar.high;
+      rightRimIdx = i;
+    }
+  }
+  if (!Number.isFinite(leftRim) || leftRimIdx >= cupLowIdx - 2) {
+    leftRimIdx = Math.max(0, leftEnd - 2);
+    leftRim = series[leftRimIdx].high;
+  }
+  if (!Number.isFinite(rightRim) || rightRimIdx <= cupLowIdx + 2) {
+    rightRimIdx = Math.max(cupLowIdx + minGap, cupEnd - 3);
+    rightRim = series[rightRimIdx].high;
+  }
+  return { leftRimIdx, leftRim, rightRimIdx, rightRim };
+}
+
+function resolveCupNeckline(series, leftRimIdx, rightRimIdx, leftRim, rightRim) {
+  const lBar = series[leftRimIdx] || {};
+  const rBar = series[rightRimIdx] || {};
+  const nlLeft = Math.max(leftRim, lBar.close || leftRim);
+  const nlRight = Math.max(rightRim, rBar.close || rightRim);
+  return Math.max(nlLeft, nlRight);
 }
 
 function morphPriceInBand(v, baseMin, baseMax, marginPct) {
@@ -1718,7 +1772,10 @@ function buildChartBadges(measuredMove, fibExtensions, series, norm) {
     if (!f.drawOnChart) fibOff.push(String(f.level));
   });
   if (fibOff.length) {
-    badges.push({ text: fibOff.join(' / ') + ' beyond view', kind: 'fib' });
+    badges.push({
+      text: 'Fibonacci ' + fibOff.join(' / ') + ' beyond view',
+      kind: 'fib',
+    });
   }
   const mm = measuredMove || {};
   if (
@@ -1726,7 +1783,7 @@ function buildChartBadges(measuredMove, fibExtensions, series, norm) {
     mm.direction &&
     !morphPriceInBand(mm.projectionPrice, baseMin, baseMax, 0.25)
   ) {
-    badges.push({ text: 'projection beyond view', kind: 'projection' });
+    badges.push({ text: 'Projection beyond view', kind: 'projection' });
   }
   return badges;
 }
@@ -1767,6 +1824,7 @@ function buildChartAnnotations(pick, measuredMove, fibExtensions, allCandidates,
       price: f.price,
       style: f.level >= 2.5 ? 'fib262' : 'fib161',
       layer: 'secondary',
+      faint: true,
     });
   });
 
@@ -1821,11 +1879,24 @@ function detectCupHandle(series, norm, meta) {
   const handle = series.slice(cupEnd);
   if (left.length < 16 || cup.length < 24 || handle.length < 5 || handle.length > 30) return null;
 
-  const leftRim = Math.max.apply(null, left.map((r) => r.high));
-  const cupLow = Math.min.apply(null, cup.map((r) => r.low));
-  const cupLowIdx = leftEnd + cup.findIndex((r) => r.low === cupLow);
-  const rightRim = Math.max.apply(null, handle.map((r) => r.high));
-  const neckline = Math.max(leftRim, rightRim);
+  const cupBody = series.slice(leftEnd, cupEnd);
+  let cupLow = Math.min.apply(null, cupBody.map((r) => r.low));
+  let cupLowIdx = leftEnd + cupBody.findIndex((r) => r.low === cupLow);
+  const cupMidStart = leftEnd + Math.floor(cupBody.length * 0.25);
+  const cupMidEnd = leftEnd + Math.floor(cupBody.length * 0.75);
+  for (let i = cupMidStart; i < cupMidEnd; i++) {
+    const lo = series[i].low;
+    if (lo != null && lo <= cupLow * 1.02) {
+      cupLow = lo;
+      cupLowIdx = i;
+    }
+  }
+  const rims = pickCupRimPoints(series, leftEnd, cupEnd, cupLowIdx, cupLow);
+  const leftRimIdx = rims.leftRimIdx;
+  const leftRim = rims.leftRim;
+  const rightRimIdx = rims.rightRimIdx;
+  const rightRim = rims.rightRim;
+  const neckline = resolveCupNeckline(series, leftRimIdx, rightRimIdx, leftRim, rightRim);
   const depthPct = (neckline - cupLow) / neckline;
   if (depthPct < 0.15 || depthPct > 0.65) return null;
   if (cupLowIdx <= leftEnd + 3 || cupLowIdx >= cupEnd - 3) return null;
@@ -1865,11 +1936,6 @@ function detectCupHandle(series, norm, meta) {
   if (close >= neckline) confidence += 8;
   if (!meta.sufficient) confidence = Math.min(confidence, 48);
 
-  let leftRimIdx = 0;
-  left.forEach((r, i) => {
-    if (r.high >= left[leftRimIdx].high) leftRimIdx = i;
-  });
-  const rightRimIdx = cupEnd - 1;
   const cupPoints = buildBowlCupCurvePoints(
     leftRimIdx,
     cupLowIdx,
