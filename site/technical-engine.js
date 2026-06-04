@@ -1,5 +1,5 @@
 /**
- * KW Technical Spider v0.4.6 — 形態圖像語言升級
+ * KW Technical Spider v0.4.6-hotfix — 形態排序校準
  * 僅輸出技術狀態與風險提示，不提供買賣建議。
  */
 (function (root, factory) {
@@ -80,7 +80,7 @@
     const bollMid = num(daily.boll_mid, num(record.boll_mid, ma20));
     const bollUb = num(daily.boll_ub, num(record.boll_ub, null));
     const bollLb = num(daily.boll_lb, num(record.boll_lb, null));
-    const prevHigh20 = num(daily.prev_high20, num(record.prev_high20, null));
+    let prevHigh20 = num(daily.prev_high20, num(record.prev_high20, null));
     const recentLow10 = num(daily.recent_low10, num(record.recent_low10, null));
     const volumeRatio = num(
       daily.volume_ratio,
@@ -121,6 +121,15 @@
       boll_ub: num(row.boll_ub, null),
       boll_lb: num(row.boll_lb, null),
     }));
+
+    if (prevHigh20 == null && series.length >= 21) {
+      const highs = series.slice(-21, -1).map((r) => r.high).filter(Number.isFinite);
+      if (highs.length) prevHigh20 = Math.max.apply(null, highs);
+    }
+    if (recentLow10 == null && series.length >= 10) {
+      const lows = series.slice(-10).map((r) => r.low).filter(Number.isFinite);
+      if (lows.length) recentLow10 = Math.min.apply(null, lows);
+    }
 
     return {
       code: String(record.code).trim(),
@@ -1078,43 +1087,332 @@ const MORPH_PRIORITY = [
   '無明確形態',
 ];
 
+const MORPH_CATEGORY = {
+  假突破風險: 'risk',
+  杯柄型態: 'structure',
+  上升通道: 'structure',
+  下降通道: 'structure',
+  下降壓力線突破: 'structure',
+  平台突破: 'structure',
+  反彈旗形: 'structure',
+  三角收斂: 'structure',
+  BOLL壓縮: 'structure',
+  U型底: 'structure',
+  圓弧底: 'structure',
+  箱型整理: 'structure',
+};
+
+function barUpperShadowRatio(bar) {
+  const span = Math.max(0.01, bar.high - bar.low);
+  return (bar.high - Math.max(bar.open, bar.close)) / span;
+}
+
+function computeCupQuality(ctx) {
+  const {
+    leftRimIdx,
+    cupLowIdx,
+    rightRimIdx,
+    leftRim,
+    cupLow,
+    rightRim,
+    neckline,
+    depthPct,
+    handlePull,
+    cupEnd,
+  } = ctx;
+  const cupSpan = Math.max(1, rightRimIdx - leftRimIdx);
+  const leftDist = cupLowIdx - leftRimIdx;
+  const rightDist = rightRimIdx - cupLowIdx;
+  const rimDistanceScore = Math.min(
+    1,
+    Math.min(leftDist, rightDist) / Math.max(4, cupSpan * 0.16)
+  );
+  let depthScore = 0.4;
+  if (depthPct >= 0.18 && depthPct <= 0.42) depthScore = 1;
+  else if (depthPct >= 0.15 && depthPct <= 0.55) depthScore = 0.72;
+  else if (depthPct > 0.55) depthScore = 0.35;
+  const symmetryScore =
+    leftRim > cupLow * 1.03 && rightRim > cupLow * 1.03 && rightRim >= leftRim * 0.82
+      ? 1
+      : 0.45;
+  const necklineScore = rightRim >= neckline * 0.88 && leftRim >= neckline * 0.82 ? 1 : 0.55;
+  let handleScore = 0.35;
+  if (handlePull <= 0.28) handleScore = 1;
+  else if (handlePull <= 0.42) handleScore = 0.75;
+  else if (handlePull <= 0.5) handleScore = 0.5;
+  const bowlQuality =
+    rimDistanceScore * 0.28 +
+    depthScore * 0.24 +
+    symmetryScore * 0.22 +
+    necklineScore * 0.14 +
+    handleScore * 0.12;
+  return {
+    bowlQuality: Math.round(bowlQuality * 1000) / 1000,
+    rimDistanceScore: Math.round(rimDistanceScore * 100) / 100,
+    depthScore: Math.round(depthScore * 100) / 100,
+    handleScore: Math.round(handleScore * 100) / 100,
+    necklineScore: Math.round(necklineScore * 100) / 100,
+    symmetryScore: Math.round(symmetryScore * 100) / 100,
+  };
+}
+
+function computeMorphRankScore(c, allCandidates) {
+  let score = c.confidence || 0;
+  const all = allCandidates || [];
+  if (c.type === '假突破風險') {
+    score += 14;
+    if ((c.riskSignals || 0) >= 2) score += 10;
+    if ((c.riskSignals || 0) >= 3) score += 6;
+  }
+  if (c.type === '杯柄型態') {
+    const bq = c.quality && c.quality.bowlQuality != null ? c.quality.bowlQuality : 0;
+    score += bq * 32;
+    if (bq < 0.65) score -= 42;
+    if (bq < 0.55) score -= 30;
+    if ((c.confidence || 0) < 82) score -= 22;
+  }
+  if (c.type === '上升通道' || c.type === '下降通道') {
+    const cup = all.find((x) => x.type === '杯柄型態');
+    if (cup && (cup.confidence || 0) >= 85) {
+      const bq = cup.quality && cup.quality.bowlQuality != null ? cup.quality.bowlQuality : 0;
+      if (bq >= 0.65) score -= 30;
+    }
+  }
+  if (c.type === '下降壓力線突破' && (c.state === '突破後回測' || c.state === '回測支撐')) {
+    score += 8;
+  }
+  return Math.round(score * 10) / 10;
+}
+
+function enrichMorphCandidate(c, allCandidates) {
+  if (!c) return c;
+  c.category = MORPH_CATEGORY[c.type] || 'structure';
+  c.rankScore = computeMorphRankScore(c, allCandidates);
+  return c;
+}
+
+function pickMorphologyPrimary(candidates, norm, series) {
+  if (!candidates.length) return null;
+  const all = candidates.map((c) => enrichMorphCandidate(Object.assign({}, c), candidates));
+  all.sort((a, b) => (b.rankScore || 0) - (a.rankScore || 0));
+
+  const bestRisk = all.find((c) => c.type === '假突破風險');
+  const cups = all
+    .filter((c) => c.type === '杯柄型態')
+    .sort((a, b) => (b.confidence || 0) - (a.confidence || 0));
+  const bestCup = cups[0];
+  const channels = all
+    .filter((c) => c.type === '上升通道' || c.type === '下降通道')
+    .sort((a, b) => (b.confidence || 0) - (a.confidence || 0));
+  const bestChannel = channels[0];
+  const bestDesc = all.find((c) => c.type === '下降壓力線突破');
+
+  const cupBq =
+    bestCup && bestCup.quality && bestCup.quality.bowlQuality != null
+      ? bestCup.quality.bowlQuality
+      : 0;
+  const cupConf = bestCup ? bestCup.confidence || 0 : 0;
+  const highCup = bestCup && cupConf >= 85 && cupBq >= 0.65;
+  const qualityCup = bestCup && cupConf >= 82 && cupBq >= 0.65;
+
+  const pressure = norm && num(norm.prev_high20, null);
+  const close = norm && norm.close;
+  let priorHighRejection = false;
+  if (Number.isFinite(pressure) && Number.isFinite(close) && close <= pressure * 1.02 && series) {
+    for (let i = Math.max(0, series.length - 8); i < series.length; i++) {
+      const bar = series[i];
+      if (bar.high >= pressure * 0.992 && bar.close < pressure * 1.003) {
+        priorHighRejection = true;
+        break;
+      }
+    }
+  }
+
+  const cupNeck = bestCup && bestCup.structure ? bestCup.structure.neckline : null;
+  const cupAboveNeck =
+    Number.isFinite(cupNeck) && Number.isFinite(close) && close > cupNeck * 1.01;
+  const belowPriorHigh =
+    Number.isFinite(pressure) && Number.isFinite(close) && close < pressure * 0.99;
+  const cupBreakoutState =
+    bestCup &&
+    (bestCup.state === '突破延伸' ||
+      (bestCup.state === '頸線突破' && !belowPriorHigh) ||
+      (bestCup.state === '頸線附近' && !belowPriorHigh));
+  const highQualityBreakout =
+    bestCup &&
+    cupAboveNeck &&
+    cupConf >= 85 &&
+    cupBq >= 0.65 &&
+    (bestCup.state === '突破延伸' || (!belowPriorHigh && cupBreakoutState));
+
+  if (!bestCup && bestChannel && bestRisk) {
+    if ((bestRisk.riskSignals || 0) < 2 || (bestRisk.confidence || 0) < 76) {
+      return bestChannel;
+    }
+  }
+
+  if (bestRisk && (bestRisk.confidence || 0) >= 65) {
+    const weakCup = !bestCup || cupConf < 88 || cupBq < 0.65;
+    const riskWins =
+      (weakCup && !highQualityBreakout) ||
+      (priorHighRejection && belowPriorHigh && !highQualityBreakout) ||
+      ((bestRisk.rankScore || 0) >= (bestCup ? bestCup.rankScore || 0 : 0) + 8 &&
+        !highQualityBreakout);
+    if (riskWins) return bestRisk;
+  }
+
+  if (highQualityBreakout) return bestCup;
+  if (highCup) {
+    if (!bestChannel || cupConf >= (bestChannel.confidence || 0) + 2) return bestCup;
+  }
+  if (qualityCup && bestChannel && (bestChannel.confidence || 0) < 88) return bestCup;
+
+  if (
+    bestDesc &&
+    (bestDesc.state === '突破後回測' || bestDesc.state === '回測支撐') &&
+    (bestDesc.confidence || 0) >= 62
+  ) {
+    if (!bestCup || cupBq < 0.72 || cupConf < 88) return bestDesc;
+  }
+
+  return all[0];
+}
+
+function pickMorphologySecondary(primary, candidates, cupLike) {
+  const sec = [];
+  const seen = new Set();
+  candidates.forEach((c) => {
+    if (!c || c.type === primary.type || seen.has(c.type)) return;
+    if (primary.type === '假突破風險' && (c.type === '杯柄型態' || c.type === '杯型底雛形')) return;
+    if (primary.type === '杯柄型態' && (c.type === '上升通道' || c.type === '下降通道')) {
+      seen.add(c.type);
+      sec.push({ type: c.type, state: c.state, confidence: c.confidence });
+      return;
+    }
+    if (
+      (primary.type === '上升通道' || primary.type === '下降通道') &&
+      c.type === '杯柄型態'
+    ) {
+      const bq = c.quality && c.quality.bowlQuality != null ? c.quality.bowlQuality : 0;
+      if (bq >= 0.55 && (c.confidence || 0) >= 75) {
+        seen.add(c.type);
+        sec.push({ type: c.type, state: c.state, confidence: c.confidence });
+      }
+      return;
+    }
+    if (sec.length < 3) {
+      seen.add(c.type);
+      sec.push({ type: c.type, state: c.state, confidence: c.confidence });
+    }
+  });
+  if (
+    cupLike &&
+    primary.type === '無明確形態' &&
+    !seen.has(cupLike.type)
+  ) {
+    sec.push({
+      type: cupLike.type,
+      state: cupLike.state,
+      confidence: cupLike.confidence,
+    });
+  }
+  return sec.slice(0, 4);
+}
+
 function detectFalseBreakout(series, norm, diag) {
   const close = norm.close;
-  const last = series[series.length - 1];
   const pressure = num(norm.prev_high20, null);
   if (!Number.isFinite(pressure)) return null;
-  const broke = last.high > pressure * 1.002;
-  const failedClose = close < pressure;
-  const longUpper = norm.upper_shadow_ratio > 0.35;
-  if (!broke || (!failedClose && !longUpper)) return null;
   const n = series.length - 1;
+  const last = series[n];
+  const lookback = Math.min(8, n);
+  let failedIdx = -1;
+  let failedHigh = pressure;
+  let riskSignals = 0;
+  let longUpper = norm.upper_shadow_ratio > 0.35;
+
+  for (let i = n - lookback; i <= n; i++) {
+    const bar = series[i];
+    const broke = bar.high > pressure * 1.002;
+    const touched = bar.high >= pressure * 0.992;
+    const failedClose = bar.close < pressure;
+    const upper = barUpperShadowRatio(bar);
+    if ((broke || touched) && (failedClose || upper > 0.28)) {
+      failedIdx = i;
+      failedHigh = Math.max(failedHigh, bar.high);
+      if (failedClose) riskSignals += 1;
+      if (upper > 0.28) {
+        riskSignals += 1;
+        longUpper = true;
+      }
+      if (touched && failedClose) riskSignals += 1;
+    }
+  }
+
+  const lastBroke = last.high > pressure * 1.002;
+  const lastFailedClose = close < pressure;
+  if (lastBroke && (lastFailedClose || longUpper)) {
+    failedIdx = n;
+    failedHigh = Math.max(failedHigh, last.high);
+    if (lastFailedClose) riskSignals += 1;
+    if (longUpper) riskSignals += 1;
+  }
+
+  const nearRejected =
+    close <= pressure * 1.025 &&
+    (failedIdx >= 0 || relPct(close, pressure) != null);
+  if (failedIdx < 0 || !nearRejected) return null;
+  if (riskSignals < 2 && !longUpper) return null;
+  if (close > pressure * 1.015 && !longUpper) return null;
+
   const ann = [
-    { kind: 'horizontal', label: 'prior high', price: pressure, style: 'prior-high', layer: 'primary' },
+    {
+      kind: 'horizontal',
+      label: 'prior high',
+      price: pressure,
+      style: 'prior-high',
+      layer: 'primary',
+    },
     {
       kind: 'marker',
       label: 'failed breakout',
-      index: n,
-      price: last.high,
+      index: failedIdx,
+      price: failedHigh,
       style: 'failed',
       layer: 'primary',
     },
   ];
-  if (longUpper) {
+  const failBar = series[failedIdx];
+  if (longUpper || barUpperShadowRatio(failBar) > 0.3) {
     ann.push({
       kind: 'wick',
       label: 'upper wick',
-      index: n,
-      price: last.high,
-      closePrice: close,
+      index: failedIdx,
+      price: failBar.high,
+      closePrice: failBar.close,
       layer: 'primary',
     });
+    riskSignals += 1;
   }
+
+  let confidence = 65;
+  if (longUpper && lastFailedClose) confidence = 78;
+  else if (longUpper || lastFailedClose) confidence = 72;
+  if (failedIdx < n - 1 && close < pressure) confidence += 4;
+
   return {
     type: '假突破風險',
     state: '假突破風險',
-    confidence: longUpper && failedClose ? 78 : 65,
-    summary: '盤中突破前高但收盤未能有效站穩，且伴隨長上影，需降權解讀。',
-    reasons: ['觸及前高壓力', failedClose ? '收盤回到壓力線下' : '長上影偏高', longUpper ? '上影比例偏高' : ''].filter(Boolean),
+    category: 'risk',
+    confidence: Math.min(88, confidence),
+    riskSignals,
+    summary: '近期觸及前高壓力後未能有效站穩，伴隨長上影或收盤拒絕，需降權解讀。',
+    reasons: [
+      '觸及前高壓力',
+      close < pressure ? '收盤仍在壓力線下或附近' : '價格未能有效站穩前高',
+      longUpper ? '上影比例偏高' : '近期失敗突破',
+      failedIdx < n ? '近幾日內曾出現失敗突破' : '',
+    ].filter(Boolean),
     annotations: ann,
     structure: { resistance: pressure, neckline: pressure },
   };
@@ -1174,36 +1472,106 @@ function detectDescendingBreakout(series, norm, diag) {
   const n = series.length - 1;
   const lineP = linePriceAt(reg, n);
   const close = norm.close;
-  if (!Number.isFinite(lineP) || close <= lineP) return null;
-  if (!Number.isFinite(norm.ma20) || close <= norm.ma20) return null;
-  return {
-    type: '下降壓力線突破',
-    state: close > lineP * 1.02 ? '已突破' : '回測中',
-    confidence: norm.volume_ratio >= 1.2 ? 74 : 60,
-    summary: '收盤站上下降壓力線，結構由壓制轉向修復。',
-    reasons: ['高點連線下壓', '收盤站上下降壓力線', norm.volume_ratio >= 1.2 ? '量能配合' : ''].filter(Boolean),
-    structure: { resistance: lineP, neckline: lineP },
-    annotations: [
-      {
-        kind: 'trendline',
-        label: 'descending resistance',
-        points: [
-          { index: pts[0].index, price: linePriceAt(reg, pts[0].index) },
-          { index: n, price: lineP },
-        ],
-        style: 'resistance',
-        layer: 'primary',
-      },
-      {
-        kind: 'marker',
-        label: 'breakout',
-        index: n,
-        price: close,
-        style: 'breakout',
-        layer: 'primary',
-      },
+  if (!Number.isFinite(lineP)) return null;
+
+  const trendAnn = {
+    kind: 'trendline',
+    label: 'descending resistance',
+    points: [
+      { index: pts[0].index, price: linePriceAt(reg, pts[0].index) },
+      { index: n, price: lineP },
     ],
+    style: 'resistance',
+    layer: 'primary',
   };
+
+  const lookback = 8;
+  let breakoutIdx = -1;
+  for (let i = Math.max(0, n - lookback); i <= n; i++) {
+    const lp = linePriceAt(reg, i);
+    if (series[i].close > lp * 1.008) breakoutIdx = i;
+  }
+
+  const structStart = Math.max(0, breakoutIdx >= 0 ? breakoutIdx - 5 : n - 12);
+  const structSlice = series.slice(structStart, n + 1);
+  const structLow = Math.min.apply(
+    null,
+    structSlice.map((r) => r.low).filter(Number.isFinite)
+  );
+
+  if (close > lineP && Number.isFinite(norm.ma20) && close > norm.ma20) {
+    return {
+      type: '下降壓力線突破',
+      state: close > lineP * 1.02 ? '已突破' : '回測中',
+      category: 'structure',
+      confidence: norm.volume_ratio >= 1.2 ? 74 : 60,
+      summary: '收盤站上下降壓力線，結構由壓制轉向修復。',
+      reasons: ['高點連線下壓', '收盤站上下降壓力線', norm.volume_ratio >= 1.2 ? '量能配合' : ''].filter(
+        Boolean
+      ),
+      structure: { resistance: lineP, neckline: lineP },
+      annotations: [
+        trendAnn,
+        {
+          kind: 'marker',
+          label: 'breakout',
+          index: n,
+          price: close,
+          style: 'breakout',
+          layer: 'primary',
+        },
+      ],
+    };
+  }
+
+  if (
+    breakoutIdx >= 0 &&
+    close >= lineP * 0.97 &&
+    Number.isFinite(structLow) &&
+    close >= structLow * 1.01
+  ) {
+    const dist = relPct(close, lineP);
+    let state = '突破後回測';
+    if (dist != null && dist >= -2.5 && dist <= 4) state = '回測支撐';
+    let confidence = 64;
+    if (norm.volume_ratio >= 1.05) confidence += 4;
+    if (close >= lineP) confidence += 4;
+    if (state === '回測支撐') confidence += 2;
+    const ann = [trendAnn];
+    ann.push({
+      kind: 'marker',
+      label: 'breakout',
+      index: breakoutIdx,
+      price: series[breakoutIdx].close,
+      style: 'breakout',
+      layer: 'primary',
+    });
+    ann.push({
+      kind: 'marker',
+      label: 'retest',
+      index: n,
+      price: close,
+      style: 'near-neck',
+      layer: 'primary',
+    });
+    return {
+      type: '下降壓力線突破',
+      state,
+      category: 'structure',
+      confidence: Math.min(72, confidence),
+      summary: '近期曾突破下降壓力線，目前回測壓力附近且未破壞突破前結構低點。',
+      reasons: [
+        '高點連線下壓',
+        '近' + (n - breakoutIdx) + '日內曾站上下降壓力線',
+        '目前回測壓力線附近',
+        '未跌破突破前結構低點',
+      ],
+      structure: { resistance: lineP, neckline: lineP, breakoutIndex: breakoutIdx },
+      annotations: ann,
+    };
+  }
+
+  return null;
 }
 
 function detectTriangle(series, norm, diag) {
@@ -1853,6 +2221,17 @@ function buildChartAnnotations(pick, measuredMove, fibExtensions, allCandidates,
     });
   }
 
+  if (pick.type === '杯柄型態' && allCandidates && allCandidates.length) {
+    const ch = allCandidates.find(
+      (c) => c.type === '上升通道' || c.type === '下降通道'
+    );
+    if (ch && ch.annotations) {
+      ch.annotations.slice(0, 2).forEach((a) => {
+        ann.push(Object.assign({ layer: 'secondary', faint: true }, a));
+      });
+    }
+  }
+
   return ann.slice(0, 18);
 }
 
@@ -1936,6 +2315,23 @@ function detectCupHandle(series, norm, meta) {
   if (close >= neckline) confidence += 8;
   if (!meta.sufficient) confidence = Math.min(confidence, 48);
 
+  const quality = computeCupQuality({
+    leftRimIdx,
+    cupLowIdx,
+    rightRimIdx,
+    leftRim,
+    cupLow,
+    rightRim,
+    neckline,
+    depthPct,
+    handlePull,
+    cupEnd,
+  });
+  if (quality.bowlQuality < 0.52) return null;
+  if (quality.bowlQuality < 0.65) confidence = Math.min(confidence, 76);
+  else if (quality.bowlQuality >= 0.72) confidence += 6;
+  if (quality.rimDistanceScore < 0.45) confidence = Math.min(confidence, 70);
+
   const cupPoints = buildBowlCupCurvePoints(
     leftRimIdx,
     cupLowIdx,
@@ -1996,7 +2392,9 @@ function detectCupHandle(series, norm, meta) {
   return {
     type: '杯柄型態',
     state,
+    category: 'structure',
     confidence: Math.min(90, Math.max(0, confidence)),
+    quality,
     summary:
       '中期杯狀底部成形，右側回升並在頸線區整理，具杯柄型態結構。',
     reasons: [
@@ -2004,6 +2402,7 @@ function detectCupHandle(series, norm, meta) {
       '杯底低位鈍化',
       '右側回升接近頸線',
       handle.length >= 5 ? '柄部整理未破壞杯型深度' : '杯底成形中',
+      '碗形品質 ' + Math.round(quality.bowlQuality * 100) + '%',
     ],
     annotations: cupAnn,
     structure: {
@@ -2018,6 +2417,7 @@ function detectCupHandle(series, norm, meta) {
       cupDepthPct: Math.round(depthPct * 1000) / 10,
       handleStart: cupEnd,
       handleEnd: n - 1,
+      bowlQuality: quality.bowlQuality,
     },
   };
 }
@@ -2214,13 +2614,6 @@ function detectMorphology(record) {
   add(detectArcBottom(series, norm, meta));
   add(detectBox(series, norm));
 
-  candidates.sort((a, b) => {
-    const pa = MORPH_PRIORITY.indexOf(a.type);
-    const pb = MORPH_PRIORITY.indexOf(b.type);
-    if (pa !== pb) return pa - pb;
-    return (b.confidence || 0) - (a.confidence || 0);
-  });
-
   if (!candidates.length) {
     const empty = emptyMorphology('目前沒有足夠明確的形態學結構。');
     empty.candleStats = countConsecutiveCandles(series);
@@ -2229,7 +2622,7 @@ function detectMorphology(record) {
     return empty;
   }
 
-  const pick = candidates[0];
+  const pick = pickMorphologyPrimary(candidates, norm, series);
   const cupLike = detectCupLikeShape(series, norm, meta);
   const measuredMove = buildMeasuredMove(pick, series, norm);
   const fibExtensions = buildFibExtensions(pick, series, norm, measuredMove);
@@ -2243,6 +2636,7 @@ function detectMorphology(record) {
     cupLike
   );
   const chartBadges = buildChartBadges(measuredMove, fibExtensions, series, norm);
+  const secondary = pickMorphologySecondary(pick, candidates, cupLike);
   const primary = {
     type: pick.type,
     state: pick.state,
@@ -2251,22 +2645,9 @@ function detectMorphology(record) {
     reasons: pick.reasons || [],
     annotations: chartAnnotations,
     structure: pick.structure || {},
+    quality: pick.quality || null,
+    rankScore: pick.rankScore,
   };
-  const secondary = candidates.slice(1, 4).map((c) => ({
-    type: c.type,
-    state: c.state,
-    confidence: c.confidence,
-  }));
-  if (
-    cupLike &&
-    !secondary.some((s) => s.type === '杯柄型態' || s.type === '杯型底雛形')
-  ) {
-    secondary.push({
-      type: cupLike.type,
-      state: cupLike.state,
-      confidence: cupLike.confidence,
-    });
-  }
 
   return {
     primary,
@@ -2280,6 +2661,17 @@ function detectMorphology(record) {
     dataMeta: meta,
     diagnostics,
     morphSeriesLength: series.length,
+    rankingDebug: {
+      pick: pick.type,
+      rankScore: pick.rankScore,
+      candidates: candidates.map((c) => ({
+        type: c.type,
+        state: c.state,
+        confidence: c.confidence,
+        rankScore: computeMorphRankScore(c, candidates),
+        bowlQuality: c.quality && c.quality.bowlQuality,
+      })),
+    },
   };
 }
 
