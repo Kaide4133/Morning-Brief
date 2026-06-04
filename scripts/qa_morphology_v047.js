@@ -20,7 +20,8 @@ function primary(code) {
 const checks = {
   versionHtml:
     html.includes('KW Technical Spider v0.4.7') &&
-    html.includes('Annotation Minimal Mode') &&
+    html.includes('精簡標註模式') &&
+    html.includes('技術形態自動判讀') &&
     html.includes("const annotationMode = 'minimal'") &&
     html.includes('buildMinimalLabelOpts') &&
     html.includes('filterAnnotationsMinimal') &&
