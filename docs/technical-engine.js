@@ -1,5 +1,5 @@
 /**
- * KW Technical Spider v0.4.6-hotfix — 形態排序校準
+ * KW Technical Spider v0.4.6-hotfix-2 — 杯柄與通道優先級校準
  * 僅輸出技術狀態與風險提示，不提供買賣建議。
  */
 (function (root, factory) {
@@ -1107,6 +1107,12 @@ function barUpperShadowRatio(bar) {
   return (bar.high - Math.max(bar.open, bar.close)) / span;
 }
 
+function maxHandlePullForCupQuality(depthPct) {
+  if (depthPct > 0.48) return 0.5;
+  if (depthPct < 0.12) return 0.58;
+  return Math.min(0.7, 0.38 + depthPct * 0.8);
+}
+
 function computeCupQuality(ctx) {
   const {
     leftRimIdx,
@@ -1125,11 +1131,13 @@ function computeCupQuality(ctx) {
   const rightDist = rightRimIdx - cupLowIdx;
   const rimDistanceScore = Math.min(
     1,
-    Math.min(leftDist, rightDist) / Math.max(4, cupSpan * 0.16)
+    Math.min(leftDist, rightDist) / Math.max(4, cupSpan * 0.14)
   );
-  let depthScore = 0.4;
+  let depthScore = 0.35;
   if (depthPct >= 0.18 && depthPct <= 0.42) depthScore = 1;
-  else if (depthPct >= 0.15 && depthPct <= 0.55) depthScore = 0.72;
+  else if (depthPct >= 0.12 && depthPct <= 0.48) depthScore = 0.85;
+  else if (depthPct >= 0.10 && depthPct <= 0.52) depthScore = 0.72;
+  else if (depthPct >= 0.08 && depthPct <= 0.55) depthScore = 0.55;
   else if (depthPct > 0.55) depthScore = 0.35;
   const symmetryScore =
     leftRim > cupLow * 1.03 && rightRim > cupLow * 1.03 && rightRim >= leftRim * 0.82
@@ -1137,9 +1145,11 @@ function computeCupQuality(ctx) {
       : 0.45;
   const necklineScore = rightRim >= neckline * 0.88 && leftRim >= neckline * 0.82 ? 1 : 0.55;
   let handleScore = 0.35;
+  const handlePullCap = depthPct < 0.2 ? 0.62 : depthPct < 0.35 ? 0.58 : 0.5;
   if (handlePull <= 0.28) handleScore = 1;
   else if (handlePull <= 0.42) handleScore = 0.75;
-  else if (handlePull <= 0.5) handleScore = 0.5;
+  else if (handlePull <= handlePullCap) handleScore = 0.5;
+  else if (handlePull <= maxHandlePullForCupQuality(depthPct)) handleScore = 0.38;
   const bowlQuality =
     rimDistanceScore * 0.28 +
     depthScore * 0.24 +
@@ -1166,16 +1176,27 @@ function computeMorphRankScore(c, allCandidates) {
   }
   if (c.type === '杯柄型態') {
     const bq = c.quality && c.quality.bowlQuality != null ? c.quality.bowlQuality : 0;
-    score += bq * 32;
-    if (bq < 0.65) score -= 42;
-    if (bq < 0.55) score -= 30;
-    if ((c.confidence || 0) < 82) score -= 22;
+    score += bq * 34;
+    if (bq >= 0.58 && (c.confidence || 0) >= 78) score += 12;
+    if (bq < 0.58) score -= 28;
+    if (bq < 0.55) score -= 35;
+    if ((c.confidence || 0) < 78) score -= 18;
   }
   if (c.type === '上升通道' || c.type === '下降通道') {
     const cup = all.find((x) => x.type === '杯柄型態');
-    if (cup && (cup.confidence || 0) >= 85) {
+    if (cup && (cup.confidence || 0) >= 78) {
       const bq = cup.quality && cup.quality.bowlQuality != null ? cup.quality.bowlQuality : 0;
-      if (bq >= 0.65) score -= 30;
+      const q = cup.quality || {};
+      if (
+        bq >= 0.58 &&
+        q.depthScore >= 0.45 &&
+        q.rimDistanceScore >= 0.45 &&
+        (c.confidence || 0) <= 70
+      ) {
+        score -= 38;
+      } else if (bq >= 0.65 && (cup.confidence || 0) >= 85) {
+        score -= 30;
+      }
     }
   }
   if (c.type === '下降壓力線突破' && (c.state === '突破後回測' || c.state === '回測支撐')) {
@@ -1189,6 +1210,37 @@ function enrichMorphCandidate(c, allCandidates) {
   c.category = MORPH_CATEGORY[c.type] || 'structure';
   c.rankScore = computeMorphRankScore(c, allCandidates);
   return c;
+}
+
+function cupMeetsChannelPriorityThreshold(cup) {
+  if (!cup || cup.type !== '杯柄型態') return false;
+  const q = cup.quality || {};
+  const conf = cup.confidence || 0;
+  const bq = q.bowlQuality != null ? q.bowlQuality : 0;
+  if (conf < 78 || bq < 0.55) return false;
+  if (bq < 0.58) return false;
+  if ((q.depthScore || 0) < 0.45 && bq < 0.62) return false;
+  if ((q.rimDistanceScore || 0) < 0.45 && bq < 0.62) return false;
+  if ((q.necklineScore || 0) < 0.45 && bq < 0.62) return false;
+  if ((q.handleScore || 0) < 0.35 && bq < 0.62) return false;
+  return true;
+}
+
+function cupBeatsOrdinaryChannel(bestCup, bestChannel) {
+  if (!bestCup || !bestChannel) return false;
+  if (!cupMeetsChannelPriorityThreshold(bestCup)) return false;
+  const chConf = bestChannel.confidence || 0;
+  const cupConf = bestCup.confidence || 0;
+  const bq = bestCup.quality.bowlQuality;
+  if (
+    bestChannel.state === '通道突破' &&
+    chConf >= 78 &&
+    bq < 0.65
+  ) {
+    return false;
+  }
+  if (chConf <= 70 && cupConf >= 78 && bq >= 0.58) return true;
+  return cupConf >= chConf + 6 && bq >= 0.58;
 }
 
 function pickMorphologyPrimary(candidates, norm, series) {
@@ -1213,7 +1265,8 @@ function pickMorphologyPrimary(candidates, norm, series) {
       : 0;
   const cupConf = bestCup ? bestCup.confidence || 0 : 0;
   const highCup = bestCup && cupConf >= 85 && cupBq >= 0.65;
-  const qualityCup = bestCup && cupConf >= 82 && cupBq >= 0.65;
+  const qualityCup =
+    bestCup && cupConf >= 78 && cupBq >= 0.58 && cupMeetsChannelPriorityThreshold(bestCup);
 
   const pressure = norm && num(norm.prev_high20, null);
   const close = norm && norm.close;
@@ -1262,9 +1315,13 @@ function pickMorphologyPrimary(candidates, norm, series) {
   }
 
   if (highQualityBreakout) return bestCup;
+  if (bestCup && bestChannel && cupBeatsOrdinaryChannel(bestCup, bestChannel)) {
+    return bestCup;
+  }
   if (highCup) {
     if (!bestChannel || cupConf >= (bestChannel.confidence || 0) + 2) return bestCup;
   }
+  if (qualityCup && bestChannel && (bestChannel.confidence || 0) <= 70) return bestCup;
   if (qualityCup && bestChannel && (bestChannel.confidence || 0) < 88) return bestCup;
 
   if (
@@ -2226,7 +2283,7 @@ function buildChartAnnotations(pick, measuredMove, fibExtensions, allCandidates,
       (c) => c.type === '上升通道' || c.type === '下降通道'
     );
     if (ch && ch.annotations) {
-      ch.annotations.slice(0, 2).forEach((a) => {
+      ch.annotations.slice(0, 1).forEach((a) => {
         ann.push(Object.assign({ layer: 'secondary', faint: true }, a));
       });
     }
@@ -2247,8 +2304,12 @@ function mergeMorphAnnotations(pick, measuredMove, fibExtensions, allCandidates,
   );
 }
 
-function detectCupHandle(series, norm, meta) {
-  if (series.length < 150) return null;
+function buildCupHandleCandidate(series, norm, meta) {
+  const probe = { accepted: false, rejectReason: null, quality: null, confidence: null, state: null };
+  if (series.length < 150) {
+    probe.rejectReason = 'series<150';
+    return { candidate: null, probe };
+  }
   const n = series.length;
   const handleLen = Math.min(28, Math.max(5, Math.floor(n * 0.1)));
   const cupEnd = n - handleLen;
@@ -2256,7 +2317,10 @@ function detectCupHandle(series, norm, meta) {
   const left = series.slice(0, leftEnd);
   const cup = series.slice(leftEnd, cupEnd);
   const handle = series.slice(cupEnd);
-  if (left.length < 16 || cup.length < 24 || handle.length < 5 || handle.length > 30) return null;
+  if (left.length < 16 || cup.length < 24 || handle.length < 5 || handle.length > 30) {
+    probe.rejectReason = 'segment_length';
+    return { candidate: null, probe };
+  }
 
   const cupBody = series.slice(leftEnd, cupEnd);
   let cupLow = Math.min.apply(null, cupBody.map((r) => r.low));
@@ -2277,24 +2341,70 @@ function detectCupHandle(series, norm, meta) {
   const rightRim = rims.rightRim;
   const neckline = resolveCupNeckline(series, leftRimIdx, rightRimIdx, leftRim, rightRim);
   const depthPct = (neckline - cupLow) / neckline;
-  if (depthPct < 0.15 || depthPct > 0.65) return null;
-  if (cupLowIdx <= leftEnd + 3 || cupLowIdx >= cupEnd - 3) return null;
-  if (rightRim < leftRim * 0.78) return null;
+  probe.depthPct = Math.round(depthPct * 1000) / 1000;
+  if (depthPct < 0.1 || depthPct > 0.58) {
+    probe.rejectReason = 'depthPct:' + probe.depthPct;
+    return { candidate: null, probe };
+  }
+  if (cupLowIdx <= leftEnd + 2 || cupLowIdx >= cupEnd - 2) {
+    probe.rejectReason = 'cupLowIdx_edge';
+    return { candidate: null, probe };
+  }
+  const cupSpanIdx = rightRimIdx - leftRimIdx;
+  if (cupLowIdx - leftRimIdx < Math.max(3, Math.floor(cupSpanIdx * 0.12))) {
+    probe.rejectReason = 'left_rim_too_close_to_low';
+    return { candidate: null, probe };
+  }
+  if (rightRimIdx - cupLowIdx < Math.max(3, Math.floor(cupSpanIdx * 0.12))) {
+    probe.rejectReason = 'right_rim_too_close_to_low';
+    return { candidate: null, probe };
+  }
+  if (rightRim < leftRim * 0.76) {
+    probe.rejectReason = 'right_rim_low';
+    return { candidate: null, probe };
+  }
 
-  const plateau = countLowPlateau(cup, cupLow, 0.06);
-  if (plateau < 6) return null;
+  const plateau = countLowPlateau(cup, cupLow, 0.07);
+  probe.plateau = plateau;
+  const minPlateau = depthPct < 0.14 ? 4 : 5;
+  if (plateau < minPlateau) {
+    probe.rejectReason = 'plateau<' + minPlateau;
+    return { candidate: null, probe };
+  }
 
   const cupSpan = cup.length;
-  const vShape = cupSpan < 16 && cupLowIdx > leftEnd + 4 && cupLowIdx < cupEnd - 4;
-  if (vShape) return null;
+  const vShape = cupSpan < 14 && cupLowIdx > leftEnd + 3 && cupLowIdx < cupEnd - 3;
+  if (vShape) {
+    probe.rejectReason = 'v_shape';
+    return { candidate: null, probe };
+  }
 
   const handleHigh = Math.max.apply(null, handle.map((r) => r.high));
   const handleLow = Math.min.apply(null, handle.map((r) => r.low));
-  const handlePull = (handleHigh - handleLow) / (neckline - cupLow);
-  if (handlePull > 0.5) return null;
+  const cupDepth = Math.max(neckline - cupLow, neckline * 0.02);
+  const handlePull = (handleHigh - handleLow) / cupDepth;
+  const handleDepthPct = (handleHigh - handleLow) / neckline;
+  probe.handlePull = Math.round(handlePull * 1000) / 1000;
+  probe.handleDepthPct = Math.round(handleDepthPct * 1000) / 1000;
+  const maxHandlePull = maxHandlePullForCupQuality(depthPct);
+  if (handleDepthPct > 0.28) {
+    probe.rejectReason = 'handle_range_too_wide';
+    return { candidate: null, probe };
+  }
+  if (handlePull > maxHandlePull) {
+    probe.rejectReason = 'handle_too_deep';
+    return { candidate: null, probe };
+  }
+  if (handleLow < cupLow * 0.98) {
+    probe.rejectReason = 'handle_below_cup_low';
+    return { candidate: null, probe };
+  }
 
   const ma20 = series[n - 1].ma20;
-  if (Number.isFinite(ma20) && handleLow < ma20 * 0.85) return null;
+  if (Number.isFinite(ma20) && handleLow < ma20 * 0.82) {
+    probe.rejectReason = 'handle_below_ma20';
+    return { candidate: null, probe };
+  }
 
   const close = norm.close;
   let state = '杯底成形';
@@ -2306,10 +2416,12 @@ function detectCupHandle(series, norm, meta) {
   if (close >= neckline * 1.01) state = '頸線突破';
   if (close >= neckline * 1.05) state = '突破延伸';
 
-  let confidence = 58;
-  if (plateau >= 10) confidence += 8;
+  let confidence = 56;
+  if (plateau >= 8) confidence += 6;
+  else if (plateau >= minPlateau) confidence += 4;
   if (handle.length >= 5 && handle.length <= 25) confidence += 8;
-  if (rightRim >= leftRim * 0.88) confidence += 6;
+  if (rightRim >= leftRim * 0.86) confidence += 6;
+  if (rightRim >= neckline * 0.9) confidence += 4;
   if (norm.volume_ratio >= 1.05) confidence += 4;
   if (relPct(close, neckline) != null && relPct(close, neckline) >= -5) confidence += 6;
   if (close >= neckline) confidence += 8;
@@ -2327,10 +2439,26 @@ function detectCupHandle(series, norm, meta) {
     handlePull,
     cupEnd,
   });
-  if (quality.bowlQuality < 0.52) return null;
-  if (quality.bowlQuality < 0.65) confidence = Math.min(confidence, 76);
+  probe.quality = quality;
+  if (quality.bowlQuality < 0.48) {
+    probe.rejectReason = 'bowlQuality<' + quality.bowlQuality;
+    return { candidate: null, probe };
+  }
+  if (quality.symmetryScore < 0.5 && quality.bowlQuality < 0.55) {
+    probe.rejectReason = 'not_bowl_shaped';
+    return { candidate: null, probe };
+  }
+  if (quality.bowlQuality < 0.58) confidence = Math.min(confidence, 80);
+  else if (quality.bowlQuality < 0.65) confidence = Math.min(confidence, 84);
   else if (quality.bowlQuality >= 0.72) confidence += 6;
-  if (quality.rimDistanceScore < 0.45) confidence = Math.min(confidence, 70);
+  if (quality.rimDistanceScore < 0.4 && quality.bowlQuality < 0.6) {
+    probe.rejectReason = 'rim_distance_low';
+    return { candidate: null, probe };
+  }
+  if (quality.rimDistanceScore < 0.45) confidence = Math.min(confidence, 76);
+  probe.confidence = confidence;
+  probe.state = state;
+  probe.accepted = true;
 
   const cupPoints = buildBowlCupCurvePoints(
     leftRimIdx,
@@ -2389,7 +2517,7 @@ function detectCupHandle(series, norm, meta) {
     });
   }
 
-  return {
+  const candidate = {
     type: '杯柄型態',
     state,
     category: 'structure',
@@ -2420,6 +2548,11 @@ function detectCupHandle(series, norm, meta) {
       bowlQuality: quality.bowlQuality,
     },
   };
+  return { candidate, probe };
+}
+
+function detectCupHandle(series, norm, meta) {
+  return buildCupHandleCandidate(series, norm, meta).candidate;
 }
 
 function detectChannel(series, norm, diag, ascending) {
@@ -2622,6 +2755,7 @@ function detectMorphology(record) {
     return empty;
   }
 
+  const cupProbe = buildCupHandleCandidate(series, norm, meta).probe;
   const pick = pickMorphologyPrimary(candidates, norm, series);
   const cupLike = detectCupLikeShape(series, norm, meta);
   const measuredMove = buildMeasuredMove(pick, series, norm);
@@ -2661,15 +2795,18 @@ function detectMorphology(record) {
     dataMeta: meta,
     diagnostics,
     morphSeriesLength: series.length,
+    cupProbe,
     rankingDebug: {
       pick: pick.type,
       rankScore: pick.rankScore,
+      cupProbe,
       candidates: candidates.map((c) => ({
         type: c.type,
         state: c.state,
         confidence: c.confidence,
         rankScore: computeMorphRankScore(c, candidates),
         bowlQuality: c.quality && c.quality.bowlQuality,
+        quality: c.quality || null,
       })),
     },
   };
