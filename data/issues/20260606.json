@@ -2,8 +2,8 @@
   "date": "2026-06-06",
   "issue_no": 27,
   "scenario_id": "02",
-  "scenario_reason": "水位升至 66.2%，但費半、Nasdaq、Mag7 與台股科技 ETF 同步承壓，外資台指期淨空單仍深；依方舟紀律判定為高檔分化，而非全面進攻。",
-  "market_summary": "美股端由費半與 Mag7 明顯回落、VIX 急升帶來壓力；方舟水位反而上升，代表不是撤退盤，而是高水位下的分化換手盤。",
+  "scenario_reason": "水位升至 66.2%，但費半、Nasdaq、Mag7 與台股科技 ETF 同步承壓，外資台指期淨空單仍深；X 直接訊號未出現足以推翻高檔分化的新催化，依方舟紀律判定為高檔分化，而非全面進攻。",
+  "market_summary": "美股端由費半與 Mag7 明顯回落、VIX 急升帶來壓力；X 直接訊號顯示政策、Musk、Fed、AI 半導體敘事仍需觀察，但沒有足以抵銷價格壓力的新催化。方舟水位反而上升，代表不是撤退盤，而是高水位下的分化換手盤。",
   "hero": {
     "headline": "水位升到 66.2%，盤面卻同步拉警報：<br>保留 AI 主線，但先把追價風險降下來",
     "subhead": "方舟水位較前次上升 1.9 個百分點，風險預算沒有崩壞；但費半、Nasdaq、Mag7 與台股科技 ETF 同步轉弱，外資期貨空單仍深。今天的重點不是加速，而是保留主線、先調節過熱、等換手。"
@@ -55,7 +55,7 @@
     "thesis": "AI / 半導體 / PCB / CCL / 伺服器散熱",
     "tape": "水位上升、盤面分化",
     "playbook": "保留主線、降低追價、先調節再佈局",
-    "risk": "外資空單深、VIX 升溫，嚴控槓桿"
+    "risk": "外資空單深、VIX 升溫，X 訊號未給追價催化，嚴控槓桿"
   },
   "ark": {
     "water_level": 66.2,
@@ -766,5 +766,52 @@
     "execution": "保留主線、降低追價；正打負、修剪枯枝，等量價換手再佈局。"
   },
   "cover_caption": "Cover 02｜高檔分化：水位上升但市場風險升溫，主線仍在，節奏轉為等待換手。",
-  "disclaimer": "本頁為 Kelvin Wiggly 市場整理與紀律紀錄，非個別投資建議；所有資料需搭配自身風險承受度與實際盤中量價確認。"
+  "disclaimer": "本頁為 Kelvin Wiggly 市場整理與紀律紀錄，非個別投資建議；所有資料需搭配自身風險承受度與實際盤中量價確認。",
+  "xurl_signal_layer": {
+    "source": "xurl official X API collector",
+    "generated_at": "2026-06-06T00:53:39.283500+00:00",
+    "report_date": "2026-06-06",
+    "signals_count": 20,
+    "included_in_revision": true,
+    "buckets": {
+      "us_policy": {
+        "authors": [
+          "WhiteHouse"
+        ],
+        "key_posts": [
+          "WhiteHouse 多則 6/5 晚間至 6/6 凌晨貼文集中在農業、農產品出口與政治動員；未出現新的半導體關稅或科技出口管制指令。",
+          "訊號含意：政策端仍需盯關稅與出口管制，但本輪 X 直接訊號沒有把盤前風險從高檔分化推升成全面避險。"
+        ]
+      },
+      "musk_space_ai": {
+        "authors": [
+          "elonmusk"
+        ],
+        "key_posts": [
+          "Elon Musk 在觀察窗內出現 Starlink / SpaceX 相關貼文，以及多則簡短回覆；沒有新的 Tesla/xAI 交付、晶片或機器人硬催化。",
+          "訊號含意：太空與 AI 敘事仍在，但不足以抵銷 TSLA 與 Mag7 價格端轉弱，相關供應鏈只看換手承接。"
+        ]
+      },
+      "fed_credit": {
+        "authors": [
+          "federalreserve"
+        ],
+        "key_posts": [
+          "Fed 公布 April consumer credit：消費信貸年化 +4.8%，循環信用 +10.4%，並發布 H.8 commercial banks weekly data。",
+          "訊號含意：信用與銀行資產負債仍是估值壓力觀察軸；在 VIX 升溫下，不適合把成長股反彈第一段視為確認。"
+        ]
+      },
+      "ai_semi": {
+        "authors": [
+          "NVIDIA",
+          "AMD"
+        ],
+        "key_posts": [
+          "NVIDIA 延續 GTC Taipei / AI 生態曝光；AMD 訊號多為 AM5 / Zen 4 X3D 與活動互動，偏產品與社群延伸。",
+          "訊號含意：AI / 半導體中長線題材未破壞，但今日沒有出現能推翻費半重挫的新增強催化。"
+        ]
+      }
+    },
+    "decision_impact": "X 直接訊號確認：主線沒有被否定，但也沒有新增足以追價的高權重催化；維持 02 高檔分化、保留主線、降低追價。"
+  }
 }
