@@ -216,6 +216,52 @@ def render_brief(ctx: dict) -> str:
     return tpl.render(**ctx)
 
 
+def validate_x_signal_lineage(data: dict, html: str) -> None:
+    """Fail fast if a modern Kelvin issue omits the X/xurl provenance layer.
+
+    The report may still publish when X is unavailable, but that unavailable/no-signal
+    state must be explicit in the issue JSON. This prevents the 2026-06-06 failure mode:
+    xurl was only checked after publication and the rendered page did not include its
+    reader-facing signal analysis.
+    """
+    date = data.get("date", "")
+    if date < "2026-06-06":
+        return
+
+    layer = data.get("xurl_signal_layer")
+    if not isinstance(layer, dict):
+        raise SystemExit(
+            "Missing xurl_signal_layer in issue JSON. Run scripts/collect_kelvin_x_signals.py "
+            "before generation, merge/compress the result into Sections VI–IX/X/B, or record "
+            "an explicit unavailable/no-material-signal status."
+        )
+
+    status = layer.get("status")
+    signals_count = int(layer.get("signals_count") or 0)
+    included = bool(layer.get("included_in_revision"))
+    explicit_non_signal = status in {"unavailable", "blocked", "no_material_signal"}
+
+    if signals_count > 0 and not included:
+        raise SystemExit("xurl_signal_layer has signals but included_in_revision is not true.")
+    if signals_count <= 0 and not explicit_non_signal:
+        raise SystemExit(
+            "xurl_signal_layer must contain signals_count > 0 or explicit status "
+            "unavailable/blocked/no_material_signal."
+        )
+
+    if signals_count > 0:
+        # A generic phrase like "X 訊號未給追價催化" is not enough; the rendered
+        # page must show actual compressed first-hand signal analysis.
+        detail_markers = ("White House", "Elon Musk", "Starlink", "Fed X", "consumer credit", "NVIDIA 延續", "AMD")
+        has_signal_detail = any(marker in html for marker in detail_markers)
+        has_lineage_wording = ("X 直接訊號" in html) or ("X 貼文" in html) or ("觀察窗" in html)
+        if not (has_signal_detail and has_lineage_wording):
+            raise SystemExit(
+                "xurl_signal_layer exists, but rendered HTML lacks reader-facing X signal details. "
+                "Wire the compressed signal packet into Sections VI–IX/X/B before publishing."
+            )
+
+
 def render_index(issues: list[dict]) -> str:
     env = build_env()
     sorted_issues = sorted(issues, key=lambda x: x["date"], reverse=True)
@@ -267,6 +313,7 @@ def build_one(json_path: Path, write: bool = True) -> Path:
     sync_water_level(data)
     ctx = enrich_issue(data)
     html = render_brief(ctx)
+    validate_x_signal_lineage(data, html)
     out = SITE / ctx["filename"]
     if write:
         SITE.mkdir(parents=True, exist_ok=True)
