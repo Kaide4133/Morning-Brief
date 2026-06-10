@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-06-10T23:33:00.906295+00:00",
+  "report_date": "20260611",
+  "hours": 24,
+  "source": "xurl official X API",
+  "mode": "lean-single-request",
+  "paid_search_requests": 0,
+  "budget": {
+    "status": "known",
+    "last_known_balance_usd": 9.44,
+    "as_of": "2026-05-26",
+    "source": "manual_observation_during_setup",
+    "warn_below_5_usd": false
+  },
+  "ok": false,
+  "signals": [],
+  "errors": [
+    {
+      "stage": "watchlist",
+      "error": "no_accounts"
+    }
+  ]
+}

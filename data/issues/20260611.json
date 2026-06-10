@@ -1,0 +1,793 @@
+{
+  "disclaimer": "本晨報僅供市場節奏與風險控管參考。",
+  "date": "2026-06-11",
+  "issue_no": 30,
+  "scenario_id": "02",
+  "scenario_reason": "方舟建議持股水位由 74.7% 升至 75.5%，風險預算仍處高檔；但美股 6/10 收盤全面降溫：費半 -3.57%、NASDAQ -1.98%、S&P 500 -1.62%、VIX +11.83% 至 22.22。同時使用者提供的台股與 ETF 清單多數核心科技、半導體、PCB/CCL 與槓桿 ETF 回落，水位上升但指標轉弱，判定為高檔分化而非追價擴張。",
+  "market_summary": "美股 6/10 收盤明顯降溫：S&P 500 -1.62%、NASDAQ -1.98%、費半 -3.57%、VIX +11.83% 至 22.22。方舟水位升至 75.5%，代表風險預算仍高；但台股清單顯示半導體、PCB/CCL、散熱、封測與 ETF 價值區普遍回落，今日定調是水位可用但不追價，先檢查核心承接與汰弱留強。",
+  "hero": {
+    "headline": "水位升至 75.5%，但外部風險升溫：<br>高水位不是追價令，是換手檢查日",
+    "subhead": "6/11 方舟水位較前次上升 0.8 個百分點至 75.5%，風險預算仍在高位；但美股費半、NASDAQ 與 Mag7 同步回落，VIX 升至 22.22，台股核心清單也出現廣泛回檔，今日重點是保留主線、降低追價、看承接後再分配。"
+  },
+  "market": {
+    "sox": {
+      "label": "SOX · 費半",
+      "value": "12,206.46",
+      "change_pct": -3.57
+    },
+    "vix": {
+      "label": "VIX · 恐慌",
+      "value": "22.22",
+      "change_pct": 11.83
+    },
+    "spx": {
+      "label": "S&P 500",
+      "value": "7,266.99",
+      "delta": -1.62
+    },
+    "nasdaq": {
+      "label": "NASDAQ",
+      "value": "25,169.50",
+      "delta": -1.98
+    },
+    "tw_index": {
+      "label": "台指期近月",
+      "value": "—",
+      "line": "6/10 台股核心清單普遍回落；6/11 開盤先看承接與換手",
+      "change_pct": null
+    },
+    "taifex_net_oi": {
+      "label": "外資台指期淨額",
+      "value": "-61,949 口",
+      "delta": null,
+      "line": "TAIFEX 6/10 最新可得外資台指期未平倉淨額仍偏空，作為風險折價背景"
+    },
+    "systemic_risk": "中偏高",
+    "futures": {
+      "line": "美股 6/10 權值與費半同步降溫；台股開盤不看追高，看核心能否止跌換手。"
+    },
+    "foreign_oi": {
+      "value": "-61,949 口",
+      "note": "TAIFEX 6/10 外資台指期淨額，偏空部位仍需折價"
+    }
+  },
+  "strategy": {
+    "stance": "水位升高但外部降溫｜保留主線、拒絕追價",
+    "thesis": "AI / 半導體、PCB/CCL、IC基板、散熱、封測與光學仍是主線，但今日只看承接與換手，不把水位上升解讀成加速追價。",
+    "tape": "水位升至 75.5% 代表系統沒有收回風險預算；但美股費半 -3.57%、NASDAQ -1.98%、VIX +11.83%，加上台股價值區多數回落，盤勢從強勢延伸轉為高檔分化壓力測試。",
+    "playbook": "台積電、聯發科、台達電、欣興、奇鋐、台光電、川湖、信驊等核心先看開盤後是否有量價承接；ETF 與槓桿 ETF 價值區同步回落時，不加速追價，優先保留護城河、汰除弱承接與非核心。",
+    "risk": "水位上升不是風險解除；當水位上升遇到費半急跌與 VIX 快速升溫，紀律是把新增風險預算留給換手後的核心，不給高波動枝節。"
+  },
+  "ark": {
+    "water_level": 75.5,
+    "prev": 74.7,
+    "delta": 0.8,
+    "global_dispersion": "neutral",
+    "foreign_sentiment": "neutral",
+    "position_heating_up": "neutral",
+    "social_rebound": "neutral",
+    "energy_storm": "neutral",
+    "note": "75.5%，較前次 74.7% <span class=\"mark\">上升 0.8 個百分點</span>。這代表風險預算仍在高檔，但外部指標同步轉弱：費半急跌、VIX 升溫、台股核心價值區普遍回落。因此今日不是擴張追價，而是高水位下的換手檢查：核心可留，新增只給承接確認。"
+  },
+  "temperature": {
+    "vix_note": "VIX 22.22、日變動 +11.83%，風險溫度明顯升高；水位上升與外部降溫相互拉扯，今天要用高水位做選股，不用高水位做追價。",
+    "signal_headline": "水位上升、指標轉弱：高檔分化壓力測試",
+    "signal_note": "費半 -3.57%、NASDAQ -1.98%、VIX +11.83%，Mag7 多數轉弱；方舟水位 75.5% 說明主線尚未退出，但今日新增風險預算必須等待換手。"
+  },
+  "editorial": {
+    "pull_quote": "一句話先看：水位升到 75.5%，代表系統仍給風險預算；但費半急跌與 VIX 升溫要求今天把錢留給承接，不給追價。",
+    "body": "今天的重點不是水位上升本身，而是水位上升遇到外部風險升溫時，該怎麼使用風險預算。方舟水位 75.5% 代表主線沒有被系統撤退，AI / 半導體、PCB/CCL、封測、散熱與光學仍是中長線主軸；但美股費半、NASDAQ 與 Mag7 同步降溫，VIX 快速升高，台股清單也看到核心標的普遍回檔。這種盤不是空頭結論，而是高檔分化：核心可以保留，弱承接要淘汰，新增部位必須等換手後再給。"
+  },
+  "home": {
+    "water_note": "6/11 方舟水位 75.5%，較前次上升 0.8 個百分點；但外部風險同步升溫，主線保留、追價降速。",
+    "thesis_blurb": "AI / 半導體與 PCB/CCL 主線仍在，但費半急跌、VIX 上升，今日以承接與換手為準。",
+    "risk_tagline": "02 高檔分化｜系統風險 中偏高",
+    "recent_summary": "水位升至 75.5%，但費半與 Mag7 降溫；保留核心、等待承接、不追高波動。"
+  },
+  "etf": {
+    "value": [
+      {
+        "name": "主動全球創新",
+        "code": "00988A",
+        "meta": "全球｜19.82｜-1.08（-5.17%）｜折溢價 +1.69%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "富邦摩台",
+        "code": "0057",
+        "meta": "台灣｜293.7｜-12.85（-4.19%）｜折溢價 -0.93%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "元大全球未來通訊",
+        "code": "00861",
+        "meta": "全球｜87.65｜-3.15（-3.47%）｜折溢價 -0.88%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "元大電子",
+        "code": "0053",
+        "meta": "台灣｜227.3｜-10.65（-4.48%）｜折溢價 +0.03%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "富邦科技",
+        "code": "0052",
+        "meta": "台灣｜58.25｜-1.9（-3.16%）｜折溢價 +0.05%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "元大台灣50正2",
+        "code": "00631L",
+        "meta": "台灣｜33.43｜-2.01（-5.67%）｜折溢價 +0.00%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "國泰費城半導體",
+        "code": "00830",
+        "meta": "美國｜87.1｜-4.65（-5.07%）｜折溢價 -2.06%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "元大台灣50",
+        "code": "0050",
+        "meta": "台灣｜100.25｜-3.25（-3.14%）｜折溢價 +0.42%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "兆豐洲際半導體",
+        "code": "00911",
+        "meta": "全球｜59.55｜-2.25（-3.64%）｜折溢價 -1.33%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "元大全球5G",
+        "code": "00876",
+        "meta": "全球｜89.9｜-2.95（-3.18%）｜折溢價 -0.27%",
+        "stamp": "value",
+        "overlap": true
+      }
+    ],
+    "rising": [
+      {
+        "name": "國泰永續高股息",
+        "code": "00878",
+        "meta": "台灣｜31.6｜-0.71（-2.20%）｜折溢價 -0.50%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "中信臺灣智慧50",
+        "code": "00912",
+        "meta": "台灣｜32.13｜-0.85（-2.58%）｜折溢價 +0.19%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "元大全球5G",
+        "code": "00876",
+        "meta": "全球｜89.9｜-2.95（-3.18%）｜折溢價 -0.27%",
+        "stamp": "rising",
+        "overlap": true
+      },
+      {
+        "name": "聯邦台精彩50",
+        "code": "009804",
+        "meta": "台灣｜22.6｜-0.88（-3.75%）｜折溢價 +0.22%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "主動野村台灣50",
+        "code": "00985A",
+        "meta": "台灣｜21.2｜-0.77（-3.50%）｜折溢價 -0.33%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "FT臺灣Smart50",
+        "code": "00905",
+        "meta": "台灣｜26.33｜-0.95（-3.48%）｜折溢價 -0.08%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "華南永昌優選50",
+        "code": "009808",
+        "meta": "台灣｜29.79｜-0.83（-2.71%）｜折溢價 +0.07%",
+        "stamp": "rising",
+        "overlap": false
+      }
+    ],
+    "overlap": [
+      "00876"
+    ],
+    "value_note": "ETF 價值區集中台灣科技、半導體、5G 與槓桿台灣50，但本日多數同步回落，且國泰費半、台灣50正2與主動全球創新跌幅較深。ETF 清單仍是主線雷達，不是追價清單；折價與跌幅擴大時，先看承接與分批節奏。",
+    "overlap_names": {
+      "00876": "元大全球5G"
+    }
+  },
+  "stocks": {
+    "value": [
+      {
+        "name": "矽力*-KY",
+        "code": "6415",
+        "meta": "IC設計｜492.5｜-35.5（-6.72%）｜負債比 16.19%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "京元電子",
+        "code": "2449",
+        "meta": "IC測試｜272｜-19（-6.53%）｜負債比 51.90%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "鴻勁",
+        "code": "7769",
+        "meta": "半導體檢測｜6840｜-105（-1.51%）｜負債比 22.17%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "聯電",
+        "code": "2303",
+        "meta": "晶圓代工｜118.5｜-9（-7.06%）｜負債比 32.20%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "全新",
+        "code": "2455",
+        "meta": "砷化鎵代工｜355.5｜-39.5（-10.00%）｜負債比 32.02%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "啟碁",
+        "code": "6285",
+        "meta": "無線通訊設備｜270｜-16.5（-5.76%）｜負債比 59.57%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "力成",
+        "code": "6239",
+        "meta": "IC封裝測試｜303｜-18（-5.61%）｜負債比 41.87%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "致茂",
+        "code": "2360",
+        "meta": "半導體設備｜2210｜-180（-7.53%）｜負債比 47.77%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "華通",
+        "code": "2313",
+        "meta": "硬板｜259｜-17（-6.16%）｜負債比 49.86%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "景碩",
+        "code": "3189",
+        "meta": "IC基板｜660｜-54（-7.56%）｜負債比 38.47%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "瑞昱",
+        "code": "2379",
+        "meta": "IC設計｜645｜-6（-0.92%）｜負債比 68.40%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "廣達",
+        "code": "2382",
+        "meta": "伺服器組裝代工｜380.5｜5.5（+1.47%）｜負債比 87.45%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "臻鼎-KY",
+        "code": "4958",
+        "meta": "軟板｜502｜-43（-7.89%）｜負債比 41.45%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "大立光",
+        "code": "3008",
+        "meta": "光學鏡片與鏡頭｜4130｜245（+6.31%）｜負債比 17.56%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "國巨*",
+        "code": "2327",
+        "meta": "MLCC｜819｜-7（-0.85%）｜負債比 57.90%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "川湖",
+        "code": "2059",
+        "meta": "電子零組件｜6370｜-425（-6.25%）｜負債比 20.20%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "信驊",
+        "code": "5274",
+        "meta": "IC設計｜16840｜-1015（-5.68%）｜負債比 51.72%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "仁寶",
+        "code": "2324",
+        "meta": "電子設備｜37.1｜-1.35（-3.51%）｜負債比 67.75%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "台光電",
+        "code": "2383",
+        "meta": "銅箔基板｜4940｜-125（-2.47%）｜負債比 63.41%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "旺矽",
+        "code": "6223",
+        "meta": "IC封裝測試設備｜5770｜-115（-1.95%）｜負債比 38.73%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "台達電",
+        "code": "2308",
+        "meta": "電源供應器｜2200｜-215（-8.90%）｜負債比 47.78%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "聯詠",
+        "code": "3034",
+        "meta": "驅動IC｜478.5｜-2（-0.42%）｜負債比 30.62%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "貿聯-KY",
+        "code": "3665",
+        "meta": "連接線材｜2155｜0（+0.00%）｜負債比 45.52%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "日月光投控",
+        "code": "3711",
+        "meta": "IC封裝測試｜539｜-30（-5.27%）｜負債比 60.19%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "奇鋐",
+        "code": "3017",
+        "meta": "散熱模組｜2360｜-185（-7.27%）｜負債比 70.84%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "欣興",
+        "code": "3037",
+        "meta": "IC基板｜884｜-85（-8.77%）｜負債比 56.18%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "穎崴",
+        "code": "6515",
+        "meta": "IC封裝測試設備｜8125｜-485（-5.63%）｜負債比 54.61%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "台燿",
+        "code": "6274",
+        "meta": "銅箔基板｜1500｜-115（-7.12%）｜負債比 59.19%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "聯發科",
+        "code": "2454",
+        "meta": "IC設計｜4155｜-320（-7.15%）｜負債比 46.07%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "台積電",
+        "code": "2330",
+        "meta": "晶圓代工｜2255｜-50（-2.17%）｜負債比 31.50%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "智邦",
+        "code": "2345",
+        "meta": "網路設備｜2365｜-110（-4.44%）｜負債比 60.24%",
+        "stamp": "value",
+        "overlap": false
+      }
+    ],
+    "rising": [
+      {
+        "name": "雷笛克",
+        "code": "8454",
+        "meta": "電子商務｜449.5｜23（+5.39%）｜負債比 61.10%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "大綜",
+        "code": "3147",
+        "meta": "系統整合｜320｜7.5（+2.40%）｜負債比 66.11%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "振發",
+        "code": "5426",
+        "meta": "電腦機殼｜32.45｜3.6（+9.99%）｜負債比 24.86%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "盟望實",
+        "code": "8043",
+        "meta": "MLCC｜199｜6.5（+3.38%）｜負債比 59.20%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "達欣工",
+        "code": "2535",
+        "meta": "營造工程｜89.7｜-1（-1.10%）｜負債比 67.39%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "聯穎",
+        "code": "3550",
+        "meta": "連接線材｜28.45｜2.55（+9.85%）｜負債比 60.89%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "廣穎",
+        "code": "4973",
+        "meta": "DRAM｜193｜17（+9.66%）｜負債比 49.51%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "先進光",
+        "code": "3362",
+        "meta": "光學鏡片與鏡頭｜171｜15.5（+9.97%）｜負債比 65.69%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "臻華藥",
+        "code": "6446",
+        "meta": "製藥業｜986｜-4（-0.40%）｜負債比 14.06%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "九豪",
+        "code": "6127",
+        "meta": "電阻｜77｜-6.8（-8.11%）｜負債比 67.17%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "環科",
+        "code": "2413",
+        "meta": "車用電子｜59.6｜5.4（+9.96%）｜負債比 51.88%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "艾華",
+        "code": "6204",
+        "meta": "電阻｜112.5｜1（+0.90%）｜負債比 30.64%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "好德",
+        "code": "3114",
+        "meta": "連接線材｜41.5｜0.15（+0.36%）｜負債比 38.71%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "科嶠",
+        "code": "4542",
+        "meta": "印刷電路板設備｜327｜-18.5（-5.35%）｜負債比 54.28%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "亞電",
+        "code": "4939",
+        "meta": "PCB原材料｜60.1｜-5.5（-8.38%）｜負債比 50.24%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "華容",
+        "code": "5328",
+        "meta": "電容｜44.85｜2.1（+4.91%）｜負債比 17.96%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "泓瀚",
+        "code": "4741",
+        "meta": "電子其他｜80.9｜4.9（+6.45%）｜負債比 18.28%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "康普",
+        "code": "4739",
+        "meta": "電池｜125｜-5（-3.85%）｜負債比 48.83%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "宏旭-KY",
+        "code": "2243",
+        "meta": "汽機車零組件｜30.8｜2.3（+8.07%）｜負債比 72.47%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "佳必琪",
+        "code": "6197",
+        "meta": "連接線材｜325.5｜-17.5（-5.10%）｜負債比 46.80%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "點晶",
+        "code": "3288",
+        "meta": "IC設計｜25.55｜2.25（+9.66%）｜負債比 48.17%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "凌巨",
+        "code": "8105",
+        "meta": "TFT-LCD｜20.7｜-0.95（-4.39%）｜負債比 25.59%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "凱基金",
+        "code": "2883",
+        "meta": "金控｜28.2｜-0.85（-2.93%）｜負債比 91.24%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "尖點",
+        "code": "8021",
+        "meta": "PCB原材料｜556｜50（+9.88%）｜負債比 35.15%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "旭然",
+        "code": "4556",
+        "meta": "水資源處理｜55.3｜5（+9.94%）｜負債比 47.09%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "大毅",
+        "code": "2478",
+        "meta": "電阻｜170｜3（+1.80%）｜負債比 29.06%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "倍微",
+        "code": "6270",
+        "meta": "IC零組件通路商｜36.7｜-2.7（-6.85%）｜負債比 27.66%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "和桐",
+        "code": "1714",
+        "meta": "化學工業｜13.1｜-0.8（-5.76%）｜負債比 29.31%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "聯一光",
+        "code": "3441",
+        "meta": "光學鏡片與鏡頭｜65｜5.9（+9.98%）｜負債比 22.44%",
+        "stamp": "rising",
+        "overlap": false
+      }
+    ],
+    "overlap": [],
+    "value_note": "產業價值區仍集中 IC設計、晶圓代工、封測、PCB/CCL、IC基板、散熱、光學與伺服器供應鏈；但多數核心同步回檔，顯示盤面由強勢擴張轉入高檔換手。大立光與廣達相對抗跌，是觀察承接的少數亮點；台達電、欣興、聯發科、奇鋐、全新等跌幅較深，新增部位必須等止跌與量價回補。",
+    "overlap_names": {}
+  },
+  "validation": {
+    "strengthened": [
+      "方舟水位升至 75.5%，系統仍給高水位風險預算，代表主線沒有直接撤退。",
+      "台股清單仍集中半導體、PCB/CCL、IC基板、散熱、封測與光學，長線主題結構未變。",
+      "大立光、廣達等少數核心仍相對抗跌，說明不是全市場無差別崩壞，而是主線內部換手。"
+    ],
+    "not_confirmed": [
+      "6/11 台股開盤後量價承接尚未確認。"
+    ],
+    "pressure": [
+      "美股 6/10 費半 -3.57%、NASDAQ -1.98%、S&P 500 -1.62%，外部權值明顯降溫。",
+      "VIX +11.83% 至 22.22，系統性風險溫度快速上升。",
+      "ETF 與多數台股核心價值區同步回落，槓桿與高波動標的不可用水位上升作追價理由。"
+    ],
+    "long_term": [
+      "AI 資料中心、先進製程、IC設計、封測、PCB/CCL、散熱與高速傳輸仍是中長線主線。",
+      "水位上升時，重點不是擴張到所有標的，而是把風險預算集中到護城河與承接確認。",
+      "若今日換手成功，主線仍有延續；若開高不接或破線擴大，先做汰弱與降槓桿。"
+    ]
+  },
+  "intelligence": {
+    "trump": [
+      {
+        "time": "6/10 ET",
+        "content": "本期未取得足以改變台股科技供應鏈風險預算的新增政策訊號。<em>這代表什麼：今日決策主軸回到方舟水位、費半急跌、VIX 升溫與台股核心承接。</em>"
+      }
+    ],
+    "musk": "Tesla 6/10 下跌 -3.80%，Musk / Tesla 軸短線仍偏風控，對電動車、機器人與高 beta 題材不提供追價催化。<em>這代表什麼：相關鏈先看換手與自身強弱，不用題材硬追。</em>",
+    "policy": [
+      "<strong>AI 權值：</strong>NVIDIA -3.73%、費半 -3.57%，AI infrastructure 長線不壞，但半導體鏈短線需要承接確認。",
+      "<strong>Fed / 利率背景：</strong>VIX 升至 22.22，估值風險重新需要折價；槓桿 ETF 與新增倉位必須回到水位控管。",
+      "<strong>觀察窗：</strong>本期未取得足以覆蓋美股降溫的新增政策催化；讀法是保留主線、降低追價、等換手。"
+    ]
+  },
+  "mag7": [
+    {
+      "name": "Apple / Tim Cook",
+      "ticker": "AAPL",
+      "price": "291.58",
+      "change_pct": 0.35,
+      "change_abs": "+1.03",
+      "tier": "neutral",
+      "tier_label": "NEUTRAL",
+      "signal": "Apple 小漲抗跌，但單一消費電子抗跌不足以抵銷費半與 Mag7 整體降溫；蘋概只看相對強弱。"
+    },
+    {
+      "name": "Microsoft / Satya Nadella",
+      "ticker": "MSFT",
+      "price": "397.36",
+      "change_pct": -1.5,
+      "change_abs": "-6.05",
+      "tier": "weak",
+      "tier_label": "WEAK",
+      "signal": "Microsoft 回落，雲端 AI 長線仍在，但權值降溫使台股 AI 鏈先看承接。"
+    },
+    {
+      "name": "NVIDIA / Jensen Huang",
+      "ticker": "NVDA",
+      "price": "200.42",
+      "change_pct": -3.73,
+      "change_abs": "-7.77",
+      "tier": "weak",
+      "tier_label": "WEAK",
+      "signal": "NVIDIA 明顯回落，AI 基礎建設主線未壞，但半導體鏈今日不能追價。"
+    },
+    {
+      "name": "Amazon / Andy Jassy",
+      "ticker": "AMZN",
+      "price": "238.00",
+      "change_pct": -2.53,
+      "change_abs": "-6.19",
+      "tier": "weak",
+      "tier_label": "WEAK",
+      "signal": "Amazon 下跌，雲端需求背景保留，但短線不是台股催化主角。"
+    },
+    {
+      "name": "Alphabet / Sundar Pichai",
+      "ticker": "GOOGL",
+      "price": "356.38",
+      "change_pct": -2.16,
+      "change_abs": "-7.88",
+      "tier": "weak",
+      "tier_label": "WEAK",
+      "signal": "Alphabet 轉弱，AI 權值降溫擴散，對台股偏風控。"
+    },
+    {
+      "name": "Meta / Mark Zuckerberg",
+      "ticker": "META",
+      "price": "570.98",
+      "change_pct": -2.33,
+      "change_abs": "-13.61",
+      "tier": "weak",
+      "tier_label": "WEAK",
+      "signal": "Meta 回落，AI capex 敘事保留，但高 beta 權值降溫。"
+    },
+    {
+      "name": "Tesla / Elon Musk",
+      "ticker": "TSLA",
+      "price": "381.59",
+      "change_pct": -3.8,
+      "change_abs": "-15.09",
+      "tier": "weak",
+      "tier_label": "WEAK",
+      "signal": "Tesla 持續回吐，電動車/機器人鏈短線追價權重下降。"
+    }
+  ],
+  "analysis": {
+    "us_close": "美股 6/10 收盤明顯降溫：S&P 500 -1.62%、NASDAQ -1.98%、費半 -3.57%，VIX +11.83% 至 22.22。這代表 AI / 半導體長線主線未被否定，但短線風險溫度升高，台股開盤不能把水位上升當成追價令。",
+    "tx_night": "台股 6/11 開盤重點是核心承接而非追高。使用者提供的 6/11 清單顯示多數科技價值區與 ETF 同步回落，若開盤急殺後能縮腳換手，核心可留；若跌幅擴大，先降槓桿與汰弱。",
+    "axes": {
+      "thesis": "AI / 半導體、PCB/CCL、IC基板、散熱、封測與光學仍是台股內部主線。",
+      "policy": "未見新增重大政策催化覆蓋美股降溫；政策軸中性偏風控。",
+      "liquidity": "水位升至 75.5%，但 VIX 升至 22.22，代表風險預算高但估值折價也同步提高。",
+      "risk": "水位上升遇到外部急跌，今日紀律是等承接、汰弱留強、避免槓桿追價。"
+    }
+  },
+  "verdict": {
+    "level": "中偏高",
+    "level_en": "MEDIUM-HIGH",
+    "reason": "系統性風險升至中偏高：方舟水位上升至 75.5%，主線仍在；但費半急跌、VIX 快速升溫、Mag7 多數轉弱，且台股核心價值區普遍回落。結論是保留主線、嚴控追價、等換手後再部署。"
+  },
+  "conclusion": "6/11 的方舟晨報定調為「水位上升下的高檔分化」。75.5% 代表風險預算仍高，但它不是擴張追價令；在費半急跌與 VIX 升溫後，今天只把資金留給換手後的核心，過熱、高波動、弱承接標的先降速或汰弱。",
+  "appendix": {
+    "after_hours": "美股收盤由權值降溫擴大為半導體急跌：費半 -3.57%、NASDAQ -1.98%、VIX +11.83%。台股若開低後有承接，觀察核心修復；若開高或反彈無量，仍不追價。",
+    "map_bullets": [
+      "NVIDIA、費半急跌 → 台積電、聯發科、信驊、瑞昱、封測與設備鏈先看承接，不追第一段反彈。",
+      "PCB/CCL/IC基板多數回落 → 台光電、台燿、欣興、景碩、華通、臻鼎以換手後的強弱排序，不平均加碼。",
+      "散熱與電源跌幅擴大 → 奇鋐、川湖、台達電先看是否守住中期結構，弱承接者優先降風險。",
+      "ETF 與台灣50正2同步回落 → 槓桿部位只適合等承接，不適合用水位上升直接追。",
+      "方舟水位 75.5% 上升 → 主線可留；費半與 VIX 轉弱 → 新增必須等換手。"
+    ],
+    "execution": "今日執行語句：水位升高，但風險也升高；保留核心、等承接、汰弱留強、不追急彈。"
+  },
+  "title": "Kelvin Wiggly｜2026/06/11 市場晨報",
+  "headline": "水位升至 75.5%，但外部風險升溫：<br>高水位不是追價令，是換手檢查日",
+  "kicker": "高檔分化｜水位上升、外部降溫",
+  "subhead": "6/11 方舟水位升至 75.5%，但費半急跌、VIX 升溫；AI / 半導體主線仍在，今日以承接與換手為準。",
+  "xurl_signal_layer": {
+    "status": "unavailable",
+    "signals_count": 0,
+    "included_in_revision": false,
+    "source_file": "data/x-signals/20260611.json",
+    "observation_window": "24h",
+    "key_rendered_markers": []
+  }
+}
