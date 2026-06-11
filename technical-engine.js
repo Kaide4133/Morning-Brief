@@ -1128,6 +1128,9 @@ const MORPH_PRIORITY = [
   '反彈旗形',
   '下降壓力線突破',
   '平台突破',
+  '頭肩底',
+  'W底',
+  '楔形收斂',
   '三角收斂',
   'BOLL壓縮',
   'U型底',
@@ -1144,6 +1147,9 @@ const MORPH_CATEGORY = {
   多頭旗形: 'structure',
   下降壓力線突破: 'structure',
   平台突破: 'structure',
+  頭肩底: 'structure',
+  W底: 'structure',
+  楔形收斂: 'structure',
   反彈旗形: 'structure',
   三角收斂: 'structure',
   BOLL壓縮: 'structure',
@@ -1792,6 +1798,140 @@ function detectBollCompression(series, norm) {
   };
 }
 
+function detectWBottom(series, norm) {
+  if (series.length < 70) return null;
+  const n = series.length - 1;
+  const lows = findSwingLows(series, 3).slice(-8);
+  const highs = findSwingHighs(series, 3).slice(-8);
+  if (lows.length < 2 || highs.length < 1) return null;
+  let best = null;
+  for (let i = 0; i < lows.length - 1; i++) {
+    for (let j = i + 1; j < lows.length; j++) {
+      const l1 = lows[i];
+      const l2 = lows[j];
+      const gap = l2.index - l1.index;
+      if (gap < 12 || gap > 80) continue;
+      const diff = Math.abs(relPct(l2.price, l1.price));
+      if (diff == null || diff > 8) continue;
+      const betweenHighs = highs.filter((h) => h.index > l1.index && h.index < l2.index);
+      if (!betweenHighs.length) continue;
+      const neckline = Math.max.apply(null, betweenHighs.map((h) => h.price));
+      const baseLow = Math.min(l1.price, l2.price);
+      if ((neckline - baseLow) / neckline < 0.08) continue;
+      const score = (8 - diff) + Math.min(8, gap / 8) + (norm.close >= neckline * 0.98 ? 6 : 0);
+      if (!best || score > best.score) best = { l1, l2, neckline, baseLow, score };
+    }
+  }
+  if (!best) return null;
+  const close = norm.close;
+  let state = '右腳成形';
+  if (relPct(close, best.neckline) != null && close < best.neckline && relPct(close, best.neckline) >= -5) state = '頸線附近';
+  if (close >= best.neckline) state = '頸線突破';
+  if (close > best.neckline * 1.08) return null;
+  if (close < best.baseLow * 0.99) state = '失敗跌破';
+  const confidence = state === '頸線突破' ? 74 : state === '頸線附近' ? 68 : 62;
+  return {
+    type: 'W底',
+    state,
+    confidence,
+    summary: '兩段低點接近、中央反彈形成頸線，屬 W 底/雙底反轉候選。',
+    reasons: ['兩個低點位置接近', '兩低點間有明確反彈高點', '右腳未明顯破壞左腳'],
+    annotations: [
+      { kind: 'horizontal', label: '頸線', price: best.neckline, style: 'neckline' },
+      { kind: 'marker', label: '左腳', index: best.l1.index, price: best.l1.price, style: 'cup-low' },
+      { kind: 'marker', label: '右腳', index: best.l2.index, price: best.l2.price, style: 'near-neck' },
+      { kind: 'polyline', label: 'W底輪廓', points: [
+        { index: best.l1.index, price: best.l1.price },
+        { index: Math.round((best.l1.index + best.l2.index)/2), price: best.neckline },
+        { index: best.l2.index, price: best.l2.price },
+        { index: n, price: close },
+      ], style: 'cup' },
+    ],
+    structure: { neckline: best.neckline, resistance: best.neckline, support: best.baseLow, leftLow: best.l1.price, rightLow: best.l2.price },
+  };
+}
+
+function detectInverseHeadShoulders(series, norm) {
+  if (series.length < 90) return null;
+  const n = series.length - 1;
+  const lows = findSwingLows(series, 3).slice(-10);
+  const highs = findSwingHighs(series, 3).slice(-10);
+  if (lows.length < 3 || highs.length < 2) return null;
+  let best = null;
+  for (let i = 0; i < lows.length - 2; i++) {
+    const ls = lows[i], head = lows[i+1], rs = lows[i+2];
+    if (head.index - ls.index < 8 || rs.index - head.index < 8) continue;
+    if (!(head.price < ls.price * 0.96 && head.price < rs.price * 0.96)) continue;
+    const shoulderDiff = Math.abs(relPct(rs.price, ls.price));
+    if (shoulderDiff == null || shoulderDiff > 14) continue;
+    const neckHighs = highs.filter((h) => h.index > ls.index && h.index < rs.index);
+    if (neckHighs.length < 2) continue;
+    const neckline = Math.max.apply(null, neckHighs.map((h) => h.price));
+    if ((neckline - head.price) / neckline < 0.12) continue;
+    const score = (14 - shoulderDiff) + (norm.close >= neckline * 0.97 ? 6 : 0);
+    if (!best || score > best.score) best = { ls, head, rs, neckline, score };
+  }
+  if (!best) return null;
+  const close = norm.close;
+  let state = '右肩成形';
+  if (relPct(close, best.neckline) != null && close < best.neckline && relPct(close, best.neckline) >= -5) state = '頸線附近';
+  if (close >= best.neckline) state = '頸線突破';
+  if (close > best.neckline * 1.08) return null;
+  if (close < best.head.price) state = '失敗跌破';
+  return {
+    type: '頭肩底',
+    state,
+    confidence: state === '頸線突破' ? 76 : state === '頸線附近' ? 70 : 64,
+    summary: '左肩、頭部、右肩形成反轉候選，需以頸線突破確認。',
+    reasons: ['頭部低於左右肩', '左右肩高度相近', '肩頭肩之間形成頸線'],
+    annotations: [
+      { kind: 'horizontal', label: '頸線', price: best.neckline, style: 'neckline' },
+      { kind: 'marker', label: '左肩', index: best.ls.index, price: best.ls.price, style: 'rim-left' },
+      { kind: 'marker', label: '頭部', index: best.head.index, price: best.head.price, style: 'cup-low' },
+      { kind: 'marker', label: '右肩', index: best.rs.index, price: best.rs.price, style: 'rim-right' },
+    ],
+    structure: { neckline: best.neckline, resistance: best.neckline, support: best.head.price, leftShoulderLow: best.ls.price, headLow: best.head.price, rightShoulderLow: best.rs.price },
+  };
+}
+
+function detectWedge(series, norm, diag) {
+  const hi = diag.swingHighs.slice(-4);
+  const lo = diag.swingLows.slice(-4);
+  if (hi.length < 3 || lo.length < 3) return null;
+  const regH = linearRegression(hi);
+  const regL = linearRegression(lo);
+  if (!regH || !regL) return null;
+  const n = series.length - 1;
+  const topNow = linePriceAt(regH, n);
+  const botNow = linePriceAt(regL, n);
+  const topOld = linePriceAt(regH, Math.min(hi[0].index, lo[0].index));
+  const botOld = linePriceAt(regL, Math.min(hi[0].index, lo[0].index));
+  if (!Number.isFinite(topNow) || !Number.isFinite(botNow) || topNow <= botNow) return null;
+  const oldWidth = topOld - botOld;
+  const newWidth = topNow - botNow;
+  if (!Number.isFinite(oldWidth) || oldWidth <= 0 || newWidth / oldWidth > 0.72) return null;
+  const sameDirection = (regH.slope > 0 && regL.slope > 0) || (regH.slope < 0 && regL.slope < 0);
+  if (!sameDirection) return null;
+  const close = norm.close;
+  let state = regH.slope > 0 ? '上升楔形收斂' : '下降楔形收斂';
+  if (close > topNow) state = '上緣突破';
+  if (close < botNow) state = '下緣跌破';
+  if (close > topNow * 1.06 || close < botNow * 0.94) return null;
+  return {
+    type: '楔形收斂',
+    state,
+    confidence: 66,
+    summary: '高低點趨勢線同向但逐步收斂，屬楔形壓縮；需等待上下緣突破決定方向。',
+    reasons: ['上下緣同向傾斜', '區間寬度收斂', '價格接近收斂末端'],
+    annotations: [
+      { kind: 'trendline', label: '楔形上緣', points: [{ index: hi[0].index, price: linePriceAt(regH, hi[0].index) }, { index: n, price: topNow }], style: 'resistance' },
+      { kind: 'trendline', label: '楔形下緣', points: [{ index: lo[0].index, price: linePriceAt(regL, lo[0].index) }, { index: n, price: botNow }], style: 'support' },
+      { kind: 'zone', label: '楔形收斂', startIndex: Math.min(hi[0].index, lo[0].index), endIndex: n, style: 'squeeze', topPrice: topNow, bottomPrice: botNow },
+    ],
+    structure: { resistance: topNow, support: botNow },
+  };
+}
+
 function detectUBottom(series, norm) {
   const n = series.length;
   if (n < 50) return null;
@@ -1936,7 +2076,7 @@ function buildMeasuredMove(candidate, series, norm) {
   const close = norm.close;
   const type = candidate.type;
   const st = candidate.structure || {};
-  const upTypes = ['平台突破', '杯柄型態', '下降壓力線突破', 'U型底', '圓弧底', '上升通道'];
+  const upTypes = ['平台突破', '杯柄型態', '下降壓力線突破', 'U型底', '圓弧底', 'W底', '頭肩底', '楔形收斂', '上升通道'];
   const brokeUp =
     upTypes.indexOf(type) >= 0 &&
     (candidate.state === '已突破' ||
@@ -2110,6 +2250,53 @@ function buildMorphTradePlan(candidate, norm, measuredMove) {
     if (Number.isFinite(lower)) out.triggers.push('跌破確認：' + fmtPlanPrice(lower));
     if (Number.isFinite(upper)) out.invalidation.push('收復旗形上緣：' + fmtPlanPrice(upper) + '，反彈旗形降級');
     out.plan.push('跌破下緣代表弱勢延續；若站回上緣，先取消空方旗型假設。');
+    return out;
+  }
+
+  if (type === 'W底') {
+    const neckline = st.neckline || st.resistance;
+    const support = st.support;
+    out.bias = 'W 底/雙底反轉候選：重點不是看形狀像不像，而是第二隻腳是否守住、頸線是否突破。';
+    if (Number.isFinite(support)) out.triggers.push('雙底支撐/第二腳防守：' + fmtPlanPrice(support));
+    if (Number.isFinite(neckline)) out.triggers.push('頸線突破確認：' + fmtPlanPrice(neckline));
+    if (Number.isFinite(support)) out.invalidation.push('跌破雙底低點：' + fmtPlanPrice(support) + '，W 底失敗');
+    out.plan.push('右腳守住且放量突破頸線，才進入反轉確認；頸線下方仍屬築底觀察。');
+    out.plan.push('突破後回測頸線不破，才由型態候選升級為完成型。');
+    return out;
+  }
+
+  if (type === '頭肩底') {
+    const neckline = st.neckline || st.resistance;
+    const head = st.headLow || st.support;
+    const right = st.rightShoulderLow;
+    out.bias = '頭肩底反轉候選：左肩、頭部、右肩需搭配頸線確認；右肩不能再破頭部。';
+    if (Number.isFinite(right)) out.triggers.push('右肩防守：' + fmtPlanPrice(right));
+    if (Number.isFinite(neckline)) out.triggers.push('頸線突破確認：' + fmtPlanPrice(neckline));
+    if (Number.isFinite(head)) out.invalidation.push('跌破頭部低點：' + fmtPlanPrice(head) + '，頭肩底失敗');
+    out.plan.push('右肩成形後，等待頸線突破；未突破前只視為反轉候選。');
+    out.plan.push('突破後回測頸線不破，反轉品質才提高。');
+    return out;
+  }
+
+  if (type === '楔形收斂') {
+    const upper = st.resistance;
+    const lower = st.support;
+    out.bias = '楔形收斂：波動與趨勢線同時收窄，方向需等突破，不預設多空。';
+    if (Number.isFinite(upper)) out.triggers.push('上緣突破觀察：' + fmtPlanPrice(upper));
+    if (Number.isFinite(lower)) out.triggers.push('下緣跌破觀察：' + fmtPlanPrice(lower));
+    if (Number.isFinite(lower)) out.invalidation.push('跌破下緣：' + fmtPlanPrice(lower) + '，偏弱展開');
+    out.plan.push('收斂末端避免在中間追；等待有效突破或跌破後，再看回測是否站穩。');
+    return out;
+  }
+
+  if (type === '箱型整理') {
+    const upper = st.resistance;
+    const lower = st.support;
+    out.bias = '箱型整理：區間工具，不是趨勢工具；上緣看突破/調節，下緣看承接/失敗。';
+    if (Number.isFinite(lower)) out.triggers.push('箱底支撐：' + fmtPlanPrice(lower));
+    if (Number.isFinite(upper)) out.triggers.push('箱頂壓力/突破：' + fmtPlanPrice(upper));
+    if (Number.isFinite(lower)) out.invalidation.push('跌破箱底：' + fmtPlanPrice(lower) + '，箱型失敗');
+    out.plan.push('箱內以區間對待；收盤站上箱頂才切換為突破計畫。');
     return out;
   }
 
@@ -3028,6 +3215,9 @@ function detectMorphology(record) {
   add(detectBearFlag(series, norm));
   add(detectDescendingBreakout(series, norm, diagnostics));
   add(detectPlatformBreakout(series, norm));
+  add(detectInverseHeadShoulders(series, norm));
+  add(detectWBottom(series, norm));
+  add(detectWedge(series, norm, diagnostics));
   add(detectTriangle(series, norm, diagnostics));
   add(detectBollCompression(series, norm));
   add(detectUBottom(series, norm));
