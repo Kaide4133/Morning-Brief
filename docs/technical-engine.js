@@ -1124,6 +1124,7 @@ const MORPH_PRIORITY = [
   '杯柄型態',
   '上升通道',
   '下降通道',
+  '多頭旗形',
   '反彈旗形',
   '下降壓力線突破',
   '平台突破',
@@ -1140,6 +1141,7 @@ const MORPH_CATEGORY = {
   杯柄型態: 'structure',
   上升通道: 'structure',
   下降通道: 'structure',
+  多頭旗形: 'structure',
   下降壓力線突破: 'structure',
   平台突破: 'structure',
   反彈旗形: 'structure',
@@ -1755,12 +1757,29 @@ function detectBollCompression(series, norm) {
   let state = '壓縮中';
   if (last.boll_ub && last.close >= last.boll_ub * 0.99) state = '向上擴張';
   if (last.boll_lb && last.close <= last.boll_lb * 1.01) state = '向下擴張';
+  const recentRange20 = recentRange(series, 20) || {};
   return {
     type: 'BOLL壓縮',
     state,
-    confidence: 64,
-    summary: 'BOLL 頻寬降至近期低位，價格進入波動壓縮區。',
-    reasons: ['BOLL 頻寬偏低', '波動區間收斂', '未見爆量'],
+    confidence: state === '壓縮中' ? 64 : 68,
+    summary:
+      state === '壓縮中'
+        ? 'BOLL 頻寬降至近期低位，價格進入波動壓縮區。'
+        : 'BOLL 壓縮後開始觸及軌道，需追蹤是否進入擴張行情或假突破。',
+    reasons: [
+      'BOLL 頻寬偏低',
+      '波動區間收斂',
+      state === '向上擴張' ? '接近或站上 BOLL 上軌' : '',
+      state === '向下擴張' ? '接近或跌破 BOLL 下軌' : '',
+      '未見爆量',
+    ].filter(Boolean),
+    structure: {
+      support: last.boll_lb || recentRange20.low,
+      resistance: last.boll_ub || recentRange20.high,
+      bollUpper: last.boll_ub,
+      bollLower: last.boll_lb,
+      bollMid: last.ma20,
+    },
     annotations: [
       {
         kind: 'zone',
@@ -2071,6 +2090,43 @@ function buildMorphTradePlan(candidate, norm, measuredMove) {
     return out;
   }
 
+  if (type === '多頭旗形') {
+    const upper = st.resistance;
+    const lower = st.support;
+    out.bias = '多頭延續型態：前段急漲後進入小型下傾/橫向整理，重點是等旗面上緣突破或回測守住，不在旗面中段追價。';
+    if (Number.isFinite(upper)) out.triggers.push('旗形上緣/突破確認：' + fmtPlanPrice(upper));
+    if (Number.isFinite(lower)) out.triggers.push('旗形下緣/低接觀察：' + fmtPlanPrice(lower));
+    if (Number.isFinite(lower)) out.invalidation.push('跌破旗形下緣：' + fmtPlanPrice(lower) + '，多頭旗形失敗');
+    out.plan.push('上緣突破且量能放大，視為延續確認；若突破無量或長上影，降權為假突破觀察。');
+    out.plan.push('回測不破下緣才保留旗型假設；跌破則回到一般整理/轉弱判讀。');
+    return out;
+  }
+
+  if (type === '反彈旗形') {
+    const upper = st.resistance;
+    const lower = st.support;
+    out.bias = '空方/弱勢延續型態：急跌後小型反彈整理，重點看旗形下緣是否跌破。';
+    if (Number.isFinite(upper)) out.triggers.push('反彈壓力/旗形上緣：' + fmtPlanPrice(upper));
+    if (Number.isFinite(lower)) out.triggers.push('跌破確認：' + fmtPlanPrice(lower));
+    if (Number.isFinite(upper)) out.invalidation.push('收復旗形上緣：' + fmtPlanPrice(upper) + '，反彈旗形降級');
+    out.plan.push('跌破下緣代表弱勢延續；若站回上緣，先取消空方旗型假設。');
+    return out;
+  }
+
+  if (type === 'BOLL壓縮') {
+    const upper = st.bollUpper || st.resistance;
+    const lower = st.bollLower || st.support;
+    const mid = st.bollMid || norm.ma20;
+    out.bias = 'BOLL 參考型態：不是獨立買賣訊號，而是用壓縮/擴張判斷波動即將放大或假突破風險。';
+    if (Number.isFinite(upper)) out.triggers.push('上軌擴張觀察：' + fmtPlanPrice(upper));
+    if (Number.isFinite(mid)) out.triggers.push('中軌/MA20 回測：' + fmtPlanPrice(mid));
+    if (Number.isFinite(lower)) out.triggers.push('下軌風險觀察：' + fmtPlanPrice(lower));
+    if (Number.isFinite(lower)) out.invalidation.push('跌破下軌：' + fmtPlanPrice(lower) + '，偏弱擴張');
+    out.plan.push('壓縮中：等待收盤離開上下軌，不預設方向。');
+    out.plan.push('向上擴張：需站穩上軌且中軌上彎；若隔日收回軌內，視為假突破。');
+    return out;
+  }
+
   if (type.indexOf('通道') >= 0) {
     const upper = st.channelUpper || st.resistance;
     const lower = st.channelLower || st.support;
@@ -2236,6 +2292,7 @@ const NO_CUP_SECONDARY = [
   '假突破風險',
   '上升通道',
   '下降通道',
+  '多頭旗形',
   '反彈旗形',
   '下降壓力線突破',
   'BOLL壓縮',
@@ -2797,6 +2854,89 @@ function detectChannel(series, norm, diag, ascending) {
   };
 }
 
+function detectBullFlag(series, norm) {
+  if (series.length < 50) return null;
+  const n = series.length - 1;
+  const poleLen = 25;
+  const pole = series.slice(Math.max(0, n - poleLen - 15), Math.max(0, n - 15));
+  const flag = series.slice(Math.max(0, n - 15));
+  if (pole.length < 12 || flag.length < 8) return null;
+  const risePct = ((pole[pole.length - 1].close - pole[0].close) / pole[0].close) * 100;
+  if (risePct < 12) return null;
+  const poleHigh = Math.max.apply(null, pole.map((r) => r.high));
+  const flagHigh = Math.max.apply(null, flag.map((r) => r.high));
+  const flagLow = Math.min.apply(null, flag.map((r) => r.low));
+  if (!Number.isFinite(flagHigh) || !Number.isFinite(flagLow) || flagHigh <= flagLow) return null;
+  const pullbackPct = ((flagHigh - flagLow) / Math.max(1, flagHigh)) * 100;
+  if (pullbackPct > 18) return null;
+  const hi = findSwingHighs(flag, 2);
+  const lo = findSwingLows(flag, 2);
+  let regH = hi.length >= 2 ? linearRegression(hi) : null;
+  let regL = lo.length >= 2 ? linearRegression(lo) : null;
+  if (!regH || !regL) {
+    regH = { slope: (flag[flag.length - 1].high - flag[0].high) / Math.max(1, flag.length - 1), intercept: flag[0].high };
+    regL = { slope: (flag[flag.length - 1].low - flag[0].low) / Math.max(1, flag.length - 1), intercept: flag[0].low };
+  }
+  const upperNow = linePriceAt(regH, n);
+  const lowerNow = linePriceAt(regL, n);
+  if (!Number.isFinite(upperNow) || !Number.isFinite(lowerNow)) return null;
+  // Bull flags usually drift sideways/down after the pole; steep rising flags are just channels/extension.
+  if (regH.slope > 0.18 || regL.slope > 0.18) return null;
+  const close = norm.close;
+  const avgVol = averageVolume(series, n - 12, n);
+  const poleVol = averageVolume(series, n - 40, n - 20);
+  if (poleVol > 0 && avgVol / poleVol > 1.55 && close < upperNow) return null;
+  let state = '旗面整理中';
+  if (close > upperNow * 1.01) state = '上緣突破';
+  if (close < lowerNow * 0.99) state = '跌破失敗';
+  const confidence = state === '上緣突破' ? 72 : state === '跌破失敗' ? 58 : 64;
+  return {
+    type: '多頭旗形',
+    state,
+    confidence,
+    summary: '前段急漲後形成小型下傾或橫向旗面，屬多頭延續候選；需等上緣突破確認，不硬追中段。',
+    reasons: [
+      '前段上漲幅度超過 12%',
+      '旗面回檔幅度未破壞前段漲勢',
+      regH.slope <= 0 ? '旗面上緣下壓或走平' : '旗面斜率溫和',
+      poleVol > 0 && avgVol / poleVol < 1 ? '旗面量能收斂' : '',
+    ].filter(Boolean),
+    annotations: [
+      {
+        kind: 'trendline',
+        label: '旗形上緣',
+        points: [
+          { index: Math.max(0, n - 14), price: linePriceAt(regH, Math.max(0, n - 14)) },
+          { index: n, price: upperNow },
+        ],
+        style: 'resistance',
+      },
+      {
+        kind: 'trendline',
+        label: '旗形下緣',
+        points: [
+          { index: Math.max(0, n - 14), price: linePriceAt(regL, Math.max(0, n - 14)) },
+          { index: n, price: lowerNow },
+        ],
+        style: 'support',
+      },
+      {
+        kind: 'zone',
+        label: '多頭旗形',
+        startIndex: Math.max(0, n - 15),
+        endIndex: n,
+        style: 'channel',
+        topPrice: upperNow,
+        bottomPrice: lowerNow,
+      },
+      ...(state === '上緣突破'
+        ? [{ kind: 'marker', label: '突破', index: n, price: close, style: 'breakout' }]
+        : []),
+    ],
+    structure: { resistance: upperNow, support: lowerNow, flagHigh, flagLow, poleHigh },
+  };
+}
+
 function detectBearFlag(series, norm) {
   if (series.length < 50) return null;
   const n = series.length - 1;
@@ -2884,6 +3024,7 @@ function detectMorphology(record) {
   add(detectCupHandle(series, norm, meta));
   add(detectChannel(series, norm, diagnostics, true));
   add(detectChannel(series, norm, diagnostics, false));
+  add(detectBullFlag(series, norm));
   add(detectBearFlag(series, norm));
   add(detectDescendingBreakout(series, norm, diagnostics));
   add(detectPlatformBreakout(series, norm));
