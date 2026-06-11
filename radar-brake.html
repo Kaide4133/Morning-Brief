@@ -14,7 +14,7 @@ header{border:2px solid var(--ink);padding:28px clamp(18px,4vw,46px);box-shadow:
 </style>
 </head>
 <body>
-<nav class="masthead"><div class="masthead-inner"><div><span class="kw-mark">K</span>Kelvin Wiggly</div><div><a class="nav-link" href="/Morning-Brief/">晨報首頁</a><a class="nav-link" href="/Morning-Brief/20260610-stock-news-kelvin.html">今日晨報</a></div></div></nav>
+<nav class="masthead"><div class="masthead-inner"><div><span class="kw-mark">K</span>Kelvin Wiggly</div><div><a class="nav-link" href="/Morning-Brief/">晨報首頁</a><a class="nav-link" href="/Morning-Brief/20260611-stock-news-kelvin.html">今日晨報</a></div></div></nav>
 <main>
 <header>
   <div class="eyebrow">Kelvin Wiggly × Technical Radar Brake</div>
@@ -125,7 +125,7 @@ header{border:2px solid var(--ink);padding:28px clamp(18px,4vw,46px);box-shadow:
   const $=id=>document.getElementById(id);
   const fmt=n=>Number.isFinite(Number(n))?Number(n).toLocaleString('zh-TW',{maximumFractionDigits:2}):'—';
   const baseDataUrl=location.pathname.includes('/Morning-Brief/')?'/Morning-Brief/radar-technical.json':'radar-technical.json';
-  const dataUrl=`${baseDataUrl}?v=20260610`;
+  const dataUrl=`${baseDataUrl}?v=20260611`;
   fetch(dataUrl,{cache:'no-store'}).then(r=>r.json()).then(j=>{db=j.records||[];$('dataStatus').textContent=`已載入 ${db.length} 檔技術線圖資料｜${j.as_of||''}`;}).catch(()=>{$('dataStatus').textContent='資料暫時讀取失敗，請稍後重整。';});
   function findRecord(q){q=(q||'').trim(); const code=(q.match(/\d{4}/)||[])[0]; if(!code)return null; return db.find(x=>x.code===code);}
   function linePath(points,key,x,y){const pts=points.filter(p=>Number.isFinite(Number(p[key]))); if(!pts.length)return ''; return pts.map((p,i)=>`${i?'L':'M'}${x(p)} ${y(p[key])}`).join(' ');}
