@@ -1055,6 +1055,7 @@ function emptyMorphology(summary) {
   return {
     primary: {
       type: '無明確形態',
+      direction: '無明確方向',
       state: '無明確狀態',
       confidence: 0,
       summary: summary || '目前沒有足夠明確的形態學結構。',
@@ -1077,6 +1078,7 @@ function emptyMorphology(summary) {
     fibExtensions: [],
     tradePlan: {
       stage: '無明確形態，不強制套型',
+      direction: '無明確方向',
       bias: '資料不足或結構不夠清楚時，只標示支撐/壓力，不硬套杯柄、通道或三角形。',
       triggers: [],
       invalidation: [],
@@ -1121,6 +1123,8 @@ function buildDiagnostics(series, norm) {
 
 const MORPH_PRIORITY = [
   '假突破風險',
+  '頭肩頂',
+  'M頭',
   '杯柄型態',
   '上升通道',
   '下降通道',
@@ -1141,6 +1145,8 @@ const MORPH_PRIORITY = [
 
 const MORPH_CATEGORY = {
   假突破風險: 'risk',
+  頭肩頂: 'risk',
+  M頭: 'risk',
   杯柄型態: 'structure',
   上升通道: 'structure',
   下降通道: 'structure',
@@ -1157,6 +1163,32 @@ const MORPH_CATEGORY = {
   圓弧底: 'structure',
   箱型整理: 'structure',
 };
+
+const MORPH_DIRECTION = {
+  假突破風險: '空方風險',
+  M頭: '空方反轉',
+  頭肩頂: '空方反轉',
+  反彈旗形: '空方延續',
+  下降通道: '空方延續',
+  杯柄型態: '多方延續',
+  多頭旗形: '多方延續',
+  W底: '多方反轉',
+  頭肩底: '多方反轉',
+  U型底: '多方反轉',
+  圓弧底: '多方反轉',
+  下降壓力線突破: '多方反轉',
+  平台突破: '多方延續',
+  上升通道: '多方延續',
+  楔形收斂: '中性待確認',
+  三角收斂: '中性待確認',
+  箱型整理: '中性待確認',
+  BOLL壓縮: '中性待確認',
+  無明確形態: '無明確方向',
+};
+
+function morphDirection(type) {
+  return MORPH_DIRECTION[type] || '中性待確認';
+}
 
 function barUpperShadowRatio(bar) {
   const span = Math.max(0.01, bar.high - bar.low);
@@ -1798,6 +1830,97 @@ function detectBollCompression(series, norm) {
   };
 }
 
+function detectMTop(series, norm) {
+  if (series.length < 70) return null;
+  const n = series.length - 1;
+  const highs = findSwingHighs(series, 3).slice(-8);
+  const lows = findSwingLows(series, 3).slice(-8);
+  if (highs.length < 2 || lows.length < 1) return null;
+  let best = null;
+  for (let i = 0; i < highs.length - 1; i++) {
+    for (let j = i + 1; j < highs.length; j++) {
+      const h1 = highs[i];
+      const h2 = highs[j];
+      const gap = h2.index - h1.index;
+      if (gap < 12 || gap > 80) continue;
+      const diff = Math.abs(relPct(h2.price, h1.price));
+      if (diff == null || diff > 7) continue;
+      const betweenLows = lows.filter((l) => l.index > h1.index && l.index < h2.index);
+      if (!betweenLows.length) continue;
+      const neckline = Math.min.apply(null, betweenLows.map((l) => l.price));
+      const top = Math.max(h1.price, h2.price);
+      if ((top - neckline) / top < 0.08) continue;
+      const close = norm.close;
+      // Only useful near the top/neckline; if far below, it is post-event and not planning-useful.
+      if (close < neckline * 0.88) continue;
+      const score = (7 - diff) + Math.min(8, gap / 8) + (close <= neckline * 1.02 ? 6 : 0);
+      if (!best || score > best.score) best = { h1, h2, neckline, top, score };
+    }
+  }
+  if (!best) return null;
+  const close = norm.close;
+  let state = '右峰成形';
+  if (relPct(close, best.neckline) != null && close > best.neckline && relPct(close, best.neckline) <= 5) state = '頸線附近';
+  if (close <= best.neckline) state = '頸線跌破';
+  if (close > best.top * 1.02) return null;
+  return {
+    type: 'M頭',
+    state,
+    confidence: state === '頸線跌破' ? 74 : state === '頸線附近' ? 68 : 62,
+    summary: '兩段高點接近、中央回落形成頸線，屬 M 頭/雙頂空方反轉候選。',
+    reasons: ['兩個高點位置接近', '兩高點間有明確回落低點', '第二高未有效擴大突破'],
+    annotations: [
+      { kind: 'horizontal', label: '頸線', price: best.neckline, style: 'neckline' },
+      { kind: 'marker', label: '左峰', index: best.h1.index, price: best.h1.price, style: 'rim-left' },
+      { kind: 'marker', label: '右峰', index: best.h2.index, price: best.h2.price, style: 'rim-right' },
+    ],
+    structure: { neckline: best.neckline, support: best.neckline, resistance: best.top, leftHigh: best.h1.price, rightHigh: best.h2.price },
+  };
+}
+
+function detectHeadShouldersTop(series, norm) {
+  if (series.length < 90) return null;
+  const highs = findSwingHighs(series, 3).slice(-10);
+  const lows = findSwingLows(series, 3).slice(-10);
+  if (highs.length < 3 || lows.length < 2) return null;
+  let best = null;
+  for (let i = 0; i < highs.length - 2; i++) {
+    const ls = highs[i], head = highs[i+1], rs = highs[i+2];
+    if (head.index - ls.index < 8 || rs.index - head.index < 8) continue;
+    if (!(head.price > ls.price * 1.04 && head.price > rs.price * 1.04)) continue;
+    const shoulderDiff = Math.abs(relPct(rs.price, ls.price));
+    if (shoulderDiff == null || shoulderDiff > 14) continue;
+    const neckLows = lows.filter((l) => l.index > ls.index && l.index < rs.index);
+    if (neckLows.length < 2) continue;
+    const neckline = Math.min.apply(null, neckLows.map((l) => l.price));
+    if ((head.price - neckline) / head.price < 0.12) continue;
+    const close = norm.close;
+    if (close < neckline * 0.88) continue;
+    const score = (14 - shoulderDiff) + (close <= neckline * 1.03 ? 6 : 0);
+    if (!best || score > best.score) best = { ls, head, rs, neckline, score };
+  }
+  if (!best) return null;
+  const close = norm.close;
+  let state = '右肩成形';
+  if (relPct(close, best.neckline) != null && close > best.neckline && relPct(close, best.neckline) <= 5) state = '頸線附近';
+  if (close <= best.neckline) state = '頸線跌破';
+  if (close > best.head.price) return null;
+  return {
+    type: '頭肩頂',
+    state,
+    confidence: state === '頸線跌破' ? 76 : state === '頸線附近' ? 70 : 64,
+    summary: '左肩、頭部、右肩形成高檔反轉候選，需以頸線跌破確認。',
+    reasons: ['頭部高於左右肩', '左右肩高度相近', '肩頭肩之間形成頸線'],
+    annotations: [
+      { kind: 'horizontal', label: '頸線', price: best.neckline, style: 'neckline' },
+      { kind: 'marker', label: '左肩', index: best.ls.index, price: best.ls.price, style: 'rim-left' },
+      { kind: 'marker', label: '頭部', index: best.head.index, price: best.head.price, style: 'failed' },
+      { kind: 'marker', label: '右肩', index: best.rs.index, price: best.rs.price, style: 'rim-right' },
+    ],
+    structure: { neckline: best.neckline, support: best.neckline, resistance: best.head.price, leftShoulderHigh: best.ls.price, headHigh: best.head.price, rightShoulderHigh: best.rs.price },
+  };
+}
+
 function detectWBottom(series, norm) {
   if (series.length < 70) return null;
   const n = series.length - 1;
@@ -2183,6 +2306,7 @@ function buildMorphTradePlan(candidate, norm, measuredMove) {
   if (!candidate || !candidate.type || candidate.type === '無明確形態') {
     return {
       stage: '無明確形態，不強制套型',
+      direction: '無明確方向',
       bias: '資料不足或結構不夠清楚時，只標示支撐/壓力，不硬套杯柄、通道或三角形。',
       triggers: [],
       invalidation: [],
@@ -2192,7 +2316,7 @@ function buildMorphTradePlan(candidate, norm, measuredMove) {
   const st = candidate.structure || {};
   const type = candidate.type;
   const state = candidate.state || '觀察中';
-  const out = { stage: type + '｜' + state, bias: '', triggers: [], invalidation: [], plan: [] };
+  const out = { stage: type + '｜' + state, direction: morphDirection(type), bias: '', triggers: [], invalidation: [], plan: [] };
 
   if (type === '杯柄型態') {
     const neckline = st.neckline || st.resistance;
@@ -2218,6 +2342,29 @@ function buildMorphTradePlan(candidate, norm, measuredMove) {
       out.plan.push('突破後：觀察是否站穩頸線，回測不破才進入完成確認。');
     }
     if (measuredMove && measuredMove.label) out.plan.push(measuredMove.label + ' 僅作結構量測參考。');
+    return out;
+  }
+
+  if (type === 'M頭') {
+    const neckline = st.neckline || st.support;
+    const top = st.resistance || st.leftHigh || st.rightHigh;
+    out.bias = 'M 頭/雙頂空方反轉候選：重點是第二高無法有效創高，且頸線跌破後反彈站不回。';
+    if (Number.isFinite(top)) out.triggers.push('雙頂壓力區：' + fmtPlanPrice(top));
+    if (Number.isFinite(neckline)) out.triggers.push('頸線跌破確認：' + fmtPlanPrice(neckline));
+    if (Number.isFinite(top)) out.invalidation.push('收復雙頂壓力：' + fmtPlanPrice(top) + '，M 頭降級');
+    out.plan.push('跌破頸線後若反彈站不回，空方反轉品質提高；未跌破前只視為高檔震盪風險。');
+    return out;
+  }
+
+  if (type === '頭肩頂') {
+    const neckline = st.neckline || st.support;
+    const head = st.headHigh || st.resistance;
+    const right = st.rightShoulderHigh;
+    out.bias = '頭肩頂空方反轉候選：右肩不能再突破頭部，頸線跌破才進入確認。';
+    if (Number.isFinite(right)) out.triggers.push('右肩壓力：' + fmtPlanPrice(right));
+    if (Number.isFinite(neckline)) out.triggers.push('頸線跌破確認：' + fmtPlanPrice(neckline));
+    if (Number.isFinite(head)) out.invalidation.push('突破頭部高點：' + fmtPlanPrice(head) + '，頭肩頂失敗');
+    out.plan.push('右肩受壓且跌破頸線，視為空方反轉確認；若重新站回右肩，先降級為震盪。');
     return out;
   }
 
@@ -3215,6 +3362,8 @@ function detectMorphology(record) {
   add(detectBearFlag(series, norm));
   add(detectDescendingBreakout(series, norm, diagnostics));
   add(detectPlatformBreakout(series, norm));
+  add(detectHeadShouldersTop(series, norm));
+  add(detectMTop(series, norm));
   add(detectInverseHeadShoulders(series, norm));
   add(detectWBottom(series, norm));
   add(detectWedge(series, norm, diagnostics));
@@ -3251,6 +3400,7 @@ function detectMorphology(record) {
   const secondary = pickMorphologySecondary(pick, candidates, cupLike);
   const primary = {
     type: pick.type,
+    direction: morphDirection(pick.type),
     state: pick.state,
     confidence: pick.confidence,
     summary: pick.summary,
