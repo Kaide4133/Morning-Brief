@@ -16,17 +16,17 @@
 <nav class="masthead"><div class="masthead-inner"><div><span class="kw-mark">K</span>Kelvin Wiggly</div><div><a class="nav-link" href="/Morning-Brief/">晨報首頁</a><a class="nav-link" href="/Morning-Brief/technical-spider.html">技術線圖</a></div></div></nav>
 <main>
 <header class="hero">
-  <div class="eyebrow">KW Technical Spider v0.4.8</div>
+  <div class="eyebrow">KW Technical Spider v0.4.9</div>
   <h1>技術形態自動判讀</h1>
-  <p class="subtitle">單檔優先 · 形態學判讀 · 60／120／250 日線圖 · 今日技術掃描 — 本地資料池</p>
+  <p class="subtitle">單檔優先 · 發展中型態 · 交易計畫 · 60／120／250 日線圖 · 今日技術掃描</p>
   <div class="meta-row" aria-label="系統資訊">
-    <span class="meta-chip">版本 v0.4.8</span>
+    <span class="meta-chip">版本 v0.4.9</span>
     <span class="meta-chip">資料日期 2026-06-11</span>
     <span class="meta-chip">資料池 76 檔</span>
     <span class="meta-chip">模式 精簡標註</span>
   </div>
-  <p class="version-note">v0.4.8 · 產品文案與掃描卡片可讀性整理 · 資料截至 2026-06-11</p>
-  <p class="note">獨立技術分析核心，不是方舟晨報，也不是雷達。僅讀取本地 technical-data.json；不提供買賣建議。</p>
+  <p class="version-note">v0.4.9 · 型態階段與交易計畫優化 · 不強制套型 · 資料截至 2026-06-11</p>
+  <p class="note">獨立技術分析核心，不是方舟晨報，也不是雷達。僅讀取本地 technical-data.json；輸出支撐、壓力、參與區、失敗線與情境計畫，不提供下單指令。</p>
 </header>
 
 <section class="block" aria-label="input">
@@ -68,6 +68,8 @@
     </div>
     <p class="morph-summary" id="morphSummary">—</p>
     <div class="morph-extra">
+      <h4>型態階段 / 交易計畫</h4>
+      <p id="morphTradePlan">—</p>
       <h4>結構元素</h4>
       <p id="morphStructure">—</p>
       <h4>結構量測參考</h4>
@@ -144,7 +146,7 @@
   <div id="scannerBuckets" class="scanner-grid"></div>
 </section>
 
-<footer>KW Technical Spider v0.4.8 · 產品文案與掃描卡片可讀性整理 · technical-data.json</footer>
+<footer>KW Technical Spider v0.4.9 · 產品文案與掃描卡片可讀性整理 · technical-data.json</footer>
 </main>
 
 <script src="technical-engine.js"></script>
@@ -1864,6 +1866,7 @@
     $('morphState').textContent = '';
     $('morphConfidence').textContent = '';
     $('morphSummary').textContent = '';
+    $('morphTradePlan').textContent = '';
     fillReasons($('morphReasons'), []);
     $('morphSecondary').textContent = '';
     hide($('morphSecondary'));
@@ -1877,6 +1880,23 @@
     clearChart();
     hide($('resultBlock'));
     hide($('chartBlock'));
+  }
+
+
+  function renderTradePlan(plan) {
+    const el = $('morphTradePlan');
+    if (!el) return;
+    if (!plan) {
+      el.textContent = '尚無明確交易計畫；等待新 K 線或明確支撐/壓力形成。';
+      return;
+    }
+    const parts = [];
+    if (plan.stage) parts.push('階段：' + plan.stage);
+    if (plan.bias) parts.push('讀法：' + plan.bias);
+    if (plan.triggers && plan.triggers.length) parts.push('觀察/觸發：' + plan.triggers.join('；'));
+    if (plan.invalidation && plan.invalidation.length) parts.push('失敗線：' + plan.invalidation.join('；'));
+    if (plan.plan && plan.plan.length) parts.push('計畫：' + plan.plan.join('；'));
+    el.textContent = parts.join('｜') || '尚無明確交易計畫。';
   }
 
   function renderMorphology(morph, norm) {
@@ -1893,6 +1913,7 @@
       $('morphConfidence').textContent = '—';
       $('morphSummary').textContent =
         (p && p.summary) || '目前沒有足夠明確的形態學結構。';
+      renderTradePlan(morph && morph.tradePlan);
       fillReasons($('morphReasons'), []);
       hide($('morphSecondary'));
       $('morphStructure').textContent = dm.length
@@ -1916,6 +1937,7 @@
     $('morphConfidence').textContent =
       p.confidence != null ? String(Math.round(p.confidence)) : '—';
     $('morphSummary').textContent = p.summary || '—';
+    renderTradePlan(morph && morph.tradePlan);
     const structParts = [];
     if (p.type === '杯柄型態') {
       if (st.leftRim != null) structParts.push('左杯口 ' + Math.round(st.leftRim));

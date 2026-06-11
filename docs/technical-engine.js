@@ -1075,6 +1075,13 @@ function emptyMorphology(summary) {
       targets: [],
     },
     fibExtensions: [],
+    tradePlan: {
+      stage: '無明確形態，不強制套型',
+      bias: '資料不足或結構不夠清楚時，只標示支撐/壓力，不硬套杯柄、通道或三角形。',
+      triggers: [],
+      invalidation: [],
+      plan: ['等待價格靠近明確支撐/壓力，或等待新 K 線形成可辨識結構。'],
+    },
     candleStats: countConsecutiveCandles([]),
     dataMeta: { sufficient: false },
     diagnostics: {
@@ -1338,6 +1345,14 @@ function pickMorphologyPrimary(candidates, norm, series) {
     cupConf >= 85 &&
     cupBq >= 0.65 &&
     (bestCup.state === '突破延伸' || (!belowPriorHigh && cupBreakoutState));
+  const highQualityDevelopingCup =
+    bestCup &&
+    cupConf >= 88 &&
+    cupBq >= 0.72 &&
+    (bestCup.state === '柄部整理' || bestCup.state === '頸線附近' || bestCup.state === '右側回升') &&
+    Number.isFinite(cupNeck) &&
+    Number.isFinite(close) &&
+    close >= cupNeck * 0.9;
 
   if (!bestCup && bestChannel && bestRisk) {
     if ((bestRisk.riskSignals || 0) < 2 || (bestRisk.confidence || 0) < 76) {
@@ -1348,14 +1363,15 @@ function pickMorphologyPrimary(candidates, norm, series) {
   if (bestRisk && (bestRisk.confidence || 0) >= 65) {
     const weakCup = !bestCup || cupConf < 88 || cupBq < 0.65;
     const riskWins =
-      (weakCup && !highQualityBreakout) ||
-      (priorHighRejection && belowPriorHigh && !highQualityBreakout) ||
-      ((bestRisk.rankScore || 0) >= (bestCup ? bestCup.rankScore || 0 : 0) + 8 &&
-        !highQualityBreakout);
+      !highQualityDevelopingCup &&
+      ((weakCup && !highQualityBreakout) ||
+        (priorHighRejection && belowPriorHigh && !highQualityBreakout) ||
+        ((bestRisk.rankScore || 0) >= (bestCup ? bestCup.rankScore || 0 : 0) + 8 &&
+          !highQualityBreakout));
     if (riskWins) return bestRisk;
   }
 
-  if (highQualityBreakout) return bestCup;
+  if (highQualityBreakout || highQualityDevelopingCup) return bestCup;
   if (bestCup && bestChannel && cupBeatsOrdinaryChannel(bestCup, bestChannel)) {
     return bestCup;
   }
@@ -1381,7 +1397,12 @@ function pickMorphologySecondary(primary, candidates, cupLike) {
   const seen = new Set();
   candidates.forEach((c) => {
     if (!c || c.type === primary.type || seen.has(c.type)) return;
-    if (primary.type === '假突破風險' && (c.type === '杯柄型態' || c.type === '杯型底雛形')) return;
+    if (primary.type === '假突破風險' && c.type === '杯型底雛形') return;
+    if (primary.type === '杯柄型態' && c.type === '假突破風險') {
+      seen.add(c.type);
+      sec.push({ type: c.type, state: c.state, confidence: c.confidence });
+      return;
+    }
     if (primary.type === '杯柄型態' && (c.type === '上升通道' || c.type === '下降通道')) {
       seen.add(c.type);
       sec.push({ type: c.type, state: c.state, confidence: c.confidence });
@@ -1992,6 +2013,85 @@ function buildMeasuredMove(candidate, series, norm) {
   return empty;
 }
 
+
+function fmtPlanPrice(v) {
+  if (!Number.isFinite(v)) return '—';
+  return Math.round(v * 100) / 100;
+}
+
+function buildMorphTradePlan(candidate, norm, measuredMove) {
+  const close = norm && norm.close;
+  if (!candidate || !candidate.type || candidate.type === '無明確形態') {
+    return {
+      stage: '無明確形態，不強制套型',
+      bias: '資料不足或結構不夠清楚時，只標示支撐/壓力，不硬套杯柄、通道或三角形。',
+      triggers: [],
+      invalidation: [],
+      plan: ['等待價格靠近明確支撐/壓力，或等待新 K 線形成可辨識結構。'],
+    };
+  }
+  const st = candidate.structure || {};
+  const type = candidate.type;
+  const state = candidate.state || '觀察中';
+  const out = { stage: type + '｜' + state, bias: '', triggers: [], invalidation: [], plan: [] };
+
+  if (type === '杯柄型態') {
+    const neckline = st.neckline || st.resistance;
+    const handleTop = st.handleTop || neckline;
+    const handleBottom = st.handleBottom || st.support;
+    const leftRim = st.leftRim;
+    const cupLow = st.cupLow || st.support;
+    const nearNeck = Number.isFinite(neckline) && Number.isFinite(close) && close >= neckline * 0.95 && close <= neckline * 1.02;
+    const inHandle = Number.isFinite(handleBottom) && Number.isFinite(handleTop) && Number.isFinite(close) && close >= handleBottom && close <= handleTop;
+    out.stage = '杯柄型態｜' + (state === '頸線附近' && inHandle ? '柄部/頸線回測確認' : state);
+    out.bias = '提前規劃型態：不是等完成才承認杯柄；目前按杯型、柄部、頸線、失敗線分階段追蹤。';
+    if (Number.isFinite(leftRim)) out.triggers.push('左杯緣/早期頸線觀察：' + fmtPlanPrice(leftRim));
+    if (Number.isFinite(neckline)) out.triggers.push('正式頸線/右杯緣：' + fmtPlanPrice(neckline));
+    if (Number.isFinite(handleTop)) out.triggers.push('柄部上緣：' + fmtPlanPrice(handleTop));
+    if (Number.isFinite(handleBottom)) out.invalidation.push('跌破柄部低點：' + fmtPlanPrice(handleBottom) + '，杯柄降級');
+    if (Number.isFinite(cupLow)) out.invalidation.push('跌破杯底：' + fmtPlanPrice(cupLow) + '，型態作廢');
+    if (nearNeck || inHandle) {
+      out.plan.push('回測有效：守住柄部低點並重新轉強，視為杯柄仍在發展。');
+      out.plan.push('轉強確認：收回柄部上緣/頸線後，再看量能是否放大。');
+    } else if (Number.isFinite(neckline) && close < neckline) {
+      out.plan.push('尚未突破：先觀察右側回升與柄部是否縮量整理。');
+    } else {
+      out.plan.push('突破後：觀察是否站穩頸線，回測不破才進入完成確認。');
+    }
+    if (measuredMove && measuredMove.label) out.plan.push(measuredMove.label + ' 僅作結構量測參考。');
+    return out;
+  }
+
+  if (type === '假突破風險') {
+    const resistance = st.resistance || st.neckline;
+    out.bias = '風險型態：價格觸壓後未站穩，優先確認是否能重新收復壓力。';
+    if (Number.isFinite(resistance)) out.triggers.push('重新收復壓力：' + fmtPlanPrice(resistance));
+    if (Number.isFinite(norm.ma20)) out.invalidation.push('跌破/站不回 MA20：' + fmtPlanPrice(norm.ma20) + '，維持降權');
+    out.plan.push('若收復壓力且長上影消失，假突破風險解除；否則視為反彈受壓。');
+    return out;
+  }
+
+  if (type.indexOf('通道') >= 0) {
+    const upper = st.channelUpper || st.resistance;
+    const lower = st.channelLower || st.support;
+    out.bias = '通道交易計畫：用上下緣規劃，而不是在中段硬追。';
+    if (Number.isFinite(lower)) out.triggers.push('通道下緣/回測區：' + fmtPlanPrice(lower));
+    if (Number.isFinite(upper)) out.triggers.push('通道上緣/突破觀察：' + fmtPlanPrice(upper));
+    if (Number.isFinite(lower)) out.invalidation.push('跌破通道下緣：' + fmtPlanPrice(lower));
+    out.plan.push('靠下緣看承接，靠上緣看突破或調節；中段降低判斷權重。');
+    return out;
+  }
+
+  const support = st.support || norm.ma20 || norm.recent_low10;
+  const resistance = st.resistance || st.neckline || norm.prev_high20;
+  out.bias = '結構觀察型：僅依目前可辨識支撐/壓力規劃，不強行套其他形態。';
+  if (Number.isFinite(support)) out.triggers.push('支撐觀察：' + fmtPlanPrice(support));
+  if (Number.isFinite(resistance)) out.triggers.push('壓力/突破觀察：' + fmtPlanPrice(resistance));
+  if (Number.isFinite(support)) out.invalidation.push('跌破支撐：' + fmtPlanPrice(support) + '，形態降級');
+  out.plan.push('等待價格接近關鍵位，再依收盤與量能確認下一步。');
+  return out;
+}
+
 function fibDrawOnChart(price, baseLow, baseHigh) {
   if (!Number.isFinite(price) || !Number.isFinite(baseLow) || !Number.isFinite(baseHigh)) {
     return false;
@@ -2589,6 +2689,8 @@ function buildCupHandleCandidate(series, norm, meta) {
       cupDepthPct: Math.round(depthPct * 1000) / 10,
       handleStart: cupEnd,
       handleEnd: n - 1,
+      handleTop,
+      handleBottom: handleBot,
       bowlQuality: quality.bowlQuality,
     },
   };
@@ -2804,6 +2906,7 @@ function detectMorphology(record) {
   const cupLike = detectCupLikeShape(series, norm, meta);
   const measuredMove = buildMeasuredMove(pick, series, norm);
   const fibExtensions = buildFibExtensions(pick, series, norm, measuredMove);
+  const tradePlan = buildMorphTradePlan(pick, norm, measuredMove);
   const chartAnnotations = mergeMorphAnnotations(
     pick,
     measuredMove,
@@ -2833,6 +2936,7 @@ function detectMorphology(record) {
     structure: pick.structure || {},
     measuredMove,
     fibExtensions,
+    tradePlan,
     chartAnnotations,
     chartBadges,
     candleStats: countConsecutiveCandles(series),
