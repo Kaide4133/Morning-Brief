@@ -531,7 +531,7 @@
   },
   "validation": {
     "strengthened": [
-      "費半 +7.91% 與 NASDAQ +2.54%，直接強化半導體、AI、PCB/CCL 風險偏好。",
+      "費半 +7.91% 與 NASDAQ +2.54%，再加上 NVIDIA 同日第一手 AI workflow 訊號，直接強化半導體、AI、PCB/CCL 風險偏好。",
       "台股清單中聯電、華通、旺矽、穎崴、力成同步轉強，主線不是熄火，而是輪動。",
       "方舟水位 77.8% 仍接近八成，代表主線風險預算尚未撤退。"
     ],
@@ -541,7 +541,7 @@
       "部分 ETF 折溢價與費半跳升可能造成開盤高估，需防高開低走。"
     ],
     "long_term": [
-      "先進封裝、IC測試、PCB/CCL、電源與散熱仍是 AI 供應鏈主幹。",
+      "NVIDIA 對 Agentic AI 工作流程的第一手訊號，延續 AI 基礎設施、先進封裝、IC測試、PCB/CCL、電源與散熱的中長線主幹。",
       "台光電、華通、旺矽、穎崴、力成代表高階材料與測試設備的主線延伸。",
       "台積電、聯發科、聯詠等權值 IC 股仍是判斷台股風險胃納的核心溫度計。"
     ]
@@ -550,20 +550,51 @@
     "trump": [
       {
         "time": "06/12 盤前",
-        "content": "未取得可驗證的同日 Trump X 直接訊號；本期不以未確認政治貼文作為交易催化。"
+        "content": "X 直接訊號觀察窗：White House 釋出 Trump 對伊朗核武協議的表述，短線有助降低地緣風險想像；這代表可以承認風險情緒修復，但不能把政策標題當成台股全面追價理由。"
       }
     ],
-    "musk": "未取得可驗證的同日 Musk / Tesla X 直接訊號；Tesla 強彈只作美股風險偏好修復參考，不作台股主線唯一依據。",
+    "musk": "Musk / Tesla 同日有 FSD 14.3.4 推送與 FSD Supervised 進展訊號，支持 Tesla 與 AI / 車用運算情緒修復；但對台股只作主線交叉驗證，新增部位仍回到方舟水位與開盤承接。",
     "policy": [
-      "本期科技與政策訊號以可驗證市場資料為主：費半強彈、VIX 回落、台指期外資淨空單仍在，是今日三個主要交叉驗證。",
-      "半導體主線回溫，但台股個股資料顯示分化仍高，政策與資金面支持主線，不支持無差別追高。"
+      "NVIDIA 第一手訊號聚焦 Agentic AI 串接工作流程，與費半強彈互相驗證，對台股半導體、PCB/CCL、封測測試與電源散熱鏈偏正面。",
+      "Fed 同日偏資料公布，沒有新增明確轉鴿或轉鷹訊號；因此利率面不搶戲，今日主要矛盾仍是美股強彈後台股高檔換手。"
     ]
   },
   "xurl_signal_layer": {
-    "status": "unavailable",
-    "signals_count": 0,
-    "included_in_revision": false,
-    "note": "同日 X 直接訊號未取得可驗證 URL-backed packet；本期明確以市場資料與使用者提供清單為主。"
+    "status": "included",
+    "signals_count": 38,
+    "included_in_revision": true,
+    "buckets": [
+      {
+        "name": "AI/semi",
+        "author": "NVIDIA",
+        "url": "https://x.com/nvidia/status/2065210893219315897",
+        "summary": "NVIDIA 指出工程與設計流程正由工具之間的連結重新定義，Agentic AI 可降低跨應用摩擦；這強化 AI 基礎設施與半導體軟硬整合主線。"
+      },
+      {
+        "name": "Musk/Tesla",
+        "author": "Elon Musk / Tesla",
+        "url": "https://x.com/elonmusk/status/2065202249282768915",
+        "summary": "Musk 同日轉發 Tesla FSD 14.3.4 推送訊號，Tesla 官方亦提到 FSD Supervised 進展；這屬 AI / 車用運算情緒修復，不應取代台股水位紀律。"
+      },
+      {
+        "name": "US policy",
+        "author": "White House",
+        "url": "https://x.com/WhiteHouse/status/2065159134324961385",
+        "summary": "White House 釋出 Trump 對伊朗核武協議的表述，政策風險短線降溫但仍需觀察油價與通膨預期。"
+      },
+      {
+        "name": "Fed",
+        "author": "Federal Reserve",
+        "url": "https://x.com/federalreserve/status/2065170096784396616",
+        "summary": "Fed 發布 weekly balance sheet / Flow of Funds 資料更新；偏資料公布，沒有新增轉鴿或轉鷹訊號。"
+      }
+    ],
+    "rendered_markers": [
+      "NVIDIA Agentic AI",
+      "Tesla FSD 14.3.4",
+      "Trump 伊朗核武協議",
+      "Fed balance sheet"
+    ]
   },
   "mag7": [
     {
@@ -642,7 +673,7 @@
     "tx_night": "台指期外資淨空單仍偏高，與美股強彈形成拉扯。今日若高開，第一小時重點不是漲幅，而是台積電、聯電、台光電、華通、力成等核心是否站穩開盤區間。",
     "axes": {
       "thesis": "半導體/AI 主線獲美股費半強彈確認，但台股內部只給強承接股更高權重。",
-      "policy": "本期未使用未驗證政策貼文；以可查市場資料與台股清單為主。",
+      "policy": "第一手訊號中，NVIDIA 的 Agentic AI workflow 內容強化 AI 基礎設施敘事；Musk / Tesla FSD 訊號支持車用 AI 情緒；White House 對伊朗核武協議表述降低部分地緣風險想像，但 Fed 只屬資料公布，沒有改變利率主軸。",
       "risk": "水位高、VIX 降，但外資期貨偏空與個股分化仍要求控制追價。"
     }
   },
@@ -653,9 +684,9 @@
   },
   "conclusion": "6/12 的結論是：<strong>可以用水位，但不能亂用水位。</strong> 費半強彈與 VIX 回落給台股半導體主線重新定價的機會；但新增風險預算只給承接確認的核心，弱反彈與破線股先排除。",
   "appendix": {
-    "after_hours": "美股盤後重點是半導體風險偏好修復。NVIDIA 與費半帶動科技股回升，但台股盤前不應把這解讀成所有電子股同步買進，而應拆成：先進封裝/測試、PCB/CCL、IC設計與權值晶圓代工是否各自有承接。",
+    "after_hours": "美股盤後重點是半導體風險偏好修復。NVIDIA 第一手 AI workflow 訊號與費半強彈互相驗證，但台股盤前不應把這解讀成所有電子股同步買進，而應拆成：先進封裝/測試、PCB/CCL、IC設計與權值晶圓代工是否各自有承接。",
     "map_bullets": [
-      "SOX 強彈 → 台積電、聯電、旺矽、力成、穎崴、京元電子。",
+      "SOX 強彈 + NVIDIA Agentic AI 訊號 → 台積電、聯電、旺矽、力成、穎崴、京元電子。",
       "AI / 伺服器鏈 → 台光電、華通、台燿、奇鋐、台達電、廣達。",
       "權值 IC 設計 → 聯發科、聯詠、信驊、瑞鼎。",
       "高檔分化壓力 → 全新、景碩、智邦、欣興需先看是否止跌。"
