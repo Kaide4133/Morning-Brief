@@ -20,6 +20,8 @@ OUTPUT_PATHS = [
     ROOT / "site" / "technical-data.json",
 ]
 
+OFFICIAL_NAME_CACHE: dict[str, str] | None = None
+
 STOCK_NAMES: dict[str, str] = {
     "2330": "台積電",
     "2454": "聯發科",
@@ -41,14 +43,19 @@ STOCK_NAMES: dict[str, str] = {
     "00876": "元大全球5G",
     "00887": "永豐中國科技50大",
     "00888": "永豐台灣ESG",
+    "00878": "國泰永續高股息",
+    "00905": "FT臺灣Smart",
     "00910": "第一金太空衛星",
     "00911": "兆豐洲際半導體",
+    "00912": "中信臺灣智慧50",
     "00913": "兆豐台灣晶圓製造",
     "00920": "富邦ESG綠色電力",
     "00927": "群益半導體收益",
     "00929": "復華台灣科技優息",
     "00946": "群益科技高息成長",
+    "009804": "聯邦台精彩50",
     "009808": "永豐美國科技",
+    "00985A": "主動野村台灣50",
     "00988A": "主動統一全球創新",
     "3665": "貿聯-KY",
     "6274": "台燿",
@@ -82,6 +89,32 @@ STOCK_NAMES: dict[str, str] = {
     "4958": "臻鼎-KY",
     "5274": "信驊",
     "5321": "美而快",
+    "8454": "富邦媒",
+    "3147": "大綜",
+    "5426": "振發",
+    "2535": "達欣工",
+    "3550": "聯穎",
+    "4973": "廣穎",
+    "3362": "先進光",
+    "6446": "藥華藥",
+    "2413": "環科",
+    "6204": "艾華",
+    "3114": "好德",
+    "4542": "科嶠",
+    "4939": "亞電",
+    "5328": "華容",
+    "4741": "泓瀚",
+    "4739": "康普",
+    "2243": "宏旭-KY",
+    "3288": "點晶",
+    "8105": "凌巨",
+    "2883": "凱基金",
+    "8021": "尖點",
+    "4556": "旭然",
+    "2478": "大毅",
+    "6270": "倍微",
+    "1714": "和桐",
+    "3441": "聯一光",
     "5864": "致和證",
     "6005": "群益證",
     "6015": "宏遠證",
@@ -437,6 +470,51 @@ def build_record(code: str, rows: list[dict], market: str, as_of: str) -> dict |
     return record
 
 
+def load_official_name_map() -> dict[str, str]:
+    """從 TWSE/TPEx 公開資料建立 code→中文簡稱；避免 Yahoo 英文簡稱流入 UI。"""
+    global OFFICIAL_NAME_CACHE
+    if OFFICIAL_NAME_CACHE is not None:
+        return OFFICIAL_NAME_CACHE
+
+    urls = (
+        "https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_AVG_ALL",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://www.tpex.org.tw/openapi/v1/tpex_mainboard_daily_close_quotes",
+        "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O",
+    )
+    names: dict[str, str] = {}
+    for url in urls:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        try:
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                rows = json.loads(resp.read().decode("utf-8-sig"))
+        except Exception:
+            continue
+        if not isinstance(rows, list):
+            continue
+        for row in rows:
+            if not isinstance(row, dict):
+                continue
+            code = (
+                row.get("Code")
+                or row.get("公司代號")
+                or row.get("SecuritiesCompanyCode")
+            )
+            name = (
+                row.get("Name")
+                or row.get("公司簡稱")
+                or row.get("CompanyAbbreviation")
+                or row.get("CompanyName")
+            )
+            if code and name:
+                c = str(code).strip().upper()
+                n = str(name).strip()
+                if c and n and n != c:
+                    names.setdefault(c, n)
+    OFFICIAL_NAME_CACHE = names
+    return names
+
+
 def build_html_name_map(html_paths: list[Path]) -> dict[str, str]:
     """從晨報 HTML 建立 code→name 對照（整檔掃描，避免單一代號誤配）。"""
     names: dict[str, str] = {}
@@ -475,6 +553,9 @@ def resolve_stock_name(
         return STOCK_NAMES[code]
     if code in html_map and html_map[code] and html_map[code] != code:
         return html_map[code]
+    official_names = load_official_name_map()
+    if code in official_names:
+        return official_names[code]
     if yahoo_name and yahoo_name != code and not yahoo_name.endswith(code):
         return yahoo_name
     return code
