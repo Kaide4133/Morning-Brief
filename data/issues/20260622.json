@@ -1,0 +1,558 @@
+{
+  "date": "2026-06-22",
+  "issue_no": 28,
+  "scenario_id": "02",
+  "scenario_reason": "方舟水位由 68.8% 續降至 66.4%，但費半、Nasdaq 與台股半導體／AI 供應鏈仍強；今天定調為高檔分化下的選股續強與降速布局，而非全面追價。",
+  "market_summary": "6/22 正常交易日前，最新市場基準顯示台股加權 46,465.20（+1.28%）、費半 14,341.78（+6.42%）、Nasdaq +1.91%，科技主線仍強；但方舟水位降至 66.4%，策略上維持主線、降低追價，位階最熱等待回測。",
+  "hero": {
+    "headline": "<span class=\"mark\">一句話先看：</span>方舟水位降至 <em>66.4%</em>，科技主線很強，但水位方向仍下修；今天是 <em>高檔分化、選股續強</em>，不是全面追價。",
+    "subhead": "操作感受：費半與 Mag7 轉強給台股半導體開盤支撐，台積電、聯電、IC 設計、IC 基板與 AI 零組件仍是核心；但水位較前次 68.8% 再降 2.4 個百分點，新增資金要分批，位階最熱先等換手。"
+  },
+  "market": {
+    "sox": {
+      "label": "SOX · 費半",
+      "value": "14,341.78",
+      "change_pct": 6.42
+    },
+    "vix": {
+      "label": "VIX · 恐慌",
+      "value": "16.78",
+      "change_pct": 2.32
+    },
+    "spx": {
+      "label": "S&P 500",
+      "value": "7,500.58",
+      "delta": 1.08
+    },
+    "nasdaq": {
+      "label": "NASDAQ",
+      "value": "26,517.93",
+      "delta": 1.91
+    },
+    "tw_index": {
+      "label": "TWSE · 加權",
+      "value": "46,465.20",
+      "line": "▲+587.81 (+1.28%)",
+      "change_pct": 1.28
+    },
+    "taifex_net_oi": {
+      "label": "外資台指期淨額",
+      "value": "-68,337 口",
+      "delta": -943,
+      "line": "玩股網／TAIFEX 6/18 最新可得資料：外資期貨淨空單 -68,337 口，較前日偏空 943 口"
+    },
+    "futures": {
+      "line": "期貨外資淨空單 -68,337 口"
+    },
+    "foreign_oi": {
+      "value": "-68,337 口",
+      "note": "TAIFEX／玩股網 6/18 最新可得資料"
+    },
+    "systemic_risk": "中"
+  },
+  "strategy": {
+    "stance": "高檔分化｜科技續強、追價降速",
+    "thesis": "AI／半導體、晶圓代工、IC 設計、IC 基板、散熱與高速傳輸",
+    "tape": "費半 +6.42%、Nasdaq +1.91%，台股清單中聯電、瑞昱、聯詠、景碩、日月光、欣興等同步強勢；盤面主線很清楚，但水位方向下修，代表執行節奏不能失控。",
+    "playbook": "核心主線續抱；新增資金只做分批與回測承接。最熱位階不是否定強者，而是先保留子彈，等拉回、量縮或換手後再加。",
+    "risk": "若台股開高後量價無法延續，或外資期貨淨空擴大，降低短線追價與槓桿；若半導體主線回測守住，再用股數補核心。"
+  },
+  "ark": {
+    "water_level": 66.4,
+    "prev": 68.8,
+    "delta": -2.4,
+    "global_dispersion": "neutral",
+    "foreign_sentiment": "neutral",
+    "position_heating_up": "neutral",
+    "social_rebound": "neutral",
+    "energy_storm": "neutral",
+    "note": "66.4%，較前次 68.8% <span class=\"mark\">下降 2.4 個百分點</span>。五項指標皆中性，代表不是風險警報；但水位方向續降，今日重點是主線留、追價降速、位階最熱等回測低接。"
+  },
+  "temperature": {
+    "vix_note": "VIX 16.78、日變動 +2.32%，恐慌未惡化但仍高於低波動區；搭配水位續降至 66.4%，今天宜選股分批，不宜因費半大漲而一口氣追滿。",
+    "signal_headline": "科技強、水位降：高檔分化中的選股日",
+    "signal_note": "費半與 Mag7 轉強提供主線支撐，但方舟水位連續下修，執行上採「有主線、慢一點」而非無差別加速。"
+  },
+  "editorial": {
+    "pull_quote": "今天的關鍵不是費半大漲就全面追，而是水位降到 66.4% 後，保留 AI／半導體主線、把追價速度降下來。",
+    "body": "6/22 的盤前結構很典型：美股端由費半與 Nasdaq 帶動科技風險偏好，台股端則由晶圓代工、IC 設計、IC 基板、測試與 AI 供應鏈擴散；這讓主線延續的機率提高。但方舟水位由 68.8% 再降至 66.4%，代表系統允許持有主線，卻不鼓勵把所有資金追在開高第一段。今天的主編判斷是：保留核心、分批承接、等換手，不把強勢盤誤讀成低風險盤。"
+  },
+  "home": {
+    "water_note": "6/22 方舟水位 66.4%，較前次 68.8% 下降 2.4 個百分點；費半與科技股強勢，但水位方向續降，定調高檔分化、選股續強、追價降速。",
+    "thesis_blurb": "AI／半導體仍是主線；台積電、聯電、IC 設計、IC 基板、散熱與高速傳輸續強，但新增資金等待換手。",
+    "risk_tagline": "02 高檔分化｜科技續強｜系統風險 中",
+    "recent_summary": "水位降至 66.4%，主線續留但不追第一段，位階最熱等回測。"
+  },
+  "etf": {
+    "value": [
+      {
+        "name": "兆豐洲際半導體",
+        "code": "00911",
+        "meta": "全球｜67.65｜+2.6（+4.00%）｜折溢價 -0.92%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "元大台灣50正2",
+        "code": "00631L",
+        "meta": "台灣｜40.55｜+2.22（+5.79%）｜折溢價 -0.02%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "國泰費城半導體",
+        "code": "00830",
+        "meta": "美國｜100.45｜+3.45（+3.56%）｜折溢價 -0.12%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "富邦科技",
+        "code": "0052",
+        "meta": "台灣｜64.95｜+2.15（+3.42%）｜折溢價 -0.23%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "元大電子",
+        "code": "0053",
+        "meta": "台灣｜252.25｜+7.3（+2.98%）｜折溢價 -0.54%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "元大台灣50",
+        "code": "0050",
+        "meta": "台灣｜110.45｜+3.15（+2.94%）｜折溢價 +0.11%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "元大全球未來通訊",
+        "code": "00861",
+        "meta": "全球｜97.8｜+1.55（+1.61%）｜折溢價 -0.46%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "主動領航全球創新",
+        "code": "00988A",
+        "meta": "全球｜23.76｜+0.8（+3.48%）｜折溢價 -0.13%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "元大全球5G",
+        "code": "00876",
+        "meta": "全球｜104｜+2.35（+2.31%）｜折溢價 -0.60%",
+        "stamp": "value",
+        "overlap": true
+      },
+      {
+        "name": "中信上游半導體",
+        "code": "00941",
+        "meta": "全球｜28.93｜+0.33（+1.15%）｜折溢價 -0.24%",
+        "stamp": "value",
+        "overlap": true
+      }
+    ],
+    "rising": [
+      {
+        "name": "台新日本半導體",
+        "code": "00951",
+        "meta": "日本｜21.26｜+0.8（+3.91%）｜折溢價 +0.10%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "中信日本半導體",
+        "code": "00954",
+        "meta": "日本｜22.68｜+0.84（+3.85%）｜折溢價 +0.27%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "中信臺灣智慧50",
+        "code": "00912",
+        "meta": "台灣｜35.63｜+0.89（+2.56%）｜折溢價 -0.22%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "華南永昌優選50",
+        "code": "009808",
+        "meta": "台灣｜32.71｜+0.71（+2.22%）｜折溢價 -0.40%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "元大全球5G",
+        "code": "00876",
+        "meta": "全球｜104｜+2.35（+2.31%）｜折溢價 -0.56%",
+        "stamp": "rising",
+        "overlap": true
+      },
+      {
+        "name": "國泰永續高股息",
+        "code": "00878",
+        "meta": "台灣｜34.11｜+0.44（+1.31%）｜折溢價 -0.35%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "中信上游半導體",
+        "code": "00941",
+        "meta": "全球｜28.93｜+0.33（+1.15%）｜折溢價 -0.24%",
+        "stamp": "rising",
+        "overlap": true
+      }
+    ],
+    "overlap": [
+      "00876",
+      "00941"
+    ],
+    "value_note": "半導體、科技、5G 與台灣核心 ETF 同步轉強；紅框重疊的 00876、00941 代表全球科技主線仍在，但水位續降下不追溢價與開高第一段。"
+  },
+  "stocks": {
+    "value": [
+      {
+        "name": "台積電",
+        "code": "2330",
+        "meta": "晶圓代工｜2490｜+80（+3.32%）｜負債比 31.50%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "聯電",
+        "code": "2303",
+        "meta": "晶圓代工｜160｜+14.5（+9.97%）｜負債比 32.20%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "瑞昱",
+        "code": "2379",
+        "meta": "IC設計｜900｜+81（+9.89%）｜負債比 68.40%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "聯詠",
+        "code": "3034",
+        "meta": "驅動IC｜567｜+51（+9.88%）｜負債比 30.62%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "信驊",
+        "code": "5274",
+        "meta": "IC設計｜19800｜+840（+4.43%）｜負債比 51.72%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "日月光投控",
+        "code": "3711",
+        "meta": "IC封裝測試｜664｜+51（+8.32%）｜負債比 60.19%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "欣興",
+        "code": "3037",
+        "meta": "IC基板｜1045｜+77（+7.95%）｜負債比 56.18%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "川湖",
+        "code": "2059",
+        "meta": "電子零組件｜7440｜+575（+8.38%）｜負債比 20.20%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "台光電",
+        "code": "2383",
+        "meta": "銅箔基板｜5900｜+300（+5.36%）｜負債比 63.41%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "智邦",
+        "code": "2345",
+        "meta": "網路設備｜2535｜+100（+4.11%）｜負債比 60.24%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "京元電子",
+        "code": "2449",
+        "meta": "IC測試｜326｜+17.5（+5.67%）｜負債比 51.90%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "景碩",
+        "code": "3189",
+        "meta": "IC基板｜796｜+72（+9.94%）｜負債比 38.47%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "奇鋐",
+        "code": "3017",
+        "meta": "散熱模組｜2460｜+60（+2.50%）｜負債比 70.84%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "致茂",
+        "code": "2360",
+        "meta": "半導體設備｜2245｜-65（-2.81%）｜負債比 47.77%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "聯發科",
+        "code": "2454",
+        "meta": "IC設計｜4450｜+60（+1.37%）｜負債比 46.07%",
+        "stamp": "value",
+        "overlap": false
+      },
+      {
+        "name": "大立光",
+        "code": "3008",
+        "meta": "光學鏡片與鏡頭｜5275｜+80（+1.54%）｜負債比 17.56%",
+        "stamp": "value",
+        "overlap": true
+      }
+    ],
+    "rising": [
+      {
+        "name": "凱鈺",
+        "code": "5468",
+        "meta": "光通訊設備｜33｜+3（+10.00%）｜負債比 26.09%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "天二科技",
+        "code": "6834",
+        "meta": "電阻｜111.5｜+10（+9.85%）｜負債比 37.92%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "光頡",
+        "code": "3624",
+        "meta": "電阻｜175.5｜+15（+9.35%）｜負債比 16.80%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "全友",
+        "code": "2305",
+        "meta": "掃描器｜36.4｜+2.75（+8.17%）｜負債比 21.16%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "東浦",
+        "code": "3290",
+        "meta": "電子零組件｜74.3｜+4.5（+6.45%）｜負債比 61.47%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "百徽",
+        "code": "6259",
+        "meta": "電子零組件｜37.75｜+1.9（+5.30%）｜負債比 25.91%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "智伸科",
+        "code": "4551",
+        "meta": "汽機車零組件｜233｜+11.5（+5.19%）｜負債比 37.46%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "華容",
+        "code": "5328",
+        "meta": "電容｜58.4｜+1.9（+3.36%）｜負債比 17.96%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "艾姆勒",
+        "code": "2241",
+        "meta": "散熱模組｜52.1｜+1.5（+2.96%）｜負債比 36.05%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "微端",
+        "code": "3285",
+        "meta": "電子其他｜52.6｜+1.4（+2.73%）｜負債比 40.62%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "朋億*",
+        "code": "6613",
+        "meta": "半導體設備｜391｜+9.5（+2.49%）｜負債比 44.57%",
+        "stamp": "rising",
+        "overlap": false
+      },
+      {
+        "name": "大立光",
+        "code": "3008",
+        "meta": "光學鏡片與鏡頭｜5275｜+80（+1.54%）｜負債比 17.56%",
+        "stamp": "rising",
+        "overlap": true
+      }
+    ],
+    "overlap": [
+      "3008"
+    ],
+    "overlap_names": {
+      "3008": "大立光"
+    }
+  },
+  "validation": {
+    "strengthened": [
+      "費半 6/18 收漲 6.42%，Nasdaq +1.91%，科技主線給台股半導體開盤支撐。",
+      "台股價值區強勢集中在晶圓代工、IC 設計、IC 基板、封測、散熱與高速傳輸。",
+      "ETF 清單中半導體、科技、5G 與台灣核心 ETF 同步偏強，顯示主線不是單點。"
+    ],
+    "pressure": [
+      "方舟水位由 68.8% 降至 66.4%，風險預算續收斂。",
+      "外資台指期仍約 -68,337 口淨空，代表籌碼避險尚未解除。",
+      "多檔半導體與零組件已急漲，位階最熱不宜追第一段。"
+    ],
+    "long_term": [
+      "水位下修不是清倉，而是主線續留、追價降速。",
+      "位階最熱的調節是保留子彈等低接，不是否定強者。",
+      "若回測不破且量能健康，再用分批方式補核心。"
+    ]
+  },
+  "intelligence": {
+    "trump": [
+      {
+        "time": "24h",
+        "content": "<strong>地緣與油價：</strong>國際市場仍需留意油價與政策 headline；但本日核心驅動仍是費半與 AI 科技股反彈。<em>市場可能反應：開高可支撐主線，但不等於風險完全解除。</em>"
+      }
+    ],
+    "musk": "<span class=\"mark\">科技情緒｜</span>Tesla 收漲 1.04%，高 beta 情緒回暖；但今日主線仍以半導體／AI 供應鏈為核心，不以單一題材追價。",
+    "policy": [
+      "<strong>Fed：</strong>市場仍消化前次利率訊息與科技股估值；在水位下降時，降息預期不能取代風控節奏。"
+    ]
+  },
+  "mag7": [
+    {
+      "name": "Apple",
+      "ticker": "AAPL",
+      "price": "298.01",
+      "change_pct": 0.7,
+      "change_abs": "+2.06",
+      "tier": "strong",
+      "tier_label": "BULLISH",
+      "signal": "Apple 小漲，風險偏好回暖但不是單一主線來源。"
+    },
+    {
+      "name": "Microsoft",
+      "ticker": "MSFT",
+      "price": "379.40",
+      "change_pct": 0.13,
+      "change_abs": "+0.49",
+      "tier": "neutral",
+      "tier_label": "NEUTRAL",
+      "signal": "雲端權值股小漲，支持大型科技穩定。"
+    },
+    {
+      "name": "Nvidia",
+      "ticker": "NVDA",
+      "price": "210.69",
+      "change_pct": 2.95,
+      "change_abs": "+6.04",
+      "tier": "strong",
+      "tier_label": "BULLISH",
+      "signal": "AI 核心股續強，與費半大漲呼應。"
+    },
+    {
+      "name": "Amazon",
+      "ticker": "AMZN",
+      "price": "244.39",
+      "change_pct": 2.9,
+      "change_abs": "+6.89",
+      "tier": "strong",
+      "tier_label": "BULLISH",
+      "signal": "大型消費科技轉強，改善風險胃納。"
+    },
+    {
+      "name": "Alphabet",
+      "ticker": "GOOGL",
+      "price": "368.03",
+      "change_pct": 1.17,
+      "change_abs": "+4.24",
+      "tier": "strong",
+      "tier_label": "BULLISH",
+      "signal": "廣告與雲端權值股收紅，科技情緒偏正。"
+    },
+    {
+      "name": "Meta",
+      "ticker": "META",
+      "price": "577.22",
+      "change_pct": 1.7,
+      "change_abs": "+9.64",
+      "tier": "strong",
+      "tier_label": "BULLISH",
+      "signal": "社群廣告權值股回升，有助那指強勢。"
+    },
+    {
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "price": "400.49",
+      "change_pct": 1.04,
+      "change_abs": "+4.11",
+      "tier": "strong",
+      "tier_label": "BULLISH",
+      "signal": "高 beta 股小幅回暖，但仍不宜追高。"
+    }
+  ],
+  "analysis": {
+    "us_close": "美股最新基準 S&P 500 +1.08%、Nasdaq +1.91%，費半 +6.42%；這是科技風險偏好明顯回暖，但 VIX 16.78 仍提醒不要把強勢盤等同低風險盤。",
+    "tx_night": "外資台指期未平倉淨額約 -68,337 口，較前日偏空 943 口；高檔仍有避險部位，台股若開高需看量能與主線是否承接。",
+    "axes": {
+      "thesis": "AI／半導體主線由晶圓代工、IC 設計、IC 基板、封測、散熱與高速傳輸共同支撐。",
+      "policy": "Fed 與地緣 headline 仍會影響估值折現；水位續降時不把外部反彈視為無風險加碼。",
+      "risk": "66.4% 水位仍可維持主線曝險，但方向下修使新增資金需分批、等換手、避開急漲追價。"
+    }
+  },
+  "verdict": {
+    "level": "中高水位・選股續強但降速",
+    "level_en": "SELECTIVE TECH STRENGTH",
+    "reason": "方舟水位降至 66.4%，但美股科技與台股半導體主線同步偏強；今天不是撤退日，而是有主線但降速執行的高檔分化日。"
+  },
+  "conclusion": "今日一句話：<em>科技主線續強，但水位續降；核心留、追價慢、最熱位階等回測。</em>",
+  "appendix": {
+    "after_hours": "盤後觀察重點：費半強勢能否延續、台股半導體開高後是否換手、外資期貨淨空是否收斂，以及下一次方舟水位是否止跌。",
+    "map_bullets": [
+      "66.4% 水位＝仍可保留核心主線曝險。",
+      "較前次 68.8% 下降 2.4 個百分點＝追價降速。",
+      "五指標中性＝不是全面風險警報。",
+      "費半 +6.42%＝AI／半導體主線有開盤支撐。",
+      "外資期貨淨空仍高＝開高後要看承接，不追第一段。"
+    ],
+    "execution": "執行順序：核心 AI／半導體續抱；新增資金分批；急漲與最熱位階等待量縮回測；若主線回測守住，再補核心股數。"
+  },
+  "disclaimer": "Kelvin Wiggly Morning Brief｜2026/06/22 市場晨報。資料來源：方舟使用者輸入 JSON、Yahoo Finance 指數與 Mag7、Nasdaq Indexes SOX、TAIFEX／玩股網外資期貨未平倉、公開市場新聞。",
+  "xurl_signal_layer": {
+    "signals_count": 0,
+    "included_in_revision": true,
+    "status": "no_material_signal",
+    "note": "本版未使用即時 X API；採公開市場新聞與方舟輸入整合，X 區塊以觀察窗方式處理。"
+  }
+}
