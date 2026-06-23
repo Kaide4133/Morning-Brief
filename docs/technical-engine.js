@@ -459,6 +459,311 @@
     return parts.join('；') + '。';
   }
 
+
+  /**
+   * 交易紀律引擎：不是型態辨識，也不是買賣建議。
+   * 以《幽靈的禮物》語境加入五個統計／紀律模組：
+   * 訊號驗證、時間停滯、加倉資格、成交量活躍性、過熱清倉。
+   */
+  function analyzeSignalVerification(norm, trend, position, extension, volume) {
+    const close = norm.close;
+    const checks = [];
+    let score = 0;
+
+    if (Number.isFinite(norm.ma20) && close >= norm.ma20) {
+      score += 25;
+      checks.push('站上 MA20，基礎趨勢驗證通過');
+    } else {
+      checks.push('未站穩 MA20，趨勢驗證不足');
+    }
+
+    if (Number.isFinite(norm.ma5) && Number.isFinite(norm.ma10) && norm.ma5 >= norm.ma10) {
+      score += 20;
+      checks.push('MA5 ≥ MA10，短線動能未轉弱');
+    } else {
+      checks.push('短均線尚未形成正向排序');
+    }
+
+    if (Number.isFinite(norm.prev_high20)) {
+      const d = relPct(close, norm.prev_high20);
+      if (d != null && d >= -3) {
+        score += 20;
+        checks.push('接近或突破 20 日前高，訊號具備驗證條件');
+      } else {
+        checks.push('距 20 日前高仍遠，突破訊號尚未驗證');
+      }
+    }
+
+    if (volume.state === '健康放大') {
+      score += 20;
+      checks.push('成交量健康放大，訊號有效性提高');
+    } else if (volume.state === '爆量') {
+      score += 10;
+      checks.push('爆量需分辨是有效突破或出貨換手');
+    } else {
+      checks.push('量能未明顯配合，訊號需降權');
+    }
+
+    if (extension.state !== '過熱') {
+      score += 15;
+      checks.push('未進入極端過熱，訊號仍可觀察');
+    } else {
+      checks.push('已過熱，追訊號需降權');
+    }
+
+    const state = score >= 75 ? '已驗證' : score >= 50 ? '待驗證' : '未驗證';
+    return { state, score: Math.min(100, score), checks };
+  }
+
+  function analyzeTimeStall(norm) {
+    const s = norm.series || [];
+    if (s.length < 10) {
+      return { state: '資料不足', score: 0, checks: ['K 線資料不足，無法判斷時間停滯'] };
+    }
+    const tail = s.slice(-10).filter((r) => Number.isFinite(r.close) && Number.isFinite(r.high) && Number.isFinite(r.low));
+    if (tail.length < 6) {
+      return { state: '資料不足', score: 0, checks: ['近 10 根有效資料不足'] };
+    }
+    const high = Math.max.apply(null, tail.map((r) => r.high));
+    const low = Math.min.apply(null, tail.map((r) => r.low));
+    const rangePct = low > 0 ? ((high - low) / low) * 100 : null;
+    const first = tail[0].close;
+    const last = tail[tail.length - 1].close;
+    const netPct = first > 0 ? ((last - first) / first) * 100 : null;
+    const belowMa20Days = Number.isFinite(norm.ma20)
+      ? tail.filter((r) => r.close < norm.ma20).length
+      : 0;
+    let stallDays = 0;
+    for (let i = tail.length - 1; i >= 0; i -= 1) {
+      const r = tail[i];
+      const ref = Number.isFinite(norm.ma20) ? norm.ma20 : first;
+      if (ref && Math.abs(relPct(r.close, ref)) <= 3) stallDays += 1;
+      else break;
+    }
+
+    const checks = [];
+    let score = 0;
+    if (rangePct != null && rangePct <= 8) {
+      score += 35;
+      checks.push('近 10 日價格壓縮，區間約 ' + rangePct.toFixed(1) + '%');
+    } else if (rangePct != null) {
+      checks.push('近 10 日區間約 ' + rangePct.toFixed(1) + '%，未明顯壓縮');
+    }
+    if (netPct != null && Math.abs(netPct) <= 3) {
+      score += 30;
+      checks.push('近 10 日淨變動有限，存在時間停滯');
+    } else if (netPct != null) {
+      checks.push('近 10 日仍有方向移動，停滯不明顯');
+    }
+    if (belowMa20Days >= 5) {
+      score += 25;
+      checks.push('多日壓在 MA20 下方，效率下降');
+    }
+    if (stallDays >= 4) {
+      score += 10;
+      checks.push('連續 ' + stallDays + ' 日卡在 MA20 附近');
+    }
+
+    const state = score >= 70 ? '停滯明顯' : score >= 40 ? '觀察停滯' : '未停滯';
+    return { state, score: Math.min(100, score), checks, rangePct, netPct, stallDays };
+  }
+
+  function analyzeAddQualification(norm, signal, timeStall, volume, extension, warnings) {
+    const close = norm.close;
+    const checks = [];
+    let score = 0;
+
+    if (signal.state === '已驗證') score += 30;
+    else if (signal.state === '待驗證') score += 15;
+    checks.push('訊號驗證：' + signal.state);
+
+    if (Number.isFinite(norm.ma20)) {
+      const d = relPct(close, norm.ma20);
+      if (d != null && d >= 0 && d <= 6) {
+        score += 25;
+        checks.push('價格位於 MA20 上方合理距離，具備可規劃區間');
+      } else if (d != null && d > 6) {
+        checks.push('距 MA20 已拉開 ' + d.toFixed(1) + '%，加倉資格降權');
+      } else {
+        checks.push('未站回 MA20，加倉資格不足');
+      }
+    }
+
+    if (volume.state === '健康放大') {
+      score += 20;
+      checks.push('量能活躍且未爆量');
+    } else if (volume.state === '中性') {
+      score += 8;
+      checks.push('量能中性，需等待放量驗證');
+    } else {
+      checks.push('量能狀態不利於加倉：' + volume.state);
+    }
+
+    if (extension.state === '正常') {
+      score += 15;
+      checks.push('延伸正常，沒有過熱排除條件');
+    } else if (extension.state === '偏熱') {
+      score += 5;
+      checks.push('延伸偏熱，只能降權觀察');
+    } else {
+      checks.push('過熱狀態，排除加倉資格');
+    }
+
+    if (timeStall.state === '停滯明顯') {
+      checks.push('時間停滯明顯，資金效率不佳');
+    } else {
+      score += 10;
+      checks.push('未出現明顯時間停滯');
+    }
+
+    if ((warnings || []).length >= 3) {
+      score -= 20;
+      checks.push('風險警示過多，加倉資格扣分');
+    }
+
+    const state = score >= 75 ? '合格' : score >= 50 ? '等待確認' : '不合格';
+    return { state, score: Math.max(0, Math.min(100, score)), checks };
+  }
+
+  function analyzeVolumeActivity(norm, volume) {
+    const checks = [];
+    let score = 0;
+    const vr = norm.volume_ratio;
+    if (!Number.isFinite(vr)) {
+      return { state: '資料不足', score: 0, checks: ['量比資料不足'] };
+    }
+    if (vr < 0.8) {
+      score = 20;
+      checks.push('量比 ' + vr.toFixed(2) + '，活躍度不足');
+    } else if (vr < 1.3) {
+      score = 45;
+      checks.push('量比 ' + vr.toFixed(2) + '，活躍度中性');
+    } else if (vr <= 3) {
+      score = 78;
+      checks.push('量比 ' + vr.toFixed(2) + '，健康活躍');
+    } else {
+      score = 62;
+      checks.push('量比 ' + vr.toFixed(2) + '，爆量活躍但需驗證籌碼品質');
+    }
+    checks.push('量能狀態：' + volume.state);
+    const state = score >= 70 ? '活躍' : score >= 45 ? '普通' : '冷卻';
+    return { state, score, checks };
+  }
+
+  function analyzeOverheatClearance(norm, extension, warnings, riskScore) {
+    const checks = [];
+    let score = 0;
+    const close = norm.close;
+    if (extension.state === '過熱') {
+      score += 35;
+      checks.push('延伸狀態已達過熱');
+    } else if (extension.state === '偏熱') {
+      score += 18;
+      checks.push('延伸偏熱，需留意調節壓力');
+    } else {
+      checks.push('延伸未達過熱');
+    }
+    if (Number.isFinite(norm.distance_ma20_pct) && norm.distance_ma20_pct > 10) {
+      score += 25;
+      checks.push('距 MA20 超過 10%，進入過熱清倉模組觀察');
+    }
+    if (Number.isFinite(norm.boll_ub) && close >= norm.boll_ub) {
+      score += 20;
+      checks.push('收盤觸及/突破日線 BOLL 上緣');
+    }
+    if (Number.isFinite(norm.w_boll_ub) && close >= norm.w_boll_ub * BOLL_NEAR) {
+      score += 15;
+      checks.push('接近週線 BOLL 上緣');
+    }
+    if (norm.consecutive_up >= 3) {
+      score += 10;
+      checks.push('連續上漲 ' + norm.consecutive_up + ' 日');
+    }
+    if (norm.upper_shadow_ratio > 0.35) {
+      score += 10;
+      checks.push('長上影，需防換手失敗');
+    }
+    if ((warnings || []).length >= 3 || riskScore >= 85) {
+      score += 10;
+      checks.push('多項風險同時出現');
+    }
+    const state = score >= 75 ? '清倉警戒' : score >= 50 ? '降倉/調節' : score >= 25 ? '偏熱觀察' : '未觸發';
+    return { state, score: Math.min(100, score), checks };
+  }
+
+  function decideDisciplineAction(signal, timeStall, addQualification, volumeActivity, overheat) {
+    let action = '持有觀察';
+    let priority = 40;
+    const reasons = [];
+
+    if (overheat.state === '清倉警戒') {
+      action = '清倉警戒';
+      priority = 95;
+      reasons.push('過熱清倉模組已高分觸發');
+    } else if (overheat.state === '降倉/調節') {
+      action = '調節 / 降倉';
+      priority = 82;
+      reasons.push('過熱與風險條件達調節門檻');
+    } else if (timeStall.state === '停滯明顯' && signal.state !== '已驗證') {
+      action = '降倉觀察';
+      priority = 70;
+      reasons.push('時間停滯且訊號未驗證，資金效率下降');
+    } else if (addQualification.state === '合格' && volumeActivity.state === '活躍') {
+      action = '加倉合格';
+      priority = 68;
+      reasons.push('訊號已驗證、量能活躍且未過熱');
+    } else if (signal.state === '已驗證') {
+      action = '持有 / 等待加倉資格';
+      priority = 58;
+      reasons.push('訊號已驗證，但尚未同時滿足加倉資格');
+    } else {
+      reasons.push('未達加倉、調節或清倉門檻');
+    }
+
+    return { action, priority, reasons };
+  }
+
+  function analyzeDiscipline(norm, analysis) {
+    const signal = analyzeSignalVerification(
+      norm,
+      analysis.trend,
+      analysis.position,
+      analysis.extension,
+      analysis.volume
+    );
+    const timeStall = analyzeTimeStall(norm);
+    const volumeActivity = analyzeVolumeActivity(norm, analysis.volume);
+    const overheatClearance = analyzeOverheatClearance(
+      norm,
+      analysis.extension,
+      analysis.warnings,
+      analysis.scores.risk
+    );
+    const addQualification = analyzeAddQualification(
+      norm,
+      signal,
+      timeStall,
+      analysis.volume,
+      analysis.extension,
+      analysis.warnings
+    );
+    const decision = decideDisciplineAction(
+      signal,
+      timeStall,
+      addQualification,
+      volumeActivity,
+      overheatClearance
+    );
+    return {
+      signal,
+      timeStall,
+      addQualification,
+      volumeActivity,
+      overheatClearance,
+      decision,
+    };
+  }
+
   function analyze(record) {
     const norm = normalizeRecord(record);
     if (!norm) {
@@ -479,6 +784,8 @@
       extension: scoreExtension(extension),
       risk: scoreRisk(warnings, extension),
     };
+    const baseAnalysis = { trend, position, extension, volume, supportResistance, warnings, labels, scores };
+    const discipline = analyzeDiscipline(norm, baseAnalysis);
 
     return {
       trend,
@@ -489,6 +796,7 @@
       warnings,
       labels,
       scores,
+      discipline,
       summary: buildSummary(norm, trend, position, extension, warnings),
       meta: {
         code: norm.code,
@@ -3448,6 +3756,7 @@ function detectMorphology(record) {
     findRecord,
     scan,
     detectMorphology,
+    analyzeDiscipline,
     countConsecutiveCandles,
     getMorphSeries,
     SCANNER_BUCKETS,

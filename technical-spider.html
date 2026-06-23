@@ -16,16 +16,16 @@
 <nav class="masthead"><div class="masthead-inner"><div><span class="kw-mark">K</span>Kelvin Wiggly</div><div><a class="nav-link" href="/Morning-Brief/">晨報首頁</a><a class="nav-link" href="/Morning-Brief/technical-spider.html">技術線圖</a></div></div></nav>
 <main>
 <header class="hero">
-  <div class="eyebrow">KW Technical Spider v0.6.0</div>
+  <div class="eyebrow">KW Technical Spider v0.7.0</div>
   <h1>技術形態自動判讀</h1>
   <p class="subtitle">單檔優先 · 多方/空方/中性 型態矩陣 · 交易計畫</p>
   <div class="meta-row" aria-label="系統資訊">
-    <span class="meta-chip">版本 v0.6.0</span>
-    <span class="meta-chip">資料日期 2026-06-18</span>
-    <span class="meta-chip">資料池 70 檔</span>
+    <span class="meta-chip">版本 v0.7.0</span>
+    <span class="meta-chip">資料日期 2026-06-23</span>
+    <span class="meta-chip">資料池 74 檔</span>
     <span class="meta-chip">模式 精簡標註</span>
   </div>
-  <p class="version-note">v0.6.0 · Pattern Matrix 多空型態矩陣 · 不強制套型 · 資料截至 2026-06-18</p>
+  <p class="version-note">v0.7.0 · 交易紀律引擎 · 訊號驗證 / 時間停滯 / 加倉資格 / 量能活躍 / 過熱清倉 · 資料截至 2026-06-23</p>
   <p class="note">獨立技術分析核心，不是方舟晨報，也不是雷達。僅讀取本地 technical-data.json；輸出支撐、壓力、參與區、失敗線與情境計畫，不提供下單指令。</p>
 </header>
 
@@ -57,6 +57,20 @@
       </div>
     </div>
     <p class="summary-text" id="techSummary">—</p>
+  </article>
+
+
+  <article class="panel discipline-card" id="disciplinePanel" aria-label="discipline">
+    <h3>交易紀律引擎</h3>
+    <p class="note">基於統計／紀律條件，不是買賣建議；調節或持有仍回到風控判斷。</p>
+    <div class="grid-4">
+      <div class="state-box"><span class="label">訊號驗證</span><div class="val" id="disciplineSignal">—</div></div>
+      <div class="state-box"><span class="label">時間停滯</span><div class="val" id="disciplineStall">—</div></div>
+      <div class="state-box"><span class="label">加倉資格</span><div class="val" id="disciplineAdd">—</div></div>
+      <div class="state-box"><span class="label">過熱清倉</span><div class="val" id="disciplineOverheat">—</div></div>
+    </div>
+    <p class="scores" id="disciplineAction">—</p>
+    <ul class="reason clean" id="disciplineReasons"></ul>
   </article>
 
   <article class="morph-panel" id="morphPanel" aria-label="morphology">
@@ -146,7 +160,7 @@
   <div id="scannerBuckets" class="scanner-grid"></div>
 </section>
 
-<footer>KW Technical Spider v0.6.0 · 產品文案與掃描卡片可讀性整理 · technical-data.json</footer>
+<footer>KW Technical Spider v0.7.0 · 交易紀律引擎：訊號驗證／時間停滯／加倉資格／量能活躍／過熱清倉 · technical-data.json</footer>
 </main>
 
 <script src="technical-engine.js"></script>
@@ -1862,6 +1876,12 @@
     $('warningsBox').textContent = '';
     $('labelsBox').textContent = '';
     $('scoresLine').textContent = '';
+    $('disciplineSignal').textContent = '';
+    $('disciplineStall').textContent = '';
+    $('disciplineAdd').textContent = '';
+    $('disciplineOverheat').textContent = '';
+    $('disciplineAction').textContent = '';
+    fillReasons($('disciplineReasons'), []);
     $('morphType').textContent = '';
     $('morphState').textContent = '';
     $('morphConfidence').textContent = '';
@@ -2054,6 +2074,28 @@
     $('errorMessage').textContent = '';
   }
 
+  function renderDiscipline(discipline) {
+    const d = discipline || {};
+    const signal = d.signal || {};
+    const stall = d.timeStall || {};
+    const add = d.addQualification || {};
+    const overheat = d.overheatClearance || {};
+    const volume = d.volumeActivity || {};
+    const decision = d.decision || {};
+    $('disciplineSignal').textContent = (signal.state || '—') + (signal.score != null ? ' · ' + Math.round(signal.score) : '');
+    $('disciplineStall').textContent = (stall.state || '—') + (stall.score != null ? ' · ' + Math.round(stall.score) : '');
+    $('disciplineAdd').textContent = (add.state || '—') + (add.score != null ? ' · ' + Math.round(add.score) : '');
+    $('disciplineOverheat').textContent = (overheat.state || '—') + (overheat.score != null ? ' · ' + Math.round(overheat.score) : '');
+    $('disciplineAction').textContent = '紀律標籤：' + (decision.action || '持有觀察') + '｜量能活躍性：' + (volume.state || '—');
+    const reasons = [];
+    (decision.reasons || []).forEach((x) => reasons.push(x));
+    (signal.checks || []).slice(0, 2).forEach((x) => reasons.push('訊號：' + x));
+    (stall.checks || []).slice(0, 1).forEach((x) => reasons.push('時間：' + x));
+    (add.checks || []).slice(0, 1).forEach((x) => reasons.push('加倉：' + x));
+    (overheat.checks || []).slice(0, 2).forEach((x) => reasons.push('過熱：' + x));
+    fillReasons($('disciplineReasons'), reasons.slice(0, 8));
+  }
+
   function renderResult(norm) {
     if (typeof TechnicalEngine === 'undefined') {
       showErrorOnly('technical-engine.js 未載入，請確認與本頁同目錄。');
@@ -2104,6 +2146,7 @@
     const sc = out.scores;
     $('scoresLine').textContent =
       '趨勢 ' + sc.trend + ' · 位置 ' + sc.position + ' · 延伸 ' + sc.extension + ' · 風險 ' + sc.risk;
+    renderDiscipline(out.discipline);
 
     let morph = null;
     try {
