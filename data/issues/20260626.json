@@ -1,0 +1,229 @@
+{
+  "disclaimer": "本晨報由 Hermes AI 依方舟系統數據與公開市場資訊自動生成，僅供內部參考，不構成投資建議。",
+  "date": "2026-06-26",
+  "issue_no": 32,
+  "scenario_id": "02",
+  "scenario_reason": "方舟水位維持 71.0%（本日無更新數值，沿用前日），持倉建議降至 75.3%；Apple 漲價政策引發 -6.15% 重挫，拖累 Nasdaq -0.46%，科技巨頭全線走弱。SOX +3.59% 獨強，但台股 6/26 重跌 -3.64%，收 44,571 點，外資空單仍達 81,051 口（史上第二高）。盤面呈高檔分化：IC 基板（景碩 +6.16%、南電漲停）與封裝測試（日月光 +3.43%）相對撐盤，聯發科 -9.51% 重挫。市場需觀察週末後季底資金平衡是否完成。",
+  "market_summary": "美股 6/25：Apple 漲價引爆賣壓，股價重挫 -6.15%；Micron 財報超強（+17% 盤後），但未能帶動科技全面反彈。S&P 500 幾乎平收（-0.01%），Nasdaq -0.46%，Dow +0.14%。SOX +3.59% 表現強勁。台股 6/26 收 44,571 點，暴跌 1,683 點（-3.64%）；外資近三日累計賣超逾 2,565 億元，期貨空單維持 81,051 口；投信連三日買超（當日 +174 億），國家隊護盤 643 億。",
+  "hero": {
+    "headline": "Apple 漲價 15%~20%，<br>科技股分化：費半獨強，台股跌 <em>3.64%</em>",
+    "subhead": "6/26 開盤前最大背景：Apple 宣布 Mac/iPad 漲價 15%–20%，股價重挫 6.15%；Micron Q3 財報大幅超預期（EPS $25.11 vs 預期 $20.98），盤後漲逾 17%，SOX 大漲 3.59%。但科技訊號嚴重分化：Mag7 六跌一漲，台股 6/26 重跌 1,683 點。方舟水位 71.0% 持倉建議 75.3%，持核心 AI／記憶體鏈，暫緩追價，觀察量能承接。"
+  },
+  "market": {
+    "sox": {
+      "label": "SOX · 費半",
+      "value": "13,940.87",
+      "change_pct": 3.59
+    },
+    "vix": {
+      "label": "VIX · 恐慌",
+      "value": "18.89",
+      "change_pct": 1.40
+    },
+    "spx": {
+      "label": "S&P 500",
+      "value": "7,357.49",
+      "delta": -0.01
+    },
+    "nasdaq": {
+      "label": "NASDAQ",
+      "value": "25,358.60",
+      "delta": -0.46
+    },
+    "tw_index": {
+      "label": "TWSE · 加權",
+      "value": "44,571.76",
+      "line": "-3.64%（2026-06-26 收盤）",
+      "change_pct": -3.64
+    },
+    "taifex_net_oi": {
+      "label": "外資台指期淨額",
+      "value": "-81,051 口",
+      "delta": 2554,
+      "line": "TAIFEX 2026/06/25：外資台指期淨空 -81,051 口，減碼空方 2,554 口（史上第二高）"
+    },
+    "futures": {
+      "line": "外資台指期淨空 -81,051 口（6/25 縮減 2,554 口，仍史上第二高）"
+    },
+    "foreign_oi": {
+      "value": "-81,051 口",
+      "note": "TAIFEX 2026/06/25 收盤後資料"
+    },
+    "systemic_risk": "中偏高"
+  },
+  "strategy": {
+    "playbook": "費半 SOX +3.59% 給出 AI 記憶體主線訊號，核心持倉（台積電、日月光、欣興、智邦）可續持；聯發科 -9.51% 重挫，驅動 IC 鏈短線偏弱，暫緩加倉。台股整體重跌，季底前觀望為主，等待外資空單回補訊號。",
+    "key_levels": "台積電 2,310 為支撐，日月光 640 確認換手量能。",
+    "watch_list": ["台積電 2330", "日月光 3711", "欣興 3037", "智邦 2345", "景碩 3189"]
+  },
+  "ark": {
+    "water_level": 71.0,
+    "prev": 71.0,
+    "delta": 0.0,
+    "global_dispersion": "neutral",
+    "foreign_sentiment": "neutral",
+    "position_heating_up": "neutral",
+    "social_rebound": "neutral",
+    "energy_storm": "neutral",
+    "note": "71.0%（本日 App 數值未更新，沿用前日 71.0%）；持倉建議降至 75.3%，五項指標全中性。台股 6/26 重跌 3.64%，需觀察外資空單回補進度；費半 SOX 強勁，AI 記憶體主線仍在，核心持倉可留，但不宜追價。"
+  },
+  "temperature": {
+    "overall": "中性偏謹慎",
+    "ai_chain": "偏熱（SOX +3.59%，Micron 財報超預期）",
+    "tw_market": "偏冷（外資連賣、台股重跌 3.64%）",
+    "note": "費半與台股呈現背離，需等量能驗證再做判斷。"
+  },
+  "editorial": {
+    "pull_quote": "費半獨強、Apple 拖累；核心 AI 鏈可留，追價暫緩等量能",
+    "body": "Apple 宣布漲價是本週最大的訊號分歧點。表面上是成本轉嫁，實質是關稅壓力下消費科技的被動防禦。這個訊號短期壓制 Mag7 整體估值，但對 AI 基礎設施鏈（記憶體、HBM、先進封裝）並不形成直接傷害——Micron EPS 超預期 21%、SOX 大漲 3.59%，代表資金仍在主線內輪動。台股 6/26 重跌反映的是季底外資被動再平衡，而非基本面逆轉。國家隊三日護盤 643 億、投信連三日加碼，內資結構仍在。待季底部位平衡完成，市場有望重新部署。",
+    "key_point": "分化不是崩盤訊號，是換手機會。核心 AI 記憶體鏈（台積電、日月光、欣興、智邦、景碩）逢低可承接；消費科技鏈（聯發科、大立光）暫觀望。"
+  },
+  "home": {
+    "water_note": "6/26 方舟水位維持 71.0%（沿用前日），持倉建議 75.3%，五項指標中性；台股季底外資再平衡重跌，費半 SOX +3.59% 確認 AI 主線仍強。",
+    "thesis_blurb": "費半領先、台股補跌；季底壓力釋放後，等待重建動能。"
+  },
+  "etf": {
+    "value": [
+      {"name": "元大台灣50正2", "code": "00631L", "price": 36.25, "change": -1.91, "change_percentage": -5.01, "premium_discount_percentage": 0.14, "region": "台灣"},
+      {"name": "元大台灣50", "code": "0050", "price": 104.55, "change": -2.65, "change_percentage": -2.47, "premium_discount_percentage": 0.16, "region": "台灣"},
+      {"name": "富邦科技", "code": "0052", "price": 61.45, "change": -1.55, "change_percentage": -2.46, "premium_discount_percentage": 0.31, "region": "台灣"},
+      {"name": "國泰費城半導體", "code": "00830", "price": 96.15, "change": -3.1, "change_percentage": -3.12, "premium_discount_percentage": -2.36, "region": "美國"},
+      {"name": "主動領航全球創新", "code": "00988A", "price": 22.25, "change": -0.82, "change_percentage": -3.55, "premium_discount_percentage": 0.59, "region": "全球"},
+      {"name": "元大全球未來通訊", "code": "00861", "price": 94.8, "change": -2.05, "change_percentage": -2.12, "premium_discount_percentage": -0.8, "region": "全球"},
+      {"name": "元大中型100", "code": "0051", "price": 145.95, "change": -3.05, "change_percentage": -2.05, "premium_discount_percentage": 0.08, "region": "台灣"},
+      {"name": "兆豐洲際半導體", "code": "00911", "price": 66.75, "change": -0.45, "change_percentage": -0.67, "premium_discount_percentage": -0.89, "region": "全球"},
+      {"name": "元大全球5G", "code": "00876", "price": 101.55, "change": -1.75, "change_percentage": -1.69, "premium_discount_percentage": -0.62, "region": "全球"},
+      {"name": "中信上游半導體", "code": "00941", "price": 28.85, "change": -0.17, "change_percentage": -0.59, "premium_discount_percentage": -0.79, "region": "全球"}
+    ],
+    "gainers": [
+      {"name": "永豐中國科技50大", "code": "00887", "price": 19.82, "change": -0.33, "change_percentage": -1.64, "premium_discount_percentage": -0.25, "region": "中國"},
+      {"name": "復華中國5G", "code": "00877", "price": 48.6, "change": -1.45, "change_percentage": -2.9, "premium_discount_percentage": 0.54, "region": "中國"},
+      {"name": "中信上游半導體", "code": "00941", "price": 28.85, "change": -0.17, "change_percentage": -0.59, "premium_discount_percentage": -0.79, "region": "全球"},
+      {"name": "中信日本半導體", "code": "00954", "price": 21.84, "change": -0.74, "change_percentage": -3.28, "premium_discount_percentage": 0.55, "region": "日本"},
+      {"name": "台新日本半導體", "code": "00951", "price": 20.43, "change": -0.68, "change_percentage": -3.22, "premium_discount_percentage": 0.47, "region": "日本"},
+      {"name": "永豐台灣ESG", "code": "00888", "price": 37.59, "change": -0.81, "change_percentage": -2.11, "premium_discount_percentage": 0.32, "region": "台灣"},
+      {"name": "元大全球5G", "code": "00876", "price": 101.55, "change": -1.75, "change_percentage": -1.69, "premium_discount_percentage": -0.62, "region": "全球"}
+    ]
+  },
+  "stocks": {
+    "industry_value": [
+      {"name": "台達電", "code": "2308", "price": 1855, "change": -125, "change_percentage": -6.31, "debt_ratio": 47.78, "industry": "電源供應器"},
+      {"name": "貿聯-KY", "code": "3665", "price": 1890, "change": -30, "change_percentage": -1.56, "debt_ratio": 45.52, "industry": "連接線材"},
+      {"name": "華通", "code": "2313", "price": 228, "change": -5, "change_percentage": -2.15, "debt_ratio": 49.86, "industry": "硬板"},
+      {"name": "啟碁", "code": "6285", "price": 246, "change": -10.5, "change_percentage": -4.09, "debt_ratio": 59.57, "industry": "無線通訊設備"},
+      {"name": "鴻勁", "code": "7769", "price": 6720, "change": -200, "change_percentage": -2.89, "debt_ratio": 22.17, "industry": "半導體檢測"},
+      {"name": "致茂", "code": "2360", "price": 2100, "change": -85, "change_percentage": -3.89, "debt_ratio": 47.77, "industry": "半導體設備"},
+      {"name": "仁寶", "code": "2324", "price": 35.35, "change": -1.5, "change_percentage": -4.07, "debt_ratio": 67.75, "industry": "電子設備"},
+      {"name": "信驊", "code": "5274", "price": 15900, "change": -1445, "change_percentage": -8.33, "debt_ratio": 51.72, "industry": "IC設計"},
+      {"name": "台光電", "code": "2383", "price": 5530, "change": -110, "change_percentage": -1.95, "debt_ratio": 63.41, "industry": "銅箔基板"},
+      {"name": "川湖", "code": "2059", "price": 7135, "change": -180, "change_percentage": -2.46, "debt_ratio": 20.2, "industry": "電子零組件"},
+      {"name": "日月光投控", "code": "3711", "price": 663, "change": 22, "change_percentage": 3.43, "debt_ratio": 60.19, "industry": "IC封裝測試"},
+      {"name": "京元電子", "code": "2449", "price": 329.5, "change": -5, "change_percentage": -1.49, "debt_ratio": 51.9, "industry": "IC測試"},
+      {"name": "國巨*", "code": "2327", "price": 1045, "change": -80, "change_percentage": -7.11, "debt_ratio": 57.9, "industry": "MLCC"},
+      {"name": "大立光", "code": "3008", "price": 4900, "change": -265, "change_percentage": -5.13, "debt_ratio": 17.56, "industry": "光學鏡片與鏡頭"},
+      {"name": "聯電", "code": "2303", "price": 169.5, "change": -9, "change_percentage": -5.04, "debt_ratio": 32.2, "industry": "晶圓代工"},
+      {"name": "景碩", "code": "3189", "price": 862, "change": 50, "change_percentage": 6.16, "debt_ratio": 38.47, "industry": "IC基板"},
+      {"name": "聯詠", "code": "3034", "price": 517, "change": -44, "change_percentage": -7.84, "debt_ratio": 30.62, "industry": "驅動IC"},
+      {"name": "瑞昱", "code": "2379", "price": 760, "change": -54, "change_percentage": -6.63, "debt_ratio": 68.4, "industry": "IC設計"},
+      {"name": "台燿", "code": "6274", "price": 1650, "change": -50, "change_percentage": -2.94, "debt_ratio": 59.19, "industry": "銅箔基板"},
+      {"name": "矽力*-KY", "code": "6415", "price": 595, "change": -20, "change_percentage": -3.25, "debt_ratio": 16.19, "industry": "IC設計"},
+      {"name": "緯穎-KY", "code": "4958", "price": 618, "change": 16, "change_percentage": 2.66, "debt_ratio": 41.45, "industry": "軟板"},
+      {"name": "旺矽", "code": "6223", "price": 6690, "change": -215, "change_percentage": -3.11, "debt_ratio": 38.73, "industry": "IC封裝測試設備"},
+      {"name": "欣興", "code": "3037", "price": 1035, "change": 15, "change_percentage": 1.47, "debt_ratio": 56.18, "industry": "IC基板"},
+      {"name": "廣達", "code": "2382", "price": 361, "change": -5.5, "change_percentage": -1.5, "debt_ratio": 87.45, "industry": "伺服器組裝代工"},
+      {"name": "穎崴", "code": "6515", "price": 8605, "change": -495, "change_percentage": -5.44, "debt_ratio": 54.61, "industry": "IC封裝測試設備"},
+      {"name": "聯發科", "code": "2454", "price": 3900, "change": -410, "change_percentage": -9.51, "debt_ratio": 46.07, "industry": "IC設計"},
+      {"name": "力成", "code": "6239", "price": 328, "change": 2, "change_percentage": 0.61, "debt_ratio": 41.87, "industry": "IC封裝測試"},
+      {"name": "智邦", "code": "2345", "price": 2445, "change": 65, "change_percentage": 2.73, "debt_ratio": 60.24, "industry": "網路設備"},
+      {"name": "奇鋐", "code": "3017", "price": 2325, "change": -180, "change_percentage": -7.19, "debt_ratio": 70.84, "industry": "散熱模組"},
+      {"name": "台積電", "code": "2330", "price": 2350, "change": -40, "change_percentage": -1.67, "debt_ratio": 31.5, "industry": "晶圓代工"},
+      {"name": "全新", "code": "2455", "price": 365, "change": -21, "change_percentage": -5.44, "debt_ratio": 32.02, "industry": "砷化鎵代工"}
+    ],
+    "industry_gainers": [
+      {"name": "百容", "code": "2483", "price": 55.4, "change": 4.7, "change_percentage": 9.27, "debt_ratio": 38.71, "industry": "IC封裝測試設備"},
+      {"name": "智伸科", "code": "4551", "price": 244, "change": -5.5, "change_percentage": -2.2, "debt_ratio": 37.46, "industry": "汽機車零組件"},
+      {"name": "宏旭-KY", "code": "2243", "price": 58, "change": 2.5, "change_percentage": 4.5, "debt_ratio": 72.47, "industry": "汽機車零組件"},
+      {"name": "霖宏", "code": "5464", "price": 103, "change": -4.5, "change_percentage": -4.19, "debt_ratio": 71.16, "industry": "硬板"},
+      {"name": "風青", "code": "2061", "price": 62.6, "change": -6.9, "change_percentage": -9.93, "debt_ratio": 48.22, "industry": "電線電纜"},
+      {"name": "華容", "code": "5328", "price": 70.2, "change": 6.3, "change_percentage": 9.86, "debt_ratio": 17.96, "industry": "電容"},
+      {"name": "揚博", "code": "2493", "price": 285.5, "change": -3, "change_percentage": -1.04, "debt_ratio": 51.53, "industry": "印刷電路板設備"},
+      {"name": "久陽", "code": "5011", "price": 26.55, "change": 0.6, "change_percentage": 2.31, "debt_ratio": 61.77, "industry": "鋼鐵產品"},
+      {"name": "合晶", "code": "6182", "price": 127, "change": 2, "change_percentage": 1.6, "debt_ratio": 35.02, "industry": "矽晶圓"},
+      {"name": "精材", "code": "3374", "price": 297.5, "change": -4, "change_percentage": -1.33, "debt_ratio": 40.77, "industry": "IC測試"},
+      {"name": "尚立", "code": "3360", "price": 19.85, "change": -1.05, "change_percentage": -5.02, "debt_ratio": 81.49, "industry": "IC零組件通路商"},
+      {"name": "廣閎科", "code": "6693", "price": 231.5, "change": -12.5, "change_percentage": -5.12, "debt_ratio": 35.51, "industry": "MOSFET"},
+      {"name": "聯電", "code": "2303", "price": 169.5, "change": -9, "change_percentage": -5.04, "debt_ratio": 32.2, "industry": "晶圓代工"},
+      {"name": "力智", "code": "6719", "price": 280, "change": -15.5, "change_percentage": -5.25, "debt_ratio": 15.94, "industry": "IC設計"},
+      {"name": "同泰", "code": "3321", "price": 25.45, "change": -1.4, "change_percentage": -5.21, "debt_ratio": 66.66, "industry": "軟板"},
+      {"name": "凌陽", "code": "2401", "price": 32.4, "change": -2.5, "change_percentage": -7.16, "debt_ratio": 25.17, "industry": "IC設計"},
+      {"name": "全友", "code": "2305", "price": 37.05, "change": -0.75, "change_percentage": -1.98, "debt_ratio": 21.16, "industry": "掃描器"},
+      {"name": "富鼎", "code": "8261", "price": 263.5, "change": 8, "change_percentage": 3.13, "debt_ratio": 11.26, "industry": "MOSFET"},
+      {"name": "大毅", "code": "2478", "price": 232, "change": -10, "change_percentage": -4.13, "debt_ratio": 29.06, "industry": "電阻"},
+      {"name": "世界", "code": "5347", "price": 208.5, "change": -11.5, "change_percentage": -5.23, "debt_ratio": 56.79, "industry": "晶圓代工"},
+      {"name": "群創", "code": "3481", "price": 68.4, "change": -2.5, "change_percentage": -3.53, "debt_ratio": 40.84, "industry": "TFT-LCD"},
+      {"name": "臻華藥", "code": "6446", "price": 1160, "change": -35, "change_percentage": -2.93, "debt_ratio": 14.06, "industry": "製藥業"},
+      {"name": "彩富", "code": "5489", "price": 64.5, "change": -3.3, "change_percentage": -4.87, "debt_ratio": 16.49, "industry": "安全監控系統"},
+      {"name": "天二科技", "code": "6834", "price": 119, "change": -6.5, "change_percentage": -5.18, "debt_ratio": 37.92, "industry": "電阻"},
+      {"name": "科嶠", "code": "4542", "price": 391, "change": -18, "change_percentage": -4.4, "debt_ratio": 54.28, "industry": "印刷電路板設備"},
+      {"name": "南電", "code": "8046", "price": 1145, "change": 100, "change_percentage": 9.57, "debt_ratio": 24.86, "industry": "IC基板"},
+      {"name": "大立", "code": "4716", "price": 24.85, "change": 0.65, "change_percentage": 2.69, "debt_ratio": 33.94, "industry": "電子化學品"},
+      {"name": "美而快", "code": "5321", "price": 63, "change": 5.2, "change_percentage": 9.0, "debt_ratio": 84.23, "industry": "電子商務"},
+      {"name": "騰輝電子-KY", "code": "6672", "price": 295.5, "change": 6, "change_percentage": 2.07, "debt_ratio": 42.48, "industry": "銅箔基板"},
+      {"name": "聯茂", "code": "6213", "price": 367.5, "change": 28, "change_percentage": 8.25, "debt_ratio": 47.16, "industry": "銅箔基板"}
+    ]
+  },
+  "mag7": [
+    {"name": "Apple", "ticker": "AAPL", "price": "275.15", "change_pct": -6.15, "change_abs": "-18.02", "tier": "weak", "tier_label": "WEAK", "signal": "Apple 漲價 15–20%（Mac/iPad），股價重挫 6.15%；消費科技短期承壓。"},
+    {"name": "Microsoft", "ticker": "MSFT", "price": "352.83", "change_pct": -3.45, "change_abs": "-12.61", "tier": "weak", "tier_label": "WEAK", "signal": "Microsoft 跌 3.45%，雲端估值壓縮，跟隨 Apple 走弱。"},
+    {"name": "Nvidia", "ticker": "NVDA", "price": "195.74", "change_pct": -1.59, "change_abs": "-3.17", "tier": "neutral", "tier_label": "NEUTRAL", "signal": "Nvidia 小跌 1.59%，AI 晶片主線維持；SOX 大漲支撐。"},
+    {"name": "Alphabet", "ticker": "GOOGL", "price": "343.71", "change_pct": -0.45, "change_abs": "-1.57", "tier": "neutral", "tier_label": "NEUTRAL", "signal": "Alphabet 近乎平收，跌幅最小；廣告業務支撐估值。"},
+    {"name": "Amazon", "ticker": "AMZN", "price": "227.01", "change_pct": -3.14, "change_abs": "-7.36", "tier": "weak", "tier_label": "WEAK", "signal": "Amazon 跌 3.14%，消費與雲端雙重壓力。"},
+    {"name": "Meta", "ticker": "META", "price": "542.87", "change_pct": -2.68, "change_abs": "-14.93", "tier": "neutral", "tier_label": "NEUTRAL", "signal": "Meta 跌 2.68%，廣告科技跟跌，但幅度相對可控。"},
+    {"name": "Tesla", "ticker": "TSLA", "price": "375.12", "change_pct": -0.09, "change_abs": "-0.35", "tier": "strong", "tier_label": "NEUTRAL+", "signal": "Tesla 幾近平收（-0.09%），為 Mag7 唯一相對強勢。"}
+  ],
+  "analysis": {
+    "us_close": "美股 6/25 收盤：SOX 13,941（+3.59%）、Nasdaq 25,359（-0.46%）、S&P500 7,357（-0.01%）、VIX 18.89（+1.40%）。Apple -6.15% 為主要拖累；Micron 盤後大漲 17%，AI 記憶體需求確認。",
+    "tx_night": "外資台指期 6/25 淨空 -81,051 口（減碼 2,554 口），仍史上第二高；台股 6/26 收 44,571（-3.64%），外資三日累計賣超 2,565 億，投信連三買超 +174 億，國家隊護盤 643 億。",
+    "axes": {
+      "thesis": "Micron EPS 超預期 20%，AI 記憶體（HBM/DDR5）需求結構性驗證；SOX +3.59% 確認費半主線；台積電、日月光、欣興、智邦、景碩為核心持倉。",
+      "policy": "Apple 漲價 15–20% 反映關稅壓力轉嫁至消費端；AI 基礎設施鏈（記憶體、封測、IC 基板）不受此影響，訂單能見度持續；季底外資再平衡壓力高峰期可能已過。",
+      "risk": "71.0% 水位允許核心持有；外資空單 81,051 口仍高，台股短線震盪；聯發科 -9.51% 顯示驅動 IC 鏈仍弱，不宜追入非 AI 主線個股。"
+    }
+  },
+  "verdict": {
+    "title": "操作判斷",
+    "points": [
+      "台積電 2,350 元：季底外資賣壓下守，可持不追；跌破 2,300 才需重新評估。",
+      "日月光 663 元 +3.43%：封裝測試主線確認，有量換手可視為健康；觀察是否守住 640。",
+      "景碩 +6.16%、南電漲停：IC 基板受 Micron 財報利多，短線強勢；追高需注意量能延續。",
+      "聯發科 -9.51%：驅動 IC 鏈失速，不宜在跌停後急追；觀察 3,800 支撐。",
+      "Apple -6.15%：消費科技短線迴避，不是 AI 主線。"
+    ]
+  },
+  "conclusion": {
+    "summary": "費半領漲、台股季底補跌，核心 AI 記憶體鏈逢低承接，消費科技暫觀望。外資空單仍高（81,051 口），週末後待季底平衡完成再評估加速訊號。"
+  },
+  "appendix": {
+    "data_sources": "TWSE 歷史資料、Yahoo Finance（Mag7 6/25 收盤）、TAIFEX 外資期貨（6/25）、wantgoo.com、udn.com"
+  },
+  "xurl_signal_layer": {
+    "status": "no_material_signal",
+    "signals": [],
+    "signals_count": 0,
+    "note": "本日 X 訊號層無新增強訊號。"
+  },
+  "validation": {
+    "data_quality": "market: ✓, mag7: ✓, sox: ✓, vix: ✓, tw_index: ✓（6/26 收盤）, taifex: ✓（6/25）, ark: 水位沿用前日 71.0%（App 本日無更新）",
+    "warnings": ["ark.water_level 沿用 6/25 數值 71.0%，本日 App 未獲取更新"]
+  },
+  "intelligence": {
+    "key_events": [
+      "Apple 宣布 Mac/iPad 漲價 15–20%（關稅轉嫁），AAPL -6.15%",
+      "Micron Q3 EPS $25.11 超預期 20%，盤後漲逾 17%",
+      "SOX +3.59%，AI 記憶體主線確認",
+      "台股 6/26 重跌 1,683 點（-3.64%），收 44,571 點",
+      "外資三日累計賣超台股 2,565 億，台指期空單 81,051 口（史上第二高）",
+      "國家隊三日護盤 643 億，投信連三買超"
+    ]
+  }
+}
