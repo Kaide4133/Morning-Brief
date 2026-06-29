@@ -1,0 +1,762 @@
+{
+  "disclaimer": "Kelvin Wiggly Morning Brief｜2026/06/29 市場晨報。資料來源：方舟運算截圖、TAIFEX 期交所、Yahoo Finance、市場公開資訊與政策科技訊號檢索。本文為開盤前風險與主線整理，不構成投資建議。",
+  "date": "2026-06-29",
+  "issue_no": 33,
+  "scenario_id": "02",
+  "scenario_reason": "方舟持股配置水位升至 79.2%，較前一交易日 75.3% 上升 3.9 個百分點；台股加權同步上漲但 SOX 前一晚回落、外資台指期仍維持 -76,627 口淨空單，盤面屬於高水位強勢換手與高檔分化並存。",
+  "hero": {
+    "headline": "<span class=\"mark\">一句話先看：</span>水位升至 79.2%，AI 半導體與電子零組件全面擴散，但追價速度要比水位更慢。",
+    "subhead": "操作感受：方舟水位由 75.3% 上升至 79.2%，風險預算擴大；台股加權 +0.96%、期貨盤前約 +2.3%，多方氣氛強。但 SOX 前一晚 -5.29%、外資台指期淨空 -76,627 口，今天不是無腦追高，而是核心主線可留、強股等換手、漲多分批控速。"
+  },
+  "market": {
+    "sox": {
+      "value": "13,203.57",
+      "change_pct": -5.29
+    },
+    "vix": {
+      "value": "18.41",
+      "change_pct": -2.54
+    },
+    "tw_index": {
+      "line": "44,999.90 / +428.14 (+0.96%)",
+      "change_pct": 0.96
+    },
+    "futures": {
+      "line": "台指期盤前約 +1,030 點（+2.32%，截圖最新可得）"
+    },
+    "foreign_oi": {
+      "value": "-76,627 口",
+      "note": "TAIFEX 2026/06/29 外資台指期未平倉淨額"
+    },
+    "systemic_risk": "中"
+  },
+  "strategy": {
+    "thesis": "AI / 半導體 / CCL / IC 基板 / 伺服器電源散熱 / MLCC / 被動元件",
+    "tape": "水位上升、台股轉強；但 SOX 回落與外資空單提醒高檔仍要換手確認。",
+    "playbook": "核心主線續留；台達電、瑞昱、台光電、景碩、聯發科等強勢股不追第一段，等量縮回測與承接。",
+    "risk": "79.2% 高水位偏正面，但高水位不是高風險；真正風控是不要把上升水位解讀成情緒加速。"
+  },
+  "ark": {
+    "water_level": 79.2,
+    "prev": 75.3,
+    "delta": 3.9,
+    "global_dispersion": "neutral",
+    "foreign_sentiment": "neutral",
+    "position_heating_up": "neutral",
+    "social_rebound": "neutral",
+    "energy_storm": "neutral",
+    "note": "79.2%，較前次 75.3% <span class=\"mark\">上升 3.9 個百分點</span>。水位越高代表市場越健康、可佈局空間擴大；但今日同時有 SOX 回落與外資期貨淨空單，執行上以主線續抱、強股換手、避免開高追價為核心。"
+  },
+  "temperature": {
+    "vix_note": "VIX 18.41 且回落，系統性恐慌未放大；但低恐慌配合水位高檔，容易讓追價變快。",
+    "signal_headline": "水位上修，主線擴散；節奏仍要慢於價格。",
+    "signal_note": "ETF 價值區集中台灣電子、台灣50與半導體，產業價值區集中 CCL、IC 基板、IC 設計、電源與散熱，升溫區再擴散到電阻、電容、MOSFET、面板與零組件。"
+  },
+  "editorial": {
+    "pull_quote": "水位升高不是叫你追高，而是告訴你主線仍值得留在場上。",
+    "body": "6/29 的核心不是撤退，而是水位升至 79.2% 後的強勢換手。台達電、瑞昱、台光電、景碩、聯發科、貿聯、智邦、奇鋐、國巨與 PCB/CCL/IC 基板鏈同時進入觀察名單，代表資金不是單點題材，而是 AI 基建、半導體與電子零組件一起擴散。風控上，外資台指期仍維持 -76,627 口淨空，SOX 前一晚明顯回落，所以今日應把水位上升解讀為市場健康，而不是開盤情緒加速；主線保留、漲多調節、回測承接再提高效率。"
+  },
+  "home": {
+    "water_note": "6/29 方舟水位升至 79.2%，較前次 75.3% 上升 3.9 個百分點；市場健康度改善，主線可留但不追開高第一段。",
+    "thesis_blurb": "AI、半導體、CCL、IC 基板、MLCC、電源散熱與電子零組件同步擴散。",
+    "risk_tagline": "02 高檔分化｜系統性風險中",
+    "recent_summary": "水位上修與台股轉強，確認核心主線仍在；SOX 回落與外資淨空單使今日重點落在換手與控速。"
+  },
+  "etf": {
+    "value": [
+      {
+        "code": "0053",
+        "name": "元大電子",
+        "meta": "239.55 / +2.59%",
+        "stamp": "value",
+        "sector": "台灣"
+      },
+      {
+        "code": "00631L",
+        "name": "元大台灣50正2",
+        "meta": "36.49 / +3.49%",
+        "stamp": "value",
+        "sector": "台灣"
+      },
+      {
+        "code": "0052",
+        "name": "富邦科技",
+        "meta": "61.70 / +1.82%",
+        "stamp": "value",
+        "sector": "台灣"
+      },
+      {
+        "code": "0050",
+        "name": "元大台灣50",
+        "meta": "105.00 / +1.84%",
+        "stamp": "value",
+        "sector": "台灣"
+      },
+      {
+        "code": "00988A",
+        "name": "主動統一全球創新",
+        "meta": "21.64 / -1.28%",
+        "stamp": "value",
+        "sector": "全球創新"
+      },
+      {
+        "code": "00830",
+        "name": "國泰費城半導體",
+        "meta": "94.00 / -1.78%",
+        "stamp": "value",
+        "sector": "美國半導體"
+      },
+      {
+        "code": "00861",
+        "name": "元大全球未來通訊",
+        "meta": "93.45 / -1.16%",
+        "stamp": "value",
+        "sector": "全球通訊"
+      },
+      {
+        "code": "00911",
+        "name": "兆豐洲際半導體",
+        "meta": "64.45 / -1.90%",
+        "stamp": "value",
+        "sector": "全球半導體"
+      },
+      {
+        "code": "00876",
+        "name": "元大全球5G",
+        "meta": "100.35 / -0.64%",
+        "stamp": "value",
+        "sector": "全球5G"
+      },
+      {
+        "code": "00941",
+        "name": "中信上游半導體",
+        "meta": "28.57 / -0.87%",
+        "stamp": "value",
+        "sector": "全球半導體"
+      }
+    ],
+    "rising": [
+      {
+        "code": "00887",
+        "name": "永豐中國科技50大",
+        "meta": "20.15 / +1.97%",
+        "stamp": "rising",
+        "sector": "中國科技"
+      },
+      {
+        "code": "00877",
+        "name": "復華中國5G",
+        "meta": "48.40 / +0.52%",
+        "stamp": "rising",
+        "sector": "中國5G"
+      },
+      {
+        "code": "00941",
+        "name": "中信上游半導體",
+        "meta": "28.57 / -0.87%",
+        "stamp": "rising",
+        "sector": "全球半導體"
+      },
+      {
+        "code": "00876",
+        "name": "元大全球5G",
+        "meta": "100.35 / -0.64%",
+        "stamp": "rising",
+        "sector": "全球5G"
+      },
+      {
+        "code": "00888",
+        "name": "永豐台灣ESG",
+        "meta": "37.18 / +1.72%",
+        "stamp": "rising",
+        "sector": "台灣ESG"
+      },
+      {
+        "code": "00951",
+        "name": "台新日本半導體",
+        "meta": "20.00 / -0.84%",
+        "stamp": "rising",
+        "sector": "日本半導體"
+      },
+      {
+        "code": "00954",
+        "name": "中信日本半導體",
+        "meta": "21.37 / -0.60%",
+        "stamp": "rising",
+        "sector": "日本半導體"
+      }
+    ],
+    "overlap": [
+      "00941",
+      "00876"
+    ],
+    "value_note": "紅框代表同時在升溫區。ETF 骨架集中台灣電子、台灣50、半導體、5G 與通訊；中國科技與日本半導體為升溫補充，不取代台灣 AI 主線。"
+  },
+  "stocks": {
+    "value": [
+      {
+        "code": "3665",
+        "name": "貿聯-KY",
+        "meta": "1870 / +0.81%",
+        "stamp": "value",
+        "sector": "連接線材"
+      },
+      {
+        "code": "2313",
+        "name": "華通",
+        "meta": "226 / +1.57%",
+        "stamp": "value",
+        "sector": "硬板"
+      },
+      {
+        "code": "6285",
+        "name": "啟碁",
+        "meta": "241.5 / +2.33%",
+        "stamp": "value",
+        "sector": "無線通訊設備"
+      },
+      {
+        "code": "2308",
+        "name": "台達電",
+        "meta": "1960 / +8.29%",
+        "stamp": "value",
+        "sector": "電源供應器"
+      },
+      {
+        "code": "7769",
+        "name": "鴻勁",
+        "meta": "6460 / -0.62%",
+        "stamp": "value",
+        "sector": "半導體檢測"
+      },
+      {
+        "code": "2360",
+        "name": "致茂",
+        "meta": "2125 / +4.42%",
+        "stamp": "value",
+        "sector": "半導體設備"
+      },
+      {
+        "code": "2324",
+        "name": "仁寶",
+        "meta": "34.4 / -1.15%",
+        "stamp": "value",
+        "sector": "電子設備"
+      },
+      {
+        "code": "5274",
+        "name": "信驊",
+        "meta": "15615 / +0.00%",
+        "stamp": "value",
+        "sector": "IC設計"
+      },
+      {
+        "code": "6515",
+        "name": "穎崴",
+        "meta": "8030 / -1.95%",
+        "stamp": "value",
+        "sector": "IC封裝測試設備"
+      },
+      {
+        "code": "6239",
+        "name": "力成",
+        "meta": "312 / -0.64%",
+        "stamp": "value",
+        "sector": "IC封裝測試"
+      },
+      {
+        "code": "2345",
+        "name": "智邦",
+        "meta": "2355 / -1.05%",
+        "stamp": "value",
+        "sector": "網路設備"
+      },
+      {
+        "code": "2454",
+        "name": "聯發科",
+        "meta": "3970 / +2.32%",
+        "stamp": "value",
+        "sector": "IC設計"
+      },
+      {
+        "code": "2455",
+        "name": "全新",
+        "meta": "346.5 / -0.43%",
+        "stamp": "value",
+        "sector": "砷化鎵代工"
+      },
+      {
+        "code": "3017",
+        "name": "奇鋐",
+        "meta": "2305 / +2.22%",
+        "stamp": "value",
+        "sector": "散熱模組"
+      },
+      {
+        "code": "2330",
+        "name": "台積電",
+        "meta": "2390 / +2.14%",
+        "stamp": "value",
+        "sector": "晶圓代工"
+      },
+      {
+        "code": "4958",
+        "name": "臻鼎-KY",
+        "meta": "592 / +2.07%",
+        "stamp": "value",
+        "sector": "軟板"
+      },
+      {
+        "code": "6274",
+        "name": "台燿",
+        "meta": "1550 / -1.90%",
+        "stamp": "value",
+        "sector": "銅箔基板"
+      },
+      {
+        "code": "2382",
+        "name": "廣達",
+        "meta": "365.5 / +0.97%",
+        "stamp": "value",
+        "sector": "伺服器組裝代工"
+      },
+      {
+        "code": "3034",
+        "name": "聯詠",
+        "meta": "526 / +3.34%",
+        "stamp": "value",
+        "sector": "驅動IC"
+      },
+      {
+        "code": "6415",
+        "name": "矽力*-KY",
+        "meta": "575 / +0.52%",
+        "stamp": "value",
+        "sector": "IC設計"
+      },
+      {
+        "code": "6223",
+        "name": "旺矽",
+        "meta": "6445 / -0.85%",
+        "stamp": "value",
+        "sector": "IC封裝測試設備"
+      },
+      {
+        "code": "2383",
+        "name": "台光電",
+        "meta": "5470 / +4.09%",
+        "stamp": "value",
+        "sector": "銅箔基板"
+      },
+      {
+        "code": "3037",
+        "name": "欣興",
+        "meta": "992 / +1.74%",
+        "stamp": "value",
+        "sector": "IC基板"
+      },
+      {
+        "code": "2379",
+        "name": "瑞昱",
+        "meta": "810 / +9.46%",
+        "stamp": "value",
+        "sector": "IC設計"
+      },
+      {
+        "code": "3711",
+        "name": "日月光投控",
+        "meta": "625 / -1.11%",
+        "stamp": "value",
+        "sector": "IC封裝測試"
+      },
+      {
+        "code": "3008",
+        "name": "大立光",
+        "meta": "4545 / -3.71%",
+        "stamp": "value",
+        "sector": "光學鏡片與鏡頭"
+      },
+      {
+        "code": "2327",
+        "name": "國巨*",
+        "meta": "1030 / +1.48%",
+        "stamp": "value",
+        "sector": "MLCC"
+      },
+      {
+        "code": "2449",
+        "name": "京元電子",
+        "meta": "309 / +0.32%",
+        "stamp": "value",
+        "sector": "IC測試"
+      },
+      {
+        "code": "2059",
+        "name": "川湖",
+        "meta": "7195 / +2.93%",
+        "stamp": "value",
+        "sector": "電子零組件"
+      },
+      {
+        "code": "2303",
+        "name": "聯電",
+        "meta": "164.5 / +0.30%",
+        "stamp": "value",
+        "sector": "晶圓代工"
+      },
+      {
+        "code": "3189",
+        "name": "景碩",
+        "meta": "826 / +3.64%",
+        "stamp": "value",
+        "sector": "IC基板"
+      }
+    ],
+    "rising": [
+      {
+        "code": "2483",
+        "name": "百容",
+        "meta": "56.9 / +2.15%",
+        "stamp": "rising",
+        "sector": "IC封裝測試設備"
+      },
+      {
+        "code": "5321",
+        "name": "美而快",
+        "meta": "69.8 / +9.92%",
+        "stamp": "rising",
+        "sector": "電子商務"
+      },
+      {
+        "code": "5328",
+        "name": "華容",
+        "meta": "70.4 / +0.28%",
+        "stamp": "rising",
+        "sector": "電容"
+      },
+      {
+        "code": "6226",
+        "name": "光鼎",
+        "meta": "20.05 / +9.86%",
+        "stamp": "rising",
+        "sector": "發光二極體"
+      },
+      {
+        "code": "6446",
+        "name": "藥華藥",
+        "meta": "1270 / +9.96%",
+        "stamp": "rising",
+        "sector": "製藥業"
+      },
+      {
+        "code": "4707",
+        "name": "磐亞",
+        "meta": "29.4 / +6.72%",
+        "stamp": "rising",
+        "sector": "化學工業"
+      },
+      {
+        "code": "5011",
+        "name": "久陽",
+        "meta": "27.1 / +5.45%",
+        "stamp": "rising",
+        "sector": "鋼鐵產品"
+      },
+      {
+        "code": "5489",
+        "name": "彩富",
+        "meta": "62.5 / +0.00%",
+        "stamp": "rising",
+        "sector": "安全監控系統"
+      },
+      {
+        "code": "5464",
+        "name": "霖宏",
+        "meta": "102 / +2.00%",
+        "stamp": "rising",
+        "sector": "硬板"
+      },
+      {
+        "code": "6834",
+        "name": "天二科技",
+        "meta": "117 / -3.31%",
+        "stamp": "rising",
+        "sector": "電阻"
+      },
+      {
+        "code": "8046",
+        "name": "南電",
+        "meta": "1095 / -2.67%",
+        "stamp": "rising",
+        "sector": "IC基板"
+      },
+      {
+        "code": "6259",
+        "name": "百徽",
+        "meta": "37.8 / -9.89%",
+        "stamp": "rising",
+        "sector": "電子零組件"
+      },
+      {
+        "code": "6213",
+        "name": "聯茂",
+        "meta": "346 / -0.14%",
+        "stamp": "rising",
+        "sector": "銅箔基板"
+      },
+      {
+        "code": "6691",
+        "name": "洋基工程",
+        "meta": "823 / +3.78%",
+        "stamp": "rising",
+        "sector": "無塵室工程"
+      },
+      {
+        "code": "2061",
+        "name": "風青",
+        "meta": "63.3 / +1.12%",
+        "stamp": "rising",
+        "sector": "電線電纜"
+      },
+      {
+        "code": "6672",
+        "name": "騰輝電子-KY",
+        "meta": "287 / -1.71%",
+        "stamp": "rising",
+        "sector": "銅箔基板"
+      },
+      {
+        "code": "6291",
+        "name": "沛亨",
+        "meta": "588 / -9.95%",
+        "stamp": "rising",
+        "sector": "IC設計"
+      },
+      {
+        "code": "2316",
+        "name": "楠梓電",
+        "meta": "223 / -3.04%",
+        "stamp": "rising",
+        "sector": "硬板"
+      },
+      {
+        "code": "5347",
+        "name": "世界",
+        "meta": "212 / +4.95%",
+        "stamp": "rising",
+        "sector": "晶圓代工"
+      },
+      {
+        "code": "4716",
+        "name": "大立",
+        "meta": "25 / +5.93%",
+        "stamp": "rising",
+        "sector": "電子化工品"
+      },
+      {
+        "code": "6584",
+        "name": "南俊國際",
+        "meta": "705 / -0.42%",
+        "stamp": "rising",
+        "sector": "電子零組件"
+      },
+      {
+        "code": "4551",
+        "name": "智伸科",
+        "meta": "220 / -2.22%",
+        "stamp": "rising",
+        "sector": "汽機車零組件"
+      },
+      {
+        "code": "6197",
+        "name": "佳必琪",
+        "meta": "368.5 / +1.24%",
+        "stamp": "rising",
+        "sector": "連接線材"
+      },
+      {
+        "code": "8261",
+        "name": "富鼎",
+        "meta": "243.5 / -0.20%",
+        "stamp": "rising",
+        "sector": "MOSFET"
+      },
+      {
+        "code": "3481",
+        "name": "群創",
+        "meta": "68.3 / +5.08%",
+        "stamp": "rising",
+        "sector": "TFT-LCD"
+      },
+      {
+        "code": "2305",
+        "name": "全友",
+        "meta": "36.9 / +5.13%",
+        "stamp": "rising",
+        "sector": "掃描器"
+      },
+      {
+        "code": "2493",
+        "name": "揚博",
+        "meta": "267 / -1.84%",
+        "stamp": "rising",
+        "sector": "印刷電路板設備"
+      },
+      {
+        "code": "5536",
+        "name": "聖暉*",
+        "meta": "1230 / -5.75%",
+        "stamp": "rising",
+        "sector": "機電工程"
+      },
+      {
+        "code": "2243",
+        "name": "宏旭-KY",
+        "meta": "52 / -1.89%",
+        "stamp": "rising",
+        "sector": "汽機車零組件"
+      },
+      {
+        "code": "6182",
+        "name": "合晶",
+        "meta": "119.5 / +0.00%",
+        "stamp": "rising",
+        "sector": "矽晶圓"
+      }
+    ],
+    "overlap": [],
+    "overlap_names": {}
+  },
+  "validation": {
+    "strengthened": [
+      "方舟水位升至 79.2%，確認市場健康度改善與風險預算回升。",
+      "台股加權 44,999.90，上漲 428.14 點；方舟截圖中期貨盤前約 +2.3%，多方氣氛強。",
+      "產業價值區集中台達電、台積電、聯發科、瑞昱、台光電、景碩、貿聯、智邦、奇鋐與 CCL / IC 基板鏈。"
+    ],
+    "pressure": [
+      "SOX 前一晚 -5.29%，半導體外部指標短線降溫，不能只看台股強勢。",
+      "外資台指期未平倉淨空 -76,627 口，仍是高檔波動來源。",
+      "水位已達 79.2% 高水位，策略應是主線續抱與換手確認，不是追價放大。"
+    ],
+    "long_term": [
+      "AI capex、伺服器電源散熱、網通、連接線與 PCB/CCL 仍是中長線主軸。",
+      "IC 設計、封測、測試設備與 IC 基板形成半導體內部輪動。",
+      "MLCC、電容、電阻、MOSFET 與電子零組件升溫，代表補漲範圍擴散。"
+    ]
+  },
+  "intelligence": {
+    "trump": [
+      {
+        "time": "24h",
+        "content": "美國半導體關稅與 Section 232 調查仍是估值上限；市場可先反映水位與台股強勢，但政策變數會讓開高追價的風險上升。<em>市場可能反應：台股核心供應鏈可留，新增部位等承接而非追新聞。</em>"
+      }
+    ],
+    "musk": "Tesla 最新收盤小漲，SpaceX / Starlink / xAI 題材仍支撐低軌衛星、資料中心、電源、散熱與高速傳輸想像；對台股的作用是延伸驗證太空衛星、網通與 AI 基建鏈，不把概念題材單獨當成買點。",
+    "policy": [
+      "<strong>Fed / 利率：</strong>VIX 回落顯示風險情緒穩定，但高估值科技股仍需要利率與財報同時支撐。",
+      "<strong>AI 供應鏈：</strong>台股今日更強的是供應鏈擴散，而非單一美股權值；以 CCL、IC 基板、電源散熱、封測與測試設備做交叉驗證。"
+    ]
+  },
+  "mag7": [
+    {
+      "name": "Apple",
+      "ticker": "AAPL",
+      "price": "283.78",
+      "change_pct": 3.14,
+      "change_abs": "+8.63",
+      "tier": "strong",
+      "tier_label": "STRONG",
+      "signal": "反彈轉強，但消費電子仍受政策與定價壓力牽制。"
+    },
+    {
+      "name": "Microsoft",
+      "ticker": "MSFT",
+      "price": "372.97",
+      "change_pct": 5.71,
+      "change_abs": "+20.14",
+      "tier": "strong",
+      "tier_label": "STRONG",
+      "signal": "大型雲端權值回穩，支撐 AI capex 敘事。"
+    },
+    {
+      "name": "Nvidia",
+      "ticker": "NVDA",
+      "price": "192.53",
+      "change_pct": -1.64,
+      "change_abs": "-3.21",
+      "tier": "weak",
+      "tier_label": "NEUTRAL",
+      "signal": "AI 核心股降溫，提醒台股半導體開高後需看承接。"
+    },
+    {
+      "name": "Amazon",
+      "ticker": "AMZN",
+      "price": "232.69",
+      "change_pct": 2.5,
+      "change_abs": "+5.68",
+      "tier": "strong",
+      "tier_label": "STRONG",
+      "signal": "雲端與電商權值轉強，有利資料中心延伸鏈。"
+    },
+    {
+      "name": "Alphabet",
+      "ticker": "GOOGL",
+      "price": "337.39",
+      "change_pct": -1.84,
+      "change_abs": "-6.32",
+      "tier": "weak",
+      "tier_label": "NEUTRAL",
+      "signal": "大型科技仍分化，不能把水位升高解讀成所有科技同步上攻。"
+    },
+    {
+      "name": "Meta",
+      "ticker": "META",
+      "price": "550.25",
+      "change_pct": 1.36,
+      "change_abs": "+7.38",
+      "tier": "weak",
+      "tier_label": "NEUTRAL",
+      "signal": "社群與 AI 應用端偏穩，屬輔助風險偏好。"
+    },
+    {
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "price": "379.71",
+      "change_pct": 1.22,
+      "change_abs": "+4.59",
+      "tier": "weak",
+      "tier_label": "NEUTRAL",
+      "signal": "小幅回升，搭配 SpaceX / Starlink 題材支撐低軌與電源鏈想像。"
+    }
+  ],
+  "analysis": {
+    "us_close": "前一晚美股分化：Dow -0.09%、S&P 500 -0.05%、NASDAQ -0.24%，SOX -5.29%，但 VIX 回落至 18.41。這代表恐慌沒有放大，可是半導體外部指標短線轉弱；台股今日強勢要用本地水位與產業擴散確認，不宜單靠美股追價。",
+    "tx_night": "方舟截圖顯示期貨約 +1,030 點、+2.32%，台股加權最新 44,999.90、+0.96%；多方氣氛明確。但外資台指期淨空 -76,627 口仍高，若開高後量縮換手，主線可續留；若急拉無承接，先做強勢調節。",
+    "axes": {
+      "thesis": "AI / 半導體 / CCL / IC 基板 / 伺服器電源散熱 / MLCC / 被動元件是今日主線。",
+      "policy": "半導體關稅、出口管制與 Fed 路徑仍限制高估值追價速度。",
+      "risk": "水位上升是正面訊號；真正風控在於等換手、控開高、汰弱留強。"
+    }
+  },
+  "verdict": {
+    "level": "中",
+    "level_en": "MID",
+    "reason": "市場水位與台股表現偏正面，系統性恐慌未升；但 SOX 回落與外資期貨淨空仍使高檔波動存在。"
+  },
+  "conclusion": "6/29 主線結論：<em>水位升至 79.2%，市場健康度改善；AI / 半導體 / CCL / IC 基板 / 電源散熱與電子零組件可留在場上，但開高第一段不追，等換手後再提高效率。</em>",
+  "appendix": {
+    "after_hours": "美股盤後重點在於分化而非全面轉弱：大型雲端權值仍有支撐，但 SOX 明顯回落。台股今天若由台積電、台達電、聯發科、瑞昱、台光電、景碩、貿聯、智邦與奇鋐形成承接，水位上升可被視為主線延續；若只剩題材急拉，則回到方舟紀律做漲多調節。",
+    "map_bullets": [
+      "SOX 回落但台股水位升：台積電、聯發科、瑞昱、聯詠、京元電、日月光、穎崴、旺矽、力成、景碩。",
+      "AI / Data center：台達電、奇鋐、貿聯、智邦、廣達、啟碁、川湖。",
+      "電子零組件補漲：國巨、華容、天二科技、佳必琪、富鼎、群創、全友、揚博。"
+    ],
+    "execution": "今天不是撤退盤，也不是滿倉追價盤。水位升高代表主線可留；操作上保留核心、漲多調節、開高等換手，回測守住再佈局。"
+  },
+  "xurl_signal_layer": {
+    "status": "unavailable",
+    "signals_count": 0,
+    "included_in_revision": false,
+    "note": "X search quota unavailable; reader-facing report uses public market/policy fallback without internal debug wording."
+  }
+}
