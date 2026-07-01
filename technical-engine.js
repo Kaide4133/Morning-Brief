@@ -836,6 +836,21 @@
     return d != null && d >= -pct && d <= 0;
   }
 
+  function stockCodeSortValue(code) {
+    const s = String(code || '').trim();
+    const m = s.match(/^(\d+)/);
+    return m ? Number(m[1]) : Number.POSITIVE_INFINITY;
+  }
+
+  function compareStockCodeAsc(a, b) {
+    const ac = a && a.item ? a.item.code : a && a.code;
+    const bc = b && b.item ? b.item.code : b && b.code;
+    const an = stockCodeSortValue(ac);
+    const bn = stockCodeSortValue(bc);
+    if (an !== bn) return an - bn;
+    return String(ac || '').localeCompare(String(bc || ''), 'zh-Hant', { numeric: true });
+  }
+
   function makeScanItem(norm, analysis, reason, extra) {
     const item = {
       code: norm.code,
@@ -1182,18 +1197,9 @@
       });
     });
 
-    buckets.bullishTrend.sort((a, b) => b.sortKey - a.sortKey);
-    buckets.nearBreakout.sort((a, b) => {
-      const ta = a.sortKey.tier != null ? a.sortKey.tier : 0;
-      const tb = b.sortKey.tier != null ? b.sortKey.tier : 0;
-      if (ta !== tb) return ta - tb;
-      return a.sortKey.dist - b.sortKey.dist;
+    SCANNER_BUCKETS.forEach(({ key }) => {
+      buckets[key].sort(compareStockCodeAsc);
     });
-    buckets.nearSupport.sort((a, b) => a.sortKey - b.sortKey);
-    buckets.healthyVolume.sort((a, b) => b.sortKey - a.sortKey);
-    buckets.extendedHot.sort((a, b) => b.sortKey - a.sortKey);
-    buckets.bollRisk.sort((a, b) => a.sortKey - b.sortKey);
-    buckets.highRiskExtension.sort((a, b) => b.sortKey - a.sortKey);
 
     const trimmed = {};
     SCANNER_BUCKETS.forEach(({ key }) => {
