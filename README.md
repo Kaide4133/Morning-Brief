@@ -116,7 +116,7 @@ python tools\push_github.py --init -m "2026/05/30 morning brief"
 
 ## 封面 8 情境
 
-合圖：`docs/assets/covers/market-scenarios-8.png`  
+合圖：`docs/assets/covers/ChatGPT Image 2026年7月2日 下午07_51_15.png`
 對照：`docs/assets/covers/scenario-map.json`
 
 在 JSON 設 `scenario_id`: `"01"`–`"08"`，模板自動裁切封面。

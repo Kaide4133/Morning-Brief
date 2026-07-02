@@ -184,7 +184,7 @@ def enrich_issue(data: dict) -> dict:
         "slug": sc.get("slug", ""),
         "subtitle": sc["subtitle"],
         "position": sc["position"],
-        "sprite": scenario_map.get("sprite", "market-scenarios-8.png"),
+        "sprite": scenario_map.get("sprite", "ChatGPT Image 2026年7月2日 下午07_51_15.png"),
         "reason": effective.get("reason") or data.get("scenario_reason", ""),
     }
     action_guidance = build_action_guidance(data, effective)
