@@ -20,6 +20,29 @@
     "change": 3.3,
     "direction": "rising"
   },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "increase_exposure_allowed",
+    "risk_posture": "selective",
+    "water_policy": {
+      "direction": "rising",
+      "change": 3.3,
+      "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
+    },
+    "scenario_context": {
+      "id": "04",
+      "label": "輪動換手",
+      "confidence": 0.68
+    },
+    "policy_focus": [
+      "台積電、聯發科、台達電、欣興、奇鋐、台光電、川湖、信驊等核心先看開盤後是否有量價承接；ETF 與槓桿 ETF 價值區同步回落時，不加速追價，優先保留護城河、汰除弱承接與非核心。",
+      "水位上升不是風險解除；當水位上升遇到費半急跌與 VIX 快速升溫，紀律是把新增風險預算留給換手後的核心，不給高波動枝節。",
+      "水位升至 78.0% 代表系統沒有收回風險預算；但美股費半 -3.57%、NASDAQ -1.98%、VIX +11.83%，加上台股價值區多數回落，盤勢從強勢延伸轉為輪動換手壓力測試。",
+      "<strong>AI 權值：</strong>NVIDIA -3.73%、費半 -3.57%，AI infrastructure 長線不壞，但半導體鏈短線需要承接確認。"
+    ],
+    "systemic_risk": "中偏高",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
   "action_guidance": {
     "risk_bias": "selective",
     "allow_add": false,
@@ -66,6 +89,6 @@
   },
   "source": {
     "issue_file": "data/issues/20260611.json",
-    "generated_at": "2026-07-02T19:55:34+08:00"
+    "generated_at": "2026-07-02T20:30:24+08:00"
   }
 }

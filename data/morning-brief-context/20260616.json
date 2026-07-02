@@ -20,6 +20,29 @@
     "change": -0.2,
     "direction": "falling"
   },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "cautious_review",
+    "risk_posture": "balanced_cautious",
+    "water_policy": {
+      "direction": "falling",
+      "change": -0.2,
+      "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
+    },
+    "scenario_context": {
+      "id": "03",
+      "label": "高位控速",
+      "confidence": 0.76
+    },
+    "policy_focus": [
+      "先看台積電、聯發科、台光電、台燿、欣興、景碩、國巨、大立光與 0050/0052/00631L 能否守住開盤後承接；ETF 端 00830 溢價 +5.22%、00911 溢價 +5.01%，追價前要等折溢價與盤中換手降溫。",
+      "73.0% 仍是高水位，但較前次微降；新增風險預算只給核心主線與回測不破，不給折溢價過高、單日急拉後失去風報比的位置。",
+      "6/16 清單呈現科技主線擴散：台積電、聯發科、聯電、台光電、台燿、景碩、欣興、國巨、大立光、矽力*-KY 明顯走強；但信驊、力成、貿聯、廣達、旺矽與部分設備股轉弱，表示盤面不是無差別全面多頭。",
+      "半導體與 AI 權值在最新可得美股收盤仍維持風險修復，SOX 續強、VIX 續降，對台股科技供應鏈偏正面。"
+    ],
+    "systemic_risk": "中",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
   "action_guidance": {
     "risk_bias": "balanced_cautious",
     "allow_add": true,
@@ -72,6 +95,6 @@
   },
   "source": {
     "issue_file": "data/issues/20260616.json",
-    "generated_at": "2026-07-02T19:55:34+08:00"
+    "generated_at": "2026-07-02T20:30:24+08:00"
   }
 }

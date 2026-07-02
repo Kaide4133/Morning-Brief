@@ -20,6 +20,29 @@
     "change": 0.0,
     "direction": "stable"
   },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "hold_selective",
+    "risk_posture": "balanced_cautious",
+    "water_policy": {
+      "direction": "stable",
+      "change": 0.0,
+      "interpretation": "水位持平，維持選擇性操作；等待個股訊號確認。"
+    },
+    "scenario_context": {
+      "id": "03",
+      "label": "高位控速",
+      "confidence": 0.76
+    },
+    "policy_focus": [
+      "聯發科、國巨、川湖、大立光、全新、瑞昱、台光電、欣興等強勢標的不追第一段；台積電、聯電、日月光、京元電、PCB/CCL 與封測設備看承接。水位持平在高水位時，新增部位只給換手後核心，不給過熱枝節。",
+      "水位維持 74.7%，代表風險預算沒有收縮；但美股費半降溫與 VIX 回升要求控追價，若開高不接，優先修剪漲多與非核心。",
+      "美股權值與費半轉弱，VIX 回升；台股價值區仍出現多檔強勢股，代表不是全面轉空，而是高位控速與主線輪動並存。水位維持 74.7%，風險預算仍可用，但不能加速追高。",
+      "<strong>AI 權值：</strong>NVIDIA 近持平偏弱、費半回落，AI infrastructure 長線不壞，但短線追價控速。"
+    ],
+    "systemic_risk": "中",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
   "action_guidance": {
     "risk_bias": "balanced_cautious",
     "allow_add": true,
@@ -72,6 +95,6 @@
   },
   "source": {
     "issue_file": "data/issues/20260610.json",
-    "generated_at": "2026-07-02T19:55:34+08:00"
+    "generated_at": "2026-07-02T20:30:24+08:00"
   }
 }

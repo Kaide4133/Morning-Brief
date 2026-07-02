@@ -20,6 +20,29 @@
     "change": -2.4,
     "direction": "falling"
   },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "cautious_review",
+    "risk_posture": "defensive",
+    "water_policy": {
+      "direction": "falling",
+      "change": -2.4,
+      "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
+    },
+    "scenario_context": {
+      "id": "05",
+      "label": "有序回檔",
+      "confidence": 0.78
+    },
+    "policy_focus": [
+      "核心主線續抱；新增資金只做分批與回測承接。最熱位階不是否定強者，而是先保留子彈，等拉回、量縮或換手後再加。",
+      "若台股開高後量價無法延續，或外資期貨淨空擴大，降低短線追價與槓桿；若半導體主線回測守住，再用股數補核心。",
+      "費半 +6.42%、Nasdaq +1.91%，台股清單中聯電、瑞昱、聯詠、景碩、日月光、欣興等同步強勢；盤面主線很清楚，但水位方向下修，代表執行節奏不能失控。",
+      "<strong>Fed：</strong>市場仍消化前次利率訊息與科技股估值；在水位下降時，降息預期不能取代風控節奏。"
+    ],
+    "systemic_risk": "中",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
   "action_guidance": {
     "risk_bias": "defensive",
     "allow_add": false,
@@ -75,6 +98,6 @@
   },
   "source": {
     "issue_file": "data/issues/20260622.json",
-    "generated_at": "2026-07-02T19:55:34+08:00"
+    "generated_at": "2026-07-02T20:30:25+08:00"
   }
 }

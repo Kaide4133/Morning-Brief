@@ -20,6 +20,29 @@
     "change": -0.5,
     "direction": "falling"
   },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "cautious_review",
+    "risk_posture": "balanced_cautious",
+    "water_policy": {
+      "direction": "falling",
+      "change": -0.5,
+      "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
+    },
+    "scenario_context": {
+      "id": "03",
+      "label": "高位控速",
+      "confidence": 0.76
+    },
+    "policy_focus": [
+      "水位 75.6% 不是撤退水位，但斜率轉弱；核心強勢股可續留觀察，已大漲者控速，跌破短線結構或弱於同族群者降低效率拖累。新增觀察以回測守住、量縮止跌與主線再確認為優先。",
+      "SOX 單日大跌與外資台指期淨空擴至 -84,168 口，代表高檔需要尊重換手；若台積電、IC 基板、CCL、光學與 ETF 繼續弱，盤面容易從分化轉入高位控速。",
+      "SOX -6.27%、Nasdaq -0.66%、S&P 500 -0.22%，美股科技端短線降溫；台股前一日指數仍強，但 7/2 使用者提供清單顯示科技 ETF 與多數大型核心股回檔，強度集中在旺矽、穎崴、信驊、智邦、國巨、合晶與 PCB 設備族群。",
+      "SOX 13,353.28、單日 -6.27%，是今日最重要的外部壓力。它不代表 AI 主線結束，但代表半導體高位股需要用換手與支撐確認來重新定價。"
+    ],
+    "systemic_risk": "中",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
   "action_guidance": {
     "risk_bias": "balanced_cautious",
     "allow_add": true,
@@ -72,6 +95,6 @@
   },
   "source": {
     "issue_file": "data/issues/20260702.json",
-    "generated_at": "2026-07-02T19:55:34+08:00"
+    "generated_at": "2026-07-02T20:30:25+08:00"
   }
 }

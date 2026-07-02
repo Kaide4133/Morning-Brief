@@ -20,6 +20,29 @@
     "change": -1.0,
     "direction": "falling"
   },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "cautious_review",
+    "risk_posture": "risk_off",
+    "water_policy": {
+      "direction": "falling",
+      "change": -1.0,
+      "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
+    },
+    "scenario_context": {
+      "id": "06",
+      "label": "風險收縮",
+      "confidence": 0.84
+    },
+    "policy_focus": [
+      "先看台積電 2330、聯發科 2454、台光電 2383、台燿 6274、欣興 3037、景碩 3189、華通 2313、00830、00911 是否能從急跌後回到承接；若 00830 仍有 +2.03% 溢價，半導體 ETF 不追高，只等折溢價收斂。",
+      "水位 72.0% 仍偏高但已下修 1.0 個百分點；今天風險不是主線消失，而是半導體外部壓力下，弱轉強與強轉弱的速度會很快，新增部位只給支撐不破。",
+      "使用者清單顯示分化明顯：景碩 +8.26%、大立光 +6.17%、全新 +4.44%、華通 +4.42% 仍有相對強勢；但台積電 -1.67%、聯發科 -1.97%、台光電 -3.61%、致茂 -4.34%、矽力*-KY -4.93%、穎崴 -3.97% 同步壓抑半導體追價情緒。",
+      "半導體與 AI 權值短線轉為換手，SOX 急跌使台股半導體 ETF 溢價與權值股承接成為今日重點。"
+    ],
+    "systemic_risk": "中偏高",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
   "action_guidance": {
     "risk_bias": "risk_off",
     "allow_add": false,
@@ -66,6 +89,6 @@
   },
   "source": {
     "issue_file": "data/issues/20260617.json",
-    "generated_at": "2026-07-02T19:55:34+08:00"
+    "generated_at": "2026-07-02T20:30:24+08:00"
   }
 }

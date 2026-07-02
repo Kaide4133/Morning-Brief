@@ -20,6 +20,29 @@
     "change": 8.4,
     "direction": "rising"
   },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "increase_exposure_allowed",
+    "risk_posture": "risk_off",
+    "water_policy": {
+      "direction": "rising",
+      "change": 8.4,
+      "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
+    },
+    "scenario_context": {
+      "id": "06",
+      "label": "風險收縮",
+      "confidence": 0.84
+    },
+    "policy_focus": [
+      "開盤/急跌第一段不追殺核心，也不追第一段反彈；先看台積電、AI 伺服器、PCB/CCL、散熱、封測設備能否帶量止跌。",
+      "水位 72.7% 上升，但 VIX、費半與台股跌幅同步偏弱；提高可用水位不等於放大槓桿，先汰弱留強、正打負，新增部位只給換手後的核心主線。",
+      "台股電子價值區大面積急跌，川湖等少數強勢股逆勢；盤面不是全面多頭，而是高檔劇烈分化。",
+      "<strong>Fed / 利率背景：</strong>觀察窗內未取得 Fed 主席新的明確轉向訊號；在 VIX +39.68% 與科技股下跌下，估值擴張先降權。<em>這代表什麼：今天不要把利率想像成立即救援，先用風控處理高位階。</em>"
+    ],
+    "systemic_risk": "高",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
   "action_guidance": {
     "risk_bias": "risk_off",
     "allow_add": false,
@@ -66,6 +89,6 @@
   },
   "source": {
     "issue_file": "data/issues/20260608.json",
-    "generated_at": "2026-07-02T19:55:34+08:00"
+    "generated_at": "2026-07-02T20:30:24+08:00"
   }
 }

@@ -20,6 +20,29 @@
     "change": 3.9,
     "direction": "rising"
   },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "increase_exposure_allowed",
+    "risk_posture": "balanced_cautious",
+    "water_policy": {
+      "direction": "rising",
+      "change": 3.9,
+      "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
+    },
+    "scenario_context": {
+      "id": "03",
+      "label": "高位控速",
+      "confidence": 0.76
+    },
+    "policy_focus": [
+      "核心主線續留；台達電、瑞昱、台光電、景碩、聯發科等強勢股不追第一段，等量縮回測與承接。",
+      "79.2% 高水位偏正面，但高水位不是高風險；真正風控是不要把上升水位解讀成情緒加速。",
+      "水位上升、台股轉強；但 SOX 回落與外資空單提醒高檔仍要換手確認。",
+      "<strong>Fed / 利率：</strong>VIX 回落顯示風險情緒穩定，但高估值科技股仍需要利率與財報同時支撐。"
+    ],
+    "systemic_risk": "中",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
   "action_guidance": {
     "risk_bias": "balanced_cautious",
     "allow_add": true,
@@ -72,6 +95,6 @@
   },
   "source": {
     "issue_file": "data/issues/20260629.json",
-    "generated_at": "2026-07-02T19:55:34+08:00"
+    "generated_at": "2026-07-02T20:30:25+08:00"
   }
 }

@@ -523,6 +523,69 @@ def build_action_guidance(data: dict, scenario: dict) -> dict:
     base.setdefault("trim", {})["priority"] = list(DEFAULT_TRIM_PRIORITY)
     return base
 
+
+def build_leader_policy(data: dict, water: dict, action_guidance: dict, scenario_out: dict) -> dict:
+    """Build the short-term policy block consumed by Moorlock.
+
+    This is the user's/editor's near-term operating posture: mainly water
+    direction/change plus tactical policy notes. It is not a ticker-level signal.
+    """
+    direction = water.get("direction") or "stable"
+    change = water.get("change")
+    risk_bias = action_guidance.get("risk_bias", "neutral") if isinstance(action_guidance, dict) else "neutral"
+    if direction == "rising":
+        short_term_bias = "increase_exposure_allowed"
+        posture = "constructive_selective"
+        default_policy = "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
+    elif direction == "falling":
+        short_term_bias = "cautious_review"
+        posture = "balanced_cautious"
+        default_policy = "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
+    else:
+        short_term_bias = "hold_selective"
+        posture = "neutral_selective"
+        default_policy = "水位持平，維持選擇性操作；等待個股訊號確認。"
+
+    strategy = data.get("strategy") or {}
+    intel = data.get("intelligence") or {}
+    market = data.get("market") or {}
+    notes = []
+    for key in ("playbook", "risk", "tape"):
+        val = strategy.get(key)
+        if val:
+            notes.append(str(val))
+    for key in ("policy", "trump", "musk"):
+        val = intel.get(key) if isinstance(intel, dict) else None
+        if isinstance(val, list):
+            notes.extend(str(x) for x in val[:2])
+        elif val:
+            notes.append(str(val))
+    # Keep the policy block compact for machine consumers and UI badges.
+    compact_notes = []
+    for note in notes:
+        t = " ".join(note.split())
+        if t and t not in compact_notes:
+            compact_notes.append(t[:220])
+
+    return {
+        "source": "morning_brief_editorial_policy",
+        "short_term_bias": short_term_bias,
+        "risk_posture": posture if risk_bias == "neutral" else risk_bias,
+        "water_policy": {
+            "direction": direction,
+            "change": change,
+            "interpretation": default_policy,
+        },
+        "scenario_context": {
+            "id": scenario_out.get("id"),
+            "label": scenario_out.get("label"),
+            "confidence": scenario_out.get("confidence"),
+        },
+        "policy_focus": compact_notes[:4] or [default_policy],
+        "systemic_risk": market.get("systemic_risk"),
+        "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates.",
+    }
+
 def build_morning_context(
     data: dict,
     scenario: dict,
@@ -554,6 +617,13 @@ def build_morning_context(
     enriched_guidance = dict(action_guidance)
     enriched_guidance["confidence"] = scenario_out.get("confidence", 1.0)
     enriched_guidance["source"] = "morning_brief_classifier"
+    water_out = {
+        "level": wl,
+        "previous": prev,
+        "change": delta,
+        "direction": _water_direction(delta),
+    }
+    leader_policy = build_leader_policy(data, water_out, enriched_guidance, scenario_out)
 
     return {
         "schema_version": "morning_brief_context.v1",
@@ -564,12 +634,8 @@ def build_morning_context(
         "stale": False,
         "issue_no": data.get("issue_no"),
         "scenario": scenario_out,
-        "water": {
-            "level": wl,
-            "previous": prev,
-            "change": delta,
-            "direction": _water_direction(delta),
-        },
+        "water": water_out,
+        "leader_policy": leader_policy,
         "action_guidance": enriched_guidance,
         "editorial": {
             "state_label": scenario_out["label"],

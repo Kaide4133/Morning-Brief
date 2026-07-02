@@ -20,6 +20,29 @@
     "change": 0.9,
     "direction": "rising"
   },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "increase_exposure_allowed",
+    "risk_posture": "constructive_but_selective",
+    "water_policy": {
+      "direction": "rising",
+      "change": 0.9,
+      "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
+    },
+    "scenario_context": {
+      "id": "02",
+      "label": "主線催化",
+      "confidence": 0.74
+    },
+    "policy_focus": [
+      "核心強勢股續留觀察；新增資金只給回測承接與訊號驗證後的強者。對跌破節奏、連續轉弱或高負債又無承接的標的，採降低效率拖累的語言處理。",
+      "水位上升 0.9 個百分點代表可維持曝險，但 VIX 上升、外資期貨淨空擴大與台股加權回落，使今天不適合把所有強勢解讀成加速訊號。",
+      "使用者清單顯示聯電 +6.56%、聯發科 +4.14%、旺矽 +4.98%、凱鈺 +10.00%、富鼎 +9.94% 偏強；但台燿 -7.37%、力成 -7.10%、台光電 -6.44%、景碩 -6.28%、智邦 -5.20%、華通 -5.20% 同步拉回，盤面不是齊漲，而是主線內部分化。",
+      "<strong>Fed / 利率：</strong>大型科技估值仍受利率預期與波動率影響；水位雖回升，但 VIX 同步上升時，執行上仍以分批與確認為先。"
+    ],
+    "systemic_risk": "中偏高",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
   "action_guidance": {
     "risk_bias": "constructive_but_selective",
     "allow_add": true,
@@ -70,6 +93,6 @@
   },
   "source": {
     "issue_file": "data/issues/20260623.json",
-    "generated_at": "2026-07-02T19:55:34+08:00"
+    "generated_at": "2026-07-02T20:30:25+08:00"
   }
 }

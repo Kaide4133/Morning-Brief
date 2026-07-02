@@ -20,6 +20,29 @@
     "change": -1.6,
     "direction": "falling"
   },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "cautious_review",
+    "risk_posture": "defensive",
+    "water_policy": {
+      "direction": "falling",
+      "change": -1.6,
+      "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
+    },
+    "scenario_context": {
+      "id": "05",
+      "label": "有序回檔",
+      "confidence": 0.78
+    },
+    "policy_focus": [
+      "台積電、台達電、智邦、貿聯、穎崴、旺矽、鴻勁、致茂、川湖等主線可續留；漲停或接近漲停的設備/被動元件股等換手，不做開高追價。",
+      "水位 76.1% 仍代表市場健康，但較前一交易日下降 1.6 個百分點，不是加速追價訊號；外資期貨空單擴大時，新增部位要等量縮回測、支撐守住與主線續航確認。",
+      "SOX +3.92%、Nasdaq +1.52%、台股加權 +1.60%，外部科技風險偏好修復；台股內部則呈現核心 AI 鏈上攻與部分傳產、面板、通路回落並存。",
+      "<strong>Fed / 利率：</strong>VIX 回落至 16.45，代表恐慌降溫；但低波動也容易放大追價衝動。"
+    ],
+    "systemic_risk": "中低",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
   "action_guidance": {
     "risk_bias": "defensive",
     "allow_add": false,
@@ -75,6 +98,6 @@
   },
   "source": {
     "issue_file": "data/issues/20260701.json",
-    "generated_at": "2026-07-02T19:55:34+08:00"
+    "generated_at": "2026-07-02T20:30:25+08:00"
   }
 }

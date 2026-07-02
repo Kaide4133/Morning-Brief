@@ -20,6 +20,29 @@
     "change": 0.7,
     "direction": "rising"
   },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "increase_exposure_allowed",
+    "risk_posture": "event_wait",
+    "water_policy": {
+      "direction": "rising",
+      "change": 0.7,
+      "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
+    },
+    "scenario_context": {
+      "id": "08",
+      "label": "事件觀望",
+      "confidence": 0.72
+    },
+    "policy_focus": [
+      "水位小幅上升但非全面進攻訊號；核心 AI 主線續抱，短線不追價，優先防禦、汰弱留強，等待權值與高價股完成換手。外資空單壓境，防範高檔劇烈波動。",
+      "若台指跌破前低或外資空單續擴，降低槓桿與追價部位；若費半強勢延續且台股高價股止跌，再逐步提高攻擊。",
+      "<strong>NVIDIA Physical AI：</strong>NVIDIA 發布 Cosmos 3 / Physical AI 相關訊號（<a href=\"https://x.com/nvidia/status/2062677731763257587\">@nvidia</a>），並導向 Hugging Face / GitHub 生態（<a href=\"https://x.com/nvidia/status/206267785",
+      "<strong>AMD Edge AI：</strong>AMD 同步釋出 Radeon RX 9070 GRE 與 Edge AI broadcast 訊號（<a href=\"https://x.com/AMD/status/2062663460157018541\">@AMD</a>）。<em>市場可能反應：AI 不只集中在雲端，邊緣運算與終端硬體敘事仍在擴散。</em>"
+    ],
+    "systemic_risk": "中",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
   "action_guidance": {
     "risk_bias": "event_wait",
     "allow_add": false,
@@ -65,6 +88,6 @@
   },
   "source": {
     "issue_file": "data/issues/20260605.json",
-    "generated_at": "2026-07-02T19:55:34+08:00"
+    "generated_at": "2026-07-02T20:30:24+08:00"
   }
 }

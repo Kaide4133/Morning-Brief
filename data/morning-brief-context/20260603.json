@@ -20,6 +20,29 @@
     "change": -3.1,
     "direction": "falling"
   },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "cautious_review",
+    "risk_posture": "risk_off",
+    "water_policy": {
+      "direction": "falling",
+      "change": -3.1,
+      "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
+    },
+    "scenario_context": {
+      "id": "06",
+      "label": "風險收縮",
+      "confidence": 0.84
+    },
+    "policy_focus": [
+      "保留主線、降低追價；IC 測試、封裝設備、CCL、伺服器、散熱與電源鏈續抱強勢，新增部位等換手。外資空單壓境，防範高檔劇烈波動。",
+      "水位 62.8%，較前次下降 3.1 個百分點；策略切回防禦、不追價、汰弱留強，漲多與重疊但轉弱個股先看調節。",
+      "SOX +5.87%、VIX -1.74%，美股半導體訊號仍明確；台股端價值區與升溫區同時集中在 AI 供應鏈，但部分 MLCC、封測與高位個股已出現分化。",
+      "<strong>NVIDIA 與 Microsoft：</strong>NVIDIA 宣布與 Microsoft 合作，在 Windows 上提供 OpenShell runtime for agents，包含治理、政策執行與 local-to-cloud query routing。<em>市場可能反應：AI PC、edge inference、GPU / networking、資料中心與台股伺服器供應鏈得到第一手訊號驗證。</em>"
+    ],
+    "systemic_risk": "中",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
   "action_guidance": {
     "risk_bias": "risk_off",
     "allow_add": false,
@@ -66,6 +89,6 @@
   },
   "source": {
     "issue_file": "data/issues/20260603.json",
-    "generated_at": "2026-07-02T19:55:34+08:00"
+    "generated_at": "2026-07-02T20:30:24+08:00"
   }
 }

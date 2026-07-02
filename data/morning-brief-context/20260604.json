@@ -20,6 +20,29 @@
     "change": 0.8,
     "direction": "rising"
   },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "increase_exposure_allowed",
+    "risk_posture": "constructive_but_selective",
+    "water_policy": {
+      "direction": "rising",
+      "change": 0.8,
+      "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
+    },
+    "scenario_context": {
+      "id": "02",
+      "label": "主線催化",
+      "confidence": 0.74
+    },
+    "policy_focus": [
+      "水位回升到 63.6%，主線可留；但即時股價顯示 3665、2330、2382、3017 等強勢股有不同程度回落，新增部位只等換手，不追第一段急拉。",
+      "外資空單壓境，防範高檔劇烈波動；水位上升不等於解除風控。",
+      "SOX +1.39%、VIX +1.84%；NVIDIA agentic AI、xAI/Grok 與 Fed Beige Book/Bowman 訊號同日出現。台股即時股價分化，外資空單仍在高位。",
+      "<strong>NVIDIA / Microsoft：</strong>NVIDIA 發布 Jensen Huang 與 Satya Nadella 談 agentic AI era，從 Windows devices 到 AI factories at scale（<a href=\"https://x.com/nvidia/status/2062228974273716457\">@nvidia</a>）。<em>市場可能反應：AI P"
+    ],
+    "systemic_risk": "中",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
   "action_guidance": {
     "risk_bias": "constructive_but_selective",
     "allow_add": true,
@@ -70,6 +93,6 @@
   },
   "source": {
     "issue_file": "data/issues/20260604.json",
-    "generated_at": "2026-07-02T19:55:34+08:00"
+    "generated_at": "2026-07-02T20:30:24+08:00"
   }
 }

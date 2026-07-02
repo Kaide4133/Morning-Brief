@@ -20,6 +20,29 @@
     "change": -1.5,
     "direction": "falling"
   },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "cautious_review",
+    "risk_posture": "defensive",
+    "water_policy": {
+      "direction": "falling",
+      "change": -1.5,
+      "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
+    },
+    "scenario_context": {
+      "id": "05",
+      "label": "有序回檔",
+      "confidence": 0.78
+    },
+    "policy_focus": [
+      "核心主線續留；台積電、台達電、聯發科、智邦、奇鋐、台燿、臻鼎、京元電、日月光、國巨等強勢鏈條不追第一段，等量縮換手或回測守住。",
+      "77.7% 仍代表市場健康，但水位較前次下降 1.5 點，提醒不要把強彈解讀成無風險加速。",
+      "水位高檔小降，但台股、SOX、VIX 同步偏多；盤面不是轉弱，而是強勢後的速度管理。",
+      "<strong>Fed / 利率：</strong>VIX 續降顯示風險情緒改善，但高估值科技股仍需要利率與財報同時支撐。"
+    ],
+    "systemic_risk": "中",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
   "action_guidance": {
     "risk_bias": "defensive",
     "allow_add": false,
@@ -75,6 +98,6 @@
   },
   "source": {
     "issue_file": "data/issues/20260630.json",
-    "generated_at": "2026-07-02T19:55:34+08:00"
+    "generated_at": "2026-07-02T20:30:25+08:00"
   }
 }

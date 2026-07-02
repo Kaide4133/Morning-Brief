@@ -20,6 +20,29 @@
     "change": 4.3,
     "direction": "rising"
   },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "increase_exposure_allowed",
+    "risk_posture": "event_wait",
+    "water_policy": {
+      "direction": "rising",
+      "change": 4.3,
+      "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
+    },
+    "scenario_context": {
+      "id": "08",
+      "label": "事件觀望",
+      "confidence": 0.72
+    },
+    "policy_focus": [
+      "費半 SOX +3.59% 給出 AI 記憶體主線訊號，核心持倉（台積電、日月光、欣興、智邦）可續持；聯發科 -9.51% 重挫，驅動 IC 鏈短線偏弱，暫緩加倉。台股整體重跌，季底前觀望為主，等待外資空單回補訊號。",
+      "Apple 漲價 15%–20% 是本日最重要政策／供應鏈訊號：代表關稅與成本壓力開始向終端消費者轉嫁，短線壓縮消費科技估值。",
+      "Micron 財報超預期與 SOX 強勢形成對照：資金不是全面撤出科技，而是在消費科技與 AI 基礎設施之間重新分配。",
+      "{'time': '觀察窗｜6/25–6/26', 'content': '本日未見足以改變盤勢的川普 X 直接訊號；市場主因仍集中在 Apple 漲價、Micron 財報與季底再平衡。'}"
+    ],
+    "systemic_risk": "中偏高",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
   "action_guidance": {
     "risk_bias": "event_wait",
     "allow_add": false,
@@ -65,6 +88,6 @@
   },
   "source": {
     "issue_file": "data/issues/20260626.json",
-    "generated_at": "2026-07-02T19:55:34+08:00"
+    "generated_at": "2026-07-02T20:30:25+08:00"
   }
 }

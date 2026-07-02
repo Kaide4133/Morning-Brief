@@ -20,6 +20,29 @@
     "change": 1.4,
     "direction": "rising"
   },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "increase_exposure_allowed",
+    "risk_posture": "constructive_but_selective",
+    "water_policy": {
+      "direction": "rising",
+      "change": 1.4,
+      "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
+    },
+    "scenario_context": {
+      "id": "02",
+      "label": "主線催化",
+      "confidence": 0.74
+    },
+    "policy_focus": [
+      "權值回檔調節、被動元件續抱；不追漲停與第一段急拉，等回測量縮再佈局 AI／半導體權值。",
+      "水位 67.7%，較前次 66.3% 上升 1.4 個百分點；升溫區只做有量的續強。",
+      "加權 ▼620.36、期貨 ▼952；指數回檔但被動元件升溫區強勢，屬回檔中的結構分化。",
+      "<strong>AMD／Lisa Su：</strong>宣佈在台投資 100 億美元深耕先進封裝；Ryzen AI「Agent Computer」顯示與 NVIDIA 在 Agentic AI 市場的全面開戰。"
+    ],
+    "systemic_risk": "中",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
   "action_guidance": {
     "risk_bias": "constructive_but_selective",
     "allow_add": true,
@@ -70,6 +93,6 @@
   },
   "source": {
     "issue_file": "data/issues/20260529.json",
-    "generated_at": "2026-07-02T19:55:34+08:00"
+    "generated_at": "2026-07-02T20:30:24+08:00"
   }
 }

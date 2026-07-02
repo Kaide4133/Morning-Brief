@@ -20,6 +20,29 @@
     "change": 0.9,
     "direction": "rising"
   },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "increase_exposure_allowed",
+    "risk_posture": "event_wait",
+    "water_policy": {
+      "direction": "rising",
+      "change": 0.9,
+      "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
+    },
+    "scenario_context": {
+      "id": "08",
+      "label": "事件觀望",
+      "confidence": 0.72
+    },
+    "policy_focus": [
+      "核心 AI／半導體主線續留，今日看台積電、矽力、聯電、封測鏈是否有開盤承接量；新資金等確認，不追第一根；Micron 財報利多映射：HBM/HPC 相關供應鏈（日月光、力成、鴻勁、致茂）可視為追蹤標的。",
+      "外資台指期淨空 -83,605 口仍在歷史相對高位；台股昨跌 -2.24% 後需量能確認才能判斷 Micron 利多被充分消化，不可因財報大好就忽視籌碼結構。",
+      "台積電、日月光、AI 伺服器鏈昨跌後，今日開盤看是否有外資買盤與量能承接；Micron 財報正訊號可驅動 IC 設計、封測、記憶體相關個股補漲。",
+      "<strong>Fed / 利率：</strong>Warsh 主席 6/17 首次 FOMC 宣布維持利率 3.50-3.75% 不變（第四次連續 hold），並啟動全面政策檢討，點陣圖暗示 2026 年可能升息一次；前瞻指引刻意保留模糊性。Micron 財報超強顯示 AI 需求不受利率壓制，但高利率仍是科技估值上方阻力。"
+    ],
+    "systemic_risk": "中偏高",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
   "action_guidance": {
     "risk_bias": "event_wait",
     "allow_add": false,
@@ -65,6 +88,6 @@
   },
   "source": {
     "issue_file": "data/issues/20260625.json",
-    "generated_at": "2026-07-02T19:55:34+08:00"
+    "generated_at": "2026-07-02T20:30:25+08:00"
   }
 }

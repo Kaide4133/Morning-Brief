@@ -20,6 +20,29 @@
     "change": 2.0,
     "direction": "rising"
   },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "increase_exposure_allowed",
+    "risk_posture": "constructive",
+    "water_policy": {
+      "direction": "rising",
+      "change": 2.0,
+      "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
+    },
+    "scenario_context": {
+      "id": "01",
+      "label": "趨勢擴張",
+      "confidence": 0.78
+    },
+    "policy_focus": [
+      "開高第一段不追；台積電、台光電、欣興、臻鼎、旺矽、川湖、廣達等核心鏈先看量價承接。水位增加用於換手後主線，不用於追漲過熱股。",
+      "水位 74.7% 上升，代表風險預算增加；但外資淨空與前一日急跌提醒：先調節過熱、正打負，再把新增水位用到核心。",
+      "費半強彈、VIX 降溫、台指期反彈，台股價值區多數修復；但外資高空單仍在，盤勢仍是趨勢擴張後的換手盤。",
+      "<strong>NVIDIA / AI 權值：</strong>NVIDIA X 貼文指出 Apple Private Cloud Compute 擴展到 Google Cloud 並使用 NVIDIA GPUs（<a href=\"https://x.com/nvidia/status/2064100362752294992\">@NVIDIA</a>）。<em>這代表什麼：AI 基礎建設主線仍被高權重訊號驗證，台股半導體與伺服器鏈可保留"
+    ],
+    "systemic_risk": "中",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
   "action_guidance": {
     "risk_bias": "constructive",
     "allow_add": true,
@@ -70,6 +93,6 @@
   },
   "source": {
     "issue_file": "data/issues/20260609.json",
-    "generated_at": "2026-07-02T19:55:34+08:00"
+    "generated_at": "2026-07-02T20:30:24+08:00"
   }
 }
