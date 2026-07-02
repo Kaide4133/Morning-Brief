@@ -1,72 +1,72 @@
 {
-  "sprite": "market-scenarios-8.png",
+  "sprite": "c1dd5fe4-ede8-4a84-8d36-81357556083d.png",
   "grid": { "cols": 4, "rows": 2 },
   "backgroundSize": "400% 200%",
   "scenarios": [
     {
       "id": "01",
-      "slug": "bullish",
-      "name": "強多頭 / 突破",
-      "subtitle": "突破關鍵 · 趨勢向上",
+      "slug": "trend-expansion",
+      "name": "趨勢擴張",
+      "subtitle": "水位上升 · 內外同步轉強",
       "position": "0% 0%",
-      "when": "Breakout day, sustained risk-on, broad participation"
+      "when": "Water is rising with broad internal participation and supportive external markets. ArkQuant mode: selective_add."
     },
     {
       "id": "02",
-      "slug": "divergence",
-      "name": "高檔分化",
-      "subtitle": "指數高檔 · 個股分化",
+      "slug": "theme-catalyst",
+      "name": "主線催化",
+      "subtitle": "題材驗證 · 主線續航",
       "position": "33.33% 0%",
-      "when": "Index and internals diverge; some sectors strong while leaders or value zone weak"
+      "when": "A dominant theme has a concrete catalyst, but broad market risk-on is not yet confirmed. ArkQuant mode: theme_follow_no_chase."
     },
     {
       "id": "03",
-      "slug": "consolidation",
-      "name": "震盪整理",
-      "subtitle": "多空拉鋸 · 等待方向",
+      "slug": "high-level-speed-control",
+      "name": "高位控速",
+      "subtitle": "水位健康 · 追價降速",
       "position": "66.67% 0%",
-      "when": "Range-bound, no clear direction, bulls and bears stalled"
+      "when": "Water remains high/healthy but slope slows or external pressure rises; avoid indiscriminate chasing. ArkQuant mode: slow_selective_add."
     },
     {
       "id": "04",
-      "slug": "pullback",
-      "name": "回檔修正",
-      "subtitle": "漲多回檔 · 調整修正",
+      "slug": "rotation-switching",
+      "name": "輪動換手",
+      "subtitle": "強弱分明 · 汰弱留強",
       "position": "100% 0%",
-      "when": "Healthy pullback in an ongoing uptrend; broad but orderly correction"
+      "when": "Breadth is mixed and capital rotates between themes; not a broad retreat. ArkQuant mode: rotate_after_confirmation."
     },
     {
       "id": "05",
-      "slug": "bearish",
-      "name": "空頭 / 風險升高",
-      "subtitle": "風險升高 · 保守應對",
+      "slug": "orderly-pullback",
+      "name": "有序回檔",
+      "subtitle": "健康修正 · 等待承接",
       "position": "0% 100%",
-      "when": "Risk-off day, broad selling, VIX spike, systemic risk elevated"
+      "when": "A pullback inside a still-healthy market; wait for support and confirmation. ArkQuant mode: wait_for_pullback."
     },
     {
       "id": "06",
-      "slug": "aftermarket",
-      "name": "盤後觀望",
-      "subtitle": "靜待消息 · 謹慎觀望",
+      "slug": "risk-contraction",
+      "name": "風險收縮",
+      "subtitle": "風險升溫 · 降低曝險",
       "position": "33.33% 100%",
-      "when": "Weekend, pre-event, or waiting day with no clear tape"
+      "when": "External or internal risk deteriorates enough to reduce exposure. ArkQuant mode: reduce_exposure."
     },
     {
       "id": "07",
-      "slug": "earnings",
-      "name": "財報週 / 等待",
-      "subtitle": "財報公布 · 靜待結果",
+      "slug": "low-level-repair",
+      "name": "低位修復",
+      "subtitle": "低位回升 · 小額試單",
       "position": "66.67% 100%",
-      "when": "Major earnings ahead; tape held hostage to results"
+      "when": "Water is low but improving; repair phase, not full expansion. ArkQuant mode: small_probe."
     },
     {
       "id": "08",
-      "slug": "ai-surge",
-      "name": "AI 主線爆發",
-      "subtitle": "AI 浪潮 · 引領未來",
+      "slug": "event-wait",
+      "name": "事件觀望",
+      "subtitle": "事件未定 · 等待落地",
       "position": "100% 100%",
-      "when": "AI/semi names breaking out specifically as the dominant theme"
+      "when": "Major earnings, macro events, holidays, or pre-event uncertainty dominate. ArkQuant mode: wait_for_event_resolution."
     }
   ],
-  "selectionRule": "If two scenarios fit, prefer the one closer to the day's risk posture than the day's price action alone."
+  "selectionRule": "Classify by Ark regime first: hard event/risk states, then water regime, external risk, breadth, and theme catalyst. Do not use one catch-all high-level divergence bucket."
 }

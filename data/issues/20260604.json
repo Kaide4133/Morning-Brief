@@ -1,11 +1,9 @@
 {
   "date": "2026-06-04",
   "issue_no": 25,
-  "scenario_id": "02",
-  "scenario_reason": "方舟水位回升至 63.6%，SOX 續強，且 NVIDIA / xAI / Fed 同日訊號延續 AI 與政策主線；但台股即時個股與 Mag7 仍分化，外資台指期淨空單維持高檔，因此定調高檔分化。",
-  "market_summary": "SOX +1.39% 續創高，但 S&P 500 -0.74%、Nasdaq -0.89%、VIX +1.84%，大盤不是全面 risk-on；台股現貨 +1.98%，水位小升下仍以高檔分化處理。",
+  "market_summary": "SOX +1.39% 續創高，但 S&P 500 -0.74%、Nasdaq -0.89%、VIX +1.84%，大盤不是全面 risk-on；台股現貨 +1.98%，水位小升下仍以主線催化處理。",
   "hero": {
-    "headline": "<span class=\"mark\">一句話先看：</span>方舟水位回升至 <em>63.6%</em>，SOX 續強且 NVIDIA / xAI 訊號支撐 AI 主線，但即時股價分化擴大；今日仍是「<em>高檔分化</em>」中的換手盤。",
+    "headline": "<span class=\"mark\">一句話先看：</span>方舟水位回升至 <em>63.6%</em>，SOX 續強且 NVIDIA / xAI 訊號支撐 AI 主線，但即時股價分化擴大；今日仍是「<em>主線催化</em>」中的換手盤。",
     "subhead": "操作感受：6/4 以盤前即時報價、台指期外資部位與主要帳號公開訊號為基礎。水位上升給主線一點彈性，但個股現價已出現強弱落差，追價速度必須被外資空單與盤中換手限制。"
   },
   "market": {
@@ -78,9 +76,7 @@
     "body": "操作感受：這一版重新把股票現價抓進來後，盤面語氣要比單看水位更細。京元電子相對抗跌，力成還有轉強，但貿聯、啟碁、台積電、廣達、奇鋐、欣興等主線股在即時報價上已有分化，表示主線沒有壞，卻不能無差別追價。<br><br>NVIDIA 對 agentic AI、OpenShell、RTX PC、AI factory 與 sovereign AI 的訊號仍強；xAI / Grok 也有 Cloudflare AI Gateway 與應用層訊號；Fed 則發布 Beige Book 與 Bowman 監管證詞預告。結論是題材端還在，但風控端要看外資空單與盤中換手。"
   },
   "home": {
-    "water_note": "6/4 方舟水位修正為 63.6%，較前次 62.8% 上升 0.8 個百分點；主線保留，但用即時股價與主要帳號公開訊號重新校正追價風險。",
     "thesis_blurb": "AI / 半導體主線由 SOX 與 NVIDIA / xAI 訊號支撐；但即時股價分化，新增部位只等換手確認，不追第一段急拉。",
-    "risk_tagline": "02 高檔分化｜水位 63.6%、外資空單高位",
     "recent_summary": "水位回升至 63.6%；NVIDIA / xAI / Fed 同日公開訊號延續，但即時股價已有分化，今日重點是保留主線、降低追價。"
   },
   "etf": {
@@ -287,7 +283,7 @@
       {
         "code": "2327",
         "name": "國巨*",
-        "meta": "即時 756 / -7.80% · 高檔分化觀察",
+        "meta": "即時 756 / -7.80% · 主線催化觀察",
         "stamp": "rising"
       },
       {
@@ -424,11 +420,6 @@
       "policy": "NVIDIA / Microsoft agentic AI、OpenShell / RTX PC、sovereign AI、xAI / Grok 以及 Fed Beige Book / Bowman 訊號同時出現；題材端支撐 AI 主線，但政策端未解除估值風險。",
       "risk": "水位升至 63.6%，但即時股價分化、VIX 回升、外資期貨空單仍重；策略仍是保留主線、降低追價。"
     }
-  },
-  "verdict": {
-    "level": "中",
-    "level_en": "MID",
-    "reason": "系統性風險維持中：水位 63.6% 與 AI 主線訊號支撐盤面，但即時股價分化、VIX 回升、外資台指期淨空單仍在 -66,772 口，因此不能升級為全面進攻。"
   },
   "conclusion": "水位修正為 <em>63.6%</em>，NVIDIA / xAI 訊號補強 AI 主線；但即時股價分化表示今天是換手盤，不是無差別追價盤。",
   "appendix": {

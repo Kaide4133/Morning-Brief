@@ -1,0 +1,77 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-06-10",
+  "valid_for_trading_date": "2026-06-10",
+  "data_as_of": "2026-06-10",
+  "stale": false,
+  "issue_no": 29,
+  "scenario": {
+    "id": "03",
+    "slug": "high-level-speed-control",
+    "label": "高位控速",
+    "confidence": 0.76,
+    "reason": "水位 74.7% 仍健康但斜率 +0.0pt 放緩/外部壓力升高，追價需控速",
+    "source": "classifier"
+  },
+  "water": {
+    "level": 74.7,
+    "previous": 74.7,
+    "change": 0.0,
+    "direction": "stable"
+  },
+  "action_guidance": {
+    "risk_bias": "balanced_cautious",
+    "allow_add": true,
+    "allow_trim": true,
+    "deploy_mode": "slow_selective_add",
+    "max_initial_deploy_pct": 0.25,
+    "trim": {
+      "allowed": true,
+      "mode": "selective_trim",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": true,
+      "mode": "slow_selective_add",
+      "max_initial_deploy_pct": 0.25,
+      "conditions": [
+        "conditional_only",
+        "core_or_high_quality_only",
+        "pullback_confirmed",
+        "no_chase"
+      ]
+    },
+    "rebuy": {
+      "allowed": true,
+      "mode": "wait_for_pullback",
+      "conditions": [
+        "sold_name_drawdown_2_to_3_pct",
+        "MA20_support",
+        "three_signal_reconfirmation"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 0.76,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "高位控速",
+    "summary": "水位 74.7% 仍健康但斜率 +0.0pt 放緩/外部壓力升高，追價需控速"
+  },
+  "source": {
+    "issue_file": "data/issues/20260610.json",
+    "generated_at": "2026-07-02T18:14:32+08:00"
+  }
+}

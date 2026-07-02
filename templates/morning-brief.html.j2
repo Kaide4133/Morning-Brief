@@ -52,12 +52,7 @@
       <div class="cover-frame">
         <span class="crop-br" aria-hidden="true"></span>
         <span class="crop-bl" aria-hidden="true"></span>
-        <div class="cover-img cover-sprite" style="background-image:url('assets/covers/market-scenarios-8.png');background-position:{{ scenario.position }}" role="img" aria-label="{{ scenario.id }} {{ scenario.name }} — 晨報封面情境">
-          <div class="cover-sprite-label">
-            <span class="cover-num">{{ scenario.id }}</span>
-            <span class="cover-name">{{ scenario.name }}</span>
-            <span class="cover-sub">{{ scenario.subtitle }}</span>
-          </div>
+        <div class="cover-img cover-sprite" style="background-image:url('assets/covers/{{ scenario.sprite }}');background-position:{{ scenario.position }}" role="img" aria-label="{{ scenario.id }} {{ scenario.name }} — 晨報封面情境">
         </div>
       </div>
       <p class="cover-caption">{{ cover_caption }}</p>

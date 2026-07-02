@@ -1,24 +1,36 @@
 {
   "date": "2026-05-28",
   "issue_no": 21,
-  "scenario_id": "02",
-  "scenario_reason": "指數與內部結構背離；升溫擴散但水位下修。",
   "market_summary": "加權 +1.68% · 期貨 +2.13%",
   "hero": {
-    "headline": "<span class=\"mark\">一句話先看：</span>方舟持股配置建議降至 <em>66.3%</em>。加權與期貨同步大漲，但水位較前次 67.4% 下降 1.1 個百分點，外資空單壓境，定調「<em>高檔分化</em>」。",
+    "headline": "<span class=\"mark\">一句話先看：</span>方舟持股配置建議降至 <em>66.3%</em>。加權與期貨同步大漲，但水位較前次 67.4% 下降 1.1 個百分點，外資空單壓境，定調「<em>有序回檔</em>」。",
     "subhead": "操作感受：保留主線、不追第一段、等換手確認。盤面強攻但母系統水位下降，紀律上必須採防禦姿態。"
   },
   "market": {
-    "sox": { "value": "12,202.54", "change_pct": 1.99 },
-    "vix": { "value": "17.01", "change_pct": 2.53 },
-    "tw_index": { "line": "▲731.43 (+1.68%)", "change_pct": 1.68 },
-    "futures": { "line": "期貨 ▲934 (+2.13%)" },
-    "foreign_oi": { "value": "-56,302 口", "note": "5/27 TAIFEX 最新可得" },
+    "sox": {
+      "value": "12,202.54",
+      "change_pct": 1.99
+    },
+    "vix": {
+      "value": "17.01",
+      "change_pct": 2.53
+    },
+    "tw_index": {
+      "line": "▲731.43 (+1.68%)",
+      "change_pct": 1.68
+    },
+    "futures": {
+      "line": "期貨 ▲934 (+2.13%)"
+    },
+    "foreign_oi": {
+      "value": "-56,302 口",
+      "note": "5/27 TAIFEX 最新可得"
+    },
     "systemic_risk": "中偏高"
   },
   "strategy": {
     "thesis": "AI / 半導體 / IC封測 / MLCC / 電容 / 電阻 / IC基板 / 電源散熱 / Agentic AI",
-    "tape": "加權 ▲731.43 (+1.68%)，期貨 ▲934 (+2.13%)；盤面升溫擴散，但母系統水位下降，屬強勢中的高檔分化。",
+    "tape": "加權 ▲731.43 (+1.68%)，期貨 ▲934 (+2.13%)；盤面升溫擴散，但母系統水位下降，屬強勢中的有序回檔。",
     "playbook": "防禦、不追價、汰弱留強、等換手；保留 AI / 半導體主線，但開高第一段不追，等量縮換手與承接確認。",
     "risk": "水位 66.3%，較前次 67.4% 下降 1.1 個百分點；風險預算下修，強勢股只做換手後的續強。"
   },
@@ -38,19 +50,46 @@
     "body": "保留主線、降低追價、等強股換手。"
   },
   "home": {
-    "water_note": "5/28 方舟水位 66.3% 持平；SOX 與台指夜盤偏強，但外資空單擴大。保留主線、降低追價、等換手。",
     "thesis_blurb": "保留主線、降低追價、漲多調節、等換手；AI / 半導體與資料中心鏈可留，但新增部位要等量縮換手與承接確認。",
-    "risk_tagline": "02 高檔分化｜外資空單擴大，開高第一段先看換手",
     "recent_summary": "方舟水位 66.3% 持平；SOX 與台指夜盤偏強，但外資空單擴大。今日重點：保留主線、降低追價、漲多調節、等換手。"
   },
-  "etf": { "value": [], "rising": [], "overlap": [], "value_note": "" },
-  "stocks": { "value": [], "rising": [], "overlap": [], "overlap_names": {} },
-  "validation": { "strengthened": [], "pressure": [], "long_term": [] },
-  "intelligence": { "trump": [], "musk": "", "policy": [] },
+  "etf": {
+    "value": [],
+    "rising": [],
+    "overlap": [],
+    "value_note": ""
+  },
+  "stocks": {
+    "value": [],
+    "rising": [],
+    "overlap": [],
+    "overlap_names": {}
+  },
+  "validation": {
+    "strengthened": [],
+    "pressure": [],
+    "long_term": []
+  },
+  "intelligence": {
+    "trump": [],
+    "musk": "",
+    "policy": []
+  },
   "mag7": [],
-  "analysis": { "us_close": "", "tx_night": "", "axes": { "thesis": "", "policy": "", "risk": "" } },
-  "verdict": { "level": "中偏高", "level_en": "MID-HIGH", "reason": "" },
+  "analysis": {
+    "us_close": "",
+    "tx_night": "",
+    "axes": {
+      "thesis": "",
+      "policy": "",
+      "risk": ""
+    }
+  },
   "conclusion": "AI / 半導體主線仍強；方舟水位降到 66.3%，今天的紀律是保留主線、漲多調節、等換手。",
-  "appendix": { "after_hours": "", "map_bullets": [], "execution": "" },
+  "appendix": {
+    "after_hours": "",
+    "map_bullets": [],
+    "execution": ""
+  },
   "disclaimer": "Kelvin Wiggly Morning Brief｜2026/05/28 市場晨報。"
 }

@@ -1,0 +1,70 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-06-05",
+  "valid_for_trading_date": "2026-06-05",
+  "data_as_of": "2026-06-05",
+  "stale": false,
+  "issue_no": 26,
+  "scenario": {
+    "id": "08",
+    "slug": "event-wait",
+    "label": "事件觀望",
+    "confidence": 0.72,
+    "reason": "重大事件/財報/休市或盤面資料未完整反映，方向需等事件落地",
+    "source": "classifier"
+  },
+  "water": {
+    "level": 64.3,
+    "previous": 63.6,
+    "change": 0.7,
+    "direction": "rising"
+  },
+  "action_guidance": {
+    "risk_bias": "event_wait",
+    "allow_add": false,
+    "allow_trim": false,
+    "deploy_mode": "wait_for_event_resolution",
+    "trim": {
+      "allowed": false,
+      "mode": "wait_for_event_resolution",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": false,
+      "mode": "wait_for_event_resolution",
+      "conditions": [
+        "event_resolved"
+      ]
+    },
+    "rebuy": {
+      "allowed": false,
+      "mode": "wait_for_event_resolution",
+      "conditions": [
+        "event_resolved"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 0.72,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "事件觀望",
+    "summary": "重大事件/財報/休市或盤面資料未完整反映，方向需等事件落地"
+  },
+  "source": {
+    "issue_file": "data/issues/20260605.json",
+    "generated_at": "2026-07-02T18:14:32+08:00"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-06-08",
+  "valid_for_trading_date": "2026-06-08",
+  "data_as_of": "2026-06-08",
+  "stale": false,
+  "issue_no": 27,
+  "scenario": {
+    "id": "06",
+    "slug": "risk-contraction",
+    "label": "風險收縮",
+    "confidence": 0.84,
+    "reason": "SOX -10.26% 急跌、Nasdaq -4.18% 偏弱、台股 -4.56% 明顯回檔、VIX +39.68% 大升、系統性風險 高，風險預算收縮",
+    "source": "classifier"
+  },
+  "water": {
+    "level": 72.7,
+    "previous": 64.3,
+    "change": 8.4,
+    "direction": "rising"
+  },
+  "action_guidance": {
+    "risk_bias": "risk_off",
+    "allow_add": false,
+    "allow_trim": true,
+    "deploy_mode": "reduce_exposure",
+    "trim": {
+      "allowed": true,
+      "mode": "reduce_exposure",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": false,
+      "mode": "disabled",
+      "conditions": [
+        "risk_off_no_new_exposure"
+      ]
+    },
+    "rebuy": {
+      "allowed": false,
+      "mode": "disabled_until_stabilized",
+      "conditions": [
+        "risk_bias_improves",
+        "water_stabilizes"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 0.84,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "風險收縮",
+    "summary": "SOX -10.26% 急跌、Nasdaq -4.18% 偏弱、台股 -4.56% 明顯回檔、VIX +39.68% 大升、系統性風險 高，風險預算收縮"
+  },
+  "source": {
+    "issue_file": "data/issues/20260608.json",
+    "generated_at": "2026-07-02T18:14:32+08:00"
+  }
+}

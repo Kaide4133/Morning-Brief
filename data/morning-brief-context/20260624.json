@@ -1,0 +1,71 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-06-24",
+  "valid_for_trading_date": "2026-06-24",
+  "data_as_of": "2026-06-24",
+  "stale": false,
+  "issue_no": 30,
+  "scenario": {
+    "id": "04",
+    "slug": "rotation-switching",
+    "label": "輪動換手",
+    "confidence": 0.68,
+    "reason": "廣度 strong、水位 70.1%：市場偏輪動換手，重點是汰弱留強",
+    "source": "classifier"
+  },
+  "water": {
+    "level": 70.1,
+    "previous": 67.3,
+    "change": 2.8,
+    "direction": "rising"
+  },
+  "action_guidance": {
+    "risk_bias": "selective",
+    "allow_add": false,
+    "allow_trim": true,
+    "deploy_mode": "rotate_after_confirmation",
+    "trim": {
+      "allowed": true,
+      "mode": "rotate_trim",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": false,
+      "mode": "rotate_after_confirmation",
+      "conditions": [
+        "wait_for_relative_strength_confirmation"
+      ]
+    },
+    "rebuy": {
+      "allowed": true,
+      "mode": "wait_for_confirmation",
+      "conditions": [
+        "rotation_confirms",
+        "no_new_low"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 0.68,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "輪動換手",
+    "summary": "廣度 strong、水位 70.1%：市場偏輪動換手，重點是汰弱留強"
+  },
+  "source": {
+    "issue_file": "data/issues/20260624.json",
+    "generated_at": "2026-07-02T18:14:32+08:00"
+  }
+}

@@ -1,8 +1,7 @@
 {
   "date": "YYYY-MM-DD",
   "issue_no": 0,
-  "scenario_id": "02",
-  "scenario_reason": "一句話說明為何選此封面（02–08 見 scenario-map.json）",
+  "classification_note": "情境由 tools/scenario_classifier.py 自動判定 01–08 新方舟情境；不要手寫 scenario_id / scenario_reason / verdict，除非真的要 lock_scenario。",
 
   "hero": {
     "headline": "<span class=\"mark\">一句話先看：</span>…",
@@ -42,9 +41,7 @@
   },
 
   "home": {
-    "water_note": "首頁「今日水位」卡片摘要（可省略，建置時自動推導）",
     "thesis_blurb": "首頁「今日主線」卡片摘要（可省略，預設用 strategy.playbook）",
-    "risk_tagline": "首頁「風險姿態」卡片摘要（可省略）",
     "recent_summary": "首頁「最近兩日晨報大綱」中本期的摘要段落"
   },
 
@@ -84,8 +81,6 @@
     "tx_night": "",
     "axes": { "thesis": "", "policy": "", "risk": "" }
   },
-
-  "verdict": { "level": "中", "level_en": "MID", "reason": "" },
 
   "conclusion": "一句話結論，<em>強調詞</em>可用 HTML",
 

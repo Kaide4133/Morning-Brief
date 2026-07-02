@@ -12,11 +12,19 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from scenario_classifier import (
+    build_action_guidance,
+    build_morning_context,
+    resolve_scenario_for_build,
+)
+
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATES = ROOT / "templates"
 SITE = ROOT / "docs"
 DATA = ROOT / "data" / "issues"
 WATER_HISTORY = ROOT / "data" / "water-level-history.json"
+CONTEXT_LATEST = ROOT / "data" / "morning-brief-context-latest.json"
+CONTEXT_DIR = ROOT / "data" / "morning-brief-context"
 SCENARIO_MAP = SITE / "assets" / "covers" / "scenario-map.json"
 ICONS = TEMPLATES / "icons.json"
 
@@ -26,6 +34,19 @@ ROMAN = (
     (10, "X"), (9, "IX"), (5, "V"), (4, "IV"), (1, "I"),
 )
 MONTHS = "JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC".split()
+LEGACY_SCENARIO_TERMS = (
+    "高檔分化",
+    "Divergence / Rotation",
+    "DIVERGENCE / ROTATION",
+    "強多頭",
+    "震盪整理",
+    "回檔修正",
+    "空頭 / 風險升高",
+    "空頭／風險升高",
+    "盤後觀望",
+    "財報週 / 等待",
+    "AI 主線爆發",
+)
 
 
 def to_roman(n: int) -> str:
@@ -115,19 +136,58 @@ def home_context(data: dict, ctx: dict) -> dict:
     }
 
 
+
+def build_verdict_from_scenario(data: dict, scenario: dict, action_guidance: dict | None = None) -> dict:
+    """Derive Section XIV verdict from the new scenario classifier.
+
+    Do not read legacy issue-level `verdict` blocks; old issues carried stale
+    labels such as 高檔分化/Divergence that should not survive rebuilds.
+    """
+    ark = data.get("ark") or {}
+    wl = ark.get("water_level")
+    delta = ark.get("delta")
+    risk_bias = (action_guidance or {}).get("risk_bias", "")
+    direction = "持平"
+    try:
+        d = float(delta)
+        if d > 0:
+            direction = f"上升 {d:+.1f}pt"
+        elif d < 0:
+            direction = f"下降 {d:+.1f}pt"
+    except Exception:
+        pass
+    label = f"{scenario['id']} {scenario['name']}"
+    slug = str(scenario.get("slug") or "").replace("-", "_").upper()
+    reason = scenario.get("reason") or data.get("scenario_reason") or "依新版八情境分類器判定。"
+    return {
+        "level": label,
+        "level_en": slug,
+        "reason": f"方舟水位 {wl}%（{direction}）；新版八情境判定為「{scenario['name']}」。{reason} ArkQuant 風險姿態：{risk_bias}。",
+    }
+
 def enrich_issue(data: dict) -> dict:
-    """Add derived fields for templates."""
+    """Add derived fields for templates.
+
+    Always resolve through the new classifier first. This prevents legacy
+    `scenario_id` / `scenario_reason` values in old issue JSON from leaking into
+    regenerated pages, index cards, and water-level history.
+    """
+    data = dict(data)
     dt = datetime.strptime(data["date"], "%Y-%m-%d")
     issue_no = data["issue_no"]
     scenario_map = load_json(SCENARIO_MAP)
-    sc = scenario_by_id(scenario_map["scenarios"], data["scenario_id"])
+    effective, _classified, _override = resolve_scenario_for_build(data, scenario_map)
+    sc = scenario_by_id(scenario_map["scenarios"], effective["id"])
     scenario = {
         "id": sc["id"],
         "name": sc["name"],
+        "slug": sc.get("slug", ""),
         "subtitle": sc["subtitle"],
         "position": sc["position"],
-        "reason": data.get("scenario_reason", ""),
+        "sprite": scenario_map.get("sprite", "market-scenarios-8.png"),
+        "reason": effective.get("reason") or data.get("scenario_reason", ""),
     }
+    action_guidance = build_action_guidance(data, effective)
 
     wl = data["ark"]["water_level"]
     ctx = {
@@ -147,6 +207,7 @@ def enrich_issue(data: dict) -> dict:
         },
         "filename": f"{dt.strftime('%Y%m%d')}-stock-news-kelvin.html",
         "scenario_label": f"{sc['id']} {sc['name']}",
+        "verdict": build_verdict_from_scenario(data, scenario, action_guidance),
         "icons": load_json(ICONS),
         "market_summary": data.get(
             "market_summary",
@@ -214,6 +275,16 @@ def render_brief(ctx: dict) -> str:
     env = build_env()
     tpl = env.get_template("morning-brief.html.j2")
     return tpl.render(**ctx)
+
+
+def validate_no_legacy_scenario_terms(html: str, *, output_name: str) -> None:
+    """Guardrail: rebuilt briefs must not publish old scenario taxonomy terms."""
+    hits = [term for term in LEGACY_SCENARIO_TERMS if term in html]
+    if hits:
+        raise SystemExit(
+            f"Legacy scenario term(s) still present in {output_name}: {', '.join(hits)}. "
+            "Clean the issue/template text or regenerate from the new Ark eight-regime classifier."
+        )
 
 
 def validate_x_signal_lineage(data: dict, html: str) -> None:
@@ -308,11 +379,38 @@ def load_all_issues() -> list[dict]:
     return [load_json(p) for p in list_issue_files()]
 
 
+def export_morning_context(
+    data: dict,
+    json_path: Path,
+    scenario: dict,
+    write: bool = True,
+) -> dict:
+    action_guidance = build_action_guidance(data, scenario)
+    rel_issue = json_path.resolve().relative_to(ROOT).as_posix()
+    context = build_morning_context(
+        data,
+        scenario,
+        action_guidance,
+        issue_file=rel_issue,
+    )
+    if write:
+        date_slug = datetime.strptime(data["date"], "%Y-%m-%d").strftime("%Y%m%d")
+        save_json(CONTEXT_LATEST, context)
+        save_json(CONTEXT_DIR / f"{date_slug}.json", context)
+        print(f"Wrote {CONTEXT_LATEST}")
+        print(f"Wrote {CONTEXT_DIR / f'{date_slug}.json'}")
+    return context
+
+
 def build_one(json_path: Path, write: bool = True) -> Path:
     data = load_json(json_path)
+    scenario_map = load_json(SCENARIO_MAP)
+    effective, _classified, _override = resolve_scenario_for_build(data, scenario_map)
     sync_water_level(data)
+    export_morning_context(data, json_path, effective, write=write)
     ctx = enrich_issue(data)
     html = render_brief(ctx)
+    validate_no_legacy_scenario_terms(html, output_name=ctx["filename"])
     validate_x_signal_lineage(data, html)
     out = SITE / ctx["filename"]
     if write:
@@ -327,6 +425,7 @@ def build_index(write: bool = True) -> Path:
     if not issues:
         raise SystemExit("No issue JSON files in data/issues/")
     html = render_index(issues)
+    validate_no_legacy_scenario_terms(html, output_name="index.html")
     out = SITE / "index.html"
     if write:
         out.write_text(html, encoding="utf-8")
@@ -337,6 +436,7 @@ def build_index(write: bool = True) -> Path:
 def build_water_level_page(write: bool = True) -> Path:
     issues = load_all_issues()
     html = render_water_level(issues)
+    validate_no_legacy_scenario_terms(html, output_name="water-level.html")
     out = SITE / "water-level.html"
     if write:
         out.write_text(html, encoding="utf-8")

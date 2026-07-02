@@ -1,0 +1,75 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-06-09",
+  "valid_for_trading_date": "2026-06-09",
+  "data_as_of": "2026-06-09",
+  "stale": false,
+  "issue_no": 28,
+  "scenario": {
+    "id": "01",
+    "slug": "trend-expansion",
+    "label": "趨勢擴張",
+    "confidence": 0.78,
+    "reason": "水位上升，外部風險降溫且內部廣度不差，進入趨勢擴張",
+    "source": "classifier"
+  },
+  "water": {
+    "level": 74.7,
+    "previous": 72.7,
+    "change": 2.0,
+    "direction": "rising"
+  },
+  "action_guidance": {
+    "risk_bias": "constructive",
+    "allow_add": true,
+    "allow_trim": true,
+    "deploy_mode": "selective_add",
+    "max_initial_deploy_pct": 0.4,
+    "trim": {
+      "allowed": true,
+      "mode": "selective_trim",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": true,
+      "mode": "selective_add",
+      "max_initial_deploy_pct": 0.4,
+      "conditions": [
+        "core_or_high_quality_only",
+        "no_chase",
+        "position_size_limited"
+      ]
+    },
+    "rebuy": {
+      "allowed": true,
+      "mode": "wait_for_pullback",
+      "conditions": [
+        "MA20_support",
+        "three_signal_reconfirmation"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 0.78,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "趨勢擴張",
+    "summary": "水位上升，外部風險降溫且內部廣度不差，進入趨勢擴張"
+  },
+  "source": {
+    "issue_file": "data/issues/20260609.json",
+    "generated_at": "2026-07-02T18:14:32+08:00"
+  }
+}

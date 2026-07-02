@@ -1,0 +1,75 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-06-02",
+  "valid_for_trading_date": "2026-06-02",
+  "data_as_of": "2026-06-02",
+  "stale": false,
+  "issue_no": 23,
+  "scenario": {
+    "id": "02",
+    "slug": "theme-catalyst",
+    "label": "主線催化",
+    "confidence": 0.74,
+    "reason": "AI/半導體/主線題材有明確催化，但仍需避免追第一根",
+    "source": "classifier"
+  },
+  "water": {
+    "level": 65.9,
+    "previous": 66.1,
+    "change": -0.2,
+    "direction": "falling"
+  },
+  "action_guidance": {
+    "risk_bias": "constructive_but_selective",
+    "allow_add": true,
+    "allow_trim": true,
+    "deploy_mode": "theme_follow_no_chase",
+    "max_initial_deploy_pct": 0.3,
+    "trim": {
+      "allowed": true,
+      "mode": "selective_trim",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": true,
+      "mode": "theme_follow_no_chase",
+      "max_initial_deploy_pct": 0.3,
+      "conditions": [
+        "theme_confirmed",
+        "no_first_bar_chase",
+        "pullback_or_volume_confirmation"
+      ]
+    },
+    "rebuy": {
+      "allowed": true,
+      "mode": "wait_for_pullback",
+      "conditions": [
+        "sold_name_drawdown_2_to_3_pct",
+        "support_holds"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 0.74,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "主線催化",
+    "summary": "AI/半導體/主線題材有明確催化，但仍需避免追第一根"
+  },
+  "source": {
+    "issue_file": "data/issues/20260602.json",
+    "generated_at": "2026-07-02T18:14:32+08:00"
+  }
+}
