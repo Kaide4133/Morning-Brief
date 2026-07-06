@@ -178,9 +178,20 @@
       <h3 class="zone-subtitle">純升溫區｜{{ etf.rising | length }} 檔</h3>
       <div class="card-grid">
         {%- for item in etf.rising %}
-        {{ m.trading_card(item) }}
+        {{ m.trading_card(item, item.code in etf.overlap) }}
         {%- endfor %}
       </div>
+      {%- if etf.overlap %}
+      <div class="overlap-box">
+        <span class="overlap-stamp">★ ETF OVERLAP · 雙區重疊</span>
+        <div class="overlap-list">
+          {%- for code in etf.overlap %}
+          <span class="overlap-item">{{ code }}<span class="name">{{ etf.overlap_names[code] }}</span></span>
+          {%- endfor %}
+        </div>
+        <p class="overlap-note" style="margin:0;color:var(--ink-mute);font-size:.9rem">同時出現在 ETF 價值區與 ETF 升溫區，代表兼具折溢價/配置觀察與當日升溫訊號。</p>
+      </div>
+      {%- endif %}
     </div>
   </section>
 

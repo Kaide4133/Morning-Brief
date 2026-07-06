@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import json
 import re
 import sys
@@ -165,6 +166,55 @@ def build_verdict_from_scenario(data: dict, scenario: dict, action_guidance: dic
         "reason": f"方舟水位 {wl}%（{direction}）；新版八情境判定為「{scenario['name']}」。{reason} ArkQuant 風險姿態：{risk_bias}。",
     }
 
+def normalize_zone_overlap(section: dict | None) -> None:
+    """Normalize overlap metadata for templates.
+
+    Historical issue JSON uses `overlap` as a list of ticker codes, while the
+    2026-07-06 ETF repair wrote a richer list of objects. Templates need a
+    plain code list for `item.code in section.overlap` plus `overlap_names` for
+    the visual overlap box. Keep both shapes acceptable at the data boundary.
+    """
+    if not isinstance(section, dict):
+        return
+
+    value = section.get("value") or []
+    rising = section.get("rising") or []
+    names = dict(section.get("overlap_names") or {})
+    by_code = {}
+    for item in [*value, *rising]:
+        if isinstance(item, dict) and item.get("code"):
+            by_code[item["code"]] = item.get("name", "")
+
+    raw_overlap = section.get("overlap") or []
+    codes = []
+    for entry in raw_overlap:
+        if isinstance(entry, dict):
+            code = str(entry.get("code") or "").strip()
+            if code:
+                codes.append(code)
+                if entry.get("name"):
+                    names[code] = entry["name"]
+        else:
+            code = str(entry).strip()
+            if code:
+                codes.append(code)
+
+    # If overlap is omitted, derive it from actual value/rising intersections.
+    if not codes:
+        value_codes = {item.get("code") for item in value if isinstance(item, dict)}
+        rising_codes = {item.get("code") for item in rising if isinstance(item, dict)}
+        codes = [code for code in value_codes if code and code in rising_codes]
+
+    deduped = []
+    for code in codes:
+        if code not in deduped:
+            deduped.append(code)
+            names.setdefault(code, by_code.get(code, ""))
+
+    section["overlap"] = deduped
+    section["overlap_names"] = names
+
+
 def enrich_issue(data: dict) -> dict:
     """Add derived fields for templates.
 
@@ -172,7 +222,9 @@ def enrich_issue(data: dict) -> dict:
     `scenario_id` / `scenario_reason` values in old issue JSON from leaking into
     regenerated pages, index cards, and water-level history.
     """
-    data = dict(data)
+    data = copy.deepcopy(data)
+    normalize_zone_overlap(data.get("etf"))
+    normalize_zone_overlap(data.get("stocks"))
     dt = datetime.strptime(data["date"], "%Y-%m-%d")
     issue_no = data["issue_no"]
     scenario_map = load_json(SCENARIO_MAP)
