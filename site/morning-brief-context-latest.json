@@ -1,56 +1,63 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-07-06",
-  "valid_for_trading_date": "2026-07-06",
-  "data_as_of": "2026-07-06",
+  "date": "2026-07-08",
+  "valid_for_trading_date": "2026-07-08",
+  "data_as_of": "2026-07-08",
   "stale": false,
-  "issue_no": 37,
+  "issue_no": 39,
   "scenario": {
-    "id": "06",
-    "slug": "risk-contraction",
-    "label": "風險收縮",
-    "confidence": 0.84,
-    "reason": "水位急降 -5.1pt、SOX -5.44% 急跌、系統性風險中偏高，風險預算收縮",
-    "source": "classifier"
+    "id": "07",
+    "slug": "low-level-repair",
+    "label": "低位修復",
+    "confidence": 1.0,
+    "reason": "方舟水位由 68.1% 回升至 71.3%，重返 70% 上方，屬市場健康度修復；但 SOX 回落、ETF/產業多數標的仍偏跌，判定為低位修復而非趨勢擴張。",
+    "source": "manual_override",
+    "classifier_suggestion": "02"
   },
   "water": {
-    "level": 69.7,
-    "previous": 74.8,
-    "change": -5.1,
-    "direction": "falling"
+    "level": 71.3,
+    "previous": 68.1,
+    "change": 3.2,
+    "direction": "rising"
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
-    "short_term_bias": "cautious_review",
-    "risk_posture": "risk_off",
+    "short_term_bias": "increase_exposure_allowed",
+    "risk_posture": "constructive_but_cautious",
     "water_policy": {
-      "direction": "falling",
-      "change": -5.1,
-      "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
+      "direction": "rising",
+      "change": 3.2,
+      "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
     },
     "scenario_context": {
-      "id": "06",
-      "label": "風險收縮",
-      "confidence": 0.84
+      "id": "07",
+      "label": "低位修復",
+      "confidence": 1.0
     },
     "policy_focus": [
-      "水位跌破 70% 後不把指數上漲解讀成全面加速；核心只留能守住結構與有成交承接者，過熱高價、跌破均線或弱於同族群者先降低效率拖累。新增佈局要等回測守住，不追第一段反彈。",
-      "最大風險是指數由台積電與少數 AI 權值撐住，但材料、基板、封測設備、MLCC 與二線高價股同步降溫；若水位續降或 SOX 不修復，盤面會由輪動換手轉向風險收縮。",
-      "台股 47,175.48（+0.84%）續強，但方舟水位降至 69.7%；SOX 前一交易日 -5.44%，外部半導體仍承壓。使用者清單顯示京元電、力成、台積電、廣達、00952、0052、0050 仍有買盤；同時台光電、台燿、景碩、欣興、穎崴、旺矽、禾伸堂與高價股回檔，主線轉為分層。",
-      "SOX 12,626.22、-5.44%，是今日半導體鏈主要外部壓力。"
+      "操作語言從「風險收縮」降級為「低位修復、控速觀察」。核心主線可回到承接觀察，但仍不追第一根；優先看水位改善能否轉化成台積電、IC基板、CCL、網通、散熱電源的回測守穩。",
+      "SOX 前一交易日回落、VIX 上升，外部半導體仍有壓力；若水位回升只是權值拉抬而非廣度擴散，升溫區中的高波動與弱承接個股仍可能拖累資金效率。",
+      "水位上升到 71.3% 是正面訊號，表示市場健康度較前日改善；但 ETF 價值區十檔多數下跌，產業價值區也出現致茂、貿聯、穎崴、奇鋐、京元電等高波動回落，修復還不是全面擴張。",
+      "半導體關稅與美國設廠條件是今日外部政策背景，台積電與供應鏈仍是盤面核心。"
     ],
-    "systemic_risk": "中偏高",
+    "systemic_risk": "中",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
   },
   "action_guidance": {
-    "risk_bias": "risk_off",
-    "allow_add": false,
+    "risk_bias": "constructive_but_cautious",
+    "allow_add": true,
     "allow_trim": true,
-    "deploy_mode": "reduce_exposure",
+    "deploy_mode": "small_probe",
+    "max_initial_deploy_pct": 0.2,
+    "required_confirmation": [
+      "three_signal",
+      "MA20_reclaim",
+      "no_new_low"
+    ],
     "trim": {
       "allowed": true,
-      "mode": "reduce_exposure",
+      "mode": "cleanup_weak_only",
       "max_overshoot_pct": 0.25,
       "priority": [
         "positive_return_overheated_branch",
@@ -60,18 +67,21 @@
       ]
     },
     "deploy": {
-      "allowed": false,
-      "mode": "disabled",
+      "allowed": true,
+      "mode": "small_probe",
+      "max_initial_deploy_pct": 0.2,
       "conditions": [
-        "risk_off_no_new_exposure"
+        "three_signal",
+        "MA20_reclaim",
+        "no_new_low"
       ]
     },
     "rebuy": {
-      "allowed": false,
-      "mode": "disabled_until_stabilized",
+      "allowed": true,
+      "mode": "small_probe",
       "conditions": [
-        "risk_bias_improves",
-        "water_stabilizes"
+        "no_new_low",
+        "support_reclaim"
       ]
     },
     "trim_priority": [
@@ -80,15 +90,15 @@
       "leveraged_etf_overheat",
       "low_efficiency_small_branch"
     ],
-    "confidence": 0.84,
+    "confidence": 1.0,
     "source": "morning_brief_classifier"
   },
   "editorial": {
-    "state_label": "風險收縮",
-    "summary": "水位急降 -5.1pt、SOX -5.44% 急跌、系統性風險中偏高，風險預算收縮"
+    "state_label": "低位修復",
+    "summary": "方舟水位由 68.1% 回升至 71.3%，重返 70% 上方，屬市場健康度修復；但 SOX 回落、ETF/產業多數標的仍偏跌，判定為低位修復而非趨勢擴張。"
   },
   "source": {
-    "issue_file": "data/issues/20260706.json",
-    "generated_at": "2026-07-06T12:47:37+08:00"
+    "issue_file": "data/issues/20260708.json",
+    "generated_at": "2026-07-08T10:23:16+08:00"
   }
 }
