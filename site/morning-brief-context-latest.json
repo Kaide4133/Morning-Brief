@@ -1,63 +1,57 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-07-08",
-  "valid_for_trading_date": "2026-07-08",
-  "data_as_of": "2026-07-08",
+  "date": "2026-07-09",
+  "valid_for_trading_date": "2026-07-09",
+  "data_as_of": "2026-07-09",
   "stale": false,
-  "issue_no": 39,
+  "issue_no": 40,
   "scenario": {
-    "id": "07",
-    "slug": "low-level-repair",
-    "label": "低位修復",
+    "id": "04",
+    "slug": "rotation-switching",
+    "label": "輪動換手",
     "confidence": 1.0,
-    "reason": "方舟水位由 68.1% 回升至 71.3%，重返 70% 上方，屬市場健康度修復；但 SOX 回落、ETF/產業多數標的仍偏跌，判定為低位修復而非趨勢擴張。",
+    "reason": "水位仍守 70% 以上但斜率轉弱，四區清單呈主線強、權值與弱勢股分化，判定為輪動換手。",
     "source": "manual_override",
     "classifier_suggestion": "02"
   },
   "water": {
-    "level": 71.3,
-    "previous": 68.1,
-    "change": 3.2,
-    "direction": "rising"
+    "level": 70.6,
+    "previous": 71.3,
+    "change": -0.7,
+    "direction": "falling"
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
-    "short_term_bias": "increase_exposure_allowed",
-    "risk_posture": "constructive_but_cautious",
+    "short_term_bias": "cautious_review",
+    "risk_posture": "selective",
     "water_policy": {
-      "direction": "rising",
-      "change": 3.2,
-      "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
+      "direction": "falling",
+      "change": -0.7,
+      "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
     },
     "scenario_context": {
-      "id": "07",
-      "label": "低位修復",
+      "id": "04",
+      "label": "輪動換手",
       "confidence": 1.0
     },
     "policy_focus": [
-      "操作語言從「風險收縮」降級為「低位修復、控速觀察」。核心主線可回到承接觀察，但仍不追第一根；優先看水位改善能否轉化成台積電、IC基板、CCL、網通、散熱電源的回測守穩。",
-      "SOX 前一交易日回落、VIX 上升，外部半導體仍有壓力；若水位回升只是權值拉抬而非廣度擴散，升溫區中的高波動與弱承接個股仍可能拖累資金效率。",
-      "水位上升到 71.3% 是正面訊號，表示市場健康度較前日改善；但 ETF 價值區十檔多數下跌，產業價值區也出現致茂、貿聯、穎崴、奇鋐、京元電等高波動回落，修復還不是全面擴張。",
-      "半導體關稅與美國設廠條件是今日外部政策背景，台積電與供應鏈仍是盤面核心。"
+      "操作語言從低位修復轉為輪動換手：核心強股不追高，等回測與量能確認；弱承接或非主線反彈不留戀，以汰弱留強維持水位健康。ETF 端以半導體、電子與台灣權值為主，但槓桿與高溢價不放大。",
+      "VIX 上升代表外部避險需求仍在，台積電與部分 IC 設計回落則提醒權值不是同步擴張。若水位續降或強勢股只剩少數高波動個股，應把新增佈局降為觀察，保留子彈等待回測。",
+      "水位僅小降 0.7pt 且仍在 70% 上方，代表風控沒有轉成全面防禦；但四區清單中同時出現景碩、鴻勁、日月光投控、旺矽、環球晶強攻，以及台積電、聯發科、矽力、藥華藥、風青等回落，盤面是強弱分流。",
+      "台股盤面以半導體供應鏈輪動為核心，政策面沒有足以改變今日水位判讀的單一事件。"
     ],
     "systemic_risk": "中",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
   },
   "action_guidance": {
-    "risk_bias": "constructive_but_cautious",
-    "allow_add": true,
+    "risk_bias": "selective",
+    "allow_add": false,
     "allow_trim": true,
-    "deploy_mode": "small_probe",
-    "max_initial_deploy_pct": 0.2,
-    "required_confirmation": [
-      "three_signal",
-      "MA20_reclaim",
-      "no_new_low"
-    ],
+    "deploy_mode": "rotate_after_confirmation",
     "trim": {
       "allowed": true,
-      "mode": "cleanup_weak_only",
+      "mode": "rotate_trim",
       "max_overshoot_pct": 0.25,
       "priority": [
         "positive_return_overheated_branch",
@@ -67,21 +61,18 @@
       ]
     },
     "deploy": {
-      "allowed": true,
-      "mode": "small_probe",
-      "max_initial_deploy_pct": 0.2,
+      "allowed": false,
+      "mode": "rotate_after_confirmation",
       "conditions": [
-        "three_signal",
-        "MA20_reclaim",
-        "no_new_low"
+        "wait_for_relative_strength_confirmation"
       ]
     },
     "rebuy": {
       "allowed": true,
-      "mode": "small_probe",
+      "mode": "wait_for_confirmation",
       "conditions": [
-        "no_new_low",
-        "support_reclaim"
+        "rotation_confirms",
+        "no_new_low"
       ]
     },
     "trim_priority": [
@@ -94,11 +85,11 @@
     "source": "morning_brief_classifier"
   },
   "editorial": {
-    "state_label": "低位修復",
-    "summary": "方舟水位由 68.1% 回升至 71.3%，重返 70% 上方，屬市場健康度修復；但 SOX 回落、ETF/產業多數標的仍偏跌，判定為低位修復而非趨勢擴張。"
+    "state_label": "輪動換手",
+    "summary": "水位仍守 70% 以上但斜率轉弱，四區清單呈主線強、權值與弱勢股分化，判定為輪動換手。"
   },
   "source": {
-    "issue_file": "data/issues/20260708.json",
-    "generated_at": "2026-07-08T10:23:16+08:00"
+    "issue_file": "data/issues/20260709.json",
+    "generated_at": "2026-07-09T10:23:50+08:00"
   }
 }
