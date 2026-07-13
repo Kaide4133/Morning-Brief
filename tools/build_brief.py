@@ -385,6 +385,54 @@ def validate_x_signal_lineage(data: dict, html: str) -> None:
             )
 
 
+def validate_required_reader_fields(data: dict) -> None:
+    """Reject modern issues whose lower sections would render blank or malformed."""
+    if data.get("date", "") < "2026-07-13":
+        return
+
+    analysis = data.get("analysis") or {}
+    intelligence = data.get("intelligence") or {}
+    validation = data.get("validation") or {}
+    appendix = data.get("appendix") or {}
+    axes = analysis.get("axes") or {}
+
+    required_strings = {
+        "analysis.us_close": analysis.get("us_close"),
+        "analysis.tx_night": analysis.get("tx_night"),
+        "analysis.axes.thesis": axes.get("thesis"),
+        "analysis.axes.policy": axes.get("policy"),
+        "analysis.axes.risk": axes.get("risk"),
+        "intelligence.musk": intelligence.get("musk"),
+        "appendix.after_hours": appendix.get("after_hours"),
+        "appendix.execution": appendix.get("execution"),
+        "conclusion": data.get("conclusion"),
+    }
+    missing_strings = [
+        path for path, value in required_strings.items()
+        if not isinstance(value, str) or not value.strip()
+    ]
+
+    required_lists = {
+        "validation.strengthened": validation.get("strengthened"),
+        "validation.pressure": validation.get("pressure"),
+        "validation.long_term": validation.get("long_term"),
+        "intelligence.trump": intelligence.get("trump"),
+        "intelligence.policy": intelligence.get("policy"),
+        "appendix.map_bullets": appendix.get("map_bullets"),
+    }
+    missing_lists = [
+        path for path, value in required_lists.items()
+        if not isinstance(value, list) or not value
+    ]
+
+    missing = missing_strings + missing_lists
+    if missing:
+        raise SystemExit(
+            "Missing required reader-facing field(s): " + ", ".join(missing) + ". "
+            "These fields would make Sections VI–XIII, the conclusion, or appendices blank/malformed."
+        )
+
+
 def render_index(issues: list[dict]) -> str:
     env = build_env()
     sorted_issues = sorted(issues, key=lambda x: x["date"], reverse=True)
@@ -456,6 +504,7 @@ def export_morning_context(
 
 def build_one(json_path: Path, write: bool = True) -> Path:
     data = load_json(json_path)
+    validate_required_reader_fields(data)
     scenario_map = load_json(SCENARIO_MAP)
     effective, _classified, _override = resolve_scenario_for_build(data, scenario_map)
     sync_water_level(data)
