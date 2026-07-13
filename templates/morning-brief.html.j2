@@ -175,7 +175,7 @@
         {%- endfor %}
       </div>
       <p class="zone-note">{{ etf.value_note }}</p>
-      <h3 class="zone-subtitle">純升溫區｜{{ etf.rising | length }} 檔</h3>
+      <h3 class="zone-subtitle">升溫區｜{{ etf.rising | length }} 檔</h3>
       <div class="card-grid">
         {%- for item in etf.rising %}
         {{ m.trading_card(item, item.code in etf.overlap) }}
@@ -204,7 +204,7 @@
         {{ m.trading_card(item, item.code in stocks.overlap) }}
         {%- endfor %}
       </div>
-      <h3 class="zone-subtitle">純升溫區｜{{ stocks.rising | length }} 檔</h3>
+      <h3 class="zone-subtitle">升溫區｜{{ stocks.rising | length }} 檔</h3>
       <div class="card-grid">
         {%- for item in stocks.rising %}
         {{ m.trading_card(item, item.code in stocks.overlap) }}
