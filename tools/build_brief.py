@@ -148,6 +148,16 @@ def build_verdict_from_scenario(data: dict, scenario: dict, action_guidance: dic
     wl = ark.get("water_level")
     delta = ark.get("delta")
     risk_bias = (action_guidance or {}).get("risk_bias", "")
+    risk_bias_label = {
+        "constructive": "建設性擴張",
+        "constructive_but_selective": "建設性但選擇性",
+        "balanced_cautious": "平衡控速",
+        "selective": "選擇性控速",
+        "defensive": "防禦",
+        "risk_off": "風險收縮",
+        "constructive_but_cautious": "審慎修復",
+        "event_wait": "事件觀望",
+    }.get(risk_bias, risk_bias or "依情境控速")
     direction = "持平"
     try:
         d = float(delta)
@@ -163,7 +173,7 @@ def build_verdict_from_scenario(data: dict, scenario: dict, action_guidance: dic
     return {
         "level": label,
         "level_en": slug,
-        "reason": f"方舟水位 {wl}%（{direction}）；新版八情境判定為「{scenario['name']}」。{reason} ArkQuant 風險姿態：{risk_bias}。",
+        "reason": f"方舟水位 {wl}%（{direction}）；新版八情境判定為「{scenario['name']}」。{reason} 執行風險姿態：{risk_bias_label}。",
     }
 
 def normalize_zone_overlap(section: dict | None) -> None:
@@ -264,6 +274,11 @@ def enrich_issue(data: dict) -> dict:
         "market_summary": data.get(
             "market_summary",
             f"加權 {data['market']['tw_index']['line'].split()[0] if data.get('market') else ''}",
+        ),
+        "session_label": data.get("session_label") or (
+            "Taipei intraday"
+            if "盤中" in str(data.get("market", {}).get("tw_index", {}).get("line", ""))
+            else "Taipei pre-open"
         ),
     }
     ctx["home"] = home_context(data, ctx)
