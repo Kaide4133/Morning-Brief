@@ -9,6 +9,7 @@ import re
 import statistics
 import sys
 import time
+import urllib.parse
 import urllib.request
 from datetime import datetime
 from pathlib import Path
@@ -232,6 +233,58 @@ def fetch_yahoo_daily(code: str, range_days: str = "2y") -> tuple[list[dict], st
         except Exception:
             continue
     return [], "UNKNOWN", None
+
+
+def fetch_twse_month_rows(code: str, as_of: str) -> list[dict]:
+    """Fetch official TWSE OHLCV for the report month.
+
+    Yahoo occasionally omits a valid Taiwan ETF trading day around distributions,
+    so comparing the current intraday bar directly with Yahoo's older bar produces a
+    false daily percentage.  Overlay completed TWSE rows while retaining Yahoo's
+    current intraday bar when the official daily file is not final yet.
+    """
+    month = as_of.replace("-", "")[:6] + "01"
+    url = "https://www.twse.com.tw/exchangeReport/STOCK_DAY?" + urllib.parse.urlencode(
+        {"response": "json", "date": month, "stockNo": code}
+    )
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    try:
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            payload = json.loads(resp.read().decode("utf-8-sig"))
+    except Exception:
+        return []
+    if payload.get("stat") != "OK":
+        return []
+
+    rows: list[dict] = []
+    for item in payload.get("data") or []:
+        if not isinstance(item, list) or len(item) < 9:
+            continue
+        try:
+            roc_year, month_num, day_num = [int(x) for x in str(item[0]).split("/")]
+            date = f"{roc_year + 1911:04d}-{month_num:02d}-{day_num:02d}"
+            if date > as_of:
+                continue
+            rows.append(
+                {
+                    "date": date,
+                    "open": float(str(item[3]).replace(",", "")),
+                    "high": float(str(item[4]).replace(",", "")),
+                    "low": float(str(item[5]).replace(",", "")),
+                    "close": float(str(item[6]).replace(",", "")),
+                    "volume": int(str(item[1]).replace(",", "")),
+                }
+            )
+        except (TypeError, ValueError):
+            continue
+    return rows
+
+
+def overlay_daily_rows(rows: list[dict], official_rows: list[dict]) -> list[dict]:
+    merged = {row["date"]: row for row in rows if row.get("date")}
+    for row in official_rows:
+        merged[row["date"]] = row
+    return [merged[date] for date in sorted(merged)]
 
 
 def sma(values: list[float], n: int) -> float | None:
@@ -656,6 +709,8 @@ def main() -> int:
 
     for i, code in enumerate(universe):
         rows, market, yahoo_name = fetch_yahoo_daily(code)
+        if rows and market == "TWSE":
+            rows = overlay_daily_rows(rows, fetch_twse_month_rows(code, as_of))
         rec = build_record(code, rows, market, as_of) if rows else None
         if rec:
             rec["name"] = resolve_stock_name(code, html_map, yahoo_name)
@@ -673,7 +728,7 @@ def main() -> int:
         "version": 1,
         "as_of": as_of,
         "generated_at": datetime.now().isoformat(timespec="seconds"),
-        "source": "Yahoo Finance chart API (daily close from quote, not meta price)",
+        "source": "Yahoo Finance chart API with current-month TWSE STOCK_DAY OHLCV overlay",
         "purpose": "technical-spider scanner radar alert backtest",
         "records": records,
         "missing": missing,
