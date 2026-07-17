@@ -436,7 +436,7 @@ def build_action_guidance(data: dict, scenario: dict) -> dict:
                 "max_initial_deploy_pct": 0.4,
                 "conditions": ["core_or_high_quality_only", "no_chase", "position_size_limited"],
             },
-            "rebuy": {"allowed": True, "mode": "wait_for_pullback", "conditions": ["MA20_support", "three_signal_reconfirmation"]},
+            "rebuy": {"allowed": True, "mode": "wait_for_pullback", "conditions": ["MA20_support", "murphy_right_side_reconfirmation"]},
         },
         "02": {
             "risk_bias": "constructive_but_selective",
@@ -466,7 +466,7 @@ def build_action_guidance(data: dict, scenario: dict) -> dict:
                 "max_initial_deploy_pct": 0.25,
                 "conditions": ["conditional_only", "core_or_high_quality_only", "pullback_confirmed", "no_chase"],
             },
-            "rebuy": {"allowed": True, "mode": "wait_for_pullback", "conditions": ["sold_name_drawdown_2_to_3_pct", "MA20_support", "three_signal_reconfirmation"]},
+            "rebuy": {"allowed": True, "mode": "wait_for_pullback", "conditions": ["sold_name_drawdown_2_to_3_pct", "MA20_support", "murphy_right_side_reconfirmation"]},
         },
         "04": {
             "risk_bias": "selective",
@@ -482,10 +482,10 @@ def build_action_guidance(data: dict, scenario: dict) -> dict:
             "allow_add": False,
             "allow_trim": True,
             "deploy_mode": "wait_for_pullback",
-            "rebuy_condition": ["MA20_support", "volume_contract", "three_signal_reconfirmation", "water_stabilizes"],
+            "rebuy_condition": ["MA20_support", "volume_contract", "murphy_right_side_reconfirmation", "water_stabilizes"],
             "trim": {"allowed": True, "mode": "selective_trim", "max_overshoot_pct": 0.25},
             "deploy": {"allowed": False, "mode": "wait_for_pullback", "conditions": ["water_stabilizes", "support_confirmed"]},
-            "rebuy": {"allowed": True, "mode": "wait_for_pullback", "conditions": ["MA20_support", "volume_contract", "three_signal_reconfirmation", "water_stabilizes"]},
+            "rebuy": {"allowed": True, "mode": "wait_for_pullback", "conditions": ["MA20_support", "volume_contract", "murphy_right_side_reconfirmation", "water_stabilizes"]},
         },
         "06": {
             "risk_bias": "risk_off",

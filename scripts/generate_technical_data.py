@@ -280,6 +280,74 @@ def fetch_twse_month_rows(code: str, as_of: str) -> list[dict]:
     return rows
 
 
+def _mis_price(value: object) -> float | None:
+    try:
+        text = str(value or "").split("_")[0].replace(",", "").strip()
+        price = float(text)
+        return price if price > 0 else None
+    except (TypeError, ValueError):
+        return None
+
+
+def fetch_twse_intraday_row(code: str, as_of: str) -> tuple[dict | None, str | None]:
+    """Use official TWSE MIS as an intraday fallback for a missing current bar.
+
+    Thinly traded ETFs can have a valid current session in TWSE MIS while Yahoo has
+    not emitted a daily bar yet. Only use this path for today's report date. MIS
+    sometimes returns ``z=-`` between trades, so fall back to the best bid/ask
+    midpoint; this remains an official near-live market observation, not mock data.
+    """
+    if as_of != datetime.now().strftime("%Y-%m-%d"):
+        return None, None
+    ex_ch = f"tse_{code}.tw|otc_{code}.tw"
+    url = "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?" + urllib.parse.urlencode(
+        {"ex_ch": ex_ch, "json": "1", "delay": "0"}
+    )
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    try:
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            payload = json.loads(resp.read().decode("utf-8-sig"))
+    except Exception:
+        return None, None
+
+    for item in payload.get("msgArray") or []:
+        if str(item.get("c") or "").strip() != code:
+            continue
+        raw_date = str(item.get("d") or "")
+        if len(raw_date) != 8:
+            continue
+        date = f"{raw_date[:4]}-{raw_date[4:6]}-{raw_date[6:8]}"
+        if date != as_of:
+            continue
+        close = _mis_price(item.get("z"))
+        if close is None:
+            bid = _mis_price(item.get("b"))
+            ask = _mis_price(item.get("a"))
+            if bid is not None and ask is not None:
+                close = (bid + ask) / 2
+            else:
+                close = bid or ask
+        if close is None:
+            continue
+        open_price = _mis_price(item.get("o")) or close
+        high = max(_mis_price(item.get("h")) or close, open_price, close)
+        low = min(_mis_price(item.get("l")) or close, open_price, close)
+        try:
+            volume = int(float(str(item.get("v") or "0").replace(",", "")))
+        except (TypeError, ValueError):
+            volume = 0
+        market = "TWSE" if item.get("ex") == "tse" else "TPEX"
+        return {
+            "date": date,
+            "open": float(open_price),
+            "high": float(high),
+            "low": float(low),
+            "close": float(close),
+            "volume": volume,
+        }, market
+    return None, None
+
+
 def overlay_daily_rows(rows: list[dict], official_rows: list[dict]) -> list[dict]:
     merged = {row["date"]: row for row in rows if row.get("date")}
     for row in official_rows:
@@ -711,6 +779,11 @@ def main() -> int:
         rows, market, yahoo_name = fetch_yahoo_daily(code)
         if rows and market == "TWSE":
             rows = overlay_daily_rows(rows, fetch_twse_month_rows(code, as_of))
+        if rows and rows[-1].get("date") != as_of:
+            intraday_row, intraday_market = fetch_twse_intraday_row(code, as_of)
+            if intraday_row:
+                rows = overlay_daily_rows(rows, [intraday_row])
+                market = intraday_market or market
         rec = build_record(code, rows, market, as_of) if rows else None
         if rec:
             rec["name"] = resolve_stock_name(code, html_map, yahoo_name)
@@ -728,7 +801,7 @@ def main() -> int:
         "version": 1,
         "as_of": as_of,
         "generated_at": datetime.now().isoformat(timespec="seconds"),
-        "source": "Yahoo Finance chart API with current-month TWSE STOCK_DAY OHLCV overlay",
+        "source": "Yahoo Finance chart API with TWSE STOCK_DAY overlay and official MIS intraday fallback",
         "purpose": "technical-spider scanner radar alert backtest",
         "records": records,
         "missing": missing,
