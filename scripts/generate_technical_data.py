@@ -4,11 +4,13 @@
 from __future__ import annotations
 
 import argparse
+import http.cookiejar
 import json
 import re
 import statistics
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import datetime
@@ -22,6 +24,8 @@ OUTPUT_PATHS = [
 ]
 
 OFFICIAL_NAME_CACHE: dict[str, str] | None = None
+YAHOO_OPENER: urllib.request.OpenerDirector | None = None
+YAHOO_CRUMB: str | None = None
 
 STOCK_NAMES: dict[str, str] = {
     "2330": "台積電",
@@ -192,16 +196,56 @@ def resolve_universe(args: argparse.Namespace) -> list[str]:
     return out
 
 
+def _bootstrap_yahoo_session() -> tuple[urllib.request.OpenerDirector, str]:
+    """Create a cookie/crumb Yahoo session when anonymous chart calls are rate-limited."""
+    global YAHOO_OPENER, YAHOO_CRUMB
+    if YAHOO_OPENER is not None and YAHOO_CRUMB:
+        return YAHOO_OPENER, YAHOO_CRUMB
+
+    jar = http.cookiejar.CookieJar()
+    opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
+    seed = urllib.request.Request("https://fc.yahoo.com/", headers={"User-Agent": "Mozilla/5.0"})
+    try:
+        opener.open(seed, timeout=20).read()
+    except urllib.error.HTTPError:
+        # fc.yahoo.com normally returns 404 after setting the A3 cookie.
+        pass
+    crumb_req = urllib.request.Request(
+        "https://query2.finance.yahoo.com/v1/test/getcrumb",
+        headers={"User-Agent": "Mozilla/5.0"},
+    )
+    with opener.open(crumb_req, timeout=20) as resp:
+        crumb = resp.read().decode("utf-8", "replace").strip()
+    if not crumb or "Too Many Requests" in crumb:
+        raise RuntimeError("Yahoo crumb bootstrap failed")
+    YAHOO_OPENER, YAHOO_CRUMB = opener, crumb
+    return opener, crumb
+
+
+def _read_yahoo_json(url: str) -> dict:
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    try:
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            return json.loads(resp.read())
+    except urllib.error.HTTPError as exc:
+        if exc.code != 429:
+            raise
+    opener, crumb = _bootstrap_yahoo_session()
+    sep = "&" if "?" in url else "?"
+    authed_url = f"{url}{sep}crumb={urllib.parse.quote(crumb)}"
+    authed_req = urllib.request.Request(authed_url, headers={"User-Agent": "Mozilla/5.0"})
+    with opener.open(authed_req, timeout=20) as resp:
+        return json.loads(resp.read())
+
+
 def fetch_yahoo_daily(code: str, range_days: str = "2y") -> tuple[list[dict], str, str | None]:
     for suffix, market in ((".TW", "TWSE"), (".TWO", "TPEX")):
         url = (
             f"https://query2.finance.yahoo.com/v8/finance/chart/{code}{suffix}"
             f"?range={range_days}&interval=1d"
         )
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
         try:
-            with urllib.request.urlopen(req, timeout=20) as resp:
-                payload = json.loads(resp.read())
+            payload = _read_yahoo_json(url)
             result = payload["chart"]["result"][0]
             timestamps = result.get("timestamp") or []
             quote = result["indicators"]["quote"][0]
@@ -816,9 +860,18 @@ def main() -> int:
         print("ERROR: records == 0，中止寫入", file=sys.stderr)
         return 1
 
+    # The browser only needs the recent daily chart window. Keep full weekly data for
+    # validation above, then slim the deployed payload so GitHub Pages/WebViews do not
+    # intermittently fail while fetching a multi-megabyte JSON file.
+    for rec in records:
+        rec.pop("weekly_series", None)
+        rec.pop("chart_window", None)
+        rec["series"] = (rec.get("series") or [])[-90:]
+    payload_text = json.dumps(doc, ensure_ascii=False, separators=(",", ":"))
+
     for path in OUTPUT_PATHS:
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(json.dumps(doc, ensure_ascii=False, indent=2), encoding="utf-8")
+        path.write_text(payload_text, encoding="utf-8")
 
     print(
         json.dumps(

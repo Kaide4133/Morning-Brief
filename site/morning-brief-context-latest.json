@@ -1,57 +1,57 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-07-09",
-  "valid_for_trading_date": "2026-07-09",
-  "data_as_of": "2026-07-09",
+  "date": "2026-07-20",
+  "valid_for_trading_date": "2026-07-20",
+  "data_as_of": "2026-07-20",
   "stale": false,
-  "issue_no": 40,
+  "issue_no": 46,
   "scenario": {
-    "id": "04",
-    "slug": "rotation-switching",
-    "label": "輪動換手",
-    "confidence": 1.0,
-    "reason": "水位仍守 70% 以上但斜率轉弱，四區清單呈主線強、權值與弱勢股分化，判定為輪動換手。",
-    "source": "manual_override",
-    "classifier_suggestion": "02"
+    "id": "03",
+    "slug": "high-level-speed-control",
+    "label": "高位控速",
+    "confidence": 0.76,
+    "reason": "水位 76.8% 快速上升 +4.8pt，但外部/位階壓力仍要求控速，追價需控速",
+    "source": "classifier"
   },
   "water": {
-    "level": 70.6,
-    "previous": 71.3,
-    "change": -0.7,
-    "direction": "falling"
+    "level": 76.8,
+    "previous": 72.0,
+    "change": 4.8,
+    "direction": "rising"
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
-    "short_term_bias": "cautious_review",
-    "risk_posture": "selective",
+    "short_term_bias": "increase_exposure_allowed",
+    "risk_posture": "balanced_cautious",
     "water_policy": {
-      "direction": "falling",
-      "change": -0.7,
-      "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
+      "direction": "rising",
+      "change": 4.8,
+      "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
     },
     "scenario_context": {
-      "id": "04",
-      "label": "輪動換手",
-      "confidence": 1.0
+      "id": "03",
+      "label": "高位控速",
+      "confidence": 0.76
     },
     "policy_focus": [
-      "操作語言從低位修復轉為輪動換手：核心強股不追高，等回測與量能確認；弱承接或非主線反彈不留戀，以汰弱留強維持水位健康。ETF 端以半導體、電子與台灣權值為主，但槓桿與高溢價不放大。",
-      "VIX 上升代表外部避險需求仍在，台積電與部分 IC 設計回落則提醒權值不是同步擴張。若水位續降或強勢股只剩少數高波動個股，應把新增佈局降為觀察，保留子彈等待回測。",
-      "水位僅小降 0.7pt 且仍在 70% 上方，代表風控沒有轉成全面防禦；但四區清單中同時出現景碩、鴻勁、日月光投控、旺矽、環球晶強攻，以及台積電、聯發科、矽力、藥華藥、風青等回落，盤面是強弱分流。",
-      "台股盤面以半導體供應鏈輪動為核心，政策面沒有足以改變今日水位判讀的單一事件。"
+      "高位控速：核心可留、候選可排，但不追 10:10 前的 V 型第一段。優先等加權 42,672 前收附近與臺指期 43,000 上方承接穩定，再用相對強度、量價與回測確認選擇性部署；能源與漲停附近標的只觀察，不把事件溢價當成安全買點。",
+      "VIX +12.19%、SOX -1.63%、外資臺指期淨未沖銷 -86,189 口，且原油期貨亞洲時段約 +2.36%，表示外部風險溫度仍高。若現貨再失 42,672 前收與早盤回收結構，控速升級為等待；若現貨守穩且期貨強勢不靠擴大溢價維持，才把水位空間轉成小額、分批、核心優先。",
+      "方舟 09:05 清單呈現兩條線：台積電、聯發科、台達電、聯詠、欣興、景碩等 AI 核心反彈；國巨、聯電、日月光、臻鼎與部分高價供應鏈仍跌。升溫區轉向原油、石化、太陽能、化工與中小型題材，顯示資金正在修復與輪動，而非所有科技股同步擴張。",
+      "Reuters 7/17 報導美股晶片賣壓擴大，並聚焦 AI 交易與槓桿部位強度；Yahoo 數據顯示 SOX -1.63%、Nasdaq -1.40%，七巨頭僅 Apple 小漲，台股 AI 反彈仍需二次確認。"
     ],
     "systemic_risk": "中",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
   },
   "action_guidance": {
-    "risk_bias": "selective",
-    "allow_add": false,
+    "risk_bias": "balanced_cautious",
+    "allow_add": true,
     "allow_trim": true,
-    "deploy_mode": "rotate_after_confirmation",
+    "deploy_mode": "slow_selective_add",
+    "max_initial_deploy_pct": 0.25,
     "trim": {
       "allowed": true,
-      "mode": "rotate_trim",
+      "mode": "selective_trim",
       "max_overshoot_pct": 0.25,
       "priority": [
         "positive_return_overheated_branch",
@@ -61,18 +61,23 @@
       ]
     },
     "deploy": {
-      "allowed": false,
-      "mode": "rotate_after_confirmation",
+      "allowed": true,
+      "mode": "slow_selective_add",
+      "max_initial_deploy_pct": 0.25,
       "conditions": [
-        "wait_for_relative_strength_confirmation"
+        "conditional_only",
+        "core_or_high_quality_only",
+        "pullback_confirmed",
+        "no_chase"
       ]
     },
     "rebuy": {
       "allowed": true,
-      "mode": "wait_for_confirmation",
+      "mode": "wait_for_pullback",
       "conditions": [
-        "rotation_confirms",
-        "no_new_low"
+        "sold_name_drawdown_2_to_3_pct",
+        "MA20_support",
+        "murphy_right_side_reconfirmation"
       ]
     },
     "trim_priority": [
@@ -81,15 +86,15 @@
       "leveraged_etf_overheat",
       "low_efficiency_small_branch"
     ],
-    "confidence": 1.0,
+    "confidence": 0.76,
     "source": "morning_brief_classifier"
   },
   "editorial": {
-    "state_label": "輪動換手",
-    "summary": "水位仍守 70% 以上但斜率轉弱，四區清單呈主線強、權值與弱勢股分化，判定為輪動換手。"
+    "state_label": "高位控速",
+    "summary": "水位 76.8% 快速上升 +4.8pt，但外部/位階壓力仍要求控速，追價需控速"
   },
   "source": {
-    "issue_file": "data/issues/20260709.json",
-    "generated_at": "2026-07-09T14:00:21+08:00"
+    "issue_file": "data/issues/20260720.json",
+    "generated_at": "2026-07-20T10:22:23+08:00"
   }
 }
