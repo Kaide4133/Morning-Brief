@@ -69,7 +69,7 @@
           <div class="{{ m.delta_class(market.sox.change_pct) }}">{{ m.fmt_pct(market.sox.change_pct) }}</div>
         </div>
         <div class="data-cell">
-          <div class="data-label">台指夜盤</div>
+          <div class="data-label">臺指期近月</div>
           <div class="data-value">加權 <span class="{{ m.delta_class(market.tw_index.change_pct) }}" style="display:inline">{{ market.tw_index.line }}</span></div>
           <div class="data-value" style="font-size:.9rem;margin-top:4px">{{ market.futures.line }}</div>
         </div>
@@ -298,7 +298,7 @@
 
   <section class="section-zone" id="s12">
     <div class="container">
-      {{ m.section_head('XII', 'SECTION', '台指夜盤走勢解析', 'TX Night Session', 'XII') }}
+      {{ m.section_head('XII', 'SECTION', '臺指期近月走勢解析', 'TX Futures Session', 'XII') }}
       <div class="prose content-card"><p>{{ analysis.tx_night }}</p></div>
     </div>
   </section>

@@ -95,7 +95,10 @@ def _pct_from_meta(meta: str | None) -> float | None:
     matches = PCT_RE.findall(meta)
     if not matches:
         return None
-    return float(matches[-1])
+    # Card metadata starts with the market-price move; later percentages are
+    # ETF premium/discount or monthly-revenue fields. Breadth must use the
+    # first percentage, never the final business-metric percentage.
+    return float(matches[0])
 
 
 def _collect_meta_items(data: dict) -> list[str]:
@@ -325,7 +328,11 @@ def classify_scenario(data: dict, scenario_map: dict) -> dict:
 
     # 08 event wait: earnings/macro/holiday/no-trading days are not ordinary tape days.
     # Keep true risk-off ahead of event-wait so panic days still reduce exposure.
-    if event_wait and not (risk_score >= 4 and water_dir == "falling"):
+    # A sharp Ark-water deterioration is itself a risk-budget contraction signal,
+    # even when external markets rally or the editorial text mentions earnings.
+    if event_wait and not (
+        (risk_score >= 4 and water_dir == "falling") or d <= -2.5
+    ):
         return _match_result(
             "08",
             scenario_map,
@@ -533,7 +540,20 @@ def build_leader_policy(data: dict, water: dict, action_guidance: dict, scenario
     direction = water.get("direction") or "stable"
     change = water.get("change")
     risk_bias = action_guidance.get("risk_bias", "neutral") if isinstance(action_guidance, dict) else "neutral"
-    if direction == "rising":
+    allow_add = action_guidance.get("allow_add") if isinstance(action_guidance, dict) else None
+    if risk_bias == "risk_off":
+        short_term_bias = "reduce_risk_review"
+        posture = "risk_off"
+        default_policy = "水位急降且風險預算收縮，暫停新增曝險；先檢查過熱、非護城河與槓桿風險。"
+    elif risk_bias == "event_wait":
+        short_term_bias = "event_wait"
+        posture = "event_wait"
+        default_policy = "重大事件尚未落地，暫停新增與非必要調節；等待事件解析。"
+    elif allow_add is False:
+        short_term_bias = "defensive_hold_review"
+        posture = risk_bias if risk_bias != "neutral" else "defensive"
+        default_policy = "目前不允許新增曝險；維持防禦檢查，等待水位、價格與情境重新確認。"
+    elif direction == "rising":
         short_term_bias = "increase_exposure_allowed"
         posture = "constructive_selective"
         default_policy = "水位上升，允許依個股訊號小額佈局；仍禁止追價。"

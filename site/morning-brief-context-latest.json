@@ -1,58 +1,56 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-07-21",
-  "valid_for_trading_date": "2026-07-21",
-  "data_as_of": "2026-07-21",
+  "date": "2026-07-22",
+  "valid_for_trading_date": "2026-07-22",
+  "data_as_of": "2026-07-22",
   "stale": false,
-  "issue_no": 47,
+  "issue_no": 48,
   "scenario": {
-    "id": "03",
-    "slug": "high-level-speed-control",
-    "label": "高位控速",
-    "confidence": 1.0,
-    "reason": "方舟水位 76.5% 仍在健康高水位，但較 7/20 微降 0.3pt；同期加權指數與近月臺指期約漲 2.94%／3.06%，價格速度明顯快於健康斜率。SOX 僅修復 0.60%、Nasdaq 幾乎持平，外資期貨仍淨空 -78,337 口，因此依新版八情境判定「03 高位控速」。",
-    "source": "manual_override",
-    "classifier_suggestion": "03"
+    "id": "06",
+    "slug": "risk-contraction",
+    "label": "風險收縮",
+    "confidence": 0.84,
+    "reason": "水位急降 -3.5pt，風險預算收縮",
+    "source": "classifier"
   },
   "water": {
-    "level": 76.5,
-    "previous": 76.8,
-    "change": -0.3,
+    "level": 73.0,
+    "previous": 76.5,
+    "change": -3.5,
     "direction": "falling"
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
-    "short_term_bias": "cautious_review",
-    "risk_posture": "balanced_cautious",
+    "short_term_bias": "reduce_risk_review",
+    "risk_posture": "risk_off",
     "water_policy": {
       "direction": "falling",
-      "change": -0.3,
-      "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
+      "change": -3.5,
+      "interpretation": "水位急降且風險預算收縮，暫停新增曝險；先檢查過熱、非護城河與槓桿風險。"
     },
     "scenario_context": {
-      "id": "03",
-      "label": "高位控速",
-      "confidence": 1.0
+      "id": "06",
+      "label": "風險收縮",
+      "confidence": 0.84
     },
     "policy_focus": [
-      "高位控速：不否認趨勢，也不在約 3% 的指數急漲與多檔接近漲停時追第一段。核心與既有主線可留；新部署優先等 43,500 附近與近月期貨 43,800 上方的回測承接，再看量價、相對強度與右側確認，小額分批而非一次用完水位空間。",
-      "外資臺指期淨未沖銷仍為 -78,337 口，水位又沒有跟隨指數同步上升；若期貨自 44,000 附近回落、現貨跌回 43,500 下方且強勢股家數快速收縮，今天的價格衝刺可能轉成高檔換手。反之，回測後仍能守住、且漲停家數沒有只靠少數高價 AI 股支撐，才可把急漲升級為更穩定的擴張。",
-      "方舟 10:19 清單顯示 AI 硬體價值區全面轉強：台燿 +9.78%、台光電 +7.85%、欣興 +10%、聯茂 +9.92%、景碩 +9.87%、貿聯-KY +9.89%，台積電亦漲 2.59%。升溫區則同時出現台塑化、台虹、迅杰、亞電、和成等強勢股，以及點晶、鼎固-KY、慶騰、中美晶等回落股，代表指數很強、內部仍有明顯分流。",
-      "Reuters 7/20 報導美股指數收低，市場同時關注伊朗局勢與企業展望；實際收盤數據則呈現 SOX +0.60%、Nasdaq -0.05%，代表 AI 晶片修復但廣泛風險偏好沒有同步擴張。"
+      "風險收縮：暫停正式新增曝險，不追晶片反彈第二段；既有核心不因水位下降被機械清空，但先檢查正報酬過熱枝葉、非護城河與槓桿 ETF。等待水位止跌、44,500 附近現貨與 44,950 附近期貨承接，以及 Murphy 右側再確認後，才重新評估部署。",
+      "外資臺指期仍淨空 -78,490 口，油價與美伊衝突升高通膨尾端風險，Reuters 調查也顯示市場重新評估升息可能。若現貨跌回 44,500 下方、近月期貨失守 44,950，且強勢股家數快速收縮，價格與水位背離可能轉成高檔降風險；即使守住，也要等下一次水位止跌，而非只憑單日晶片反彈解除防禦。",
+      "方舟 09:08 清單顯示產業價值區 34 檔全數上漲，台燿 +9.72%、信驊 +9.54%、國巨* +8.51%、聯茂 +8.32%、欣興 +7.64%；產業升溫區則為 22 漲、5 跌、2 平、1 檔無股價，和成、旭然接近漲停，但馬光-KY -9.01%、點晶 -7.18%。ETF 有效股價卡 13 張皆上漲，另有 4 張僅顯示淨值。價格廣度很強，健康度卻反向急降，這就是今天的核心背離。",
+      "Reuters 7/21 報導美股由晶片股帶動反彈，SOX +5.21%；但報導同時提醒財報前追價已提高「priced for perfection」風險。"
     ],
     "systemic_risk": "中",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
   },
   "action_guidance": {
-    "risk_bias": "balanced_cautious",
-    "allow_add": true,
+    "risk_bias": "risk_off",
+    "allow_add": false,
     "allow_trim": true,
-    "deploy_mode": "slow_selective_add",
-    "max_initial_deploy_pct": 0.25,
+    "deploy_mode": "reduce_exposure",
     "trim": {
       "allowed": true,
-      "mode": "selective_trim",
+      "mode": "reduce_exposure",
       "max_overshoot_pct": 0.25,
       "priority": [
         "positive_return_overheated_branch",
@@ -62,23 +60,18 @@
       ]
     },
     "deploy": {
-      "allowed": true,
-      "mode": "slow_selective_add",
-      "max_initial_deploy_pct": 0.25,
+      "allowed": false,
+      "mode": "disabled",
       "conditions": [
-        "conditional_only",
-        "core_or_high_quality_only",
-        "pullback_confirmed",
-        "no_chase"
+        "risk_off_no_new_exposure"
       ]
     },
     "rebuy": {
-      "allowed": true,
-      "mode": "wait_for_pullback",
+      "allowed": false,
+      "mode": "disabled_until_stabilized",
       "conditions": [
-        "sold_name_drawdown_2_to_3_pct",
-        "MA20_support",
-        "murphy_right_side_reconfirmation"
+        "risk_bias_improves",
+        "water_stabilizes"
       ]
     },
     "trim_priority": [
@@ -87,15 +80,15 @@
       "leveraged_etf_overheat",
       "low_efficiency_small_branch"
     ],
-    "confidence": 1.0,
+    "confidence": 0.84,
     "source": "morning_brief_classifier"
   },
   "editorial": {
-    "state_label": "高位控速",
-    "summary": "方舟水位 76.5% 仍在健康高水位，但較 7/20 微降 0.3pt；同期加權指數與近月臺指期約漲 2.94%／3.06%，價格速度明顯快於健康斜率。SOX 僅修復 0.60%、Nasdaq 幾乎持平，外資期貨仍淨空 -78,337 口，因此依新版八情境判定「03 高位控速」。"
+    "state_label": "風險收縮",
+    "summary": "水位急降 -3.5pt，風險預算收縮"
   },
   "source": {
-    "issue_file": "data/issues/20260721.json",
-    "generated_at": "2026-07-21T10:44:36+08:00"
+    "issue_file": "data/issues/20260722.json",
+    "generated_at": "2026-07-22T09:45:31+08:00"
   }
 }
