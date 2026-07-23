@@ -1,56 +1,62 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-07-22",
-  "valid_for_trading_date": "2026-07-22",
-  "data_as_of": "2026-07-22",
+  "date": "2026-07-23",
+  "valid_for_trading_date": "2026-07-23",
+  "data_as_of": "2026-07-23",
   "stale": false,
-  "issue_no": 48,
+  "issue_no": 49,
   "scenario": {
-    "id": "06",
-    "slug": "risk-contraction",
-    "label": "風險收縮",
-    "confidence": 0.84,
-    "reason": "水位急降 -3.5pt，風險預算收縮",
+    "id": "05",
+    "slug": "orderly-pullback",
+    "label": "有序回檔",
+    "confidence": 0.78,
+    "reason": "水位 72.0% 仍在健康區，但水位/外部/廣度進入有序回檔，等待承接確認",
     "source": "classifier"
   },
   "water": {
-    "level": 73.0,
-    "previous": 76.5,
-    "change": -3.5,
+    "level": 72.0,
+    "previous": 73.0,
+    "change": -1.0,
     "direction": "falling"
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
-    "short_term_bias": "reduce_risk_review",
-    "risk_posture": "risk_off",
+    "short_term_bias": "defensive_hold_review",
+    "risk_posture": "defensive",
     "water_policy": {
       "direction": "falling",
-      "change": -3.5,
-      "interpretation": "水位急降且風險預算收縮，暫停新增曝險；先檢查過熱、非護城河與槓桿風險。"
+      "change": -1.0,
+      "interpretation": "目前不允許新增曝險；維持防禦檢查，等待水位、價格與情境重新確認。"
     },
     "scenario_context": {
-      "id": "06",
-      "label": "風險收縮",
-      "confidence": 0.84
+      "id": "05",
+      "label": "有序回檔",
+      "confidence": 0.78
     },
     "policy_focus": [
-      "風險收縮：暫停正式新增曝險，不追晶片反彈第二段；既有核心不因水位下降被機械清空，但先檢查正報酬過熱枝葉、非護城河與槓桿 ETF。等待水位止跌、44,500 附近現貨與 44,950 附近期貨承接，以及 Murphy 右側再確認後，才重新評估部署。",
-      "外資臺指期仍淨空 -78,490 口，油價與美伊衝突升高通膨尾端風險，Reuters 調查也顯示市場重新評估升息可能。若現貨跌回 44,500 下方、近月期貨失守 44,950，且強勢股家數快速收縮，價格與水位背離可能轉成高檔降風險；即使守住，也要等下一次水位止跌，而非只憑單日晶片反彈解除防禦。",
-      "方舟 09:08 清單顯示產業價值區 34 檔全數上漲，台燿 +9.72%、信驊 +9.54%、國巨* +8.51%、聯茂 +8.32%、欣興 +7.64%；產業升溫區則為 22 漲、5 跌、2 平、1 檔無股價，和成、旭然接近漲停，但馬光-KY -9.01%、點晶 -7.18%。ETF 有效股價卡 13 張皆上漲，另有 4 張僅顯示淨值。價格廣度很強，健康度卻反向急降，這就是今天的核心背離。",
-      "Reuters 7/21 報導美股由晶片股帶動反彈，SOX +5.21%；但報導同時提醒財報前追價已提高「priced for perfection」風險。"
+      "有序回檔：正式新增曝險暫停，核心不因水位下降被機械清空；若要調節，仍先檢查正報酬過熱枝葉、非護城河與槓桿曝險，不用深虧弱枝硬湊水位。等待水位止跌、現貨 44,750 附近與近月期貨 44,850 附近承接，以及 Murphy 右側再確認，才重啟小額部署或接回。",
+      "外資臺指期仍淨空 -76,595 口，WTI 亞洲盤約 88.12、較前值 +3.78%，Reuters 指出美伊衝突與紅海油運威脅把油價推至六週高。若現貨跌破 44,750、期貨跌回 44,850 下方且水位續降，回檔可能加深；若守住，也要等健康度止跌，不能只靠油價或少數 AI 強股追價。",
+      "方舟 09:08 四區共 81 張卡、78 個唯一代號；卡片漲跌為 45 漲、31 跌、1 平、4 張缺漲跌。ETF 以原油正向商品最強，產業則由尚茂、奇鋐、台塑、柏承、台化、台塑化領漲；和成、冠西電、臻鼎-KY、晟田與亞電承壓。AI、能源／塑化與個別中小型股輪動並存，並非單一主線全面擴張。",
+      "AMD 宣布最多投資 Anthropic 50 億美元，Anthropic 預計自 2027 上半年起採購最高 2GW AMD AI 晶片；對 AI 伺服器與資料中心供應鏈屬中期需求正面。"
     ],
-    "systemic_risk": "中",
+    "systemic_risk": "中偏高",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
   },
   "action_guidance": {
-    "risk_bias": "risk_off",
+    "risk_bias": "defensive",
     "allow_add": false,
     "allow_trim": true,
-    "deploy_mode": "reduce_exposure",
+    "deploy_mode": "wait_for_pullback",
+    "rebuy_condition": [
+      "MA20_support",
+      "volume_contract",
+      "murphy_right_side_reconfirmation",
+      "water_stabilizes"
+    ],
     "trim": {
       "allowed": true,
-      "mode": "reduce_exposure",
+      "mode": "selective_trim",
       "max_overshoot_pct": 0.25,
       "priority": [
         "positive_return_overheated_branch",
@@ -61,16 +67,19 @@
     },
     "deploy": {
       "allowed": false,
-      "mode": "disabled",
+      "mode": "wait_for_pullback",
       "conditions": [
-        "risk_off_no_new_exposure"
+        "water_stabilizes",
+        "support_confirmed"
       ]
     },
     "rebuy": {
-      "allowed": false,
-      "mode": "disabled_until_stabilized",
+      "allowed": true,
+      "mode": "wait_for_pullback",
       "conditions": [
-        "risk_bias_improves",
+        "MA20_support",
+        "volume_contract",
+        "murphy_right_side_reconfirmation",
         "water_stabilizes"
       ]
     },
@@ -80,15 +89,15 @@
       "leveraged_etf_overheat",
       "low_efficiency_small_branch"
     ],
-    "confidence": 0.84,
+    "confidence": 0.78,
     "source": "morning_brief_classifier"
   },
   "editorial": {
-    "state_label": "風險收縮",
-    "summary": "水位急降 -3.5pt，風險預算收縮"
+    "state_label": "有序回檔",
+    "summary": "水位 72.0% 仍在健康區，但水位/外部/廣度進入有序回檔，等待承接確認"
   },
   "source": {
-    "issue_file": "data/issues/20260722.json",
-    "generated_at": "2026-07-22T09:45:31+08:00"
+    "issue_file": "data/issues/20260723.json",
+    "generated_at": "2026-07-23T09:31:52+08:00"
   }
 }
