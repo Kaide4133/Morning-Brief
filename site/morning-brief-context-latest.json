@@ -1,32 +1,32 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-07-23",
-  "valid_for_trading_date": "2026-07-23",
-  "data_as_of": "2026-07-23",
+  "date": "2026-07-24",
+  "valid_for_trading_date": "2026-07-24",
+  "data_as_of": "2026-07-24",
   "stale": false,
-  "issue_no": 49,
+  "issue_no": 50,
   "scenario": {
     "id": "05",
     "slug": "orderly-pullback",
     "label": "有序回檔",
     "confidence": 0.78,
-    "reason": "水位 72.0% 仍在健康區，但水位/外部/廣度進入有序回檔，等待承接確認",
+    "reason": "水位 73.6% 仍在健康區，但水位/外部/廣度進入有序回檔，等待承接確認",
     "source": "classifier"
   },
   "water": {
-    "level": 72.0,
-    "previous": 73.0,
-    "change": -1.0,
-    "direction": "falling"
+    "level": 73.6,
+    "previous": 72.0,
+    "change": 1.6,
+    "direction": "rising"
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
     "short_term_bias": "defensive_hold_review",
     "risk_posture": "defensive",
     "water_policy": {
-      "direction": "falling",
-      "change": -1.0,
+      "direction": "rising",
+      "change": 1.6,
       "interpretation": "目前不允許新增曝險；維持防禦檢查，等待水位、價格與情境重新確認。"
     },
     "scenario_context": {
@@ -35,10 +35,10 @@
       "confidence": 0.78
     },
     "policy_focus": [
-      "有序回檔：正式新增曝險暫停，核心不因水位下降被機械清空；若要調節，仍先檢查正報酬過熱枝葉、非護城河與槓桿曝險，不用深虧弱枝硬湊水位。等待水位止跌、現貨 44,750 附近與近月期貨 44,850 附近承接，以及 Murphy 右側再確認，才重啟小額部署或接回。",
-      "外資臺指期仍淨空 -76,595 口，WTI 亞洲盤約 88.12、較前值 +3.78%，Reuters 指出美伊衝突與紅海油運威脅把油價推至六週高。若現貨跌破 44,750、期貨跌回 44,850 下方且水位續降，回檔可能加深；若守住，也要等健康度止跌，不能只靠油價或少數 AI 強股追價。",
-      "方舟 09:08 四區共 81 張卡、78 個唯一代號；卡片漲跌為 45 漲、31 跌、1 平、4 張缺漲跌。ETF 以原油正向商品最強，產業則由尚茂、奇鋐、台塑、柏承、台化、台塑化領漲；和成、冠西電、臻鼎-KY、晟田與亞電承壓。AI、能源／塑化與個別中小型股輪動並存，並非單一主線全面擴張。",
-      "AMD 宣布最多投資 Anthropic 50 億美元，Anthropic 預計自 2027 上半年起採購最高 2GW AMD AI 晶片；對 AI 伺服器與資料中心供應鏈屬中期需求正面。"
+      "有序回檔：水位回升可建立候選與分批順序，但第一段急跌不搶。核心依價格與基本結構保留；若市場在 43,950 現貨／43,980 期貨附近止穩、量能收斂，並出現 Murphy 右側再確認，才允許小額試單。未確認前不追油價事件溢價，也不因單日下跌機械清空核心。",
+      "VIX 單日 +12.38%、Nasdaq -2.15%，Mag7 全數下跌；布蘭特約 100.29、WTI 約 91.79，能源與通膨尾端風險同步升高。外資臺指期仍淨空 -75,198 口；若現貨失守 43,950、期貨跌破 43,980 且油價續升，回檔可能加深，部署權必須等待價格證明。",
+      "方舟 09:08 四區共 81 張卡、78 個唯一代號；卡片漲跌為 22 漲、53 跌、1 平、5 張缺漲跌。ETF 由布蘭特正2、S&P石油逆勢領先，產業升溫由尚茂、凌華、緯穎、迅杰與千附較強；價值區僅奇鋐、致茂、仁寶上漲，多數 AI／半導體與權值回檔，廣度明顯偏弱。",
+      "白宮 Section 301 正式文本把臺灣納入 60 個經濟體調查，但對臺灣採 MFN 與新增稅合計 10% 的上限設計，並列產品豁免；需以產品稅則逐項判讀。"
     ],
     "systemic_risk": "中偏高",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
@@ -94,10 +94,10 @@
   },
   "editorial": {
     "state_label": "有序回檔",
-    "summary": "水位 72.0% 仍在健康區，但水位/外部/廣度進入有序回檔，等待承接確認"
+    "summary": "水位 73.6% 仍在健康區，但水位/外部/廣度進入有序回檔，等待承接確認"
   },
   "source": {
-    "issue_file": "data/issues/20260723.json",
-    "generated_at": "2026-07-23T09:31:52+08:00"
+    "issue_file": "data/issues/20260724.json",
+    "generated_at": "2026-07-24T10:52:13+08:00"
   }
 }

@@ -39,6 +39,7 @@ def issue(*, water: float, delta: float, text: str) -> dict:
 def main() -> int:
     assert _pct_from_meta("727 / ▲57 (+8.51%)｜月營收變動 2%｜月營收年增 38.9%") == 8.51
     assert _pct_from_meta("56.75 / ▲1.5 (+2.71%)｜即時淨值 56.91｜折溢價 -0.28%") == 2.71
+    assert _pct_from_meta("股價 —｜即時淨值 305.71｜折溢價 1.01%") is None
 
     sharp_issue = issue(
         water=73.0,

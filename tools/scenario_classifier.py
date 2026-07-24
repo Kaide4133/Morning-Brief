@@ -92,6 +92,12 @@ def _num(value, default: float = 0.0) -> float:
 def _pct_from_meta(meta: str | None) -> float | None:
     if not meta:
         return None
+    # Ark ETF cards can explicitly have no source price while still exposing
+    # NAV and premium/discount.  In that shape the first percentage belongs to
+    # premium/discount, not a market-price move, so it must not enter breadth.
+    normalized = meta.strip()
+    if normalized.startswith(("股價 —", "股價 -")):
+        return None
     matches = PCT_RE.findall(meta)
     if not matches:
         return None

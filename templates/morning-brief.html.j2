@@ -363,7 +363,15 @@
       <div class="colophon-grid">
         <div class="colophon-block">
           <h4>Sources</h4>
-          <p>X (formerly Twitter)<br>Bloomberg<br>TAIFEX 期交所<br>方舟運算 · 持股水位<br>Yahoo Finance</p>
+{% if research_sources %}
+          <ul class="source-list">
+{% for source in research_sources[:8] %}
+            <li><a href="{{ source.url }}" target="_blank" rel="noopener noreferrer">{{ source.title }}</a></li>
+{% endfor %}
+          </ul>
+{% else %}
+          <p>TAIFEX 期交所<br>方舟運算 · 持股水位<br>Yahoo Finance</p>
+{% endif %}
         </div>
         <div class="colophon-block">
           <h4>Masthead</h4>

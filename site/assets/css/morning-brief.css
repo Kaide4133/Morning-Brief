@@ -1053,6 +1053,28 @@ a:hover { text-decoration: underline; }
   margin: 0;
 }
 
+.source-list {
+  margin: 0;
+  padding-left: 16px;
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.55;
+  color: var(--ink-mute);
+}
+
+.source-list li {
+  margin: 0 0 5px;
+}
+
+.source-list a {
+  color: var(--ink-mute);
+  overflow-wrap: anywhere;
+}
+
+.source-list a:hover {
+  color: var(--blood);
+}
+
 .disclaimer {
   font-size: 0.88rem;
   color: var(--ink-mute);
