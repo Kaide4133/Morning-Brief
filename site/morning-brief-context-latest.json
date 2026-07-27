@@ -1,23 +1,23 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-07-24",
-  "valid_for_trading_date": "2026-07-24",
-  "data_as_of": "2026-07-24",
+  "date": "2026-07-27",
+  "valid_for_trading_date": "2026-07-27",
+  "data_as_of": "2026-07-27",
   "stale": false,
-  "issue_no": 50,
+  "issue_no": 51,
   "scenario": {
     "id": "05",
     "slug": "orderly-pullback",
     "label": "有序回檔",
     "confidence": 0.78,
-    "reason": "水位 73.6% 仍在健康區，但水位/外部/廣度進入有序回檔，等待承接確認",
+    "reason": "水位 74.1% 仍在健康區，但水位/外部/廣度進入有序回檔，等待承接確認",
     "source": "classifier"
   },
   "water": {
-    "level": 73.6,
-    "previous": 72.0,
-    "change": 1.6,
+    "level": 74.1,
+    "previous": 73.6,
+    "change": 0.5,
     "direction": "rising"
   },
   "leader_policy": {
@@ -26,7 +26,7 @@
     "risk_posture": "defensive",
     "water_policy": {
       "direction": "rising",
-      "change": 1.6,
+      "change": 0.5,
       "interpretation": "目前不允許新增曝險；維持防禦檢查，等待水位、價格與情境重新確認。"
     },
     "scenario_context": {
@@ -35,10 +35,10 @@
       "confidence": 0.78
     },
     "policy_focus": [
-      "有序回檔：水位回升可建立候選與分批順序，但第一段急跌不搶。核心依價格與基本結構保留；若市場在 43,950 現貨／43,980 期貨附近止穩、量能收斂，並出現 Murphy 右側再確認，才允許小額試單。未確認前不追油價事件溢價，也不因單日下跌機械清空核心。",
-      "VIX 單日 +12.38%、Nasdaq -2.15%，Mag7 全數下跌；布蘭特約 100.29、WTI 約 91.79，能源與通膨尾端風險同步升高。外資臺指期仍淨空 -75,198 口；若現貨失守 43,950、期貨跌破 43,980 且油價續升，回檔可能加深，部署權必須等待價格證明。",
-      "方舟 09:08 四區共 81 張卡、78 個唯一代號；卡片漲跌為 22 漲、53 跌、1 平、5 張缺漲跌。ETF 由布蘭特正2、S&P石油逆勢領先，產業升溫由尚茂、凌華、緯穎、迅杰與千附較強；價值區僅奇鋐、致茂、仁寶上漲，多數 AI／半導體與權值回檔，廣度明顯偏弱。",
-      "白宮 Section 301 正式文本把臺灣納入 60 個經濟體調查，但對臺灣採 MFN 與新增稅合計 10% 的上限設計，並列產品豁免；需以產品稅則逐項判讀。"
+      "有序回檔：水位上升可以擴充候選與分批順序，但第一段下殺不搶。先看現貨 42,970 與近月期貨 43,175 一帶能否守住、量能是否收斂，再等 Murphy 右側再確認；確認前保留子彈、不追半導體反彈第一根，也不因單日回檔機械清空有價格證明的核心。",
+      "SOX -4.25% 而 VIX僅小降，顯示壓力集中在半導體與 AI 資本支出鏈，而非全面恐慌；外資臺指期淨空 -76,260 口仍高。若現貨失守 42,970、期貨跌破 43,175，且高成長硬體同步轉弱，回檔可能加深；若守住，也要防 FOMC 7/28–29 前的折現率波動。",
+      "方舟 09:08 四區共 81 張卡、78 個唯一代號；卡片漲跌為 29 漲、44 跌、6 平、2 張缺來源股價。ETF 價值區 8 跌、2 張無股價，油品 ETF 在升溫區卻分別大跌，顯示事件溢價快速退潮；產業價值區 18 漲、16 跌，鴻勁、台燿、聯詠、京元電子、健策與台光電較強，半導體內部是去槓桿中的個股分化。",
+      "Fed 官方日程把 7/28–29 FOMC 放在本週核心位置；殖利率仍高，半導體估值需要用價格與現金流再驗證。"
     ],
     "systemic_risk": "中偏高",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
@@ -94,10 +94,10 @@
   },
   "editorial": {
     "state_label": "有序回檔",
-    "summary": "水位 73.6% 仍在健康區，但水位/外部/廣度進入有序回檔，等待承接確認"
+    "summary": "水位 74.1% 仍在健康區，但水位/外部/廣度進入有序回檔，等待承接確認"
   },
   "source": {
-    "issue_file": "data/issues/20260724.json",
-    "generated_at": "2026-07-24T10:52:13+08:00"
+    "issue_file": "data/issues/20260727.json",
+    "generated_at": "2026-07-27T12:18:51+08:00"
   }
 }
