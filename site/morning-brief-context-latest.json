@@ -1,23 +1,24 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-07-27",
-  "valid_for_trading_date": "2026-07-27",
-  "data_as_of": "2026-07-27",
+  "date": "2026-07-29",
+  "valid_for_trading_date": "2026-07-29",
+  "data_as_of": "2026-07-29",
   "stale": false,
-  "issue_no": 51,
+  "issue_no": 53,
   "scenario": {
     "id": "05",
     "slug": "orderly-pullback",
     "label": "有序回檔",
-    "confidence": 0.78,
-    "reason": "水位 74.1% 仍在健康區，但水位/外部/廣度進入有序回檔，等待承接確認",
-    "source": "classifier"
+    "confidence": 1.0,
+    "reason": "水位大升 4.8pt、卡片廣度明顯修復，但期現貨、SOX與外資期貨部位仍顯示第二段壓力；空間改善後先守前低與等待右側確認",
+    "source": "manual_override",
+    "classifier_suggestion": "06"
   },
   "water": {
-    "level": 74.1,
-    "previous": 73.6,
-    "change": 0.5,
+    "level": 80.9,
+    "previous": 76.1,
+    "change": 4.8,
     "direction": "rising"
   },
   "leader_policy": {
@@ -26,21 +27,21 @@
     "risk_posture": "defensive",
     "water_policy": {
       "direction": "rising",
-      "change": 0.5,
+      "change": 4.8,
       "interpretation": "目前不允許新增曝險；維持防禦檢查，等待水位、價格與情境重新確認。"
     },
     "scenario_context": {
       "id": "05",
       "label": "有序回檔",
-      "confidence": 0.78
+      "confidence": 1.0
     },
     "policy_focus": [
-      "有序回檔：水位上升可以擴充候選與分批順序，但第一段下殺不搶。先看現貨 42,970 與近月期貨 43,175 一帶能否守住、量能是否收斂，再等 Murphy 右側再確認；確認前保留子彈、不追半導體反彈第一根，也不因單日回檔機械清空有價格證明的核心。",
-      "SOX -4.25% 而 VIX僅小降，顯示壓力集中在半導體與 AI 資本支出鏈，而非全面恐慌；外資臺指期淨空 -76,260 口仍高。若現貨失守 42,970、期貨跌破 43,175，且高成長硬體同步轉弱，回檔可能加深；若守住，也要防 FOMC 7/28–29 前的折現率波動。",
-      "方舟 09:08 四區共 81 張卡、78 個唯一代號；卡片漲跌為 29 漲、44 跌、6 平、2 張缺來源股價。ETF 價值區 8 跌、2 張無股價，油品 ETF 在升溫區卻分別大跌，顯示事件溢價快速退潮；產業價值區 18 漲、16 跌，鴻勁、台燿、聯詠、京元電子、健策與台光電較強，半導體內部是去槓桿中的個股分化。",
-      "Fed 官方日程把 7/28–29 FOMC 放在本週核心位置；殖利率仍高，半導體估值需要用價格與現金流再驗證。"
+      "有序回檔第二段：09:57 現貨 40,547、期貨 40,766 為同分鐘低點邊界。若低點停止下移、期貨正價差維持、ETF 升溫廣度不退且主要 AI 硬體鏈出現 Murphy 右側再確認，才把 80.9% 水位提供的空間轉成小量候選；若前低失守，延後部署，不在第二段下殺攤平。",
+      "外資臺指期淨空擴至 -82,255 口，SOX 兩日續弱；FOMC 7/28–29 決策尚未公布，油價亞洲早盤因中東攻擊消息反彈約 3%。S&P 500、Dow、VIX顯示全面恐慌未出現，但 AI 資本支出、融資與估值審查仍可讓晶片鏈單獨承壓。",
+      "方舟 09:08 四區共 81 張卡、77 個唯一代號；廣度 29 漲、46 跌、3 平、3 張缺來源漲跌。ETF 升溫區 7 檔全數上漲，ETF 價值區 7 跌、3 檔無來源股價；產業價值區 7 漲、25 跌、2 平，產業升溫區 15 漲、14 跌、1 平。致茂、全新、奇鋐、貿聯-KY 雙區重疊，代表熱度與承接同時存在，不等於止跌完成。",
+      "Fed 7/28–29 會議是今天最大宏觀閘門；水位大升不消除利率事件風險。"
     ],
-    "systemic_risk": "中偏高",
+    "systemic_risk": "高",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
   },
   "action_guidance": {
@@ -89,15 +90,15 @@
       "leveraged_etf_overheat",
       "low_efficiency_small_branch"
     ],
-    "confidence": 0.78,
+    "confidence": 1.0,
     "source": "morning_brief_classifier"
   },
   "editorial": {
     "state_label": "有序回檔",
-    "summary": "水位 74.1% 仍在健康區，但水位/外部/廣度進入有序回檔，等待承接確認"
+    "summary": "水位大升 4.8pt、卡片廣度明顯修復，但期現貨、SOX與外資期貨部位仍顯示第二段壓力；空間改善後先守前低與等待右側確認"
   },
   "source": {
-    "issue_file": "data/issues/20260727.json",
-    "generated_at": "2026-07-27T12:25:35+08:00"
+    "issue_file": "data/issues/20260729.json",
+    "generated_at": "2026-07-29T10:06:23+08:00"
   }
 }
