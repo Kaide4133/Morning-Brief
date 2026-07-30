@@ -1,60 +1,55 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-07-29",
-  "valid_for_trading_date": "2026-07-29",
-  "data_as_of": "2026-07-29",
+  "date": "2026-07-30",
+  "valid_for_trading_date": "2026-07-30",
+  "data_as_of": "2026-07-30",
   "stale": false,
-  "issue_no": 53,
+  "issue_no": 54,
   "scenario": {
-    "id": "05",
-    "slug": "orderly-pullback",
-    "label": "有序回檔",
+    "id": "03",
+    "slug": "high-level-speed-control",
+    "label": "高位控速",
     "confidence": 1.0,
-    "reason": "水位大升 4.8pt、卡片廣度明顯修復，但期現貨、SOX與外資期貨部位仍顯示第二段壓力；空間改善後先守前低與等待右側確認",
+    "reason": "水位續升 4.4pt、卡片廣度翻正且台股自恐慌低點強彈；但 SOX、VIX、外資期貨與偏鷹 Fed 仍構成外部壓力，高健康水位下先控速並等待回測證明",
     "source": "manual_override",
-    "classifier_suggestion": "06"
+    "classifier_suggestion": "04"
   },
   "water": {
-    "level": 80.9,
-    "previous": 76.1,
-    "change": 4.8,
+    "level": 85.3,
+    "previous": 80.9,
+    "change": 4.4,
     "direction": "rising"
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
-    "short_term_bias": "defensive_hold_review",
-    "risk_posture": "defensive",
+    "short_term_bias": "increase_exposure_allowed",
+    "risk_posture": "balanced_cautious",
     "water_policy": {
       "direction": "rising",
-      "change": 4.8,
-      "interpretation": "目前不允許新增曝險；維持防禦檢查，等待水位、價格與情境重新確認。"
+      "change": 4.4,
+      "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
     },
     "scenario_context": {
-      "id": "05",
-      "label": "有序回檔",
+      "id": "03",
+      "label": "高位控速",
       "confidence": 1.0
     },
     "policy_focus": [
-      "有序回檔第二段：09:57 現貨 40,547、期貨 40,766 為同分鐘低點邊界。若低點停止下移、期貨正價差維持、ETF 升溫廣度不退且主要 AI 硬體鏈出現 Murphy 右側再確認，才把 80.9% 水位提供的空間轉成小量候選；若前低失守，延後部署，不在第二段下殺攤平。",
-      "外資臺指期淨空擴至 -82,255 口，SOX 兩日續弱；FOMC 7/28–29 決策尚未公布，油價亞洲早盤因中東攻擊消息反彈約 3%。S&P 500、Dow、VIX顯示全面恐慌未出現，但 AI 資本支出、融資與估值審查仍可讓晶片鏈單獨承壓。",
-      "方舟 09:08 四區共 81 張卡、77 個唯一代號；廣度 29 漲、46 跌、3 平、3 張缺來源漲跌。ETF 升溫區 7 檔全數上漲，ETF 價值區 7 跌、3 檔無來源股價；產業價值區 7 漲、25 跌、2 平，產業升溫區 15 漲、14 跌、1 平。致茂、全新、奇鋐、貿聯-KY 雙區重疊，代表熱度與承接同時存在，不等於止跌完成。",
-      "Fed 7/28–29 會議是今天最大宏觀閘門；水位大升不消除利率事件風險。"
+      "高位控速：39,404 現貨與 39,701 期貨是今日恐慌低點，40,828／40,990 是 09:50 修復位置，41,155／41,266 是盤中第一道壓力。低點不再下移、回測守住 40,000 附近、價值區廣度維持，再讓水位提供的空間轉成小量候選；若反彈量縮且失守 40,000，回到觀察，不追高也不把單日急彈當趨勢完成。",
+      "SOX 7/29 再跌 5.33%、VIX 大升 13.45%，外資臺指期淨空 -82,785 口；Fed 維持 3.50%–3.75%，但 9–3 表決中三位委員主張升息 1 碼，且官方明言通膨仍偏高、能源與中東衝突增加不確定性。微軟雲端需求強，Meta 也顯示廣告與 AI 投資需求，但巨額資本支出與自由現金流壓力仍是估值門檻。",
+      "方舟 09:39 四區共 81 張卡、79 個唯一代號；廣度 46 漲、30 跌、4 平、1 張缺來源漲跌。ETF 價值區 7 漲 3 跌、ETF 升溫區 5 漲 1 跌 1 平；產業價值區 24 漲 9 跌 1 平，產業升溫區仍是 10 漲 17 跌 2 平 1 缺。3034、3665 雙區重疊，但真正反彈主力集中在半導體／PCB／測試／電源散熱價值鏈。",
+      "Fed 不升息但出現三張升息反對票，市場解讀重點由「有沒有升」轉為「通膨與能源風險能否讓利率維持更久」。"
     ],
-    "systemic_risk": "高",
+    "systemic_risk": "中偏高",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
   },
   "action_guidance": {
-    "risk_bias": "defensive",
-    "allow_add": false,
+    "risk_bias": "balanced_cautious",
+    "allow_add": true,
     "allow_trim": true,
-    "deploy_mode": "wait_for_pullback",
-    "rebuy_condition": [
-      "MA20_support",
-      "volume_contract",
-      "murphy_right_side_reconfirmation",
-      "water_stabilizes"
-    ],
+    "deploy_mode": "slow_selective_add",
+    "max_initial_deploy_pct": 0.25,
     "trim": {
       "allowed": true,
       "mode": "selective_trim",
@@ -67,21 +62,23 @@
       ]
     },
     "deploy": {
-      "allowed": false,
-      "mode": "wait_for_pullback",
+      "allowed": true,
+      "mode": "slow_selective_add",
+      "max_initial_deploy_pct": 0.25,
       "conditions": [
-        "water_stabilizes",
-        "support_confirmed"
+        "conditional_only",
+        "core_or_high_quality_only",
+        "pullback_confirmed",
+        "no_chase"
       ]
     },
     "rebuy": {
       "allowed": true,
       "mode": "wait_for_pullback",
       "conditions": [
+        "sold_name_drawdown_2_to_3_pct",
         "MA20_support",
-        "volume_contract",
-        "murphy_right_side_reconfirmation",
-        "water_stabilizes"
+        "murphy_right_side_reconfirmation"
       ]
     },
     "trim_priority": [
@@ -94,11 +91,11 @@
     "source": "morning_brief_classifier"
   },
   "editorial": {
-    "state_label": "有序回檔",
-    "summary": "水位大升 4.8pt、卡片廣度明顯修復，但期現貨、SOX與外資期貨部位仍顯示第二段壓力；空間改善後先守前低與等待右側確認"
+    "state_label": "高位控速",
+    "summary": "水位續升 4.4pt、卡片廣度翻正且台股自恐慌低點強彈；但 SOX、VIX、外資期貨與偏鷹 Fed 仍構成外部壓力，高健康水位下先控速並等待回測證明"
   },
   "source": {
-    "issue_file": "data/issues/20260729.json",
-    "generated_at": "2026-07-29T10:06:23+08:00"
+    "issue_file": "data/issues/20260730.json",
+    "generated_at": "2026-07-30T09:55:38+08:00"
   }
 }
