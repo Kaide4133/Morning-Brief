@@ -1,34 +1,34 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-07-30",
-  "valid_for_trading_date": "2026-07-30",
-  "data_as_of": "2026-07-30",
+  "date": "2026-07-31",
+  "valid_for_trading_date": "2026-07-31",
+  "data_as_of": "2026-07-31",
   "stale": false,
-  "issue_no": 54,
+  "issue_no": 55,
   "scenario": {
     "id": "03",
     "slug": "high-level-speed-control",
     "label": "高位控速",
     "confidence": 1.0,
-    "reason": "水位續升 4.4pt、卡片廣度翻正且台股自恐慌低點強彈；但 SOX、VIX、外資期貨與偏鷹 Fed 仍構成外部壓力，高健康水位下先控速並等待回測證明",
+    "reason": "水位雖小降 1.6pt 仍在 83.7% 健康高檔，SOX、VIX、台股與卡片廣度全面修復；但期現貨漲幅、約 700 點正價差與外資深度淨空使第一段垂直急彈必須控速並等待回測",
     "source": "manual_override",
-    "classifier_suggestion": "04"
+    "classifier_suggestion": "05"
   },
   "water": {
-    "level": 85.3,
-    "previous": 80.9,
-    "change": 4.4,
-    "direction": "rising"
+    "level": 83.7,
+    "previous": 85.3,
+    "change": -1.6,
+    "direction": "falling"
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
-    "short_term_bias": "increase_exposure_allowed",
+    "short_term_bias": "cautious_review",
     "risk_posture": "balanced_cautious",
     "water_policy": {
-      "direction": "rising",
-      "change": 4.4,
-      "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
+      "direction": "falling",
+      "change": -1.6,
+      "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
     },
     "scenario_context": {
       "id": "03",
@@ -36,12 +36,12 @@
       "confidence": 1.0
     },
     "policy_focus": [
-      "高位控速：39,404 現貨與 39,701 期貨是今日恐慌低點，40,828／40,990 是 09:50 修復位置，41,155／41,266 是盤中第一道壓力。低點不再下移、回測守住 40,000 附近、價值區廣度維持，再讓水位提供的空間轉成小量候選；若反彈量縮且失守 40,000，回到觀察，不追高也不把單日急彈當趨勢完成。",
-      "SOX 7/29 再跌 5.33%、VIX 大升 13.45%，外資臺指期淨空 -82,785 口；Fed 維持 3.50%–3.75%，但 9–3 表決中三位委員主張升息 1 碼，且官方明言通膨仍偏高、能源與中東衝突增加不確定性。微軟雲端需求強，Meta 也顯示廣告與 AI 投資需求，但巨額資本支出與自由現金流壓力仍是估值門檻。",
-      "方舟 09:39 四區共 81 張卡、79 個唯一代號；廣度 46 漲、30 跌、4 平、1 張缺來源漲跌。ETF 價值區 7 漲 3 跌、ETF 升溫區 5 漲 1 跌 1 平；產業價值區 24 漲 9 跌 1 平，產業升溫區仍是 10 漲 17 跌 2 平 1 缺。3034、3665 雙區重疊，但真正反彈主力集中在半導體／PCB／測試／電源散熱價值鏈。",
-      "Fed 不升息但出現三張升息反對票，市場解讀重點由「有沒有升」轉為「通膨與能源風險能否讓利率維持更久」。"
+      "高位控速：42,305–42,331 是 09:49 期貨開盤／低點帶，42,895–43,506 是盤中高點壓力，現貨 42,659 與期貨 43,360 已累積大幅漲幅。後續先看正價差是否收斂、回測能否守住開盤帶、主線廣度能否維持；若價差急縮且跌破 42,300，降回觀察，不把單日急彈直接當成可追價位置。",
+      "外資臺指期仍淨空 -81,017 口，Fed 維持 3.50%–3.75% 且三位委員主張升息，利率／通膨壓力未消失；Apple 財報含關稅退稅的有利影響，顯示終端需求強但政策效果仍會扭曲獲利品質。盤面最大風險不是水位太高，而是垂直急漲後的追價與價差回吐。",
+      "方舟四區共 68 張卡、62 個唯一代號；廣度 59 漲、8 跌、1 平。ETF 升溫區 6 漲 1 跌；產業價值區 25 漲、5 跌、1 平，產業升溫區 28 漲、2 跌。2383、2379、2324、3017、5274、2360 雙區重疊，主力集中在半導體、PCB／CCL、封測、網通、散熱與伺服器供應鏈。",
+      "美股 7/30 由 Microsoft +15.51% 與 SOX +8.19% 帶動，AI 雲端與半導體需求重新取得價格驗證。"
     ],
-    "systemic_risk": "中偏高",
+    "systemic_risk": "中",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
   },
   "action_guidance": {
@@ -92,10 +92,10 @@
   },
   "editorial": {
     "state_label": "高位控速",
-    "summary": "水位續升 4.4pt、卡片廣度翻正且台股自恐慌低點強彈；但 SOX、VIX、外資期貨與偏鷹 Fed 仍構成外部壓力，高健康水位下先控速並等待回測證明"
+    "summary": "水位雖小降 1.6pt 仍在 83.7% 健康高檔，SOX、VIX、台股與卡片廣度全面修復；但期現貨漲幅、約 700 點正價差與外資深度淨空使第一段垂直急彈必須控速並等待回測"
   },
   "source": {
-    "issue_file": "data/issues/20260730.json",
-    "generated_at": "2026-07-30T09:55:38+08:00"
+    "issue_file": "data/issues/20260731.json",
+    "generated_at": "2026-07-31T09:55:31+08:00"
   }
 }

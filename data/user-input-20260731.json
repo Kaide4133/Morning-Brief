@@ -1,0 +1,660 @@
+{
+  "date": "20260731",
+  "ark": {
+    "holding_allocation_suggestion": 83.7,
+    "holding_allocation_suggestion_raw": 8.37,
+    "normalization_note": "8.37 normalized to 83.7% (Ark one-decimal percentage scale; previous trading day 85.3%).",
+    "global_dispersion": "neutral",
+    "foreign_sentiment": "neutral",
+    "position_heating_up": "neutral",
+    "social_rebound": "neutral",
+    "energy_storm": "neutral"
+  },
+  "stocks": {
+    "industry_value": [
+      {
+        "name": "穎崴",
+        "code": "6515",
+        "price": 5815,
+        "change": 525,
+        "change_percentage": 9.92,
+        "debt_ratio": 54.61,
+        "industry": "IC封裝測試設備"
+      },
+      {
+        "name": "聯電",
+        "code": "2303",
+        "price": 121,
+        "change": 11,
+        "change_percentage": 10,
+        "debt_ratio": 33.34,
+        "industry": "晶圓代工"
+      },
+      {
+        "name": "景碩",
+        "code": "3189",
+        "price": 635,
+        "change": 57,
+        "change_percentage": 9.86,
+        "debt_ratio": 38.47,
+        "industry": "IC基板"
+      },
+      {
+        "name": "旺矽",
+        "code": "6223",
+        "price": 5280,
+        "change": 480,
+        "change_percentage": 10,
+        "debt_ratio": 38.73,
+        "industry": "IC封裝測試設備"
+      },
+      {
+        "name": "矽力*-KY",
+        "code": "6415",
+        "price": 413,
+        "change": 37.5,
+        "change_percentage": 9.99,
+        "debt_ratio": 16.19,
+        "industry": "IC設計"
+      },
+      {
+        "name": "台燿",
+        "code": "6274",
+        "price": 1110,
+        "change": 100,
+        "change_percentage": 9.9,
+        "debt_ratio": 48.55,
+        "industry": "銅箔基板"
+      },
+      {
+        "name": "日月光投控",
+        "code": "3711",
+        "price": 555,
+        "change": 50,
+        "change_percentage": 9.9,
+        "debt_ratio": 60.19,
+        "industry": "IC封裝測試"
+      },
+      {
+        "name": "啟碁",
+        "code": "6285",
+        "price": 219,
+        "change": 15,
+        "change_percentage": 7.35,
+        "debt_ratio": 59.57,
+        "industry": "無線通訊設備"
+      },
+      {
+        "name": "兆豐金",
+        "code": "2886",
+        "price": 53,
+        "change": 1.5,
+        "change_percentage": 2.91,
+        "debt_ratio": 91.97,
+        "industry": "金控"
+      },
+      {
+        "name": "華南金",
+        "code": "2880",
+        "price": 42.75,
+        "change": 0.1,
+        "change_percentage": 0.23,
+        "debt_ratio": 94.52,
+        "industry": "金控"
+      },
+      {
+        "name": "第一金",
+        "code": "2892",
+        "price": 36.4,
+        "change": 0.9,
+        "change_percentage": 2.54,
+        "debt_ratio": 94.22,
+        "industry": "金控"
+      },
+      {
+        "name": "竣邦-KY",
+        "code": "4442",
+        "price": 60.1,
+        "change": -6.2,
+        "change_percentage": -9.35,
+        "debt_ratio": 30.51,
+        "industry": "成衣"
+      },
+      {
+        "name": "創見",
+        "code": "2451",
+        "price": 284.5,
+        "change": 15,
+        "change_percentage": 5.57,
+        "debt_ratio": 28.68,
+        "industry": "DRAM"
+      },
+      {
+        "name": "寶雅",
+        "code": "5904",
+        "price": 679,
+        "change": 0,
+        "change_percentage": 0,
+        "debt_ratio": 78.94,
+        "industry": "百貨"
+      },
+      {
+        "name": "新產",
+        "code": "2850",
+        "price": 161,
+        "change": 4,
+        "change_percentage": 2.55,
+        "debt_ratio": 62.41,
+        "industry": "保險"
+      },
+      {
+        "name": "華碩",
+        "code": "2357",
+        "price": 777,
+        "change": 40,
+        "change_percentage": 5.43,
+        "debt_ratio": 52.83,
+        "industry": "電腦及周邊產品"
+      },
+      {
+        "name": "台光電",
+        "code": "2383",
+        "price": 4745,
+        "change": 430,
+        "change_percentage": 9.97,
+        "debt_ratio": 63.23,
+        "industry": "銅箔基板"
+      },
+      {
+        "name": "瑞昱",
+        "code": "2379",
+        "price": 688,
+        "change": -9,
+        "change_percentage": -1.29,
+        "debt_ratio": 68.4,
+        "industry": "IC設計"
+      },
+      {
+        "name": "仁寶",
+        "code": "2324",
+        "price": 35.95,
+        "change": 2.2,
+        "change_percentage": 6.52,
+        "debt_ratio": 67.75,
+        "industry": "電子設備"
+      },
+      {
+        "name": "奇鋐",
+        "code": "3017",
+        "price": 2305,
+        "change": 195,
+        "change_percentage": 9.24,
+        "debt_ratio": 70.84,
+        "industry": "散熱模組"
+      },
+      {
+        "name": "信驊",
+        "code": "5274",
+        "price": 14525,
+        "change": 1320,
+        "change_percentage": 10,
+        "debt_ratio": 51.72,
+        "industry": "IC設計"
+      },
+      {
+        "name": "致茂",
+        "code": "2360",
+        "price": 2070,
+        "change": 160,
+        "change_percentage": 8.38,
+        "debt_ratio": 47.77,
+        "industry": "半導體設備"
+      },
+      {
+        "name": "貿聯-KY",
+        "code": "3665",
+        "price": 2070,
+        "change": 160,
+        "change_percentage": 8.38,
+        "debt_ratio": 45.52,
+        "industry": "連接線材"
+      },
+      {
+        "name": "聯詠",
+        "code": "3034",
+        "price": 512,
+        "change": 21,
+        "change_percentage": 4.28,
+        "debt_ratio": 30.62,
+        "industry": "驅動IC"
+      },
+      {
+        "name": "德昌",
+        "code": "5511",
+        "price": 71.2,
+        "change": 0.1,
+        "change_percentage": 0.14,
+        "debt_ratio": 54.76,
+        "industry": "營造工程"
+      },
+      {
+        "name": "承啟",
+        "code": "2425",
+        "price": 45.95,
+        "change": 3.25,
+        "change_percentage": 7.61,
+        "debt_ratio": 54.57,
+        "industry": "板卡"
+      },
+      {
+        "name": "鼎固-KY",
+        "code": "2923",
+        "price": 35.85,
+        "change": -1.05,
+        "change_percentage": -2.85,
+        "debt_ratio": 59.07,
+        "industry": "營造工程"
+      },
+      {
+        "name": "亞德客-KY",
+        "code": "1590",
+        "price": 1300,
+        "change": -40,
+        "change_percentage": -2.99,
+        "debt_ratio": 17.79,
+        "industry": "自動化設備"
+      },
+      {
+        "name": "緯穎",
+        "code": "6669",
+        "price": 5390,
+        "change": 490,
+        "change_percentage": 10,
+        "debt_ratio": 67.6,
+        "industry": "伺服器組裝代工"
+      },
+      {
+        "name": "尚茂",
+        "code": "8291",
+        "price": 40,
+        "change": 0.5,
+        "change_percentage": 1.27,
+        "debt_ratio": 84.31,
+        "industry": "銅箔基板"
+      },
+      {
+        "name": "友訊",
+        "code": "2332",
+        "price": 21.25,
+        "change": -0.35,
+        "change_percentage": -1.62,
+        "debt_ratio": 31,
+        "industry": "網路設備"
+      }
+    ],
+    "industry_gainers": [
+      {
+        "name": "台達電",
+        "code": "2308",
+        "price": 1625,
+        "change": 95,
+        "change_percentage": 6.21,
+        "debt_ratio": 53.58,
+        "industry": "電源供應器"
+      },
+      {
+        "name": "全新",
+        "code": "2455",
+        "price": 285.5,
+        "change": 20,
+        "change_percentage": 7.53,
+        "debt_ratio": 32.02,
+        "industry": "砷化鎵代工"
+      },
+      {
+        "name": "欣興",
+        "code": "3037",
+        "price": 787,
+        "change": 71,
+        "change_percentage": 9.92,
+        "debt_ratio": 59.23,
+        "industry": "IC基板"
+      },
+      {
+        "name": "台積電",
+        "code": "2330",
+        "price": 2380,
+        "change": 175,
+        "change_percentage": 7.94,
+        "debt_ratio": 31.5,
+        "industry": "晶圓代工"
+      },
+      {
+        "name": "智邦",
+        "code": "2345",
+        "price": 2125,
+        "change": 190,
+        "change_percentage": 9.82,
+        "debt_ratio": 60.24,
+        "industry": "網路設備"
+      },
+      {
+        "name": "大立光",
+        "code": "3008",
+        "price": 3985,
+        "change": 270,
+        "change_percentage": 7.27,
+        "debt_ratio": 17.56,
+        "industry": "光學鏡片與鏡頭"
+      },
+      {
+        "name": "川湖",
+        "code": "2059",
+        "price": 7850,
+        "change": 710,
+        "change_percentage": 9.94,
+        "debt_ratio": 20.2,
+        "industry": "電子零組件"
+      },
+      {
+        "name": "聯發科",
+        "code": "2454",
+        "price": 3555,
+        "change": 320,
+        "change_percentage": 9.89,
+        "debt_ratio": 46.07,
+        "industry": "IC設計"
+      },
+      {
+        "name": "國巨*",
+        "code": "2327",
+        "price": 502,
+        "change": 45.5,
+        "change_percentage": 9.97,
+        "debt_ratio": 57.9,
+        "industry": "MLCC"
+      },
+      {
+        "name": "聯茂",
+        "code": "6213",
+        "price": 263,
+        "change": 23.5,
+        "change_percentage": 9.81,
+        "debt_ratio": 47.16,
+        "industry": "銅箔基板"
+      },
+      {
+        "name": "臻鼎-KY",
+        "code": "4958",
+        "price": 412,
+        "change": 36,
+        "change_percentage": 9.57,
+        "debt_ratio": 41.45,
+        "industry": "軟板"
+      },
+      {
+        "name": "華通",
+        "code": "2313",
+        "price": 169,
+        "change": 15,
+        "change_percentage": 9.74,
+        "debt_ratio": 49.86,
+        "industry": "硬板"
+      },
+      {
+        "name": "力成",
+        "code": "6239",
+        "price": 231.5,
+        "change": 17,
+        "change_percentage": 7.93,
+        "debt_ratio": 41.87,
+        "industry": "IC封裝測試"
+      },
+      {
+        "name": "京元電子",
+        "code": "2449",
+        "price": 223.5,
+        "change": 20,
+        "change_percentage": 9.83,
+        "debt_ratio": 51.9,
+        "industry": "IC測試"
+      },
+      {
+        "name": "廣達",
+        "code": "2382",
+        "price": 288.5,
+        "change": 9.5,
+        "change_percentage": 3.41,
+        "debt_ratio": 87.45,
+        "industry": "伺服器組裝代工"
+      },
+      {
+        "name": "光洋科",
+        "code": "1785",
+        "price": 97.7,
+        "change": 7.3,
+        "change_percentage": 8.08,
+        "debt_ratio": 56.01,
+        "industry": "非鐵金屬"
+      },
+      {
+        "name": "健策",
+        "code": "3653",
+        "price": 3350,
+        "change": 215,
+        "change_percentage": 6.86,
+        "debt_ratio": 29.4,
+        "industry": "散熱模組"
+      },
+      {
+        "name": "鴻勁",
+        "code": "7769",
+        "price": 6180,
+        "change": 560,
+        "change_percentage": 9.96,
+        "debt_ratio": 22.17,
+        "industry": "半導體檢測"
+      },
+      {
+        "name": "台光電",
+        "code": "2383",
+        "price": 4745,
+        "change": 430,
+        "change_percentage": 9.97,
+        "debt_ratio": 63.23,
+        "industry": "銅箔基板"
+      },
+      {
+        "name": "瑞昱",
+        "code": "2379",
+        "price": 688,
+        "change": -9,
+        "change_percentage": -1.29,
+        "debt_ratio": 68.4,
+        "industry": "IC設計"
+      },
+      {
+        "name": "仁寶",
+        "code": "2324",
+        "price": 35.95,
+        "change": 2.2,
+        "change_percentage": 6.52,
+        "debt_ratio": 67.75,
+        "industry": "電子設備"
+      },
+      {
+        "name": "奇鋐",
+        "code": "3017",
+        "price": 2305,
+        "change": 195,
+        "change_percentage": 9.24,
+        "debt_ratio": 70.84,
+        "industry": "散熱模組"
+      },
+      {
+        "name": "信驊",
+        "code": "5274",
+        "price": 14525,
+        "change": 1320,
+        "change_percentage": 10,
+        "debt_ratio": 51.72,
+        "industry": "IC設計"
+      },
+      {
+        "name": "致茂",
+        "code": "2360",
+        "price": 2070,
+        "change": 160,
+        "change_percentage": 8.38,
+        "debt_ratio": 47.77,
+        "industry": "半導體設備"
+      },
+      {
+        "name": "南緯",
+        "code": "1467",
+        "price": 9.6,
+        "change": 0.17,
+        "change_percentage": 1.8,
+        "debt_ratio": 66.08,
+        "industry": "成衣"
+      },
+      {
+        "name": "隆銘綠能",
+        "code": "3018",
+        "price": 14.65,
+        "change": -1.35,
+        "change_percentage": -8.44,
+        "debt_ratio": 57.32,
+        "industry": "機電工程"
+      },
+      {
+        "name": "今展科",
+        "code": "6432",
+        "price": 75.7,
+        "change": 5.4,
+        "change_percentage": 7.68,
+        "debt_ratio": 32.99,
+        "industry": "電子零組件"
+      },
+      {
+        "name": "永豐金",
+        "code": "2890",
+        "price": 40,
+        "change": 1.15,
+        "change_percentage": 2.96,
+        "debt_ratio": 92.98,
+        "industry": "金控"
+      },
+      {
+        "name": "聯一光",
+        "code": "3441",
+        "price": 82.1,
+        "change": 5.7,
+        "change_percentage": 7.46,
+        "debt_ratio": 22.44,
+        "industry": "光學鏡片與鏡頭"
+      },
+      {
+        "name": "立凱-KY",
+        "code": "5227",
+        "price": 36.15,
+        "change": 0.4,
+        "change_percentage": 1.12,
+        "debt_ratio": 37.56,
+        "industry": "電池"
+      }
+    ],
+    "etf_value": [],
+    "etf_gainers": [
+      {
+        "name": "野村全球航運龍頭",
+        "code": "00960",
+        "price": 18.8,
+        "change": 0.2,
+        "change_percentage": 1.08,
+        "premium_discount_percentage": -1.05,
+        "region": "全球"
+      },
+      {
+        "name": "FT臺灣永續高息",
+        "code": "00961",
+        "price": 12.89,
+        "change": 0.34,
+        "change_percentage": 2.71,
+        "premium_discount_percentage": -0.15,
+        "region": "台灣"
+      },
+      {
+        "name": "統一台灣高息動能",
+        "code": "00939",
+        "price": 22.02,
+        "change": 0.74,
+        "change_percentage": 3.48,
+        "premium_discount_percentage": 0.05,
+        "region": "台灣"
+      },
+      {
+        "name": "復華富時高息低波",
+        "code": "00731",
+        "price": 90.45,
+        "change": 3,
+        "change_percentage": 3.43,
+        "premium_discount_percentage": 0.09,
+        "region": "台灣"
+      },
+      {
+        "name": "元大MSCI金融",
+        "code": "0055",
+        "price": 44.15,
+        "change": 1.64,
+        "change_percentage": 3.86,
+        "premium_discount_percentage": -0.14,
+        "region": "台灣"
+      },
+      {
+        "name": "大華優利高填息30",
+        "code": "00918",
+        "price": 32.47,
+        "change": 1.23,
+        "change_percentage": 3.94,
+        "premium_discount_percentage": -0.25,
+        "region": "台灣"
+      },
+      {
+        "name": "期元大S&P石油",
+        "code": "00642U",
+        "price": 27.09,
+        "change": -0.72,
+        "change_percentage": -2.59,
+        "premium_discount_percentage": 0.15,
+        "region": "全球"
+      }
+    ],
+    "overlap": [
+      "2383",
+      "2379",
+      "2324",
+      "3017",
+      "5274",
+      "2360"
+    ],
+    "overlap_names": {
+      "2383": "台光電",
+      "2379": "瑞昱",
+      "2324": "仁寶",
+      "3017": "奇鋐",
+      "5274": "信驊",
+      "2360": "致茂"
+    }
+  },
+  "etf": {
+    "overlap": [],
+    "overlap_names": {}
+  },
+  "sections_seen": [
+    "etf_gainers",
+    "industry_gainers",
+    "industry_value"
+  ],
+  "scenario_id": ""
+}
