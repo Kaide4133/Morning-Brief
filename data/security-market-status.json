@@ -1,0 +1,15 @@
+{
+  "schema_version": "morning_brief_security_market_status.v1",
+  "securities": {
+    "5904.TW": {
+      "status": "suspended_for_par_value_change",
+      "start_date": "2026-07-30",
+      "end_date": "2026-08-09",
+      "resume_date": "2026-08-10",
+      "reference_close": 72.0,
+      "reference_scale": "post_split_1_for_10",
+      "source_url": "https://tw.stock.yahoo.com/news/%E8%82%A1%E7%A5%A8%E9%9D%A2%E9%A1%8D%E8%AE%8A%E6%9B%B4%E6%9A%AB%E5%81%9C%E4%BA%A4%E6%98%93-%E5%AF%B6%E9%9B%857-29%E6%9C%80%E5%BE%8C%E4%BA%A4%E6%98%93%E6%97%A5-8-10%E6%81%A2%E5%BE%A9%E4%BA%A4%E6%98%93-083319926.html",
+      "note": "寶雅舊股 2026-07-29 最後交易；股票面額由 10 元變更為 1 元（1 拆 10），2026-07-30 至 2026-08-09 停止交易，新股預定 2026-08-10 上櫃。"
+    }
+  }
+}

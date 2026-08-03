@@ -21,11 +21,11 @@
   <p class="subtitle">單檔優先 · 多方/空方/中性 型態矩陣 · 交易計畫</p>
   <div class="meta-row" aria-label="系統資訊">
     <span class="meta-chip">版本 v0.7.0</span>
-    <span class="meta-chip">資料日期 2026-07-31</span>
-    <span class="meta-chip">資料池 62 檔</span>
+    <span class="meta-chip">資料日期 2026-08-03</span>
+    <span class="meta-chip">資料池 79 檔</span>
     <span class="meta-chip">模式 精簡標註</span>
   </div>
-  <p class="version-note">v0.7.0 · 交易紀律引擎 · 訊號驗證 / 時間停滯 / 加倉資格 / 量能活躍 / 過熱清倉 · 資料截至 2026-07-31</p>
+  <p class="version-note">v0.7.0 · 交易紀律引擎 · 訊號驗證 / 時間停滯 / 加倉資格 / 量能活躍 / 過熱清倉 · 資料截至 2026-08-03</p>
   <p class="note">獨立技術分析核心，不是方舟晨報，也不是雷達。僅讀取本地 technical-data.json；輸出支撐、壓力、參與區、失敗線與情境計畫，不提供下單指令。</p>
 </header>
 
@@ -2102,13 +2102,38 @@
       return;
     }
 
+    const marketStatus = norm.raw && norm.raw.market_status;
+    const suspended = marketStatus === 'suspended_for_par_value_change';
     let out;
-    try {
-      out = TechnicalEngine.analyze(norm.raw || norm);
-    } catch (err) {
-      console.error(err);
-      showErrorOnly('分析時發生錯誤：' + err.message);
-      return;
+    if (suspended) {
+      const note = (norm.raw && (norm.raw.source_note || norm.raw.market_status_note)) || '停止交易期間';
+      out = {
+        trend: { state: '停止交易', reason: [note] },
+        position: { state: '不可執行', reason: ['參考價不是當日可成交價格。'] },
+        extension: { state: '停用', reason: ['停止交易期間不產生延伸判讀。'] },
+        volume: { state: '0 成交', reason: ['no-trade marker，不視為量價訊號。'] },
+        supportResistance: { support: [], resistance: [] },
+        warnings: ['停止交易／換股', '禁止新增技術結論'],
+        labels: ['WATCH', 'block_add'],
+        scores: { trend: 0, position: 0, extension: 0, risk: 100 },
+        discipline: {
+          signal: { state: '停止驗證', score: 0, checks: ['停止交易期間無新價格證明'] },
+          timeStall: { state: '停止交易', score: 100, checks: ['等待恢復交易'] },
+          addQualification: { state: '禁止加倉', score: 0, checks: ['security_market_suspended'] },
+          overheatClearance: { state: '不適用', score: 0, checks: [] },
+          volumeActivity: { state: '0 成交', score: 0 },
+          decision: { action: 'WATCH', reasons: ['停止交易／換股，block_add'] },
+        },
+        summary: '停止交易／換股期間；技術線僅保留調整後參考尺度，不視為當日成交或新訊號。',
+      };
+    } else {
+      try {
+        out = TechnicalEngine.analyze(norm.raw || norm);
+      } catch (err) {
+        console.error(err);
+        showErrorOnly('分析時發生錯誤：' + err.message);
+        return;
+      }
     }
 
     hideError();
@@ -2120,7 +2145,6 @@
     const chg = norm.change_pct;
 
     $('stockTitle').textContent = norm.name + '（' + norm.code + '）';
-    const marketStatus = norm.raw && norm.raw.market_status;
     const sourceNote = norm.raw && norm.raw.source_note;
     const statusLabel = marketStatus === 'suspended_for_par_value_change'
       ? ' · 停止交易／換股'
@@ -2158,7 +2182,7 @@
 
     let morph = null;
     try {
-      morph = TechnicalEngine.detectMorphology(norm.raw || norm);
+      morph = suspended ? null : TechnicalEngine.detectMorphology(norm.raw || norm);
     } catch (errMorph) {
       console.error(errMorph);
       morph = null;
@@ -2304,7 +2328,13 @@
   function runScan() {
     if (!loaded || typeof TechnicalEngine === 'undefined') return;
     try {
-      const scan = TechnicalEngine.scan(pool, pool.as_of);
+      const scanPool = {
+        ...pool,
+        records: (pool.records || []).filter(function (r) {
+          return !r.no_trade_marker;
+        }),
+      };
+      const scan = TechnicalEngine.scan(scanPool, pool.as_of);
       const oppKeys =
         scan.opportunityKeys || TechnicalEngine.SCANNER_OPPORTUNITY_KEYS || [];
       const riskKeys = scan.riskKeys || TechnicalEngine.SCANNER_RISK_KEYS || [];

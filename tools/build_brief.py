@@ -162,9 +162,9 @@ def build_verdict_from_scenario(data: dict, scenario: dict, action_guidance: dic
     try:
         d = float(delta)
         if d > 0:
-            direction = f"上升 {d:+.1f}pt"
+            direction = f"上升 {abs(d):.1f}pt"
         elif d < 0:
-            direction = f"下降 {d:+.1f}pt"
+            direction = f"下降 {abs(d):.1f}pt"
     except Exception:
         pass
     label = f"{scenario['id']} {scenario['name']}"

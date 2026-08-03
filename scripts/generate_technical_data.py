@@ -22,10 +22,107 @@ OUTPUT_PATHS = [
     ROOT / "docs" / "technical-data.json",
     ROOT / "site" / "technical-data.json",
 ]
+SECURITY_MARKET_STATUS_PATH = ROOT / "data" / "security-market-status.json"
 
 OFFICIAL_NAME_CACHE: dict[str, str] | None = None
 YAHOO_OPENER: urllib.request.OpenerDirector | None = None
 YAHOO_CRUMB: str | None = None
+
+
+def load_security_market_status() -> dict[str, dict]:
+    """Load date-bounded per-security exchange exceptions."""
+    try:
+        payload = json.loads(SECURITY_MARKET_STATUS_PATH.read_text(encoding="utf-8"))
+        rows = payload.get("securities") if isinstance(payload, dict) else {}
+        return rows if isinstance(rows, dict) else {}
+    except Exception:
+        return {}
+
+
+def security_market_status(code: str, on_date: str | None) -> dict:
+    """Return an active non-trading status for code/date, else normal."""
+    base = str(code or "").upper().replace(".TWO", "").replace(".TW", "")
+    key = f"{base}.TW"
+    record = load_security_market_status().get(key)
+    if not isinstance(record, dict) or not on_date:
+        return {"status": "normal"}
+    start = str(record.get("start_date") or "")
+    end = str(record.get("end_date") or "")
+    if start and end and start <= str(on_date) <= end:
+        out = dict(record)
+        out.update({"ticker": key, "active_for_date": str(on_date)})
+        return out
+    return {"status": "normal"}
+
+
+def append_no_trade_marker(rows: list[dict], as_of: str, status: dict) -> list[dict]:
+    """Append a non-executable reference marker for a verified suspension."""
+    if not rows or status.get("status") == "normal":
+        return rows
+    reference = float(status.get("reference_close") or rows[-1]["close"])
+    marker = {
+        "date": as_of,
+        "open": reference,
+        "high": reference,
+        "low": reference,
+        "close": reference,
+        "volume": 0,
+        "no_trade_marker": True,
+        "market_status": status.get("status"),
+    }
+    merged: dict[str, dict] = {}
+    for row in rows:
+        date = str(row.get("date") or "")
+        if date and date <= as_of:
+            merged[date] = row
+    merged[as_of] = marker
+    return [merged[date] for date in sorted(merged)]
+
+
+def decorate_suspended_record(record: dict, status: dict) -> None:
+    """Make a suspended name visible and non-actionable in the payload."""
+    if status.get("status") == "normal":
+        return
+    reference = float(
+        status.get("reference_close")
+        or record.get("latest", {}).get("close")
+        or 0
+    )
+    record["latest"] = {"close": reference, "change_pct": 0.0, "volume": 0}
+    record["market_status"] = status.get("status")
+    record["market_status_note"] = status.get("note") or "停止交易期間"
+    record["market_status_source"] = status.get("source_url") or ""
+    record["source_note"] = (
+        f"{record['market_status_note']} 本列以調整後參考尺度 {reference:g}、"
+        "0 成交量標示當日無交易。"
+    )
+    record["data_freshness"] = "official_no_trade_marker"
+    record["no_trade_marker"] = True
+    record["actionability"] = {
+        "state": "WATCH",
+        "add_allowed": False,
+        "block_add": True,
+        "reason": "security_market_suspended",
+    }
+    series = record.get("series") or []
+    if series:
+        series[-1].update(
+            {
+                "no_trade_marker": True,
+                "market_status": status.get("status"),
+            }
+        )
+    analysis = record.setdefault("analysis", {})
+    analysis["summary"] = (
+        "停止交易／換股期間；技術線僅保留調整後參考尺度，"
+        "不視為當日成交或新訊號。"
+    )
+    warnings = list(analysis.get("warnings") or [])
+    warning = "停止交易／換股，0 成交量 no-trade marker"
+    if warning not in warnings:
+        warnings.append(warning)
+    analysis["warnings"] = warnings[:6]
+
 
 STOCK_NAMES: dict[str, str] = {
     "2330": "台積電",
@@ -828,9 +925,13 @@ def main() -> int:
             if intraday_row:
                 rows = overlay_daily_rows(rows, [intraday_row])
                 market = intraday_market or market
+        status = security_market_status(code, as_of)
+        if rows and status.get("status") != "normal":
+            rows = append_no_trade_marker(rows, as_of, status)
         rec = build_record(code, rows, market, as_of) if rows else None
         if rec:
             rec["name"] = resolve_stock_name(code, html_map, yahoo_name)
+            decorate_suspended_record(rec, status)
             records.append(rec)
             if rec.get("_series_warning"):
                 warnings_log.append(rec["_series_warning"])
@@ -845,13 +946,16 @@ def main() -> int:
         "version": 1,
         "as_of": as_of,
         "generated_at": datetime.now().isoformat(timespec="seconds"),
-        "source": "Yahoo Finance chart API with TWSE STOCK_DAY overlay and official MIS intraday fallback",
+        "source": "Yahoo Finance chart API with TWSE STOCK_DAY overlay, official MIS intraday fallback, and date-bounded security status registry",
         "purpose": "technical-spider scanner radar alert backtest",
         "records": records,
         "missing": missing,
         "meta": {
             "universe_size": len(universe),
             "record_count": len(records),
+            "suspended_symbols": [
+                r["code"] for r in records if r.get("no_trade_marker")
+            ],
         },
     }
 

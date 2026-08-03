@@ -1,58 +1,57 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-07-31",
-  "valid_for_trading_date": "2026-07-31",
-  "data_as_of": "2026-07-31",
+  "date": "2026-08-03",
+  "valid_for_trading_date": "2026-08-03",
+  "data_as_of": "2026-08-03",
   "stale": false,
-  "issue_no": 55,
+  "issue_no": 56,
   "scenario": {
-    "id": "03",
-    "slug": "high-level-speed-control",
-    "label": "高位控速",
+    "id": "06",
+    "slug": "risk-contraction",
+    "label": "風險收縮",
     "confidence": 1.0,
-    "reason": "水位雖小降 1.6pt 仍在 83.7% 健康高檔，SOX、VIX、台股與卡片廣度全面修復；但期現貨漲幅、約 708 點正價差與外資深度淨空使第一段垂直急彈必須控速並等待回測",
+    "reason": "方舟水位由 83.7% 急降至 76.1%（-7.6pt），期貨仍低於參考價且ETF／產業升溫區廣度偏弱；即使現貨與AI硬體價值鏈上漲，風險預算仍需先收縮",
     "source": "manual_override",
-    "classifier_suggestion": "05"
+    "classifier_suggestion": "06"
   },
   "water": {
-    "level": 83.7,
-    "previous": 85.3,
-    "change": -1.6,
+    "level": 76.1,
+    "previous": 83.7,
+    "change": -7.6,
     "direction": "falling"
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
-    "short_term_bias": "cautious_review",
-    "risk_posture": "balanced_cautious",
+    "short_term_bias": "reduce_risk_review",
+    "risk_posture": "risk_off",
     "water_policy": {
       "direction": "falling",
-      "change": -1.6,
-      "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
+      "change": -7.6,
+      "interpretation": "水位急降且風險預算收縮，暫停新增曝險；先檢查過熱、非護城河與槓桿風險。"
     },
     "scenario_context": {
-      "id": "03",
-      "label": "高位控速",
+      "id": "06",
+      "label": "風險收縮",
       "confidence": 1.0
     },
     "policy_focus": [
-      "高位控速：42,305–42,331 是 09:50 期貨開盤／低點帶，42,895–43,506 是盤中高點壓力，現貨 42,643 與期貨 43,351 已累積大幅漲幅。後續先看正價差是否收斂、回測能否守住開盤帶、主線廣度能否維持；若價差急縮且跌破 42,300，降回觀察，不把單日急彈直接當成可追價位置。",
-      "外資臺指期仍淨空 -81,017 口，Fed 維持 3.50%–3.75% 且三位委員主張升息，利率／通膨壓力未消失；Apple 財報含關稅退稅的有利影響，顯示終端需求強但政策效果仍會扭曲獲利品質。盤面最大風險不是水位太高，而是垂直急漲後的追價與價差回吐。",
-      "方舟四區共 68 張卡、62 個唯一代號；廣度 59 漲、8 跌、1 平。ETF 升溫區 6 漲 1 跌；產業價值區 25 漲、5 跌、1 平，產業升溫區 28 漲、2 跌。2383、2379、2324、3017、5274、2360 雙區重疊，主力集中在半導體、PCB／CCL、封測、網通、散熱與伺服器供應鏈。",
-      "美股 7/30 由 Microsoft +15.51% 與 SOX +8.19% 帶動，AI 雲端與半導體需求重新取得價格驗證。"
+      "風險收縮：42,780 現貨開盤／低點與 42,989 期貨低點是今日第一防線，43,587／43,613 是盤中高點壓力。10:11 現貨 43,553、期貨 43,527，期貨對現貨逆價差約 26.53 點且仍低於 43,727 參考價。先維持、不新增全面曝險；等待水位止降、期貨重回參考價上方、ETF 廣度不再全弱，再判斷核心鏈能否由局部強勢擴散。",
+      "外資臺指期 7/31 淨未沖銷 -82,515 口，日交易淨額 -4,292 口；本日水位下降 7.6pt，期貨 -0.46%，與現貨 +1.01% 形成方向分歧。美股 7/31 雖由 Amazon、Alphabet、Microsoft 與 NVIDIA 領漲，但 SOX 僅 +0.07%，Apple -7.35%，顯示財報後仍是強烈選股市；本週就業數據與大型企業財報會放大估值分化。",
+      "方舟四區共 81 張卡、79 個唯一代號；廣度 29 漲、46 跌、4 平、2 缺。ETF 價值區 9 跌 1 缺、ETF 升溫區 7 跌；產業價值區 24 漲、7 跌、3 平，產業升溫區 5 漲、23 跌、1 平、1 缺。ETF 雙區重疊 0055，產業雙區重疊 2360；國巨、聯茂、景碩、台燿、欣興、聯發科、日月光、信驊、川湖與緯穎維持強勢，但金融、記憶體周邊與多數升溫股轉弱。",
+      "美股 7/31 由 Amazon、Alphabet、Microsoft 與 NVIDIA 領漲，但 SOX 幾乎持平、Apple 大跌，科技內部是財報選股，不是無差別風險偏好。"
     ],
-    "systemic_risk": "中",
+    "systemic_risk": "中偏高",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
   },
   "action_guidance": {
-    "risk_bias": "balanced_cautious",
-    "allow_add": true,
+    "risk_bias": "risk_off",
+    "allow_add": false,
     "allow_trim": true,
-    "deploy_mode": "slow_selective_add",
-    "max_initial_deploy_pct": 0.25,
+    "deploy_mode": "reduce_exposure",
     "trim": {
       "allowed": true,
-      "mode": "selective_trim",
+      "mode": "reduce_exposure",
       "max_overshoot_pct": 0.25,
       "priority": [
         "positive_return_overheated_branch",
@@ -62,23 +61,18 @@
       ]
     },
     "deploy": {
-      "allowed": true,
-      "mode": "slow_selective_add",
-      "max_initial_deploy_pct": 0.25,
+      "allowed": false,
+      "mode": "disabled",
       "conditions": [
-        "conditional_only",
-        "core_or_high_quality_only",
-        "pullback_confirmed",
-        "no_chase"
+        "risk_off_no_new_exposure"
       ]
     },
     "rebuy": {
-      "allowed": true,
-      "mode": "wait_for_pullback",
+      "allowed": false,
+      "mode": "disabled_until_stabilized",
       "conditions": [
-        "sold_name_drawdown_2_to_3_pct",
-        "MA20_support",
-        "murphy_right_side_reconfirmation"
+        "risk_bias_improves",
+        "water_stabilizes"
       ]
     },
     "trim_priority": [
@@ -91,11 +85,11 @@
     "source": "morning_brief_classifier"
   },
   "editorial": {
-    "state_label": "高位控速",
-    "summary": "水位雖小降 1.6pt 仍在 83.7% 健康高檔，SOX、VIX、台股與卡片廣度全面修復；但期現貨漲幅、約 708 點正價差與外資深度淨空使第一段垂直急彈必須控速並等待回測"
+    "state_label": "風險收縮",
+    "summary": "方舟水位由 83.7% 急降至 76.1%（-7.6pt），期貨仍低於參考價且ETF／產業升溫區廣度偏弱；即使現貨與AI硬體價值鏈上漲，風險預算仍需先收縮"
   },
   "source": {
-    "issue_file": "data/issues/20260731.json",
-    "generated_at": "2026-07-31T10:04:19+08:00"
+    "issue_file": "data/issues/20260803.json",
+    "generated_at": "2026-08-03T10:21:36+08:00"
   }
 }
