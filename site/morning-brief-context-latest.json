@@ -1,57 +1,58 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-08-04",
-  "valid_for_trading_date": "2026-08-04",
-  "data_as_of": "2026-08-04",
+  "date": "2026-08-05",
+  "valid_for_trading_date": "2026-08-05",
+  "data_as_of": "2026-08-05",
   "stale": false,
-  "issue_no": 57,
+  "issue_no": 58,
   "scenario": {
-    "id": "06",
-    "slug": "risk-contraction",
-    "label": "風險收縮",
+    "id": "03",
+    "slug": "high-level-speed-control",
+    "label": "高位控速",
     "confidence": 1.0,
-    "reason": "方舟水位由 76.1% 再降至 71.0%（-5.1pt），ETF 17 張全跌或缺價、現貨與期貨同步走弱，外資臺指期淨空擴至 -90,038 口；雖美股科技與台股部分 AI 硬體鏈仍強，風險預算仍應收縮",
+    "reason": "方舟水位由 71.0% 降至 66.0%（-5.0pt），但四區 81 張卡有 77 張上漲、現貨與期貨盤中均上漲逾 3.4%；價格與廣度極強，市場健康度卻續降，適合高位控速而非全面追價",
     "source": "manual_override",
     "classifier_suggestion": "06"
   },
   "water": {
-    "level": 71.0,
-    "previous": 76.1,
-    "change": -5.1,
+    "level": 66.0,
+    "previous": 71.0,
+    "change": -5.0,
     "direction": "falling"
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
-    "short_term_bias": "reduce_risk_review",
-    "risk_posture": "risk_off",
+    "short_term_bias": "cautious_review",
+    "risk_posture": "balanced_cautious",
     "water_policy": {
       "direction": "falling",
-      "change": -5.1,
-      "interpretation": "水位急降且風險預算收縮，暫停新增曝險；先檢查過熱、非護城河與槓桿風險。"
+      "change": -5.0,
+      "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
     },
     "scenario_context": {
-      "id": "06",
-      "label": "風險收縮",
+      "id": "03",
+      "label": "高位控速",
       "confidence": 1.0
     },
     "policy_focus": [
-      "風險收縮：現貨日低 42,895.81、期貨日低 42,553 是第一防線；現貨日高 43,912.77、期貨日高 43,790 是第一壓力。12:28 期貨較現貨低 60.52 點，水位續降且 ETF 廣度仍弱；先降低新增曝險速度，等待水位止降、ETF 廣度改善與期現貨重新站穩。",
-      "外資臺指期 8/3 淨未沖銷 -90,038 口、日交易淨額 -6,096 口，部位壓力較前一日加深。美股 8/3 Nasdaq +2.13%、NDX +1.78%、SOX +1.05%，但 Apple -1.78%，科技仍是選股而非無差別上漲；台股若只有少數硬體鏈撐盤、ETF 與水位持續轉弱，不宜把美股反彈直接外推成台股全面擴張。",
-      "四區共 81 張卡、76 個唯一代號；ETF 價值區 8 跌 2 缺、ETF 升溫區 7 跌，產業價值區 17 漲 15 跌 2 平，產業升溫區 8 漲 17 跌 3 平 2 缺。ETF 雙區重疊為 0050、0055；產業雙區重疊為 2059、3017、5274。強勢集中在 全新、景碩、光寶科、川湖、大立光、聯茂、旺矽；弱勢則包括 同亨、日月光投控、京元電子、瑞昱、矽力*-KY、台達電、宇瞻、元大台灣50正2。",
-      "Reuters 8/4 指出亞洲股市受美股帶動走高、油價持穩；外部風險偏好改善，但台股水位與 ETF 廣度未同步。"
+      "高位控速：現貨日低 43,809.83、期貨日低 44,219 是第一防線；現貨日高 44,923.06、期貨日高 44,909 是第一壓力。10:20 期貨較現貨正價差約 3.60 點，價格結構強；但水位連三日下降，優先等待水位止降或強勢股完成換手，不在全面急漲時擴大追價。",
+      "外資臺指期 8/4 淨未沖銷 -87,858 口，較 8/3 的 -90,038 口回補 2,180 口，日交易淨額 +2,155 口；壓力略緩但淨空仍深。美股 8/4 Nasdaq +2.59%、NDX +3.32%、SOX +6.55%，同時 VIX +4.04%，顯示強勢價格與避險需求並存；若只看漲幅，容易忽略健康度與波動風險。",
+      "四區共 81 張卡、77 個唯一代號；ETF 價值區 9 漲 1 缺、ETF 升溫區 7 漲，產業價值區 33 漲 1 缺，產業升溫區 28 漲 1 跌 1 缺。ETF 雙區重疊為 00875；產業雙區重疊為 2059、3017、3653。最強集中在 全新、景碩、台燿、聯詠、華通、聯電、臻鼎-KY、欣興；唯一明確下跌為 晟鈦，寶雅、鴻勁、富邦摩台缺少可用價格。",
+      "Reuters 8/5 標題指出亞洲股市在科技情緒翻轉下大漲、油價回落，與台股盤中全面上漲相互呼應。"
     ],
     "systemic_risk": "中偏高",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
   },
   "action_guidance": {
-    "risk_bias": "risk_off",
-    "allow_add": false,
+    "risk_bias": "balanced_cautious",
+    "allow_add": true,
     "allow_trim": true,
-    "deploy_mode": "reduce_exposure",
+    "deploy_mode": "slow_selective_add",
+    "max_initial_deploy_pct": 0.25,
     "trim": {
       "allowed": true,
-      "mode": "reduce_exposure",
+      "mode": "selective_trim",
       "max_overshoot_pct": 0.25,
       "priority": [
         "positive_return_overheated_branch",
@@ -61,18 +62,23 @@
       ]
     },
     "deploy": {
-      "allowed": false,
-      "mode": "disabled",
+      "allowed": true,
+      "mode": "slow_selective_add",
+      "max_initial_deploy_pct": 0.25,
       "conditions": [
-        "risk_off_no_new_exposure"
+        "conditional_only",
+        "core_or_high_quality_only",
+        "pullback_confirmed",
+        "no_chase"
       ]
     },
     "rebuy": {
-      "allowed": false,
-      "mode": "disabled_until_stabilized",
+      "allowed": true,
+      "mode": "wait_for_pullback",
       "conditions": [
-        "risk_bias_improves",
-        "water_stabilizes"
+        "sold_name_drawdown_2_to_3_pct",
+        "MA20_support",
+        "murphy_right_side_reconfirmation"
       ]
     },
     "trim_priority": [
@@ -85,11 +91,11 @@
     "source": "morning_brief_classifier"
   },
   "editorial": {
-    "state_label": "風險收縮",
-    "summary": "方舟水位由 76.1% 再降至 71.0%（-5.1pt），ETF 17 張全跌或缺價、現貨與期貨同步走弱，外資臺指期淨空擴至 -90,038 口；雖美股科技與台股部分 AI 硬體鏈仍強，風險預算仍應收縮"
+    "state_label": "高位控速",
+    "summary": "方舟水位由 71.0% 降至 66.0%（-5.0pt），但四區 81 張卡有 77 張上漲、現貨與期貨盤中均上漲逾 3.4%；價格與廣度極強，市場健康度卻續降，適合高位控速而非全面追價"
   },
   "source": {
-    "issue_file": "data/issues/20260804.json",
-    "generated_at": "2026-08-04T12:35:39+08:00"
+    "issue_file": "data/issues/20260805.json",
+    "generated_at": "2026-08-05T10:29:27+08:00"
   }
 }
