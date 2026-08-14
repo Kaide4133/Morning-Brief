@@ -1,0 +1,817 @@
+{
+  "disclaimer": "本報告整理公開市場資料與方舟運算畫面，僅供資訊研究與風險管理參考，不構成投資建議。盤中數值為標示時間的市場快照；投資人應依自身風險承受度獨立判斷。",
+  "date": "2026-08-14",
+  "issue_no": 65,
+  "session_label": "Taipei intraday",
+  "hero": {
+    "headline": "水位微降，AI 主線接棒",
+    "subhead": "方舟水位微降至 64.0%，四區仍有 46 漲；台股期現貨 09:30 同步上揚，前夜 Nasdaq、NDX、SOX 收高，SMIC AI 晶片需求與美股科技風險偏好提供催化，但水位斜率與盤中拉回要求不追第一段。"
+  },
+  "market": {
+    "sox": {
+      "value": "12,456.00",
+      "change_pct": 0.46
+    },
+    "vix": {
+      "value": "14.63",
+      "change_pct": 0.55
+    },
+    "nasdaq": {
+      "value": "26,803.03",
+      "change_pct": 0.81
+    },
+    "tw_index": {
+      "line": "46,190.81 / +0.37%｜TWSE MIS 2026/08/14 09:30 一分鐘收盤；09:31 報價所示盤中開 46,103.81、高 46,402.60、低 46,075.71",
+      "change_pct": 0.37
+    },
+    "futures": {
+      "line": "近月臺指期 TXFH6-F（臺指期086）46,150 / +0.27%｜TAIFEX MIS 2026/08/14 09:30 一分鐘收盤；該分鐘開 46,161、高 46,168、低 46,147"
+    },
+    "foreign_oi": {
+      "value": "-86,249 口",
+      "note": "TAIFEX 2026/08/13 最新完整資料：外資及陸資臺股期貨未沖銷多方 12,073 口、空方 98,322 口，淨額 -86,249 口；日交易淨額 +380 口。"
+    },
+    "systemic_risk": "中"
+  },
+  "market_summary": "加權 46,190.81（09:30，+0.37%）｜近月臺指期 46,150（09:30，+0.27%）｜Nasdaq 26,803.03（+0.81%）｜SOX 12,456.00（+0.46%）｜VIX 14.63（+0.55%）｜外資臺指期淨未沖銷 -86,249 口（8/13）",
+  "strategy": {
+    "thesis": "方舟水位由 64.2% 微降至 64.0%，市場健康度與可部署空間縮小 0.2pt；09:05 四區 78 張卡仍有 46 張上漲，09:30 現貨與期貨分別上漲 0.37%、0.27%。前夜 Nasdaq +0.81%、NDX +1.15%、SOX +0.46%，Reuters 報導 SMIC 第二季獲利逾倍增且指向 AI 晶片需求，定位為「02 主線催化」。",
+    "tape": "ETF 價值區 5 漲、3 跌、2 筆無可核股價漲跌；ETF 升溫區 7 漲；產業價值區 17 漲、12 跌、2 平；產業升溫區 17 漲、12 跌、1 筆無可核股價漲跌。領漲為 仁寶（+9.92%）、陽程（+9.72%）、信驊（+5.72%）、矽力*-KY（+5.48%）、單井（+5.29%）；壓力集中在 臺慶科（-4.73%）、彰源（-2.76%）、國巨*（-2.42%）、聯亞（-2.25%）、宏致（-1.89%）。ETF 雙區重疊為 0050；產業雙區重疊為 2059,2383,3189,6213。",
+    "playbook": "主線催化：現貨 46,075.71、期貨 46,147 是上午第一防線；現貨 46,402.60、期貨 46,168 是已見壓力帶。09:30 期貨較現貨逆價差約 40.81 點。AI、記憶體與電子製造有接棒，但水位微降且早盤由高點回落，執行以等回測、看接棒、不追第一根為主。",
+    "risk": "外資臺指期 8/13 淨未沖銷 -86,249 口，較前一日 -86,633 口回補 384 口，但絕對淨空仍深。美股 8/13 科技股普遍回升，VIX 反而小升 0.55%；台股早盤也由高點回落，顯示風險偏好改善但並非單向。美國無人機與零組件進口關稅、台海與網路安全仍是政策尾部風險。"
+  },
+  "ark": {
+    "water_level": 64.0,
+    "prev": 64.2,
+    "delta": -0.2,
+    "global_dispersion": "畫面僅顯示儀表名稱，未提供可獨立量化讀值",
+    "foreign_sentiment": "畫面僅顯示儀表名稱，未提供可獨立量化讀值",
+    "position_heating_up": "畫面僅顯示儀表名稱，未提供可獨立量化讀值",
+    "social_rebound": "畫面僅顯示儀表名稱，未提供可獨立量化讀值",
+    "energy_storm": "畫面僅顯示儀表名稱，未提供可獨立量化讀值",
+    "note": "64.0%，較前一交易日 8/13 的 64.2% <span class=\"mark\">下降 0.2 個百分點</span>。水位微降代表市場健康度與可部署空間略收斂；四區仍有 46 張上漲、台股期現貨同步走高，因此是控速中的主線催化，不是全面轉弱。"
+  },
+  "temperature": {
+    "vix_note": "美股 8/13 收盤 Nasdaq 26,803.03（+0.81%）、NDX 30,084.50（+1.15%）、SOX 12,456.00（+0.46%）、VIX 14.63（+0.55%）。Meta +2.78%、Tesla +3.80% 領漲，Amazon -0.80% 落後，風險偏好擴散但仍非整齊同漲。",
+    "signal_headline": "水位微降但價格廣度偏多；AI、記憶體與電子製造接棒，主線有催化、追價要控速。",
+    "signal_note": "ETF 價值 10 檔、升溫 7 檔；產業價值 31 檔、升溫 30 檔，共 78 張卡、73 個唯一代號。ETF 重疊 0050；產業重疊 2059,2383,3189,6213。"
+  },
+  "editorial": {
+    "pull_quote": "主線催化不是全面放大風險：水位微降時，更要看誰能在回測後接棒，而不是只看第一段漲幅。",
+    "body": "8/14 的核心是「價格偏多、水位控速」：09:05 方舟水位由 64.2% 微降至 64.0%，四區 78 張卡有 46 張上漲；09:30 現貨 +0.37%、期貨 +0.27%，但兩者都由早盤高點回落。前夜 Nasdaq、NDX、SOX 收高，SMIC 第二季獲利與 AI 晶片需求訊號提供產業催化，仁寶、陽程、信驊、矽力*-KY、創意等接棒。八情境定位鎖定「02 主線催化」：題材提高觀察優先級，水位微降則要求等回測、不把催化直接翻成追價。"
+  },
+  "home": {
+    "water_note": "8/14 方舟水位 64.0%，較 8/13 的 64.2% 下降 0.2pt；健康度與可部署空間微幅收斂，但價格廣度仍偏多。",
+    "thesis_blurb": "四區 46 漲、台股期現貨同步上揚，Nasdaq、NDX、SOX 收高；AI 與電子製造接棒，但水位微降要求控速。",
+    "risk_tagline": "02 主線催化｜AI 接棒、水位控速",
+    "recent_summary": "8/14 水位微降至 64.0%，四區 46 漲；AI、記憶體與電子製造有接棒，追價仍要等回測。"
+  },
+  "etf": {
+    "value": [
+      {
+        "code": "00861",
+        "name": "元大全球未來通訊",
+        "stamp": "value",
+        "meta": "89.5 / ▼0.5 (-0.56%)｜即時淨值 89.97｜折溢價 -0.52%｜全球"
+      },
+      {
+        "code": "00911",
+        "name": "兆豐洲際半導體",
+        "stamp": "value",
+        "meta": "56.1 / ▲0.25 (+0.45%)｜即時淨值 56.09｜折溢價 0.02%｜全球"
+      },
+      {
+        "code": "00830",
+        "name": "國泰費城半導體",
+        "stamp": "value",
+        "meta": "88.45 / ▼0.5 (-0.56%)｜即時淨值 88.69｜折溢價 -0.16%｜美國"
+      },
+      {
+        "code": "00875",
+        "name": "國泰網路資安",
+        "stamp": "value",
+        "meta": "股價 —｜漲跌 —｜即時淨值 58.55｜折溢價 -1.88%｜全球"
+      },
+      {
+        "code": "00876",
+        "name": "元大全球5G",
+        "stamp": "value",
+        "meta": "92.45 / ▼0.25 (-0.27%)｜即時淨值 92.4｜折溢價 0.32%｜全球"
+      },
+      {
+        "code": "0057",
+        "name": "富邦摩台",
+        "stamp": "value",
+        "meta": "股價 —｜漲跌 —｜即時淨值 321.59｜折溢價 -0.77%｜台灣"
+      },
+      {
+        "code": "0052",
+        "name": "富邦科技",
+        "stamp": "value",
+        "meta": "62.65 / ▲0.25 (+0.4%)｜即時淨值 63.03｜折溢價 -0.68%｜台灣"
+      },
+      {
+        "code": "0050",
+        "name": "元大台灣50",
+        "stamp": "value",
+        "meta": "107.3 / ▲0.6 (+0.56%)｜即時淨值 107.71｜折溢價 -0.43%｜台灣"
+      },
+      {
+        "code": "00631L",
+        "name": "元大台灣50正2",
+        "stamp": "value",
+        "meta": "36.5 / ▲0.21 (+0.58%)｜即時淨值 36.57｜折溢價 -0.16%｜台灣"
+      },
+      {
+        "code": "0053",
+        "name": "元大電子",
+        "stamp": "value",
+        "meta": "245 / ▲1.85 (+0.76%)｜即時淨值 244.81｜折溢價 0.08%｜台灣"
+      }
+    ],
+    "rising": [
+      {
+        "code": "00912",
+        "name": "中信臺灣智慧50",
+        "stamp": "rising",
+        "meta": "34.9 / ▲0.27 (+0.78%)｜即時淨值 35.18｜折溢價 -0.23%｜台灣"
+      },
+      {
+        "code": "009808",
+        "name": "華南永昌優選50",
+        "stamp": "rising",
+        "meta": "31.66 / ▲0.27 (+0.86%)｜即時淨值 31.66｜折溢價 0%｜台灣"
+      },
+      {
+        "code": "00985A",
+        "name": "主動野村台灣50",
+        "stamp": "rising",
+        "meta": "22.79 / ▲0.11 (+0.49%)｜即時淨值 22.87｜折溢價 -0.39%｜—"
+      },
+      {
+        "code": "00901",
+        "name": "永豐智能車供應鏈",
+        "stamp": "rising",
+        "meta": "46.92 / ▲0.4 (+0.86%)｜即時淨值 47.13｜折溢價 -0.45%｜台灣"
+      },
+      {
+        "code": "00850",
+        "name": "元大臺灣ESG永續",
+        "stamp": "rising",
+        "meta": "92.8 / ▲0.95 (+1.03%)｜即時淨值 93.15｜折溢價 -0.38%｜台灣"
+      },
+      {
+        "code": "00980A",
+        "name": "主動野村臺灣優選",
+        "stamp": "rising",
+        "meta": "25.38 / ▲0.18 (+0.71%)｜即時淨值 25.45｜折溢價 -0.28%｜—"
+      },
+      {
+        "code": "0050",
+        "name": "元大台灣50",
+        "stamp": "rising",
+        "meta": "107.35 / ▲0.65 (+0.61%)｜即時淨值 107.66｜折溢價 -0.43%｜台灣"
+      }
+    ],
+    "overlap": [
+      "0050"
+    ],
+    "overlap_names": {
+      "0050": "元大台灣50"
+    }
+  },
+  "stocks": {
+    "value": [
+      {
+        "code": "3665",
+        "name": "貿聯-KY",
+        "stamp": "value",
+        "meta": "2,230 / ▲25 (+1.13%)｜月營收變動 13.06%｜月營收年增 59.5%"
+      },
+      {
+        "code": "2345",
+        "name": "智邦",
+        "stamp": "value",
+        "meta": "2,305 / ▲35 (+1.54%)｜月營收變動 -0.21%｜月營收年增 71.6%"
+      },
+      {
+        "code": "3034",
+        "name": "聯詠",
+        "stamp": "value",
+        "meta": "536 / ▼2 (-0.37%)｜月營收變動 2.73%｜月營收年增 —"
+      },
+      {
+        "code": "1785",
+        "name": "光洋科",
+        "stamp": "value",
+        "meta": "108 / ▼1 (-0.92%)｜月營收變動 14.18%｜月營收年增 46.4%"
+      },
+      {
+        "code": "2303",
+        "name": "聯電",
+        "stamp": "value",
+        "meta": "124.5 / 0 (0%)｜月營收變動 3.11%｜月營收年增 18.9%"
+      },
+      {
+        "code": "6285",
+        "name": "啟碁",
+        "stamp": "value",
+        "meta": "249.5 / ▲3 (+1.22%)｜月營收變動 6.57%｜月營收年增 89.8%"
+      },
+      {
+        "code": "6515",
+        "name": "穎崴",
+        "stamp": "value",
+        "meta": "6,820 / ▲75 (+1.11%)｜月營收變動 9.6%｜月營收年增 155.5%"
+      },
+      {
+        "code": "4958",
+        "name": "臻鼎-KY",
+        "stamp": "value",
+        "meta": "486 / ▲8.5 (+1.78%)｜月營收變動 3.33%｜月營收年增 31.8%"
+      },
+      {
+        "code": "2455",
+        "name": "全新",
+        "stamp": "value",
+        "meta": "378.5 / ▼5.5 (-1.43%)｜月營收變動 29.48%｜月營收年增 45.1%"
+      },
+      {
+        "code": "2449",
+        "name": "京元電子",
+        "stamp": "value",
+        "meta": "253 / ▼0.5 (-0.2%)｜月營收變動 10.19%｜月營收年增 36.7%"
+      },
+      {
+        "code": "6223",
+        "name": "旺矽",
+        "stamp": "value",
+        "meta": "6,540 / ▲45 (+0.69%)｜月營收變動 -1.5%｜月營收年增 —"
+      },
+      {
+        "code": "6415",
+        "name": "矽力*-KY",
+        "stamp": "value",
+        "meta": "490.5 / ▲25.5 (+5.48%)｜月營收變動 13.08%｜月營收年增 58.5%"
+      },
+      {
+        "code": "2379",
+        "name": "瑞昱",
+        "stamp": "value",
+        "meta": "756 / ▼2 (-0.26%)｜月營收變動 4.75%｜月營收年增 32.5%"
+      },
+      {
+        "code": "2313",
+        "name": "華通",
+        "stamp": "value",
+        "meta": "220.5 / ▲8.5 (+4.01%)｜月營收變動 0.58%｜月營收年增 16.0%"
+      },
+      {
+        "code": "2360",
+        "name": "致茂",
+        "stamp": "value",
+        "meta": "2,325 / ▲25 (+1.09%)｜月營收變動 32.09%｜月營收年增 175.2%"
+      },
+      {
+        "code": "3711",
+        "name": "日月光投控",
+        "stamp": "value",
+        "meta": "625 / ▼1 (-0.16%)｜月營收變動 12.16%｜月營收年增 43.1%"
+      },
+      {
+        "code": "6239",
+        "name": "力成",
+        "stamp": "value",
+        "meta": "288 / ▲5 (+1.77%)｜月營收變動 8.49%｜月營收年增 29.3%"
+      },
+      {
+        "code": "2324",
+        "name": "仁寶",
+        "stamp": "value",
+        "meta": "43.2 / ▲3.9 (+9.92%)｜月營收變動 -15.49%｜月營收年增 38.2%"
+      },
+      {
+        "code": "2327",
+        "name": "國巨*",
+        "stamp": "value",
+        "meta": "646 / ▼16 (-2.42%)｜月營收變動 5.03%｜月營收年增 51.5%"
+      },
+      {
+        "code": "3037",
+        "name": "欣興",
+        "stamp": "value",
+        "meta": "997 / ▼3 (-0.3%)｜月營收變動 9.11%｜月營收年增 43.6%"
+      },
+      {
+        "code": "3008",
+        "name": "大立光",
+        "stamp": "value",
+        "meta": "4,820 / ▲160 (+3.43%)｜月營收變動 31.39%｜月營收年增 -10.6%"
+      },
+      {
+        "code": "2382",
+        "name": "廣達",
+        "stamp": "value",
+        "meta": "334.5 / ▲9.5 (+2.92%)｜月營收變動 -4.91%｜月營收年增 131.3%"
+      },
+      {
+        "code": "2454",
+        "name": "聯發科",
+        "stamp": "value",
+        "meta": "4,295 / ▲70 (+1.66%)｜月營收變動 -16.44%｜月營收年增 12.1%"
+      },
+      {
+        "code": "2308",
+        "name": "台達電",
+        "stamp": "value",
+        "meta": "1,955 / ▲70 (+3.71%)｜月營收變動 2.24%｜月營收年增 47.7%"
+      },
+      {
+        "code": "6274",
+        "name": "台燿",
+        "stamp": "value",
+        "meta": "1,600 / 0 (0%)｜月營收變動 20.69%｜月營收年增 121.5%"
+      },
+      {
+        "code": "3189",
+        "name": "景碩",
+        "stamp": "value",
+        "meta": "842 / ▼9 (-1.06%)｜月營收變動 7.69%｜月營收年增 35.8%"
+      },
+      {
+        "code": "2330",
+        "name": "台積電",
+        "stamp": "value",
+        "meta": "2,430 / ▼5 (-0.21%)｜月營收變動 5.62%｜月營收年增 44.6%"
+      },
+      {
+        "code": "5274",
+        "name": "信驊",
+        "stamp": "value",
+        "meta": "18,490 / ▲1,000 (+5.72%)｜月營收變動 16.32%｜月營收年增 97.5%"
+      },
+      {
+        "code": "2383",
+        "name": "台光電",
+        "stamp": "value",
+        "meta": "5,850 / ▲160 (+2.81%)｜月營收變動 8.31%｜月營收年增 —"
+      },
+      {
+        "code": "2059",
+        "name": "川湖",
+        "stamp": "value",
+        "meta": "12,105 / ▼130 (-1.06%)｜月營收變動 44.22%｜月營收年增 355.5%"
+      },
+      {
+        "code": "6213",
+        "name": "聯茂",
+        "stamp": "value",
+        "meta": "467 / ▼2 (-0.43%)｜月營收變動 12.71%｜月營收年增 96.8%"
+      }
+    ],
+    "rising": [
+      {
+        "code": "5351",
+        "name": "鈺創",
+        "stamp": "rising",
+        "meta": "134.5 / ▲5.5 (+4.26%)｜月營收變動 11.7%｜月營收年增 590.8%"
+      },
+      {
+        "code": "3490",
+        "name": "單井",
+        "stamp": "rising",
+        "meta": "38.8 / ▲1.95 (+5.29%)｜月營收變動 39.4%｜月營收年增 9.4%"
+      },
+      {
+        "code": "3443",
+        "name": "創意",
+        "stamp": "rising",
+        "meta": "5,810 / ▲270 (+4.87%)｜月營收變動 17.06%｜月營收年增 158.3%"
+      },
+      {
+        "code": "2376",
+        "name": "技嘉",
+        "stamp": "rising",
+        "meta": "394 / ▲0.5 (+0.13%)｜月營收變動 3.08%｜月營收年增 59.6%"
+      },
+      {
+        "code": "3498",
+        "name": "陽程",
+        "stamp": "rising",
+        "meta": "158 / ▲14 (+9.72%)｜月營收變動 33.55%｜月營收年增 712.5%"
+      },
+      {
+        "code": "8299",
+        "name": "群聯",
+        "stamp": "rising",
+        "meta": "2,285 / ▲5 (+0.22%)｜月營收變動 9.29%｜月營收年增 377.5%"
+      },
+      {
+        "code": "6213",
+        "name": "聯茂",
+        "stamp": "rising",
+        "meta": "464 / ▼5 (-1.07%)｜月營收變動 12.71%｜月營收年增 96.8%"
+      },
+      {
+        "code": "2399",
+        "name": "映泰",
+        "stamp": "rising",
+        "meta": "45.65 / ▲1.25 (+2.82%)｜月營收變動 21.48%｜月營收年增 10.7%"
+      },
+      {
+        "code": "6716",
+        "name": "應廣",
+        "stamp": "rising",
+        "meta": "121 / ▲3.5 (+2.98%)｜月營收變動 12.28%｜月營收年增 102.0%"
+      },
+      {
+        "code": "2059",
+        "name": "川湖",
+        "stamp": "rising",
+        "meta": "12,125 / ▼110 (-0.9%)｜月營收變動 44.22%｜月營收年增 355.5%"
+      },
+      {
+        "code": "2851",
+        "name": "中再保",
+        "stamp": "rising",
+        "meta": "37.8 / ▼0.05 (-0.13%)｜月營收變動 -48.68%｜月營收年增 6.0%"
+      },
+      {
+        "code": "3605",
+        "name": "宏致",
+        "stamp": "rising",
+        "meta": "129.5 / ▼2.5 (-1.89%)｜月營收變動 3.28%｜月營收年增 29.8%"
+      },
+      {
+        "code": "3017",
+        "name": "奇鋐",
+        "stamp": "rising",
+        "meta": "3,225 / ▲25 (+0.78%)｜月營收變動 5.52%｜月營收年增 57.3%"
+      },
+      {
+        "code": "2383",
+        "name": "台光電",
+        "stamp": "rising",
+        "meta": "5,825 / ▲135 (+2.37%)｜月營收變動 8.31%｜月營收年增 —"
+      },
+      {
+        "code": "6419",
+        "name": "京晨科",
+        "stamp": "rising",
+        "meta": "164.5 / ▼3 (-1.79%)｜月營收變動 17.8%｜月營收年增 474.4%"
+      },
+      {
+        "code": "6770",
+        "name": "力積電",
+        "stamp": "rising",
+        "meta": "77.9 / ▲3 (+4.01%)｜月營收變動 3.01%｜月營收年增 70.5%"
+      },
+      {
+        "code": "3455",
+        "name": "由田",
+        "stamp": "rising",
+        "meta": "226.5 / ▲1.5 (+0.67%)｜月營收變動 78.1%｜月營收年增 -9.3%"
+      },
+      {
+        "code": "1717",
+        "name": "長興",
+        "stamp": "rising",
+        "meta": "股價 —｜漲跌 —｜月營收變動 —｜月營收年增 —"
+      },
+      {
+        "code": "4931",
+        "name": "新盛力",
+        "stamp": "rising",
+        "meta": "262 / ▲1 (+0.38%)｜月營收變動 13.95%｜月營收年增 159.5%"
+      },
+      {
+        "code": "6683",
+        "name": "雍智科技",
+        "stamp": "rising",
+        "meta": "1,400 / ▲5 (+0.36%)｜月營收變動 -0.49%｜月營收年增 24.3%"
+      },
+      {
+        "code": "6173",
+        "name": "信昌電",
+        "stamp": "rising",
+        "meta": "221 / ▼2.5 (-1.12%)｜月營收變動 6.62%｜月營收年增 47.8%"
+      },
+      {
+        "code": "3006",
+        "name": "晶豪科",
+        "stamp": "rising",
+        "meta": "279.5 / ▲2 (+0.72%)｜月營收變動 40.02%｜月營收年增 491.0%"
+      },
+      {
+        "code": "2465",
+        "name": "麗臺",
+        "stamp": "rising",
+        "meta": "104 / ▼1 (-0.95%)｜月營收變動 14.14%｜月營收年增 280.8%"
+      },
+      {
+        "code": "6829",
+        "name": "千附精密",
+        "stamp": "rising",
+        "meta": "223 / ▲1 (+0.45%)｜月營收變動 -7.18%｜月營收年增 22.9%"
+      },
+      {
+        "code": "8996",
+        "name": "高力",
+        "stamp": "rising",
+        "meta": "1,270 / ▼15 (-1.17%)｜月營收變動 27.31%｜月營收年增 57.6%"
+      },
+      {
+        "code": "2030",
+        "name": "彰源",
+        "stamp": "rising",
+        "meta": "21.15 / ▼0.6 (-2.76%)｜月營收變動 9.24%｜月營收年增 41.1%"
+      },
+      {
+        "code": "6672",
+        "name": "騰輝電子-KY",
+        "stamp": "rising",
+        "meta": "262 / ▼2.5 (-0.95%)｜月營收變動 16.01%｜月營收年增 90.8%"
+      },
+      {
+        "code": "3189",
+        "name": "景碩",
+        "stamp": "rising",
+        "meta": "852 / ▲1 (+0.12%)｜月營收變動 7.69%｜月營收年增 35.8%"
+      },
+      {
+        "code": "3081",
+        "name": "聯亞",
+        "stamp": "rising",
+        "meta": "2,605 / ▼60 (-2.25%)｜月營收變動 19.19%｜月營收年增 176.5%"
+      },
+      {
+        "code": "3357",
+        "name": "臺慶科",
+        "stamp": "rising",
+        "meta": "241.5 / ▼12 (-4.73%)｜月營收變動 14.57%｜月營收年增 63.3%"
+      }
+    ],
+    "overlap": [
+      "2059",
+      "2383",
+      "3189",
+      "6213"
+    ],
+    "overlap_names": {
+      "2059": "川湖",
+      "2383": "台光電",
+      "3189": "景碩",
+      "6213": "聯茂"
+    }
+  },
+  "validation": {
+    "strengthened": [
+      "09:30 加權指數上漲 0.37%、近月臺指期上漲 0.27%，期現貨方向同步。",
+      "四區 78 張卡有 46 張上漲、27 張下跌；可核漲跌卡片的上漲比約 61.3%，內部廣度偏多。",
+      "美股 8/13 Nasdaq +0.81%、NDX +1.15%、SOX +0.46%，科技風險偏好延續。",
+      "仁寶（+9.92%）、陽程（+9.72%）、信驊（+5.72%）、矽力*-KY（+5.48%）、單井（+5.29%）領漲，AI 電子製造、記憶體、ASIC 與伺服器鏈有價格接棒。"
+    ],
+    "pressure": [
+      "水位由 64.2% 微降至 64.0%，部署空間略收斂，不能把價格上漲直接翻成全面放大風險。",
+      "09:30 期貨較現貨逆價差約 40.81 點，期貨未形成正價差。",
+      "外資臺指期淨未沖銷雖回補至 -86,249 口，絕對淨空仍深。",
+      "臺慶科（-4.73%）、彰源（-2.76%）、國巨*（-2.42%）、聯亞（-2.25%）、宏致（-1.89%）承壓，升溫區仍有明顯強弱分化。"
+    ],
+    "long_term": [
+      "Reuters 8/13 報導 SMIC 第二季股東應占獲利 4.792 億美元、營收年增 36% 至逾 30 億美元，並稱 AI 將持續支撐下半年晶片需求；這是成熟製程與 AI 邊緣需求的供給面證據。",
+      "Reuters 8/13 報導美國科技股推動 S&P 500 創收盤新高，且近期 Microsoft、Amazon 等強勁展望緩和市場對 AI 資料中心巨額支出的疑慮；但估值仍需獲利兌現。",
+      "Reuters 8/13 報導 Starlink 已在越南接受訂單，越南成為其第六個東南亞可用市場；這支持低軌衛星商業覆蓋擴張，但台股供應鏈受惠仍需訂單證明。",
+      "Reuters 8/13 報導美國將對無人機及零組件進口課徵關稅，顯示供應鏈安全與本土化政策升溫；對台灣零組件可能同時帶來轉單與成本風險。"
+    ]
+  },
+  "intelligence": {
+    "trump": [
+      {
+        "time": "無人機關稅",
+        "content": "Reuters 8/13 報導川普政府將對無人機及其零組件進口課徵關稅，部分盟友亦在範圍內；對無人機、通訊與電子零組件供應鏈是政策擾動，不宜只解讀為單向轉單利多。"
+      },
+      {
+        "time": "利率預期",
+        "content": "Reuters 8/13 報導溫和的生產者物價資料支持市場預期 Fed 9 月不升息；這是市場定價，不是 FOMC 已作成決議。"
+      },
+      {
+        "time": "直接訊號邊界",
+        "content": "本次未納入可獨立驗證、足以改變台股判讀的 8/13–8/14 Trump 原始社群訊號；公開分析採官方行情與可核新聞。"
+      }
+    ],
+    "fed": [
+      "Reuters 8/13 報導溫和的生產者物價資料支持 Fed 9 月不升息預期，並推動 S&P 500 創收盤新高；利率路徑對科技估值偏正面，但正式決議仍待 FOMC。",
+      "VIX 8/13 小升 0.55%，與科技股上漲並存，顯示市場並未完全移除政策與估值避險。"
+    ],
+    "musk": "Reuters 8/13 報導 SpaceX 旗下 Starlink 已在越南接受住宅與企業方案訂單，越南成為其第六個東南亞可用市場，試行期訂戶上限 60 萬戶並已獲准設置四座地面閘道站。這是低軌衛星商轉版圖擴張的直接證據；對台股衛星、網通、電源與高速傳輸供應鏈僅屬題材映射，仍需公司訂單證明。Tesla 8/13 上漲 3.80%，反映高彈性風險偏好回升。",
+    "policy": [
+      "Reuters 8/13 報導 SMIC 第二季獲利逾三倍、營收年增 36%，公司稱 AI 將持續推動下半年晶片需求並加速新產線爬坡。",
+      "Reuters 8/13 報導 S&P 500 創收盤新高，記憶體與大型科技領漲；科技風險偏好與 AI 資本支出敘事回暖。",
+      "Reuters 8/13 報導美國將對無人機及零組件進口課徵關稅；供應鏈本土化與盟友關稅風險同時升高。",
+      "Reuters 8/13 報導 Starlink 在越南開始接單；低軌衛星區域覆蓋擴張，台股映射仍需訂單與營收驗證。",
+      "Reuters 8/13 報導台灣上月遭 AI 驅動的駭客攻擊；網路安全與韌性基建需求提高，但地緣折價仍在。"
+    ]
+  },
+  "mag7": [
+    {
+      "name": "Apple",
+      "ticker": "AAPL",
+      "price": "305.26",
+      "change_pct": 1.0,
+      "change_abs": "+3.01",
+      "tier": "neutral",
+      "tier_label": "NEUTRAL",
+      "signal": "終端硬體回升，風險偏好擴散但漲幅仍低於高彈性平台股"
+    },
+    {
+      "name": "Microsoft",
+      "ticker": "MSFT",
+      "price": "496.88",
+      "change_pct": 0.9,
+      "change_abs": "+4.45",
+      "tier": "neutral",
+      "tier_label": "NEUTRAL",
+      "signal": "回升近 1%，AI 資本支出疑慮緩和但仍需追蹤獲利兌現"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "price": "225.30",
+      "change_pct": 0.54,
+      "change_abs": "+1.21",
+      "tier": "neutral",
+      "tier_label": "NEUTRAL",
+      "signal": "續漲 0.54%，與 SOX 同向但領軍強度較前一日放緩"
+    },
+    {
+      "name": "Amazon",
+      "ticker": "AMZN",
+      "price": "265.13",
+      "change_pct": -0.8,
+      "change_abs": "-2.15",
+      "tier": "weak",
+      "tier_label": "WATCH",
+      "signal": "七巨頭中主要落後者，平台股仍非全面同步"
+    },
+    {
+      "name": "Alphabet Class A",
+      "ticker": "GOOGL",
+      "price": "346.36",
+      "change_pct": 0.82,
+      "change_abs": "+2.82",
+      "tier": "neutral",
+      "tier_label": "NEUTRAL",
+      "signal": "溫和上漲，搜尋與雲端平台風險偏好回暖"
+    },
+    {
+      "name": "Meta",
+      "ticker": "META",
+      "price": "594.97",
+      "change_pct": 2.78,
+      "change_abs": "+16.12",
+      "tier": "strong",
+      "tier_label": "STRONG",
+      "signal": "上漲 2.78%，大型平台股重新接棒"
+    },
+    {
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "price": "339.96",
+      "change_pct": 3.8,
+      "change_abs": "+12.45",
+      "tier": "strong",
+      "tier_label": "STRONG",
+      "signal": "上漲 3.80%，高彈性風險偏好明顯回升"
+    }
+  ],
+  "analysis": {
+    "us_close": "美股 8/13 是「科技擴散、仍有分化」：Nasdaq 26,803.03（+0.81%）、NDX 30,084.50（+1.15%）、SOX 12,456.00（+0.46%）、VIX 14.63（+0.55%）。Meta +2.78%、Tesla +3.80% 領漲，Amazon -0.80% 落後。",
+    "tx_night": "TAIFEX 8/14 日盤 09:30 近月臺指期 TXFH6-F 一分鐘收盤 46,150，較參考價 46,025 上漲 125 點（+0.27%），該分鐘開 46,161、高 46,168、低 46,147；同期現貨 46,190.81（+0.37%），期貨對現貨逆價差約 40.81 點。外資 8/13 未沖銷淨額 -86,249 口。",
+    "axes": {
+      "thesis": "價格廣度、台股期現貨與前夜科技指數偏多，AI 主線有催化；水位微降使執行重點回到回測與接棒。",
+      "policy": "SMIC AI 晶片需求、Starlink 東南亞擴張與科技股創高支持長線題材；無人機關稅、台海與網路安全維持供應鏈風險。",
+      "risk": "現貨 46,075.71、期貨 46,147 是第一防線；若失守並伴隨水位續降，主線催化需降級為輪動控速。"
+    },
+    "bullets": [
+      "水位 64.0%，較前一交易日 64.2% 下降 0.2pt。",
+      "四區 78 張卡、73 個唯一代號；46 漲、27 跌、2 平、3 筆無可核股價漲跌。",
+      "09:30 現貨 +0.37%、期貨 +0.27%，期貨逆價差約 40.81 點。"
+    ]
+  },
+  "conclusion": "8/14 的核心是「水位微降、AI 主線接棒」：方舟水位由 64.2% 降至 64.0%，09:05 四區 78 張卡有 46 張上漲；09:30 現貨 +0.37%、期貨 +0.27%，前夜 Nasdaq +0.81%、NDX +1.15%、SOX +0.46%。八情境定位為「02 主線催化」：AI 晶片、記憶體、電子製造與低軌衛星有催化，部署空間卻略收斂，因此只提高主線觀察優先級，不做無差別追價。若現貨 46,075.71、期貨 46,147 守住且廣度延續，主線可續；若防線失守並伴隨水位再降，轉回輪動控速。",
+  "appendix": {
+    "after_hours": "美股 8/13 Nasdaq、NDX、SOX 收高，S&P 500 創收盤新高；台股 8/14 上午價格廣度與期現貨偏多，但水位微降且盤中由高點回落。閱讀重點是 AI 主線催化與回測承接，不把第一段上漲等同全面擴張。",
+    "map_bullets": [
+      "水位 64.0%／日減 0.2pt → 市場健康度與可部署空間微幅收斂。",
+      "78 張卡 46 漲／27 跌／2 平／3 筆無可核股價漲跌 → 價格廣度仍偏多。",
+      "產業價值區 17 漲、升溫區 17 漲 → 價值與主線都有接棒，但強弱分化明顯。",
+      "現貨 +0.37%／期貨 +0.27% → 方向同步，期貨逆價差約 40.81 點。",
+      "Nasdaq +0.81%／NDX +1.15%／SOX +0.46% → 科技風險偏好延續。",
+      "VIX +0.55% → 股價上漲與避險溫度小升並存，不是單向風險解除。",
+      "外資期貨 -86,249 口 → 淨空回補 384 口但絕對值仍深。",
+      "AI 晶片、記憶體、電子製造與低軌衛星有催化；關稅、地緣與網路安全維持尾部風險。"
+    ],
+    "execution": "今天的執行語言是「主線先看、回測再接、不追第一段」。現貨 46,075.71、期貨 46,147 是第一防線；價格廣度偏多支持 AI、記憶體、ASIC、伺服器與 PCB/CCL 提高觀察優先級，但水位微降、期貨逆價差與早盤回落要求保留速度控制。防線守住看接棒，跌破則降級為輪動。"
+  },
+  "xurl_signal_layer": {
+    "status": "no_material_signal",
+    "signals_count": 0,
+    "included_in_revision": false,
+    "summary": "本次未納入可獨立驗證、足以改變台股判讀的 8/13–8/14 原始社群訊號；公開分析採官方行情與可核新聞。"
+  },
+  "research_sources": [
+    {
+      "title": "TWSE MIS TAIEX synchronized minute quote 2026-08-14 09:30",
+      "published_utc": "2026-08-14T01:30:00Z",
+      "url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw"
+    },
+    {
+      "title": "TWSE MIS TAIEX current session quote 2026-08-14",
+      "published_utc": "2026-08-14",
+      "url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0"
+    },
+    {
+      "title": "TAIFEX MIS futures quote — TXFH6-F / 臺指期086 2026-08-14 09:30",
+      "published_utc": "2026-08-14T01:30:00Z",
+      "url": "https://mis.taifex.com.tw/futures/RegularSession/EquityIndices/FuturesDomestic/"
+    },
+    {
+      "title": "TAIFEX foreign futures positions 2026-08-13",
+      "published_utc": "2026-08-13",
+      "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate"
+    },
+    {
+      "title": "Yahoo Finance chart — SOX and Nasdaq 2026-08-13 completed close",
+      "published_utc": "2026-08-13",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?range=10d&interval=1d"
+    },
+    {
+      "title": "Cboe VIX daily price history 2026-08-13",
+      "published_utc": "2026-08-13",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+    },
+    {
+      "title": "Yahoo Finance chart — AAPL 2026-08-13 completed close",
+      "published_utc": "2026-08-13",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?range=10d&interval=1d"
+    },
+    {
+      "title": "Yahoo Finance chart — MSFT 2026-08-13 completed close",
+      "published_utc": "2026-08-13",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?range=10d&interval=1d"
+    },
+    {
+      "title": "Yahoo Finance chart — NVDA 2026-08-13 completed close",
+      "published_utc": "2026-08-13",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?range=10d&interval=1d"
+    },
+    {
+      "title": "Yahoo Finance chart — AMZN 2026-08-13 completed close",
+      "published_utc": "2026-08-13",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMZN?range=10d&interval=1d"
+    },
+    {
+      "title": "Yahoo Finance chart — GOOGL 2026-08-13 completed close",
+      "published_utc": "2026-08-13",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?range=10d&interval=1d"
+    },
+    {
+      "title": "Yahoo Finance chart — META 2026-08-13 completed close",
+      "published_utc": "2026-08-13",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/META?range=10d&interval=1d"
+    },
+    {
+      "title": "Yahoo Finance chart — TSLA 2026-08-13 completed close",
+      "published_utc": "2026-08-13",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/TSLA?range=10d&interval=1d"
+    },
+    {
+      "title": "Reuters — SMIC profit more than triples on AI-driven chip demand",
+      "published_utc": "2026-08-13T09:38:16Z",
+      "url": "https://www.aol.com/articles/smic-profit-more-triples-ai-093758000.html"
+    },
+    {
+      "title": "Reuters — S&P 500 notches record-high close as rate-hike worries ease",
+      "published_utc": "2026-08-13T23:35:02Z",
+      "url": "https://www.msn.com/en-us/money/markets/s-p-500-notches-record-high-close-as-rate-hike-worries-ease/ar-AA2a2YQP"
+    },
+    {
+      "title": "Reuters — Starlink starts taking orders for satellite internet service in Vietnam",
+      "published_utc": "2026-08-13T04:51:06Z",
+      "url": "https://www.msn.com/en-us/technology/space-exploration/starlink-starts-taking-orders-for-satellite-internet-service-in-vietnam/ar-AA29Z4JG"
+    },
+    {
+      "title": "Reuters — Trump administration to impose tariffs on drone imports, White House says",
+      "published_utc": "2026-08-13T21:57:41Z",
+      "url": "https://www.reuters.com/world/us/trump-administration-impose-tariffs-drone-imports-white-house-says-2026-08-13/"
+    },
+    {
+      "title": "Reuters — Taiwan says it was targeted last month in AI-driven hacking campaign",
+      "published_utc": "2026-08-13T02:13:42Z",
+      "url": "https://www.reuters.com/world/china/taiwan-says-it-was-targeted-last-month-ai-driven-hacking-campaign-2026-08-13/"
+    }
+  ],
+  "scenario_id": "02",
+  "lock_scenario": true,
+  "scenario_reason": "方舟水位微降 0.2pt，但四區 46 漲、台股期現貨同步上揚；前夜 Nasdaq、NDX、SOX 收高，SMIC AI 晶片需求與科技股風險偏好提供明確主線催化。"
+}
