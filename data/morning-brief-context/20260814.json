@@ -11,24 +11,24 @@
     "slug": "theme-catalyst",
     "label": "主線催化",
     "confidence": 1.0,
-    "reason": "方舟水位微降 0.2pt，但四區 46 漲、台股期現貨同步上揚；前夜 Nasdaq、NDX、SOX 收高，SMIC AI 晶片需求與科技股風險偏好提供明確主線催化。",
+    "reason": "方舟水位回升 1.1pt，四區 46 漲、台股期現貨同步上揚；前夜 Nasdaq、NDX、SOX 收高，SMIC AI 晶片需求與科技股風險偏好共同提供明確主線催化。",
     "source": "manual_override",
-    "classifier_suggestion": "02"
+    "classifier_suggestion": "01"
   },
   "water": {
-    "level": 64.0,
+    "level": 65.3,
     "previous": 64.2,
-    "change": -0.2,
-    "direction": "falling"
+    "change": 1.1,
+    "direction": "rising"
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
-    "short_term_bias": "cautious_review",
+    "short_term_bias": "increase_exposure_allowed",
     "risk_posture": "constructive_but_selective",
     "water_policy": {
-      "direction": "falling",
-      "change": -0.2,
-      "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
+      "direction": "rising",
+      "change": 1.1,
+      "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
     },
     "scenario_context": {
       "id": "02",
@@ -36,7 +36,7 @@
       "confidence": 1.0
     },
     "policy_focus": [
-      "主線催化：現貨 46,075.71、期貨 46,147 是上午第一防線；現貨 46,402.60、期貨 46,168 是已見壓力帶。09:30 期貨較現貨逆價差約 40.81 點。AI、記憶體與電子製造有接棒，但水位微降且早盤由高點回落，執行以等回測、看接棒、不追第一根為主。",
+      "主線催化：現貨 46,075.71、期貨 46,147 是上午第一防線；現貨 46,402.60、期貨 46,168 是已見壓力帶。09:30 期貨較現貨逆價差約 40.81 點。AI、記憶體與電子製造有接棒，水位回升打開更多部署空間；但早盤由高點回落，執行仍以等回測、看接棒、不追第一根為主。",
       "外資臺指期 8/13 淨未沖銷 -86,249 口，較前一日 -86,633 口回補 384 口，但絕對淨空仍深。美股 8/13 科技股普遍回升，VIX 反而小升 0.55%；台股早盤也由高點回落，顯示風險偏好改善但並非單向。美國無人機與零組件進口關稅、台海與網路安全仍是政策尾部風險。",
       "ETF 價值區 5 漲、3 跌、2 筆無可核股價漲跌；ETF 升溫區 7 漲；產業價值區 17 漲、12 跌、2 平；產業升溫區 17 漲、12 跌、1 筆無可核股價漲跌。領漲為 仁寶（+9.92%）、陽程（+9.72%）、信驊（+5.72%）、矽力*-KY（+5.48%）、單井（+5.29%）；壓力集中在 臺慶科（-4.73%）、彰源（-2.76%）、國巨*（-2.42%）、聯亞（-2.25%）、宏致（-1.89%）。ETF 雙區重疊",
       "Reuters 8/13 報導 SMIC 第二季獲利逾三倍、營收年增 36%，公司稱 AI 將持續推動下半年晶片需求並加速新產線爬坡。"
@@ -90,10 +90,10 @@
   },
   "editorial": {
     "state_label": "主線催化",
-    "summary": "方舟水位微降 0.2pt，但四區 46 漲、台股期現貨同步上揚；前夜 Nasdaq、NDX、SOX 收高，SMIC AI 晶片需求與科技股風險偏好提供明確主線催化。"
+    "summary": "方舟水位回升 1.1pt，四區 46 漲、台股期現貨同步上揚；前夜 Nasdaq、NDX、SOX 收高，SMIC AI 晶片需求與科技股風險偏好共同提供明確主線催化。"
   },
   "source": {
     "issue_file": "data/issues/20260814.json",
-    "generated_at": "2026-08-14T09:39:58+08:00"
+    "generated_at": "2026-08-14T12:10:33+08:00"
   }
 }
