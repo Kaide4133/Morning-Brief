@@ -38,7 +38,7 @@
     "thesis": "方舟水位由 84.3% 下降至 81.4%，健康度與可部署空間縮小；但 09:05 四區為 36 漲、33 跌、5 平，可核卡片上漲比 48.6%，11:30 現貨與期貨分別上漲 1.29%、1.77%。高水位仍在，價格卻跑在水位斜率之前，因此定位為「03 高位控速」：承認反彈，不把指數急漲直接翻成追價。",
     "tape": "ETF 價值區 2 漲、5 跌、0 平、3 筆無可核股價；ETF 升溫區 4 漲、3 跌；產業價值區 13 漲、16 跌、2 平；產業升溫區 17 漲、9 跌、3 平、1 筆無可核股價。領漲為 吉祥全（+9.99%）、鼎元（+9.91%）、順德（+9.77%）、大立光（+7.08%）、瑞軒（+4.56%）；壓力為 期街口布蘭特正2（-11.41%）、期元大S&P石油（-5.27%）、聚鼎（-3.75%）、長榮（-2.44%）、致茂（-2.29%）。ETF 雙區重疊為 00960；產業雙區重疊為 3008。",
     "playbook": "高位控速：現貨 44,925.84、期貨 44,865 是上午第一防線；上方先看現貨 45,827.28、期貨 45,910 能否持續站穩。兩個來源相差約 22 秒，期貨相對現貨價差僅作約 +74.70 點的非同步參考，不視為精確同步基差。價格轉強可以保留主線觀察，但水位下降與外資淨空擴大要求降低追價速度。",
-    "risk": "外資臺指期淨空擴大至 -85,380 口；Nvidia 8/26 美股盤後業績、同日 08:30 ET 的 PCE／GDP 與 8/27–29 Jackson Hole 集中。SOX 與 VIX 的隔夜組合偏正面，但事件尚未落地，不能把財報前反彈視為結果已被確認。"
+    "risk": "外資臺指期淨空擴大至 -85,380 口；Nvidia 8/26 美股盤後業績的選擇權隱含波動約 ±5.4%、折合約 2,800 億美元市值變動。同日 PCE／GDP 與 8/27–29 Jackson Hole 集中；Boston Fed Collins 亦明確表示，若通膨未持續改善，應很快進一步收緊政策。"
   },
   "ark": {
     "water_level": 81.4,
@@ -569,42 +569,51 @@
       "方舟水位由 84.3% 降至 81.4%，下降 2.9pt；健康度與可部署空間轉弱。",
       "外資臺指期淨未沖銷 8/25 為 -85,380 口，較 8/24 擴大淨空 2,851 口。",
       "ETF 價值區僅 2 漲、5 跌，另有 3 筆無來源股價；指數強勢尚未完全擴散至價值區。",
+      "美國 8 月消費者信心降至 89.4，未來預期分項降至 68.2；Collins 表示若通膨進展不能延續，近期收緊政策將屬適當。",
       "原油槓桿 ETF 壓力顯著，期街口布蘭特正2、期元大S&P石油分別下跌 11.41%、5.27%。"
     ],
     "long_term": [
-      "Nvidia 將於 8/26 13:20 PT 公布 FY2027 第二季結果、14:00 PT 舉行電話會議，焦點在 Rubin、資料中心需求與 AI 融資可持續性。",
+      "Nvidia 將於 8/26 13:20 PT 公布 FY2027 第二季結果、14:00 PT 舉行電話會議；選擇權隱含財報後約 ±5.4% 波動、折合約 2,800 億美元市值變動，焦點在 Rubin、資料中心需求、毛利與 AI 資本支出回報。",
       "BEA 8/26 08:30 ET 同時公布 7 月個人所得與支出／PCE，以及第二季 GDP 修正值。",
-      "Jackson Hole 8/27–29 聚焦金融創新、支付與政策；市場仍等待 Fed 對長端利率與政策路徑的指引。",
+      "Jackson Hole 8/27–29 聚焦金融創新、支付與政策；Boston Fed Collins 已先釋出通膨若不續降、近期需收緊政策的偏鷹訊號。",
+      "SpaceX 公布路易斯安那州 Starbase 計畫：125,000 英畝、規模 1,000 億美元，預計 2027 年動工、2029 年首次 Starship 發射；屬長期資本支出規劃，不是台廠已取得訂單。",
       "高水位尚存，但趨勢重新擴張仍需水位止跌、價值區廣度改善與事件落地共同證明。"
     ]
   },
   "intelligence": {
     "trump": [
       {
-        "time": "截至 8/26 11:35 台北時間",
-        "content": "本次未取得可交叉驗證、且在晨報時間窗內的 Donald Trump 新直接貼文；不以轉述或舊訊號填補當日催化。"
+        "time": "8/25 Reuters 可靠歸因",
+        "content": "Reuters 引述 Trump 在 Truth Social 宣稱荷姆茲海峽國際水域的水雷均已移除或引爆，並警告重新布雷的船隻將被摧毀。這是 Trump 單方主張，未被本報獨立驗證為全面復航或航運安全已恢復。"
       },
       {
-        "time": "既有政策延續",
-        "content": "美國財政部 8/24 啟動 Operation Economic Outcast，擴大伊朗相關次級制裁風險至數位資產、科技、黃金、航空與航運，並制裁近 60 個實體、個人與船舶；這是已公布的行政執行，但不是 8/26 新措施。"
+        "time": "8/24 既有政策延續",
+        "content": "美國財政部啟動 Operation Economic Outcast，擴大伊朗相關次級制裁風險至數位資產、科技、黃金、航空與航運，並制裁近 60 個實體、個人與船舶；這是已公布的行政執行，但不是 8/26 新措施。"
       },
       {
         "time": "市場映射",
-        "content": "伊朗制裁持續映射能源、航運、美元結算與科技供應鏈合規風險；對台股僅屬產業風險映射，不代表個別公司訂單或獲利已改變。"
+        "content": "若海峽實際恢復通行，能源與通膨風險溢價可下降，對航空、塑化下游、運輸成本敏感產業與高估值科技偏正面；油價回落仍不能只歸因於單一政治宣稱。"
+      },
+      {
+        "time": "直接 X 邊界",
+        "content": "截至 8/26 11:35 台北時間，未取得可獨立驗證的 Trump 同日 X 原文；上述訊號來自 Truth Social 並由 Reuters 歸因，不改寫成 Trump 在 X 發文。"
       }
     ],
     "fed": [
+      "The Conference Board：8 月消費者信心由 90.2 降至 89.4；現況指數升至 121.2，但預期指數降至 68.2，呈現當前尚穩、未來預期轉弱。",
+      "Boston Fed Collins：經濟接近趨勢、勞動市場大致充分就業，但通膨仍過高；若持續改善的證據未出現，近期收緊政策將屬適當。",
       "BEA 官方日程：8/26 08:30 ET 公布 7 月 Personal Income and Outlays／PCE 與第二季 GDP 修正值。",
       "Kansas City Fed：2026 Jackson Hole 於 8/27–29 舉行，主題為「Financial Innovation: Implications for Payments and Policy」。",
-      "美國財政部 8/25 10 年期公債殖利率為 4.64%，較 8/24 的 4.70% 回落；長端壓力降溫，但仍處高位。"
+      "美國財政部 8/25 10 年期公債殖利率為 4.64%，較 8/24 的 4.70% 回落；長端壓力降溫，但 Collins 訊號顯示不能解讀為政策轉鴿。"
     ],
-    "musk": "截至 8/26 11:35 台北時間，本次未取得可交叉驗證、且在晨報時間窗內的 Elon Musk／Tesla／SpaceX／Starlink 新直接貼文。Tesla 8/25 上漲 0.37%，但價格波動不能替代直接訊號；本報不沿用舊貼文製造當日催化。",
+    "musk": "截至 8/26 11:35 台北時間，未取得可獨立驗證的 Elon Musk／Tesla／SpaceX／Starlink 同日 X 原文。公司事件方面，Reuters 核對 Tesla 美國網站顯示兩款 Cybertruck 各調高 5,000 美元至 74,990／84,990 美元；缺少公司原因說明，不能直接推論需求或毛利改善。SpaceX 同時公布路易斯安那州 125,000 英畝、規模 1,000 億美元的 Starbase 計畫，預計 2027 年動工、2029 年首次 Starship 發射，屬長期航太與 AI 衛星基建規劃；對台股低軌衛星、RF、PCB、網通、電源與航太零組件僅作產業映射，沒有具名台廠訂單。Starlink 未取得同日新增重大訊號。",
     "policy": [
       "TWSE／TAIFEX 8/26 約 11:30：現貨上漲 1.29%、近月期貨上漲 1.77%；兩來源時間差約 22 秒。",
       "TAIFEX 8/25：外資臺指期淨空 -85,380 口，較前一交易日擴大淨空 2,851 口。",
-      "美股 8/25：S&P 500 +0.32%、Nasdaq +0.66%、NDX +0.70%、SOX +1.44%、VIX -2.52%。",
+      "美股 8/25：S&P 500 +0.32%、Nasdaq +0.66%、NDX +0.70%、SOX +1.44%、VIX -2.52%；但成交量 143.2 億股，低於近 20 日均量 164 億股。",
+      "The Conference Board：8 月消費者信心 89.4、預期指數 68.2；Boston Fed Collins 表示，若通膨改善無法延續，近期收緊政策將屬適當。",
       "美國財政部 8/25：10 年期公債殖利率 4.64%，較前日 4.70% 回落。",
-      "Nvidia 業績、BEA 同日 PCE／GDP、Jackson Hole 8/27–29，構成連續事件窗。"
+      "Nvidia 財報隱含約 ±5.4%／2,800 億美元市值波動，另有 BEA 同日 PCE／GDP、Jackson Hole 8/27–29，構成連續事件窗。"
     ]
   },
   "mag7": [
@@ -684,7 +693,7 @@
     "tx_night": "TAIFEX 8/26 日盤 11:30:22 近月臺指期 TXFI6-F 即時快照 45,829，上漲 1.77%；TWSE 11:30:00 現貨 45,754.30（+1.29%）。兩來源非同步，價差僅作約 +74.70 點參考。外資淨未沖銷採 8/25 完整值 -85,380 口。",
     "axes": {
       "thesis": "水位下降 2.9pt，但四區可核卡片上漲比 48.6%，現貨與期貨同步強彈；這是高水位下價格跑在健康度斜率之前的控速環境。",
-      "policy": "伊朗次級制裁屬 8/24 已落地的行政執行，8/26 未取得新的同日 Trump／Musk 直接訊號；本日主導事件轉向 Nvidia、PCE／GDP 與 Jackson Hole。",
+      "policy": "美國 8 月消費者未來預期轉弱，但 Boston Fed Collins 保留近期收緊政策；Trump 對荷姆茲海峽的宣稱屬 Reuters 歸因的 Truth Social 訊號，未被獨立驗證為全面復航。Tesla 漲價與 SpaceX 路易斯安那計畫是公司事件，不是 Musk 同日 X 原文。",
       "risk": "現貨 44,925.84、期貨 44,865 是第一防線；若站穩上午高點且水位後續止跌，可升級強勢判讀；若高點失守、外資淨空持續擴大，維持高位控速。"
     },
     "bullets": [
@@ -695,14 +704,17 @@
   },
   "conclusion": "8/26 的核心是「水位回落、價格強彈、內部接近平衡」：方舟水位由 84.3% 降至 81.4%，但 09:05 四區 78 張卡有 36 張上漲、33 張下跌、5 張持平；11:30 現貨與期貨分別上漲 1.29%、1.77%。八情境定位為「03 高位控速」：高水位仍保留健康底色，但下降斜率、外資淨空擴大與密集事件窗要求降低追價速度。水位下降是防禦訊號，不是自動賣出命令；價格上漲是強勢證據，也不是直接追價命令。",
   "appendix": {
-    "after_hours": "美股 8/25 科技與半導體反彈，SOX 上漲 1.44%、Nvidia 上漲 2.19%，VIX 下跌；台股 8/26 上午水位降至 81.4%，但現貨與期貨同步強彈。閱讀重點是價格強勢能否轉化為水位止跌與價值區廣度改善，而不是把指數上漲直接翻成追價。",
+    "after_hours": "美股 8/25 科技與半導體反彈，SOX 上漲 1.44%、Nvidia 上漲 2.19%，VIX 下跌；但總成交量低於近 20 日均值，且 Nvidia 財報隱含約 ±5.4% 波動。台股 8/26 上午水位降至 81.4%，現貨與期貨同步強彈。閱讀重點是價格強勢能否轉化為水位止跌與價值區廣度改善，而不是把財報前回補直接翻成追價。",
     "map_bullets": [
       "水位 81.4%／日減 2.9pt → 市場健康度與可部署空間縮小。",
       "78 張卡 36 漲／33 跌／5 平／4 筆無可核股價 → 可核卡片上漲比 48.6%。",
       "ETF 價值區 2 漲、升溫區 4 漲 → 熱點修復快於價值區。",
       "現貨 +1.29%／期貨 +1.77% → 指數價格強勢。",
-      "Nasdaq +0.66%／SOX +1.44%／Nvidia +2.19% → AI／半導體隔夜反彈。",
-      "VIX -2.52%、10 年債殖利率降至 4.64% → 風險溫度與折現率壓力同步降溫。",
+      "Nasdaq +0.66%／SOX +1.44%／Nvidia +2.19%，但美股成交量低於 20 日均值 → 屬財報前風險偏好修復，尚非趨勢確認。",
+      "VIX -2.52%、10 年債殖利率降至 4.64% → 風險溫度與折現率壓力降溫；Collins 偏鷹訊號限制政策轉鴿解讀。",
+      "美國消費者信心 89.4、預期指數 68.2 → 美國消費電子與耐久財需求偏中性至負面，與企業 AI 資本支出分開判斷。",
+      "Trump 宣稱荷姆茲海峽已清除水雷 → 若實際恢復通行，航空與高估值科技受惠於能源風險溢價下降；目前仍是未獨立驗證的政治主張。",
+      "SpaceX 路易斯安那州 1,000 億美元基地 → 低軌衛星、RF、PCB、網通、電源與航太零組件的長期題材映射，無具名台廠訂單。",
       "外資臺指期淨空擴大至 -85,380 口 → 價格強勢下仍有部位風險訊號。",
       "Nvidia 業績、PCE／GDP 與 Jackson Hole 集中 → 保留事件風險緩衝。",
       "4747 強生於 8/20–8/28 因股票面額由 10 元變更為 5 元、每 1 股換 2 股而暫停交易；來源股價欄保留 —，新股預定 8/31 恢復交易。"
@@ -713,7 +725,7 @@
     "status": "no_material_signal",
     "signals_count": 0,
     "included_in_revision": false,
-    "summary": "截至 2026-08-26 11:35 台北時間，未取得可交叉驗證的同日 Trump／Musk／Tesla／SpaceX／Starlink 新直接貼文；本報不以舊貼文或價格波動填補直接訊號。"
+    "summary": "截至 2026-08-26 11:35 台北時間，未取得可獨立驗證的同日 Trump／Musk／Tesla／SpaceX／Starlink X 原文；Truth Social、Tesla 與 SpaceX 公司事件僅以 Reuters／官方可核層整合，不改寫成 X 直接訊號。"
   },
   "research_sources": [
     {
@@ -800,6 +812,41 @@
       "title": "TPEx — 4747 強生股票面額變更與 2026-08-20 至 2026-08-28 暫停交易公告",
       "published_utc": "2026-08-03",
       "url": "https://www.tpex.org.tw/storage/eb_data/11508/11500050131.html"
+    },
+    {
+      "title": "Reuters — Nvidia options imply a $280 billion post-earnings market-value swing",
+      "published_utc": "2026-08-25T05:00:00Z",
+      "url": "https://www.reuters.com/business/nvidia-shares-set-280-billion-price-swing-after-earnings-options-show-2026-08-25/"
+    },
+    {
+      "title": "The Conference Board — U.S. Consumer Confidence, August 2026",
+      "published_utc": "2026-08-25T14:00:00Z",
+      "url": "https://www.prnewswire.com/news-releases/us-consumer-confidence-edged-down-slightly-in-august-302859371.html"
+    },
+    {
+      "title": "Boston Fed — Susan M. Collins, Perspectives on the Economy",
+      "published_utc": "2026-08-25",
+      "url": "https://www.bostonfed.org/news-and-events/speeches/2026/perspectives-on-the-economy.aspx"
+    },
+    {
+      "title": "Reuters — Fed Collins says rates may need to rise soon if inflation progress stalls",
+      "published_utc": "2026-08-25T15:06:00Z",
+      "url": "https://www.reuters.com/business/us-rates-need-rise-soon-absent-evidence-ongoing-drop-inflation-feds-collins-says-2026-08-25/"
+    },
+    {
+      "title": "Reuters — Trump says Strait of Hormuz has been demined",
+      "published_utc": "2026-08-25T15:04:00Z",
+      "url": "https://www.reuters.com/world/trump-says-strait-hormuz-has-been-demined-warns-iran-not-plant-more-2026-08-25/"
+    },
+    {
+      "title": "Reuters — Tesla raises prices on two Cybertruck trims",
+      "published_utc": "2026-08-25T11:07:00Z",
+      "url": "https://www.reuters.com/business/autos-transportation/tesla-raises-prices-cybertrucks-us-2026-08-25/"
+    },
+    {
+      "title": "Reuters — SpaceX plans $100 billion Starship complex in Louisiana",
+      "published_utc": "2026-08-25T16:26:00Z",
+      "url": "https://finance.yahoo.com/technology/articles/spacex-build-starship-spaceport-louisiana-162611324.html"
     }
   ],
   "scenario_id": "03",
