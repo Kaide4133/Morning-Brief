@@ -1,60 +1,55 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-08-25",
-  "valid_for_trading_date": "2026-08-25",
-  "data_as_of": "2026-08-25",
+  "date": "2026-08-26",
+  "valid_for_trading_date": "2026-08-26",
+  "data_as_of": "2026-08-26",
   "stale": false,
-  "issue_no": 72,
+  "issue_no": 73,
   "scenario": {
-    "id": "05",
-    "slug": "orderly-pullback",
-    "label": "有序回檔",
+    "id": "03",
+    "slug": "high-level-speed-control",
+    "label": "高位控速",
     "confidence": 1.0,
-    "reason": "方舟水位升至 84.3%、較前日增加 2.6pt，健康度提高；但四區可核卡片上漲比僅 18.4%，台股、期貨、SOX 與 Nvidia 同步回落。符合空間增加但價格仍在測試承接的 05 有序回檔。",
+    "reason": "方舟水位仍在 81.4% 高檔，但較前日下降 2.9pt；四區可核卡片上漲比 48.6%，現貨與期貨強彈，價格跑在健康度斜率之前。符合高水位尚存、追價速度需下修的 03 高位控速。",
     "source": "manual_override",
-    "classifier_suggestion": "03"
+    "classifier_suggestion": "06"
   },
   "water": {
-    "level": 84.3,
-    "previous": 81.7,
-    "change": 2.6,
-    "direction": "rising"
+    "level": 81.4,
+    "previous": 84.3,
+    "change": -2.9,
+    "direction": "falling"
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
-    "short_term_bias": "defensive_hold_review",
-    "risk_posture": "defensive",
+    "short_term_bias": "cautious_review",
+    "risk_posture": "balanced_cautious",
     "water_policy": {
-      "direction": "rising",
-      "change": 2.6,
-      "interpretation": "目前不允許新增曝險；維持防禦檢查，等待水位、價格與情境重新確認。"
+      "direction": "falling",
+      "change": -2.9,
+      "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
     },
     "scenario_context": {
-      "id": "05",
-      "label": "有序回檔",
+      "id": "03",
+      "label": "高位控速",
       "confidence": 1.0
     },
     "policy_focus": [
-      "有序回檔：現貨 44,234.17、期貨 44,146 是上午第一防線；上方先看現貨 44,728.36、期貨 44,500 能否重新站穩。兩個來源相差約 22 秒，期貨相對現貨價差僅作約 +44.30 點的非同步參考，不視為精確同步基差。水位上升保留空間，但卡片廣度與費半尚未提供右側確認。",
-      "美股 8/24 SOX 下跌 2.70%、Nvidia 下跌 2.91%，VIX 上升 4.76%；美國擴大對伊朗的次級制裁風險，科技、數位資產、黃金、航空與航運被列入新決定。Nvidia 8/26 業績、同日 PCE/GDP 與 8/27–29 Jackson Hole 集中，事件密度偏高。",
-      "ETF 價值區 1 漲、8 跌、0 平、1 筆無可核股價；ETF 升溫區 2 漲、5 跌；產業價值區 2 漲、28 跌、1 平；產業升溫區 9 漲、20 跌、0 平、1 筆無可核股價。領漲為 天瀚（+9.99%）、單井（+6.24%）、倉和（+4.15%）、美而快（+2.29%）、聯一光（+1.78%）；壓力為 柏承（-4.02%）、順德（-3.74%）、全新（-3.67%）、國巨*（-3.63%）、致茂（-3.62%）。ETF 雙區重",
-      "TWSE／TAIFEX 8/25 約 10:25：現貨下跌 0.86%、近月期貨下跌 0.71%；兩來源時間差約 22 秒。"
+      "高位控速：現貨 44,925.84、期貨 44,865 是上午第一防線；上方先看現貨 45,827.28、期貨 45,910 能否持續站穩。兩個來源相差約 22 秒，期貨相對現貨價差僅作約 +74.70 點的非同步參考，不視為精確同步基差。價格轉強可以保留主線觀察，但水位下降與外資淨空擴大要求降低追價速度。",
+      "外資臺指期淨空擴大至 -85,380 口；Nvidia 8/26 美股盤後業績、同日 08:30 ET 的 PCE／GDP 與 8/27–29 Jackson Hole 集中。SOX 與 VIX 的隔夜組合偏正面，但事件尚未落地，不能把財報前反彈視為結果已被確認。",
+      "ETF 價值區 2 漲、5 跌、0 平、3 筆無可核股價；ETF 升溫區 4 漲、3 跌；產業價值區 13 漲、16 跌、2 平；產業升溫區 17 漲、9 跌、3 平、1 筆無可核股價。領漲為 吉祥全（+9.99%）、鼎元（+9.91%）、順德（+9.77%）、大立光（+7.08%）、瑞軒（+4.56%）；壓力為 期街口布蘭特正2（-11.41%）、期元大S&P石油（-5.27%）、聚鼎（-3.75%）、長榮（-2.44%）、致茂（-2",
+      "TWSE／TAIFEX 8/26 約 11:30：現貨上漲 1.29%、近月期貨上漲 1.77%；兩來源時間差約 22 秒。"
     ],
     "systemic_risk": "中",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
   },
   "action_guidance": {
-    "risk_bias": "defensive",
-    "allow_add": false,
+    "risk_bias": "balanced_cautious",
+    "allow_add": true,
     "allow_trim": true,
-    "deploy_mode": "wait_for_pullback",
-    "rebuy_condition": [
-      "MA20_support",
-      "volume_contract",
-      "murphy_right_side_reconfirmation",
-      "water_stabilizes"
-    ],
+    "deploy_mode": "slow_selective_add",
+    "max_initial_deploy_pct": 0.25,
     "trim": {
       "allowed": true,
       "mode": "selective_trim",
@@ -67,21 +62,23 @@
       ]
     },
     "deploy": {
-      "allowed": false,
-      "mode": "wait_for_pullback",
+      "allowed": true,
+      "mode": "slow_selective_add",
+      "max_initial_deploy_pct": 0.25,
       "conditions": [
-        "water_stabilizes",
-        "support_confirmed"
+        "conditional_only",
+        "core_or_high_quality_only",
+        "pullback_confirmed",
+        "no_chase"
       ]
     },
     "rebuy": {
       "allowed": true,
       "mode": "wait_for_pullback",
       "conditions": [
+        "sold_name_drawdown_2_to_3_pct",
         "MA20_support",
-        "volume_contract",
-        "murphy_right_side_reconfirmation",
-        "water_stabilizes"
+        "murphy_right_side_reconfirmation"
       ]
     },
     "trim_priority": [
@@ -94,11 +91,11 @@
     "source": "morning_brief_classifier"
   },
   "editorial": {
-    "state_label": "有序回檔",
-    "summary": "方舟水位升至 84.3%、較前日增加 2.6pt，健康度提高；但四區可核卡片上漲比僅 18.4%，台股、期貨、SOX 與 Nvidia 同步回落。符合空間增加但價格仍在測試承接的 05 有序回檔。"
+    "state_label": "高位控速",
+    "summary": "方舟水位仍在 81.4% 高檔，但較前日下降 2.9pt；四區可核卡片上漲比 48.6%，現貨與期貨強彈，價格跑在健康度斜率之前。符合高水位尚存、追價速度需下修的 03 高位控速。"
   },
   "source": {
-    "issue_file": "data/issues/20260825.json",
-    "generated_at": "2026-08-25T10:32:44+08:00"
+    "issue_file": "data/issues/20260826.json",
+    "generated_at": "2026-08-26T11:38:40+08:00"
   }
 }
