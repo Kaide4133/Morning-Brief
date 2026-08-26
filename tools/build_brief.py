@@ -447,6 +447,52 @@ def validate_required_reader_fields(data: dict) -> None:
             "These fields would make Sections VI–XIII, the conclusion, or appendices blank/malformed."
         )
 
+    if data.get("date", "") >= "2026-08-26":
+        capital_flow = data.get("capital_flow")
+        if not isinstance(capital_flow, dict):
+            raise SystemExit(
+                "Missing capital_flow object. Modern Morning Briefs must include a reader-facing "
+                "large-capital-flow analysis across gold, Bitcoin/crypto, USD and duration assets."
+            )
+
+        required_capital_strings = (
+            "headline", "stance", "summary", "caveat", "as_of",
+        )
+        missing_capital_strings = [
+            f"capital_flow.{key}" for key in required_capital_strings
+            if not isinstance(capital_flow.get(key), str) or not capital_flow.get(key, "").strip()
+        ]
+        missing_capital_lists = [
+            f"capital_flow.{key}" for key in ("assets", "interpretation", "confirmation")
+            if not isinstance(capital_flow.get(key), list) or not capital_flow.get(key)
+        ]
+        if missing_capital_strings or missing_capital_lists:
+            raise SystemExit(
+                "Missing capital-flow field(s): "
+                + ", ".join(missing_capital_strings + missing_capital_lists)
+            )
+
+        assets = capital_flow["assets"]
+        if len(assets) < 4:
+            raise SystemExit("capital_flow.assets must cover at least four cross-asset sleeves.")
+        required_asset_fields = (
+            "asset", "role", "evidence", "flow_signal", "confidence", "watch", "tone",
+        )
+        asset_errors = []
+        for idx, asset in enumerate(assets):
+            if not isinstance(asset, dict):
+                asset_errors.append(f"capital_flow.assets[{idx}]")
+                continue
+            for key in required_asset_fields:
+                if not isinstance(asset.get(key), str) or not asset.get(key, "").strip():
+                    asset_errors.append(f"capital_flow.assets[{idx}].{key}")
+        if asset_errors:
+            raise SystemExit("Missing capital-flow asset field(s): " + ", ".join(asset_errors))
+
+        asset_labels = " ".join(str(asset.get("asset", "")) for asset in assets)
+        if "黃金" not in asset_labels or not any(token in asset_labels for token in ("Bitcoin", "比特幣", "BTC")):
+            raise SystemExit("capital_flow.assets must explicitly cover both gold and Bitcoin.")
+
 
 def render_index(issues: list[dict]) -> str:
     env = build_env()

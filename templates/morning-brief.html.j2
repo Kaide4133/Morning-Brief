@@ -275,6 +275,46 @@
         <p>{{ para | safe }}</p>
         {%- endfor %}
       </div>
+      {%- if capital_flow %}
+      <div class="capital-flow-shell" id="capital-flow-radar">
+        <div class="capital-flow-header">
+          <div>
+            <div class="capital-flow-kicker">CAPITAL FLOW RADAR · 大資金流向雷達</div>
+            <h3>{{ capital_flow.headline }}</h3>
+            <p>{{ capital_flow.summary }}</p>
+          </div>
+          <div class="capital-flow-stance">{{ capital_flow.stance }}</div>
+        </div>
+        <div class="capital-flow-grid">
+          {%- for item in capital_flow.assets %}
+          <article class="capital-flow-card {{ item.tone }}">
+            <div class="capital-flow-card-top">
+              <div>
+                <div class="capital-flow-asset">{{ item.asset }}</div>
+                <div class="capital-flow-role">{{ item.role }}</div>
+              </div>
+              <span class="capital-flow-confidence">{{ item.confidence }}</span>
+            </div>
+            <p class="capital-flow-evidence">{{ item.evidence }}</p>
+            <div class="capital-flow-signal"><strong>FLOW READ</strong>{{ item.flow_signal }}</div>
+            <div class="capital-flow-watch"><strong>WATCH</strong>{{ item.watch }}</div>
+          </article>
+          {%- endfor %}
+        </div>
+        <div class="capital-flow-read-grid">
+          <div>
+            <div class="capital-flow-subhead">交叉判讀</div>
+            <ul>{%- for line in capital_flow.interpretation %}<li>{{ line }}</li>{%- endfor %}</ul>
+          </div>
+          <div>
+            <div class="capital-flow-subhead">後續確認條件</div>
+            <ul>{%- for line in capital_flow.confirmation %}<li>{{ line }}</li>{%- endfor %}</ul>
+          </div>
+        </div>
+        <p class="capital-flow-caveat"><strong>邊界：</strong>{{ capital_flow.caveat }}</p>
+        <div class="capital-flow-asof">DATA CUT · {{ capital_flow.as_of }}</div>
+      </div>
+      {%- endif %}
     </div>
   </section>
 
