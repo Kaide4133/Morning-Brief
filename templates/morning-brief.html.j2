@@ -41,7 +41,7 @@
         </div>
         <p class="hero-kicker">— Today's Thesis —</p>
         <h1 class="hero-headline">{{ hero.headline | safe }}</h1>
-        <p class="hero-subhead">{{ hero.subhead }}</p>
+        <p class="hero-subhead">{{ hero.reader_subhead if hero.reader_subhead is defined else hero.subhead }}</p>
       </div>
     </div>
   </section>
@@ -83,22 +83,23 @@
           <div class="data-value">{{ market.systemic_risk }}</div>
         </div>
       </div>
+      {%- set reader_strategy = strategy.reader if strategy.reader is defined else strategy %}
       <div class="strategy-line">
         <div>
           <div class="strat-label">主線 / Thesis</div>
-          <div class="strat-value">{{ strategy.thesis }}</div>
+          <div class="strat-value">{{ reader_strategy.thesis }}</div>
         </div>
         <div>
           <div class="strat-label">盤勢 / Tape</div>
-          <div class="strat-value">{{ strategy.tape }}</div>
+          <div class="strat-value">{{ reader_strategy.tape }}</div>
         </div>
         <div>
           <div class="strat-label">策略 / Playbook</div>
-          <div class="strat-value">{{ strategy.playbook }}</div>
+          <div class="strat-value">{{ reader_strategy.playbook }}</div>
         </div>
         <div>
           <div class="strat-label">風控 / Risk</div>
-          <div class="strat-value">{{ strategy.risk }}</div>
+          <div class="strat-value">{{ reader_strategy.risk }}</div>
         </div>
       </div>
     </div>
@@ -165,6 +166,37 @@
     </div>
   </section>
 
+  {%- if capital_flow and capital_flow.reader %}
+  <section class="section-zone" id="capital-flow-radar">
+    <div class="container">
+      <div class="capital-flow-quick">
+        <div class="capital-flow-quick-head">
+          <div class="capital-flow-kicker">大資金一句話</div>
+          <h3>{{ capital_flow.reader.headline }}</h3>
+        </div>
+        <dl class="capital-flow-quick-lines">
+          <div class="capital-flow-line">
+            <dt>錢往哪裡</dt>
+            <dd>{{ capital_flow.reader.flow }}</dd>
+          </div>
+          <div class="capital-flow-line">
+            <dt>代表什麼</dt>
+            <dd>{{ capital_flow.reader.meaning }}</dd>
+          </div>
+          <div class="capital-flow-line">
+            <dt>台股怎麼用</dt>
+            <dd>{{ capital_flow.reader.action }}</dd>
+          </div>
+          <div class="capital-flow-line">
+            <dt>接下來只看</dt>
+            <dd>{{ capital_flow.reader.watch }}</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+  {%- endif %}
+
   <section class="section-zone" id="s4">
     <div class="container">
       {{ m.section_head('IV', 'SECTION', 'ETF 觀察清單', 'ETF Watchlist', 'IV') }}
@@ -224,6 +256,12 @@
     </div>
   </section>
 
+  <details class="deep-dive">
+    <summary>
+      <span class="deep-dive-title">完整判讀</span>
+      <span class="deep-dive-note">需要更多脈絡時再展開</span>
+    </summary>
+
   <section class="section-zone" id="s6">
     <div class="container">
       {{ m.section_head('VI', 'SECTION', '主線交叉驗證', 'Thesis Validation', 'VI') }}
@@ -275,46 +313,6 @@
         <p>{{ para | safe }}</p>
         {%- endfor %}
       </div>
-      {%- if capital_flow %}
-      <div class="capital-flow-shell" id="capital-flow-radar">
-        <div class="capital-flow-header">
-          <div>
-            <div class="capital-flow-kicker">CAPITAL FLOW RADAR · 大資金流向雷達</div>
-            <h3>{{ capital_flow.headline }}</h3>
-            <p>{{ capital_flow.summary }}</p>
-          </div>
-          <div class="capital-flow-stance">{{ capital_flow.stance }}</div>
-        </div>
-        <div class="capital-flow-grid">
-          {%- for item in capital_flow.assets %}
-          <article class="capital-flow-card {{ item.tone }}">
-            <div class="capital-flow-card-top">
-              <div>
-                <div class="capital-flow-asset">{{ item.asset }}</div>
-                <div class="capital-flow-role">{{ item.role }}</div>
-              </div>
-              <span class="capital-flow-confidence">{{ item.confidence }}</span>
-            </div>
-            <p class="capital-flow-evidence">{{ item.evidence }}</p>
-            <div class="capital-flow-signal"><strong>FLOW READ</strong>{{ item.flow_signal }}</div>
-            <div class="capital-flow-watch"><strong>WATCH</strong>{{ item.watch }}</div>
-          </article>
-          {%- endfor %}
-        </div>
-        <div class="capital-flow-read-grid">
-          <div>
-            <div class="capital-flow-subhead">交叉判讀</div>
-            <ul>{%- for line in capital_flow.interpretation %}<li>{{ line }}</li>{%- endfor %}</ul>
-          </div>
-          <div>
-            <div class="capital-flow-subhead">後續確認條件</div>
-            <ul>{%- for line in capital_flow.confirmation %}<li>{{ line }}</li>{%- endfor %}</ul>
-          </div>
-        </div>
-        <p class="capital-flow-caveat"><strong>邊界：</strong>{{ capital_flow.caveat }}</p>
-        <div class="capital-flow-asof">DATA CUT · {{ capital_flow.as_of }}</div>
-      </div>
-      {%- endif %}
     </div>
   </section>
 
@@ -354,6 +352,8 @@
     </div>
   </section>
 
+  </details>
+
   <section class="section-zone" id="s14">
     <div class="container">
       {{ m.section_head('XIV', 'SECTION', '系統性風險判斷', 'Systemic Risk', 'XIV') }}
@@ -374,6 +374,12 @@
       <div class="conclusion-text">{{ conclusion | safe }}</div>
     </div>
   </section>
+
+  <details class="deep-dive appendix-dive">
+    <summary>
+      <span class="deep-dive-title">附錄</span>
+      <span class="deep-dive-note">美股盤後與台股產業對照</span>
+    </summary>
 
   <section class="section-zone" id="sa">
     <div class="container">
@@ -398,25 +404,13 @@
     </div>
   </section>
 
+  </details>
+
   <footer class="footer-zone">
     <div class="container">
-      <div class="colophon-grid">
-        <div class="colophon-block">
-          <h4>Sources</h4>
-{% if research_sources %}
-          <ul class="source-list">
-{% for source in research_sources[:24] %}
-            <li><a href="{{ source.url }}" target="_blank" rel="noopener noreferrer">{{ source.title }}</a></li>
-{% endfor %}
-          </ul>
-{% else %}
-          <p>TAIFEX 期交所<br>方舟運算 · 持股水位<br>Yahoo Finance</p>
-{% endif %}
-        </div>
-        <div class="colophon-block">
-          <h4>Masthead</h4>
-          <p>Kelvin Wiggly<br>Morning Brief · Daily<br>Issue No.{{ issue_no_padded }}<br>{{ masthead_roman }} · {{ masthead_month }} · {{ masthead_day }}</p>
-        </div>
+      <div class="colophon-block">
+        <h4>Masthead</h4>
+        <p>Kelvin Wiggly<br>Morning Brief · Daily<br>Issue No.{{ issue_no_padded }}<br>{{ masthead_roman }} · {{ masthead_month }} · {{ masthead_day }}</p>
       </div>
       <p class="disclaimer">{{ disclaimer }}</p>
       <div class="end-mark">END</div>

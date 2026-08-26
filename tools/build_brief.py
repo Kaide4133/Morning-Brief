@@ -451,8 +451,8 @@ def validate_required_reader_fields(data: dict) -> None:
         capital_flow = data.get("capital_flow")
         if not isinstance(capital_flow, dict):
             raise SystemExit(
-                "Missing capital_flow object. Modern Morning Briefs must include a reader-facing "
-                "large-capital-flow analysis across gold, Bitcoin/crypto, USD and duration assets."
+                "Missing capital_flow object. Modern Morning Briefs must keep a producer research "
+                "pack plus a concise reader summary across gold, crypto, USD and duration assets."
             )
 
         required_capital_strings = (
@@ -492,6 +492,102 @@ def validate_required_reader_fields(data: dict) -> None:
         asset_labels = " ".join(str(asset.get("asset", "")) for asset in assets)
         if "黃金" not in asset_labels or not any(token in asset_labels for token in ("Bitcoin", "比特幣", "BTC")):
             raise SystemExit("capital_flow.assets must explicitly cover both gold and Bitcoin.")
+
+        reader = capital_flow.get("reader")
+        if not isinstance(reader, dict):
+            raise SystemExit("Missing capital_flow.reader concise summary.")
+        reader_fields = ("headline", "flow", "meaning", "action", "watch")
+        reader_errors = [
+            f"capital_flow.reader.{key}" for key in reader_fields
+            if not isinstance(reader.get(key), str) or not reader.get(key, "").strip()
+        ]
+        if reader_errors:
+            raise SystemExit("Missing capital-flow reader field(s): " + ", ".join(reader_errors))
+        if len(reader["headline"]) > 72:
+            raise SystemExit("capital_flow.reader.headline must stay within 72 characters.")
+        overlong_reader_fields = [
+            f"capital_flow.reader.{key}" for key in reader_fields[1:]
+            if len(reader[key]) > 120
+        ]
+        if overlong_reader_fields:
+            raise SystemExit(
+                "Capital-flow reader lines must stay within 120 characters: "
+                + ", ".join(overlong_reader_fields)
+            )
+
+        hero_reader = data.get("hero", {}).get("reader_subhead")
+        if not isinstance(hero_reader, str) or not hero_reader.strip():
+            raise SystemExit("Missing hero.reader_subhead concise summary.")
+        if len(hero_reader) > 90:
+            raise SystemExit("hero.reader_subhead must stay within 90 characters.")
+
+        strategy_reader = data.get("strategy", {}).get("reader")
+        if not isinstance(strategy_reader, dict):
+            raise SystemExit("Missing strategy.reader concise four-line summary.")
+        strategy_reader_fields = ("thesis", "tape", "playbook", "risk")
+        strategy_reader_errors = [
+            f"strategy.reader.{key}" for key in strategy_reader_fields
+            if not isinstance(strategy_reader.get(key), str) or not strategy_reader.get(key, "").strip()
+        ]
+        if strategy_reader_errors:
+            raise SystemExit("Missing strategy reader field(s): " + ", ".join(strategy_reader_errors))
+        overlong_strategy_fields = [
+            f"strategy.reader.{key}" for key in strategy_reader_fields
+            if len(strategy_reader[key]) > 72
+        ]
+        if overlong_strategy_fields:
+            raise SystemExit(
+                "Strategy reader lines must stay within 72 characters: "
+                + ", ".join(overlong_strategy_fields)
+            )
+
+        sources = data.get("research_sources")
+        if not isinstance(sources, list) or not sources:
+            raise SystemExit(
+                "Missing research_sources. Sources stay producer-facing but are still required for audit."
+            )
+        source_errors = []
+        for idx, source in enumerate(sources):
+            if not isinstance(source, dict):
+                source_errors.append(f"research_sources[{idx}]")
+                continue
+            title = source.get("title")
+            url = source.get("url")
+            if not isinstance(title, str) or not title.strip():
+                source_errors.append(f"research_sources[{idx}].title")
+            if not isinstance(url, str) or not url.startswith(("https://", "http://")):
+                source_errors.append(f"research_sources[{idx}].url")
+        if source_errors:
+            raise SystemExit("Invalid producer source field(s): " + ", ".join(source_errors))
+
+
+def validate_reader_simplicity(data: dict, html: str) -> None:
+    """Keep research depth in JSON while the default brief stays readable."""
+    if data.get("date", "") < "2026-08-26":
+        return
+
+    required_markers = (
+        'class="capital-flow-quick"',
+        'class="deep-dive"',
+        "大資金一句話",
+        "接下來只看",
+    )
+    missing = [marker for marker in required_markers if marker not in html]
+    if missing:
+        raise SystemExit("Missing reader-simplicity marker(s): " + ", ".join(missing))
+
+    forbidden_markers = (
+        '<h4>Sources</h4>',
+        'class="source-list"',
+        'capital-flow-evidence',
+        'capital-flow-confidence',
+        'capital-flow-asof',
+        '>FLOW READ<',
+        '>WATCH<',
+    )
+    leaked = [marker for marker in forbidden_markers if marker in html]
+    if leaked:
+        raise SystemExit("Producer-only detail leaked into reader HTML: " + ", ".join(leaked))
 
 
 def render_index(issues: list[dict]) -> str:
@@ -574,6 +670,7 @@ def build_one(json_path: Path, write: bool = True) -> Path:
     html = render_brief(ctx)
     validate_no_legacy_scenario_terms(html, output_name=ctx["filename"])
     validate_x_signal_lineage(data, html)
+    validate_reader_simplicity(data, html)
     out = SITE / ctx["filename"]
     if write:
         SITE.mkdir(parents=True, exist_ok=True)
