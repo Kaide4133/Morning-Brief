@@ -7,52 +7,50 @@
   "stale": false,
   "issue_no": 73,
   "scenario": {
-    "id": "03",
-    "slug": "high-level-speed-control",
-    "label": "高位控速",
-    "confidence": 1.0,
-    "reason": "方舟水位仍在 81.4% 高檔，但較前日下降 2.9pt；四區可核卡片上漲比 48.6%，現貨與期貨強彈，價格跑在健康度斜率之前。符合高水位尚存、追價速度需下修的 03 高位控速。",
-    "source": "manual_override",
-    "classifier_suggestion": "06"
+    "id": "06",
+    "slug": "risk-contraction",
+    "label": "風險收縮",
+    "confidence": 0.84,
+    "reason": "水位急降 -7.3pt，風險預算收縮",
+    "source": "classifier"
   },
   "water": {
-    "level": 81.4,
+    "level": 77.0,
     "previous": 84.3,
-    "change": -2.9,
+    "change": -7.3,
     "direction": "falling"
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
-    "short_term_bias": "cautious_review",
-    "risk_posture": "balanced_cautious",
+    "short_term_bias": "reduce_risk_review",
+    "risk_posture": "risk_off",
     "water_policy": {
       "direction": "falling",
-      "change": -2.9,
-      "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
+      "change": -7.3,
+      "interpretation": "水位急降且風險預算收縮，暫停新增曝險；先檢查過熱、非護城河與槓桿風險。"
     },
     "scenario_context": {
-      "id": "03",
-      "label": "高位控速",
-      "confidence": 1.0
+      "id": "06",
+      "label": "風險收縮",
+      "confidence": 0.84
     },
     "policy_focus": [
-      "高位控速：現貨 44,925.84、期貨 44,865 是上午第一防線；上方先看現貨 45,827.28、期貨 45,910 能否持續站穩。兩個來源相差約 22 秒，期貨相對現貨價差僅作約 +74.70 點的非同步參考，不視為精確同步基差。價格轉強可以保留主線觀察，但水位下降與外資淨空擴大要求降低追價速度。",
-      "外資臺指期淨空擴大至 -85,380 口；Nvidia 8/26 美股盤後業績的選擇權隱含波動約 ±5.4%、折合約 2,800 億美元市值變動。同日 PCE／GDP 與 8/27–29 Jackson Hole 集中；Boston Fed Collins 亦明確表示，若通膨未持續改善，應很快進一步收緊政策。",
-      "ETF 價值區 2 漲、5 跌、0 平、3 筆無可核股價；ETF 升溫區 4 漲、3 跌；產業價值區 13 漲、16 跌、2 平；產業升溫區 17 漲、9 跌、3 平、1 筆無可核股價。領漲為 吉祥全（+9.99%）、鼎元（+9.91%）、順德（+9.77%）、大立光（+7.08%）、瑞軒（+4.56%）；壓力為 期街口布蘭特正2（-11.41%）、期元大S&P石油（-5.27%）、聚鼎（-3.75%）、長榮（-2.44%）、致茂（-2",
-      "TWSE／TAIFEX 8/26 約 11:30：現貨上漲 1.29%、近月期貨上漲 1.77%；兩來源時間差約 22 秒。"
+      "風險收縮：下一交易日先看 45,169.46（前收）能否守住，44,925.84 為本日低點防線；上方 45,878.39／期貨 46,027 是價格延續門檻。收盤期貨相對現貨正價差約 178.38 點，外資淨空也縮減 1,726 口，代表價格面仍有支撐；但新增風險預算須等水位止跌，不能用價差或強彈抵銷健康度急降。",
+      "水位單日下降 7.3pt 是首要風險；Nvidia 8/26 美股盤後業績的選擇權隱含波動約 ±5.4%、折合約 2,800 億美元市值變動。同日 PCE／GDP 與 8/27–29 Jackson Hole 集中；價格已擴張、事件尚未落地時，追價的盈虧比反而惡化。",
+      "ETF 價值區 7 漲、1 跌、0 平、2 筆無可核股價；ETF 升溫區 4 漲、3 跌；產業價值區 25 漲、6 跌、0 平；產業升溫區 17 漲、10 跌、2 平、1 筆無可核股價。領漲為 世紀*（+9.99%）、台虹（+9.98%）、光鼎（+9.95%）、玉晶光（+9.49%）、大立光（+8.19%）；壓力為 單井（-3.54%）、東典光電（-2.62%）、旺矽（-2.58%）、富邦基因免疫生技（-2.52%）、矽力*-KY（-2",
+      "TWSE／TAIFEX 8/26 官方收盤：現貨上漲 1.47%、近月期貨上漲 2.17%；期貨相對現貨正價差約 178.38 點。"
     ],
     "systemic_risk": "中",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
   },
   "action_guidance": {
-    "risk_bias": "balanced_cautious",
-    "allow_add": true,
+    "risk_bias": "risk_off",
+    "allow_add": false,
     "allow_trim": true,
-    "deploy_mode": "slow_selective_add",
-    "max_initial_deploy_pct": 0.25,
+    "deploy_mode": "reduce_exposure",
     "trim": {
       "allowed": true,
-      "mode": "selective_trim",
+      "mode": "reduce_exposure",
       "max_overshoot_pct": 0.25,
       "priority": [
         "positive_return_overheated_branch",
@@ -62,23 +60,18 @@
       ]
     },
     "deploy": {
-      "allowed": true,
-      "mode": "slow_selective_add",
-      "max_initial_deploy_pct": 0.25,
+      "allowed": false,
+      "mode": "disabled",
       "conditions": [
-        "conditional_only",
-        "core_or_high_quality_only",
-        "pullback_confirmed",
-        "no_chase"
+        "risk_off_no_new_exposure"
       ]
     },
     "rebuy": {
-      "allowed": true,
-      "mode": "wait_for_pullback",
+      "allowed": false,
+      "mode": "disabled_until_stabilized",
       "conditions": [
-        "sold_name_drawdown_2_to_3_pct",
-        "MA20_support",
-        "murphy_right_side_reconfirmation"
+        "risk_bias_improves",
+        "water_stabilizes"
       ]
     },
     "trim_priority": [
@@ -87,15 +80,15 @@
       "leveraged_etf_overheat",
       "low_efficiency_small_branch"
     ],
-    "confidence": 1.0,
+    "confidence": 0.84,
     "source": "morning_brief_classifier"
   },
   "editorial": {
-    "state_label": "高位控速",
-    "summary": "方舟水位仍在 81.4% 高檔，但較前日下降 2.9pt；四區可核卡片上漲比 48.6%，現貨與期貨強彈，價格跑在健康度斜率之前。符合高水位尚存、追價速度需下修的 03 高位控速。"
+    "state_label": "風險收縮",
+    "summary": "水位急降 -7.3pt，風險預算收縮"
   },
   "source": {
     "issue_file": "data/issues/20260826.json",
-    "generated_at": "2026-08-26T14:40:49+08:00"
+    "generated_at": "2026-08-27T11:27:45+08:00"
   }
 }

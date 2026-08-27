@@ -918,6 +918,10 @@ def main() -> int:
 
     for i, code in enumerate(universe):
         rows, market, yahoo_name = fetch_yahoo_daily(code)
+        # Historical rebuilds must never retain bars after the requested cutoff.
+        # Yahoo may already expose today's partial bar while we are rebuilding the
+        # previous completed trading session; trim first, then apply official rows.
+        rows = [row for row in rows if str(row.get("date") or "") <= as_of]
         if rows and market == "TWSE":
             rows = overlay_daily_rows(rows, fetch_twse_month_rows(code, as_of))
         if rows and rows[-1].get("date") != as_of:
