@@ -6,34 +6,34 @@
   "hero": {
     "eyebrow": "KELVIN MORNING BRIEF",
     "title": "AI 主線轉強，方舟水位卻下修",
-    "subtitle": "NVIDIA 財報推動 SOX 上漲 1.91%，台股盤中續強；但方舟水位降至 73.5%，今天重點不是追高，而是用上漲檢查部位品質。",
+    "subtitle": "NVIDIA 財報推動 SOX 上漲 2.33%，台股盤中續強；但方舟水位降至 73.5%，今天重點不是追高，而是用上漲檢查部位品質。",
     "reader_subhead": "先看結論：科技主線有催化，市場價格偏強；但可部署空間縮小，持倉宜以強弱分流、保留現金彈性。",
     "tags": [
       "NVIDIA 財報",
-      "SOX +1.91%",
+      "SOX +2.33%",
       "水位 73.5%",
       "風險收縮"
     ]
   },
   "market": {
     "sox": {
-      "value": "8,151.24",
-      "change_pct": 1.91
+      "value": "11,882.17",
+      "change_pct": 2.33
     },
     "vix": {
-      "value": "12.80",
-      "change_pct": -3.03
+      "value": "14.51",
+      "change_pct": -4.6
     },
     "nasdaq": {
-      "value": "26,738.35",
-      "change_pct": 1.09
+      "value": "29,641.56",
+      "change_pct": 1.43
     },
     "tw_index": {
-      "line": "46,395.07 / +0.91%｜TWSE 2026/08/28 10:36 盤中快照；開 46,070.83、高 46,574.52、低 46,070.83",
-      "change_pct": 0.91
+      "line": "46,419.33 / +0.97%｜TWSE 2026/08/28 10:21 完整分鐘收盤；盤中開 46,070.83、高 46,574.52、低 46,070.83",
+      "change_pct": 0.97
     },
     "futures": {
-      "line": "近月臺指期 TX 202609 46,322 / +0.56%｜TAIFEX 2026/08/28 10:36 盤中快照；參考價 46,064、盤中基差 -73 點"
+      "line": "臺指期096（2026-09）46,406 / +0.74%｜TAIFEX 2026/08/28 10:21 完整分鐘收盤；參考價 46,064、同步基差 -13.33 點"
     },
     "foreign_oi": {
       "value": "-84,836 口（8/27 已驗證）",
@@ -41,7 +41,7 @@
     },
     "systemic_risk": "中高"
   },
-  "market_summary": "加權 46,395.07（+0.91%，10:36 盤中）｜近月臺指期 46,322（+0.56%）｜Nasdaq 100 26,738.35（+1.09%）｜SOX 8,151.24（+1.91%）｜VIX 12.80（-3.03%）｜外資臺指期淨未沖銷 -84,836 口（8/27）",
+  "market_summary": "加權 46,419.33（+0.97%，10:21 同步分鐘）｜臺指期096 46,406（+0.74%）｜Nasdaq 100 29,641.56（+1.43%）｜SOX 11,882.17（+2.33%）｜VIX 14.51（-4.60%）｜外資臺指期淨未沖銷 -84,836 口（8/27）",
   "strategy": {
     "headline": "上漲時做品質整理，不追價放大曝險",
     "summary": "NVIDIA 財報與 SOX 大漲提供 AI 半導體主線催化，但 Ark 水位下降代表市場內部健康度沒有同步擴張。今天先看核心股能否守住量價與支撐，並把反彈當成汰弱留強、降低過熱曝險的窗口。",
@@ -52,7 +52,7 @@
     ],
     "reader": {
       "thesis": "AI 主線有財報與價格確認，但方舟水位下降，風控沒有全面打開。",
-      "tape": "SOX、NVDA 與台股盤中偏強；外資期貨淨空單仍重。",
+      "tape": "SOX、NVDA 與台股盤中偏強；外資期貨淨空單仍重，美股上漲集中科技。",
       "playbook": "保留高品質核心，反彈整理弱勢與過熱部位，新增資金等回測。",
       "risk": "把單日財報行情誤判成全面流動性擴張。"
     }
@@ -67,7 +67,7 @@
     "source": "方舟運算 2026-08-28 09:05 擷取；前值為 2026-08-27 成功擷取 77.0%。"
   },
   "temperature": {
-    "vix_note": "美股 8/27 收盤 SOX +1.91%、Nasdaq 100 +1.09%、S&P 500 +0.49%、VIX -3.03%；NVIDIA 財報後科技風險偏好升溫。",
+    "vix_note": "美股 8/27 收盤 SOX +2.33%、Nasdaq 100 +1.43%、S&P 500 +0.72%、VIX -4.60%；NVIDIA 財報後科技風險偏好升溫，但 S&P 11 大類僅科技上漲，廣度偏窄。",
     "signal_headline": "價格強、水位降：主線有催化，風險預算收縮。",
     "signal_note": "ETF 價值區 10 檔、升溫區 7 檔；產業價值區 31 檔、升溫區 30 檔，共 78 張卡、77 個唯一代號；產業重疊 3008。"
   },
@@ -762,14 +762,15 @@
   },
   "validation": {
     "strengthened": [
-      "NVIDIA FY2027 Q2 營收 549 億美元、資料中心 498 億美元，Q3 營收指引 650 億美元 ±2%。",
-      "SOX +1.91%、NDX +1.09%、NVDA +4.23%，AI 半導體主線有價格證明。",
-      "台股 8/28 盤中上漲，與美股科技催化同向。"
+      "NVIDIA FY2027 Q2 營收 962.21 億美元、資料中心 890 億美元；非 GAAP EPS 2.22 美元，Q3 營收指引 1,080 億美元 ±2%。",
+      "SOX +2.33%、NDX +1.43%、NVDA +8.74%，AI 半導體主線有價格證明。",
+      "台股 8/28 10:21 同步分鐘上漲 0.97%，與美股科技催化同向。"
     ],
     "pressure": [
       "方舟水位 73.5%，較前一交易日 77.0% 下降 3.5 個百分點。",
-      "外資臺股期貨未平倉淨額 -84,836 口，避險部位仍重。",
-      "美國 10 年債殖利率 4.23%，折現率壓力未消失。"
+      "外資臺股期貨未平倉淨額 -84,836 口，較前一交易日淨空增加 1,182 口。",
+      "美國 10 年期公債殖利率 4.67%、日升 1 個基點；折現率壓力未消失。",
+      "S&P 500 十一大類中僅科技上漲，指數強勢的市場廣度偏窄。"
     ],
     "long_term": [
       "AI 資本支出與算力需求仍是中長期主線。",
@@ -780,44 +781,49 @@
   "intelligence": {
     "trump": [
       {
-        "time": "截至 8/28 晨間",
-        "content": "未取得足以改變今日台股主線的同日直接原始政策訊號；不以二手社群片段填補。"
+        "time": "2026-08-26",
+        "content": "白宮簽署強化外國製大型電力系統設備安全審查的行政行動；涵蓋變壓器、儲能、逆變器、UPS、控制軟體與遠端存取，能源部規則仍待 120 天內落地。對台灣電力／UPS／儲能供應鏈屬資格與在地製造機會，但目前不是全面禁令。"
+      },
+      {
+        "time": "截至 8/28 10:30",
+        "content": "未取得同日可直接驗證、足以改變今日市場配置的川普原始 X 訊號；不以二手社群片段填補。"
       }
     ],
-    "musk": "截至 8/28 晨間，未取得 Tesla、SpaceX 或 Starlink 足以改變今日資本配置的同日可驗證原始訊號；TSLA 收盤 +1.49% 僅列價格表現，不推論社群催化。",
+    "musk": "截至 8/28 10:30，未取得 Tesla、SpaceX 或 Starlink 足以改變今日配置的同日可驗證原始社群訊號；TSLA 8/27 收盤 +2.60% 僅列價格表現，不推論社群催化。",
     "policy": [
-      "美國 7 月 PCE 月增 0.2%、年增 3.7%；核心 PCE 月增 0.2%、年增 3.3%，通膨仍高於政策目標。",
-      "美國第二季 GDP 第二次估值年化成長 3.0%，較初估 2.7% 上修。",
-      "Jackson Hole 2026 年會於 8/27–8/29 舉行，主題聚焦金融創新、支付系統與貨幣政策；市場仍需等待完整政策訊息。"
+      "美國 7 月 PCE 月增 0.2%、年增 3.7%；核心 PCE 月增 0.2%、年增 3.3%。個人所得月增 0.4%、名目消費支出月增 0.2%，實質消費支出四捨五入為持平，儲蓄率升至 3.0%。",
+      "美國第二季 GDP 第二次估值年化成長 1.5%，與初估相同；第一季為 2.1%。",
+      "Jackson Hole 2026 年會於 8/27–8/29 舉行，主題為金融創新、支付與政策；聯準會主席 Kevin Warsh 開場談話排定台北時間 8/28 22:00，晨報截止前尚未發表。",
+      "8/27 美股科技是 S&P 500 十一大類中唯一上漲類股；三位地區聯準銀行官員仍示警通膨黏性，科技領漲與長端利率壓力並存。"
     ]
   },
   "mag7": [
     {
       "name": "Apple",
       "ticker": "AAPL",
-      "price": "231.34",
-      "change_pct": -0.98,
-      "change_abs": "-2.29",
+      "price": "314.58",
+      "change_pct": 0.36,
+      "change_abs": "+1.13",
       "tier": "neutral",
       "tier_label": "NEUTRAL",
-      "signal": "硬體權重回落"
+      "signal": "硬體權重溫和上漲"
     },
     {
       "name": "Microsoft",
       "ticker": "MSFT",
-      "price": "508.68",
-      "change_pct": 0.57,
-      "change_abs": "+2.88",
-      "tier": "neutral",
-      "tier_label": "NEUTRAL",
-      "signal": "雲端與 AI 平台溫和上漲"
+      "price": "505.06",
+      "change_pct": 1.75,
+      "change_abs": "+8.69",
+      "tier": "strong",
+      "tier_label": "STRONG",
+      "signal": "雲端與 AI 平台走強"
     },
     {
       "name": "Nvidia",
       "ticker": "NVDA",
-      "price": "198.44",
-      "change_pct": 4.23,
-      "change_abs": "+8.05",
+      "price": "227.98",
+      "change_pct": 8.74,
+      "change_abs": "+18.32",
       "tier": "strong",
       "tier_label": "STRONG",
       "signal": "財報後領漲，AI 算力主線確認"
@@ -825,57 +831,57 @@
     {
       "name": "Amazon",
       "ticker": "AMZN",
-      "price": "231.17",
-      "change_pct": 0.17,
-      "change_abs": "+0.39",
-      "tier": "neutral",
-      "tier_label": "NEUTRAL",
-      "signal": "平台股小幅上漲"
+      "price": "256.26",
+      "change_pct": -1.54,
+      "change_abs": "-4.02",
+      "tier": "weak",
+      "tier_label": "WEAK",
+      "signal": "平台股逆勢回落"
     },
     {
       "name": "Alphabet",
       "ticker": "GOOGL",
-      "price": "229.48",
-      "change_pct": 0.8,
-      "change_abs": "+1.82",
+      "price": "340.65",
+      "change_pct": -0.39,
+      "change_abs": "-1.35",
       "tier": "neutral",
       "tier_label": "NEUTRAL",
-      "signal": "AI 平台溫和走強"
+      "signal": "Class A 小幅整理"
     },
     {
       "name": "Meta",
       "ticker": "META",
-      "price": "826.24",
-      "change_pct": 0.93,
-      "change_abs": "+7.60",
-      "tier": "strong",
-      "tier_label": "STRONG",
-      "signal": "大型平台股偏強"
+      "price": "571.10",
+      "change_pct": -0.87,
+      "change_abs": "-5.04",
+      "tier": "neutral",
+      "tier_label": "NEUTRAL",
+      "signal": "大型平台股回落"
     },
     {
       "name": "Tesla",
       "ticker": "TSLA",
-      "price": "357.34",
-      "change_pct": 1.49,
-      "change_abs": "+5.24",
-      "tier": "neutral",
-      "tier_label": "NEUTRAL",
+      "price": "354.81",
+      "change_pct": 2.6,
+      "change_abs": "+8.99",
+      "tier": "strong",
+      "tier_label": "STRONG",
       "signal": "價格反彈，未以波動替代直接訊號"
     }
   ],
   "analysis": {
     "axes": {
       "thesis": "AI 財報催化讓價格主線轉強，但方舟水位下降顯示內部健康度未同步擴散。",
-      "policy": "PCE 仍偏高、長端殖利率在 4.23%，政策與折現率不是單向利多。",
+      "policy": "PCE 仍偏高、10 年期美債殖利率升至 4.67%，政策與折現率不是單向利多。",
       "risk": "最主要風險是把財報後的單日強勢誤認為全面風控打開。"
     },
     "summary": "今日是「主線有催化、風控卻收斂」的混合盤。策略上重品質、重價格證明，不追逐沒有量價支撐的補漲。",
-    "us_close": "SOX +1.91%、Nasdaq 100 +1.09%、S&P 500 +0.49%；NVIDIA +4.23%，財報後 AI 半導體領漲。",
-    "tx_night": "臺指期近月盤中 46,322 點、較參考價 +258 點；外資臺股期貨未平倉淨額截至 8/27 為 -84,836 口。"
+    "us_close": "SOX +2.33%、Nasdaq 100 +1.43%、S&P 500 +0.72%；NVIDIA +8.74%，財報後 AI 半導體領漲，但市場廣度偏窄。",
+    "tx_night": "臺指期096 於 10:21 完整分鐘收 46,406 點、較參考價 +342 點；相對同步加權指數基差 -13.33 點。外資臺股期貨未平倉淨額截至 8/27 為 -84,836 口。"
   },
-  "conclusion": "8/28 的關鍵不是「NVIDIA 很強，所以全面加碼」，而是「科技主線得到財報與價格確認，但方舟水位轉弱」。保留最強核心、整理弱枝與過熱部位、維持現金彈性；下一步只看水位是否止跌、SOX/NVDA 是否延續、台股收盤量價是否確認。",
+  "conclusion": "8/28 的關鍵不是「NVIDIA 很強，所以全面加碼」，而是「科技主線得到財報與價格確認，但市場廣度窄、長端利率高、方舟水位轉弱」。保留最強核心、整理弱枝與過熱部位、維持現金彈性；下一步只看水位是否止跌、SOX/NVDA 是否延續、台股收盤量價與美股廣度是否確認。",
   "appendix": {
-    "after_hours": "臺指期 202609 近月於官方 MIS 盤中報價高於前一日參考價；與現貨快照並非同秒同步，基差僅供方向參考。",
+    "after_hours": "臺指期096 與加權指數採 10:21 官方完整分鐘同步比較：期貨 46,406、現貨 46,419.33，基差 -13.33 點；盤中資料不是正式日收盤。",
     "map_bullets": [
       "先進製程／先進封裝：觀察 NVIDIA 財報後需求能否轉成台股成交量。",
       "AI 伺服器／散熱／光通訊／測試介面：只選有量價與支撐證明者。",
@@ -892,121 +898,141 @@
   "research_sources": [
     {
       "title": "TWSE MIS 加權指數",
-      "url": "https://mis.twse.com.tw/stock/index.jsp",
-      "as_of": "2026-08-28"
+      "url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+      "as_of": "2026-08-28 10:22 TPE"
     },
     {
       "title": "TAIFEX MIS 臺指期報價",
-      "url": "https://mis.taifex.com.tw/futures/",
-      "as_of": "2026-08-28"
+      "url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+      "as_of": "2026-08-28 10:22 TPE"
     },
     {
       "title": "TAIFEX 三大法人臺股期貨",
-      "url": "https://www.taifex.com.tw/cht/3/futContractsDate?queryDate=2026%2F08%2F27&commodityId=TXF",
+      "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
       "as_of": "2026-08-27"
     },
     {
       "title": "NVIDIA FY2027 Q2 results",
-      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/default.aspx",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027",
       "as_of": "2026-08-26"
+    },
+    {
+      "title": "Reuters August 27 U.S. market close",
+      "url": "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-08-27/",
+      "as_of": "2026-08-27"
     },
     {
       "title": "BEA Personal Income and Outlays, July 2026",
       "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026",
-      "as_of": "2026-08-27"
+      "as_of": "2026-08-26"
     },
     {
       "title": "BEA GDP Q2 2026 Second Estimate",
-      "url": "https://www.bea.gov/news/2026/gross-domestic-product-2nd-quarter-2026-second-estimate-gdp-corporate-profits",
-      "as_of": "2026-08-27"
+      "url": "https://www.bea.gov/news/2026/gross-domestic-product-2nd-quarter-2026-second-estimate-and-corporate-profits",
+      "as_of": "2026-08-26"
+    },
+    {
+      "title": "Kansas City Fed Jackson Hole 2026 agenda",
+      "url": "https://www.kansascityfed.org/research/jackson-hole-economic-symposium/2026/",
+      "as_of": "2026-08-28 10:30 TPE cutoff"
+    },
+    {
+      "title": "White House bulk-power-system action",
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/08/declaring-a-national-emergency-to-secure-the-united-states-bulk-power-system/",
+      "as_of": "2026-08-26"
     },
     {
       "title": "U.S. Treasury Daily Yield Curve",
-      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve&field_tdr_date_value=2026&page&_format=csv",
       "as_of": "2026-08-27"
     },
     {
       "title": "Farside Bitcoin ETF flows",
-      "url": "https://farside.co.uk/bitcoin-etf-flow-all-data/",
-      "as_of": "2026-08-27"
+      "url": "https://farside.co.uk/btc/",
+      "as_of": "2026-08-27 incomplete"
     },
     {
       "title": "Farside Ethereum ETF flows",
-      "url": "https://farside.co.uk/ethereum-etf-flow-all-data/",
-      "as_of": "2026-08-27"
+      "url": "https://farside.co.uk/eth/",
+      "as_of": "2026-08-27 incomplete"
+    },
+    {
+      "title": "State Street SPDR Gold Shares",
+      "url": "https://www.ssga.com/us/en/institutional/etfs/spdr-gold-shares-gld",
+      "as_of": "2026-08-26 official fund data"
     }
   ],
   "scenario_id": "06",
   "lock_scenario": true,
   "scenario_reason": "方舟水位由 77.0% 降至 73.5%，健康度／可部署空間減少 3.5 個百分點；雖然 NVIDIA 財報帶動 SOX 與台股盤中走強，仍應把上漲視為整理與汰弱留強窗口，不把科技反彈直接翻成全面加碼。",
   "capital_flow": {
-    "headline": "資金偏向 AI 與加密資產，美元／長債未形成同步寬鬆",
-    "stance": "選擇性風險偏好",
-    "summary": "NVIDIA 財報後 SOX +1.91%、NVDA +4.23%；BTC 與 ETH 同步上漲，且 8/27 美國現貨 ETF 分別淨流入約 1.427 億與 0.18 億美元。DXY 96.57 近乎持平、10 年債殖利率 4.23%，顯示資金偏好集中在科技與加密，不是全面流動性放鬆。",
+    "headline": "資金明顯偏向 AI；加密 ETF 尚未報齊，不能下最終流向結論",
+    "stance": "科技窄幅 risk-on，跨資產訊號分化",
+    "summary": "NVIDIA 財報後 SOX +2.33%、NVDA +8.74%；BTC 約 80,121 美元、24 小時 +1.64%，ETH 約 2,500.72 美元、近乎持平。Farside 8/27 表格仍不完整：BTC 已回報合計 -3,530 萬美元但缺 IBIT，ETH 已回報合計 +7,490 萬美元但缺 ETHA／ETHB，均不得當作最終總流量。DXY 99.16 近乎持平、10 年期美債殖利率 4.67%，顯示 AI 領漲而非全面流動性寬鬆。",
     "assets": [
       {
         "asset": "美股科技／AI",
         "role": "風險資產主線",
-        "evidence": "SOX +1.91%、NDX +1.09%、NVDA +4.23%，NVIDIA FY2027 Q2 營收 549 億美元、資料中心 498 億美元。",
-        "flow_signal": "價格與財報共同確認主線偏強",
+        "evidence": "SOX +2.33%、NDX +1.43%、NVDA +8.74%；NVIDIA FY2027 Q2 營收 962.21 億美元、資料中心 890 億美元，Q3 營收指引 1,080 億美元 ±2%。",
+        "flow_signal": "價格與財報共同確認 AI 主線偏強，但 S&P 類股廣度窄",
         "confidence": "高",
-        "watch": "台股 AI 鏈能否收盤維持量價擴張",
+        "watch": "台股 AI 鏈能否收盤維持量價擴張，以及 NVIDIA 供應限制",
         "tone": "positive"
       },
       {
         "asset": "Bitcoin",
         "role": "高波動稀缺資產",
-        "evidence": "BTC 114,396.36 美元、日漲 1.99%；Farside 8/27 美國現貨 BTC ETF 淨流入 1.427 億美元。",
-        "flow_signal": "價格與 ETF 流量同向",
-        "confidence": "高",
-        "watch": "ETF 流量能否連續、價格能否守住突破區",
-        "tone": "positive"
+        "evidence": "CoinGecko 8/28 10:20 TPE：BTC 約 80,121 美元、24 小時 +1.64%，24 小時成交額約 352.7 億美元；Farside 8/27 已回報合計 -3,530 萬美元，但 IBIT 尚未回報。",
+        "flow_signal": "價格偏強；ETF 最終方向未定",
+        "confidence": "中",
+        "watch": "IBIT 補報後的最終合計與價格是否守住突破區",
+        "tone": "watch"
       },
       {
         "asset": "Ethereum",
         "role": "加密風險偏好",
-        "evidence": "ETH 4,572.83 美元、日漲 4.53%；Farside 8/27 美國現貨 ETH ETF 淨流入 1,800 萬美元。",
-        "flow_signal": "ETH 相對 BTC 偏強且有實際淨流入",
-        "confidence": "中高",
-        "watch": "ETH/BTC 相對強勢與 ETF 流量是否延續",
-        "tone": "positive"
+        "evidence": "CoinGecko 8/28 10:20 TPE：ETH 約 2,500.72 美元、24 小時 -0.02%，24 小時成交額約 154.2 億美元；Farside 8/27 已回報合計 +7,490 萬美元，但 ETHA／ETHB 尚未回報。",
+        "flow_signal": "價格近乎持平；ETF 已回報部分為正但最終方向未定",
+        "confidence": "中低",
+        "watch": "ETHA／ETHB 補報與 ETH/BTC 相對強弱",
+        "tone": "watch"
       },
       {
         "asset": "黃金",
         "role": "低信用風險儲備",
-        "evidence": "COMEX 黃金 3,546.00 美元、日漲 1.08%；未以單日上漲推論 ETF 淨流入。",
-        "flow_signal": "價格偏強，流量證據未同步更新",
-        "confidence": "中",
-        "watch": "World Gold Council 月度／週度持倉流量更新",
+        "evidence": "GLD 8/27 收 422.60 美元、+0.30%，成交量較前日低約 28.4%；State Street 官方基金資料截至 8/26，另有二手資料引述 8/27 SPDR 黃金持倉增加 1.141 噸。",
+        "flow_signal": "價格偏強；持倉增加僅二手引述，未當作發行商直接流量",
+        "confidence": "中低",
+        "watch": "State Street／World Gold Council 後續直接持倉與流量更新",
         "tone": "watch"
       },
       {
         "asset": "美元／美債",
         "role": "流動性與折現率",
-        "evidence": "DXY 96.57、日變動 -0.04%；美國 2Y/10Y 殖利率 3.63%/4.23%。",
-        "flow_signal": "美元平、長端利率仍高，非全面寬鬆",
+        "evidence": "DXY 8/27 收 99.16、日變動約 -0.01%；美國 10 年期公債殖利率 4.67%、日升 1 個基點。",
+        "flow_signal": "美元平、長端殖利率仍高，非全面寬鬆",
         "confidence": "高",
-        "watch": "PCE 後 10Y 是否回落、曲線是否再陡峭化",
+        "watch": "Jackson Hole 談話後 10Y 與美元方向",
         "tone": "neutral"
       }
     ],
     "interpretation": [
-      "這是 AI／加密偏強的選擇性 risk-on，不是所有資產一起受惠的全面流動性行情。台股對應先看先進製程、AI 伺服器、散熱、光通訊與測試介面，但必須以個股量價證明為準。"
+      "這是 NVIDIA 帶動的 AI 窄幅 risk-on，不是所有類股與跨資產同步受惠。BTC 價格偏強、ETH 近乎持平，但 8/27 ETF 表格尚未報齊，不能把部分合計寫成最終流入／流出。台股對應先看先進製程、AI 伺服器、散熱、光通訊與測試介面，仍以個股量價證明為準。"
     ],
     "confirmation": [
-      "SOX 與 NVDA 延續強勢",
+      "SOX 與 NVDA 延續強勢且美股市場廣度改善",
       "台股 AI 鏈成交量擴大且收盤守高",
-      "BTC/ETH ETF 淨流入連續",
+      "BTC/ETH ETF 主要未報基金補齊後的最終合計",
       "10Y 不再上衝"
     ],
-    "caveat": "單日價格上漲不等於資金流入；ETF flow 僅代表該產品，黃金未取得同日 ETF 流量更新。",
-    "as_of": "價格／ETF flow／美債均截至 2026-08-27；黃金 flow 採最新公開月度資料。",
+    "caveat": "單日價格上漲不等於資金流入；Farside 8/27 BTC 缺 IBIT、ETH 缺 ETHA／ETHB，本文只列已回報部分，明確標示 preliminary/incomplete。黃金持倉增加亦為二手引述。",
+    "as_of": "美股／DXY／10Y／GLD 完整資料截至 2026-08-27；BTC/ETH 價格截至 2026-08-28 10:20 TPE；Farside 8/27 flow 為截至晨報截止的未完整表格。",
     "reader": {
-      "headline": "錢偏向 AI 與加密，但不是全面放水",
-      "flow": "SOX、NVDA、BTC、ETH 同步偏強，BTC/ETH ETF 也有實際淨流入。",
-      "meaning": "資金在追主線，不代表所有股票都安全。",
+      "headline": "錢明顯往 AI；加密流量還不能下定論",
+      "flow": "SOX 與 NVDA 強勢；BTC 價升、ETH 近乎持平，但 BTC/ETH ETF 都有主要基金尚未回報。",
+      "meaning": "這是科技主線領漲，不代表所有類股或加密資產都安全。",
       "action": "台股只聚焦有量價證明的 AI 鏈，弱勢股趁反彈整理。",
-      "watch": "SOX/NVDA 延續、台股收盤量價、BTC/ETH ETF 流量、10 年債殖利率。"
+      "watch": "SOX/NVDA 延續、美股廣度、台股收盤量價、ETF 補報與 10 年債殖利率。"
     }
   },
   "source_ark": {
@@ -1032,12 +1058,12 @@
     "body": "AI 半導體可以保留核心觀察，但水位下降 3.5 個百分點代表可部署空間縮小。用上漲日做汰弱留強，等待水位止跌或價格回測確認後再擴張。"
   },
   "source_audit": {
-    "cutoff": "2026-08-28 10:35 Asia/Taipei",
+    "cutoff": "2026-08-28 10:30 Asia/Taipei",
     "ark_capture": "2026-08-28 09:05 recovered with 3234 cross-check; four-zone counts 10/7/31/30; water 73.5%.",
     "previous_water": "2026-08-27 successful complete capture water 77.0%.",
-    "market": "TWSE/TAIFEX official intraday; U.S. 2026-08-27 completed closes cross-checked with Nasdaq/Cboe/Yahoo chart data.",
-    "flows": "Farside product flow tables; price changes are not described as flows.",
-    "social": "No same-day direct original Trump/Musk signal used."
+    "market": "TWSE/TAIFEX official 10:21 synchronized minute; U.S. 2026-08-27 completed closes from Yahoo chart symbols ^SOX/^NDX/^GSPC/^DJI/^VIX and exact Mag 7 tickers.",
+    "flows": "Farside 8/27 tables explicitly incomplete (BTC missing IBIT; ETH missing ETHA/ETHB); CoinGecko prices; GLD official fund data through 8/26 plus secondary holdings report.",
+    "social": "No cutoff-compliant directly verified original Trump/Musk X signal used."
   },
   "title": "2026-08-28 Kelvin Morning Brief"
 }
