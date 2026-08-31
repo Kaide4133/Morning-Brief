@@ -225,6 +225,35 @@ def normalize_zone_overlap(section: dict | None) -> None:
     section["overlap_names"] = names
 
 
+def normalize_zone_cards(section: dict | None) -> None:
+    """Derive card presentation fields from the containing zone.
+
+    Producer JSON intentionally keeps the captured Ark fields close to source and
+    therefore does not repeat presentation-only ``stamp``/``meta`` values on every
+    item.  The template used to interpret a missing stamp as ``升溫``, which made
+    every value-zone card display the wrong label.  Resolve the zone explicitly at
+    the rendering boundary instead.
+    """
+    if not isinstance(section, dict):
+        return
+
+    for zone in ("value", "rising"):
+        for item in section.get(zone) or []:
+            if not isinstance(item, dict):
+                continue
+            item["stamp"] = zone
+            if isinstance(item.get("meta"), str) and item["meta"].strip():
+                continue
+            parts = []
+            industry = str(item.get("industry") or "").strip()
+            change = str(item.get("change") or "").strip()
+            if industry:
+                parts.append(industry)
+            if change and change != "—":
+                parts.append(change)
+            item["meta"] = " · ".join(parts) or "候選觀察"
+
+
 def enrich_issue(data: dict) -> dict:
     """Add derived fields for templates.
 
@@ -235,6 +264,8 @@ def enrich_issue(data: dict) -> dict:
     data = copy.deepcopy(data)
     normalize_zone_overlap(data.get("etf"))
     normalize_zone_overlap(data.get("stocks"))
+    normalize_zone_cards(data.get("etf"))
+    normalize_zone_cards(data.get("stocks"))
     dt = datetime.strptime(data["date"], "%Y-%m-%d")
     issue_no = data["issue_no"]
     scenario_map = load_json(SCENARIO_MAP)
@@ -412,6 +443,9 @@ def validate_required_reader_fields(data: dict) -> None:
     axes = analysis.get("axes") or {}
 
     required_strings = {
+        "temperature.vix_note": (data.get("temperature") or {}).get("vix_note"),
+        "temperature.signal_headline": (data.get("temperature") or {}).get("signal_headline"),
+        "temperature.signal_note": (data.get("temperature") or {}).get("signal_note"),
         "analysis.us_close": analysis.get("us_close"),
         "analysis.tx_night": analysis.get("tx_night"),
         "analysis.axes.thesis": axes.get("thesis"),

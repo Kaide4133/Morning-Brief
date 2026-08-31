@@ -230,6 +230,13 @@
   <section class="section-zone" id="s5">
     <div class="container">
       {{ m.section_head('V', 'SECTION', '產業個股雙區', 'Sector Dual Zone', 'V') }}
+      {%- if stocks.special_event %}
+      <div class="overlap-box" role="note" aria-label="{{ stocks.special_event.title }}">
+        <span class="overlap-stamp">{{ stocks.special_event.kicker }}</span>
+        <h3 style="margin:6px 0 8px;font-family:var(--display);font-size:1.25rem">{{ stocks.special_event.title }}</h3>
+        <p style="margin:0;color:var(--ink-soft)">{{ stocks.special_event.summary }}</p>
+      </div>
+      {%- endif %}
       <h3 class="zone-subtitle">價值區｜{{ stocks.value | length }} 檔</h3>
       <div class="card-grid">
         {%- for item in stocks.value %}

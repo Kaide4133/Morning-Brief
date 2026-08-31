@@ -86,7 +86,10 @@
     "label": "中高水位、短線降溫",
     "score": 71.9,
     "change": -1.6,
-    "note": "水位仍高於 70%，但方向轉弱；以防禦控速解讀，不把高水位誤寫成高風險。"
+    "note": "水位仍高於 70%，但方向轉弱；以防禦控速解讀，不把高水位誤寫成高風險。",
+    "vix_note": "美股 8/28 收盤：SOX -3.47%、Nasdaq 100 -0.70%、S&P 500 -0.25%，VIX 14.43（-0.55%）。費半明顯弱於大盤，但 VIX 未擴張，較像半導體集中承壓，尚非全面恐慌。",
+    "signal_headline": "水位下降、費半領跌；半導體先等止穩，SEMICON 論壇只作事件觀察。",
+    "signal_note": "方舟水位 71.9%，較前一交易日下降 1.6 個百分點；ETF 價值／升溫為 10／7 檔，產業價值／升溫為 31／30 檔，產業重疊 3008。SEMICON Taiwan 論壇今日開跑，展覽為 9/2–9/4。"
   },
   "editorial": {
     "pull_quote": "水位仍在中高檔，但方向轉弱；先守住節奏，再等價格證明。",
@@ -1033,6 +1036,11 @@
     ],
     "overlap_names": {
       "3008": "大立光"
+    },
+    "special_event": {
+      "kicker": "EVENT WINDOW · 8/31–9/4",
+      "title": "SEMICON Taiwan 2026 論壇週今日開跑",
+      "summary": "官方論壇為 8/31–9/4，實體展覽於 9/2–9/4 在南港展覽館 1、2 館舉行；8/31 議程涵蓋 MEMS 與感測、矽光子及 FOPLP。對本頁候選池僅作事件催化註記：設備／測試、先進封裝、材料、化合物半導體與矽光子供應鏈仍須等價格與量能證明，不把展會題材直接等同買進訊號。"
     }
   },
   "validation": {
@@ -1047,6 +1055,7 @@
       "SOX 8/28 跌 3.47%，Warsh 談話提高升息與長端利率風險。"
     ],
     "long_term": [
+      "SEMICON Taiwan 2026 論壇於 8/31–9/4 舉行、展覽為 9/2–9/4；8/31 議程含 MEMS 與感測、矽光子及 FOPLP，屬事件觀察窗，不代表相關供應鏈已取得訂單。",
       "NVIDIA 仍預估下一財年營收年增約 70%，AI 需求主軸未消失。",
       "美股大型平台股與半導體出現分化，台灣供應鏈需看訂單能見度與價格證明。",
       "外資臺指期淨空單 8/28 為 83,655 口，較 8/27 減少 1,181 口，但絕對空單仍高。"
@@ -1259,6 +1268,16 @@
       "title": "Reuters — semiconductor tariff proposal boundary",
       "url": "https://www.reuters.com/business/us-weighs-new-round-tariffs-semiconductors-politico-reports-2026-08-27/",
       "as_of": "2026-08-27"
+    },
+    {
+      "title": "SEMICON Taiwan 2026 — Exhibition & Forums FAQ",
+      "url": "https://semicontaiwan.org/en/Exhibition_%26_Forums_FAQ",
+      "as_of": "2026-08-31"
+    },
+    {
+      "title": "SEMICON Taiwan 2026 — Program at a Glance",
+      "url": "https://semicontaiwan.org/en/programs/program-at-a-glance",
+      "as_of": "2026-08-31"
     }
   ],
   "scenario_id": "06",
