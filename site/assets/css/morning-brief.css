@@ -1232,7 +1232,9 @@ a:hover { text-decoration: underline; }
     gap: 8px;
     flex-wrap: wrap;
     line-height: 1.4;
-    white-space: nowrap;
+    width: 100%;
+    min-width: 0;
+    white-space: normal;
   }
   .masthead-inner .nav-link { margin-left: 0; }
   .container { padding: 0 20px; }
