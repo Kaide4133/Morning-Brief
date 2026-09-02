@@ -696,6 +696,14 @@ def export_morning_context(
 def build_one(json_path: Path, write: bool = True) -> Path:
     data = load_json(json_path)
     validate_required_reader_fields(data)
+    # Classification, water history, machine context, and rendered HTML must see
+    # the same normalized card metadata. Without this, the first classifier pass
+    # treats breadth as unknown while enrich_issue() classifies normalized cards,
+    # allowing the exported context/history to disagree with the public page.
+    normalize_zone_overlap(data.get("etf"))
+    normalize_zone_overlap(data.get("stocks"))
+    normalize_zone_cards(data.get("etf"))
+    normalize_zone_cards(data.get("stocks"))
     scenario_map = load_json(SCENARIO_MAP)
     effective, _classified, _override = resolve_scenario_for_build(data, scenario_map)
     sync_water_level(data)
