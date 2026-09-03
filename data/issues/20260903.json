@@ -1,0 +1,1302 @@
+{
+  "date": "2026-09-03",
+  "issue_no": 79,
+  "session_label": "台股盤中 10:20｜美股9/2",
+  "brief_label": "盤中整合版",
+  "source_ark": "ark_stocks_latest.json",
+  "classification_note": "情境由 tools/scenario_classifier.py 依既有 01–08 規則自動判定；不手寫 scenario_id。",
+  "hero": {
+    "headline": "<span class=\"mark\">一句話先看：</span>方舟水位升到 70.0%，台股盤中小漲；空間轉好，但高油價與長債殖利率仍要求不追價。",
+    "subhead": "操作感受：46,000 上方守穩才逐步提高部署；優先選價格與成交量同步、能承接 AI 實際需求的強勢族群。",
+    "reader_subhead": "水位上升、盤面小漲；可以提高觀察與部署準備，但仍等價格證明，不追第一段。"
+  },
+  "market": {
+    "sox": {
+      "value": "11,339.25",
+      "change_pct": 0.45
+    },
+    "vix": {
+      "value": "15.20",
+      "change_pct": -6.98
+    },
+    "nasdaq": {
+      "value": "26,217.83",
+      "change_pct": 0.45
+    },
+    "tw_index": {
+      "line": "10:20 加權指數 46,241.47 點，+76.75 點（+0.17%）；截至該分鐘高 46,517.45、低 45,992.50。",
+      "change_pct": 0.17
+    },
+    "futures": {
+      "line": "10:20 臺指期096近月 46,234 點，+69 點（+0.15%）；截至該分鐘高 46,399、低 45,923，較現貨逆價差 7.47 點。"
+    },
+    "foreign_oi": {
+      "value": -85329,
+      "note": "9/2 最新完整值；外資臺指期未平倉多單 6,686 口、空單 92,015 口，淨空 85,329 口。"
+    },
+    "systemic_risk": "中偏高"
+  },
+  "strategy": {
+    "thesis": "水位上升 × 盤面選擇性修復",
+    "tape": "方舟水位較前一交易日上升 0.5 個百分點；10:20 現貨 +0.17%、近月期貨 +0.15%，期貨小幅逆價差。",
+    "playbook": "可部署空間增加後，仍以回測守住、相對強勢與量價確認為前提；優先實際訂單鏈，避免只追事件標題。",
+    "risk": "布蘭特原油逼近 95–100 美元、10 年債約 4.79%，以及 Broadcom 財報後價格反應，都是 AI 高估值鏈的壓力測試。",
+    "reader": {
+      "thesis": "水位上升，盤面小漲。",
+      "tape": "現貨與期貨同步修復，但幅度不大、期貨仍小幅逆價差。",
+      "playbook": "準備部署，但只選價格已證明、回測守住的標的。",
+      "risk": "油價、10 年債 4.8%與 AI 財報後反應。"
+    }
+  },
+  "ark": {
+    "water_level": 70.0,
+    "previous_water_level": 69.5,
+    "change": 0.5,
+    "direction": "上升",
+    "interpretation": "水位越高代表市場越健康、可部署空間越大；本日由 69.5% 升至 70.0%，是正面訊號，但仍須由價格與成交量確認。",
+    "source_time": "2026-09-03T04:21:35.932553+00:00",
+    "source_file": "ark_stocks_latest.json（方舟完整截圖_2026-09-03_12-16-31）",
+    "status": "validated",
+    "prev": 69.5,
+    "delta": 0.5,
+    "holding_allocation_suggestion": "70.0%",
+    "as_of": "2026-09-03",
+    "source": "方舟運算 2026-09-03 重新擷取截圖並核對頁籤；前值為 2026-09-02 正式晨報 69.5%。",
+    "note": "水位上升代表健康度與可部署空間增加；盤面僅溫和修復，仍不把水位直接翻成追價。"
+  },
+  "temperature": {
+    "label": "健康度回升、價格待擴張",
+    "score": 70.0,
+    "change": 0.5,
+    "note": "方舟水位上升 0.5 個百分點；現貨與期貨盤中同步小漲，但尚未形成強勢擴張。",
+    "vix_note": "美股 9/2：SOX +0.45%、NASDAQ +0.45%、S&P 500 +0.46%，VIX 15.20（-6.98%）；AI 股修復，但油價與長端殖利率仍高。",
+    "signal_headline": "水位上升是正面訊號；價格與成交量確認後才提高速度。",
+    "signal_note": "方舟水位 70.0%，較前一交易日上升 0.5 個百分點；ETF 價值／升溫 10／7 檔，產業價值／升溫 31／30 檔。"
+  },
+  "editorial": {
+    "pull_quote": "水位把空間打開；價格證明決定部署速度。",
+    "body": "隔夜美股由 Nvidia、Meta 等大型科技股帶動修復，VIX 回落；台股 10:20 現貨與近月期貨同步小漲。方舟水位則由 69.5% 升至 70.0%，代表市場健康度與可部署空間增加。<span class=\"mark\">但原油高位與美債長端殖利率仍壓縮估值，因此只提高準備度，不追尚未證明的第一段。</span>"
+  },
+  "home": {
+    "thesis_blurb": "水位上升、盤面小漲；空間轉好，部署仍等價格證明。",
+    "recent_summary": "9/3 10:20 加權指數上漲 0.17%，方舟水位 70.0%、較前一交易日上升 0.5 個百分點。"
+  },
+  "etf": {
+    "value": [
+      {
+        "code": "0052",
+        "name": "富邦科技",
+        "price": "62.05",
+        "change": "—0 (0.00%)",
+        "nav_label": "即時淨值",
+        "nav_value": "62.22",
+        "premium_label": "折溢價",
+        "premium_value": "-0.19%",
+        "market_label": "來源股價",
+        "market_value": "62.05",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0053",
+        "name": "元大電子",
+        "price": "242.5",
+        "change": "▲0.15 (+0.06%)",
+        "nav_label": "即時淨值",
+        "nav_value": "241.28",
+        "premium_label": "折溢價",
+        "premium_value": "0.51%",
+        "market_label": "來源股價",
+        "market_value": "242.5",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "006203",
+        "name": "元大MSCI台灣",
+        "price": "194",
+        "change": "▼0.8 (-0.41%)",
+        "nav_label": "即時淨值",
+        "nav_value": "194.82",
+        "premium_label": "折溢價",
+        "premium_value": "-0.42%",
+        "market_label": "來源股價",
+        "market_value": "194",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "00631L",
+        "name": "元大台灣50正2",
+        "price": "36.12",
+        "change": "▲0.19 (+0.53%)",
+        "nav_label": "即時淨值",
+        "nav_value": "36.12",
+        "premium_label": "折溢價",
+        "premium_value": "0.11%",
+        "market_label": "來源股價",
+        "market_value": "36.12",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0050",
+        "name": "元大台灣50",
+        "price": "107.1",
+        "change": "▲0.3 (+0.28%)",
+        "nav_label": "即時淨值",
+        "nav_value": "107.28",
+        "premium_label": "折溢價",
+        "premium_value": "-0.07%",
+        "market_label": "來源股價",
+        "market_value": "107.1",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "006201",
+        "name": "元大富櫃50",
+        "price": "44.55",
+        "change": "▼0.54 (-1.20%)",
+        "nav_label": "即時淨值",
+        "nav_value": "44.82",
+        "premium_label": "折溢價",
+        "premium_value": "-0.02%",
+        "market_label": "來源股價",
+        "market_value": "44.55",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "006208",
+        "name": "富邦台50",
+        "price": "245.7",
+        "change": "▲0.5 (+0.20%)",
+        "nav_label": "即時淨值",
+        "nav_value": "245.74",
+        "premium_label": "折溢價",
+        "premium_value": "0.07%",
+        "market_label": "來源股價",
+        "market_value": "245.7",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0057",
+        "name": "富邦摩台",
+        "price": "320.25",
+        "change": "▲1.1 (+0.34%)",
+        "nav_label": "即時淨值",
+        "nav_value": "319.7",
+        "premium_label": "折溢價",
+        "premium_value": "0.17%",
+        "market_label": "來源股價",
+        "market_value": "320.25",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0056",
+        "name": "元大高股息",
+        "price": "55.25",
+        "change": "▲0.15 (+0.27%)",
+        "nav_label": "即時淨值",
+        "nav_value": "55.24",
+        "premium_label": "折溢價",
+        "premium_value": "0.02%",
+        "market_label": "來源股價",
+        "market_value": "55.25",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0055",
+        "name": "元大MSCI金融",
+        "price": "48.8",
+        "change": "▲1.7 (+3.61%)",
+        "nav_label": "即時淨值",
+        "nav_value": "48.74",
+        "premium_label": "折溢價",
+        "premium_value": "0.1%",
+        "market_label": "來源股價",
+        "market_value": "48.8",
+        "cross_label": "價值×升溫",
+        "cross_value": "是"
+      }
+    ],
+    "rising": [
+      {
+        "code": "00919",
+        "name": "群益台灣精選高息",
+        "price": "32.86",
+        "change": "▲0.51 (+1.58%)",
+        "nav_label": "即時淨值",
+        "nav_value": "32.82",
+        "premium_label": "折溢價",
+        "premium_value": "0.09%",
+        "market_label": "來源股價",
+        "market_value": "32.86",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "00731",
+        "name": "復華富時高息低波",
+        "price": "97.85",
+        "change": "▲0.9 (+0.93%)",
+        "nav_label": "即時淨值",
+        "nav_value": "98.22",
+        "premium_label": "折溢價",
+        "premium_value": "-0.38%",
+        "market_label": "來源股價",
+        "market_value": "97.85",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "00939",
+        "name": "統一台灣高息動能",
+        "price": "23.8",
+        "change": "▲0.42 (+1.80%)",
+        "nav_label": "即時淨值",
+        "nav_value": "23.87",
+        "premium_label": "折溢價",
+        "premium_value": "-0.29%",
+        "market_label": "來源股價",
+        "market_value": "23.8",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "00938",
+        "name": "凱基優選30",
+        "price": "26.36",
+        "change": "▲0.56 (+2.17%)",
+        "nav_label": "即時淨值",
+        "nav_value": "26.34",
+        "premium_label": "折溢價",
+        "premium_value": "0.08%",
+        "market_label": "來源股價",
+        "market_value": "26.36",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0055",
+        "name": "元大MSCI金融",
+        "price": "48.8",
+        "change": "▲1.7 (+3.61%)",
+        "nav_label": "即時淨值",
+        "nav_value": "48.74",
+        "premium_label": "折溢價",
+        "premium_value": "0.1%",
+        "market_label": "來源股價",
+        "market_value": "48.8",
+        "cross_label": "價值×升溫",
+        "cross_value": "是"
+      },
+      {
+        "code": "00961",
+        "name": "FT臺灣永續高息",
+        "price": "13.49",
+        "change": "▲0.12 (+0.90%)",
+        "nav_label": "即時淨值",
+        "nav_value": "13.45",
+        "premium_label": "折溢價",
+        "premium_value": "0.3%",
+        "market_label": "來源股價",
+        "market_value": "13.49",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "00934",
+        "name": "中信成長高股息",
+        "price": "30.4",
+        "change": "▼0.21 (-0.69%)",
+        "nav_label": "即時淨值",
+        "nav_value": "30.35",
+        "premium_label": "折溢價",
+        "premium_value": "0.16%",
+        "market_label": "來源股價",
+        "market_value": "30.4",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      }
+    ],
+    "overlap": [
+      "0055"
+    ],
+    "overlap_names": {
+      "0055": "元大MSCI金融"
+    },
+    "value_note": "雙區重疊代表價值與升溫條件同時出現，仍需價格確認。"
+  },
+  "stocks": {
+    "value": [
+      {
+        "code": "6274",
+        "name": "台燿",
+        "price": "1,395",
+        "change": "▼15 (-1.06%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "20.69",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "121.5",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "3037",
+        "name": "欣興",
+        "price": "945",
+        "change": "▼28 (-2.88%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "9.11",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "43.6",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "6415",
+        "name": "矽力*-KY",
+        "price": "419",
+        "change": "▼7 (-1.64%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "13.08",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "58.5",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "2327",
+        "name": "國巨*",
+        "price": "526",
+        "change": "▼14 (-2.59%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "5.03",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "51.5",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "2324",
+        "name": "仁寶",
+        "price": "39.5",
+        "change": "▼0.2 (-0.50%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "-15.49",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "38.2",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "2383",
+        "name": "台光電",
+        "price": "5,490",
+        "change": "▲45 (+0.83%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "8.31",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "—",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "3189",
+        "name": "景碩",
+        "price": "800",
+        "change": "▼47 (-5.55%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "7.69",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "35.8",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "2360",
+        "name": "致茂",
+        "price": "2,070",
+        "change": "▲95 (+4.81%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "32.09",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "175.2",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "3034",
+        "name": "聯詠",
+        "price": "532",
+        "change": "▼11 (-2.03%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "2.73",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "—",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "2059",
+        "name": "川湖",
+        "price": "13,845",
+        "change": "▼2 (-0.14%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "44.22",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "355.5",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "2379",
+        "name": "瑞昱",
+        "price": "716",
+        "change": "▼28 (-3.76%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "4.75",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "32.5",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "6223",
+        "name": "旺矽",
+        "price": "5,200",
+        "change": "▼9 (-1.70%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "-1.5",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "—",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "3711",
+        "name": "日月光投控",
+        "price": "599",
+        "change": "▲1 (+1.70%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "12.16",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "43.1",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "1785",
+        "name": "光洋科",
+        "price": "101.5",
+        "change": "▼0.5 (-0.49%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "14.18",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "46.4",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "3665",
+        "name": "貿聯-KY",
+        "price": "2,105",
+        "change": "▼65 (-3.00%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "13.06",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "59.5",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "6239",
+        "name": "力成",
+        "price": "280",
+        "change": "▲2 (+0.72%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "8.49",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "29.3",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "6213",
+        "name": "聯茂",
+        "price": "531",
+        "change": "▼5 (-0.93%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "12.71",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "96.8",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "2330",
+        "name": "台積電",
+        "price": "2,400",
+        "change": "▲15 (+0.63%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "5.62",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "44.6",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "2308",
+        "name": "台達電",
+        "price": "1,785",
+        "change": "▲55 (+3.18%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "2.24",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "47.7",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "2345",
+        "name": "智邦",
+        "price": "2,145",
+        "change": "▲5 (+0.23%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "-0.21",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "71.6",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "4958",
+        "name": "臻鼎-KY",
+        "price": "475.5",
+        "change": "▼32 (-6.21%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "3.33",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "31.8",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "6285",
+        "name": "啟碁",
+        "price": "241",
+        "change": "▼4.5 (-1.83%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "6.57",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "89.8",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "2303",
+        "name": "聯電",
+        "price": "126",
+        "change": "—0 (0.00%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "3.11",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "18.9",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "5274",
+        "name": "信驊",
+        "price": "18,125",
+        "change": "▲4 (+2.26%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "16.32",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "97.5",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "6515",
+        "name": "穎崴",
+        "price": "7,270",
+        "change": "▲22 (+3.12%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "9.6",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "155.5",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "2449",
+        "name": "京元電子",
+        "price": "266",
+        "change": "▼4.5 (-1.66%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "10.19",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "36.7",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "2454",
+        "name": "聯發科",
+        "price": "4,375",
+        "change": "▲1 (+2.34%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "-16.44",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "12.1",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "2313",
+        "name": "華通",
+        "price": "243.5",
+        "change": "▼5.5 (-2.21%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "0.58",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "16.0",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "2382",
+        "name": "廣達",
+        "price": "338.5",
+        "change": "▲1.5 (+0.45%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "-4.91",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "131.3",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "3008",
+        "name": "大立光",
+        "price": "7,255",
+        "change": "▼555 (-7.11%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "31.39",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "-10.6",
+        "industry": "產業價值區"
+      },
+      {
+        "code": "2455",
+        "name": "全新",
+        "price": "538",
+        "change": "▼4 (-0.74%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "29.48",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "45.1",
+        "industry": "產業價值區"
+      }
+    ],
+    "rising": [
+      {
+        "code": "2881",
+        "name": "富邦金",
+        "price": "148",
+        "change": "▲4.5 (+3.14%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "-51.89",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "-79.1",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "2883",
+        "name": "凱基金",
+        "price": "36.65",
+        "change": "▲1.1 (+3.24%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "-36.51",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "-36.4",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "2221",
+        "name": "大甲",
+        "price": "91.5",
+        "change": "▲8.3 (+9.98%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "-6.23",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "38.5",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "6933",
+        "name": "AMAX-KY",
+        "price": "308.5",
+        "change": "▼22 (-6.80%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "1.63",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "197.3",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "6538",
+        "name": "倉和",
+        "price": "273",
+        "change": "▲24 (+9.86%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "15.92",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "63.3",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "2455",
+        "name": "全新",
+        "price": "538",
+        "change": "▼4 (-0.74%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "29.48",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "45.1",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "2887",
+        "name": "台新新光金",
+        "price": "42",
+        "change": "▲0.8 (+1.94%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "1.78",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "-15.6",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "2855",
+        "name": "統一證",
+        "price": "50.6",
+        "change": "▲1 (+2.02%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "-47.58",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "—",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "2880",
+        "name": "華南金",
+        "price": "43.7",
+        "change": "▲0.7 (+1.63%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "3.45",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "6.4",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "3141",
+        "name": "晶宏",
+        "price": "101.5",
+        "change": "▲2 (+2.01%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "15.89",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "—",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "3374",
+        "name": "精材",
+        "price": "418",
+        "change": "▼1.5 (-0.36%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "12.68",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "30.9",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "3406",
+        "name": "玉晶光",
+        "price": "990",
+        "change": "▼6 (-5.71%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "39.28",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "1.6",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "8103",
+        "name": "瀚荃",
+        "price": "122.5",
+        "change": "▲0.5 (+0.41%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "5.28",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "—",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "3693",
+        "name": "營邦",
+        "price": "663",
+        "change": "▲21 (+3.27%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "5.57",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "148.9",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "3441",
+        "name": "聯一光",
+        "price": "134.5",
+        "change": "▼5 (-3.58%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "24.16",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "12.1",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "3324",
+        "name": "雙鴻",
+        "price": "1,365",
+        "change": "▼7 (-4.88%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "38.54",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "—",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "3234",
+        "name": "光環",
+        "price": "201",
+        "change": "▼1 (-4.74%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "25.21",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "96.9",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "6727",
+        "name": "亞泰金屬",
+        "price": "574",
+        "change": "▼6 (-1.03%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "37.26",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "37.8",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "3008",
+        "name": "大立光",
+        "price": "7,240",
+        "change": "▼57 (-7.30%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "31.39",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "-10.6",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "5291",
+        "name": "邑昇",
+        "price": "70.4",
+        "change": "▼0.3 (-0.42%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "51.12",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "105.6",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "3363",
+        "name": "上詮",
+        "price": "793",
+        "change": "▲13 (+1.67%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "8.51",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "12.0",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "6830",
+        "name": "汎銓",
+        "price": "590",
+        "change": "▼8 (-1.34%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "16.72",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "26.1",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "4908",
+        "name": "前鼎",
+        "price": "216",
+        "change": "▼2 (-0.92%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "8.2",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "51.6",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "8155",
+        "name": "博智",
+        "price": "357.5",
+        "change": "▼12 (-3.12%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "3.41",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "52.0",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "2426",
+        "name": "鼎元",
+        "price": "98.5",
+        "change": "▼6 (-5.74%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "2.53",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "36.3",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "5292",
+        "name": "華懋",
+        "price": "223.5",
+        "change": "▼11 (-4.69%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "1.56",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "2.5",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "1326",
+        "name": "台化",
+        "price": "70.2",
+        "change": "▼2.6 (-3.57%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "34.1",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "—",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "1815",
+        "name": "富喬",
+        "price": "123.5",
+        "change": "▼7.5 (-5.73%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "24.01",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "68.1",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "6141",
+        "name": "柏承",
+        "price": "53",
+        "change": "▼1.8 (-3.28%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "15.25",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "79.4",
+        "industry": "產業升溫區"
+      },
+      {
+        "code": "2486",
+        "name": "一詮",
+        "price": "261",
+        "change": "▼27 (-9.38%)",
+        "metric_label": "來源營運欄位",
+        "metric_value": "5.53",
+        "metric2_label": "來源營運欄位 2",
+        "metric2_value": "42.5",
+        "industry": "產業升溫區"
+      }
+    ],
+    "overlap": [
+      "2455",
+      "3008"
+    ],
+    "overlap_names": {
+      "3008": "大立光",
+      "2455": "全新"
+    }
+  },
+  "validation": {
+    "strengthened": [
+      "方舟水位由 69.5% 升至 70.0%，可部署空間增加。",
+      "SOX、NASDAQ 與 S&P 500 均約上漲 0.45%，VIX 下跌 6.98%。",
+      "台股現貨與近月期貨 10:20 同步小漲。"
+    ],
+    "pressure": [
+      "外資 9/2 臺指期未平倉淨空 85,329 口，避險結構仍重。",
+      "布蘭特原油約 95.5 美元、10 年債殖利率約 4.79%，估值壓力未解除。",
+      "Broadcom 展望低於市場高標，AI 供應鏈需防利多後獲利了結。"
+    ],
+    "long_term": [
+      "Broadcom AI 半導體營收年增 221%，實際需求仍強。",
+      "Starlink 烏干達服務與 27 顆衛星成功部署，低軌通訊仍有營運執行進展。"
+    ]
+  },
+  "intelligence": {
+    "trump": [
+      {
+        "time": "2026-09-02",
+        "content": "Reuters 核實特朗普表示對伊朗的新一輪行動不會持續很久；市場仍同時交易供應中斷與降溫兩種情境。"
+      },
+      {
+        "time": "2026-09-02",
+        "content": "白宮公布委內瑞拉油田協議細節；這是政府主張，實際投資、產能與時程仍待驗證。"
+      }
+    ],
+    "musk": "Musk 於 9/2 表示 Starlink 已在烏干達提供服務；SpaceX 同日任務頁確認 27 顆 Starlink 衛星完成部署及第一級回收。Tesla 的 Cybercab 活動截至 10:20 尚未發生，不預先計入新規格或商業成果。",
+    "policy": [
+      "聯準會褐皮書稱經濟活動變化不大、就業略降、價格仍溫和上升；油價使市場仍保留 9 月升息風險。",
+      "Broadcom 第三季營收 295.91 億美元、AI 半導體營收 167 億美元；需求強，但第四季展望低於市場高標。"
+    ]
+  },
+  "mag7": [
+    {
+      "name": "Apple",
+      "ticker": "AAPL",
+      "price": "324.96",
+      "change_pct": -0.05,
+      "change_abs": "-0.17",
+      "tier": "weak",
+      "tier_label": "NEUTRAL",
+      "signal": "接近平盤，平台權值未跟隨 AI 股擴張。"
+    },
+    {
+      "name": "Microsoft",
+      "ticker": "MSFT",
+      "price": "496.82",
+      "change_pct": -0.84,
+      "change_abs": "-4.20",
+      "tier": "weak",
+      "tier_label": "NEUTRAL",
+      "signal": "收低，雲端與企業軟體權值仍受長端利率壓力。"
+    },
+    {
+      "name": "Nvidia",
+      "ticker": "NVDA",
+      "price": "224.41",
+      "change_pct": 3.21,
+      "change_abs": "+6.97",
+      "tier": "strong",
+      "tier_label": "STRONG",
+      "signal": "AI 半導體領漲，隔夜風險修復核心。"
+    },
+    {
+      "name": "Amazon",
+      "ticker": "AMZN",
+      "price": "254.98",
+      "change_pct": 0.02,
+      "change_abs": "+0.06",
+      "tier": "weak",
+      "tier_label": "NEUTRAL",
+      "signal": "接近平盤，消費與雲端動能未明顯擴張。"
+    },
+    {
+      "name": "Alphabet",
+      "ticker": "GOOGL",
+      "price": "337.12",
+      "change_pct": 0.63,
+      "change_abs": "+2.10",
+      "tier": "weak",
+      "tier_label": "NEUTRAL",
+      "signal": "溫和收高，仍屬大型平台股選擇性修復。"
+    },
+    {
+      "name": "Meta",
+      "ticker": "META",
+      "price": "592.85",
+      "change_pct": 2.47,
+      "change_abs": "+14.31",
+      "tier": "strong",
+      "tier_label": "STRONG",
+      "signal": "漲幅居前，數位廣告與 AI 權值相對強。"
+    },
+    {
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "price": "357.01",
+      "change_pct": 0.26,
+      "change_abs": "+0.92",
+      "tier": "weak",
+      "tier_label": "NEUTRAL",
+      "signal": "小幅收高；Cybercab 活動尚未落地，不預先計入新營運成果。"
+    }
+  ],
+  "analysis": {
+    "us_close": "9/2 美股收高：S&P 500 +0.46%、NASDAQ +0.45%、SOX +0.45%；VIX 降至 15.20。",
+    "tx_night": "9/3 10:20 臺指期096近月 46,234、上漲 0.15%，較現貨逆價差 7.47 點；外資未沖銷採 9/2 最新完整日終。",
+    "axes": {
+      "thesis": "空間增加、價格溫和修復。",
+      "policy": "AI 盈餘仍強，但能源通膨與高長債殖利率限制估值。",
+      "risk": "45,923 期貨低點、10Y 4.8%與布蘭特 100 美元。"
+    }
+  },
+  "conclusion": "方舟水位上升、台股盤中小漲。<em>提高部署準備度，但只在回測守住、量價確認後逐步執行，不追第一段。</em>",
+  "appendix": {
+    "after_hours": "9/3 台股仍在盤中，本版現貨與臺指期採 10:20 完整分鐘快照；外資期貨未平倉採 9/2 最新完整值。",
+    "map_bullets": [
+      "現貨 46,241.47；近月期貨 46,234；逆價差 7.47 點。",
+      "方舟水位 70.0%，較前一交易日上升 0.5 個百分點。",
+      "隔夜 AI 大型股修復，但 Broadcom 財報後反應偏弱。",
+      "油價與長端殖利率仍是高估值鏈主要壓力。"
+    ],
+    "execution": "水位上升代表空間改善；只提高觀察與準備，不把風控開放直接翻成追價。"
+  },
+  "capital_flow": {
+    "reader": {
+      "headline": "AI 大型股修復；BTC 流出、ETH 小額流入",
+      "flow": "價格回到大型 AI 股與部分黃金；最新完整 ETF 真實流量則是 BTC 淨流出 2.365 億美元、ETH 淨流入 0.110 億美元。",
+      "meaning": "風險偏好是選擇性修復，不是全面資金擴張；油價與長債殖利率仍壓縮高估值資產。",
+      "action": "台股優先看有實際 AI 訂單連結、價格與成交量已確認的先進製程、ASIC、伺服器與高速網通。",
+      "watch": "布蘭特 95–100、10 年債 4.8%、Broadcom 正規盤反應與下一筆完整加密 ETF 流量。"
+    },
+    "headline": "AI 大型股修復；BTC 流出、ETH 小額流入",
+    "stance": "選擇性修復、風險仍受限",
+    "summary": "價量顯示美股 AI 權值與黃金反彈；實流只確認 BTC ETF 淨流出、ETH ETF 小額淨流入，尚未形成全面 risk-on。",
+    "assets": [
+      {
+        "asset": "黃金",
+        "role": "避險／通膨對沖",
+        "evidence": "9/2 自約 4,330 美元反彈，完成美國時段時約 4,388 美元。",
+        "flow_signal": "未取得同日全球黃金 ETF 完整申贖，不把反彈改寫成流入。",
+        "confidence": "中高（價格）／低（流量）",
+        "watch": "4,330 支撐與 4,430–4,450 壓力",
+        "tone": "neutral-watch"
+      },
+      {
+        "asset": "美元",
+        "role": "流動性／避險貨幣",
+        "evidence": "DXY 隔夜約 99.58，未與油價及殖利率同步突破。",
+        "flow_signal": "外匯為分散式市場，價格不等於基金淨流。",
+        "confidence": "中高",
+        "watch": "DXY 100 與 USDJPY",
+        "tone": "neutral-watch"
+      },
+      {
+        "asset": "美債久期",
+        "role": "折現率／防禦",
+        "evidence": "10 年殖利率約 4.794%、30 年約 5.267%，自盤中高點略回落。",
+        "flow_signal": "未取得同日債券基金淨申贖；只能確認殖利率價格訊號。",
+        "confidence": "高（殖利率）／低（流量）",
+        "watch": "10Y 4.80% 與 30Y 5.30%",
+        "tone": "risk-watch"
+      },
+      {
+        "asset": "Bitcoin",
+        "role": "高波動非主權稀缺資產",
+        "evidence": "10:19 約 77,400 美元、24 小時 +0.38%。",
+        "flow_signal": "9/1 最新完整美國現貨 ETF 淨流出約 2.365 億美元。",
+        "confidence": "高",
+        "watch": "76,200 支撐與 80,000–81,000 壓力",
+        "tone": "mixed"
+      },
+      {
+        "asset": "Ethereum",
+        "role": "加密風險資產／應用層",
+        "evidence": "10:19 約 2,388 美元、24 小時 -0.63%；ETH/BTC 約 -1.00%。",
+        "flow_signal": "9/1 最新完整美國現貨 ETF 淨流入約 0.110 億美元。",
+        "confidence": "中高",
+        "watch": "2,355 支撐與 ETH/BTC 0.0312",
+        "tone": "mixed"
+      },
+      {
+        "asset": "美股 AI 權值",
+        "role": "成長型 equity risk",
+        "evidence": "SOX +0.45%、Nvidia +3.21%、Meta +2.47%，但 Broadcom 財報後轉弱。",
+        "flow_signal": "未取得同日股票基金完整申贖；指數上漲不等於淨流入。",
+        "confidence": "高（價格）／低（流量）",
+        "watch": "Broadcom 正規盤與 10Y 4.8%",
+        "tone": "constructive-selective"
+      },
+      {
+        "asset": "台股",
+        "role": "AI 供應鏈與風險承接",
+        "evidence": "10:20 現貨 +0.17%、近月期貨 +0.15%，期貨小幅逆價差。",
+        "flow_signal": "外資 9/2 臺指期未平倉淨空 85,329 口。",
+        "confidence": "高",
+        "watch": "45,923–45,992 盤中低點區與量價廣度",
+        "tone": "constructive-watch"
+      }
+    ],
+    "interpretation": [
+      "AI 盈餘仍有承接，但長端利率限制估值擴張。",
+      "BTC 價格橫穩與 ETF 流出背離，並非乾淨 risk-on。",
+      "ETH ETF 小額流入尚未轉成 ETH/BTC 相對強勢。",
+      "台股水位與價格同向改善，但期貨逆價差及外資淨空要求分批。"
+    ],
+    "confirmation": [
+      "台股現貨與期貨擴大漲幅且成交量同步。",
+      "10 年債殖利率壓回 4.8%下方。",
+      "Broadcom 正規盤收復財報前價位。",
+      "BTC／ETH 價格與 ETF 真實流量重新同向。"
+    ],
+    "caveat": "價格、成交量、ETF 申贖與持倉分層；沒有同日流量的資產不把單日漲跌改寫成資金流入或流出。",
+    "as_of": "市場與跨資產資料截至 2026-09-03 10:20 Asia/Taipei；ETF 流量採 2026-09-01 最新完整交易日。"
+  },
+  "disclaimer": "Kelvin Wiggly Morning Brief｜2026/09/03 市場晨報。供市場研究與風險規劃使用，不構成投資建議；方舟水位與區域清單為當日快照，後續仍須以價格與成交量確認。",
+  "xurl_signal_layer": {
+    "status": "no_material_signal",
+    "signals_count": 0,
+    "included_in_revision": false,
+    "window": "2026-09-02 10:20 to 2026-09-03 10:20 Asia/Taipei",
+    "note": "本期未加入獨立且足以改變判讀的 X-only 訊號；已驗證的 Reuters、官方公司與政府資訊仍保留在情報層。"
+  },
+  "research_sources": [
+    {
+      "title": "TWSE MIS — TAIEX 2026-09-03 intraday",
+      "url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0"
+    },
+    {
+      "title": "TAIFEX MIS — TXF quote list",
+      "url": "https://mis.taifex.com.tw/futures/api/getQuoteList"
+    },
+    {
+      "title": "TAIFEX — foreign futures positions",
+      "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate"
+    },
+    {
+      "title": "Nasdaq Index History — SOX and COMP",
+      "url": "https://indexes.nasdaq.com/Index/HistoryData"
+    },
+    {
+      "title": "Cboe — VIX History",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+    },
+    {
+      "title": "Reuters — Global markets, 2026-09-02",
+      "url": "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-09-02"
+    },
+    {
+      "title": "Federal Reserve — September 2026 Beige Book",
+      "url": "https://www.federalreserve.gov/monetarypolicy/beigebook202609.htm"
+    },
+    {
+      "title": "Broadcom investor relations — Q3 FY2026",
+      "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-third-quarter-fiscal-year-2026-financial"
+    },
+    {
+      "title": "Reuters — Broadcom outlook",
+      "url": "https://www.reuters.com/business/broadcom-forecasts-quarterly-revenue-below-estimates-2026-09-02/"
+    },
+    {
+      "title": "Reuters — Trump and Iran",
+      "url": "https://www.reuters.com/world/us/trump-says-renewed-us-campaign-against-iran-wont-last-long-2026-09-02/"
+    },
+    {
+      "title": "SpaceX — Starlink 15-23 mission",
+      "url": "https://www.spacex.com/launches/sl-15-23"
+    },
+    {
+      "title": "Elon Musk — Starlink Uganda signal",
+      "url": "https://x.com/elonmusk/status/2095058548350972117"
+    },
+    {
+      "title": "Coinbase Exchange — BTC candles",
+      "url": "https://api.exchange.coinbase.com/products/BTC-USD/candles"
+    },
+    {
+      "title": "Coinbase Exchange — ETH candles",
+      "url": "https://api.exchange.coinbase.com/products/ETH-USD/candles"
+    }
+  ]
+}
