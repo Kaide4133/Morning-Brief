@@ -279,5 +279,17 @@ class BuildInterfaceTests(unittest.TestCase):
             self.assertIn("refresh_error", result)
 
 
+class OfflineDraftTests(unittest.TestCase):
+    def test_explicit_offline_environment_never_calls_network_refresh(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            with mock.patch.dict(water_market.os.environ, {"KW_WATER_OFFLINE": "1"}), mock.patch.object(water_market, "refresh_taiex_cache") as refresh:
+                result = water_market.build_water_comparison(
+                    [{"date": "2026-09-04", "water_level": 69.1}], Path(tmp), refresh=True
+                )
+            refresh.assert_not_called()
+            self.assertIsNone(result["rows"][0]["taiex_close"])
+            self.assertNotIn("refresh_error", result)
+
+
 if __name__ == "__main__":
     unittest.main()

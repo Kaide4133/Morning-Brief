@@ -476,7 +476,7 @@ def build_water_comparison(records: Iterable[Dict[str, Any]], root: Any, refresh
         cache = _empty_cache()
         refresh_errors.append("cache: %s" % exc)
 
-    if refresh and record_list:
+    if refresh and os.environ.get("KW_WATER_OFFLINE") != "1" and record_list:
         dates = sorted(_parse_iso_date(record.get("date")).isoformat() for record in record_list)
         try:
             cache, errors = refresh_taiex_cache(root, dates[0], dates[-1])
