@@ -28,7 +28,27 @@
     }).filter(Boolean).join(' ');
   }
   const statusLabel = status => ({pending: '尚無當日收盤', non_trading: '非交易日', missing: '收盤資料缺漏'}[status] || '尚無收盤資料');
-  const api = {selectRows, statistics, segments, number, statusLabel};
+  function candle(row) {
+    const values = ['open', 'high', 'low', 'close'].map(key => row['taiex_' + key]);
+    if (row.market_status !== 'closed' || !values.every(value => number(value) && value > 0)) return null;
+    const [open, high, low, close] = values;
+    if (low > Math.min(open, close) || high < Math.max(open, close)) return null;
+    return {open, high, low, close, direction:close > open ? 'up' : close < open ? 'down' : 'flat'};
+  }
+  function marketDomain(rows) {
+    const prices = rows.flatMap(row => {
+      const c = candle(row);
+      return c ? [c.low, c.high] : number(row.taiex_close) && row.taiex_close > 0 ? [row.taiex_close] : [];
+    });
+    let low = prices.length ? Math.min(...prices) : 0, high = prices.length ? Math.max(...prices) : 100;
+    const pad = Math.max((high - low) * 0.12, high * 0.003, 1);
+    return {low:Math.max(0, low - pad), high:high + pad};
+  }
+  function candleGeometry(c, x, y, width) {
+    const openY = y(c.open), closeY = y(c.close);
+    return {x:x - width / 2, width, y:Math.min(openY, closeY), height:Math.abs(openY - closeY), wickTop:y(c.high), wickBottom:y(c.low)};
+  }
+  const api = {selectRows, statistics, segments, number, statusLabel, candle, marketDomain, candleGeometry};
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   if (!root.document) return;
   const $ = id => document.getElementById(id);
@@ -54,9 +74,12 @@
     const row = rows[selected];
     $('selected-date').textContent = row.date;
     $('selected-water').textContent = '水位 ' + (number(row.water_level) ? fmt(row.water_level, 1) + '%' : '無紀錄');
-    $('selected-market').textContent = '加權 ' + (number(row.taiex_close) ? fmt(row.taiex_close) + ' 點' : statusLabel(row.market_status));
+    const c = candle(row);
+    $('selected-market').textContent = '加權 ' + (number(row.taiex_close) ? fmt(row.taiex_close) + ' 點' + (c ? '' : ' · K 線資料不足') : statusLabel(row.market_status));
+    $('selected-ohlc').hidden = !c;
+    for (const key of ['open', 'high', 'low', 'close']) $('selected-' + key).textContent = c ? fmt(c[key]) : '—';
     $('chart-date').value = selected;
-    $('chart-date').setAttribute('aria-valuetext', row.date + '，' + $('selected-water').textContent + '，' + $('selected-market').textContent);
+    $('chart-date').setAttribute('aria-valuetext', row.date + '，' + $('selected-water').textContent + '，' + $('selected-market').textContent + (c ? `，開 ${fmt(c.open)}，高 ${fmt(c.high)}，低 ${fmt(c.low)}，收 ${fmt(c.close)}` : ''));
     const group = svg.querySelector('.selection'); group.replaceChildren();
     const x = geometry.x(row);
     add('line', {x1:x, x2:x, y1:geometry.top, y2:geometry.bottom, class:'crosshair'}, null, group);
@@ -75,15 +98,13 @@
     const mobile = width < 550;
     const left = mobile ? 30 : 40, right = width - (mobile ? 55 : 72), top = 22, bottom = height - 30;
     svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
-    add('title', {}, '方舟水位與台股加權指數');
-    add('desc', {}, '左軸水位固定 0 至 100%，右軸為指數點數、依所選區間縮放；缺值斷線。左右方向鍵切換日期。');
-    let first = stamp(rows[0].date), last = stamp(rows.at(-1).date);
-    if (first === last) { first -= DAY; last += DAY; }
-    const x = row => left + (stamp(row.date) - first) / (last - first) * (right - left);
+    add('title', {}, '方舟水位線圖與台股加權指數日 K 線');
+    add('desc', {}, '左軸水位固定 0 至 100%，右軸為日 K 線開高低收點數。紅 K 收高於開、綠 K 收低於開、金色為平盤 K。日期等距排列，缺值不補。左右方向鍵切換日期。');
+    const slots = new Map(rows.map((row, i) => [row.date, i]));
+    const step = (right - left) / rows.length;
+    const x = row => left + (slots.get(row.date) + 0.5) * step;
     const prices = rows.filter(row => number(row.taiex_close)).map(row => row.taiex_close);
-    let low = prices.length ? Math.min(...prices) : 0, high = prices.length ? Math.max(...prices) : 100;
-    const pad = Math.max((high - low) * 0.12, high * 0.003, 1);
-    low = Math.max(0, low - pad); high += pad;
+    const {low, high} = marketDomain(rows);
     const waterY = value => bottom - value / 100 * (bottom - top);
     const marketY = value => bottom - (value - low) / (high - low) * (bottom - top);
     geometry = {x, waterY, marketY, left, right, top, bottom, width};
@@ -99,12 +120,22 @@
       const row = rows[i];
       add('text', {x:x(row), y:height - 7, 'text-anchor':i === 0 ? 'start' : i === rows.length - 1 ? 'end' : 'middle'}, row.date.slice(5).replace('-', '/'));
     }
-    add('path', {d:segments(rows, 'taiex_close', x, marketY), class:'market-line', 'data-series':'taiex'});
+    const candles = add('g', {class:'market-candles', 'data-series':'taiex'});
+    for (const row of rows) {
+      const c = candle(row);
+      if (!c) continue;
+      const g = candleGeometry(c, x(row), marketY, Math.min(12, step * 0.62));
+      const group = add('g', {class:'candle candle-' + c.direction, 'data-date':row.date, 'data-open':c.open, 'data-high':c.high, 'data-low':c.low, 'data-close':c.close}, null, candles);
+      add('title', {}, `${row.date}｜開 ${fmt(c.open)} 高 ${fmt(c.high)} 低 ${fmt(c.low)} 收 ${fmt(c.close)}`, group);
+      add('line', {x1:x(row), x2:x(row), y1:g.wickTop, y2:g.wickBottom, class:'candle-wick'}, null, group);
+      if (g.height < 1) add('line', {x1:g.x, x2:g.x + g.width, y1:(marketY(c.open) + marketY(c.close)) / 2, y2:(marketY(c.open) + marketY(c.close)) / 2, class:'candle-body'}, null, group);
+      else add('rect', {x:g.x, y:g.y, width:g.width, height:g.height, class:'candle-body'}, null, group);
+    }
     add('path', {d:segments(rows, 'water_level', x, waterY), class:'water-line', 'data-series':'water'});
     // Dots keep isolated observations visible even when neighboring values are absent.
     for (const row of rows) {
       if (number(row.water_level)) add('circle', {cx:x(row), cy:waterY(row.water_level), r:2, class:'water-dot'});
-      if (number(row.taiex_close)) add('circle', {cx:x(row), cy:marketY(row.taiex_close), r:1.4, class:'market-dot'});
+
     }
     add('g', {class:'selection', 'aria-hidden':'true'});
     $('chart-date').max = rows.length - 1;
@@ -115,10 +146,12 @@
     $('period-market').textContent = stats ? '大盤 ' + signed(stats.marketReturn, 2) + '%' : '大盤 —';
     $('period-dates').textContent = stats ? `${stats.start} → ${stats.end} · ${stats.count} 個共同日期` : '至少需要兩個共同有值的日期';
     const waterCount = rows.filter(row => number(row.water_level)).length;
-    const marketCount = prices.length;
+    const marketCount = rows.filter(row => candle(row)).length;
     const latest = rows.at(-1);
     const latestNote = !number(latest.taiex_close) ? `；${latest.date} ${statusLabel(latest.market_status)}` : '';
-    $('coverage-note').textContent = `${rows[0].date} — ${rows.at(-1).date}｜水位 ${waterCount} 筆・大盤 ${marketCount} 筆${latestNote}。缺漏日期不補值；區間變化僅採共同起訖日。`;
+    const incomplete = prices.length - marketCount;
+    $('coverage-note').textContent = `${rows[0].date} — ${rows.at(-1).date}｜水位 ${waterCount} 筆・大盤 ${marketCount} 根日 K${incomplete ? `・${incomplete} 日缺完整 K 線` : ''}${latestNote}。缺漏不補值；區間漲跌採共同起訖日收盤。`;
+    svg.dataset.candleCount = marketCount;
     svg.dataset.rowCount = rows.length;
     svg.dataset.range = range;
   }

@@ -101,8 +101,25 @@ def _water_level_number(value: Any) -> float:
     return number
 
 
+def _validated_ohlc(
+    raw_open: Any,
+    raw_high: Any,
+    raw_low: Any,
+    raw_close: Any,
+    field_prefix: str = "",
+) -> Dict[str, float]:
+    prefix = (field_prefix + " ") if field_prefix else ""
+    opening = _positive_finite_number(raw_open, prefix + "open")
+    high = _positive_finite_number(raw_high, prefix + "high")
+    low = _positive_finite_number(raw_low, prefix + "low")
+    close = _positive_finite_number(raw_close, prefix + "close")
+    if not low <= min(opening, close) <= max(opening, close) <= high:
+        raise ValueError("%sOHLC values are inconsistent" % prefix)
+    return {"open": opening, "high": high, "low": low, "close": close}
+
+
 def parse_month_payload(payload: Any, expected_month: str) -> List[Dict[str, Any]]:
-    """Validate a TWSE monthly-web or current OpenAPI response."""
+    """Validate a complete-OHLC TWSE monthly-web or OpenAPI response."""
     if len(expected_month) != 7:
         raise ValueError("expected_month must use YYYY-MM")
     try:
@@ -111,12 +128,11 @@ def parse_month_payload(payload: Any, expected_month: str) -> List[Dict[str, Any
         raise ValueError("invalid expected month") from exc
 
     raw_rows: Any
-    date_index: int
-    close_index: int
+    field_indexes: Dict[str, int]
     openapi_shape = isinstance(payload, list)
     if openapi_shape:
         raw_rows = payload
-        date_index = close_index = -1
+        field_indexes = {}
     elif isinstance(payload, dict):
         if payload.get("stat") != "OK":
             raise ValueError("TWSE response status is not OK")
@@ -124,13 +140,17 @@ def parse_month_payload(payload: Any, expected_month: str) -> List[Dict[str, Any
         raw_rows = payload.get("data")
         if not isinstance(fields, list) or not isinstance(raw_rows, list):
             raise ValueError("TWSE response lacks fields/data arrays")
-        date_names = ("日期", "Date")
-        close_names = ("收盤指數", "Closing Index")
+        required_fields = {
+            "date": "日期",
+            "open": "開盤指數",
+            "high": "最高指數",
+            "low": "最低指數",
+            "close": "收盤指數",
+        }
         try:
-            date_index = next(fields.index(name) for name in date_names if name in fields)
-            close_index = next(fields.index(name) for name in close_names if name in fields)
-        except StopIteration as exc:
-            raise ValueError("TWSE response lacks date/closing-index fields") from exc
+            field_indexes = {key: fields.index(name) for key, name in required_fields.items()}
+        except ValueError as exc:
+            raise ValueError("TWSE response lacks complete OHLC fields") from exc
     else:
         raise ValueError("TWSE response must be an object or array")
 
@@ -138,13 +158,32 @@ def parse_month_payload(payload: Any, expected_month: str) -> List[Dict[str, Any
     seen = set()
     for raw in raw_rows:
         if openapi_shape:
-            if not isinstance(raw, dict) or "Date" not in raw or "ClosingIndex" not in raw:
+            required_openapi_fields = (
+                "Date",
+                "OpeningIndex",
+                "HighestIndex",
+                "LowestIndex",
+                "ClosingIndex",
+            )
+            if not isinstance(raw, dict) or any(key not in raw for key in required_openapi_fields):
                 raise ValueError("invalid TWSE OpenAPI row")
-            raw_date, raw_close = raw["Date"], raw["ClosingIndex"]
+            raw_date = raw["Date"]
+            raw_ohlc = (
+                raw["OpeningIndex"],
+                raw["HighestIndex"],
+                raw["LowestIndex"],
+                raw["ClosingIndex"],
+            )
         else:
-            if not isinstance(raw, list) or max(date_index, close_index) >= len(raw):
+            if not isinstance(raw, list) or max(field_indexes.values()) >= len(raw):
                 raise ValueError("invalid TWSE monthly row")
-            raw_date, raw_close = raw[date_index], raw[close_index]
+            raw_date = raw[field_indexes["date"]]
+            raw_ohlc = (
+                raw[field_indexes["open"]],
+                raw[field_indexes["high"]],
+                raw[field_indexes["low"]],
+                raw[field_indexes["close"]],
+            )
         trade_date = _parse_roc_date(raw_date)
         if trade_date.strftime("%Y-%m") != expected_month:
             raise ValueError("TWSE row outside requested month: %s" % trade_date.isoformat())
@@ -152,9 +191,9 @@ def parse_month_payload(payload: Any, expected_month: str) -> List[Dict[str, Any
         if iso_date in seen:
             raise ValueError("duplicate TWSE trade date: %s" % iso_date)
         seen.add(iso_date)
-        parsed_rows.append(
-            {"date": iso_date, "close": _positive_finite_number(raw_close, "close")}
-        )
+        parsed_rows.append({"date": iso_date, **_validated_ohlc(*raw_ohlc)})
+    if not parsed_rows:
+        raise ValueError("TWSE month response is empty")
     parsed_rows.sort(key=lambda row: row["date"])
     return parsed_rows
 
@@ -232,12 +271,25 @@ def _validate_cache(cache: Any) -> Dict[str, Any]:
         if iso_date.isoformat() in seen:
             raise ValueError("duplicate cached TAIEX date")
         seen.add(iso_date.isoformat())
-        normalized.append(
-            {
-                "date": iso_date.isoformat(),
-                "close": _positive_finite_number(row.get("close"), "cached close"),
-            }
-        )
+        cached_row = {
+            "date": iso_date.isoformat(),
+            "close": _positive_finite_number(row.get("close"), "cached close"),
+        }
+        ohl_fields = ("open", "high", "low")
+        present_ohl_fields = {field for field in ohl_fields if field in row}
+        if present_ohl_fields and present_ohl_fields != set(ohl_fields):
+            raise ValueError("cached TAIEX row has partial OHLC")
+        if present_ohl_fields:
+            cached_row.update(
+                _validated_ohlc(
+                    row["open"],
+                    row["high"],
+                    row["low"],
+                    row.get("close"),
+                    "cached",
+                )
+            )
+        normalized.append(cached_row)
     normalized.sort(key=lambda row: row["date"])
     validated = copy.deepcopy(cache)
     validated["rows"] = normalized
@@ -335,7 +387,18 @@ def refresh_taiex_cache(
 
     for month_key in _month_keys(start, end):
         metadata = existing_months.get(month_key, {})
-        if month_key < current_month and metadata.get("status") == "complete":
+        cached_month_rows = [
+            row for cached_date, row in rows_by_date.items() if cached_date.startswith(month_key + "-")
+        ]
+        has_complete_ohlc = bool(cached_month_rows) and all(
+            all(field in row for field in ("open", "high", "low", "close"))
+            for row in cached_month_rows
+        )
+        if (
+            month_key < current_month
+            and metadata.get("status") == "complete"
+            and has_complete_ohlc
+        ):
             continue
         if month_key > current_month:
             continue
@@ -403,6 +466,7 @@ def comparison_from_cache(
     now: Optional[datetime] = None,
 ) -> Dict[str, Any]:
     local_now = _normalize_now(now)
+    cache = _validate_cache(cache)
     record_list = list(records)
     water_by_date: Dict[str, Dict[str, Any]] = {}
     for record in record_list:
@@ -426,18 +490,19 @@ def comparison_from_cache(
 
     first_date, last_date = min(water_by_date), max(water_by_date)
     official_rows = completed_rows(cache.get("rows", []), local_now)
-    close_by_date = {
-        row["date"]: row["close"]
+    market_by_date = {
+        row["date"]: row
         for row in official_rows
         if first_date <= row["date"] <= last_date
     }
-    union_dates = sorted(set(water_by_date) | set(close_by_date))
+    union_dates = sorted(set(water_by_date) | set(market_by_date))
     today = local_now.date().isoformat()
     before_cutoff = local_now.time().replace(tzinfo=None) < DAILY_CLOSE_PUBLICATION_CUTOFF
     output_rows = []
     for iso_date in union_dates:
         water = water_by_date.get(iso_date, {})
-        close = close_by_date.get(iso_date)
+        market = market_by_date.get(iso_date)
+        close = market["close"] if market is not None else None
         if close is not None:
             status = "closed"
         elif iso_date == today and before_cutoff:
@@ -449,6 +514,9 @@ def comparison_from_cache(
         row = {
             "date": iso_date,
             "water_level": water.get("water_level"),
+            "taiex_open": market.get("open") if market is not None else None,
+            "taiex_high": market.get("high") if market is not None else None,
+            "taiex_low": market.get("low") if market is not None else None,
             "taiex_close": close,
             "market_status": status,
         }
@@ -457,7 +525,7 @@ def comparison_from_cache(
                 row[optional_key] = water[optional_key]
         output_rows.append(row)
 
-    market_as_of = max(close_by_date) if close_by_date else None
+    market_as_of = max(market_by_date) if market_by_date else None
     return {
         "rows": output_rows,
         "market_as_of": market_as_of,

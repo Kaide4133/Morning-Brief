@@ -11,8 +11,8 @@ import build_brief as builder
 class WaterPageTests(unittest.TestCase):
     def comparison(self):
         return {'rows': [
-            {'date': '2026-09-04', 'water_level': 69.1, 'taiex_close': 22000.25, 'market_status': 'closed'},
-            {'date': '2026-09-07', 'water_level': 68.7, 'taiex_close': None, 'market_status': 'pending'},
+            {'date': '2026-09-04', 'water_level': 69.1, 'taiex_open': 21900, 'taiex_high': 22100, 'taiex_low': 21800, 'taiex_close': 22000.25, 'market_status': 'closed'},
+            {'date': '2026-09-07', 'water_level': 68.7, 'taiex_open': None, 'taiex_high': None, 'taiex_low': None, 'taiex_close': None, 'market_status': 'pending'},
         ], 'market_as_of': '2026-09-04', 'retrieved_at': '2026-09-07T12:00:00+08:00', 'source_name': 'unit test only'}
 
     def records(self):
@@ -31,11 +31,17 @@ class WaterPageTests(unittest.TestCase):
         assert match is not None
         payload = match.group(1)
         self.assertIsNone(json.loads(payload)['rows'][-1]['taiex_close'])
+        for field in ['open', 'high', 'low', 'close']:
+            self.assertIsNone(json.loads(payload)['rows'][-1]['taiex_' + field])
+        self.assertEqual(json.loads(payload)['rows'][0]['taiex_high'], 22100)
         self.assertIn('尚無當日收盤', html)
         self.assertIn('22,000.25', html)
         self.assertIn('id="water-chart"', html)
         self.assertIn('data-range="90" aria-pressed="true"', html)
         self.assertIn('逐日明細', html)
+        self.assertIn('加權日 K', html)
+        self.assertIn('id="selected-ohlc"', html)
+        self.assertIn('water-level.js?v=2', html)
         self.assertNotIn('chart.js', html)
 
     def test_build_writes_only_water_page_mirrors_and_assets(self):

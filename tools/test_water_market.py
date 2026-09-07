@@ -14,7 +14,7 @@ TAIPEI = ZoneInfo("Asia/Taipei")
 
 
 class ParseMonthlyPayloadTests(unittest.TestCase):
-    def test_parses_roc_dates_and_comma_closes(self):
+    def test_parses_monthly_roc_dates_and_complete_comma_ohlc(self):
         payload = {
             "stat": "OK",
             "date": "20260501",
@@ -30,8 +30,20 @@ class ParseMonthlyPayloadTests(unittest.TestCase):
         self.assertEqual(
             rows,
             [
-                {"date": "2026-05-04", "close": 20012.34},
-                {"date": "2026-05-05", "close": 20100.5},
+                {
+                    "date": "2026-05-04",
+                    "open": 19900.0,
+                    "high": 20100.0,
+                    "low": 19800.0,
+                    "close": 20012.34,
+                },
+                {
+                    "date": "2026-05-05",
+                    "open": 20010.0,
+                    "high": 20200.0,
+                    "low": 19950.0,
+                    "close": 20100.5,
+                },
             ],
         )
 
@@ -47,42 +59,91 @@ class ParseMonthlyPayloadTests(unittest.TestCase):
         ]
         self.assertEqual(
             water_market.parse_month_payload(payload, "2026-09"),
-            [{"date": "2026-09-04", "close": 46551.13}],
+            [
+                {
+                    "date": "2026-09-04",
+                    "open": 45991.28,
+                    "high": 46620.96,
+                    "low": 45966.86,
+                    "close": 46551.13,
+                }
+            ],
         )
 
-    def test_rejects_invalid_roc_date_duplicate_and_bad_close(self):
+    def test_rejects_invalid_date_duplicate_bad_ohlc_and_wrong_month_atomically(self):
         base = {
             "stat": "OK",
             "fields": ["日期", "開盤指數", "最高指數", "最低指數", "收盤指數"],
         }
         bad_sets = [
-            [["115/02/30", "1", "1", "1", "20,000"]],
+            [["115/02/30", "19,900", "20,100", "19,800", "20,000"]],
             [
-                ["115/05/04", "1", "1", "1", "20,000"],
-                ["115/05/04", "1", "1", "1", "20,001"],
+                ["115/05/04", "19,900", "20,100", "19,800", "20,000"],
+                ["115/05/04", "20,000", "20,200", "19,900", "20,100"],
             ],
-            [["115/05/04", "1", "1", "1", "NaN"]],
-            [["115/05/04", "1", "1", "1", "0"]],
-            [["115/06/01", "1", "1", "1", "20,000"]],
+            [["115/05/04", "19,900", "20,100", "19,800", "NaN"]],
+            [["115/05/04", "0", "20,100", "19,800", "20,000"]],
+            [["115/05/04", "19,900", "19,950", "19,800", "20,000"]],
+            [["115/05/04", "19,900", "20,100", "19,950", "20,000"]],
+            [["115/06/01", "19,900", "20,100", "19,800", "20,000"]],
+            [
+                ["115/05/04", "19,900", "20,100", "19,800", "20,000"],
+                ["115/05/05", "bad", "20,200", "19,900", "20,100"],
+            ],
         ]
         for data in bad_sets:
             with self.subTest(data=data):
                 with self.assertRaises(ValueError):
                     water_market.parse_month_payload(dict(base, data=data), "2026-05")
 
+    def test_rejects_missing_monthly_or_openapi_ohlc_fields_and_empty_payload(self):
+        missing_monthly_field = {
+            "stat": "OK",
+            "fields": ["日期", "開盤指數", "最高指數", "收盤指數"],
+            "data": [["115/05/04", "19,900", "20,100", "20,000"]],
+        }
+        missing_openapi_field = [
+            {
+                "Date": "1150904",
+                "OpeningIndex": "45991.28",
+                "HighestIndex": "46620.96",
+                "ClosingIndex": "46551.13",
+            }
+        ]
+        for payload, month in (
+            (missing_monthly_field, "2026-05"),
+            (missing_openapi_field, "2026-09"),
+            ([], "2026-09"),
+        ):
+            with self.subTest(payload=payload):
+                with self.assertRaises(ValueError):
+                    water_market.parse_month_payload(payload, month)
+
 
 class CutoffTests(unittest.TestCase):
     def test_does_not_admit_todays_row_before_publication_cutoff(self):
         rows = [
-            {"date": "2026-09-04", "close": 46551.13},
-            {"date": "2026-09-07", "close": 47000.0},
+            {
+                "date": "2026-09-04",
+                "open": 45991.28,
+                "high": 46620.96,
+                "low": 45966.86,
+                "close": 46551.13,
+            },
+            {
+                "date": "2026-09-07",
+                "open": 46600.0,
+                "high": 47100.0,
+                "low": 46500.0,
+                "close": 47000.0,
+            },
         ]
         noon = datetime(2026, 9, 7, 12, 0, tzinfo=TAIPEI)
         after_close = datetime(2026, 9, 7, 14, 0, tzinfo=TAIPEI)
 
         self.assertEqual(
             water_market.completed_rows(rows, noon),
-            [{"date": "2026-09-04", "close": 46551.13}],
+            [rows[0]],
         )
         self.assertEqual(water_market.completed_rows(rows, after_close), rows)
 
@@ -98,9 +159,21 @@ class ComparisonTests(unittest.TestCase):
                 "2026-09": {"status": "partial", "coverage_end": "2026-09-04"},
             },
             "rows": [
-                {"date": "2026-05-04", "close": 20000.0},
+                {
+                    "date": "2026-05-04",
+                    "open": 19900.0,
+                    "high": 20100.0,
+                    "low": 19800.0,
+                    "close": 20000.0,
+                },
                 {"date": "2026-05-06", "close": 20100.0},
-                {"date": "2026-09-04", "close": 46551.13},
+                {
+                    "date": "2026-09-04",
+                    "open": 45991.28,
+                    "high": 46620.96,
+                    "low": 45966.86,
+                    "close": 46551.13,
+                },
             ],
         }
         records = [
@@ -117,6 +190,14 @@ class ComparisonTests(unittest.TestCase):
         self.assertEqual(list(by_date), sorted(by_date))
         self.assertEqual(by_date["2026-05-04"]["market_status"], "closed")
         self.assertIsNone(by_date["2026-05-04"]["water_level"])
+        self.assertEqual(by_date["2026-05-04"]["taiex_open"], 19900.0)
+        self.assertEqual(by_date["2026-05-04"]["taiex_high"], 20100.0)
+        self.assertEqual(by_date["2026-05-04"]["taiex_low"], 19800.0)
+        self.assertEqual(by_date["2026-05-04"]["taiex_close"], 20000.0)
+        self.assertEqual(by_date["2026-05-06"]["taiex_close"], 20100.0)
+        self.assertIsNone(by_date["2026-05-06"]["taiex_open"])
+        self.assertIsNone(by_date["2026-05-06"]["taiex_high"])
+        self.assertIsNone(by_date["2026-05-06"]["taiex_low"])
         self.assertEqual(by_date["2026-05-01"]["market_status"], "non_trading")
         self.assertIsNone(by_date["2026-05-01"]["taiex_close"])
         self.assertEqual(by_date["2026-05-05"]["market_status"], "non_trading")
@@ -124,8 +205,45 @@ class ComparisonTests(unittest.TestCase):
         self.assertEqual(by_date["2026-06-01"]["market_status"], "missing")
         self.assertIsNone(by_date["2026-06-01"]["taiex_close"])
         self.assertEqual(by_date["2026-09-07"]["market_status"], "pending")
-        self.assertIsNone(by_date["2026-09-07"]["taiex_close"])
+        for field in ("taiex_open", "taiex_high", "taiex_low", "taiex_close"):
+            self.assertIsNone(by_date["2026-09-07"][field])
         self.assertEqual(result["market_as_of"], "2026-09-04")
+
+    def test_legacy_close_only_cache_is_readable_but_partial_ohlc_is_rejected(self):
+        base_cache = {
+            "schema_version": 1,
+            "source_name": water_market.SOURCE_NAME,
+            "retrieved_at": None,
+            "months": {"2026-05": {"status": "complete", "coverage_end": "2026-05-31"}},
+            "rows": [{"date": "2026-05-04", "close": 20000.0}],
+        }
+        result = water_market.comparison_from_cache(
+            [{"date": "2026-05-04", "water_level": 50}],
+            base_cache,
+            now=datetime(2026, 9, 7, 12, 0, tzinfo=TAIPEI),
+        )
+        row = result["rows"][0]
+        self.assertEqual(row["taiex_close"], 20000.0)
+        self.assertIsNone(row["taiex_open"])
+        self.assertIsNone(row["taiex_high"])
+        self.assertIsNone(row["taiex_low"])
+
+        for partial in (
+            {"open": 19900.0},
+            {"open": 19900.0, "high": 20100.0},
+            {"open": 19900.0, "high": 20100.0, "low": None},
+        ):
+            with self.subTest(partial=partial):
+                malformed = dict(base_cache)
+                malformed["rows"] = [
+                    {"date": "2026-05-04", "close": 20000.0, **partial}
+                ]
+                with self.assertRaises(ValueError):
+                    water_market.comparison_from_cache(
+                        [{"date": "2026-05-04", "water_level": 50}],
+                        malformed,
+                        now=datetime(2026, 9, 7, 12, 0, tzinfo=TAIPEI),
+                    )
 
     def test_water_level_accepts_closed_interval_zero_to_one_hundred(self):
         cache = {
@@ -166,6 +284,108 @@ class ComparisonTests(unittest.TestCase):
                         cache,
                         now=datetime(2026, 9, 7, 12, 0, tzinfo=TAIPEI),
                     )
+
+
+class RefreshOHLCUpgradeTests(unittest.TestCase):
+    def test_complete_past_legacy_month_is_refetched_and_retains_full_ohlc(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "docs").mkdir()
+            cache_path = root / "docs" / "taiex-history.json"
+            legacy = {
+                "schema_version": 1,
+                "source_name": water_market.SOURCE_NAME,
+                "retrieved_at": "2026-08-31T14:00:00+08:00",
+                "months": {
+                    "2026-08": {
+                        "status": "complete",
+                        "coverage_end": "2026-08-31",
+                        "request_url": "https://www.twse.com.tw/legacy",
+                        "retrieved_at": "2026-08-31T14:00:00+08:00",
+                        "row_count": 1,
+                    }
+                },
+                "rows": [{"date": "2026-08-31", "close": 43386.41}],
+            }
+            cache_path.write_text(json.dumps(legacy, indent=2) + "\n", encoding="utf-8")
+            source_payload = {
+                "stat": "OK",
+                "fields": ["日期", "開盤指數", "最高指數", "最低指數", "收盤指數"],
+                "data": [
+                    ["115/08/31", "43,210.25", "43,500.00", "43,100.50", "43,386.41"]
+                ],
+            }
+            fetched_urls = []
+
+            def fetch(url, _timeout):
+                fetched_urls.append(url)
+                return source_payload
+
+            cache, errors = water_market.refresh_taiex_cache(
+                root,
+                start_date="2026-08-01",
+                end_date="2026-08-31",
+                now=datetime(2026, 9, 7, 12, 0, tzinfo=TAIPEI),
+                fetch_json=fetch,
+            )
+
+            self.assertEqual(errors, [])
+            self.assertEqual(len(fetched_urls), 1)
+            self.assertEqual(
+                cache["rows"],
+                [
+                    {
+                        "date": "2026-08-31",
+                        "open": 43210.25,
+                        "high": 43500.0,
+                        "low": 43100.5,
+                        "close": 43386.41,
+                    }
+                ],
+            )
+            written = json.loads(cache_path.read_text(encoding="utf-8"))
+            self.assertEqual(written["rows"], cache["rows"])
+
+    def test_complete_past_month_with_full_ohlc_is_not_refetched(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "docs").mkdir()
+            cache_path = root / "docs" / "taiex-history.json"
+            complete = {
+                "schema_version": 1,
+                "source_name": water_market.SOURCE_NAME,
+                "retrieved_at": "2026-08-31T14:00:00+08:00",
+                "months": {
+                    "2026-08": {
+                        "status": "complete",
+                        "coverage_end": "2026-08-31",
+                        "row_count": 1,
+                    }
+                },
+                "rows": [
+                    {
+                        "date": "2026-08-31",
+                        "open": 43210.25,
+                        "high": 43500.0,
+                        "low": 43100.5,
+                        "close": 43386.41,
+                    }
+                ],
+            }
+            cache_path.write_text(json.dumps(complete, indent=2) + "\n", encoding="utf-8")
+            before = cache_path.read_bytes()
+
+            cache, errors = water_market.refresh_taiex_cache(
+                root,
+                start_date="2026-08-01",
+                end_date="2026-08-31",
+                now=datetime(2026, 9, 7, 12, 0, tzinfo=TAIPEI),
+                fetch_json=mock.Mock(side_effect=AssertionError("must not fetch")),
+            )
+
+            self.assertEqual(errors, [])
+            self.assertEqual(cache["rows"], complete["rows"])
+            self.assertEqual(cache_path.read_bytes(), before)
 
 
 class CacheFailureTests(unittest.TestCase):
