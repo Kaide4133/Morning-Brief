@@ -7,11 +7,13 @@ import argparse
 import copy
 import json
 import re
+import shutil
 import sys
 from datetime import datetime
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+from water_market import build_water_comparison
 
 from scenario_classifier import (
     build_action_guidance,
@@ -643,14 +645,25 @@ def render_index(issues: list[dict]) -> str:
     return tpl.render(latest=latest_ctx, home=latest_ctx["home"], recent_issues=recent_issues)
 
 
-def render_water_level(issues: list[dict]) -> str:
+def render_water_level(issues: list[dict], refresh_market: bool = True) -> str:
     env = build_env()
     records = load_water_records()
+    comparison = build_water_comparison(records, ROOT, refresh=refresh_market)
+    refresh_error = comparison.pop("refresh_error", None)
+    if refresh_error:
+        print(f"Water chart source warning: {refresh_error}", file=sys.stderr)
+    market_by_date = {row["date"]: row for row in comparison["rows"]}
+    market_labels = {"pending": "尚無當日收盤", "missing": "收盤資料缺漏", "non_trading": "非交易日"}
+    for row in records:
+        market = market_by_date.get(row["date"], {})
+        row["taiex_close"] = market.get("taiex_close")
+        row["market_label"] = market_labels.get(market.get("market_status"), "尚無收盤資料")
     sorted_issues = sorted(issues, key=lambda x: x["date"], reverse=True)
     latest_ctx = enrich_issue(sorted_issues[0]) if sorted_issues else None
     tpl = env.get_template("water-level.html.j2")
     return tpl.render(
         records=records,
+        comparison=comparison,
         latest={
             "water_level": records[0]["water_level"] if records else "—",
             "date_display": records[0]["date_display"] if records else "—",
@@ -736,12 +749,22 @@ def build_index(write: bool = True) -> Path:
 
 def build_water_level_page(write: bool = True) -> Path:
     issues = load_all_issues()
-    html = render_water_level(issues)
+    html = render_water_level(issues, refresh_market=write)
     validate_no_legacy_scenario_terms(html, output_name="water-level.html")
     out = SITE / "water-level.html"
     if write:
-        out.write_text(html, encoding="utf-8")
-        print(f"Wrote {out}")
+        # Keep this utility page and its assets consistent on every daily build.
+        for destination in (ROOT, SITE, ROOT / "site"):
+            destination.mkdir(parents=True, exist_ok=True)
+            target = destination / "water-level.html"
+            target.write_text(html, encoding="utf-8")
+            for asset in ("css/water-level.css", "js/water-level.js"):
+                source = ROOT / "assets" / asset
+                dest = destination / "assets" / asset
+                if source.resolve() != dest.resolve():
+                    dest.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copyfile(source, dest)
+            print(f"Wrote {target}")
     return out
 
 
