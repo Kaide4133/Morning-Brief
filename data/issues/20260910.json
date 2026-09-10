@@ -1,0 +1,3248 @@
+{
+  "date": "2026-09-10",
+  "day": "Thursday",
+  "issue_no": 84,
+  "data_as_of": "2026-09-10",
+  "brief_label": "盤中整合版",
+  "source_ark": "ark_stocks.json",
+  "ark": {
+    "water_level": 75.3,
+    "holding_allocation_suggestion": "75.3%",
+    "as_of": "2026-09-10",
+    "source_time": "2026-09-10T09:05:40.993+08:00",
+    "status": "validated",
+    "source_file": "ark_stocks.json",
+    "prev": 72.8,
+    "previous_water_level": 72.8,
+    "delta": 2.5,
+    "change": 2.5,
+    "direction": "上升",
+    "exported_at": "2026-09-10T09:08:12+08:00",
+    "interpretation": "水位上升代表市場健康度與可部署空間增加，不等於立即買進或追價。",
+    "note": "較前一交易日9/9的72.8%上升 <strong>2.5個百分點</strong>。市場健康度與可部署空間改善，仍需價格承接確認。"
+  },
+  "etf": {
+    "value": [
+      {
+        "code": "0053",
+        "name": "元大電子",
+        "price": "246.6",
+        "change": "▼0.9 (-0.36%)",
+        "nav_label": "即時淨值",
+        "nav_value": "244.74",
+        "premium_label": "折溢價",
+        "premium_value": "0.76%",
+        "market_label": "來源股價",
+        "market_value": "246.6",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "00631L",
+        "name": "元大台灣50正2",
+        "price": "36.86",
+        "change": "▼0.68 (-1.81%)",
+        "nav_label": "即時淨值",
+        "nav_value": "36.9",
+        "premium_label": "折溢價",
+        "premium_value": "0.14%",
+        "market_label": "來源股價",
+        "market_value": "36.86",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0052",
+        "name": "富邦科技",
+        "price": "63.1",
+        "change": "▼0.65 (-1.02%)",
+        "nav_label": "即時淨值",
+        "nav_value": "63.53",
+        "premium_label": "折溢價",
+        "premium_value": "-0.52%",
+        "market_label": "來源股價",
+        "market_value": "63.1",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "006208",
+        "name": "富邦台50",
+        "price": "248.5",
+        "change": "▼1.8 (-0.72%)",
+        "nav_label": "即時淨值",
+        "nav_value": "250.06",
+        "premium_label": "折溢價",
+        "premium_value": "-0.6%",
+        "market_label": "來源股價",
+        "market_value": "248.5",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "00960",
+        "name": "野村全球航運龍頭",
+        "price": "21.61",
+        "change": "▲0.08 (+0.37%)",
+        "nav_label": "即時淨值",
+        "nav_value": "21.78",
+        "premium_label": "折溢價",
+        "premium_value": "-0.78%",
+        "market_label": "來源股價",
+        "market_value": "21.61",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0050",
+        "name": "元大台灣50",
+        "price": "108.65",
+        "change": "▼1 (-0.91%)",
+        "nav_label": "即時淨值",
+        "nav_value": "109.02",
+        "premium_label": "折溢價",
+        "premium_value": "-0.29%",
+        "market_label": "來源股價",
+        "market_value": "108.65",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0055",
+        "name": "元大MSCI金融",
+        "price": "48.68",
+        "change": "▲0.13 (+0.27%)",
+        "nav_label": "即時淨值",
+        "nav_value": "48.79",
+        "premium_label": "折溢價",
+        "premium_value": "0.1%",
+        "market_label": "來源股價",
+        "market_value": "48.68",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0057",
+        "name": "富邦摩台",
+        "price": "—",
+        "change": "—",
+        "nav_label": "即時淨值",
+        "nav_value": "325.12",
+        "premium_label": "折溢價",
+        "premium_value": "0.86%",
+        "market_label": "來源股價",
+        "market_value": "—",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "006203",
+        "name": "元大MSCI台灣",
+        "price": "198.95",
+        "change": "▼0.95 (-0.48%)",
+        "nav_label": "即時淨值",
+        "nav_value": "197.88",
+        "premium_label": "折溢價",
+        "premium_value": "0.54%",
+        "market_label": "來源股價",
+        "market_value": "198.95",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0056",
+        "name": "元大高股息",
+        "price": "55.6",
+        "change": "▼0.15 (-0.27%)",
+        "nav_label": "即時淨值",
+        "nav_value": "55.9",
+        "premium_label": "折溢價",
+        "premium_value": "-0.36%",
+        "market_label": "來源股價",
+        "market_value": "55.6",
+        "cross_label": "價值×升溫",
+        "cross_value": "是"
+      }
+    ],
+    "rising": [
+      {
+        "code": "00642U",
+        "name": "期元大S&P石油",
+        "price": "31.87",
+        "change": "▲0.75 (+2.41%)",
+        "nav_label": "即時淨值",
+        "nav_value": "31.88",
+        "premium_label": "折溢價",
+        "premium_value": "-0.03%",
+        "market_label": "來源股價",
+        "market_value": "31.87",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "00715L",
+        "name": "期街口布蘭特正2",
+        "price": "63.5",
+        "change": "▲2.8 (+4.61%)",
+        "nav_label": "即時淨值",
+        "nav_value": "63.65",
+        "premium_label": "折溢價",
+        "premium_value": "-0.24%",
+        "market_label": "來源股價",
+        "market_value": "63.5",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "00701",
+        "name": "國泰股利精選30",
+        "price": "40.66",
+        "change": "▲0.28 (+0.69%)",
+        "nav_label": "即時淨值",
+        "nav_value": "40.8",
+        "premium_label": "折溢價",
+        "premium_value": "-0.34%",
+        "market_label": "來源股價",
+        "market_value": "40.66",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "009809",
+        "name": "富邦淨零ESG50",
+        "price": "18.28",
+        "change": "▼0.07 (-0.38%)",
+        "nav_label": "即時淨值",
+        "nav_value": "18.34",
+        "premium_label": "折溢價",
+        "premium_value": "-0.22%",
+        "market_label": "來源股價",
+        "market_value": "18.28",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "00938",
+        "name": "凱基優選30",
+        "price": "26.41",
+        "change": "▲0.03 (+0.11%)",
+        "nav_label": "即時淨值",
+        "nav_value": "26.46",
+        "premium_label": "折溢價",
+        "premium_value": "-0.19%",
+        "market_label": "來源股價",
+        "market_value": "26.41",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0056",
+        "name": "元大高股息",
+        "price": "55.55",
+        "change": "▼0.2 (-0.36%)",
+        "nav_label": "即時淨值",
+        "nav_value": "55.83",
+        "premium_label": "折溢價",
+        "premium_value": "-0.23%",
+        "market_label": "來源股價",
+        "market_value": "55.55",
+        "cross_label": "價值×升溫",
+        "cross_value": "是"
+      },
+      {
+        "code": "00939",
+        "name": "統一台灣高息動能",
+        "price": "23.73",
+        "change": "0 (0%)",
+        "nav_label": "即時淨值",
+        "nav_value": "23.9",
+        "premium_label": "折溢價",
+        "premium_value": "-0.5%",
+        "market_label": "來源股價",
+        "market_value": "23.73",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      }
+    ],
+    "overlap": [
+      "0056"
+    ],
+    "thesis": "石油期貨ETF居升溫區前段；0056為本次唯一ETF價值×升溫重疊，區位不等於買點。"
+  },
+  "stocks": {
+    "value": [
+      {
+        "code": "2059",
+        "name": "川湖",
+        "industry": "電子零組件",
+        "price": "12,385",
+        "change": "▼15 (-0.12%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "0.92",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "344.42"
+      },
+      {
+        "code": "6285",
+        "name": "啟碁",
+        "industry": "無線通訊設備",
+        "price": "229.5",
+        "change": "▼4 (-1.71%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-7.15",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "81.21"
+      },
+      {
+        "code": "2324",
+        "name": "仁寶",
+        "industry": "電子設備",
+        "price": "38.1",
+        "change": "▼0.8 (-2.06%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-16.87",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "14.5"
+      },
+      {
+        "code": "6415",
+        "name": "矽力*-KY",
+        "industry": "IC設計",
+        "price": "411",
+        "change": "▼6 (-1.44%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "13.08",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "58.55"
+      },
+      {
+        "code": "3665",
+        "name": "貿聯-KY",
+        "industry": "連接線材",
+        "price": "1,940",
+        "change": "▼35 (-1.77%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-7.67",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "53.99"
+      },
+      {
+        "code": "2383",
+        "name": "台光電",
+        "industry": "銅箔基板",
+        "price": "5,340",
+        "change": "▼35 (-0.65%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "4.89",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "129.85"
+      },
+      {
+        "code": "6274",
+        "name": "台燿",
+        "industry": "銅箔基板",
+        "price": "1,345",
+        "change": "0 (0%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "0.11",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "132.48"
+      },
+      {
+        "code": "1785",
+        "name": "光洋科",
+        "industry": "非鐵金屬",
+        "price": "98.9",
+        "change": "▼2.6 (-2.56%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "14.18",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "46.43"
+      },
+      {
+        "code": "2313",
+        "name": "華通",
+        "industry": "硬板",
+        "price": "223.5",
+        "change": "▼4.5 (-1.97%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "0.82",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "6.87"
+      },
+      {
+        "code": "2345",
+        "name": "智邦",
+        "industry": "網路設備",
+        "price": "1,995",
+        "change": "▼20 (-0.99%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "3.55",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "59.42"
+      },
+      {
+        "code": "3189",
+        "name": "景碩",
+        "industry": "IC基板",
+        "price": "799",
+        "change": "▼13 (-1.6%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "5.73",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "40.58"
+      },
+      {
+        "code": "6213",
+        "name": "聯茂",
+        "industry": "銅箔基板",
+        "price": "507",
+        "change": "▼16 (-3.06%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "6.21",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "97.9"
+      },
+      {
+        "code": "2379",
+        "name": "瑞昱",
+        "industry": "IC設計",
+        "price": "702",
+        "change": "▼3 (-0.43%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-3.38",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "28.08"
+      },
+      {
+        "code": "3008",
+        "name": "大立光",
+        "industry": "光學鏡片與鏡頭",
+        "price": "6,735",
+        "change": "▼135 (-1.97%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "2.76",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "-16.23"
+      },
+      {
+        "code": "2308",
+        "name": "台達電",
+        "industry": "電源供應器",
+        "price": "1,710",
+        "change": "▼85 (-4.74%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "2.24",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "47.75"
+      },
+      {
+        "code": "3037",
+        "name": "欣興",
+        "industry": "IC基板",
+        "price": "974",
+        "change": "▼19 (-1.91%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "9.18",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "56.26"
+      },
+      {
+        "code": "3034",
+        "name": "聯詠",
+        "industry": "驅動IC",
+        "price": "535",
+        "change": "▼8 (-1.47%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "0.3",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "26.33"
+      },
+      {
+        "code": "2327",
+        "name": "國巨*",
+        "industry": "MLCC",
+        "price": "551",
+        "change": "▼14 (-2.48%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "1.25",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "51.8"
+      },
+      {
+        "code": "6239",
+        "name": "力成",
+        "industry": "IC封裝測試",
+        "price": "286",
+        "change": "▲5 (+1.78%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "3.48",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "24.46"
+      },
+      {
+        "code": "4958",
+        "name": "臻鼎-KY",
+        "industry": "軟板",
+        "price": "496",
+        "change": "▼6 (-1.2%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "17.42",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "41.05"
+      },
+      {
+        "code": "2382",
+        "name": "廣達",
+        "industry": "伺服器組裝代工",
+        "price": "334.5",
+        "change": "▼7.5 (-2.19%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "15.75",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "177.45"
+      },
+      {
+        "code": "6223",
+        "name": "旺矽",
+        "industry": "IC封裝測試設備",
+        "price": "5,620",
+        "change": "▲5 (+0.09%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "13.45",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "69.87"
+      },
+      {
+        "code": "2449",
+        "name": "京元電子",
+        "industry": "IC測試",
+        "price": "270.5",
+        "change": "▲0.5 (+0.19%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "2.24",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "31.58"
+      },
+      {
+        "code": "2330",
+        "name": "台積電",
+        "industry": "晶圓代工",
+        "price": "2,445",
+        "change": "▼20 (-0.81%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "5.62",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "44.69"
+      },
+      {
+        "code": "6515",
+        "name": "穎崴",
+        "industry": "IC封裝測試設備",
+        "price": "7,250",
+        "change": "▼30 (-0.41%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "6.58",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "233.37"
+      },
+      {
+        "code": "2360",
+        "name": "致茂",
+        "industry": "半導體設備",
+        "price": "2,285",
+        "change": "▼50 (-2.14%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "3.65",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "156.3"
+      },
+      {
+        "code": "5274",
+        "name": "信驊",
+        "industry": "IC設計",
+        "price": "18,225",
+        "change": "▼380 (-2.04%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "6.69",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "118.42"
+      },
+      {
+        "code": "2454",
+        "name": "聯發科",
+        "industry": "IC設計",
+        "price": "4,530",
+        "change": "▼95 (-2.05%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-16.44",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "12.16"
+      },
+      {
+        "code": "2455",
+        "name": "全新",
+        "industry": "砷化鎵代工",
+        "price": "531",
+        "change": "▼2 (-0.38%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "11.56",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "71.16"
+      },
+      {
+        "code": "3711",
+        "name": "日月光投控",
+        "industry": "IC封裝測試",
+        "price": "644",
+        "change": "▲4 (+0.63%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "12.16",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "43.15"
+      },
+      {
+        "code": "2303",
+        "name": "聯電",
+        "industry": "晶圓代工",
+        "price": "144.5",
+        "change": "▲3 (+2.12%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "5.04",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "30.71"
+      }
+    ],
+    "rising": [
+      {
+        "code": "6538",
+        "name": "倉和",
+        "industry": "太陽能",
+        "price": "345",
+        "change": "▼4 (-1.15%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "6.81",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "55.67"
+      },
+      {
+        "code": "2880",
+        "name": "華南金",
+        "industry": "金控",
+        "price": "45.25",
+        "change": "▲0.9 (+2.03%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "3.45",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "6.47"
+      },
+      {
+        "code": "3374",
+        "name": "精材",
+        "industry": "IC封裝測試",
+        "price": "480",
+        "change": "▲1.5 (+0.31%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "12.68",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "30.96"
+      },
+      {
+        "code": "2855",
+        "name": "統一證",
+        "industry": "證券",
+        "price": "51.7",
+        "change": "▼0.4 (-0.77%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "-"
+      },
+      {
+        "code": "6933",
+        "name": "AMAX-KY",
+        "industry": "伺服器機殼",
+        "price": "335",
+        "change": "▼3 (-0.89%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "1.63",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "197.35"
+      },
+      {
+        "code": "2887",
+        "name": "台新新光金",
+        "industry": "金控",
+        "price": "42.35",
+        "change": "▼0.05 (-0.12%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "1.78",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "-15.63"
+      },
+      {
+        "code": "2884",
+        "name": "玉山金",
+        "industry": "金控",
+        "price": "45.1",
+        "change": "▲0.85 (+1.92%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "12.3",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "19.29"
+      },
+      {
+        "code": "4908",
+        "name": "前鼎",
+        "industry": "光通訊設備",
+        "price": "250",
+        "change": "▲8 (+3.31%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "8.2",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "51.63"
+      },
+      {
+        "code": "2883",
+        "name": "凱基金",
+        "industry": "金控",
+        "price": "36.95",
+        "change": "▲0.2 (+0.54%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-36.51",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "-36.44"
+      },
+      {
+        "code": "2606",
+        "name": "裕民",
+        "industry": "散裝航運",
+        "price": "80.9",
+        "change": "▲1.2 (+1.51%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "2.88",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "26.34"
+      },
+      {
+        "code": "6214",
+        "name": "精誠",
+        "industry": "軟體其他",
+        "price": "187",
+        "change": "▼0.5 (-0.27%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "24.36",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "61.91"
+      },
+      {
+        "code": "3693",
+        "name": "營邦",
+        "industry": "工業電腦",
+        "price": "713",
+        "change": "▲13 (+1.86%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "3.42",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "171.0"
+      },
+      {
+        "code": "2885",
+        "name": "元大金",
+        "industry": "金控",
+        "price": "69.6",
+        "change": "▼0.1 (-0.14%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-10.3",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "78.99"
+      },
+      {
+        "code": "3406",
+        "name": "玉晶光",
+        "industry": "光學鏡片與鏡頭",
+        "price": "1,080",
+        "change": "▼30 (-2.7%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "12.26",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "0.72"
+      },
+      {
+        "code": "2890",
+        "name": "永豐金",
+        "industry": "金控",
+        "price": "43.3",
+        "change": "▲0.1 (+0.23%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "0.98",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "49.48"
+      },
+      {
+        "code": "2303",
+        "name": "聯電",
+        "industry": "晶圓代工",
+        "price": "145",
+        "change": "▲3.5 (+2.47%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "5.04",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "30.71"
+      },
+      {
+        "code": "6021",
+        "name": "美好證",
+        "industry": "證券",
+        "price": "41.7",
+        "change": "▼1 (-2.34%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-54.85",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "-77.08"
+      },
+      {
+        "code": "6016",
+        "name": "康和證",
+        "industry": "證券",
+        "price": "22.9",
+        "change": "0 (0%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "235.28",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "215.3"
+      },
+      {
+        "code": "6505",
+        "name": "台塑化",
+        "industry": "石油",
+        "price": "85.6",
+        "change": "▼1.9 (-2.17%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "9.47",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "50.29"
+      },
+      {
+        "code": "6426",
+        "name": "統新",
+        "industry": "光通訊設備",
+        "price": "306.5",
+        "change": "▼14.5 (-4.52%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "10.69",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "52.7"
+      },
+      {
+        "code": "8064",
+        "name": "東捷",
+        "industry": "LED檢測設備",
+        "price": "128",
+        "change": "▼6 (-4.48%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "1.41",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "-43.5"
+      },
+      {
+        "code": "2455",
+        "name": "全新",
+        "industry": "砷化鎵代工",
+        "price": "531",
+        "change": "▼2 (-0.38%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "11.56",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "71.16"
+      },
+      {
+        "code": "3055",
+        "name": "蔚華科",
+        "industry": "半導體設備",
+        "price": "145.5",
+        "change": "▼4 (-2.68%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "202.59",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "173.49"
+      },
+      {
+        "code": "2454",
+        "name": "聯發科",
+        "industry": "IC設計",
+        "price": "4,540",
+        "change": "▼85 (-1.84%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-16.44",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "12.16"
+      },
+      {
+        "code": "2492",
+        "name": "華新科",
+        "industry": "MLCC",
+        "price": "313",
+        "change": "▼6.5 (-2.03%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "12.2",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "41.95"
+      },
+      {
+        "code": "3167",
+        "name": "大量",
+        "industry": "印刷電路板設備",
+        "price": "892",
+        "change": "▼8 (-0.89%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "6.37",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "152.98"
+      },
+      {
+        "code": "5274",
+        "name": "信驊",
+        "industry": "IC設計",
+        "price": "18,225",
+        "change": "▼380 (-2.04%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "6.69",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "118.42"
+      },
+      {
+        "code": "6173",
+        "name": "信昌電",
+        "industry": "MLCC",
+        "price": "271.5",
+        "change": "▲3 (+1.12%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "2.69",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "54.27"
+      },
+      {
+        "code": "6654",
+        "name": "天正國際",
+        "industry": "自動化設備",
+        "price": "206",
+        "change": "0 (0%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "10.66",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "848.76"
+      },
+      {
+        "code": "3324",
+        "name": "雙鴻",
+        "industry": "散熱模組",
+        "price": "1,360",
+        "change": "▼25 (-1.81%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-16.58",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "67.18"
+      }
+    ],
+    "overlap": [
+      "5274",
+      "2454",
+      "2455",
+      "2303"
+    ],
+    "overlap_names": {
+      "5274": "信驊",
+      "2454": "聯發科",
+      "2455": "全新",
+      "2303": "聯電"
+    },
+    "thesis": "價值區以電子供應鏈為主，升溫區並列金融、券商、光通訊與電子；2303、2454、2455、5274為雙區重疊，仍需逐檔確認價格。"
+  },
+  "session_label": "台股9/10 10:17｜美股9/9收盤",
+  "draft_cutoff": "2026-09-10T10:28:46+08:00",
+  "hero": {
+    "headline": "<span class=\"mark\">水位升、盤面跌，</span>先看承接。",
+    "subhead": "方舟水位75.3%，配置空間改善；油價與利率升高，台股早盤回落。",
+    "reader_subhead": "方舟水位升至75.3%，較9/9增加2.5個百分點；台股早盤回落，先等承接，不把水位上升當成追價許可。"
+  },
+  "strategy": {
+    "thesis": "水位改善 × 盤面回落",
+    "playbook": "先看跌勢能否收斂與強勢股承接，不急著把較多配置空間用完。",
+    "tape": "10:17加權46,731.87點；方舟產業價值區25跌5漲1平，升溫區18跌10漲2平。",
+    "risk": "Brent收101.21美元，美國10年殖利率4.83%；油價、利率與通膨仍限制追價。",
+    "reader": {
+      "thesis": "健康度改善，價格卻仍在回落。",
+      "playbook": "保留彈性，等承接再評估。",
+      "tape": "科技價值名單多數下跌，並非全面轉強。",
+      "risk": "只盯油價、長期利率與台股跌勢是否收斂。"
+    }
+  },
+  "editorial": {
+    "pull_quote": "水位給空間，價格決定今天要不要用。",
+    "body": "方舟水位由72.8%升至75.3%，市場健康度與可部署空間改善；但09:05–09:08的產業價值區25跌5漲1平，升溫區18跌10漲2平，10:17加權仍低於前一交易日收盤。<span class=\"mark\">今天先等回落承接，不是看見水位上升就加速買進。</span>隔夜費半微漲0.37%，七巨頭卻只有Meta上漲，科技鏈仍分歧。Brent升破100美元、長期利率走高，對估值及成本敏感產業構成壓力。油價受益題材可觀察，但不能把能源上漲等同整體景氣轉強。"
+  },
+  "home": {
+    "water_note": "9/10方舟水位75.3%，較前一交易日9/9的72.8%上升2.5個百分點；健康度與配置空間改善，不等於直接買進。",
+    "thesis_blurb": "水位改善，盤面回落；油價與利率升高，先等承接。",
+    "recent_summary": "9/10水位75.3%；台股與科技價值名單回落，保留彈性、不搶反彈。",
+    "risk_tagline": "05 有序回檔｜水位改善，先等承接"
+  },
+  "temperature": {
+    "label": "水位改善、價格回落",
+    "score": 75.3,
+    "change": 2.5,
+    "note": "配置空間增加，短線承接尚待確認。",
+    "signal_headline": "價值區多數下跌，水位與當下漲跌要分開看。",
+    "signal_note": "ETF價值／升溫10／7檔，產業價值／升溫31／30檔；雙區重疊為0056，以及信驊、聯發科、全新、聯電。",
+    "vix_note": "美股9/9收盤VIX16.46，較9/8上升4.71%；波動升溫，仍非單憑一項指標判定恐慌。"
+  },
+  "ark_source_validation": {
+    "input_sha256": "74150d03a60efa6171c7fe6a7289f6837224b88bd42e52c402825a1239adbfc7",
+    "date": "2026-09-10",
+    "success": true,
+    "ax_validation": true,
+    "counts": {
+      "ETF價值區": 10,
+      "ETF升溫區": 7,
+      "產業價值區": 31,
+      "產業升溫區": 30
+    },
+    "unique_codes": 73,
+    "trend_counts": {
+      "ETF價值區": {
+        "down": 7,
+        "up": 2,
+        "missing": 1,
+        "flat": 0
+      },
+      "ETF升溫區": {
+        "up": 4,
+        "down": 2,
+        "flat": 1,
+        "missing": 0
+      },
+      "產業價值區": {
+        "down": 25,
+        "flat": 1,
+        "up": 5,
+        "missing": 0
+      },
+      "產業升溫區": {
+        "down": 18,
+        "up": 10,
+        "flat": 2,
+        "missing": 0
+      }
+    }
+  },
+  "scenario_id": "05",
+  "lock_scenario": true,
+  "scenario_reason": "方舟水位升至75.3%，較9/9上升2.5個百分點，健康度改善；但產業價值區25跌5漲1平、升溫區18跌10漲2平，台股早盤回落。採有序回檔的等待承接姿態，不代表跌勢已結束；若賣壓擴大則轉為更保守。",
+  "classification_note": "主編依水位上升與廣泛回落並存，選05而非全面擴張；有序為應對框架，不宣稱底部完成。",
+  "market": {
+    "sp500": {
+      "value": "7,636.36",
+      "change_pct": -0.484,
+      "data_as_of": "2026-09-09"
+    },
+    "nasdaq100": {
+      "value": "29,421.55",
+      "change_pct": -0.292,
+      "data_as_of": "2026-09-09"
+    },
+    "dow": {
+      "value": "52,380.66",
+      "change_pct": -0.768,
+      "data_as_of": "2026-09-09"
+    },
+    "sox": {
+      "value": "11,931.32",
+      "change_pct": 0.365,
+      "data_as_of": "2026-09-09"
+    },
+    "vix": {
+      "value": "16.46",
+      "change_pct": 4.707,
+      "data_as_of": "2026-09-09"
+    },
+    "tw_index": {
+      "line": "9/10 10:17盤中：46,731.87點，-451.49點（-0.96%）。",
+      "value": 46731.87,
+      "change_pct": -0.957,
+      "data_as_of": "2026-09-10T10:17:00+08:00"
+    },
+    "futures": {
+      "line": "9/10 10:17臺指期2026/09：46,619點，較參考價-559點（-1.18%）；逆價差112.87點。",
+      "contract": "TXFI6-F",
+      "data_as_of": "2026-09-10T10:17:00+08:00"
+    },
+    "foreign_oi": {
+      "value": -81066,
+      "note": "9/9日終：多單10,526、空單91,592口；未沖銷淨空81,066口。",
+      "data_as_of": "2026-09-09"
+    },
+    "systemic_risk": "中偏高"
+  },
+  "analysis": {
+    "us_close": "美股9/9：S&P500跌0.48%、Nasdaq-100跌0.29%、道瓊跌0.77%，費半小漲0.37%。七巨頭僅Meta漲6.55%，Alphabet跌2.28%、Amazon跌1.78%、輝達跌0.91%；仍是個別強勢而非科技股普漲。VIX升至16.46，油價與利率走高是重要壓力背景。",
+    "tx_night": "9/10 10:17盤中：46,731.87點，-451.49點（-0.96%）。9/10 10:17臺指期2026/09：46,619點，較參考價-559點（-1.18%）；逆價差112.87點。兩者為同一完整分鐘收值，非收盤價。外資9/9期貨未沖銷淨空81,066口；當日交易量淨多1,164口是另一種統計，不能當成股票買超。",
+    "axes": {
+      "thesis": "方舟健康度改善，但價格普遍回落；先看跌勢是否收斂，再決定配置速度。",
+      "policy": "中東供給干擾推高油價；澳洲AI基建計畫延續需求方向，尚不等於台廠已取得訂單。",
+      "risk": "美國2年／10年／30年殖利率4.43%／4.83%／5.28%，均較前日走高。美元微跌並未解除長期資金成本壓力。"
+    }
+  },
+  "intelligence": {
+    "trump": [
+      {
+        "time": "截至9/10上午｜市場焦點",
+        "content": "本期未納入可獨立確認的同日川普社群新訊號。中東衝突對航道與能源供給的影響，優先看實際運輸與油價，不把未確認政治說法當成新政策。"
+      }
+    ],
+    "musk": "本期未納入可獨立確認的同日馬斯克、Tesla、SpaceX或Starlink原始新公告，不以舊貼文或轉述補成今日催化劑。",
+    "policy": [
+      "Brent 9/9收101.21美元、上漲3.4%；WTI收96.05美元、上漲3.25%。能源供給與航運風險對航空、運輸及原料成本敏感產業較不利，不能把所有航運股視為同方向受益。",
+      "美國能源資訊署9/9上修油價預測，估今年Brent現貨均價約91美元；報告9/3已定稿，早於最新一輪衝突升級，不能當成最新油價上限。",
+      "輝達表示正與澳洲雲端及資料中心業者合作，計畫至2027年可能支援最高2GW AI運算容量。這是建設計畫與潛在容量，不是已投運規模或台廠營收；電源、散熱、網通與伺服器列中期觀察。",
+      "美國10年殖利率升至4.83%，本週通膨數據及央行決策仍待價格反應；不要把降息預期當成已確定的資金寬鬆。"
+    ]
+  },
+  "mag7": [
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "price": "315.34",
+      "change_abs": "-0.88",
+      "change_pct": -0.28,
+      "tier": "watch",
+      "tier_label": "觀察",
+      "signal": "小幅回落，先看價格承接，不用題材替代買點。",
+      "data_as_of": "2026-09-09"
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "price": "491.65",
+      "change_abs": "-2.30",
+      "change_pct": -0.47,
+      "tier": "watch",
+      "tier_label": "觀察",
+      "signal": "雲端與AI支出題材未轉成當日股價上漲。",
+      "data_as_of": "2026-09-09"
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "price": "223.67",
+      "change_abs": "-2.06",
+      "change_pct": -0.91,
+      "tier": "weak",
+      "tier_label": "承壓",
+      "signal": "澳洲基建有中期需求方向，當日股價仍回落。",
+      "data_as_of": "2026-09-09"
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "price": "252.40",
+      "change_abs": "-4.57",
+      "change_pct": -1.78,
+      "tier": "weak",
+      "tier_label": "承壓",
+      "signal": "雲端與消費曝險需分開評估。",
+      "data_as_of": "2026-09-09"
+    },
+    {
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "price": "653.69",
+      "change_abs": "+40.21",
+      "change_pct": 6.55,
+      "tier": "strong",
+      "tier_label": "相對強",
+      "signal": "放量上漲，為七巨頭唯一收紅；不等於整體科技股同步轉強。",
+      "data_as_of": "2026-09-09"
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Class A",
+      "price": "330.65",
+      "change_abs": "-7.71",
+      "change_pct": -2.28,
+      "tier": "weak",
+      "tier_label": "承壓",
+      "signal": "跌幅較大，先看賣壓收斂。",
+      "data_as_of": "2026-09-09"
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "price": "367.81",
+      "change_abs": "-0.35",
+      "change_pct": -0.1,
+      "tier": "watch",
+      "tier_label": "觀察",
+      "signal": "近乎持平，尚非新一輪上攻確認。",
+      "data_as_of": "2026-09-09"
+    }
+  ],
+  "validation": {
+    "strengthened": [
+      "水位75.3%，較前一交易日上升2.5個百分點，健康度與配置空間改善。",
+      "費半小漲0.37%、Meta漲6.55%，仍有個別強勢，但廣度尚未跟上。",
+      "澳洲AI基建計畫提供伺服器、電源、散熱的中期需求觀察。"
+    ],
+    "pressure": [
+      "台股10:17回落，方舟產業價值區25跌5漲1平；承接未明。",
+      "Brent升破100美元、10年殖利率4.83%，通膨與估值壓力並存。",
+      "BTC、ETH最新完整ETF日流9/8均為淨流出；9/9全日流量尚未確認。"
+    ],
+    "long_term": [
+      "AI基建方向與短線價格分開；計畫容量不等於投運、訂單或營收。",
+      "黃金8月實際ETF申購強，但中期配置背景不能直接變成今天追買指令。"
+    ]
+  },
+  "appendix": {
+    "after_hours": "美股採9/9完整現貨收盤；台股與臺指期採9/10 10:17共同完整分鐘。方舟股票／ETF為9/10 09:05–09:08分頁快照，同一標的跨區可有不同時點價格。輝達澳洲基建消息於台北9/10早間刊出，計畫與實際投運仍須區分。",
+    "execution": "水位上升先增加可選擇的空間，不急著花完。回落先看止跌、承接與再轉強；若跌幅擴大或油價、利率續升，保持更保守的配置速度。",
+    "map_bullets": [
+      "AI基建 → 台積電2330、台達電2308、廣達2382及散熱／網通；是供應鏈觀察，不是新訂單確認。",
+      "油價與航道 → 能源、航運、航空分別看售價、燃料、保險與運輸量。石油期貨ETF另有轉倉成本，槓桿ETF不作長期替代。",
+      "BTC／ETH → IBIT、FBTC、ETHA、FETH只列價格觀察；ETH/BTC轉弱，不作已確認輪動。",
+      "黃金／長債 → GLD、IAU、TLT各自看價格；黃金月度申購強，不代表長債也有防守買盤。"
+    ]
+  },
+  "conclusion": "水位改善是正面訊號，盤面回落也是眼前事實。<em>今天先等承接、選擇性觀察；不搶反彈，不把油價受益題材或個別科技強勢當成全面轉多。</em>",
+  "capital_flow": {
+    "headline": "黃金有中期申購支撐，加密與長債未同步轉強",
+    "stance": "偏防守的分化，不是全面撤出或全面加碼",
+    "summary": "9/9 GLD上漲但收低於開盤，TLT下跌且成交擴大；BTC、ETH小跌，ETH/BTC轉弱。最新完整9/8美國現貨BTC／ETH ETF均淨流出；黃金8月實際流入強，但不能用月度流量解釋9/9單日。美元微跌，長端殖利率上升，資金並未全面轉向長債或成長股。",
+    "assets": [
+      {
+        "asset": "美元／現金",
+        "role": "流動性與匯率",
+        "evidence": "9/9 DXY98.77（-0.07%），完成日線高98.90、低98.60。",
+        "flow_signal": "匯率微跌不是美元現金淨流出證據；未取得總量申贖。",
+        "confidence": "medium",
+        "watch": "美元與日圓方向、資金成本。",
+        "tone": "neutral"
+      },
+      {
+        "asset": "美債久期",
+        "role": "利率與估值",
+        "evidence": "9/9官方2Y4.43%、10Y4.83%、30Y5.28%，分別上升4／3／3基點；TLT81.73（-0.57%），成交40,660,600股。",
+        "flow_signal": "價格走弱與成交擴大，不是已確認長債ETF淨流出；未確認避險買盤。",
+        "confidence": "high",
+        "watch": "殖利率能否回落、TLT是否止穩。",
+        "tone": "caution"
+      },
+      {
+        "asset": "黃金",
+        "role": "傳統非信用資產與配置",
+        "evidence": "9/9 GLD403.35（+0.91%），開406.11，成交8,165,400股；WGC8月淨流入180億美元、持倉增加121噸。",
+        "flow_signal": "實際中期申購強；隔夜價格上漲但低於開盤，不能當成9/9同日申購證明。",
+        "confidence": "medium",
+        "watch": "GLD／IAU承接與下一期實際持倉。",
+        "tone": "neutral"
+      },
+      {
+        "asset": "Bitcoin / BTC",
+        "role": "高波動非主權稀缺資產",
+        "evidence": "9/9 UTC BTC/USDT78,306.43（-0.19%）；成交額為前20日中位數0.89倍。",
+        "flow_signal": "最新完整9/8 ETF淨流出4,660萬美元；9/9資料未完整，不稱當日資金反轉。",
+        "confidence": "high",
+        "watch": "價格收復跌幅與完整ETF淨流入是否同向。",
+        "tone": "caution"
+      },
+      {
+        "asset": "Ethereum / ETH",
+        "role": "高波動網路與風險資產",
+        "evidence": "9/9 UTC ETH/USDT2,468.13（-0.68%），量比0.98；ETH/BTC0.03152（-0.47%），量比0.56。",
+        "flow_signal": "ETH絕對及相對價格同弱；9/8 ETF淨流出2,430萬美元，未確認資金輪動到ETH。",
+        "confidence": "high",
+        "watch": "ETH、ETH/BTC、完整ETF申贖三者。",
+        "tone": "caution"
+      },
+      {
+        "asset": "股票風險",
+        "role": "企業獲利與成長曝險",
+        "evidence": "9/9費半+0.37%、S&P500-0.48%；七巨頭一漲六跌。9/10 10:17台股-0.96%。",
+        "flow_signal": "只證明個別相對強勢，不是全體股票ETF申購。",
+        "confidence": "high",
+        "watch": "台股承接是否擴散、能源成本壓力。",
+        "tone": "caution"
+      }
+    ],
+    "interpretation": [
+      "先看價量：黃金上漲但盤中漲幅收斂；長債下跌且成交放大，不能概括為所有防守資產獲追捧。",
+      "再看申贖：BTC／ETH最新完整日9/8分別淨流出4,660萬／2,430萬美元；9/9尚未完整，不把占位或部分合計當正式全日數據。",
+      "黃金8月淨流入180億美元、持倉增加121噸；這是截至8/31的配置背景，不是隔夜新流量。"
+    ],
+    "confirmation": [
+      "台股跌勢收斂與個股承接；不由水位上升直接推導買點。",
+      "GLD／IAU需要自己的價格確認；TLT須先看到殖利率壓力改善。",
+      "BTC／ETH須價格與完整ETF申贖同向，ETH還要看ETH/BTC。"
+    ],
+    "caveat": "價格與成交量不是淨申購。Farside各版本存在落後、錯誤頁面路由與未完成列，僅採逐基金加總核對的9/8完整列；9/9不賦方向。Binance為單一交易所現貨量。黃金WGC為8月資料；OI/funding、鏈上與WorldMonitor未提供可核實增量，權重為零。",
+    "as_of": "方舟9/10 09:05–09:08；台股10:17；美股／美元／美債9/9完整日；加密9/9 UTC完整日線；BTC／ETH ETF9/8完整日；黃金8月截至8/31。",
+    "reader": {
+      "headline": "黃金較有支撐，加密與長債沒有一起轉強",
+      "flow": "最新完整9/8，BTC／ETH ETF均淨流出；黃金8月則有大額淨申購。兩者時間不同，不當成隔夜同步搬家。",
+      "meaning": "隔夜黃金上漲，BTC、ETH與長債下跌；美元微跌、長期利率升高，較像分化防守，不是全面追風險。",
+      "action": "台股先等承接；IBIT／ETHA、GLD／IAU、TLT只列觀察，各自確認價格後再評估。",
+      "watch": "油價、10年殖利率、台股跌勢，以及BTC／ETH下一份完整ETF申贖。"
+    },
+    "proxy_watchlist": [
+      {
+        "asset": "BTC",
+        "symbols": [
+          "IBIT",
+          "FBTC"
+        ],
+        "status": "price_action_watch_only"
+      },
+      {
+        "asset": "ETH",
+        "symbols": [
+          "ETHA",
+          "FETH"
+        ],
+        "status": "price_action_watch_only"
+      },
+      {
+        "asset": "Gold",
+        "symbols": [
+          "GLD",
+          "IAU"
+        ],
+        "status": "price_action_watch_only"
+      },
+      {
+        "asset": "Duration",
+        "symbols": [
+          "TLT"
+        ],
+        "status": "price_action_watch_only"
+      },
+      {
+        "asset": "TW",
+        "symbols": [
+          "2330",
+          "2308",
+          "2382"
+        ],
+        "status": "price_action_watch_only"
+      }
+    ],
+    "research_evidence": {
+      "price_volume": {
+        "retrieved_at_utc": "2026-09-10T02:10:58.512834+00:00",
+        "binance": {
+          "BTCUSDT": {
+            "open_time": "2026-09-09",
+            "open": 78455.8,
+            "high": 79760.0,
+            "low": 77770.0,
+            "close": 78306.43,
+            "base_volume": 14129.92027,
+            "close_time": "2026-09-09T23:59:59.999000+00:00",
+            "quote_volume": 1114730666.1522026,
+            "trades": 3338369,
+            "prev_close": 78455.8,
+            "close_change_pct": -0.19038745382752298,
+            "close_location": 0.26956281407034827,
+            "quote_volume_vs_prior_20d_median": 0.8933824160880164,
+            "source_url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1786752000000&endTime=1788998399999&limit=1000"
+          },
+          "ETHUSDT": {
+            "open_time": "2026-09-09",
+            "open": 2485.07,
+            "high": 2523.3,
+            "low": 2442.44,
+            "close": 2468.13,
+            "base_volume": 301745.8701,
+            "close_time": "2026-09-09T23:59:59.999000+00:00",
+            "quote_volume": 751842583.804927,
+            "trades": 2792573,
+            "prev_close": 2485.06,
+            "close_change_pct": -0.6812712771522511,
+            "close_location": 0.31770962156814264,
+            "quote_volume_vs_prior_20d_median": 0.9829462146863421,
+            "source_url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1d&startTime=1786752000000&endTime=1788998399999&limit=1000"
+          },
+          "ETHBTC": {
+            "open_time": "2026-09-09",
+            "open": 0.03168,
+            "high": 0.03174,
+            "low": 0.03141,
+            "close": 0.03152,
+            "base_volume": 3648.5434,
+            "close_time": "2026-09-09T23:59:59.999000+00:00",
+            "quote_volume": 115.34492551,
+            "trades": 13544,
+            "prev_close": 0.03167,
+            "close_change_pct": -0.4736343542784849,
+            "close_location": 0.3333333333333333,
+            "quote_volume_vs_prior_20d_median": 0.5612931518360714,
+            "source_url": "https://api.binance.com/api/v3/klines?symbol=ETHBTC&interval=1d&startTime=1786752000000&endTime=1788998399999&limit=1000"
+          }
+        },
+        "yahoo": {
+          "^GSPC": {
+            "target": {
+              "date": "2026-09-09",
+              "timestamp": "2026-09-09T13:30:00+00:00",
+              "open": 7660.68017578125,
+              "high": 7660.68017578125,
+              "low": 7624.16015625,
+              "close": 7636.35986328125,
+              "volume": 2739714000,
+              "adjclose": 7636.35986328125,
+              "prev_close": 7673.52001953125,
+              "change_pct": -0.48426479836394254
+            },
+            "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=1788220800&period2=1789084800&interval=1d&events=div%2Csplits",
+            "meta": {
+              "currency": "USD",
+              "exchangeName": "SNP",
+              "instrumentType": "INDEX",
+              "timezone": "EDT",
+              "dataGranularity": "1d"
+            }
+          },
+          "^IXIC": {
+            "target": {
+              "date": "2026-09-09",
+              "timestamp": "2026-09-09T13:30:00+00:00",
+              "open": 26325.060546875,
+              "high": 26366.55859375,
+              "low": 26184.21484375,
+              "close": 26253.33984375,
+              "volume": 6592678000,
+              "adjclose": 26253.33984375,
+              "prev_close": 26421.41015625,
+              "change_pct": -0.636114088937989
+            },
+            "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?period1=1788220800&period2=1789084800&interval=1d&events=div%2Csplits",
+            "meta": {
+              "currency": "USD",
+              "exchangeName": "NIM",
+              "instrumentType": "INDEX",
+              "timezone": "EDT",
+              "dataGranularity": "1d"
+            }
+          },
+          "^NDX": {
+            "target": {
+              "date": "2026-09-09",
+              "timestamp": "2026-09-09T13:30:00+00:00",
+              "open": 29431.94140625,
+              "high": 29563.59765625,
+              "low": 29334.404296875,
+              "close": 29421.552734375,
+              "volume": 1158162000,
+              "adjclose": 29421.552734375,
+              "prev_close": 29507.69921875,
+              "change_pct": -0.29194578586547726
+            },
+            "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ENDX?period1=1788220800&period2=1789084800&interval=1d&events=div%2Csplits",
+            "meta": {
+              "currency": "USD",
+              "exchangeName": "NIM",
+              "instrumentType": "INDEX",
+              "timezone": "EDT",
+              "dataGranularity": "1d"
+            }
+          },
+          "^DJI": {
+            "target": {
+              "date": "2026-09-09",
+              "timestamp": "2026-09-09T13:30:00+00:00",
+              "open": 52707.8984375,
+              "high": 52707.8984375,
+              "low": 52314.609375,
+              "close": 52380.66015625,
+              "volume": 403108204,
+              "adjclose": 52380.66015625,
+              "prev_close": 52786.0703125,
+              "change_pct": -0.7680248858267347
+            },
+            "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?period1=1788220800&period2=1789084800&interval=1d&events=div%2Csplits",
+            "meta": {
+              "currency": "USD",
+              "exchangeName": "DJI",
+              "instrumentType": "INDEX",
+              "timezone": "EDT",
+              "dataGranularity": "1d"
+            }
+          },
+          "^SOX": {
+            "target": {
+              "date": "2026-09-09",
+              "timestamp": "2026-09-09T13:30:00+00:00",
+              "open": 11866.5029296875,
+              "high": 12016.091796875,
+              "low": 11854.2158203125,
+              "close": 11931.3212890625,
+              "volume": 0,
+              "adjclose": 11931.3212890625,
+              "prev_close": 11887.8701171875,
+              "change_pct": 0.3655084674266229
+            },
+            "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?period1=1788220800&period2=1789084800&interval=1d&events=div%2Csplits",
+            "meta": {
+              "currency": "USD",
+              "exchangeName": "NIM",
+              "instrumentType": "INDEX",
+              "timezone": "EDT",
+              "dataGranularity": "1d"
+            }
+          },
+          "^VIX": {
+            "target": {
+              "date": "2026-09-09",
+              "timestamp": "2026-09-09T07:00:00+00:00",
+              "open": 15.649999618530273,
+              "high": 16.68000030517578,
+              "low": 15.569999694824219,
+              "close": 16.459999084472656,
+              "volume": 0,
+              "adjclose": 16.459999084472656,
+              "prev_close": 15.720000267028809,
+              "change_pct": 4.707371532276139
+            },
+            "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1788220800&period2=1789084800&interval=1d&events=div%2Csplits",
+            "meta": {
+              "currency": "USD",
+              "exchangeName": "CXI",
+              "instrumentType": "INDEX",
+              "timezone": "CDT",
+              "dataGranularity": "1d"
+            }
+          },
+          "DX-Y.NYB": {
+            "target": {
+              "date": "2026-09-09",
+              "timestamp": "2026-09-09T04:00:00+00:00",
+              "open": 98.80999755859375,
+              "high": 98.9000015258789,
+              "low": 98.5999984741211,
+              "close": 98.7699966430664,
+              "volume": 0,
+              "adjclose": 98.7699966430664,
+              "prev_close": 98.83999633789062,
+              "change_pct": -0.07082122361166121
+            },
+            "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1788220800&period2=1789084800&interval=1d&events=div%2Csplits",
+            "meta": {
+              "currency": "USD",
+              "exchangeName": "NYB",
+              "instrumentType": "INDEX",
+              "timezone": "EDT",
+              "dataGranularity": "1d"
+            }
+          },
+          "GLD": {
+            "target": {
+              "date": "2026-09-09",
+              "timestamp": "2026-09-09T13:30:00+00:00",
+              "open": 406.1099853515625,
+              "high": 406.55999755859375,
+              "low": 401.17999267578125,
+              "close": 403.3500061035156,
+              "volume": 8165400,
+              "adjclose": 403.3500061035156,
+              "prev_close": 399.7200012207031,
+              "change_pct": 0.9081369137713402
+            },
+            "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GLD?period1=1788220800&period2=1789084800&interval=1d&events=div%2Csplits",
+            "meta": {
+              "currency": "USD",
+              "exchangeName": "PCX",
+              "instrumentType": "ETF",
+              "timezone": "EDT",
+              "dataGranularity": "1d"
+            }
+          },
+          "IAU": {
+            "target": {
+              "date": "2026-09-09",
+              "timestamp": "2026-09-09T13:30:00+00:00",
+              "open": 83.26000213623047,
+              "high": 83.33999633789062,
+              "low": 82.25,
+              "close": 82.69000244140625,
+              "volume": 4038700,
+              "adjclose": 82.69000244140625,
+              "prev_close": 81.94999694824219,
+              "change_pct": 0.9029963645165617
+            },
+            "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/IAU?period1=1788220800&period2=1789084800&interval=1d&events=div%2Csplits",
+            "meta": {
+              "currency": "USD",
+              "exchangeName": "PCX",
+              "instrumentType": "ETF",
+              "timezone": "EDT",
+              "dataGranularity": "1d"
+            }
+          },
+          "TLT": {
+            "target": {
+              "date": "2026-09-09",
+              "timestamp": "2026-09-09T13:30:00+00:00",
+              "open": 82.19000244140625,
+              "high": 82.30999755859375,
+              "low": 81.36000061035156,
+              "close": 81.7300033569336,
+              "volume": 40660600,
+              "adjclose": 81.7300033569336,
+              "prev_close": 82.19999694824219,
+              "change_pct": -0.5717683804836726
+            },
+            "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/TLT?period1=1788220800&period2=1789084800&interval=1d&events=div%2Csplits",
+            "meta": {
+              "currency": "USD",
+              "exchangeName": "NGM",
+              "instrumentType": "ETF",
+              "timezone": "EDT",
+              "dataGranularity": "1d"
+            }
+          },
+          "GC=F": {
+            "error": "unsupported operand type(s) for /: 'NoneType' and 'float'",
+            "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1788220800&period2=1789084800&interval=1d&events=div%2Csplits"
+          },
+          "CL=F": {
+            "error": "unsupported operand type(s) for /: 'NoneType' and 'float'",
+            "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CL%3DF?period1=1788220800&period2=1789084800&interval=1d&events=div%2Csplits"
+          },
+          "AAPL": {
+            "target": {
+              "date": "2026-09-09",
+              "timestamp": "2026-09-09T13:30:00+00:00",
+              "open": 315.489990234375,
+              "high": 319.1499938964844,
+              "low": 309.8999938964844,
+              "close": 315.3399963378906,
+              "volume": 65371600,
+              "adjclose": 315.3399963378906,
+              "prev_close": 316.2200012207031,
+              "change_pct": -0.27828881140200545
+            },
+            "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?period1=1788220800&period2=1789084800&interval=1d&events=div%2Csplits",
+            "meta": {
+              "currency": "USD",
+              "exchangeName": "NMS",
+              "instrumentType": "EQUITY",
+              "timezone": "EDT",
+              "dataGranularity": "1d"
+            }
+          },
+          "NVDA": {
+            "target": {
+              "date": "2026-09-09",
+              "timestamp": "2026-09-09T13:30:00+00:00",
+              "open": 225.27999877929688,
+              "high": 226.17999267578125,
+              "low": 223.4600067138672,
+              "close": 223.6699981689453,
+              "volume": 82737000,
+              "adjclose": 223.6699981689453,
+              "prev_close": 225.72999572753906,
+              "change_pct": -0.9125936284871128
+            },
+            "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1788220800&period2=1789084800&interval=1d&events=div%2Csplits",
+            "meta": {
+              "currency": "USD",
+              "exchangeName": "NMS",
+              "instrumentType": "EQUITY",
+              "timezone": "EDT",
+              "dataGranularity": "1d"
+            }
+          },
+          "AMD": {
+            "target": {
+              "date": "2026-09-09",
+              "timestamp": "2026-09-09T13:30:00+00:00",
+              "open": 507.5,
+              "high": 526.7899780273438,
+              "low": 506.3599853515625,
+              "close": 521.0999755859375,
+              "volume": 22104300,
+              "adjclose": 521.0999755859375,
+              "prev_close": 505.739990234375,
+              "change_pct": 3.0371308672751507
+            },
+            "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AMD?period1=1788220800&period2=1789084800&interval=1d&events=div%2Csplits",
+            "meta": {
+              "currency": "USD",
+              "exchangeName": "NMS",
+              "instrumentType": "EQUITY",
+              "timezone": "EDT",
+              "dataGranularity": "1d"
+            }
+          },
+          "META": {
+            "target": {
+              "date": "2026-09-09",
+              "timestamp": "2026-09-09T13:30:00+00:00",
+              "open": 648.6400146484375,
+              "high": 657.8599853515625,
+              "low": 638.5599975585938,
+              "close": 653.6900024414062,
+              "volume": 35843200,
+              "adjclose": 653.6900024414062,
+              "prev_close": 613.47998046875,
+              "change_pct": 6.5544146920544
+            },
+            "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/META?period1=1788220800&period2=1789084800&interval=1d&events=div%2Csplits",
+            "meta": {
+              "currency": "USD",
+              "exchangeName": "NMS",
+              "instrumentType": "EQUITY",
+              "timezone": "EDT",
+              "dataGranularity": "1d"
+            }
+          },
+          "GOOGL": {
+            "target": {
+              "date": "2026-09-09",
+              "timestamp": "2026-09-09T13:30:00+00:00",
+              "open": 331.6499938964844,
+              "high": 331.8500061035156,
+              "low": 327.8999938964844,
+              "close": 330.6499938964844,
+              "volume": 33081300,
+              "adjclose": 330.6499938964844,
+              "prev_close": 338.3599853515625,
+              "change_pct": -2.2786357101497345
+            },
+            "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?period1=1788220800&period2=1789084800&interval=1d&events=div%2Csplits",
+            "meta": {
+              "currency": "USD",
+              "exchangeName": "NMS",
+              "instrumentType": "EQUITY",
+              "timezone": "EDT",
+              "dataGranularity": "1d"
+            }
+          }
+        },
+        "treasury": {
+          "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026",
+          "raw_tail": "BC_7YEAR>\n<d:BC_10YEAR m:type=\"Edm.Double\">4.79</d:BC_10YEAR>\n<d:BC_20YEAR m:type=\"Edm.Double\">5.27</d:BC_20YEAR>\n<d:BC_30YEAR m:type=\"Edm.Double\">5.27</d:BC_30YEAR>\n<d:BC_30YEARDISPLAY m:type=\"Edm.Double\">5.27</d:BC_30YEARDISPLAY>\n</m:properties>\n</content>\n</entry>\n<entry>\n<id>https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&amp;id=308</id>\n<title type=\"text\"></title>\n<updated>2026-09-09T15:50:33Z</updated>\n<author><name /></author>\n<link rel=\"edit\" title=\"DailyTreasuryYieldCurveRateDatum\" href=\"/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&amp;id=308\" />\n<category term=\"TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum\" scheme=\"http://schemas.microsoft.com/ado/2007/08/dataservices/scheme\" />\n<content type=\"application/xml\">\n<m:properties>\n<d:Id m:type=\"Edm.Int32\">308</d:Id>\n<d:NEW_DATE m:type=\"Edm.DateTime\">2026-09-02T00:00:00</d:NEW_DATE>\n<d:BC_1MONTH m:type=\"Edm.Double\">3.83</d:BC_1MONTH>\n<d:BC_1_5MONTH m:type=\"Edm.Double\">3.87</d:BC_1_5MONTH>\n<d:BC_2MONTH m:type=\"Edm.Double\">3.89</d:BC_2MONTH>\n<d:BC_3MONTH m:type=\"Edm.Double\">3.92</d:BC_3MONTH>\n<d:BC_4MONTH m:type=\"Edm.Double\">4.02</d:BC_4MONTH>\n<d:BC_6MONTH m:type=\"Edm.Double\">4.00</d:BC_6MONTH>\n<d:BC_1YEAR m:type=\"Edm.Double\">4.16</d:BC_1YEAR>\n<d:BC_2YEAR m:type=\"Edm.Double\">4.39</d:BC_2YEAR>\n<d:BC_3YEAR m:type=\"Edm.Double\">4.45</d:BC_3YEAR>\n<d:BC_5YEAR m:type=\"Edm.Double\">4.54</d:BC_5YEAR>\n<d:BC_7YEAR m:type=\"Edm.Double\">4.66</d:BC_7YEAR>\n<d:BC_10YEAR m:type=\"Edm.Double\">4.79</d:BC_10YEAR>\n<d:BC_20YEAR m:type=\"Edm.Double\">5.27</d:BC_20YEAR>\n<d:BC_30YEAR m:type=\"Edm.Double\">5.27</d:BC_30YEAR>\n<d:BC_30YEARDISPLAY m:type=\"Edm.Double\">5.27</d:BC_30YEARDISPLAY>\n</m:properties>\n</content>\n</entry>\n<entry>\n<id>https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&amp;id=309</id>\n<title type=\"text\"></title>\n<updated>2026-09-09T15:50:33Z</updated>\n<author><name /></author>\n<link rel=\"edit\" title=\"DailyTreasuryYieldCurveRateDatum\" href=\"/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&amp;id=309\" />\n<category term=\"TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum\" scheme=\"http://schemas.microsoft.com/ado/2007/08/dataservices/scheme\" />\n<content type=\"application/xml\">\n<m:properties>\n<d:Id m:type=\"Edm.Int32\">309</d:Id>\n<d:NEW_DATE m:type=\"Edm.DateTime\">2026-09-03T00:00:00</d:NEW_DATE>\n<d:BC_1MONTH m:type=\"Edm.Double\">3.83</d:BC_1MONTH>\n<d:BC_1_5MONTH m:type=\"Edm.Double\">3.82</d:BC_1_5MONTH>\n<d:BC_2MONTH m:type=\"Edm.Double\">3.91</d:BC_2MONTH>\n<d:BC_3MONTH m:type=\"Edm.Double\">3.89</d:BC_3MONTH>\n<d:BC_4MONTH m:type=\"Edm.Double\">3.99</d:BC_4MONTH>\n<d:BC_6MONTH m:type=\"Edm.Double\">3.95</d:BC_6MONTH>\n<d:BC_1YEAR m:type=\"Edm.Double\">4.11</d:BC_1YEAR>\n<d:BC_2YEAR m:type=\"Edm.Double\">4.34</d:BC_2YEAR>\n<d:BC_3YEAR m:type=\"Edm.Double\">4.41</d:BC_3YEAR>\n<d:BC_5YEAR m:type=\"Edm.Double\">4.52</d:BC_5YEAR>\n<d:BC_7YEAR m:type=\"Edm.Double\">4.63</d:BC_7YEAR>\n<d:BC_10YEAR m:type=\"Edm.Double\">4.77</d:BC_10YEAR>\n<d:BC_20YEAR m:type=\"Edm.Double\">5.25</d:BC_20YEAR>\n<d:BC_30YEAR m:type=\"Edm.Double\">5.25</d:BC_30YEAR>\n<d:BC_30YEARDISPLAY m:type=\"Edm.Double\">5.25</d:BC_30YEARDISPLAY>\n</m:properties>\n</content>\n</entry>\n<entry>\n<id>https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&amp;id=310</id>\n<title type=\"text\"></title>\n<updated>2026-09-09T15:50:33Z</updated>\n<author><name /></author>\n<link rel=\"edit\" title=\"DailyTreasuryYieldCurveRateDatum\" href=\"/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&amp;id=310\" />\n<category term=\"TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum\" scheme=\"http://schemas.microsoft.com/ado/2007/08/dataservices/scheme\" />\n<content type=\"application/xml\">\n<m:properties>\n<d:Id m:type=\"Edm.Int32\">310</d:Id>\n<d:NEW_DATE m:type=\"Edm.DateTime\">2026-09-04T00:00:00</d:NEW_DATE>\n<d:BC_1MONTH m:type=\"Edm.Double\">3.79</d:BC_1MONTH>\n<d:BC_1_5MONTH m:type=\"Edm.Double\">3.83</d:BC_1_5MONTH>\n<d:BC_2MONTH m:type=\"Edm.Double\">3.90</d:BC_2MONTH>\n<d:BC_3MONTH m:type=\"Edm.Double\">3.91</d:BC_3MONTH>\n<d:BC_4MONTH m:type=\"Edm.Double\">4.00</d:BC_4MONTH>\n<d:BC_6MONTH m:type=\"Edm.Double\">3.98</d:BC_6MONTH>\n<d:BC_1YEAR m:type=\"Edm.Double\">4.13</d:BC_1YEAR>\n<d:BC_2YEAR m:type=\"Edm.Double\">4.37</d:BC_2YEAR>\n<d:BC_3YEAR m:type=\"Edm.Double\">4.45</d:BC_3YEAR>\n<d:BC_5YEAR m:type=\"Edm.Double\">4.54</d:BC_5YEAR>\n<d:BC_7YEAR m:type=\"Edm.Double\">4.65</d:BC_7YEAR>\n<d:BC_10YEAR m:type=\"Edm.Double\">4.78</d:BC_10YEAR>\n<d:BC_20YEAR m:type=\"Edm.Double\">5.25</d:BC_20YEAR>\n<d:BC_30YEAR m:type=\"Edm.Double\">5.24</d:BC_30YEAR>\n<d:BC_30YEARDISPLAY m:type=\"Edm.Double\">5.24</d:BC_30YEARDISPLAY>\n</m:properties>\n</content>\n</entry>\n<entry>\n<id>https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&amp;id=311</id>\n<title type=\"text\"></title>\n<updated>2026-09-09T15:50:33Z</updated>\n<author><name /></author>\n<link rel=\"edit\" title=\"DailyTreasuryYieldCurveRateDatum\" href=\"/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&amp;id=311\" />\n<category term=\"TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum\" scheme=\"http://schemas.microsoft.com/ado/2007/08/dataservices/scheme\" />\n<content type=\"application/xml\">\n<m:properties>\n<d:Id m:type=\"Edm.Int32\">311</d:Id>\n<d:NEW_DATE m:type=\"Edm.DateTime\">2026-09-08T00:00:00</d:NEW_DATE>\n<d:BC_1MONTH m:type=\"Edm.Double\">3.81</d:BC_1MONTH>\n<d:BC_1_5MONTH m:type=\"Edm.Double\">3.88</d:BC_1_5MONTH>\n<d:BC_2MONTH m:type=\"Edm.Double\">3.91</d:BC_2MONTH>\n<d:BC_3MONTH m:type=\"Edm.Double\">3.94</d:BC_3MONTH>\n<d:BC_4MONTH m:type=\"Edm.Double\">4.02</d:BC_4MONTH>\n<d:BC_6MONTH m:type=\"Edm.Double\">4.00</d:BC_6MONTH>\n<d:BC_1YEAR m:type=\"Edm.Double\">4.15</d:BC_1YEAR>\n<d:BC_2YEAR m:type=\"Edm.Double\">4.39</d:BC_2YEAR>\n<d:BC_3YEAR m:type=\"Edm.Double\">4.44</d:BC_3YEAR>\n<d:BC_5YEAR m:type=\"Edm.Double\">4.57</d:BC_5YEAR>\n<d:BC_7YEAR m:type=\"Edm.Double\">4.68</d:BC_7YEAR>\n<d:BC_10YEAR m:type=\"Edm.Double\">4.80</d:BC_10YEAR>\n<d:BC_20YEAR m:type=\"Edm.Double\">5.26</d:BC_20YEAR>\n<d:BC_30YEAR m:type=\"Edm.Double\">5.25</d:BC_30YEAR>\n<d:BC_30YEARDISPLAY m:type=\"Edm.Double\">5.25</d:BC_30YEARDISPLAY>\n</m:properties>\n</content>\n</entry>\n<entry>\n<id>https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&amp;id=312</id>\n<title type=\"text\"></title>\n<updated>2026-09-09T15:50:33Z</updated>\n<author><name /></author>\n<link rel=\"edit\" title=\"DailyTreasuryYieldCurveRateDatum\" href=\"/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&amp;id=312\" />\n<category term=\"TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum\" scheme=\"http://schemas.microsoft.com/ado/2007/08/dataservices/scheme\" />\n<content type=\"application/xml\">\n<m:properties>\n<d:Id m:type=\"Edm.Int32\">312</d:Id>\n<d:NEW_DATE m:type=\"Edm.DateTime\">2026-09-09T00:00:00</d:NEW_DATE>\n<d:BC_1MONTH m:type=\"Edm.Double\">3.81</d:BC_1MONTH>\n<d:BC_1_5MONTH m:type=\"Edm.Double\">3.88</d:BC_1_5MONTH>\n<d:BC_2MONTH m:type=\"Edm.Double\">3.93</d:BC_2MONTH>\n<d:BC_3MONTH m:type=\"Edm.Double\">3.95</d:BC_3MONTH>\n<d:BC_4MONTH m:type=\"Edm.Double\">4.06</d:BC_4MONTH>\n<d:BC_6MONTH m:type=\"Edm.Double\">4.01</d:BC_6MONTH>\n<d:BC_1YEAR m:type=\"Edm.Double\">4.17</d:BC_1YEAR>\n<d:BC_2YEAR m:type=\"Edm.Double\">4.43</d:BC_2YEAR>\n<d:BC_3YEAR m:type=\"Edm.Double\">4.49</d:BC_3YEAR>\n<d:BC_5YEAR m:type=\"Edm.Double\">4.61</d:BC_5YEAR>\n<d:BC_7YEAR m:type=\"Edm.Double\">4.71</d:BC_7YEAR>\n<d:BC_10YEAR m:type=\"Edm.Double\">4.83</d:BC_10YEAR>\n<d:BC_20YEAR m:type=\"Edm.Double\">5.28</d:BC_20YEAR>\n<d:BC_30YEAR m:type=\"Edm.Double\">5.28</d:BC_30YEAR>\n<d:BC_30YEARDISPLAY m:type=\"Edm.Double\">5.28</d:BC_30YEARDISPLAY>\n</m:properties>\n</content>\n</entry>\n</feed>"
+        }
+      },
+      "crypto_parent_verification": {
+        "BTCUSDT": {
+          "verified": true,
+          "pct": -0.19038745382752298,
+          "volume_ratio": 0.8933824160880164,
+          "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1786752000000&endTime=1788998399999&limit=1000"
+        },
+        "ETHUSDT": {
+          "verified": true,
+          "pct": -0.6812712771522511,
+          "volume_ratio": 0.9829462146863421,
+          "url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1d&startTime=1786752000000&endTime=1788998399999&limit=1000"
+        },
+        "ETHBTC": {
+          "verified": true,
+          "pct": -0.4736343542784849,
+          "volume_ratio": 0.5612931518360714,
+          "url": "https://api.binance.com/api/v3/klines?symbol=ETHBTC&interval=1d&startTime=1786752000000&endTime=1788998399999&limit=1000"
+        }
+      },
+      "actual_flows": {
+        "bitcoin_spot_etf_us": {
+          "date": "2026-09-08",
+          "unit": "USD millions",
+          "fund_values": [
+            10.7,
+            -17.1,
+            14.5,
+            8.1,
+            -4.7,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            7.4,
+            -65.5,
+            0.0
+          ],
+          "net": -46.6,
+          "sum_verified": true,
+          "literal_row": "| 08 Sep 2026 | 10.7 | (17.1) | 14.5 | 8.1 | (4.7) | 0.0 | 0.0 | 0.0 | 0.0 | 7.4 | (65.5) | 0.0 | (46.6) |"
+        },
+        "ethereum_spot_etf_us": {
+          "date": "2026-09-08",
+          "unit": "USD millions",
+          "fund_values": [
+            0.0,
+            0.0,
+            9.9,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -9.6,
+            -24.6
+          ],
+          "net": -24.3,
+          "sum_verified": true,
+          "literal_row": "|08 Sep 2026 |0.0 |0.0 |9.9 |0.0 |0.0 |0.0 |0.0 |0.0 |(9.6) |(24.6) |(24.3) |"
+        },
+        "latest_requested_day": "2026-09-09",
+        "latest_requested_day_status": "incomplete_no_final_value",
+        "gold_wgc": {
+          "period": "2026-08",
+          "data_as_of": "2026-08-31",
+          "net_flow_usd_b": 18,
+          "holdings_change_tonnes": 121,
+          "holdings_tonnes": 4189,
+          "aum_usd_b": 615,
+          "url": "https://www.gold.org/goldhub/data/global-gold-backed-etf-holdings-and-flows",
+          "title": "World Gold Council August2026 ETF holdings and flows"
+        }
+      },
+      "worldmonitor": {
+        "status": "not_used",
+        "signal_weight": 0
+      },
+      "derivatives_and_onchain": {
+        "status": "not_verified",
+        "signal_weight": 0
+      }
+    }
+  },
+  "research_sources": [
+    {
+      "title": "twse_mis_quote",
+      "url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+      "final_url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:52+00:00",
+      "sha256": "3851dba9c448aa10e7ec83a24fa9519f1cdaadda517405dcbdf316e35ea5aa9e",
+      "bytes": 697
+    },
+    {
+      "title": "twse_mis_1m",
+      "url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+      "final_url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:52+00:00",
+      "sha256": "9225bc39a7f86126dcb6db8f370fd15eef54b3c8854a298a410f308469e82cf8",
+      "bytes": 5807
+    },
+    {
+      "title": "twse_mi_5mins_hist",
+      "url": "https://www.twse.com.tw/rwd/en/TAIEX/MI_5MINS_HIST?date=20260910&response=json",
+      "final_url": "https://www.twse.com.tw/rwd/en/TAIEX/MI_5MINS_HIST?date=20260910&response=json",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:52+00:00",
+      "sha256": "4bd88dd9050cd482d615402d29947817864a4187a544268e3415a09ffb6b73a5",
+      "bytes": 624
+    },
+    {
+      "title": "taifex_quote_list",
+      "url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+      "final_url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+      "method": "POST",
+      "request_body": {
+        "MarketType": "0",
+        "SymbolType": "F",
+        "KindID": "1",
+        "CID": "",
+        "ExpireMonth": ""
+      },
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:53+00:00",
+      "sha256": "f0d0f193faa755ff08323647aeca4fe87e3e50e9f424a5e04aa313d949e15928",
+      "bytes": 6346
+    },
+    {
+      "title": "taifex_front_1m",
+      "url": "https://mis.taifex.com.tw/futures/api/getChartData1M",
+      "final_url": "https://mis.taifex.com.tw/futures/api/getChartData1M",
+      "method": "POST",
+      "request_body": {
+        "SymbolID": "TXFI6-F"
+      },
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:53+00:00",
+      "sha256": "8374a5008cb69354556b2d7f3d6cacbbf7e3e035478c516093a9382340a26d7b",
+      "bytes": 6787
+    },
+    {
+      "title": "taifex_institutional_positions",
+      "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+      "final_url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:53+00:00",
+      "sha256": "49ffff4895bde90bc0de58bf75a63e3dc4f7a31652a143e8751749c5ff743df4",
+      "bytes": 34036
+    },
+    {
+      "title": "nasdaq_sox_historical",
+      "url": "https://api.nasdaq.com/api/quote/SOX/historical?assetclass=index&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+      "final_url": "https://api.nasdaq.com/api/quote/SOX/historical?assetclass=index&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:53+00:00",
+      "sha256": "18998c552a5d5a817b223ea5131129f58d326aaba7c2982a75d9a1f2ccc6f71f",
+      "bytes": 602
+    },
+    {
+      "title": "nasdaq_sox_summary",
+      "url": "https://api.nasdaq.com/api/quote/SOX/summary?assetclass=index",
+      "final_url": "https://api.nasdaq.com/api/quote/SOX/summary?assetclass=index",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:53+00:00",
+      "sha256": "f00b99214809ba88e2fb3c42bf2515c1f5a749f081f641897c49d5a0eca53138",
+      "bytes": 495
+    },
+    {
+      "title": "yahoo_sox_date_crosscheck",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?period1=1787875200&period2=1789171200&interval=1d&events=history",
+      "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?period1=1787875200&period2=1789171200&interval=1d&events=history",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:53+00:00",
+      "sha256": "b8cf2136dfb86924f46825be6446d4da304620f79598592aced633e427d916a4",
+      "bytes": 1957
+    },
+    {
+      "title": "nasdaq_ndx_historical",
+      "url": "https://api.nasdaq.com/api/quote/NDX/historical?assetclass=index&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+      "final_url": "https://api.nasdaq.com/api/quote/NDX/historical?assetclass=index&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:54+00:00",
+      "sha256": "902901a5f7f435b66a3a673a9153c4765642f96a688597d1bef258de222cfe8d",
+      "bytes": 602
+    },
+    {
+      "title": "nasdaq_ndx_summary",
+      "url": "https://api.nasdaq.com/api/quote/NDX/summary?assetclass=index",
+      "final_url": "https://api.nasdaq.com/api/quote/NDX/summary?assetclass=index",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:54+00:00",
+      "sha256": "51bd396379db70d73a75a107bb3e3662d4905678158c83b5eec6d10c86cc1eb4",
+      "bytes": 497
+    },
+    {
+      "title": "yahoo_ndx_date_crosscheck",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ENDX?period1=1787875200&period2=1789171200&interval=1d&events=history",
+      "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ENDX?period1=1787875200&period2=1789171200&interval=1d&events=history",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:54+00:00",
+      "sha256": "a6c412cd280ba70196c63458df9b99f22efb95672be515c81be10624a5081720",
+      "bytes": 1997
+    },
+    {
+      "title": "cboe_spx_history",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SPX_History.csv",
+      "final_url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SPX_History.csv",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:55+00:00",
+      "sha256": "99fc6b4eac1a39e154d00044cd0bc9f5db6a2479ed630dd1601c973c1a69ff76",
+      "bytes": 292619
+    },
+    {
+      "title": "cboe_vix_history",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+      "final_url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:57+00:00",
+      "sha256": "f0ad5e46d3acaf713d419e2c4ac32f1c2f98d64779d1d07108cd8666cc99e1f7",
+      "bytes": 472462
+    },
+    {
+      "title": "yahoo_dji_history",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?period1=1787875200&period2=1789171200&interval=1d&events=history",
+      "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?period1=1787875200&period2=1789171200&interval=1d&events=history",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:57+00:00",
+      "sha256": "06b493dd8e809285d6b22664dff3fe414f8b4e4157a49639a8394e537e892f50",
+      "bytes": 1948
+    },
+    {
+      "title": "nasdaq_aapl_historical",
+      "url": "https://api.nasdaq.com/api/quote/AAPL/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+      "final_url": "https://api.nasdaq.com/api/quote/AAPL/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:57+00:00",
+      "sha256": "9c2ee42a8c4e09585ee6b4bdefb11e69159506729a0ccd0aee8ad7002db76905",
+      "bytes": 717
+    },
+    {
+      "title": "nasdaq_msft_historical",
+      "url": "https://api.nasdaq.com/api/quote/MSFT/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+      "final_url": "https://api.nasdaq.com/api/quote/MSFT/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:57+00:00",
+      "sha256": "a3f0a9b8c87cbfd04cbada74cb2d3a094aab40e0a2f16233df98d4219c91b363",
+      "bytes": 715
+    },
+    {
+      "title": "nasdaq_amzn_historical",
+      "url": "https://api.nasdaq.com/api/quote/AMZN/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+      "final_url": "https://api.nasdaq.com/api/quote/AMZN/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:58+00:00",
+      "sha256": "e255eb665196267082f911b33f0b727a824a6f815e29665a04b589d0377a61af",
+      "bytes": 716
+    },
+    {
+      "title": "nasdaq_googl_historical",
+      "url": "https://api.nasdaq.com/api/quote/GOOGL/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+      "final_url": "https://api.nasdaq.com/api/quote/GOOGL/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:58+00:00",
+      "sha256": "46e994ad7ae812505996f26766404e829999cc1ed20728fefdf97f93e03cb1fe",
+      "bytes": 717
+    },
+    {
+      "title": "nasdaq_meta_historical",
+      "url": "https://api.nasdaq.com/api/quote/META/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+      "final_url": "https://api.nasdaq.com/api/quote/META/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:58+00:00",
+      "sha256": "0c875ae99b3d85530beccdc5219a4567c8d07040b6665b71e5f5f6fcd4ce01be",
+      "bytes": 716
+    },
+    {
+      "title": "nasdaq_nvda_historical",
+      "url": "https://api.nasdaq.com/api/quote/NVDA/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+      "final_url": "https://api.nasdaq.com/api/quote/NVDA/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:59+00:00",
+      "sha256": "c6e282ac52619d6735a547ff44e358ef47aa4cb0ca452b3ec9a541321020ba99",
+      "bytes": 719
+    },
+    {
+      "title": "nasdaq_tsla_historical",
+      "url": "https://api.nasdaq.com/api/quote/TSLA/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+      "final_url": "https://api.nasdaq.com/api/quote/TSLA/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:59+00:00",
+      "sha256": "52e7732022b908c37a4f77476cf7b5e432ccc22449d2f1acc1a6e4f272767250",
+      "bytes": 719
+    },
+    {
+      "title": "yahoo_dxy_history",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1787875200&period2=1789171200&interval=1d&events=history",
+      "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1787875200&period2=1789171200&interval=1d&events=history",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:18:59+00:00",
+      "sha256": "441c69e9dfdc607e7be51943fe234ca9fdb155a632ecb2d83f840fe162fd15d3",
+      "bytes": 2157
+    },
+    {
+      "title": "us_treasury_daily_yield_curve",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "final_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:19:00+00:00",
+      "sha256": "7f2264183f569326a6e375fa1983e59f7291b8e5b417eb0a18e185bccdab2ff6",
+      "bytes": 267958
+    },
+    {
+      "title": "yahoo_wti_history",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CL%3DF?period1=1787875200&period2=1789171200&interval=1d&events=history",
+      "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/CL%3DF?period1=1787875200&period2=1789171200&interval=1d&events=history",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:19:00+00:00",
+      "sha256": "62807c56f8f032f63f6645a9948024b74c46f2e13c1f62eae16b4f26ca821bfe",
+      "bytes": 2084
+    },
+    {
+      "title": "yahoo_brent_history",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF?period1=1787875200&period2=1789171200&interval=1d&events=history",
+      "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF?period1=1787875200&period2=1789171200&interval=1d&events=history",
+      "method": "GET",
+      "request_body": null,
+      "http_status": 200,
+      "retrieved_at_utc": "2026-09-10T02:19:00+00:00",
+      "sha256": "7c39994e30e019f884b77a65d214407f2167ee1c055761b71fc61b732244d582",
+      "bytes": 2155
+    },
+    {
+      "title": "Wall Street dips as $100 oil, inflation worries weigh on investors",
+      "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-09-09/",
+      "data_as_of": "2026-09-09 US close; exact publication clock not exposed in checked extract",
+      "evidence_class": "Reuters checked full article",
+      "facts": [
+        "Brent settlement101.21 +3.4%",
+        "WTI96.05 +3.25%",
+        "US main indices lower",
+        "gold spot source-version about4396 +0.98%"
+      ],
+      "taiwan_mapping": "能源、運輸成本及估值逆風；推論，不是台廠訂單證據"
+    },
+    {
+      "title": "US EIA hikes oil price forecasts as Iran war drains global stockpile",
+      "url": "https://wtvbam.com/2026/09/09/us-eia-hikes-oil-price-forecasts-as-iran-war-drains-global-stockpile/",
+      "canonical_url": "https://www.reuters.com/business/energy/us-eia-hikes-oil-price-forecasts-iran-war-drains-global-stockpile-2026-09-09/",
+      "published_display": "2026-09-09 1:44 PM local display; zone not independently exposed",
+      "evidence_class": "Reuters authorized syndication full body",
+      "facts": [
+        "EIA Brent2026 spot average about91",
+        "2026 WTI84.65",
+        "report finalizedSep3 before latest escalation",
+        "Middle East output shutinsAug6.7m bpd vsJul5m bpd"
+      ]
+    },
+    {
+      "title": "Nvidia teams up with Australian partners to build AI factory capacity",
+      "url": "https://www.thestar.com.my/tech/tech-news/2026/09/10/nvidia-teams-up-with-australian-partners-to-build-ai-factory-capacity",
+      "published_at": "2026-09-10T08:59:00+08:00",
+      "event_date": "2026-09-09",
+      "evidence_class": "Reuters authorized syndication checked body",
+      "facts": [
+        "projects could support up to2GW AI capacity by2027"
+      ],
+      "uncertainty": "not yet installed capacity, named Taiwan orders or revenue"
+    },
+    {
+      "title": "Farside BTC completed9/8",
+      "url": "https://farside.co.uk/btc/",
+      "data_as_of": "2026-09-08",
+      "latest_day_status": "9/9 incomplete"
+    },
+    {
+      "title": "Farside ETH completed9/8",
+      "url": "https://farside.co.uk/ethereum-etf-flow-all-data/",
+      "data_as_of": "2026-09-08",
+      "latest_day_status": "9/9 incomplete"
+    },
+    {
+      "period": "2026-08",
+      "data_as_of": "2026-08-31",
+      "net_flow_usd_b": 18,
+      "holdings_change_tonnes": 121,
+      "holdings_tonnes": 4189,
+      "aum_usd_b": 615,
+      "url": "https://www.gold.org/goldhub/data/global-gold-backed-etf-holdings-and-flows",
+      "title": "World Gold Council August2026 ETF holdings and flows"
+    }
+  ],
+  "research_verification": {
+    "market": {
+      "schema_version": "1.0",
+      "brief_date": "2026-09-10",
+      "evidence_contract": {
+        "context_reference_time": "2026-09-10T10:10:00+08:00",
+        "live_snapshot_policy": "Live async quotes use their actual later retrieval timestamps; the 10:10 context-time comparison uses the last fully elapsed 10:09 one-minute closes.",
+        "retrieval_window_taipei": {
+          "start": "2026-09-10T10:18:52+08:00",
+          "end": "2026-09-10T10:19:00+08:00"
+        },
+        "daily_return_convention": "close_t / close_t-1 - 1",
+        "notes": [
+          "Daily U.S. values are latest complete 2026-09-09 cash-session closes; no exact close clock is invented.",
+          "Live TWSE/TAIFEX quotes preserve separate exchange timestamps. Async basis is explicitly labeled asynchronous."
+        ]
+      },
+      "taiwan": {
+        "twse_session_verification": {
+          "market_open_on_2026_09_10": true,
+          "evidence": "TWSE MIS rtcode 0000, trade date 20260910, non-empty live z/o/h/l and minute bars.",
+          "live_date": "20260910",
+          "live_quote_time_taipei": "2026-09-10T10:18:40+08:00",
+          "open": 47130.96,
+          "high_as_of_quote": 47130.96,
+          "low_as_of_quote": 46573.47,
+          "previous_close": 47183.36,
+          "last": 46701.32,
+          "last_change": -482.04,
+          "last_change_pct": -1.021631,
+          "first_live_minute": {
+            "c": "46816.72",
+            "s": "34330",
+            "t": "1789002060000",
+            "ts": "090100"
+          },
+          "tail_live_minute": {
+            "c": "46701.32",
+            "s": "1081",
+            "t": "1789006740000",
+            "ts": "101900"
+          },
+          "source_keys": [
+            "twse_mis_quote",
+            "twse_mis_1m"
+          ]
+        },
+        "preceding_session_2026_09_09": {
+          "verified_preceding_session": true,
+          "date": "2026-09-09",
+          "open": 47142.74,
+          "high": 47548.26,
+          "low": 47060.78,
+          "close": 47183.36,
+          "source": "TWSE MI_5MINS_HIST official monthly history",
+          "source_key": "twse_mi_5mins_hist",
+          "source_row": {
+            "Date": "2026/09/09",
+            "Opening Index": "47,142.74",
+            "Highest Index": "47,548.26",
+            "Lowest Index": "47,060.78",
+            "Closing Index": "47,183.36"
+          }
+        },
+        "intraday_snapshot": {
+          "taiex": {
+            "value": 46701.32,
+            "reference_previous_close": 47183.36,
+            "change": -482.04,
+            "change_pct": -1.021631,
+            "exchange_time_taipei": "2026-09-10T10:18:40+08:00",
+            "source_key": "twse_mis_quote"
+          },
+          "tx_front_month": {
+            "symbol_id": "TXFI6-F",
+            "display_name_zh": "臺指期096",
+            "display_name_en": "TX096",
+            "contract_identity_method": "first listed standard TXF contract after excluding TXF-S spot helper; display month treated as authoritative",
+            "value": 46618.0,
+            "reference_price": 47178.0,
+            "change": -560.0,
+            "change_pct": -1.186994,
+            "exchange_time_taipei": "2026-09-10T10:18:49+08:00",
+            "source_key": "taifex_quote_list"
+          },
+          "basis_asynchronous": {
+            "value_points": -83.32,
+            "formula": "TAIFEX current last - TWSE current last",
+            "synchronization": "asynchronous",
+            "warning": "Source exchange times differ; this is not a synchronized tick comparison.",
+            "taifex_time": "2026-09-10T10:18:49+08:00",
+            "twse_time": "2026-09-10T10:18:40+08:00"
+          },
+          "context_time_completed_minute_snapshot": {
+            "context_time_taipei": "2026-09-10T10:10:00+08:00",
+            "minute_taipei": "2026-09-10T10:09:00+08:00",
+            "bar_label": "one-minute close",
+            "taiex": 46803.03,
+            "tx_front": 46668.0,
+            "basis_points": -135.03,
+            "formula": "TX one-minute close - TAIEX one-minute close",
+            "source_keys": [
+              "twse_mis_1m",
+              "taifex_front_1m"
+            ]
+          },
+          "basis_synchronized_completed_minute_crosscheck": {
+            "minute_taipei": "2026-09-10T10:17:00+08:00",
+            "bar_label": "one-minute close",
+            "taiex": 46731.87,
+            "tx_front": 46619.0,
+            "basis_points": -112.87,
+            "formula": "TX one-minute close - TAIEX one-minute close",
+            "fully_elapsed_cutoff_used": "2026-09-10T10:17+08:00",
+            "source_keys": [
+              "twse_mis_1m",
+              "taifex_front_1m"
+            ]
+          }
+        },
+        "foreign_tx_positions": {
+          "latest_complete_date": "2026-09-09",
+          "contract_code": "臺股期貨",
+          "item": "外資及陸資",
+          "open_interest": {
+            "long": 10526,
+            "short": 91592,
+            "net_reported": -81066,
+            "net_recomputed": -81066,
+            "formula": "long - short"
+          },
+          "trading_volume": {
+            "long": 47975,
+            "short": 46811,
+            "net_reported": 1164,
+            "net_recomputed": 1164,
+            "formula": "long - short"
+          },
+          "source_key": "taifex_institutional_positions"
+        }
+      },
+      "united_states": {
+        "latest_complete_session": "2026-09-09",
+        "indices": {
+          "SOX": {
+            "name": "PHLX Semiconductor Index",
+            "symbol": "SOX",
+            "trade_date": "2026-09-09",
+            "value": 11931.32,
+            "previous": 11887.87,
+            "change": 43.45,
+            "change_pct": 0.365499,
+            "formulas": {
+              "change": "value - previous",
+              "change_pct": "(value / previous - 1) * 100"
+            },
+            "primary_source": "Nasdaq SOX summary (official current value and previous close)",
+            "primary_source_key": "nasdaq_sox_summary",
+            "date_crosscheck": {
+              "source": "Yahoo Finance chart fallback",
+              "source_key": "yahoo_sox_date_crosscheck",
+              "date": "2026-09-09",
+              "close": 11931.3212890625,
+              "previous_date": "2026-09-08",
+              "previous_close": 11887.8701171875
+            },
+            "official_historical_freshness": {
+              "latest_date": "2026-09-08",
+              "latest_close": 11887.87,
+              "note": "Nasdaq historical lagged one session at retrieval; summary used for official value, Yahoo only to attach/cross-check date."
+            }
+          },
+          "NDX": {
+            "name": "Nasdaq-100",
+            "symbol": "NDX",
+            "trade_date": "2026-09-09",
+            "value": 29421.55,
+            "previous": 29507.7,
+            "change": -86.15,
+            "change_pct": -0.291958,
+            "formulas": {
+              "change": "value - previous",
+              "change_pct": "(value / previous - 1) * 100"
+            },
+            "primary_source": "Nasdaq NDX summary (official current value and previous close)",
+            "primary_source_key": "nasdaq_ndx_summary",
+            "date_crosscheck": {
+              "source": "Yahoo Finance chart fallback",
+              "source_key": "yahoo_ndx_date_crosscheck",
+              "date": "2026-09-09",
+              "close": 29421.552734375,
+              "previous_date": "2026-09-08",
+              "previous_close": 29507.69921875
+            },
+            "official_historical_freshness": {
+              "latest_date": "2026-09-08",
+              "latest_close": 29507.7,
+              "note": "Nasdaq historical lagged one session at retrieval; summary used for official value, Yahoo only to attach/cross-check date."
+            }
+          },
+          "SPX": {
+            "name": "S&P 500 Index",
+            "symbol": "SPX",
+            "trade_date": "2026-09-09",
+            "value": 7636.36,
+            "previous": 7673.52,
+            "change": -37.16,
+            "change_pct": -0.484263,
+            "formulas": {
+              "change": "value - previous",
+              "change_pct": "(value / previous - 1) * 100"
+            },
+            "primary_source": "Cboe official daily history CSV",
+            "primary_source_key": "cboe_spx_history",
+            "previous_date": "2026-09-08",
+            "source_rows": {
+              "current": {
+                "DATE": "09/09/2026",
+                "SPX": "7636.360000"
+              },
+              "previous": {
+                "DATE": "09/08/2026",
+                "SPX": "7673.520000"
+              }
+            }
+          },
+          "VIX": {
+            "name": "Cboe Volatility Index",
+            "symbol": "VIX",
+            "trade_date": "2026-09-09",
+            "value": 16.46,
+            "previous": 15.72,
+            "change": 0.74,
+            "change_pct": 4.707379,
+            "formulas": {
+              "change": "value - previous",
+              "change_pct": "(value / previous - 1) * 100"
+            },
+            "primary_source": "Cboe official daily history CSV",
+            "primary_source_key": "cboe_vix_history",
+            "previous_date": "2026-09-08",
+            "source_rows": {
+              "current": {
+                "DATE": "09/09/2026",
+                "OPEN": "15.650000",
+                "HIGH": "16.680000",
+                "LOW": "15.570000",
+                "CLOSE": "16.460000"
+              },
+              "previous": {
+                "DATE": "09/08/2026",
+                "OPEN": "15.560000",
+                "HIGH": "15.940000",
+                "LOW": "15.220000",
+                "CLOSE": "15.720000"
+              }
+            }
+          },
+          "DJI": {
+            "name": "Dow Jones Industrial Average",
+            "symbol": "^DJI",
+            "trade_date": "2026-09-09",
+            "value": 52380.66,
+            "previous": 52786.07,
+            "change": -405.41,
+            "change_pct": -0.768025,
+            "formulas": {
+              "change": "value - previous",
+              "change_pct": "(value / previous - 1) * 100"
+            },
+            "primary_source": "Yahoo Finance daily chart fallback",
+            "primary_source_key": "yahoo_dji_history",
+            "previous_date": "2026-09-08",
+            "source_rows": {
+              "current": {
+                "timestamp": 1788960600,
+                "date_ny": "2026-09-09",
+                "open": 52707.8984375,
+                "high": 52707.8984375,
+                "low": 52314.609375,
+                "close": 52380.66015625
+              },
+              "previous": {
+                "timestamp": 1788874200,
+                "date_ny": "2026-09-08",
+                "open": 53110.44921875,
+                "high": 53110.44921875,
+                "low": 52721.62109375,
+                "close": 52786.0703125
+              }
+            }
+          }
+        },
+        "mag7": {
+          "AAPL": {
+            "name": "Apple",
+            "symbol": "AAPL",
+            "trade_date": "2026-09-09",
+            "value": 315.34,
+            "previous": 316.22,
+            "change": -0.88,
+            "change_pct": -0.278287,
+            "formulas": {
+              "change": "value - previous",
+              "change_pct": "(value / previous - 1) * 100"
+            },
+            "primary_source": "Nasdaq official historical",
+            "primary_source_key": "nasdaq_aapl_historical",
+            "previous_date": "2026-09-08",
+            "source_rows": {
+              "current": {
+                "date": "09/09/2026",
+                "close": "$315.34",
+                "volume": "65,639,960",
+                "open": "$315.485",
+                "high": "$319.15",
+                "low": "$309.90"
+              },
+              "previous": {
+                "date": "09/08/2026",
+                "close": "$316.22",
+                "volume": "35,477,090",
+                "open": "$317.10",
+                "high": "$320.70",
+                "low": "$314.90"
+              }
+            }
+          },
+          "MSFT": {
+            "name": "Microsoft",
+            "symbol": "MSFT",
+            "trade_date": "2026-09-09",
+            "value": 491.65,
+            "previous": 493.95,
+            "change": -2.3,
+            "change_pct": -0.465634,
+            "formulas": {
+              "change": "value - previous",
+              "change_pct": "(value / previous - 1) * 100"
+            },
+            "primary_source": "Nasdaq official historical",
+            "primary_source_key": "nasdaq_msft_historical",
+            "previous_date": "2026-09-08",
+            "source_rows": {
+              "current": {
+                "date": "09/09/2026",
+                "close": "$491.65",
+                "volume": "12,889,570",
+                "open": "$493.07",
+                "high": "$494.39",
+                "low": "$489.80"
+              },
+              "previous": {
+                "date": "09/08/2026",
+                "close": "$493.95",
+                "volume": "18,882,340",
+                "open": "$493.01",
+                "high": "$495.19",
+                "low": "$490.15"
+              }
+            }
+          },
+          "AMZN": {
+            "name": "Amazon",
+            "symbol": "AMZN",
+            "trade_date": "2026-09-09",
+            "value": 252.4,
+            "previous": 256.97,
+            "change": -4.57,
+            "change_pct": -1.778418,
+            "formulas": {
+              "change": "value - previous",
+              "change_pct": "(value / previous - 1) * 100"
+            },
+            "primary_source": "Nasdaq official historical",
+            "primary_source_key": "nasdaq_amzn_historical",
+            "previous_date": "2026-09-08",
+            "source_rows": {
+              "current": {
+                "date": "09/09/2026",
+                "close": "$252.40",
+                "volume": "33,055,490",
+                "open": "$253.12",
+                "high": "$254.69",
+                "low": "$250.65"
+              },
+              "previous": {
+                "date": "09/08/2026",
+                "close": "$256.97",
+                "volume": "29,397,990",
+                "open": "$256.675",
+                "high": "$257.99",
+                "low": "$254.75"
+              }
+            }
+          },
+          "GOOGL": {
+            "name": "Alphabet Class A",
+            "symbol": "GOOGL",
+            "trade_date": "2026-09-09",
+            "value": 330.65,
+            "previous": 338.36,
+            "change": -7.71,
+            "change_pct": -2.278638,
+            "formulas": {
+              "change": "value - previous",
+              "change_pct": "(value / previous - 1) * 100"
+            },
+            "primary_source": "Nasdaq official historical",
+            "primary_source_key": "nasdaq_googl_historical",
+            "previous_date": "2026-09-08",
+            "source_rows": {
+              "current": {
+                "date": "09/09/2026",
+                "close": "$330.65",
+                "volume": "33,151,630",
+                "open": "$331.65",
+                "high": "$331.85",
+                "low": "$327.90"
+              },
+              "previous": {
+                "date": "09/08/2026",
+                "close": "$338.36",
+                "volume": "22,915,840",
+                "open": "$335.42",
+                "high": "$339.68",
+                "low": "$333.22"
+              }
+            }
+          },
+          "META": {
+            "name": "Meta Platforms",
+            "symbol": "META",
+            "trade_date": "2026-09-09",
+            "value": 653.69,
+            "previous": 613.48,
+            "change": 40.21,
+            "change_pct": 6.554411,
+            "formulas": {
+              "change": "value - previous",
+              "change_pct": "(value / previous - 1) * 100"
+            },
+            "primary_source": "Nasdaq official historical",
+            "primary_source_key": "nasdaq_meta_historical",
+            "previous_date": "2026-09-08",
+            "source_rows": {
+              "current": {
+                "date": "09/09/2026",
+                "close": "$653.69",
+                "volume": "35,900,730",
+                "open": "$648.64",
+                "high": "$657.86",
+                "low": "$638.56"
+              },
+              "previous": {
+                "date": "09/08/2026",
+                "close": "$613.48",
+                "volume": "18,909,710",
+                "open": "$616.205",
+                "high": "$624.80",
+                "low": "$609.74"
+              }
+            }
+          },
+          "NVDA": {
+            "name": "NVIDIA",
+            "symbol": "NVDA",
+            "trade_date": "2026-09-09",
+            "value": 223.67,
+            "previous": 225.73,
+            "change": -2.06,
+            "change_pct": -0.912595,
+            "formulas": {
+              "change": "value - previous",
+              "change_pct": "(value / previous - 1) * 100"
+            },
+            "primary_source": "Nasdaq official historical",
+            "primary_source_key": "nasdaq_nvda_historical",
+            "previous_date": "2026-09-08",
+            "source_rows": {
+              "current": {
+                "date": "09/09/2026",
+                "close": "$223.67",
+                "volume": "82,955,480",
+                "open": "$225.275",
+                "high": "$226.18",
+                "low": "$223.46"
+              },
+              "previous": {
+                "date": "09/08/2026",
+                "close": "$225.73",
+                "volume": "122,965,600",
+                "open": "$233.11",
+                "high": "$233.71",
+                "low": "$224.85"
+              }
+            }
+          },
+          "TSLA": {
+            "name": "Tesla",
+            "symbol": "TSLA",
+            "trade_date": "2026-09-09",
+            "value": 367.81,
+            "previous": 368.16,
+            "change": -0.35,
+            "change_pct": -0.095067,
+            "formulas": {
+              "change": "value - previous",
+              "change_pct": "(value / previous - 1) * 100"
+            },
+            "primary_source": "Nasdaq official historical",
+            "primary_source_key": "nasdaq_tsla_historical",
+            "previous_date": "2026-09-08",
+            "source_rows": {
+              "current": {
+                "date": "09/09/2026",
+                "close": "$367.81",
+                "volume": "32,564,340",
+                "open": "$368.25",
+                "high": "$375.44",
+                "low": "$366.00"
+              },
+              "previous": {
+                "date": "09/08/2026",
+                "close": "$368.16",
+                "volume": "51,078,790",
+                "open": "$357.095",
+                "high": "$370.00",
+                "low": "$355.75"
+              }
+            }
+          }
+        },
+        "macro": {
+          "dxy": {
+            "name": "U.S. Dollar Index",
+            "symbol": "DX-Y.NYB",
+            "trade_date": "2026-09-09",
+            "value": 98.77,
+            "previous": 98.84,
+            "change": -0.07,
+            "change_pct": -0.070822,
+            "formulas": {
+              "change": "value - previous",
+              "change_pct": "(value / previous - 1) * 100"
+            },
+            "primary_source": "Yahoo Finance daily chart fallback",
+            "primary_source_key": "yahoo_dxy_history",
+            "previous_date": "2026-09-08",
+            "source_rows": {
+              "current": {
+                "timestamp": 1788926400,
+                "date_ny": "2026-09-09",
+                "open": 98.80999755859375,
+                "high": 98.9000015258789,
+                "low": 98.5999984741211,
+                "close": 98.7699966430664
+              },
+              "previous": {
+                "timestamp": 1788840000,
+                "date_ny": "2026-09-08",
+                "open": 98.8499984741211,
+                "high": 99.0199966430664,
+                "low": 98.72000122070312,
+                "close": 98.83999633789062
+              }
+            }
+          },
+          "treasury_par_yields": {
+            "trade_date": "2026-09-09",
+            "previous_date": "2026-09-08",
+            "unit": "percent",
+            "primary_source": "U.S. Treasury official daily par yield curve",
+            "primary_source_key": "us_treasury_daily_yield_curve",
+            "maturities": {
+              "2Y": {
+                "value": 4.43,
+                "previous": 4.39,
+                "change": 0.04,
+                "change_pct": 0.911162,
+                "formulas": {
+                  "change": "value - previous",
+                  "change_pct": "(value / previous - 1) * 100"
+                },
+                "change_bp": 4.0,
+                "formula_change_bp": "(yield - previous_yield) * 100"
+              },
+              "10Y": {
+                "value": 4.83,
+                "previous": 4.8,
+                "change": 0.03,
+                "change_pct": 0.625,
+                "formulas": {
+                  "change": "value - previous",
+                  "change_pct": "(value / previous - 1) * 100"
+                },
+                "change_bp": 3.0,
+                "formula_change_bp": "(yield - previous_yield) * 100"
+              },
+              "30Y": {
+                "value": 5.28,
+                "previous": 5.25,
+                "change": 0.03,
+                "change_pct": 0.571429,
+                "formulas": {
+                  "change": "value - previous",
+                  "change_pct": "(value / previous - 1) * 100"
+                },
+                "change_bp": 3.0,
+                "formula_change_bp": "(yield - previous_yield) * 100"
+              }
+            }
+          },
+          "oil": {
+            "CL=F": {
+              "name": "WTI crude futures",
+              "requested_settlement_date": "2026-09-09",
+              "settlement_verified": false,
+              "reason": "Yahoo requested-date daily row is null after evening electronic reopen; current quote is not the Sep 9 settlement.",
+              "source_key": "yahoo_wti_history",
+              "requested_date_row": {
+                "timestamp": 1788926400,
+                "date_ny": "2026-09-09",
+                "open": 96.87999725341797,
+                "high": 97.79000091552734,
+                "low": 96.26000213623047,
+                "close": null
+              },
+              "live_electronic_quote_not_settlement": {
+                "value": 96.26,
+                "timestamp_utc": "2026-09-10T02:08:58+00:00",
+                "timestamp_ny": "2026-09-09T22:08:58-04:00"
+              }
+            },
+            "BZ=F": {
+              "name": "Brent crude futures",
+              "requested_settlement_date": "2026-09-09",
+              "settlement_verified": false,
+              "reason": "Yahoo requested-date daily row is null after evening electronic reopen; current quote is not the Sep 9 settlement.",
+              "source_key": "yahoo_brent_history",
+              "requested_date_row": {
+                "timestamp": 1788926400,
+                "date_ny": "2026-09-09",
+                "open": 101.80000305175781,
+                "high": 102.56999969482422,
+                "low": 101.05000305175781,
+                "close": null
+              },
+              "live_electronic_quote_not_settlement": {
+                "value": 101.12,
+                "timestamp_utc": "2026-09-10T02:08:02+00:00",
+                "timestamp_ny": "2026-09-09T22:08:02-04:00"
+              }
+            }
+          }
+        }
+      },
+      "sources": {
+        "twse_mis_quote": {
+          "url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+          "final_url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:52+00:00",
+          "sha256": "3851dba9c448aa10e7ec83a24fa9519f1cdaadda517405dcbdf316e35ea5aa9e",
+          "bytes": 697
+        },
+        "twse_mis_1m": {
+          "url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+          "final_url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:52+00:00",
+          "sha256": "9225bc39a7f86126dcb6db8f370fd15eef54b3c8854a298a410f308469e82cf8",
+          "bytes": 5807
+        },
+        "twse_mi_5mins_hist": {
+          "url": "https://www.twse.com.tw/rwd/en/TAIEX/MI_5MINS_HIST?date=20260910&response=json",
+          "final_url": "https://www.twse.com.tw/rwd/en/TAIEX/MI_5MINS_HIST?date=20260910&response=json",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:52+00:00",
+          "sha256": "4bd88dd9050cd482d615402d29947817864a4187a544268e3415a09ffb6b73a5",
+          "bytes": 624
+        },
+        "taifex_quote_list": {
+          "url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+          "final_url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+          "method": "POST",
+          "request_body": {
+            "MarketType": "0",
+            "SymbolType": "F",
+            "KindID": "1",
+            "CID": "",
+            "ExpireMonth": ""
+          },
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:53+00:00",
+          "sha256": "f0d0f193faa755ff08323647aeca4fe87e3e50e9f424a5e04aa313d949e15928",
+          "bytes": 6346
+        },
+        "taifex_front_1m": {
+          "url": "https://mis.taifex.com.tw/futures/api/getChartData1M",
+          "final_url": "https://mis.taifex.com.tw/futures/api/getChartData1M",
+          "method": "POST",
+          "request_body": {
+            "SymbolID": "TXFI6-F"
+          },
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:53+00:00",
+          "sha256": "8374a5008cb69354556b2d7f3d6cacbbf7e3e035478c516093a9382340a26d7b",
+          "bytes": 6787
+        },
+        "taifex_institutional_positions": {
+          "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+          "final_url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:53+00:00",
+          "sha256": "49ffff4895bde90bc0de58bf75a63e3dc4f7a31652a143e8751749c5ff743df4",
+          "bytes": 34036
+        },
+        "nasdaq_sox_historical": {
+          "url": "https://api.nasdaq.com/api/quote/SOX/historical?assetclass=index&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+          "final_url": "https://api.nasdaq.com/api/quote/SOX/historical?assetclass=index&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:53+00:00",
+          "sha256": "18998c552a5d5a817b223ea5131129f58d326aaba7c2982a75d9a1f2ccc6f71f",
+          "bytes": 602
+        },
+        "nasdaq_sox_summary": {
+          "url": "https://api.nasdaq.com/api/quote/SOX/summary?assetclass=index",
+          "final_url": "https://api.nasdaq.com/api/quote/SOX/summary?assetclass=index",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:53+00:00",
+          "sha256": "f00b99214809ba88e2fb3c42bf2515c1f5a749f081f641897c49d5a0eca53138",
+          "bytes": 495
+        },
+        "yahoo_sox_date_crosscheck": {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?period1=1787875200&period2=1789171200&interval=1d&events=history",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?period1=1787875200&period2=1789171200&interval=1d&events=history",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:53+00:00",
+          "sha256": "b8cf2136dfb86924f46825be6446d4da304620f79598592aced633e427d916a4",
+          "bytes": 1957
+        },
+        "nasdaq_ndx_historical": {
+          "url": "https://api.nasdaq.com/api/quote/NDX/historical?assetclass=index&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+          "final_url": "https://api.nasdaq.com/api/quote/NDX/historical?assetclass=index&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:54+00:00",
+          "sha256": "902901a5f7f435b66a3a673a9153c4765642f96a688597d1bef258de222cfe8d",
+          "bytes": 602
+        },
+        "nasdaq_ndx_summary": {
+          "url": "https://api.nasdaq.com/api/quote/NDX/summary?assetclass=index",
+          "final_url": "https://api.nasdaq.com/api/quote/NDX/summary?assetclass=index",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:54+00:00",
+          "sha256": "51bd396379db70d73a75a107bb3e3662d4905678158c83b5eec6d10c86cc1eb4",
+          "bytes": 497
+        },
+        "yahoo_ndx_date_crosscheck": {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ENDX?period1=1787875200&period2=1789171200&interval=1d&events=history",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ENDX?period1=1787875200&period2=1789171200&interval=1d&events=history",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:54+00:00",
+          "sha256": "a6c412cd280ba70196c63458df9b99f22efb95672be515c81be10624a5081720",
+          "bytes": 1997
+        },
+        "cboe_spx_history": {
+          "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SPX_History.csv",
+          "final_url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SPX_History.csv",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:55+00:00",
+          "sha256": "99fc6b4eac1a39e154d00044cd0bc9f5db6a2479ed630dd1601c973c1a69ff76",
+          "bytes": 292619
+        },
+        "cboe_vix_history": {
+          "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+          "final_url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:57+00:00",
+          "sha256": "f0ad5e46d3acaf713d419e2c4ac32f1c2f98d64779d1d07108cd8666cc99e1f7",
+          "bytes": 472462
+        },
+        "yahoo_dji_history": {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?period1=1787875200&period2=1789171200&interval=1d&events=history",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?period1=1787875200&period2=1789171200&interval=1d&events=history",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:57+00:00",
+          "sha256": "06b493dd8e809285d6b22664dff3fe414f8b4e4157a49639a8394e537e892f50",
+          "bytes": 1948
+        },
+        "nasdaq_aapl_historical": {
+          "url": "https://api.nasdaq.com/api/quote/AAPL/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+          "final_url": "https://api.nasdaq.com/api/quote/AAPL/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:57+00:00",
+          "sha256": "9c2ee42a8c4e09585ee6b4bdefb11e69159506729a0ccd0aee8ad7002db76905",
+          "bytes": 717
+        },
+        "nasdaq_msft_historical": {
+          "url": "https://api.nasdaq.com/api/quote/MSFT/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+          "final_url": "https://api.nasdaq.com/api/quote/MSFT/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:57+00:00",
+          "sha256": "a3f0a9b8c87cbfd04cbada74cb2d3a094aab40e0a2f16233df98d4219c91b363",
+          "bytes": 715
+        },
+        "nasdaq_amzn_historical": {
+          "url": "https://api.nasdaq.com/api/quote/AMZN/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+          "final_url": "https://api.nasdaq.com/api/quote/AMZN/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:58+00:00",
+          "sha256": "e255eb665196267082f911b33f0b727a824a6f815e29665a04b589d0377a61af",
+          "bytes": 716
+        },
+        "nasdaq_googl_historical": {
+          "url": "https://api.nasdaq.com/api/quote/GOOGL/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+          "final_url": "https://api.nasdaq.com/api/quote/GOOGL/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:58+00:00",
+          "sha256": "46e994ad7ae812505996f26766404e829999cc1ed20728fefdf97f93e03cb1fe",
+          "bytes": 717
+        },
+        "nasdaq_meta_historical": {
+          "url": "https://api.nasdaq.com/api/quote/META/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+          "final_url": "https://api.nasdaq.com/api/quote/META/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:58+00:00",
+          "sha256": "0c875ae99b3d85530beccdc5219a4567c8d07040b6665b71e5f5f6fcd4ce01be",
+          "bytes": 716
+        },
+        "nasdaq_nvda_historical": {
+          "url": "https://api.nasdaq.com/api/quote/NVDA/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+          "final_url": "https://api.nasdaq.com/api/quote/NVDA/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:59+00:00",
+          "sha256": "c6e282ac52619d6735a547ff44e358ef47aa4cb0ca452b3ec9a541321020ba99",
+          "bytes": 719
+        },
+        "nasdaq_tsla_historical": {
+          "url": "https://api.nasdaq.com/api/quote/TSLA/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+          "final_url": "https://api.nasdaq.com/api/quote/TSLA/historical?assetclass=stocks&fromdate=2026-09-03&todate=2026-09-10&limit=10",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:59+00:00",
+          "sha256": "52e7732022b908c37a4f77476cf7b5e432ccc22449d2f1acc1a6e4f272767250",
+          "bytes": 719
+        },
+        "yahoo_dxy_history": {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1787875200&period2=1789171200&interval=1d&events=history",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1787875200&period2=1789171200&interval=1d&events=history",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:18:59+00:00",
+          "sha256": "441c69e9dfdc607e7be51943fe234ca9fdb155a632ecb2d83f840fe162fd15d3",
+          "bytes": 2157
+        },
+        "us_treasury_daily_yield_curve": {
+          "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026",
+          "final_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:19:00+00:00",
+          "sha256": "7f2264183f569326a6e375fa1983e59f7291b8e5b417eb0a18e185bccdab2ff6",
+          "bytes": 267958
+        },
+        "yahoo_wti_history": {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/CL%3DF?period1=1787875200&period2=1789171200&interval=1d&events=history",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/CL%3DF?period1=1787875200&period2=1789171200&interval=1d&events=history",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:19:00+00:00",
+          "sha256": "62807c56f8f032f63f6645a9948024b74c46f2e13c1f62eae16b4f26ca821bfe",
+          "bytes": 2084
+        },
+        "yahoo_brent_history": {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF?period1=1787875200&period2=1789171200&interval=1d&events=history",
+          "final_url": "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF?period1=1787875200&period2=1789171200&interval=1d&events=history",
+          "method": "GET",
+          "request_body": null,
+          "http_status": 200,
+          "retrieved_at_utc": "2026-09-10T02:19:00+00:00",
+          "sha256": "7c39994e30e019f884b77a65d214407f2167ee1c055761b71fc61b732244d582",
+          "bytes": 2155
+        }
+      },
+      "verification": {
+        "assertions_passed": [
+          "TWSE live quote carries 20260910 with rtcode 0000 and non-empty minute series.",
+          "TWSE MI_5MINS_HIST contains the 2026/09/09 preceding-session OHLC row.",
+          "TAIFEX front contract selected from official quote list, excluding TXF-S.",
+          "Async basis recomputed as futures last minus spot last with separate timestamps.",
+          "Common-minute basis selected no later than the fully elapsed minute.",
+          "Foreign OI and trading nets independently equal official reported nets.",
+          "SOX and NDX official summary values agree with dated Yahoo 2026-09-09 rows within 0.02 points.",
+          "SPX and VIX official Cboe rows exist for both 2026-09-09 and 2026-09-08.",
+          "All seven Nasdaq stock histories contain both 2026-09-09 and 2026-09-08.",
+          "Treasury official curve contains 2Y, 10Y, and 30Y for 2026-09-09 and 2026-09-08.",
+          "Oil Sep 9 settlements were not fabricated from post-reopen Yahoo live quotes."
+        ],
+        "status": "pass"
+      }
+    },
+    "news": [
+      {
+        "title": "Wall Street dips as $100 oil, inflation worries weigh on investors",
+        "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-09-09/",
+        "data_as_of": "2026-09-09 US close; exact publication clock not exposed in checked extract",
+        "evidence_class": "Reuters checked full article",
+        "facts": [
+          "Brent settlement101.21 +3.4%",
+          "WTI96.05 +3.25%",
+          "US main indices lower",
+          "gold spot source-version about4396 +0.98%"
+        ],
+        "taiwan_mapping": "能源、運輸成本及估值逆風；推論，不是台廠訂單證據"
+      },
+      {
+        "title": "US EIA hikes oil price forecasts as Iran war drains global stockpile",
+        "url": "https://wtvbam.com/2026/09/09/us-eia-hikes-oil-price-forecasts-as-iran-war-drains-global-stockpile/",
+        "canonical_url": "https://www.reuters.com/business/energy/us-eia-hikes-oil-price-forecasts-iran-war-drains-global-stockpile-2026-09-09/",
+        "published_display": "2026-09-09 1:44 PM local display; zone not independently exposed",
+        "evidence_class": "Reuters authorized syndication full body",
+        "facts": [
+          "EIA Brent2026 spot average about91",
+          "2026 WTI84.65",
+          "report finalizedSep3 before latest escalation",
+          "Middle East output shutinsAug6.7m bpd vsJul5m bpd"
+        ]
+      },
+      {
+        "title": "Nvidia teams up with Australian partners to build AI factory capacity",
+        "url": "https://www.thestar.com.my/tech/tech-news/2026/09/10/nvidia-teams-up-with-australian-partners-to-build-ai-factory-capacity",
+        "published_at": "2026-09-10T08:59:00+08:00",
+        "event_date": "2026-09-09",
+        "evidence_class": "Reuters authorized syndication checked body",
+        "facts": [
+          "projects could support up to2GW AI capacity by2027"
+        ],
+        "uncertainty": "not yet installed capacity, named Taiwan orders or revenue"
+      }
+    ],
+    "crypto": "parent independently refetched3bars and recomputed returns and volume ratios",
+    "flows": "9/8 per-fund sums verified; reject incomplete9/9; no weekly aggregation from inconsistent caches",
+    "parent_exchange_hashes": {
+      "twse_mi_5mins_hist": false,
+      "cboe_vix_history": true,
+      "nasdaq_meta_historical": true,
+      "taifex_institutional_positions": true
+    },
+    "parent_etf_checks": [
+      "GLD",
+      "TLT"
+    ],
+    "calendar": "child official dated TWSE MIS and MI_5MINS_HIST verified; parent MI_5MINS repeat blocked; not confused with exchange closure"
+  },
+  "technical_spider_sync": {
+    "as_of": "2026-09-10",
+    "records": 73,
+    "missing": 0,
+    "validation_issues": [],
+    "independent_from_editorial": true
+  },
+  "xurl_signal_layer": {
+    "status": "no_material_signal",
+    "signals_count": 0,
+    "included_in_revision": false,
+    "window": "2026-09-09 through2026-09-10 morning Asia/Taipei",
+    "signals": [],
+    "note": "No same-day direct original confirmed; no synthetic social signals."
+  }
+}
