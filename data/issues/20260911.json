@@ -1,0 +1,5022 @@
+{
+  "date": "2026-09-11",
+  "day": "Friday",
+  "issue_no": 85,
+  "data_as_of": "2026-09-11",
+  "brief_label": "盤中整合版",
+  "source_ark": "ark_stocks.json",
+  "ark": {
+    "water_level": 79.8,
+    "holding_allocation_suggestion": "79.8%",
+    "as_of": "2026-09-11",
+    "source_time": "2026-09-11T09:05:39.337+08:00",
+    "status": "validated",
+    "source_file": "ark_stocks.json",
+    "prev": 75.3,
+    "previous_water_level": 75.3,
+    "delta": 4.5,
+    "change": 4.5,
+    "direction": "上升",
+    "exported_at": "2026-09-11T09:08:12+08:00",
+    "interpretation": "水位上升代表市場健康度與可部署空間改善，不等於立即買進或追價。",
+    "note": "較前一交易日9/10的75.3%上升 <strong>4.5個百分點</strong>。市場健康度與可部署空間改善；外部壓力加重，仍不等於可以追價。"
+  },
+  "etf": {
+    "value": [
+      {
+        "code": "00631L",
+        "name": "元大台灣50正2",
+        "price": "36.06",
+        "change": "▼1.09 (-2.93%)",
+        "nav_label": "即時淨值",
+        "nav_value": "35.99",
+        "premium_label": "折溢價",
+        "premium_value": "0.22%",
+        "market_label": "來源股價",
+        "market_value": "36.06",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0053",
+        "name": "元大電子",
+        "price": "—",
+        "change": "—",
+        "nav_label": "即時淨值",
+        "nav_value": "241.04",
+        "premium_label": "折溢價",
+        "premium_value": "2.06%",
+        "market_label": "來源股價",
+        "market_value": "—",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "006208",
+        "name": "富邦台50",
+        "price": "246",
+        "change": "▼3.55 (-1.42%)",
+        "nav_label": "即時淨值",
+        "nav_value": "246.72",
+        "premium_label": "折溢價",
+        "premium_value": "-0.25%",
+        "market_label": "來源股價",
+        "market_value": "246",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0050",
+        "name": "元大台灣50",
+        "price": "107.45",
+        "change": "▼1.7 (-1.56%)",
+        "nav_label": "即時淨值",
+        "nav_value": "107.71",
+        "premium_label": "折溢價",
+        "premium_value": "-0.24%",
+        "market_label": "來源股價",
+        "market_value": "107.45",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0052",
+        "name": "富邦科技",
+        "price": "62.55",
+        "change": "▼1.05 (-1.65%)",
+        "nav_label": "即時淨值",
+        "nav_value": "62.75",
+        "premium_label": "折溢價",
+        "premium_value": "-0.24%",
+        "market_label": "來源股價",
+        "market_value": "62.55",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0056",
+        "name": "元大高股息",
+        "price": "55.05",
+        "change": "▼0.65 (-1.17%)",
+        "nav_label": "即時淨值",
+        "nav_value": "55.15",
+        "premium_label": "折溢價",
+        "premium_value": "-0.18%",
+        "market_label": "來源股價",
+        "market_value": "55.05",
+        "cross_label": "價值×升溫",
+        "cross_value": "是"
+      },
+      {
+        "code": "0057",
+        "name": "富邦摩台",
+        "price": "—",
+        "change": "—",
+        "nav_label": "即時淨值",
+        "nav_value": "320.73",
+        "premium_label": "折溢價",
+        "premium_value": "1.28%",
+        "market_label": "來源股價",
+        "market_value": "—",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0055",
+        "name": "元大MSCI金融",
+        "price": "48.48",
+        "change": "▼0.13 (-0.27%)",
+        "nav_label": "即時淨值",
+        "nav_value": "48.6",
+        "premium_label": "折溢價",
+        "premium_value": "-0.25%",
+        "market_label": "來源股價",
+        "market_value": "48.48",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "00960",
+        "name": "野村全球航運龍頭",
+        "price": "21.75",
+        "change": "▲0.22 (+1.02%)",
+        "nav_label": "即時淨值",
+        "nav_value": "21.9",
+        "premium_label": "折溢價",
+        "premium_value": "-0.68%",
+        "market_label": "來源股價",
+        "market_value": "21.75",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "006203",
+        "name": "元大MSCI台灣",
+        "price": "—",
+        "change": "—",
+        "nav_label": "即時淨值",
+        "nav_value": "195.47",
+        "premium_label": "折溢價",
+        "premium_value": "2.01%",
+        "market_label": "來源股價",
+        "market_value": "—",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      }
+    ],
+    "rising": [
+      {
+        "code": "00642U",
+        "name": "期元大S&P石油",
+        "price": "33.63",
+        "change": "▲1.94 (+6.12%)",
+        "nav_label": "即時淨值",
+        "nav_value": "33.64",
+        "premium_label": "折溢價",
+        "premium_value": "-0.06%",
+        "market_label": "來源股價",
+        "market_value": "33.63",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "00715L",
+        "name": "期街口布蘭特正2",
+        "price": "71.2",
+        "change": "▲8.2 (+13.02%)",
+        "nav_label": "即時淨值",
+        "nav_value": "71.01",
+        "premium_label": "折溢價",
+        "premium_value": "0.05%",
+        "market_label": "來源股價",
+        "market_value": "71.2",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "00701",
+        "name": "國泰股利精選30",
+        "price": "40.4",
+        "change": "▼0.18 (-0.44%)",
+        "nav_label": "即時淨值",
+        "nav_value": "40.52",
+        "premium_label": "折溢價",
+        "premium_value": "0.15%",
+        "market_label": "來源股價",
+        "market_value": "40.4",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "00938",
+        "name": "凱基優選30",
+        "price": "26.27",
+        "change": "▼0.2 (-0.76%)",
+        "nav_label": "即時淨值",
+        "nav_value": "26.27",
+        "premium_label": "折溢價",
+        "premium_value": "0%",
+        "market_label": "來源股價",
+        "market_value": "26.27",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "009809",
+        "name": "富邦淨零ESG50",
+        "price": "18.09",
+        "change": "▼0.17 (-0.93%)",
+        "nav_label": "即時淨值",
+        "nav_value": "18.05",
+        "premium_label": "折溢價",
+        "premium_value": "0.22%",
+        "market_label": "來源股價",
+        "market_value": "18.09",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "00939",
+        "name": "統一台灣高息動能",
+        "price": "23.54",
+        "change": "▼0.2 (-0.84%)",
+        "nav_label": "即時淨值",
+        "nav_value": "23.67",
+        "premium_label": "折溢價",
+        "premium_value": "-0.51%",
+        "market_label": "來源股價",
+        "market_value": "23.54",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0056",
+        "name": "元大高股息",
+        "price": "55",
+        "change": "▼0.7 (-1.26%)",
+        "nav_label": "即時淨值",
+        "nav_value": "55.12",
+        "premium_label": "折溢價",
+        "premium_value": "-0.13%",
+        "market_label": "來源股價",
+        "market_value": "55",
+        "cross_label": "價值×升溫",
+        "cross_value": "是"
+      }
+    ],
+    "overlap": [
+      "0056"
+    ],
+    "overlap_names": {
+      "0056": "元大高股息"
+    },
+    "thesis": "石油期貨ETF在升溫區領先，但能源上漲不等於股市全面轉強；0056是本次唯一ETF雙區重疊，仍須看價格與折溢價。"
+  },
+  "stocks": {
+    "value": [
+      {
+        "code": "6285",
+        "name": "啟碁",
+        "industry": "無線通訊設備",
+        "price": "223.5",
+        "change": "▼3.5 (-1.54%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-7.15",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "81.21"
+      },
+      {
+        "code": "6415",
+        "name": "矽力*-KY",
+        "industry": "IC設計",
+        "price": "400",
+        "change": "▼5 (-1.23%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "13.08",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "58.55"
+      },
+      {
+        "code": "2059",
+        "name": "川湖",
+        "industry": "電子零組件",
+        "price": "12,110",
+        "change": "▼490 (-3.89%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "0.92",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "344.42"
+      },
+      {
+        "code": "3665",
+        "name": "貿聯-KY",
+        "industry": "連接線材",
+        "price": "1,865",
+        "change": "▼65 (-3.37%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-7.67",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "53.99"
+      },
+      {
+        "code": "2324",
+        "name": "仁寶",
+        "industry": "電子設備",
+        "price": "37.9",
+        "change": "▼0.75 (-1.94%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-16.87",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "14.5"
+      },
+      {
+        "code": "2345",
+        "name": "智邦",
+        "industry": "網路設備",
+        "price": "1,910",
+        "change": "▼55 (-2.8%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "3.55",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "59.42"
+      },
+      {
+        "code": "1785",
+        "name": "光洋科",
+        "industry": "非鐵金屬",
+        "price": "96.7",
+        "change": "▼1.6 (-1.63%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-14.17",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "30.71"
+      },
+      {
+        "code": "2313",
+        "name": "華通",
+        "industry": "硬板",
+        "price": "220.5",
+        "change": "▼5 (-2.22%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "0.82",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "6.87"
+      },
+      {
+        "code": "2383",
+        "name": "台光電",
+        "industry": "銅箔基板",
+        "price": "5,320",
+        "change": "▼55 (-1.02%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "4.89",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "129.85"
+      },
+      {
+        "code": "2379",
+        "name": "瑞昱",
+        "industry": "IC設計",
+        "price": "695",
+        "change": "▼1 (-0.14%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-3.38",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "28.08"
+      },
+      {
+        "code": "6213",
+        "name": "聯茂",
+        "industry": "銅箔基板",
+        "price": "519",
+        "change": "0 (0%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "6.21",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "97.93"
+      },
+      {
+        "code": "2308",
+        "name": "台達電",
+        "industry": "電源供應器",
+        "price": "1,600",
+        "change": "▼75 (-4.48%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-3.71",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "34.95"
+      },
+      {
+        "code": "3008",
+        "name": "大立光",
+        "industry": "光學鏡片與鏡頭",
+        "price": "6,450",
+        "change": "▼270 (-4.02%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "2.76",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "-16.23"
+      },
+      {
+        "code": "6274",
+        "name": "台燿",
+        "industry": "銅箔基板",
+        "price": "1,365",
+        "change": "▼30 (-2.15%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "0.11",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "132.48"
+      },
+      {
+        "code": "3189",
+        "name": "景碩",
+        "industry": "IC基板",
+        "price": "813",
+        "change": "▼14 (-1.69%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "5.73",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "40.58"
+      },
+      {
+        "code": "6239",
+        "name": "力成",
+        "industry": "IC封裝測試",
+        "price": "276.5",
+        "change": "▼7 (-2.47%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "3.48",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "24.46"
+      },
+      {
+        "code": "2382",
+        "name": "廣達",
+        "industry": "伺服器組裝代工",
+        "price": "332.5",
+        "change": "▼3.5 (-1.04%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "15.75",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "177.45"
+      },
+      {
+        "code": "4958",
+        "name": "臻鼎-KY",
+        "industry": "軟板",
+        "price": "483.5",
+        "change": "▼11 (-2.22%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "17.42",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "41.05"
+      },
+      {
+        "code": "3034",
+        "name": "聯詠",
+        "industry": "驅動IC",
+        "price": "539",
+        "change": "▼6 (-1.1%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "0.3",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "26.33"
+      },
+      {
+        "code": "2449",
+        "name": "京元電子",
+        "industry": "IC測試",
+        "price": "264.5",
+        "change": "▼7 (-2.58%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "2.24",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "31.58"
+      },
+      {
+        "code": "6515",
+        "name": "穎崴",
+        "industry": "IC封裝測試設備",
+        "price": "7,035",
+        "change": "▼160 (-2.22%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "6.58",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "233.37"
+      },
+      {
+        "code": "2327",
+        "name": "國巨*",
+        "industry": "MLCC",
+        "price": "567",
+        "change": "▼5 (-0.87%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "1.25",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "51.8"
+      },
+      {
+        "code": "3037",
+        "name": "欣興",
+        "industry": "IC基板",
+        "price": "978",
+        "change": "▼16 (-1.61%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "9.18",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "56.26"
+      },
+      {
+        "code": "2330",
+        "name": "台積電",
+        "industry": "晶圓代工",
+        "price": "2,420",
+        "change": "▼30 (-1.22%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "10.1",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "53.32"
+      },
+      {
+        "code": "2360",
+        "name": "致茂",
+        "industry": "半導體設備",
+        "price": "2,220",
+        "change": "▲40 (+1.83%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "3.65",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "156.3"
+      },
+      {
+        "code": "6223",
+        "name": "旺矽",
+        "industry": "IC封裝測試設備",
+        "price": "5,690",
+        "change": "▲70 (+1.25%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "13.45",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "69.87"
+      },
+      {
+        "code": "5274",
+        "name": "信驊",
+        "industry": "IC設計",
+        "price": "18,150",
+        "change": "▼550 (-2.94%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "6.69",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "118.42"
+      },
+      {
+        "code": "3711",
+        "name": "日月光投控",
+        "industry": "IC封裝測試",
+        "price": "618",
+        "change": "▼32 (-4.92%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "11.47",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "45.66"
+      },
+      {
+        "code": "2454",
+        "name": "聯發科",
+        "industry": "IC設計",
+        "price": "4,595",
+        "change": "▼125 (-2.65%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-16.44",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "12.16"
+      },
+      {
+        "code": "2455",
+        "name": "全新",
+        "industry": "砷化鎵代工",
+        "price": "520",
+        "change": "▼12 (-2.26%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "11.56",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "71.16"
+      },
+      {
+        "code": "2303",
+        "name": "聯電",
+        "industry": "晶圓代工",
+        "price": "139.5",
+        "change": "▼3 (-2.11%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "5.04",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "30.71"
+      }
+    ],
+    "rising": [
+      {
+        "code": "6214",
+        "name": "精誠",
+        "industry": "軟體其他",
+        "price": "188.5",
+        "change": "▲1 (+0.53%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "24.36",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "61.91"
+      },
+      {
+        "code": "6538",
+        "name": "倉和",
+        "industry": "太陽能",
+        "price": "349.5",
+        "change": "▲11 (+3.25%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "6.81",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "55.67"
+      },
+      {
+        "code": "6021",
+        "name": "美好證",
+        "industry": "證券",
+        "price": "42.6",
+        "change": "▼0.2 (-0.47%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "95.6",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "-35.72"
+      },
+      {
+        "code": "6173",
+        "name": "信昌電",
+        "industry": "MLCC",
+        "price": "311",
+        "change": "▲16 (+5.42%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "2.69",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "54.27"
+      },
+      {
+        "code": "8227",
+        "name": "巨有科技",
+        "industry": "矽智財",
+        "price": "238",
+        "change": "▲20.5 (+9.43%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "14.2",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "42.25"
+      },
+      {
+        "code": "6739",
+        "name": "竹陞科技",
+        "industry": "系統整合",
+        "price": "1,350",
+        "change": "▲30 (+2.27%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "7.34",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "96.73"
+      },
+      {
+        "code": "2883",
+        "name": "凱基金",
+        "industry": "金控",
+        "price": "36.95",
+        "change": "▼0.25 (-0.67%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-36.51",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "-36.44"
+      },
+      {
+        "code": "3374",
+        "name": "精材",
+        "industry": "IC封裝測試",
+        "price": "481.5",
+        "change": "▼6.5 (-1.33%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "5.58",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "36.74"
+      },
+      {
+        "code": "6426",
+        "name": "統新",
+        "industry": "光通訊設備",
+        "price": "321.5",
+        "change": "▼0.5 (-0.16%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-6.33",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "78.21"
+      },
+      {
+        "code": "2305",
+        "name": "全友",
+        "industry": "掃描器",
+        "price": "38.95",
+        "change": "▲0.45 (+1.17%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "1.49",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "239.99"
+      },
+      {
+        "code": "2880",
+        "name": "華南金",
+        "industry": "金控",
+        "price": "45.15",
+        "change": "▲0.35 (+0.78%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "3.45",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "6.47"
+      },
+      {
+        "code": "2884",
+        "name": "玉山金",
+        "industry": "金控",
+        "price": "44.8",
+        "change": "▼0.15 (-0.33%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "12.3",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "19.29"
+      },
+      {
+        "code": "3055",
+        "name": "蔚華科",
+        "industry": "半導體設備",
+        "price": "157",
+        "change": "▼3 (-1.88%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "14.06",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "108.24"
+      },
+      {
+        "code": "2885",
+        "name": "元大金",
+        "industry": "金控",
+        "price": "69.3",
+        "change": "▼0.4 (-0.57%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-10.3",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "78.99"
+      },
+      {
+        "code": "6505",
+        "name": "台塑化",
+        "industry": "石油",
+        "price": "87.4",
+        "change": "▲1.2 (+1.39%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "9.47",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "50.29"
+      },
+      {
+        "code": "2887",
+        "name": "台新新光金",
+        "industry": "金控",
+        "price": "42.1",
+        "change": "▼0.05 (-0.12%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "1.78",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "-15.63"
+      },
+      {
+        "code": "6179",
+        "name": "亞通",
+        "industry": "營造工程",
+        "price": "37.45",
+        "change": "▼0.75 (-1.96%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-0.47",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "298.44"
+      },
+      {
+        "code": "6196",
+        "name": "帆宣",
+        "industry": "半導體設備",
+        "price": "525",
+        "change": "▼10 (-1.87%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-3.98",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "83.89"
+      },
+      {
+        "code": "2492",
+        "name": "華新科",
+        "industry": "MLCC",
+        "price": "335.5",
+        "change": "▲1.5 (+0.45%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "2.81",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "45.54"
+      },
+      {
+        "code": "2303",
+        "name": "聯電",
+        "industry": "晶圓代工",
+        "price": "139.5",
+        "change": "▼3 (-2.11%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "5.04",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "30.71"
+      },
+      {
+        "code": "4908",
+        "name": "前鼎",
+        "industry": "光通訊設備",
+        "price": "241",
+        "change": "▼8 (-3.21%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "8.2",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "51.63"
+      },
+      {
+        "code": "3693",
+        "name": "營邦",
+        "industry": "工業電腦",
+        "price": "681",
+        "change": "▼10 (-1.45%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "3.42",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "171.01"
+      },
+      {
+        "code": "2855",
+        "name": "統一證",
+        "industry": "證券",
+        "price": "50.7",
+        "change": "▼1 (-1.93%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "-"
+      },
+      {
+        "code": "2801",
+        "name": "彰銀",
+        "industry": "銀行",
+        "price": "26.8",
+        "change": "▼0.05 (-0.19%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-3.79",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "21.13"
+      },
+      {
+        "code": "6933",
+        "name": "AMAX-KY",
+        "industry": "伺服器機殼",
+        "price": "334",
+        "change": "▼2 (-0.6%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-5.75",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "191.26"
+      },
+      {
+        "code": "2454",
+        "name": "聯發科",
+        "industry": "IC設計",
+        "price": "4,580",
+        "change": "▼140 (-2.97%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-16.44",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "12.16"
+      },
+      {
+        "code": "2890",
+        "name": "永豐金",
+        "industry": "金控",
+        "price": "42.95",
+        "change": "▲0.05 (+0.12%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "0.98",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "49.48"
+      },
+      {
+        "code": "3711",
+        "name": "日月光投控",
+        "industry": "IC封裝測試",
+        "price": "616",
+        "change": "▼34 (-5.23%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "11.47",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "45.66"
+      },
+      {
+        "code": "6016",
+        "name": "康和證",
+        "industry": "證券",
+        "price": "22.15",
+        "change": "▼0.4 (-1.77%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "235.28",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "215.39"
+      },
+      {
+        "code": "3406",
+        "name": "玉晶光",
+        "industry": "光學鏡片與鏡頭",
+        "price": "1,010",
+        "change": "▼60 (-5.61%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "12.26",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "0.72"
+      }
+    ],
+    "overlap": [
+      "3711",
+      "2454",
+      "2303"
+    ],
+    "overlap_names": {
+      "3711": "日月光投控",
+      "2454": "聯發科",
+      "2303": "聯電"
+    },
+    "thesis": "產業價值區28跌2漲1平，升溫區20跌10漲；聯電、聯發科、日月光投控同在雙區，不代表當下已轉強。"
+  },
+  "ark_source_validation": {
+    "status": "pass",
+    "date": "2026-09-11",
+    "scope": "Ark四區正規化審核；未修改repo、未發布",
+    "source": {
+      "input": "/Users/kaide/Pictures/方舟運算截圖/ark_stocks_latest.json",
+      "run_dir": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-09-11_09-05-03",
+      "source_folder_matches_run_dir": true,
+      "success_file": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-09-11_09-05-03/success.json",
+      "validation_file": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-09-11_09-05-03/ark_validation.json",
+      "ax_file": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-09-11_09-05-03/ark_stocks_ax.json",
+      "run_id": "2026-09-11_09-05-03",
+      "started_at": "2026-09-11T09:05:03+08:00",
+      "finished_at": "2026-09-11T09:08:12+08:00",
+      "generated_at_utc": "2026-09-11T01:08:11.726036+00:00"
+    },
+    "success_gate": {
+      "ok": true,
+      "stage": "complete",
+      "status": "success",
+      "ax_match": true,
+      "reported_counts": {
+        "ETF價值區": 10,
+        "ETF升溫區": 7,
+        "產業價值區": 31,
+        "產業升溫區": 30
+      },
+      "reported_total": 78,
+      "reported_water": "79.8%"
+    },
+    "checksum": {
+      "status": "pass",
+      "checks": {
+        "ark_stocks_latest.json": {
+          "actual": "685f72c1cadbf0e6dba7f9d38d498c4986967146ce0eab36151460eeca03909c",
+          "expected": "685f72c1cadbf0e6dba7f9d38d498c4986967146ce0eab36151460eeca03909c",
+          "match": true
+        },
+        "run/ark_stocks.json": {
+          "actual": "685f72c1cadbf0e6dba7f9d38d498c4986967146ce0eab36151460eeca03909c",
+          "expected": "685f72c1cadbf0e6dba7f9d38d498c4986967146ce0eab36151460eeca03909c",
+          "match": true
+        },
+        "ark_stocks_ax.json": {
+          "actual": "c79234fafb7eefbb3f7d2fe3f694af00357083b5c82bd9182703bcaa17ab892a",
+          "expected": "c79234fafb7eefbb3f7d2fe3f694af00357083b5c82bd9182703bcaa17ab892a",
+          "match": true
+        },
+        "ark_validation.json": {
+          "actual": "8fd3df1194b0ff80a7e7ccf26bae318050c8c8c0b2d42c24792b7f6e121c7767",
+          "expected": "8fd3df1194b0ff80a7e7ccf26bae318050c8c8c0b2d42c24792b7f6e121c7767",
+          "match": true
+        }
+      },
+      "latest_equals_run_ark_stocks": true
+    },
+    "validation": {
+      "status": "pass",
+      "ark_validation_ok": true,
+      "sections": {
+        "ETF價值區": {
+          "ok": true,
+          "ocrCount": 10,
+          "axCount": 10,
+          "missingInAx": [],
+          "missingInOcr": [],
+          "nameDifferences": []
+        },
+        "ETF升溫區": {
+          "ok": true,
+          "ocrCount": 7,
+          "axCount": 7,
+          "missingInAx": [],
+          "missingInOcr": [],
+          "nameDifferences": []
+        },
+        "產業價值區": {
+          "ok": true,
+          "ocrCount": 31,
+          "axCount": 31,
+          "missingInAx": [],
+          "missingInOcr": [],
+          "nameDifferences": []
+        },
+        "產業升溫區": {
+          "ok": true,
+          "ocrCount": 30,
+          "axCount": 30,
+          "missingInAx": [],
+          "missingInOcr": [],
+          "nameDifferences": []
+        }
+      },
+      "counts": {
+        "ETF價值區": 10,
+        "ETF升溫區": 7,
+        "產業價值區": 31,
+        "產業升溫區": 30
+      },
+      "total_cards": 78
+    },
+    "literal_code_validation": {
+      "status": "pass",
+      "rules": {
+        "ETF": "^[0-9]{4,6}[A-Z]?$",
+        "stocks": "^[0-9]{4}$"
+      },
+      "checked_count": 78,
+      "invalid": [],
+      "literal_preserved_against_ax": true
+    },
+    "source_priority": {
+      "section_code_order_price": "ark_stocks_latest.json",
+      "name_industry": "ark_stocks_ax.json",
+      "stock_metrics": "ark_stocks_ax.json accessibility columns（保留完整精度）",
+      "change": "逐卡採主JSON raw change，以主JSON price與百分比反算核對；未整批交換AX欄位",
+      "etf_nav_premium": "ark_stocks_ax.json accessibility columns",
+      "name_differences_applied": [],
+      "industries_filled_from_ax": 61,
+      "ax_price_differences_rejected": [
+        {
+          "section": "ETF升溫區",
+          "code": "0056",
+          "main_price_used": "55",
+          "ax_price_rejected": "55.05",
+          "main_change_used": "7O.7(-1.26%)",
+          "ax_change_not_bulk_used": "▼0.65(-1.17%)"
+        },
+        {
+          "section": "產業價值區",
+          "code": "6213",
+          "main_price_used": "519",
+          "ax_price_rejected": "518",
+          "main_change_used": "0(0%)",
+          "ax_change_not_bulk_used": "▼1(-0.19%)"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6538",
+          "main_price_used": "349.5",
+          "ax_price_rejected": "350",
+          "main_change_used": "▲11(3.25%)",
+          "ax_change_not_bulk_used": "▲11.5(3.4%)"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6179",
+          "main_price_used": "37.45",
+          "ax_price_rejected": "37.5",
+          "main_change_used": "▼0.75(-1.96%)",
+          "ax_change_not_bulk_used": "▼0.7(-1.83%)"
+        }
+      ],
+      "etf_missing_source_price": [
+        {
+          "section": "ETF價值區",
+          "code": "0053",
+          "main_json_price_field": "241.04",
+          "ax_source_price": null,
+          "action": "price/market_value 設為—；main JSON price欄實為NAV，不挪用"
+        },
+        {
+          "section": "ETF價值區",
+          "code": "0057",
+          "main_json_price_field": "320.73",
+          "ax_source_price": null,
+          "action": "price/market_value 設為—；main JSON price欄實為NAV，不挪用"
+        },
+        {
+          "section": "ETF價值區",
+          "code": "006203",
+          "main_json_price_field": "195.47",
+          "ax_source_price": null,
+          "action": "price/market_value 設為—；main JSON price欄實為NAV，不挪用"
+        }
+      ]
+    },
+    "change_normalization": {
+      "status": "pass",
+      "formula": "previous=current/(1+pct/100)；abs_change=abs(current*pct/(100+pct))",
+      "formula_checked_count": 75,
+      "missing_source_price_count": 3,
+      "raw_to_output_changed_count": 78,
+      "max_pct_residual": 0.005,
+      "checks": [
+        {
+          "section": "ETF價值區",
+          "code": "00631L",
+          "source_file": "02_ETF價值區_1.png",
+          "rank": 1,
+          "price": "36.06",
+          "raw": "71.09(-2.93%)",
+          "normalized": "▼1.09 (-2.93%)",
+          "reported_pct": -2.93,
+          "expected_abs_change": 1.08845,
+          "selected_abs_change": 1.09,
+          "implied_pct": -2.934051,
+          "pct_residual": 0.004051,
+          "candidate_tokens": [
+            "71.09",
+            "1.09"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "ETF價值區",
+          "code": "0053",
+          "source_file": "02_ETF價值區_1.png",
+          "rank": 2,
+          "price": "241.04",
+          "raw": "(-%)",
+          "normalized": "—",
+          "status": "missing_source_price",
+          "formula_checked": false
+        },
+        {
+          "section": "ETF價值區",
+          "code": "006208",
+          "source_file": "02_ETF價值區_1.png",
+          "rank": 3,
+          "price": "246",
+          "raw": "3.55(-1.42%)",
+          "normalized": "▼3.55 (-1.42%)",
+          "reported_pct": -1.42,
+          "expected_abs_change": 3.543518,
+          "selected_abs_change": 3.55,
+          "implied_pct": -1.422561,
+          "pct_residual": 0.002561,
+          "candidate_tokens": [
+            "3.55"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "ETF價值區",
+          "code": "0050",
+          "source_file": "02_ETF價值區_1.png",
+          "rank": 4,
+          "price": "107.45",
+          "raw": "71.7(-1.56%)",
+          "normalized": "▼1.7 (-1.56%)",
+          "reported_pct": -1.56,
+          "expected_abs_change": 1.702783,
+          "selected_abs_change": 1.7,
+          "implied_pct": -1.55749,
+          "pct_residual": 0.00251,
+          "candidate_tokens": [
+            "71.7",
+            "1.7"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "ETF價值區",
+          "code": "0052",
+          "source_file": "02_ETF價值區_1.png",
+          "rank": 5,
+          "price": "62.55",
+          "raw": "71.05(-1.65%)",
+          "normalized": "▼1.05 (-1.65%)",
+          "reported_pct": -1.65,
+          "expected_abs_change": 1.04939,
+          "selected_abs_change": 1.05,
+          "implied_pct": -1.650943,
+          "pct_residual": 0.000943,
+          "candidate_tokens": [
+            "71.05",
+            "1.05"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "ETF價值區",
+          "code": "0056",
+          "source_file": "02_ETF價值區_1.png",
+          "rank": 6,
+          "price": "55.05",
+          "raw": "70.65(-1.17%)",
+          "normalized": "▼0.65 (-1.17%)",
+          "reported_pct": -1.17,
+          "expected_abs_change": 0.65171,
+          "selected_abs_change": 0.65,
+          "implied_pct": -1.166966,
+          "pct_residual": 0.003034,
+          "candidate_tokens": [
+            "70.65",
+            "0.65"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "ETF價值區",
+          "code": "0057",
+          "source_file": "03_ETF價值區_2.png",
+          "rank": 7,
+          "price": "320.73",
+          "raw": "(-%)",
+          "normalized": "—",
+          "status": "missing_source_price",
+          "formula_checked": false
+        },
+        {
+          "section": "ETF價值區",
+          "code": "0055",
+          "source_file": "03_ETF價值區_2.png",
+          "rank": 8,
+          "price": "48.48",
+          "raw": "▼0.13(-0.27%)",
+          "normalized": "▼0.13 (-0.27%)",
+          "reported_pct": -0.27,
+          "expected_abs_change": 0.13125,
+          "selected_abs_change": 0.13,
+          "implied_pct": -0.267435,
+          "pct_residual": 0.002565,
+          "candidate_tokens": [
+            "0.13"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "ETF價值區",
+          "code": "00960",
+          "source_file": "03_ETF價值區_2.png",
+          "rank": 9,
+          "price": "21.75",
+          "raw": "▲0.22(1.02%)",
+          "normalized": "▲0.22 (+1.02%)",
+          "reported_pct": 1.02,
+          "expected_abs_change": 0.21961,
+          "selected_abs_change": 0.22,
+          "implied_pct": 1.02183,
+          "pct_residual": 0.00183,
+          "candidate_tokens": [
+            "0.22"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "ETF價值區",
+          "code": "006203",
+          "source_file": "03_ETF價值區_2.png",
+          "rank": 10,
+          "price": "195.47",
+          "raw": "(-%)",
+          "normalized": "—",
+          "status": "missing_source_price",
+          "formula_checked": false
+        },
+        {
+          "section": "ETF升溫區",
+          "code": "00642U",
+          "source_file": "04_ETF升溫區_1.png",
+          "rank": 1,
+          "price": "33.63",
+          "raw": "▲1.94(6.12%)",
+          "normalized": "▲1.94 (+6.12%)",
+          "reported_pct": 6.12,
+          "expected_abs_change": 1.939461,
+          "selected_abs_change": 1.94,
+          "implied_pct": 6.121805,
+          "pct_residual": 0.001805,
+          "candidate_tokens": [
+            "1.94"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "ETF升溫區",
+          "code": "00715L",
+          "source_file": "04_ETF升溫區_1.png",
+          "rank": 2,
+          "price": "71.2",
+          "raw": "▲8.2(13.02%)",
+          "normalized": "▲8.2 (+13.02%)",
+          "reported_pct": 13.02,
+          "expected_abs_change": 8.2023,
+          "selected_abs_change": 8.2,
+          "implied_pct": 13.015873,
+          "pct_residual": 0.004127,
+          "candidate_tokens": [
+            "8.2"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "ETF升溫區",
+          "code": "00701",
+          "source_file": "04_ETF升溫區_1.png",
+          "rank": 3,
+          "price": "40.4",
+          "raw": "▼0.18(-0.44%)",
+          "normalized": "▼0.18 (-0.44%)",
+          "reported_pct": -0.44,
+          "expected_abs_change": 0.178546,
+          "selected_abs_change": 0.18,
+          "implied_pct": -0.443568,
+          "pct_residual": 0.003568,
+          "candidate_tokens": [
+            "0.18"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "ETF升溫區",
+          "code": "00938",
+          "source_file": "04_ETF升溫區_1.png",
+          "rank": 4,
+          "price": "26.27",
+          "raw": "70.2(-0.76%)",
+          "normalized": "▼0.2 (-0.76%)",
+          "reported_pct": -0.76,
+          "expected_abs_change": 0.201181,
+          "selected_abs_change": 0.2,
+          "implied_pct": -0.755572,
+          "pct_residual": 0.004428,
+          "candidate_tokens": [
+            "70.2",
+            "0.2"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "ETF升溫區",
+          "code": "009809",
+          "source_file": "04_ETF升溫區_1.png",
+          "rank": 5,
+          "price": "18.09",
+          "raw": "70.17(-0.93%)",
+          "normalized": "▼0.17 (-0.93%)",
+          "reported_pct": -0.93,
+          "expected_abs_change": 0.169816,
+          "selected_abs_change": 0.17,
+          "implied_pct": -0.930997,
+          "pct_residual": 0.000997,
+          "candidate_tokens": [
+            "70.17",
+            "0.17"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "ETF升溫區",
+          "code": "00939",
+          "source_file": "04_ETF升溫區_1.png",
+          "rank": 6,
+          "price": "23.54",
+          "raw": "70.2(-0.84%)",
+          "normalized": "▼0.2 (-0.84%)",
+          "reported_pct": -0.84,
+          "expected_abs_change": 0.199411,
+          "selected_abs_change": 0.2,
+          "implied_pct": -0.84246,
+          "pct_residual": 0.00246,
+          "candidate_tokens": [
+            "70.2",
+            "0.2"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "ETF升溫區",
+          "code": "0056",
+          "source_file": "05_ETF升溫區_2.png",
+          "rank": 7,
+          "price": "55",
+          "raw": "7O.7(-1.26%)",
+          "normalized": "▼0.7 (-1.26%)",
+          "reported_pct": -1.26,
+          "expected_abs_change": 0.701843,
+          "selected_abs_change": 0.7,
+          "implied_pct": -1.256732,
+          "pct_residual": 0.003268,
+          "candidate_tokens": [
+            "70.7",
+            "0.7"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "6285",
+          "source_file": "06_產業價值區_1.png",
+          "rank": 1,
+          "price": "223.5",
+          "raw": "73.5(-1.54%)",
+          "normalized": "▼3.5 (-1.54%)",
+          "reported_pct": -1.54,
+          "expected_abs_change": 3.495734,
+          "selected_abs_change": 3.5,
+          "implied_pct": -1.54185,
+          "pct_residual": 0.00185,
+          "candidate_tokens": [
+            "73.5",
+            "3.5"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "6415",
+          "source_file": "06_產業價值區_1.png",
+          "rank": 2,
+          "price": "400",
+          "raw": "75(-1.23%)",
+          "normalized": "▼5 (-1.23%)",
+          "reported_pct": -1.23,
+          "expected_abs_change": 4.98127,
+          "selected_abs_change": 5.0,
+          "implied_pct": -1.234568,
+          "pct_residual": 0.004568,
+          "candidate_tokens": [
+            "75",
+            "5"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "2059",
+          "source_file": "06_產業價值區_1.png",
+          "rank": 3,
+          "price": "12,110",
+          "raw": "▼490(-3.89%)",
+          "normalized": "▼490 (-3.89%)",
+          "reported_pct": -3.89,
+          "expected_abs_change": 490.145666,
+          "selected_abs_change": 490.0,
+          "implied_pct": -3.888889,
+          "pct_residual": 0.001111,
+          "candidate_tokens": [
+            "490"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "3665",
+          "source_file": "06_產業價值區_1.png",
+          "rank": 4,
+          "price": "1,865",
+          "raw": "765(-3.37%)",
+          "normalized": "▼65 (-3.37%)",
+          "reported_pct": -3.37,
+          "expected_abs_change": 65.04243,
+          "selected_abs_change": 65.0,
+          "implied_pct": -3.367876,
+          "pct_residual": 0.002124,
+          "candidate_tokens": [
+            "765",
+            "65"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "2324",
+          "source_file": "06_產業價值區_1.png",
+          "rank": 5,
+          "price": "37.9",
+          "raw": "70.75(-1.94%)",
+          "normalized": "▼0.75 (-1.94%)",
+          "reported_pct": -1.94,
+          "expected_abs_change": 0.749806,
+          "selected_abs_change": 0.75,
+          "implied_pct": -1.940492,
+          "pct_residual": 0.000492,
+          "candidate_tokens": [
+            "70.75",
+            "0.75"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "2345",
+          "source_file": "06_產業價值區_1.png",
+          "rank": 6,
+          "price": "1,910",
+          "raw": "755(-2.8%)",
+          "normalized": "▼55 (-2.8%)",
+          "reported_pct": -2.8,
+          "expected_abs_change": 55.020576,
+          "selected_abs_change": 55.0,
+          "implied_pct": -2.798982,
+          "pct_residual": 0.001018,
+          "candidate_tokens": [
+            "755",
+            "55"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "1785",
+          "source_file": "07_產業價值區_2.png",
+          "rank": 7,
+          "price": "96.7",
+          "raw": "▼1.6(-1.63%)",
+          "normalized": "▼1.6 (-1.63%)",
+          "reported_pct": -1.63,
+          "expected_abs_change": 1.602328,
+          "selected_abs_change": 1.6,
+          "implied_pct": -1.62767,
+          "pct_residual": 0.00233,
+          "candidate_tokens": [
+            "1.6"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "2313",
+          "source_file": "07_產業價值區_2.png",
+          "rank": 8,
+          "price": "220.5",
+          "raw": "75(-2.22%)",
+          "normalized": "▼5 (-2.22%)",
+          "reported_pct": -2.22,
+          "expected_abs_change": 5.006238,
+          "selected_abs_change": 5.0,
+          "implied_pct": -2.217295,
+          "pct_residual": 0.002705,
+          "candidate_tokens": [
+            "75",
+            "5"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "2383",
+          "source_file": "07_產業價值區_2.png",
+          "rank": 9,
+          "price": "5,320",
+          "raw": "55(-1.02%)",
+          "normalized": "▼55 (-1.02%)",
+          "reported_pct": -1.02,
+          "expected_abs_change": 54.823197,
+          "selected_abs_change": 55.0,
+          "implied_pct": -1.023256,
+          "pct_residual": 0.003256,
+          "candidate_tokens": [
+            "55"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "2379",
+          "source_file": "07_產業價值區_2.png",
+          "rank": 10,
+          "price": "695",
+          "raw": "1(-0.14%)",
+          "normalized": "▼1 (-0.14%)",
+          "reported_pct": -0.14,
+          "expected_abs_change": 0.974364,
+          "selected_abs_change": 1.0,
+          "implied_pct": -0.143678,
+          "pct_residual": 0.003678,
+          "candidate_tokens": [
+            "1"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "6213",
+          "source_file": "07_產業價值區_2.png",
+          "rank": 11,
+          "price": "519",
+          "raw": "0(0%)",
+          "normalized": "0 (0%)",
+          "reported_pct": 0.0,
+          "expected_abs_change": 0.0,
+          "selected_abs_change": 0.0,
+          "implied_pct": 0.0,
+          "pct_residual": 0.0,
+          "candidate_tokens": [
+            "0"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "2308",
+          "source_file": "08_產業價值區_3.png",
+          "rank": 12,
+          "price": "1,600",
+          "raw": "▼75(-4.48%)",
+          "normalized": "▼75 (-4.48%)",
+          "reported_pct": -4.48,
+          "expected_abs_change": 75.041876,
+          "selected_abs_change": 75.0,
+          "implied_pct": -4.477612,
+          "pct_residual": 0.002388,
+          "candidate_tokens": [
+            "75",
+            "5"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "3008",
+          "source_file": "08_產業價值區_3.png",
+          "rank": 13,
+          "price": "6,450",
+          "raw": "▼270(-4.02%)",
+          "normalized": "▼270 (-4.02%)",
+          "reported_pct": -4.02,
+          "expected_abs_change": 270.150031,
+          "selected_abs_change": 270.0,
+          "implied_pct": -4.017857,
+          "pct_residual": 0.002143,
+          "candidate_tokens": [
+            "270",
+            "70"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "6274",
+          "source_file": "08_產業價值區_3.png",
+          "rank": 14,
+          "price": "1,365",
+          "raw": "730(-2.15%)",
+          "normalized": "▼30 (-2.15%)",
+          "reported_pct": -2.15,
+          "expected_abs_change": 29.992335,
+          "selected_abs_change": 30.0,
+          "implied_pct": -2.150538,
+          "pct_residual": 0.000538,
+          "candidate_tokens": [
+            "730",
+            "30"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "3189",
+          "source_file": "08_產業價值區_3.png",
+          "rank": 15,
+          "price": "813",
+          "raw": "▼14(-1.69%)",
+          "normalized": "▼14 (-1.69%)",
+          "reported_pct": -1.69,
+          "expected_abs_change": 13.975893,
+          "selected_abs_change": 14.0,
+          "implied_pct": -1.692866,
+          "pct_residual": 0.002866,
+          "candidate_tokens": [
+            "14"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "6239",
+          "source_file": "08_產業價值區_3.png",
+          "rank": 16,
+          "price": "276.5",
+          "raw": "7(-2.47%)",
+          "normalized": "▼7 (-2.47%)",
+          "reported_pct": -2.47,
+          "expected_abs_change": 7.002512,
+          "selected_abs_change": 7.0,
+          "implied_pct": -2.469136,
+          "pct_residual": 0.000864,
+          "candidate_tokens": [
+            "7"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "2382",
+          "source_file": "09_產業價值區_4.png",
+          "rank": 17,
+          "price": "332.5",
+          "raw": "▼3.5(-1.04%)",
+          "normalized": "▼3.5 (-1.04%)",
+          "reported_pct": -1.04,
+          "expected_abs_change": 3.494341,
+          "selected_abs_change": 3.5,
+          "implied_pct": -1.041667,
+          "pct_residual": 0.001667,
+          "candidate_tokens": [
+            "3.5"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "4958",
+          "source_file": "09_產業價值區_4.png",
+          "rank": 18,
+          "price": "483.5",
+          "raw": "▼11(-2.22%)",
+          "normalized": "▼11 (-2.22%)",
+          "reported_pct": -2.22,
+          "expected_abs_change": 10.977398,
+          "selected_abs_change": 11.0,
+          "implied_pct": -2.224469,
+          "pct_residual": 0.004469,
+          "candidate_tokens": [
+            "11"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "3034",
+          "source_file": "09_產業價值區_4.png",
+          "rank": 19,
+          "price": "539",
+          "raw": "76(-1.1%)",
+          "normalized": "▼6 (-1.1%)",
+          "reported_pct": -1.1,
+          "expected_abs_change": 5.994944,
+          "selected_abs_change": 6.0,
+          "implied_pct": -1.100917,
+          "pct_residual": 0.000917,
+          "candidate_tokens": [
+            "76",
+            "6"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "2449",
+          "source_file": "09_產業價值區_4.png",
+          "rank": 20,
+          "price": "264.5",
+          "raw": "7(-2.58%)",
+          "normalized": "▼7 (-2.58%)",
+          "reported_pct": -2.58,
+          "expected_abs_change": 7.004824,
+          "selected_abs_change": 7.0,
+          "implied_pct": -2.578269,
+          "pct_residual": 0.001731,
+          "candidate_tokens": [
+            "7"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "6515",
+          "source_file": "09_產業價值區_4.png",
+          "rank": 21,
+          "price": "7,035",
+          "raw": "160(-2.22%)",
+          "normalized": "▼160 (-2.22%)",
+          "reported_pct": -2.22,
+          "expected_abs_change": 159.722847,
+          "selected_abs_change": 160.0,
+          "implied_pct": -2.223767,
+          "pct_residual": 0.003767,
+          "candidate_tokens": [
+            "160"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "2327",
+          "source_file": "10_產業價值區_5.png",
+          "rank": 22,
+          "price": "567",
+          "raw": "75(-0.87%)",
+          "normalized": "▼5 (-0.87%)",
+          "reported_pct": -0.87,
+          "expected_abs_change": 4.976193,
+          "selected_abs_change": 5.0,
+          "implied_pct": -0.874126,
+          "pct_residual": 0.004126,
+          "candidate_tokens": [
+            "75",
+            "5"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "3037",
+          "source_file": "10_產業價值區_5.png",
+          "rank": 23,
+          "price": "978",
+          "raw": "▼16(-1.61%)",
+          "normalized": "▼16 (-1.61%)",
+          "reported_pct": -1.61,
+          "expected_abs_change": 16.003456,
+          "selected_abs_change": 16.0,
+          "implied_pct": -1.609658,
+          "pct_residual": 0.000342,
+          "candidate_tokens": [
+            "16"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "2330",
+          "source_file": "10_產業價值區_5.png",
+          "rank": 24,
+          "price": "2,420",
+          "raw": "▼30(-1.22%)",
+          "normalized": "▼30 (-1.22%)",
+          "reported_pct": -1.22,
+          "expected_abs_change": 29.888641,
+          "selected_abs_change": 30.0,
+          "implied_pct": -1.22449,
+          "pct_residual": 0.00449,
+          "candidate_tokens": [
+            "30"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "2360",
+          "source_file": "10_產業價值區_5.png",
+          "rank": 25,
+          "price": "2,220",
+          "raw": "▲40(1.83%)",
+          "normalized": "▲40 (+1.83%)",
+          "reported_pct": 1.83,
+          "expected_abs_change": 39.895905,
+          "selected_abs_change": 40.0,
+          "implied_pct": 1.834862,
+          "pct_residual": 0.004862,
+          "candidate_tokens": [
+            "40"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "6223",
+          "source_file": "10_產業價值區_5.png",
+          "rank": 26,
+          "price": "5,690",
+          "raw": "▲70(1.25%)",
+          "normalized": "▲70 (+1.25%)",
+          "reported_pct": 1.25,
+          "expected_abs_change": 70.246914,
+          "selected_abs_change": 70.0,
+          "implied_pct": 1.245552,
+          "pct_residual": 0.004448,
+          "candidate_tokens": [
+            "70",
+            "0"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "5274",
+          "source_file": "11_產業價值區_6.png",
+          "rank": 27,
+          "price": "18,150",
+          "raw": "550(-2.94%)",
+          "normalized": "▼550 (-2.94%)",
+          "reported_pct": -2.94,
+          "expected_abs_change": 549.773336,
+          "selected_abs_change": 550.0,
+          "implied_pct": -2.941176,
+          "pct_residual": 0.001176,
+          "candidate_tokens": [
+            "550"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "3711",
+          "source_file": "11_產業價值區_6.png",
+          "rank": 28,
+          "price": "618",
+          "raw": "▼32(-4.92%)",
+          "normalized": "▼32 (-4.92%)",
+          "reported_pct": -4.92,
+          "expected_abs_change": 31.978965,
+          "selected_abs_change": 32.0,
+          "implied_pct": -4.923077,
+          "pct_residual": 0.003077,
+          "candidate_tokens": [
+            "32"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "2454",
+          "source_file": "11_產業價值區_6.png",
+          "rank": 29,
+          "price": "4,595",
+          "raw": "125(-2.65%)",
+          "normalized": "▼125 (-2.65%)",
+          "reported_pct": -2.65,
+          "expected_abs_change": 125.082178,
+          "selected_abs_change": 125.0,
+          "implied_pct": -2.648305,
+          "pct_residual": 0.001695,
+          "candidate_tokens": [
+            "125"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "2455",
+          "source_file": "11_產業價值區_6.png",
+          "rank": 30,
+          "price": "520",
+          "raw": "▼12(-2.26%)",
+          "normalized": "▼12 (-2.26%)",
+          "reported_pct": -2.26,
+          "expected_abs_change": 12.023736,
+          "selected_abs_change": 12.0,
+          "implied_pct": -2.255639,
+          "pct_residual": 0.004361,
+          "candidate_tokens": [
+            "12"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業價值區",
+          "code": "2303",
+          "source_file": "11_產業價值區_6.png",
+          "rank": 31,
+          "price": "139.5",
+          "raw": "73(-2.11%)",
+          "normalized": "▼3 (-2.11%)",
+          "reported_pct": -2.11,
+          "expected_abs_change": 3.006895,
+          "selected_abs_change": 3.0,
+          "implied_pct": -2.105263,
+          "pct_residual": 0.004737,
+          "candidate_tokens": [
+            "73",
+            "3"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6214",
+          "source_file": "12_產業升溫區_1.png",
+          "rank": 1,
+          "price": "188.5",
+          "raw": "▲1(0.53%)",
+          "normalized": "▲1 (+0.53%)",
+          "reported_pct": 0.53,
+          "expected_abs_change": 0.993783,
+          "selected_abs_change": 1.0,
+          "implied_pct": 0.533333,
+          "pct_residual": 0.003333,
+          "candidate_tokens": [
+            "1"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6538",
+          "source_file": "12_產業升溫區_1.png",
+          "rank": 2,
+          "price": "349.5",
+          "raw": "▲11(3.25%)",
+          "normalized": "▲11 (+3.25%)",
+          "reported_pct": 3.25,
+          "expected_abs_change": 11.001211,
+          "selected_abs_change": 11.0,
+          "implied_pct": 3.249631,
+          "pct_residual": 0.000369,
+          "candidate_tokens": [
+            "11"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6021",
+          "source_file": "12_產業升溫區_1.png",
+          "rank": 3,
+          "price": "42.6",
+          "raw": "0.2(-0.47%)",
+          "normalized": "▼0.2 (-0.47%)",
+          "reported_pct": -0.47,
+          "expected_abs_change": 0.201165,
+          "selected_abs_change": 0.2,
+          "implied_pct": -0.46729,
+          "pct_residual": 0.00271,
+          "candidate_tokens": [
+            "0.2"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6173",
+          "source_file": "12_產業升溫區_1.png",
+          "rank": 4,
+          "price": "311",
+          "raw": "▲16(5.42%)",
+          "normalized": "▲16 (+5.42%)",
+          "reported_pct": 5.42,
+          "expected_abs_change": 15.989566,
+          "selected_abs_change": 16.0,
+          "implied_pct": 5.423729,
+          "pct_residual": 0.003729,
+          "candidate_tokens": [
+            "16"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "8227",
+          "source_file": "12_產業升溫區_1.png",
+          "rank": 5,
+          "price": "238",
+          "raw": "▲20.5(9.43%)",
+          "normalized": "▲20.5 (+9.43%)",
+          "reported_pct": 9.43,
+          "expected_abs_change": 20.509367,
+          "selected_abs_change": 20.5,
+          "implied_pct": 9.425287,
+          "pct_residual": 0.004713,
+          "candidate_tokens": [
+            "20.5",
+            "0.5"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6739",
+          "source_file": "12_產業升溫區_1.png",
+          "rank": 6,
+          "price": "1,350",
+          "raw": "▲30(2.27%)",
+          "normalized": "▲30 (+2.27%)",
+          "reported_pct": 2.27,
+          "expected_abs_change": 29.964799,
+          "selected_abs_change": 30.0,
+          "implied_pct": 2.272727,
+          "pct_residual": 0.002727,
+          "candidate_tokens": [
+            "30"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2883",
+          "source_file": "13_產業升溫區_2.png",
+          "rank": 7,
+          "price": "36.95",
+          "raw": "▼0.25(-0.67%)",
+          "normalized": "▼0.25 (-0.67%)",
+          "reported_pct": -0.67,
+          "expected_abs_change": 0.249235,
+          "selected_abs_change": 0.25,
+          "implied_pct": -0.672043,
+          "pct_residual": 0.002043,
+          "candidate_tokens": [
+            "0.25"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "3374",
+          "source_file": "13_產業升溫區_2.png",
+          "rank": 8,
+          "price": "481.5",
+          "raw": "▼6.5(-1.33%)",
+          "normalized": "▼6.5 (-1.33%)",
+          "reported_pct": -1.33,
+          "expected_abs_change": 6.490271,
+          "selected_abs_change": 6.5,
+          "implied_pct": -1.331967,
+          "pct_residual": 0.001967,
+          "candidate_tokens": [
+            "6.5"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6426",
+          "source_file": "13_產業升溫區_2.png",
+          "rank": 9,
+          "price": "321.5",
+          "raw": "70.5(-0.16%)",
+          "normalized": "▼0.5 (-0.16%)",
+          "reported_pct": -0.16,
+          "expected_abs_change": 0.515224,
+          "selected_abs_change": 0.5,
+          "implied_pct": -0.15528,
+          "pct_residual": 0.00472,
+          "candidate_tokens": [
+            "70.5",
+            "0.5"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2305",
+          "source_file": "13_產業升溫區_2.png",
+          "rank": 10,
+          "price": "38.95",
+          "raw": "▲0.45(1.17%)",
+          "normalized": "▲0.45 (+1.17%)",
+          "reported_pct": 1.17,
+          "expected_abs_change": 0.450445,
+          "selected_abs_change": 0.45,
+          "implied_pct": 1.168831,
+          "pct_residual": 0.001169,
+          "candidate_tokens": [
+            "0.45"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2880",
+          "source_file": "13_產業升溫區_2.png",
+          "rank": 11,
+          "price": "45.15",
+          "raw": "▲0.35(0.78%)",
+          "normalized": "▲0.35 (+0.78%)",
+          "reported_pct": 0.78,
+          "expected_abs_change": 0.349444,
+          "selected_abs_change": 0.35,
+          "implied_pct": 0.78125,
+          "pct_residual": 0.00125,
+          "candidate_tokens": [
+            "0.35"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2884",
+          "source_file": "14_產業升溫區_3.png",
+          "rank": 12,
+          "price": "44.8",
+          "raw": "70.15(-0.33%)",
+          "normalized": "▼0.15 (-0.33%)",
+          "reported_pct": -0.33,
+          "expected_abs_change": 0.148329,
+          "selected_abs_change": 0.15,
+          "implied_pct": -0.333704,
+          "pct_residual": 0.003704,
+          "candidate_tokens": [
+            "70.15",
+            "0.15"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "3055",
+          "source_file": "14_產業升溫區_3.png",
+          "rank": 13,
+          "price": "157",
+          "raw": "73(-1.88%)",
+          "normalized": "▼3 (-1.88%)",
+          "reported_pct": -1.88,
+          "expected_abs_change": 3.008153,
+          "selected_abs_change": 3.0,
+          "implied_pct": -1.875,
+          "pct_residual": 0.005,
+          "candidate_tokens": [
+            "73",
+            "3"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2885",
+          "source_file": "14_產業升溫區_3.png",
+          "rank": 14,
+          "price": "69.3",
+          "raw": "70.4(-0.57%)",
+          "normalized": "▼0.4 (-0.57%)",
+          "reported_pct": -0.57,
+          "expected_abs_change": 0.397274,
+          "selected_abs_change": 0.4,
+          "implied_pct": -0.573888,
+          "pct_residual": 0.003888,
+          "candidate_tokens": [
+            "70.4",
+            "0.4"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6505",
+          "source_file": "14_產業升溫區_3.png",
+          "rank": 15,
+          "price": "87.4",
+          "raw": "▲1.2(1.39%)",
+          "normalized": "▲1.2 (+1.39%)",
+          "reported_pct": 1.39,
+          "expected_abs_change": 1.198205,
+          "selected_abs_change": 1.2,
+          "implied_pct": 1.392111,
+          "pct_residual": 0.002111,
+          "candidate_tokens": [
+            "1.2"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2887",
+          "source_file": "14_產業升溫區_3.png",
+          "rank": 16,
+          "price": "42.1",
+          "raw": "70.05(-0.12%)",
+          "normalized": "▼0.05 (-0.12%)",
+          "reported_pct": -0.12,
+          "expected_abs_change": 0.050581,
+          "selected_abs_change": 0.05,
+          "implied_pct": -0.118624,
+          "pct_residual": 0.001376,
+          "candidate_tokens": [
+            "70.05",
+            "0.05"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6179",
+          "source_file": "15_產業升溫區_4.png",
+          "rank": 17,
+          "price": "37.45",
+          "raw": "▼0.75(-1.96%)",
+          "normalized": "▼0.75 (-1.96%)",
+          "reported_pct": -1.96,
+          "expected_abs_change": 0.748694,
+          "selected_abs_change": 0.75,
+          "implied_pct": -1.963351,
+          "pct_residual": 0.003351,
+          "candidate_tokens": [
+            "0.75"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6196",
+          "source_file": "15_產業升溫區_4.png",
+          "rank": 18,
+          "price": "525",
+          "raw": "▼10(-1.87%)",
+          "normalized": "▼10 (-1.87%)",
+          "reported_pct": -1.87,
+          "expected_abs_change": 10.004586,
+          "selected_abs_change": 10.0,
+          "implied_pct": -1.869159,
+          "pct_residual": 0.000841,
+          "candidate_tokens": [
+            "10"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2492",
+          "source_file": "15_產業升溫區_4.png",
+          "rank": 19,
+          "price": "335.5",
+          "raw": "▲1.5(0.45%)",
+          "normalized": "▲1.5 (+0.45%)",
+          "reported_pct": 0.45,
+          "expected_abs_change": 1.502987,
+          "selected_abs_change": 1.5,
+          "implied_pct": 0.449102,
+          "pct_residual": 0.000898,
+          "candidate_tokens": [
+            "1.5"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2303",
+          "source_file": "15_產業升溫區_4.png",
+          "rank": 20,
+          "price": "139.5",
+          "raw": "▼3(-2.11%)",
+          "normalized": "▼3 (-2.11%)",
+          "reported_pct": -2.11,
+          "expected_abs_change": 3.006895,
+          "selected_abs_change": 3.0,
+          "implied_pct": -2.105263,
+          "pct_residual": 0.004737,
+          "candidate_tokens": [
+            "3"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "4908",
+          "source_file": "15_產業升溫區_4.png",
+          "rank": 21,
+          "price": "241",
+          "raw": "8(-3.21%)",
+          "normalized": "▼8 (-3.21%)",
+          "reported_pct": -3.21,
+          "expected_abs_change": 7.992665,
+          "selected_abs_change": 8.0,
+          "implied_pct": -3.212851,
+          "pct_residual": 0.002851,
+          "candidate_tokens": [
+            "8"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "3693",
+          "source_file": "16_產業升溫區_5.png",
+          "rank": 22,
+          "price": "681",
+          "raw": "10(-1.45%)",
+          "normalized": "▼10 (-1.45%)",
+          "reported_pct": -1.45,
+          "expected_abs_change": 10.019787,
+          "selected_abs_change": 10.0,
+          "implied_pct": -1.447178,
+          "pct_residual": 0.002822,
+          "candidate_tokens": [
+            "10"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2855",
+          "source_file": "16_產業升溫區_5.png",
+          "rank": 23,
+          "price": "50.7",
+          "raw": "▼1(-1.93%)",
+          "normalized": "▼1 (-1.93%)",
+          "reported_pct": -1.93,
+          "expected_abs_change": 0.997767,
+          "selected_abs_change": 1.0,
+          "implied_pct": -1.934236,
+          "pct_residual": 0.004236,
+          "candidate_tokens": [
+            "1"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2801",
+          "source_file": "16_產業升溫區_5.png",
+          "rank": 24,
+          "price": "26.8",
+          "raw": "70.05(-0.19%)",
+          "normalized": "▼0.05 (-0.19%)",
+          "reported_pct": -0.19,
+          "expected_abs_change": 0.051017,
+          "selected_abs_change": 0.05,
+          "implied_pct": -0.18622,
+          "pct_residual": 0.00378,
+          "candidate_tokens": [
+            "70.05",
+            "0.05"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6933",
+          "source_file": "16_產業升溫區_5.png",
+          "rank": 25,
+          "price": "334",
+          "raw": "2(-0.6%)",
+          "normalized": "▼2 (-0.6%)",
+          "reported_pct": -0.6,
+          "expected_abs_change": 2.016097,
+          "selected_abs_change": 2.0,
+          "implied_pct": -0.595238,
+          "pct_residual": 0.004762,
+          "candidate_tokens": [
+            "2"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2454",
+          "source_file": "16_產業升溫區_5.png",
+          "rank": 26,
+          "price": "4,580",
+          "raw": "140(-2.97%)",
+          "normalized": "▼140 (-2.97%)",
+          "reported_pct": -2.97,
+          "expected_abs_change": 140.189632,
+          "selected_abs_change": 140.0,
+          "implied_pct": -2.966102,
+          "pct_residual": 0.003898,
+          "candidate_tokens": [
+            "140"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2890",
+          "source_file": "17_產業升溫區_6.png",
+          "rank": 27,
+          "price": "42.95",
+          "raw": "▲0.05(0.12%)",
+          "normalized": "▲0.05 (+0.12%)",
+          "reported_pct": 0.12,
+          "expected_abs_change": 0.051478,
+          "selected_abs_change": 0.05,
+          "implied_pct": 0.11655,
+          "pct_residual": 0.00345,
+          "candidate_tokens": [
+            "0.05"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "3711",
+          "source_file": "17_產業升溫區_6.png",
+          "rank": 28,
+          "price": "616",
+          "raw": "734(-5.23%)",
+          "normalized": "▼34 (-5.23%)",
+          "reported_pct": -5.23,
+          "expected_abs_change": 33.994724,
+          "selected_abs_change": 34.0,
+          "implied_pct": -5.230769,
+          "pct_residual": 0.000769,
+          "candidate_tokens": [
+            "734",
+            "34"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6016",
+          "source_file": "17_產業升溫區_6.png",
+          "rank": 29,
+          "price": "22.15",
+          "raw": "70.4(-1.77%)",
+          "normalized": "▼0.4 (-1.77%)",
+          "reported_pct": -1.77,
+          "expected_abs_change": 0.399119,
+          "selected_abs_change": 0.4,
+          "implied_pct": -1.773836,
+          "pct_residual": 0.003836,
+          "candidate_tokens": [
+            "70.4",
+            "0.4"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "3406",
+          "source_file": "17_產業升溫區_6.png",
+          "rank": 30,
+          "price": "1,010",
+          "raw": "▼60(=5.61%)",
+          "normalized": "▼60 (-5.61%)",
+          "reported_pct": -5.61,
+          "expected_abs_change": 60.028605,
+          "selected_abs_change": 60.0,
+          "implied_pct": -5.607477,
+          "pct_residual": 0.002523,
+          "candidate_tokens": [
+            "60"
+          ],
+          "formula_checked": true,
+          "status": "pass"
+        }
+      ]
+    },
+    "overlap_unique": {
+      "etf": {
+        "value_cards": 10,
+        "rising_cards": 7,
+        "overlap": [
+          "0056"
+        ],
+        "overlap_names": {
+          "0056": "元大高股息"
+        },
+        "unique_codes": 16
+      },
+      "stocks": {
+        "value_cards": 31,
+        "rising_cards": 30,
+        "overlap": [
+          "3711",
+          "2454",
+          "2303"
+        ],
+        "overlap_names": {
+          "3711": "日月光投控",
+          "2454": "聯發科",
+          "2303": "聯電"
+        },
+        "unique_codes": 58
+      },
+      "all_four_zones": {
+        "card_entries": 78,
+        "unique_codes": 74,
+        "overlap_surplus_entries": 4
+      },
+      "note": "source summary duplicateCount=19是分頁擷取去重，不是價值×升溫重疊；AX summary duplicateCount=18，四區code集合與最終卡數仍由validation通過。"
+    },
+    "water_comparison": {
+      "current": 79.8,
+      "repo_2026_09_10": 75.3,
+      "delta_percentage_points": 4.5,
+      "direction": "上升",
+      "reference_file": "/tmp/Morning-Brief-20260911/data/issues/20260910.json",
+      "status": "confirmed_official_previous_trading_day",
+      "note": "TWSE今日盤中與9/10正式收盤均確認；立即前一交易日為9/10。"
+    },
+    "schema_validation": {
+      "status": "pass",
+      "reference_used_only_for_card_keys": "/tmp/Morning-Brief-20260911/data/issues/20260910.json",
+      "etf_card_keys": [
+        "code",
+        "name",
+        "price",
+        "change",
+        "nav_label",
+        "nav_value",
+        "premium_label",
+        "premium_value",
+        "market_label",
+        "market_value",
+        "cross_label",
+        "cross_value"
+      ],
+      "stock_card_keys": [
+        "code",
+        "name",
+        "industry",
+        "price",
+        "change",
+        "mark",
+        "metric_label",
+        "metric_value",
+        "metric2_label",
+        "metric2_value"
+      ],
+      "required_zone_keys_present": true
+    },
+    "warnings": [
+      "main/AX分頁去重統計19/18不一致，但success、checksum、validation、四區集合與卡數均通過"
+    ],
+    "repository_modified": false,
+    "published": false,
+    "trend_counts": {
+      "etf.value": {
+        "up": 1,
+        "down": 6,
+        "flat": 0,
+        "missing": 3
+      },
+      "etf.rising": {
+        "up": 2,
+        "down": 5,
+        "flat": 0,
+        "missing": 0
+      },
+      "stocks.value": {
+        "up": 2,
+        "down": 28,
+        "flat": 1,
+        "missing": 0
+      },
+      "stocks.rising": {
+        "up": 10,
+        "down": 20,
+        "flat": 0,
+        "missing": 0
+      }
+    }
+  },
+  "technical_spider_sync": {
+    "as_of": "2026-09-11",
+    "records": 74,
+    "missing": [],
+    "validation_issues": [],
+    "independent_from_editorial": true
+  },
+  "draft_cutoff": "2026-09-11T10:28:14+08:00",
+  "session_label": "台股9/11 10:09｜美股9/10收盤",
+  "hero": {
+    "headline": "<span class=\"mark\">水位續升，</span>短線先防守。",
+    "subhead": "方舟水位79.8%，油價與長期利率走高，科技股回落；先保留彈性，不急著接刀。",
+    "reader_subhead": "方舟水位79.8%，較9/10上升4.5個百分點；但台股早盤跌1.75%、費半跌2.66%。配置空間增加，不代表現在就要用完。"
+  },
+  "strategy": {
+    "thesis": "水位改善 × 外部壓力升高",
+    "playbook": "先降低追價與槓桿衝動，等待跌勢收斂及強勢股承接；既有部位依自身風險上限管理。",
+    "tape": "10:09加權46,118.77點、跌1.75%；方舟產業價值區28跌2漲1平，升溫區20跌10漲。",
+    "risk": "油價重返每桶100美元以上，美國10年殖利率4.95%；股債同受通膨壓力，不能只看水位。",
+    "reader": {
+      "thesis": "配置空間改善，眼前價格仍偏弱。",
+      "playbook": "不追價、不急接跌勢，先留彈性等承接。",
+      "tape": "價值區28跌2漲1平，科技賣壓仍廣。",
+      "risk": "只盯油價、長期利率與台股能否止跌。"
+    }
+  },
+  "editorial": {
+    "pull_quote": "水位給的是空間，不是今天必須買進的命令。",
+    "body": "方舟水位升至79.8%，代表健康度與可部署空間改善；但產業價值區28跌2漲1平，台股10:09仍跌1.75%。<span class=\"mark\">今天先處理價格壓力，不把較高水位當成抄底許可。</span>隔夜費半跌2.66%，台積電、聯電與日月光ADR同步回落。美國10年殖利率升至4.95%，油價仍在100美元以上，讓科技估值與企業成本同時承壓。個別能源標的走強，不代表整體景氣或股市風險已改善。"
+  },
+  "home": {
+    "water_note": "9/11方舟水位79.8%，較前一交易日9/10的75.3%上升4.5個百分點；健康度改善，不等於立即買進。",
+    "thesis_blurb": "水位續升，短線先防守；油價與利率抬升，先等價格承接。",
+    "recent_summary": "9/11水位79.8%；台股與半導體回落，保留彈性、不急接刀。",
+    "risk_tagline": "05 有序回檔｜水位改善，先等價格承接"
+  },
+  "temperature": {
+    "label": "水位改善、外部壓力升高",
+    "score": 79.8,
+    "change": 4.5,
+    "note": "配置空間改善與短線價格回落並存。",
+    "signal_headline": "水位上升，不能抵銷眼前賣壓。",
+    "signal_note": "ETF價值／升溫10／7檔，產業價值／升溫31／30檔；0056、聯電、聯發科、日月光投控為雙區重疊。",
+    "vix_note": "VIX 9/10收17.84，較前日上升8.38%。波動升溫，須與油價、利率及價格廣度合看，並非已進入全面恐慌。"
+  },
+  "scenario_id": "05",
+  "lock_scenario": false,
+  "scenario_reason": "方舟水位由75.3%升至79.8%，健康度改善；但費半跌2.66%、台股10:09跌1.75%，產業價值區28跌2漲1平，油價與長期利率同升。採健康水位下的回檔防禦姿態，等待承接，並不代表已經止跌；壓力來自外部與價格，不是水位上升。",
+  "classification_note": "接受分類器05有序回檔；健康水位下等待承接，不宣稱已止跌，也不將較高水位定義為較高風險。",
+  "market": {
+    "sp500": {
+      "value": "7,591.70",
+      "change_pct": -0.5848336118255294,
+      "data_as_of": "2026-09-10"
+    },
+    "nasdaq100": {
+      "value": "29,103.51",
+      "change_pct": -1.0809763591653057,
+      "data_as_of": "2026-09-10"
+    },
+    "dow": {
+      "value": "52,064.10",
+      "change_pct": -0.6043425050499838,
+      "data_as_of": "2026-09-10"
+    },
+    "sox": {
+      "value": "11,614.17",
+      "change_pct": -2.658130030876718,
+      "data_as_of": "2026-09-10"
+    },
+    "vix": {
+      "value": "17.84",
+      "change_pct": 8.383961117861482,
+      "data_as_of": "2026-09-10"
+    },
+    "tw_index": {
+      "line": "9/11 10:09盤中：46,118.77點，-821.72點（-1.75%）。",
+      "value": 46118.77,
+      "change_pct": -1.7505569285706222,
+      "data_as_of": "2026-09-11T10:09:00+08:00"
+    },
+    "futures": {
+      "line": "9/11 10:09臺指期2026/09：45,946點，較參考價-923點（-1.97%）；逆價差172.77點。",
+      "contract": "TXFI6-F",
+      "data_as_of": "2026-09-11T10:09:00+08:00"
+    },
+    "foreign_oi": {
+      "value": -83918,
+      "note": "9/10日終：多單8,264、空單92,182口；未沖銷淨空83,918口。",
+      "data_as_of": "2026-09-10"
+    },
+    "systemic_risk": "偏高"
+  },
+  "analysis": {
+    "us_close": "美股9/10收盤：S&P500跌0.58%、Nasdaq-100跌1.08%、道瓊跌0.60%、費半跌2.66%。Apple漲3.56%，但輝達跌2.26%、Meta跌1.42%、Tesla跌1.16%，並非科技股普漲。台積電ADR跌1.68%、聯電ADR跌2.51%、日月光ADR跌3.25%，台灣半導體承受外部價格壓力。",
+    "tx_night": "9/11 10:09盤中：46,118.77點，-821.72點（-1.75%）。9/11 10:09臺指期2026/09：45,946點，較參考價-923點（-1.97%）；逆價差172.77點。兩者採同一完整分鐘，非收盤價。外資9/10臺股期貨未沖銷淨空83,918口；當日交易量淨空2,049口屬不同統計，不能視為股票賣超。",
+    "axes": {
+      "thesis": "方舟健康度改善，但科技價值名單普遍回落；先確認承接，再評估配置速度。",
+      "policy": "美國8月PPI月增0.4%、年增5.4%；能源月增4.2%。通膨壓力提高政策不確定性，不代表Fed已決定升息。",
+      "risk": "美國2年／10年／30年殖利率4.56%／4.95%／5.37%，10年較前日升12個基點。美元指數9/10升0.32%，強美元與長期資金成本同時壓抑風險承擔。"
+    }
+  },
+  "intelligence": {
+    "trump": [
+      {
+        "time": "截至9/11上午",
+        "content": "本期未納入已獨立確認的同日川普原始社群新訊號。中東戰事對市場的影響，先看油品運輸、油價與利率，不以未核實政治說法作買賣依據。"
+      }
+    ],
+    "musk": "本期未納入可獨立確認的同日馬斯克、Tesla、SpaceX或Starlink重大原始新訊號；不把舊公告或未取得內容的會議當成今日催化劑。",
+    "policy": [
+      "Reuters報導，中東航道受限與油價急升推高通膨疑慮，全球股債承壓。9/11約10:04電子盤WTI 102.75、Brent 107.92美元／桶；這是盤中報價，不是前一日結算價。",
+      "美國8月最終需求PPI月增0.4%、年增5.4%；能源月增4.2%、貨品月增1.1%。今晚美國CPI仍待公布，不能把市場的升息押注當成已落地的政策。",
+      "對台股的短線影響以估值與成本為先：半導體、AI鏈先承受利率壓力；航空與高耗能產業須看燃料及原料成本。航運需分船型、航線與保險成本，不能整族群視為受益。"
+    ]
+  },
+  "mag7": [
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "price": "326.57",
+      "change_abs": "+11.23",
+      "change_pct": 3.5612354918500664,
+      "tier": "watch",
+      "tier_label": "相對強勢",
+      "signal": "相對強勢，但不能代表科技供應鏈已全面止跌。",
+      "data_as_of": "2026-09-10"
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "price": "492.44",
+      "change_abs": "+0.79",
+      "change_pct": 0.16068341299705075,
+      "tier": "watch",
+      "tier_label": "觀察",
+      "signal": "小幅上漲，觀察能否延續相對抗跌。",
+      "data_as_of": "2026-09-10"
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "price": "332.60",
+      "change_abs": "+1.95",
+      "change_pct": 0.5897474671102374,
+      "tier": "watch",
+      "tier_label": "觀察",
+      "signal": "相對抗跌，仍需看大盤與長期利率壓力。",
+      "data_as_of": "2026-09-10"
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "price": "251.89",
+      "change_abs": "-0.51",
+      "change_pct": -0.20206022187004755,
+      "tier": "watch",
+      "tier_label": "承壓",
+      "signal": "小幅回落，先看承接而非追逐題材。",
+      "data_as_of": "2026-09-10"
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "price": "218.36",
+      "change_abs": "-5.06",
+      "change_pct": -2.264792766985946,
+      "tier": "watch",
+      "tier_label": "承壓",
+      "signal": "弱於大型指數，半導體鏈先等跌勢收斂。",
+      "data_as_of": "2026-09-10"
+    },
+    {
+      "ticker": "META",
+      "name": "Meta",
+      "price": "644.38",
+      "change_abs": "-9.31",
+      "change_pct": -1.424222490783093,
+      "tier": "watch",
+      "tier_label": "承壓",
+      "signal": "前日強勢未延續，價格承接仍須確認。",
+      "data_as_of": "2026-09-10"
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "price": "363.56",
+      "change_abs": "-4.25",
+      "change_pct": -1.1554878877681412,
+      "tier": "watch",
+      "tier_label": "承壓",
+      "signal": "回落中，未以未確認新消息補成催化劑。",
+      "data_as_of": "2026-09-10"
+    }
+  ],
+  "validation": {
+    "strengthened": [
+      "方舟水位79.8%，較前一交易日上升4.5個百分點，市場健康度與配置空間改善。",
+      "Apple隔夜相對強勢；但個股強勢不足以證明半導體或整體科技已止跌。",
+      "ETH在同一24小時窗跌幅小於BTC，ETH/BTC約升1.07%；最近完整日ETH ETF有淨申購，但輪動仍待延續。"
+    ],
+    "pressure": [
+      "台股10:09跌1.75%、費半隔夜跌2.66%；產業價值區28跌2漲1平，價格弱勢仍廣。",
+      "油價高於100美元、10年美債殖利率4.95%，成本與估值壓力同時存在。",
+      "BTC ETF 9/9淨流出1.202億美元；BTC與ETH價格均回落，不能宣稱加密風險偏好已回升。"
+    ],
+    "long_term": [
+      "較早公布的ETF申贖仍見大型成長及超短債需求；不能將不同日期的流量拿來證明今天已有人接盤。",
+      "水位改善可增加未來選擇，但配置須等價格承接；長期產業需求與眼前的估值修正要分開。"
+    ]
+  },
+  "appendix": {
+    "after_hours": "美股採9/10完整現貨收盤；台股及臺指期採9/11 10:09共同完整分鐘。方舟卡片為09:05–09:08分頁快照，同一標的跨區可有不同時點價格。輝達漲跌採除息日官方比較基準；油與黃金另標電子盤時間，非前日結算。",
+    "execution": "配置空間改善不需要立刻用完。先確認跌勢收斂、反彈有人承接；若油價或長期利率續升、科技股再破低，保持更保守的配置速度。",
+    "map_bullets": [
+      "半導體／AI → 台積電2330、日月光投控3711、聯發科2454、廣達2382、台達電2308；先看價格承接，不把較早ETF申購當成今日買點。",
+      "油價與航道 → 台塑化6505、石油期貨ETF及航空航運分開判讀；期貨型商品另有轉倉成本，槓桿ETF不作長期替代。",
+      "BTC／ETH → IBIT、FBTC、ETHA、FETH列價格觀察；ETH相對抗跌不等於已確認全面輪動，更不直接外推至COIN或其他股票。",
+      "黃金／債券 → GLD、IAU、SGOV、TLT各看自身價格；短債需求不能當成長債已止跌，實體黃金也不能與金礦股混為一談。"
+    ]
+  },
+  "conclusion": "水位上升是正面訊號，價格回落也是眼前事實。<em>今天先保留彈性、不追價、不急接刀；等油價與利率壓力收斂，再看強勢股能否帶出承接。</em>",
+  "capital_flow": {
+    "headline": "利率壓價格，資金仍在分流",
+    "stance": "保留彈性，不把較早申贖當成今日接盤證明",
+    "summary": "美元偏強、長債與科技承壓。較早ETF申贖見超短債需求；BTC與ETH最近完整日流量分歧。黃金只有部分基金申購，尚無全面避險買盤證明。",
+    "assets": [
+      {
+        "asset": "黃金",
+        "role": "儲備／通膨對沖",
+        "evidence": "Gold Dec 26電子盤2026-09-11T10:12:18+08:00報4369.70美元／盎司；9/10刊登資料中GLDM、IAUM、SGOL合計淨申購86.8百萬美元，僅為子集，底層交易日未確認。",
+        "flow_signal": "部分實體金基金有申購，不能宣称整體黃金當日流入。",
+        "confidence": "中低",
+        "watch": "觀察美元／實質利率壓力是否下降及金價承接。",
+        "tone": "neutral"
+      },
+      {
+        "asset": "Bitcoin／BTC",
+        "role": "高波動非主權稀缺資產",
+        "evidence": "截至10:10，Binance BTCUSDT 76930.31、24h -1.43%；成交15001.94456 BTC，交易對成交額11.619億USDT。9/9美國現貨ETF淨流出120.2百萬美元；9/10尚未完整。",
+        "flow_signal": "價格偏弱且最近完整ETF日流為負，不作避險買盤確認。",
+        "confidence": "中",
+        "watch": "BTC止跌並見後續完整ETF淨流量轉正；交易量比較尚缺前窗，不能宣稱放量。",
+        "tone": "caution"
+      },
+      {
+        "asset": "Ethereum／ETH",
+        "role": "高波動智慧合約資產",
+        "evidence": "截至10:10，ETHUSDT 2453.07、24h -0.37%；成交345717.7161 ETH，交易對成交額8.458億USDT。ETH/BTC 0.03188691、24h約+1.07%；9/9現貨ETF淨流入34.7百萬美元，採可讀媒體逐基金引用Farside。",
+        "flow_signal": "相對BTC改善，但只有一個完整ETF交易日支持，尚非確認輪動。",
+        "confidence": "中低",
+        "watch": "ETH/BTC連續走強、ETH本身站穩且後續ETF淨流入延續；相關股票仍須自身價格觸發。",
+        "tone": "neutral"
+      },
+      {
+        "asset": "美元／超短債",
+        "role": "現金彈性與短存續期",
+        "evidence": "DXY 9/10收99.09、+0.32%；9/10刊登ETF申贖報告列政府超短債15.8億美元淨申購、SGOV 386.8百萬美元，但底層交易日未明。",
+        "flow_signal": "美元走強是价格證據；較早申贖支持現金管理偏好，非今日美元淨流入總額。",
+        "confidence": "中",
+        "watch": "美元是否續強、短債申贖是否延續；勿把SGOV當長債。",
+        "tone": "neutral"
+      },
+      {
+        "asset": "美國長期公債",
+        "role": "利率／存續期風險",
+        "evidence": "財政部9/10 2Y/10Y/30Y為4.56%/4.95%/5.37%；10Y較9/9升12bp。較早固定收益ETF淨申購19.7億美元並不代表長債淨申購。",
+        "flow_signal": "殖利率升與債價承壓；未取得可定日的長債淨流證據，不宣称避險流入或全面流出。",
+        "confidence": "中",
+        "watch": "長端殖利率停止上行、價格回穩及長債基金獨立流量確認。",
+        "tone": "caution"
+      },
+      {
+        "asset": "股票／半導體",
+        "role": "成長風險資產",
+        "evidence": "9/10 SOX -2.66%、NDX -1.08%；9/10刊登ETF報告列股票50.3億、大型成長29.9億美元淨申購，底層交易日未明，不可與隔夜跌勢作同步流量推論。",
+        "flow_signal": "舊申贖與新價格不能混同；今天先看科技跌勢收斂，非全面資金回流。",
+        "confidence": "中低",
+        "watch": "半導體價格止跌、廣度改善且有後續定日ETF申購；單日反彈仍不足。",
+        "tone": "caution"
+      }
+    ],
+    "interpretation": [
+      "價格先行：台股、費半與加密價格偏弱，長端殖利率上升。",
+      "實際流量確認：9/9 BTC ETF為負、ETH為正；超短債與成長股的更早申贖只作背景。",
+      "新聞只解釋壓力來源：油價與PPI提高通膨疑慮，不替代價格證明。"
+    ],
+    "confirmation": [
+      "油價與美國長期殖利率停止走高。",
+      "台股與半導體止跌，反彈廣度增加。",
+      "BTC／ETH後續完整ETF流量與各自價格同向；ETH/BTC改善延續。"
+    ],
+    "caveat": "價格不等於資金流；9/10完整加密ETF流量仍缺。ETF Action僅確認刊登日，底層交易日未明；黃金流量為子集。沒有使用WorldMonitor估算flow、未取得OI/funding/穩定幣淨流則不造訊號。",
+    "as_of": "台股9/11 10:09；crypto 10:10；黃金2026-09-11T10:12:18+08:00；美股與殖利率9/10；crypto ETF9/9；其餘ETF申贖按9/10刊登、底層交易日未明。",
+    "reader": {
+      "headline": "利率壓價格，資金還在分流",
+      "flow": "美元偏強、長債承壓；較早申贖偏短債。BTC最近完整ETF日流為負，ETH為正，黃金僅見部分基金申購。",
+      "meaning": "還不是全面回流。ETH相對抗跌，也不足以抵銷油價、利率與科技股弱勢。",
+      "action": "台股先等承接；能源、黃金與加密題材都不追漲，保留現金彈性。",
+      "watch": "只看油價與長期利率能否降溫、科技能否止跌、BTC／ETH流量能否延續。"
+    },
+    "research_evidence": {
+      "crypto_market": {
+        "measurement_window": "2026-09-10T02:10:00Z/2026-09-11T02:10:00Z",
+        "venue_and_method": "Binance BTCUSDT、ETHUSDT 1分鐘K線；共1440根，價格取2026-09-11 02:09:59.999 UTC收盤，成交量為該交易所該交易對24小時加總，不代表全球總量。",
+        "btc": {
+          "price_usdt": 76930.31,
+          "open_24h_usdt": 78045.22,
+          "change_24h_pct": -1.4285,
+          "high_24h_usdt": 78564.39,
+          "low_24h_usdt": 76464.0,
+          "base_volume_btc": 15001.94456,
+          "quote_volume_usdt": 1161863377.44,
+          "trade_count": 3069490,
+          "source_url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1m&startTime=1789006200000&endTime=1789092599999&limit=1000",
+          "body_verified": true,
+          "date_verified": true
+        },
+        "eth": {
+          "price_usdt": 2453.07,
+          "open_24h_usdt": 2462.29,
+          "change_24h_pct": -0.3744,
+          "high_24h_usdt": 2484.76,
+          "low_24h_usdt": 2405.85,
+          "base_volume_eth": 345717.7161,
+          "quote_volume_usdt": 845844683.53,
+          "trade_count": 2738592,
+          "source_url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1m&startTime=1789006200000&endTime=1789092599999&limit=1000",
+          "body_verified": true,
+          "date_verified": true
+        },
+        "eth_btc": {
+          "ratio_at_cutoff": 0.03188691,
+          "method": "ETHUSDT cutoff close divided by BTCUSDT cutoff close",
+          "uncertainty": "交叉匯率為同一交易所USDT報價推算，與直接ETHBTC交易對可有微小差異。"
+        }
+      },
+      "crypto_etf_flows": {
+        "latest_complete_session_et": "2026-09-09",
+        "btc_spot_us_etfs": {
+          "net_flow_usd_m": -120.2,
+          "direction": "outflow",
+          "breakdown_usd_m": {
+            "ARKB": -78.0,
+            "GBTC": -27.2,
+            "IBIT": -19.5,
+            "MSBT": 4.5
+          },
+          "primary_url": "https://farside.co.uk/btc/",
+          "corroborating_url": "https://cointelegraph.com/markets/bitcoin-etfs-shed-167m-after-strongest-three-week-inflow-run-of-2026",
+          "body_verified": true,
+          "date_verified": true,
+          "uncertainty": "2026-09-10列於Farside但在cutoff顯示尚無逐基金完成數據，因此不把0.0視為確認零流量。"
+        },
+        "eth_spot_us_etfs": {
+          "net_flow_usd_m": 34.7,
+          "direction": "inflow",
+          "breakdown_usd_m": {
+            "ETHB": 22.9,
+            "ETHA": 9.7,
+            "TETH": 2.1
+          },
+          "source_url": "https://cointelegraph.com/markets/bitcoin-etfs-shed-167m-after-strongest-three-week-inflow-run-of-2026",
+          "underlying_attribution": "Farside Investors",
+          "body_verified": true,
+          "date_verified": true,
+          "evidence_class": "secondary body checked, citing Farside",
+          "uncertainty": "Farside ETH目前頁面在本次抓取呈現陳舊快取，未能直接核到2026-09-09列；採用文章正文對Farside的逐基金加總，且22.9+9.7+2.1=34.7。2026-09-10完整流量於cutoff仍缺。"
+        }
+      },
+      "gold_etf_flows": {
+        "source_posted_date": "2026-09-10",
+        "likely_underlying_session": null,
+        "observed_physical_gold_fund_flows_usd_m": {
+          "GLDM": 43.5,
+          "IAUM": 30.7,
+          "SGOL": 12.6
+        },
+        "observed_subset_net_inflow_usd_m": 86.8,
+        "direction_for_observed_subset": "inflow",
+        "not_physical_gold_but_relevant_separate_flows_usd_m": {
+          "GDX_gold_miners_equity": -266.1,
+          "GDXJ_junior_gold_miners_equity": -32.0,
+          "precious_metals_thematic_category": -321.6
+        },
+        "source_url": "https://www.etfaction.com/u-s-growth-and-short-duration-lead-in-net-inflows/",
+        "body_verified": true,
+        "date_verified": true,
+        "uncertainty": "正文僅列商品類別前五名，未列GLD/IAU等所有實體金ETF，故86.8百萬美元只是可見基金小計，不宣稱全市場黃金ETF淨流。World Gold Council截至9月9日的最新官方頁面僅提供2026年8月月資料，沒有cutoff可用的完整日流。",
+        "official_monthly_reference_url": "https://www.gold.org/goldhub/data/gold-etfs-holdings-and-flows",
+        "trade_date_status": "unconfirmed; publication 2026-09-10 only, background not same-day confirmation"
+      },
+      "us_treasury_and_dollar": {
+        "treasury_par_yields_2026_09_10_pct": {
+          "2y": 4.56,
+          "10y": 4.95,
+          "30y": 5.37
+        },
+        "yield_source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve",
+        "yield_source_note": "美國財政部每日殖利率曲線，為接近美東15:30的indicative bid-side par yields。",
+        "bond_etf_actual_flows": {
+          "source_posted_date": "2026-09-10",
+          "fixed_income_total_usd_b": 1.97,
+          "government_ultrashort_category_usd_b": 1.58,
+          "SGOV_usd_m": 386.8,
+          "BND_usd_m": 215.6,
+          "LQD_usd_m": -263.6,
+          "source_url": "https://www.etfaction.com/u-s-growth-and-short-duration-lead-in-net-inflows/",
+          "trade_date_status": "unconfirmed; publication 2026-09-10 only"
+        },
+        "dollar_market_snapshot": {
+          "dxy": 99.081,
+          "asof_utc_approx": "2026-09-11T01:08:00Z",
+          "prior_session_change_pct": 0.3,
+          "source_url": "https://www.reuters.com/world/asia-pacific/dollar-holds-gains-yen-slips-mideast-energy-shock-deepens-2026-09-11/",
+          "classification": "price_direction_only_not_fund_flow"
+        },
+        "interpretation": "殖利率曲線明顯上移與美元偏強，顯示油價/通膨衝擊主導；同時債券ETF仍有申購，且偏向政府超短債。這是避險/現金管理與債價下跌並存，不可把殖利率上升解讀為債券資金流出。",
+        "body_verified": true,
+        "date_verified": true
+      },
+      "equity_fund_flows": {
+        "source_posted_date": "2026-09-10",
+        "likely_underlying_session": null,
+        "actual_flows": {
+          "all_equity_etfs_usd_b": 5.03,
+          "us_large_cap_growth_category_usd_b": 2.99,
+          "us_large_cap_blend_category_usd_b": -2.19,
+          "information_technology_category_usd_b": 1.1,
+          "SOXX_usd_m": 898.0,
+          "SMH_usd_m": 545.1,
+          "SOXX_plus_SMH_usd_m": 1443.1,
+          "IEMG_usd_m": 501.4,
+          "AAXJ_usd_m": 95.5
+        },
+        "fund_level_rotation_examples_usd_b": {
+          "VOO": 2.99,
+          "QQQ": 2.73,
+          "SPY": 1.26,
+          "IVV": -5.5,
+          "SPYM": -2.21
+        },
+        "source_url": "https://www.etfaction.com/u-s-growth-and-short-duration-lead-in-net-inflows/",
+        "body_verified": true,
+        "date_verified": true,
+        "interpretation": "ETF實際申贖方向偏向大型成長、半導體與部分新興市場，但同指數基金間有大額輪動；不能用單一IVV贖回或指數跌幅概括整體股票資金外流。",
+        "uncertainty": "文章正文未在抓取版本中明示underlying create/redeem交易日，只能依9月10日刊登推定為前一美股交易日；數值為ETF Action資料，不是所有共同基金/機構現金流。",
+        "market_performance_not_flow": {
+          "session": "2026-09-10 US close",
+          "SP500_close": 7591.75,
+          "SP500_change_pct": -0.58,
+          "Nasdaq_close": 26081.73,
+          "Nasdaq_change_pct": -0.65,
+          "Dow_close": 52064.1,
+          "Dow_change_pct": -0.6,
+          "Nvidia_change_pct": -2.3,
+          "Micron_change_pct": -4.7,
+          "NYSE_Nasdaq_volume_shares_b": 15.1,
+          "20d_average_volume_shares_b": 14.9,
+          "classification": "price_and_trading_activity_only_not_fund_flow",
+          "source_url": "https://www.reuters.com/world/china/global-markets-corrected-2026-09-11/"
+        },
+        "trade_date_status": "unconfirmed; publication 2026-09-10 only, background not same-day confirmation"
+      }
+    },
+    "gold_price_snapshot": {
+      "symbol": "GC=F",
+      "contract": "Gold Dec 26",
+      "value": 4369.7,
+      "data_as_of": "2026-09-11T10:12:18+08:00",
+      "kind": "electronic quote, not settlement"
+    },
+    "eth_btc_change_24h_pct": 1.0693718730986346,
+    "proxy_watchlist": [
+      {
+        "ticker": "GLD",
+        "status": "price_watch_only",
+        "active": false
+      },
+      {
+        "ticker": "IAU",
+        "status": "price_watch_only",
+        "active": false
+      },
+      {
+        "ticker": "SGOV",
+        "status": "price_watch_only",
+        "active": false
+      },
+      {
+        "ticker": "TLT",
+        "status": "price_watch_only",
+        "active": false
+      },
+      {
+        "ticker": "IBIT",
+        "status": "price_watch_only",
+        "active": false
+      },
+      {
+        "ticker": "FBTC",
+        "status": "price_watch_only",
+        "active": false
+      },
+      {
+        "ticker": "ETHA",
+        "status": "price_watch_only",
+        "active": false
+      },
+      {
+        "ticker": "FETH",
+        "status": "price_watch_only",
+        "active": false
+      },
+      {
+        "ticker": "COIN",
+        "status": "price_watch_only",
+        "active": false
+      },
+      {
+        "ticker": "SOXX",
+        "status": "price_watch_only",
+        "active": false
+      },
+      {
+        "ticker": "SMH",
+        "status": "price_watch_only",
+        "active": false
+      }
+    ]
+  },
+  "research_sources": [
+    {
+      "title": "TWSE MIS / twse_live_quote",
+      "url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+      "request": {
+        "provider": "TWSE MIS",
+        "url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+        "method": "GET",
+        "retrieved_at_taipei": "2026-09-11T10:09:29+08:00"
+      }
+    },
+    {
+      "title": "TWSE MIS / twse_minute_chart",
+      "url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+      "request": {
+        "provider": "TWSE MIS",
+        "url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+        "method": "GET",
+        "retrieved_at_taipei": "2026-09-11T10:09:29+08:00"
+      }
+    },
+    {
+      "title": "TWSE / twse_previous_day",
+      "url": "https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=20260910&type=IND&response=json",
+      "request": {
+        "provider": "TWSE",
+        "url": "https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=20260910&type=IND&response=json",
+        "method": "GET",
+        "retrieved_at_taipei": "2026-09-11T10:15:34+08:00"
+      }
+    },
+    {
+      "title": "TAIFEX MIS / taifex_quote_list",
+      "url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+      "request": {
+        "provider": "TAIFEX MIS",
+        "url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+        "method": "POST",
+        "body": {
+          "MarketType": "0",
+          "SymbolType": "F",
+          "KindID": "1",
+          "CID": "",
+          "ExpireMonth": ""
+        },
+        "retrieved_at_taipei": "2026-09-11T10:09:31+08:00"
+      }
+    },
+    {
+      "title": "TAIFEX MIS / taifex_minute_chart",
+      "url": "https://mis.taifex.com.tw/futures/api/getChartData1M",
+      "request": {
+        "provider": "TAIFEX MIS",
+        "url": "https://mis.taifex.com.tw/futures/api/getChartData1M",
+        "method": "POST",
+        "body": {
+          "SymbolID": "TXFI6-F"
+        },
+        "field_order": [
+          "T",
+          "O",
+          "H",
+          "L",
+          "C",
+          "V"
+        ],
+        "retrieved_at_taipei": "2026-09-11T10:10:19+08:00"
+      }
+    },
+    {
+      "title": "TAIFEX OpenAPI / taifex_institutional_oi",
+      "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+      "request": {
+        "provider": "TAIFEX OpenAPI",
+        "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+        "method": "GET",
+        "retrieved_at_taipei": "2026-09-11T10:09:29+08:00"
+      }
+    },
+    {
+      "title": "Nasdaq / SOX",
+      "url": "https://api.nasdaq.com/api/quote/SOX/info?assetclass=index",
+      "request": {
+        "provider": "Nasdaq",
+        "url_template": "https://api.nasdaq.com/api/quote/{symbol}/info?assetclass=index",
+        "method": "GET",
+        "symbols": [
+          "SOX",
+          "NDX"
+        ],
+        "retrieved_at_taipei": "2026-09-11T10:14:15+08:00"
+      }
+    },
+    {
+      "title": "Nasdaq / NDX",
+      "url": "https://api.nasdaq.com/api/quote/NDX/info?assetclass=index",
+      "request": {
+        "provider": "Nasdaq",
+        "url_template": "https://api.nasdaq.com/api/quote/{symbol}/info?assetclass=index",
+        "method": "GET",
+        "symbols": [
+          "SOX",
+          "NDX"
+        ],
+        "retrieved_at_taipei": "2026-09-11T10:14:15+08:00"
+      }
+    },
+    {
+      "title": "Nasdaq / AAPL",
+      "url": "https://api.nasdaq.com/api/quote/AAPL/info?assetclass=stocks",
+      "request": {
+        "provider": "Nasdaq",
+        "url_template": "https://api.nasdaq.com/api/quote/{symbol}/info?assetclass=stocks",
+        "method": "GET",
+        "symbols": [
+          "AAPL",
+          "MSFT",
+          "GOOGL",
+          "AMZN",
+          "NVDA",
+          "META",
+          "TSLA",
+          "TSM",
+          "UMC",
+          "ASX"
+        ],
+        "retrieval_window_taipei": {
+          "first": "2026-09-11T10:14:21+08:00",
+          "last": "2026-09-11T10:14:41+08:00"
+        }
+      }
+    },
+    {
+      "title": "Nasdaq / MSFT",
+      "url": "https://api.nasdaq.com/api/quote/MSFT/info?assetclass=stocks",
+      "request": {
+        "provider": "Nasdaq",
+        "url_template": "https://api.nasdaq.com/api/quote/{symbol}/info?assetclass=stocks",
+        "method": "GET",
+        "symbols": [
+          "AAPL",
+          "MSFT",
+          "GOOGL",
+          "AMZN",
+          "NVDA",
+          "META",
+          "TSLA",
+          "TSM",
+          "UMC",
+          "ASX"
+        ],
+        "retrieval_window_taipei": {
+          "first": "2026-09-11T10:14:21+08:00",
+          "last": "2026-09-11T10:14:41+08:00"
+        }
+      }
+    },
+    {
+      "title": "Nasdaq / GOOGL",
+      "url": "https://api.nasdaq.com/api/quote/GOOGL/info?assetclass=stocks",
+      "request": {
+        "provider": "Nasdaq",
+        "url_template": "https://api.nasdaq.com/api/quote/{symbol}/info?assetclass=stocks",
+        "method": "GET",
+        "symbols": [
+          "AAPL",
+          "MSFT",
+          "GOOGL",
+          "AMZN",
+          "NVDA",
+          "META",
+          "TSLA",
+          "TSM",
+          "UMC",
+          "ASX"
+        ],
+        "retrieval_window_taipei": {
+          "first": "2026-09-11T10:14:21+08:00",
+          "last": "2026-09-11T10:14:41+08:00"
+        }
+      }
+    },
+    {
+      "title": "Nasdaq / AMZN",
+      "url": "https://api.nasdaq.com/api/quote/AMZN/info?assetclass=stocks",
+      "request": {
+        "provider": "Nasdaq",
+        "url_template": "https://api.nasdaq.com/api/quote/{symbol}/info?assetclass=stocks",
+        "method": "GET",
+        "symbols": [
+          "AAPL",
+          "MSFT",
+          "GOOGL",
+          "AMZN",
+          "NVDA",
+          "META",
+          "TSLA",
+          "TSM",
+          "UMC",
+          "ASX"
+        ],
+        "retrieval_window_taipei": {
+          "first": "2026-09-11T10:14:21+08:00",
+          "last": "2026-09-11T10:14:41+08:00"
+        }
+      }
+    },
+    {
+      "title": "Nasdaq / NVDA",
+      "url": "https://api.nasdaq.com/api/quote/NVDA/info?assetclass=stocks",
+      "request": {
+        "provider": "Nasdaq",
+        "url_template": "https://api.nasdaq.com/api/quote/{symbol}/info?assetclass=stocks",
+        "method": "GET",
+        "symbols": [
+          "AAPL",
+          "MSFT",
+          "GOOGL",
+          "AMZN",
+          "NVDA",
+          "META",
+          "TSLA",
+          "TSM",
+          "UMC",
+          "ASX"
+        ],
+        "retrieval_window_taipei": {
+          "first": "2026-09-11T10:14:21+08:00",
+          "last": "2026-09-11T10:14:41+08:00"
+        }
+      }
+    },
+    {
+      "title": "Nasdaq / META",
+      "url": "https://api.nasdaq.com/api/quote/META/info?assetclass=stocks",
+      "request": {
+        "provider": "Nasdaq",
+        "url_template": "https://api.nasdaq.com/api/quote/{symbol}/info?assetclass=stocks",
+        "method": "GET",
+        "symbols": [
+          "AAPL",
+          "MSFT",
+          "GOOGL",
+          "AMZN",
+          "NVDA",
+          "META",
+          "TSLA",
+          "TSM",
+          "UMC",
+          "ASX"
+        ],
+        "retrieval_window_taipei": {
+          "first": "2026-09-11T10:14:21+08:00",
+          "last": "2026-09-11T10:14:41+08:00"
+        }
+      }
+    },
+    {
+      "title": "Nasdaq / TSLA",
+      "url": "https://api.nasdaq.com/api/quote/TSLA/info?assetclass=stocks",
+      "request": {
+        "provider": "Nasdaq",
+        "url_template": "https://api.nasdaq.com/api/quote/{symbol}/info?assetclass=stocks",
+        "method": "GET",
+        "symbols": [
+          "AAPL",
+          "MSFT",
+          "GOOGL",
+          "AMZN",
+          "NVDA",
+          "META",
+          "TSLA",
+          "TSM",
+          "UMC",
+          "ASX"
+        ],
+        "retrieval_window_taipei": {
+          "first": "2026-09-11T10:14:21+08:00",
+          "last": "2026-09-11T10:14:41+08:00"
+        }
+      }
+    },
+    {
+      "title": "Nasdaq / TSM",
+      "url": "https://api.nasdaq.com/api/quote/TSM/info?assetclass=stocks",
+      "request": {
+        "provider": "Nasdaq",
+        "url_template": "https://api.nasdaq.com/api/quote/{symbol}/info?assetclass=stocks",
+        "method": "GET",
+        "symbols": [
+          "AAPL",
+          "MSFT",
+          "GOOGL",
+          "AMZN",
+          "NVDA",
+          "META",
+          "TSLA",
+          "TSM",
+          "UMC",
+          "ASX"
+        ],
+        "retrieval_window_taipei": {
+          "first": "2026-09-11T10:14:21+08:00",
+          "last": "2026-09-11T10:14:41+08:00"
+        }
+      }
+    },
+    {
+      "title": "Nasdaq / UMC",
+      "url": "https://api.nasdaq.com/api/quote/UMC/info?assetclass=stocks",
+      "request": {
+        "provider": "Nasdaq",
+        "url_template": "https://api.nasdaq.com/api/quote/{symbol}/info?assetclass=stocks",
+        "method": "GET",
+        "symbols": [
+          "AAPL",
+          "MSFT",
+          "GOOGL",
+          "AMZN",
+          "NVDA",
+          "META",
+          "TSLA",
+          "TSM",
+          "UMC",
+          "ASX"
+        ],
+        "retrieval_window_taipei": {
+          "first": "2026-09-11T10:14:21+08:00",
+          "last": "2026-09-11T10:14:41+08:00"
+        }
+      }
+    },
+    {
+      "title": "Nasdaq / ASX",
+      "url": "https://api.nasdaq.com/api/quote/ASX/info?assetclass=stocks",
+      "request": {
+        "provider": "Nasdaq",
+        "url_template": "https://api.nasdaq.com/api/quote/{symbol}/info?assetclass=stocks",
+        "method": "GET",
+        "symbols": [
+          "AAPL",
+          "MSFT",
+          "GOOGL",
+          "AMZN",
+          "NVDA",
+          "META",
+          "TSLA",
+          "TSM",
+          "UMC",
+          "ASX"
+        ],
+        "retrieval_window_taipei": {
+          "first": "2026-09-11T10:14:21+08:00",
+          "last": "2026-09-11T10:14:41+08:00"
+        }
+      }
+    },
+    {
+      "title": "Cboe / cboe_vix",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+      "request": {
+        "provider": "Cboe",
+        "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+        "method": "GET",
+        "retrieved_at_taipei": "2026-09-11T10:09:30+08:00"
+      }
+    },
+    {
+      "title": "Cboe / cboe_spx",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SPX_History.csv",
+      "request": {
+        "provider": "Cboe",
+        "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SPX_History.csv",
+        "method": "GET",
+        "retrieved_at_taipei": "2026-09-11T10:09:31+08:00"
+      }
+    },
+    {
+      "title": "Yahoo Finance (fallback distributor) / ^DJI",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/^DJI?period1=1788739200&period2=1789171200&interval=1d&events=history&includeAdjustedClose=true",
+      "request": {
+        "provider": "Yahoo Finance (fallback distributor)",
+        "url_template": "https://query2.finance.yahoo.com/v8/finance/chart/{symbol}?period1=1788739200&period2=1789171200&interval=1d&events=history&includeAdjustedClose=true",
+        "method": "GET",
+        "symbols": [
+          "^DJI",
+          "DX-Y.NYB",
+          "CL=F",
+          "BZ=F"
+        ],
+        "retrieval_window_taipei": {
+          "first": "2026-09-11T10:14:56+08:00",
+          "last": "2026-09-11T10:14:58+08:00"
+        }
+      }
+    },
+    {
+      "title": "Yahoo Finance (fallback distributor) / DX-Y.NYB",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1788739200&period2=1789171200&interval=1d&events=history&includeAdjustedClose=true",
+      "request": {
+        "provider": "Yahoo Finance (fallback distributor)",
+        "url_template": "https://query2.finance.yahoo.com/v8/finance/chart/{symbol}?period1=1788739200&period2=1789171200&interval=1d&events=history&includeAdjustedClose=true",
+        "method": "GET",
+        "symbols": [
+          "^DJI",
+          "DX-Y.NYB",
+          "CL=F",
+          "BZ=F"
+        ],
+        "retrieval_window_taipei": {
+          "first": "2026-09-11T10:14:56+08:00",
+          "last": "2026-09-11T10:14:58+08:00"
+        }
+      }
+    },
+    {
+      "title": "Yahoo Finance (fallback distributor) / CL=F",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/CL=F?period1=1788739200&period2=1789171200&interval=1d&events=history&includeAdjustedClose=true",
+      "request": {
+        "provider": "Yahoo Finance (fallback distributor)",
+        "url_template": "https://query2.finance.yahoo.com/v8/finance/chart/{symbol}?period1=1788739200&period2=1789171200&interval=1d&events=history&includeAdjustedClose=true",
+        "method": "GET",
+        "symbols": [
+          "^DJI",
+          "DX-Y.NYB",
+          "CL=F",
+          "BZ=F"
+        ],
+        "retrieval_window_taipei": {
+          "first": "2026-09-11T10:14:56+08:00",
+          "last": "2026-09-11T10:14:58+08:00"
+        }
+      }
+    },
+    {
+      "title": "Yahoo Finance (fallback distributor) / BZ=F",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/BZ=F?period1=1788739200&period2=1789171200&interval=1d&events=history&includeAdjustedClose=true",
+      "request": {
+        "provider": "Yahoo Finance (fallback distributor)",
+        "url_template": "https://query2.finance.yahoo.com/v8/finance/chart/{symbol}?period1=1788739200&period2=1789171200&interval=1d&events=history&includeAdjustedClose=true",
+        "method": "GET",
+        "symbols": [
+          "^DJI",
+          "DX-Y.NYB",
+          "CL=F",
+          "BZ=F"
+        ],
+        "retrieval_window_taipei": {
+          "first": "2026-09-11T10:14:56+08:00",
+          "last": "2026-09-11T10:14:58+08:00"
+        }
+      }
+    },
+    {
+      "title": "U.S. Department of the Treasury / us_treasury",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve&field_tdr_date_value=2026&page&_format=csv",
+      "request": {
+        "provider": "U.S. Department of the Treasury",
+        "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve&field_tdr_date_value=2026&page&_format=csv",
+        "method": "GET",
+        "retrieved_at_taipei": "2026-09-11T10:13:35+08:00"
+      }
+    },
+    {
+      "title": "Global bonds fall as surging oil prices inflame inflation risks",
+      "url": "https://www.reuters.com/world/china/global-markets-corrected-2026-09-11/",
+      "verification": {
+        "url": "https://www.reuters.com/world/china/global-markets-corrected-2026-09-11/",
+        "body_verified": true,
+        "date_verified": true,
+        "source_timestamp_utc": "2026-09-11T00:56:00Z",
+        "lastmod_utc": "2026-09-11T02:04:50.107Z"
+      }
+    },
+    {
+      "title": "US producer prices increase as expected in August; but key details firmer",
+      "url": "https://www.reuters.com/business/us-producer-prices-increase-expected-august-2026-09-10/",
+      "verification": {
+        "url": "https://www.reuters.com/business/us-producer-prices-increase-expected-august-2026-09-10/",
+        "body_verified": true,
+        "date_verified": true,
+        "lastmod_utc": "2026-09-10T17:13:01.853Z"
+      }
+    },
+    {
+      "title": "www.reuters.com research",
+      "url": "https://www.reuters.com/world/asia-pacific/dollar-holds-gains-yen-slips-mideast-energy-shock-deepens-2026-09-11/",
+      "verification": {
+        "url": "https://www.reuters.com/world/asia-pacific/dollar-holds-gains-yen-slips-mideast-energy-shock-deepens-2026-09-11/",
+        "body_verified": true,
+        "date_verified": true,
+        "source_timestamp_utc": "2026-09-11T01:08:00Z"
+      }
+    },
+    {
+      "title": "www.reuters.com research",
+      "url": "https://www.reuters.com/business/energy/oil-prices-set-end-week-over-100-first-time-nearly-4-months-2026-09-11/",
+      "verification": {
+        "url": "https://www.reuters.com/business/energy/oil-prices-set-end-week-over-100-first-time-nearly-4-months-2026-09-11/",
+        "body_verified": true,
+        "date_verified": true,
+        "source_timestamp_utc": "2026-09-11T01:13:00Z"
+      }
+    },
+    {
+      "title": "www.etfaction.com research",
+      "url": "https://www.etfaction.com/u-s-growth-and-short-duration-lead-in-net-inflows/",
+      "verification": {
+        "url": "https://www.etfaction.com/u-s-growth-and-short-duration-lead-in-net-inflows/",
+        "body_verified": true,
+        "date_verified": true,
+        "published_date": "2026-09-10"
+      }
+    },
+    {
+      "title": "farside.co.uk research",
+      "url": "https://farside.co.uk/btc/",
+      "verification": {
+        "url": "https://farside.co.uk/btc/",
+        "body_verified": true,
+        "date_verified": true,
+        "latest_complete_row": "2026-09-09"
+      }
+    },
+    {
+      "title": "cointelegraph.com research",
+      "url": "https://cointelegraph.com/markets/bitcoin-etfs-shed-167m-after-strongest-three-week-inflow-run-of-2026",
+      "verification": {
+        "url": "https://cointelegraph.com/markets/bitcoin-etfs-shed-167m-after-strongest-three-week-inflow-run-of-2026",
+        "body_verified": true,
+        "date_verified": true,
+        "published_date": "2026-09-10",
+        "evidence_note": "正文引用Farside並列BTC/ETH逐基金flow。"
+      }
+    },
+    {
+      "title": "home.treasury.gov research",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve",
+      "verification": {
+        "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve",
+        "body_verified": true,
+        "date_verified": true,
+        "data_date": "2026-09-10"
+      }
+    },
+    {
+      "title": "api.binance.com research",
+      "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1m&startTime=1789006200000&endTime=1789092599999&limit=1000",
+      "verification": {
+        "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1m&startTime=1789006200000&endTime=1789092599999&limit=1000",
+        "body_verified": true,
+        "date_verified": true,
+        "pagination_required": true
+      }
+    },
+    {
+      "title": "api.binance.com research",
+      "url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1m&startTime=1789006200000&endTime=1789092599999&limit=1000",
+      "verification": {
+        "url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1m&startTime=1789006200000&endTime=1789092599999&limit=1000",
+        "body_verified": true,
+        "date_verified": true,
+        "pagination_required": true
+      }
+    },
+    {
+      "title": "Yahoo COMEX Gold Dec 26 electronic snapshot",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=5d&interval=1d"
+    }
+  ],
+  "research_verification": {
+    "market": {
+      "schema_version": "1.0",
+      "requested_report_date": "2026-09-11",
+      "generated_at_taipei": "2026-09-11T10:18:33+08:00",
+      "evidence_contract": {
+        "taiwan_intraday_common_cutoff": "2026-09-11T10:09:00+08:00",
+        "us_latest_completed_session": "2026-09-10",
+        "return_formula": "(value/reference_value-1)*100",
+        "basis_formula": "TXF minute close - TAIEX minute close",
+        "policy": "source dates/times preserved; unsupported settlement omitted rather than inferred"
+      },
+      "taiwan": {
+        "market_status": {
+          "date": "2026-09-11",
+          "is_open": true,
+          "evidence": {
+            "twse_rtcode": "0000",
+            "twse_quote_date": "20260911",
+            "twse_quote_time": "10:08:00",
+            "twse_quote_last": 46154.97,
+            "intraday_bar_count": 70,
+            "first_bar_label": "090100",
+            "tail_bar_label": "101000",
+            "tail_bar_was_forming_at_retrieval": true
+          },
+          "immediate_previous_trading_day": "2026-09-10",
+          "previous_day_verification": {
+            "twse_after_trading_status": "OK",
+            "taiex_close": 46940.49,
+            "taiex_change_abs": -242.87,
+            "taifex_institutional_max_complete_date": "20260910"
+          }
+        },
+        "taiex_intraday": {
+          "value": 46118.77,
+          "change_abs": -821.72,
+          "change_pct": -1.7505569285706222,
+          "reference_value": 46940.49,
+          "formula": "change_abs=value-reference_value; change_pct=(value/reference_value-1)*100",
+          "display": {
+            "value": 46118.77,
+            "change_abs": -821.72,
+            "change_pct": -1.75
+          },
+          "symbol": "TAIEX",
+          "minute_close_time": "2026-09-11T10:09:00+08:00",
+          "bar_type": "1-minute close (latest completed common minute available by TWSE retrieval)",
+          "previous_close_date": "2026-09-10",
+          "previous_close": 46940.49,
+          "ohlc_validation": {
+            "session_low": 45997.03,
+            "session_high": 46651.21,
+            "minute_close_within_session_low_high": true
+          }
+        },
+        "twse_market_activity": {
+          "source_response_retrieved_at_taipei": "2026-09-11T10:09:29+08:00",
+          "explicit_exchange_time_unavailable": true,
+          "raw_fields": {
+            "tv": 4709157,
+            "tz": 341292645460,
+            "tr": 1247608
+          },
+          "trading_volume_thousand_shares": 4709157,
+          "derived_trading_volume_shares": 4709157000,
+          "derived_trading_volume_10k_lots": 470.9157,
+          "trading_value_twd": 341292645460,
+          "derived_trading_value_twd_100m": 3412.9264546,
+          "transaction_count": 1247608,
+          "note": "MIS cumulative market fields from the same chart response; no exchange field timestamp, so labeled by retrieval time and not asserted synchronized to the 10:09 minute close."
+        },
+        "taifex_front_month_intraday": {
+          "value": 45946.0,
+          "change_abs": -923.0,
+          "change_pct": -1.9693187394653182,
+          "reference_value": 46869.0,
+          "formula": "change_abs=value-reference_value; change_pct=(value/reference_value-1)*100",
+          "display": {
+            "value": 45946.0,
+            "change_abs": -923.0,
+            "change_pct": -1.97
+          },
+          "symbol_id": "TXFI6-F",
+          "display_name_zh": "臺指期096",
+          "display_name_en": "TX096",
+          "contract_month": "2026-09",
+          "minute_close_time": "2026-09-11T10:09:00+08:00",
+          "bar_type": "1-minute close",
+          "reference_price": 46869.0,
+          "ohlc_validation": {
+            "session_low": 45805.0,
+            "session_high": 46193.0,
+            "minute_close_within_session_low_high": true
+          }
+        },
+        "synchronized_comparison": {
+          "common_completed_minute": "2026-09-11T10:09:00+08:00",
+          "taiex": 46118.77,
+          "txf": 45946.0,
+          "basis_points": -172.77,
+          "formula": "45946.00 - 46118.77 = -172.77"
+        },
+        "foreign_taiex_futures_position": {
+          "data_date": "2026-09-10",
+          "max_complete_date_in_response": "2026-09-10",
+          "contract_code": "臺股期貨",
+          "investor": "外資及陸資",
+          "open_interest_long": 8264,
+          "open_interest_short": 92182,
+          "open_interest_net_reported": -83918,
+          "open_interest_net_recomputed": -83918,
+          "trading_volume_long": 46008,
+          "trading_volume_short": 48057,
+          "trading_volume_net_reported": -2049,
+          "trading_volume_net_recomputed": -2049,
+          "headline_definition": "open-interest net, not daily trading net"
+        }
+      },
+      "us": {
+        "session_date": "2026-09-10",
+        "indices": {
+          "SOX": {
+            "value": 11614.17,
+            "change_abs": -317.15,
+            "change_pct": -2.658130030876718,
+            "reference_value": 11931.32,
+            "formula": "change_abs=value-reference_value; change_pct=(value/reference_value-1)*100",
+            "display": {
+              "value": 11614.17,
+              "change_abs": -317.15,
+              "change_pct": -2.66
+            },
+            "symbol": "SOX",
+            "trade_date": "2026-09-10",
+            "market_status": "Closed",
+            "source_reported_change_abs": -317.15,
+            "source_reported_change_pct": -2.66,
+            "last_trade_timestamp": "Sep 10, 2026",
+            "ohlc_validation": null
+          },
+          "VIX": {
+            "value": 17.84,
+            "change_abs": 1.38,
+            "change_pct": 8.383961117861482,
+            "reference_value": 16.46,
+            "formula": "change_abs=value-reference_value; change_pct=(value/reference_value-1)*100",
+            "display": {
+              "value": 17.84,
+              "change_abs": 1.38,
+              "change_pct": 8.38
+            },
+            "symbol": "VIX",
+            "trade_date": "2026-09-10",
+            "previous_trade_date": "2026-09-09",
+            "ohlc_validation": {
+              "close": 17.84,
+              "low": 16.29,
+              "high": 18.17,
+              "close_within_low_high": true
+            }
+          },
+          "SPX": {
+            "value": 7591.7,
+            "change_abs": -44.66,
+            "change_pct": -0.5848336118255294,
+            "reference_value": 7636.36,
+            "formula": "change_abs=value-reference_value; change_pct=(value/reference_value-1)*100",
+            "display": {
+              "value": 7591.7,
+              "change_abs": -44.66,
+              "change_pct": -0.58
+            },
+            "symbol": "SPX",
+            "trade_date": "2026-09-10",
+            "previous_trade_date": "2026-09-09"
+          },
+          "NDX": {
+            "value": 29103.51,
+            "change_abs": -318.04,
+            "change_pct": -1.0809763591653057,
+            "reference_value": 29421.55,
+            "formula": "change_abs=value-reference_value; change_pct=(value/reference_value-1)*100",
+            "display": {
+              "value": 29103.51,
+              "change_abs": -318.04,
+              "change_pct": -1.08
+            },
+            "symbol": "NDX",
+            "trade_date": "2026-09-10",
+            "market_status": "Closed",
+            "source_reported_change_abs": -318.04,
+            "source_reported_change_pct": -1.08,
+            "last_trade_timestamp": "Sep 10, 2026",
+            "ohlc_validation": null
+          },
+          "DJI": {
+            "value": 52064.1015625,
+            "change_abs": -316.55859375,
+            "change_pct": -0.6043425050499838,
+            "reference_value": 52380.66015625,
+            "formula": "change_abs=value-reference_value; change_pct=(value/reference_value-1)*100",
+            "display": {
+              "value": 52064.1,
+              "change_abs": -316.56,
+              "change_pct": -0.6
+            },
+            "symbol": "DJI",
+            "trade_date": "2026-09-10",
+            "previous_trade_date": "2026-09-09",
+            "session_anchor_timestamp_utc": "2026-09-10T13:30:00+00:00",
+            "ohlc_validation": {
+              "close": 52064.1015625,
+              "low": 51962.7109375,
+              "high": 52291.8515625,
+              "close_within_low_high": true
+            }
+          }
+        },
+        "major_taiwan_tech_adrs": {
+          "TSM": {
+            "value": 428.03,
+            "change_abs": -7.33,
+            "change_pct": -1.6836640940830576,
+            "reference_value": 435.36,
+            "formula": "change_abs=value-reference_value; change_pct=(value/reference_value-1)*100",
+            "display": {
+              "value": 428.03,
+              "change_abs": -7.33,
+              "change_pct": -1.68
+            },
+            "symbol": "TSM",
+            "trade_date": "2026-09-10",
+            "market_status": "Closed",
+            "source_reported_change_abs": -7.33,
+            "source_reported_change_pct": -1.68,
+            "last_trade_timestamp": "Sep 10, 2026",
+            "ohlc_validation": {
+              "close": 428.03,
+              "low": 424.05,
+              "high": 432.5299,
+              "close_within_low_high": true
+            }
+          },
+          "UMC": {
+            "value": 22.12,
+            "change_abs": -0.57,
+            "change_pct": -2.51211987659762,
+            "reference_value": 22.69,
+            "formula": "change_abs=value-reference_value; change_pct=(value/reference_value-1)*100",
+            "display": {
+              "value": 22.12,
+              "change_abs": -0.57,
+              "change_pct": -2.51
+            },
+            "symbol": "UMC",
+            "trade_date": "2026-09-10",
+            "market_status": "Closed",
+            "source_reported_change_abs": -0.57,
+            "source_reported_change_pct": -2.51,
+            "last_trade_timestamp": "Sep 10, 2026",
+            "ohlc_validation": {
+              "close": 22.12,
+              "low": 21.84,
+              "high": 22.28,
+              "close_within_low_high": true
+            }
+          },
+          "ASX": {
+            "value": 39.86,
+            "change_abs": -1.34,
+            "change_pct": -3.2524271844660193,
+            "reference_value": 41.2,
+            "formula": "change_abs=value-reference_value; change_pct=(value/reference_value-1)*100",
+            "display": {
+              "value": 39.86,
+              "change_abs": -1.34,
+              "change_pct": -3.25
+            },
+            "symbol": "ASX",
+            "trade_date": "2026-09-10",
+            "market_status": "Closed",
+            "source_reported_change_abs": -1.34,
+            "source_reported_change_pct": -3.25,
+            "last_trade_timestamp": "Sep 10, 2026",
+            "ohlc_validation": {
+              "close": 39.86,
+              "low": 39.445,
+              "high": 40.3,
+              "close_within_low_high": true
+            }
+          }
+        },
+        "magnificent_seven": {
+          "AAPL": {
+            "value": 326.57,
+            "change_abs": 11.23,
+            "change_pct": 3.5612354918500664,
+            "reference_value": 315.34,
+            "formula": "change_abs=value-reference_value; change_pct=(value/reference_value-1)*100",
+            "display": {
+              "value": 326.57,
+              "change_abs": 11.23,
+              "change_pct": 3.56
+            },
+            "symbol": "AAPL",
+            "trade_date": "2026-09-10",
+            "market_status": "Closed",
+            "source_reported_change_abs": 11.23,
+            "source_reported_change_pct": 3.56,
+            "last_trade_timestamp": "Sep 10, 2026",
+            "ohlc_validation": {
+              "close": 326.57,
+              "low": 316.51,
+              "high": 326.74,
+              "close_within_low_high": true
+            }
+          },
+          "MSFT": {
+            "value": 492.44,
+            "change_abs": 0.79,
+            "change_pct": 0.16068341299705075,
+            "reference_value": 491.65,
+            "formula": "change_abs=value-reference_value; change_pct=(value/reference_value-1)*100",
+            "display": {
+              "value": 492.44,
+              "change_abs": 0.79,
+              "change_pct": 0.16
+            },
+            "symbol": "MSFT",
+            "trade_date": "2026-09-10",
+            "market_status": "Closed",
+            "source_reported_change_abs": 0.79,
+            "source_reported_change_pct": 0.16,
+            "last_trade_timestamp": "Sep 10, 2026",
+            "ohlc_validation": {
+              "close": 492.44,
+              "low": 486.0,
+              "high": 494.52,
+              "close_within_low_high": true
+            }
+          },
+          "GOOGL": {
+            "value": 332.6,
+            "change_abs": 1.95,
+            "change_pct": 0.5897474671102374,
+            "reference_value": 330.65,
+            "formula": "change_abs=value-reference_value; change_pct=(value/reference_value-1)*100",
+            "display": {
+              "value": 332.6,
+              "change_abs": 1.95,
+              "change_pct": 0.59
+            },
+            "symbol": "GOOGL",
+            "trade_date": "2026-09-10",
+            "market_status": "Closed",
+            "source_reported_change_abs": 1.95,
+            "source_reported_change_pct": 0.59,
+            "last_trade_timestamp": "Sep 10, 2026",
+            "ohlc_validation": {
+              "close": 332.6,
+              "low": 327.74,
+              "high": 333.23,
+              "close_within_low_high": true
+            }
+          },
+          "AMZN": {
+            "value": 251.89,
+            "change_abs": -0.51,
+            "change_pct": -0.20206022187004755,
+            "reference_value": 252.4,
+            "formula": "change_abs=value-reference_value; change_pct=(value/reference_value-1)*100",
+            "display": {
+              "value": 251.89,
+              "change_abs": -0.51,
+              "change_pct": -0.2
+            },
+            "symbol": "AMZN",
+            "trade_date": "2026-09-10",
+            "market_status": "Closed",
+            "source_reported_change_abs": -0.51,
+            "source_reported_change_pct": -0.2,
+            "last_trade_timestamp": "Sep 10, 2026",
+            "ohlc_validation": {
+              "close": 251.89,
+              "low": 249.58,
+              "high": 253.15,
+              "close_within_low_high": true
+            }
+          },
+          "NVDA": {
+            "value": 218.36,
+            "change_abs": -5.06,
+            "change_pct": -2.264792766985946,
+            "reference_value": 223.42,
+            "formula": "change_abs=value-reference_value; change_pct=(value/reference_value-1)*100",
+            "display": {
+              "value": 218.36,
+              "change_abs": -5.06,
+              "change_pct": -2.26
+            },
+            "symbol": "NVDA",
+            "trade_date": "2026-09-10",
+            "market_status": "Closed",
+            "source_reported_change_abs": -5.06,
+            "source_reported_change_pct": -2.26,
+            "last_trade_timestamp": "Sep 10, 2026",
+            "ohlc_validation": {
+              "close": 218.36,
+              "low": 217.2,
+              "high": 220.99,
+              "close_within_low_high": true
+            },
+            "reference_note": "Nasdaq official net change uses adjusted Previous Close 223.42 on ex-dividend date 2026-09-10; Nasdaq historical 2026-09-09 close is 223.67. Template change_abs/change_pct follows official quote convention.",
+            "unadjusted_prior_historical_close": 223.67
+          },
+          "META": {
+            "value": 644.38,
+            "change_abs": -9.31,
+            "change_pct": -1.424222490783093,
+            "reference_value": 653.69,
+            "formula": "change_abs=value-reference_value; change_pct=(value/reference_value-1)*100",
+            "display": {
+              "value": 644.38,
+              "change_abs": -9.31,
+              "change_pct": -1.42
+            },
+            "symbol": "META",
+            "trade_date": "2026-09-10",
+            "market_status": "Closed",
+            "source_reported_change_abs": -9.31,
+            "source_reported_change_pct": -1.42,
+            "last_trade_timestamp": "Sep 10, 2026",
+            "ohlc_validation": {
+              "close": 644.38,
+              "low": 642.14,
+              "high": 663.5,
+              "close_within_low_high": true
+            }
+          },
+          "TSLA": {
+            "value": 363.56,
+            "change_abs": -4.25,
+            "change_pct": -1.1554878877681412,
+            "reference_value": 367.81,
+            "formula": "change_abs=value-reference_value; change_pct=(value/reference_value-1)*100",
+            "display": {
+              "value": 363.56,
+              "change_abs": -4.25,
+              "change_pct": -1.16
+            },
+            "symbol": "TSLA",
+            "trade_date": "2026-09-10",
+            "market_status": "Closed",
+            "source_reported_change_abs": -4.25,
+            "source_reported_change_pct": -1.16,
+            "last_trade_timestamp": "Sep 10, 2026",
+            "ohlc_validation": {
+              "close": 363.56,
+              "low": 357.68,
+              "high": 369.21,
+              "close_within_low_high": true
+            }
+          }
+        },
+        "macro": {
+          "dollar_index": {
+            "value": 99.08999633789062,
+            "change_abs": 0.31999969482422,
+            "change_pct": 0.32398471772822907,
+            "reference_value": 98.7699966430664,
+            "formula": "change_abs=value-reference_value; change_pct=(value/reference_value-1)*100",
+            "display": {
+              "value": 99.09,
+              "change_abs": 0.32,
+              "change_pct": 0.32
+            },
+            "symbol": "DX-Y.NYB",
+            "trade_date": "2026-09-10",
+            "previous_trade_date": "2026-09-09",
+            "session_anchor_timestamp_utc": "2026-09-10T04:00:00+00:00",
+            "ohlc_validation": {
+              "close": 99.08999633789062,
+              "low": 98.70999908447266,
+              "high": 99.19999694824219,
+              "close_within_low_high": true
+            }
+          },
+          "us_treasury_10y": {
+            "instrument": "U.S. Treasury par yield curve 10-year",
+            "trade_date": "2026-09-10",
+            "yield_pct": 4.95,
+            "previous_trade_date": "2026-09-09",
+            "reference_yield_pct": 4.83,
+            "change_percentage_points": 0.12,
+            "change_basis_points": 12.0,
+            "formula": "change_basis_points=(yield_pct-reference_yield_pct)*100"
+          },
+          "oil_live_electronic": {
+            "CL=F": {
+              "instrument": "WTI crude futures",
+              "value": 102.75,
+              "raw_value": 102.75,
+              "display_value": 102.75,
+              "currency": "USD/barrel",
+              "data_timestamp_utc": "2026-09-11T02:04:53+00:00",
+              "data_timestamp_taipei": "2026-09-11T10:04:53+08:00",
+              "session_note": "Yahoo electronic-session live quote; not the 2026-09-10 settlement. The 2026-09-10 daily row had close=null, so no settlement/change is asserted.",
+              "ohlc_validation": {
+                "low": 102.16000366210938,
+                "high": 104.45999908447266,
+                "value_within_low_high": true
+              }
+            },
+            "BZ=F": {
+              "instrument": "Brent crude futures",
+              "value": 107.92,
+              "raw_value": 107.91999816894531,
+              "display_value": 107.92,
+              "currency": "USD/barrel",
+              "data_timestamp_utc": "2026-09-11T02:04:56+00:00",
+              "data_timestamp_taipei": "2026-09-11T10:04:56+08:00",
+              "session_note": "Yahoo electronic-session live quote; not the 2026-09-10 settlement. The 2026-09-10 daily row had close=null, so no settlement/change is asserted.",
+              "ohlc_validation": {
+                "low": 107.23999786376953,
+                "high": 110.19000244140625,
+                "value_within_low_high": true
+              }
+            }
+          }
+        }
+      },
+      "sources": {
+        "twse_live_quote": {
+          "provider": "TWSE MIS",
+          "url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+          "method": "GET",
+          "retrieved_at_taipei": "2026-09-11T10:09:29+08:00"
+        },
+        "twse_minute_chart": {
+          "provider": "TWSE MIS",
+          "url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+          "method": "GET",
+          "retrieved_at_taipei": "2026-09-11T10:09:29+08:00"
+        },
+        "twse_previous_day": {
+          "provider": "TWSE",
+          "url": "https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=20260910&type=IND&response=json",
+          "method": "GET",
+          "retrieved_at_taipei": "2026-09-11T10:15:34+08:00"
+        },
+        "taifex_quote_list": {
+          "provider": "TAIFEX MIS",
+          "url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+          "method": "POST",
+          "body": {
+            "MarketType": "0",
+            "SymbolType": "F",
+            "KindID": "1",
+            "CID": "",
+            "ExpireMonth": ""
+          },
+          "retrieved_at_taipei": "2026-09-11T10:09:31+08:00"
+        },
+        "taifex_minute_chart": {
+          "provider": "TAIFEX MIS",
+          "url": "https://mis.taifex.com.tw/futures/api/getChartData1M",
+          "method": "POST",
+          "body": {
+            "SymbolID": "TXFI6-F"
+          },
+          "field_order": [
+            "T",
+            "O",
+            "H",
+            "L",
+            "C",
+            "V"
+          ],
+          "retrieved_at_taipei": "2026-09-11T10:10:19+08:00"
+        },
+        "taifex_institutional_oi": {
+          "provider": "TAIFEX OpenAPI",
+          "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+          "method": "GET",
+          "retrieved_at_taipei": "2026-09-11T10:09:29+08:00"
+        },
+        "nasdaq_index_info": {
+          "provider": "Nasdaq",
+          "url_template": "https://api.nasdaq.com/api/quote/{symbol}/info?assetclass=index",
+          "method": "GET",
+          "symbols": [
+            "SOX",
+            "NDX"
+          ],
+          "retrieved_at_taipei": "2026-09-11T10:14:15+08:00"
+        },
+        "nasdaq_stock_info": {
+          "provider": "Nasdaq",
+          "url_template": "https://api.nasdaq.com/api/quote/{symbol}/info?assetclass=stocks",
+          "method": "GET",
+          "symbols": [
+            "AAPL",
+            "MSFT",
+            "GOOGL",
+            "AMZN",
+            "NVDA",
+            "META",
+            "TSLA",
+            "TSM",
+            "UMC",
+            "ASX"
+          ],
+          "retrieval_window_taipei": {
+            "first": "2026-09-11T10:14:21+08:00",
+            "last": "2026-09-11T10:14:41+08:00"
+          }
+        },
+        "nasdaq_stock_historical": {
+          "provider": "Nasdaq",
+          "url_template": "https://api.nasdaq.com/api/quote/{symbol}/historical?assetclass=stocks&fromdate=2026-09-08&todate=2026-09-11&limit=10",
+          "method": "GET",
+          "purpose": "dated close/OHLC and prior-close validation"
+        },
+        "cboe_vix": {
+          "provider": "Cboe",
+          "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+          "method": "GET",
+          "retrieved_at_taipei": "2026-09-11T10:09:30+08:00"
+        },
+        "cboe_spx": {
+          "provider": "Cboe",
+          "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SPX_History.csv",
+          "method": "GET",
+          "retrieved_at_taipei": "2026-09-11T10:09:31+08:00"
+        },
+        "yahoo_chart": {
+          "provider": "Yahoo Finance (fallback distributor)",
+          "url_template": "https://query2.finance.yahoo.com/v8/finance/chart/{symbol}?period1=1788739200&period2=1789171200&interval=1d&events=history&includeAdjustedClose=true",
+          "method": "GET",
+          "symbols": [
+            "^DJI",
+            "DX-Y.NYB",
+            "CL=F",
+            "BZ=F"
+          ],
+          "retrieval_window_taipei": {
+            "first": "2026-09-11T10:14:56+08:00",
+            "last": "2026-09-11T10:14:58+08:00"
+          }
+        },
+        "us_treasury": {
+          "provider": "U.S. Department of the Treasury",
+          "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve&field_tdr_date_value=2026&page&_format=csv",
+          "method": "GET",
+          "retrieved_at_taipei": "2026-09-11T10:13:35+08:00"
+        }
+      },
+      "caveats": [
+        "Nasdaq SOX/NDX historical endpoint still lagged at 2026-09-09; official Nasdaq info endpoint explicitly dated the latest values Sep 10, 2026 and reported marketStatus=Closed.",
+        "DJI and DXY use Yahoo Finance chart as fallback distributor; all principal Taiwan figures, SOX/NDX, SPX/VIX, stocks/ADRs, and Treasury yield use official exchange/index-owner/government endpoints.",
+        "Yahoo 2026-09-10 CL=F and BZ=F daily rows had close=null after electronic reopening; oil is therefore live electronic only, with no 9/10 settlement or daily change asserted.",
+        "TWSE market activity tv/tz/tr has no explicit exchange-time field; reported with response retrieval time rather than synchronized to the 10:09 index minute."
+      ]
+    },
+    "news": {
+      "schema_version": "news-flows-research-v1",
+      "brief_date_taipei": "2026-09-11",
+      "language": "zh-Hant",
+      "cutoff": {
+        "local": "2026-09-11T10:10:00+08:00",
+        "utc": "2026-09-11T02:10:00Z"
+      },
+      "primary_news_window": {
+        "start_local": "2026-09-10T10:10:00+08:00",
+        "end_local": "2026-09-11T10:10:00+08:00",
+        "start_utc": "2026-09-10T02:10:00Z",
+        "end_utc": "2026-09-11T02:10:00Z"
+      },
+      "research_completed_at": {
+        "local": "2026-09-11T10:17:35+08:00",
+        "utc": "2026-09-11T02:17:35Z"
+      },
+      "status": "verified_pack_with_explicit_gaps",
+      "method_notes": [
+        "價格、殖利率與單日漲跌只作市場表現，不被當成資金流。",
+        "ETF flow 僅採明示 create/redeem 或 net flow 的資料；若 2026-09-10 美股交易日資料在 cutoff 尚未完整，即列最近完整日並標缺口。",
+        "Reuters body 已打開核對；Reuters sitemap lastmod 與正文刊登時間分欄，不混作事件時間。"
+      ],
+      "news": [
+        {
+          "rank": 1,
+          "headline_zh": "油價衝破100美元並推升全球殖利率，風險資產面臨再通膨折現壓力",
+          "source_title": "Global bonds fall as surging oil prices inflame inflation risks",
+          "published_utc": "2026-09-11T00:56:00Z",
+          "source_version_lastmod_utc": "2026-09-11T02:04:50.107Z",
+          "url": "https://www.reuters.com/world/china/global-markets-corrected-2026-09-11/",
+          "verified_facts": [
+            "Reuters 於正文稱全球債券殖利率跳升、股市下挫，主因油價急升使市場加碼計入央行緊縮風險。",
+            "Brent 於亞洲時段一度報109.97美元/桶；Reuters 摘要稱日經當時下跌2.8%。",
+            "美國10年債殖利率逼近5%，30年期觸及2007年以來高位。"
+          ],
+          "taiwan_mapping_inference": [
+            "短線偏空台股高本益比AI、半導體與電子權值股估值；即使產業需求未變，長端利率上升先壓縮折現倍數。",
+            "油價與航道風險不利航空、塑化下游及能源進口成本；油輪/部分航運報價可能受惠，但不可外推至所有貨櫃航運。"
+          ],
+          "body_verified": true,
+          "date_verified": true,
+          "evidence_class": "Reuters body checked",
+          "uncertainty": "Reuters 抓取正文在長文後段截斷；採用的數值均出現在已核對段落。"
+        },
+        {
+          "rank": 2,
+          "headline_zh": "美國8月PPI月增0.4%、年增5.4%，能源與貨品成本令升息押注升溫",
+          "source_title": "US producer prices increase as expected in August; but key details firmer",
+          "source_version_lastmod_utc": "2026-09-10T17:13:01.853Z",
+          "url": "https://www.reuters.com/business/us-producer-prices-increase-expected-august-2026-09-10/",
+          "verified_facts": [
+            "最終需求PPI月增0.4%，7月由持平上修為月增0.1%；年增率由4.8%升至5.4%。",
+            "能源價格月增4.2%，貨品價格月增1.1%；扣除食品與能源的貨品價格月增0.4%。",
+            "每週初領失業救濟金減少1,000人至206,000人；Reuters 報導市場把下週Fed至少升息25bp機率推至約70%。"
+          ],
+          "taiwan_mapping_inference": [
+            "偏空長久期科技股與高槓桿企業；台積電、AI伺服器、IC設計可能受美債殖利率上升拖累評價。",
+            "美元偏強可提升出口商換算收入，但若伴隨全球風險降槓桿，外資台股方向仍可能偏保守。"
+          ],
+          "body_verified": true,
+          "date_verified": true,
+          "evidence_class": "Reuters body checked",
+          "uncertainty": "CPI 尚未在 cutoff 前公布，不能把PPI直接當作Fed已決定升息。"
+        }
+      ],
+      "cross_asset": {
+        "crypto_market": {
+          "measurement_window": "2026-09-10T02:10:00Z/2026-09-11T02:10:00Z",
+          "venue_and_method": "Binance BTCUSDT、ETHUSDT 1分鐘K線；共1440根，價格取2026-09-11 02:09:59.999 UTC收盤，成交量為該交易所該交易對24小時加總，不代表全球總量。",
+          "btc": {
+            "price_usdt": 76930.31,
+            "open_24h_usdt": 78045.22,
+            "change_24h_pct": -1.4285,
+            "high_24h_usdt": 78564.39,
+            "low_24h_usdt": 76464.0,
+            "base_volume_btc": 15001.94456,
+            "quote_volume_usdt": 1161863377.44,
+            "trade_count": 3069490,
+            "source_url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1m&startTime=1789006200000&endTime=1789092599999&limit=1000",
+            "body_verified": true,
+            "date_verified": true
+          },
+          "eth": {
+            "price_usdt": 2453.07,
+            "open_24h_usdt": 2462.29,
+            "change_24h_pct": -0.3744,
+            "high_24h_usdt": 2484.76,
+            "low_24h_usdt": 2405.85,
+            "base_volume_eth": 345717.7161,
+            "quote_volume_usdt": 845844683.53,
+            "trade_count": 2738592,
+            "source_url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1m&startTime=1789006200000&endTime=1789092599999&limit=1000",
+            "body_verified": true,
+            "date_verified": true
+          },
+          "eth_btc": {
+            "ratio_at_cutoff": 0.03188691,
+            "method": "ETHUSDT cutoff close divided by BTCUSDT cutoff close",
+            "uncertainty": "交叉匯率為同一交易所USDT報價推算，與直接ETHBTC交易對可有微小差異。"
+          }
+        },
+        "crypto_etf_flows": {
+          "latest_complete_session_et": "2026-09-09",
+          "btc_spot_us_etfs": {
+            "net_flow_usd_m": -120.2,
+            "direction": "outflow",
+            "breakdown_usd_m": {
+              "ARKB": -78.0,
+              "GBTC": -27.2,
+              "IBIT": -19.5,
+              "MSBT": 4.5
+            },
+            "primary_url": "https://farside.co.uk/btc/",
+            "corroborating_url": "https://cointelegraph.com/markets/bitcoin-etfs-shed-167m-after-strongest-three-week-inflow-run-of-2026",
+            "body_verified": true,
+            "date_verified": true,
+            "uncertainty": "2026-09-10列於Farside但在cutoff顯示尚無逐基金完成數據，因此不把0.0視為確認零流量。"
+          },
+          "eth_spot_us_etfs": {
+            "net_flow_usd_m": 34.7,
+            "direction": "inflow",
+            "breakdown_usd_m": {
+              "ETHB": 22.9,
+              "ETHA": 9.7,
+              "TETH": 2.1
+            },
+            "source_url": "https://cointelegraph.com/markets/bitcoin-etfs-shed-167m-after-strongest-three-week-inflow-run-of-2026",
+            "underlying_attribution": "Farside Investors",
+            "body_verified": true,
+            "date_verified": true,
+            "evidence_class": "secondary body checked, citing Farside",
+            "uncertainty": "Farside ETH目前頁面在本次抓取呈現陳舊快取，未能直接核到2026-09-09列；採用文章正文對Farside的逐基金加總，且22.9+9.7+2.1=34.7。2026-09-10完整流量於cutoff仍缺。"
+          }
+        },
+        "gold_etf_flows": {
+          "source_posted_date": "2026-09-10",
+          "likely_underlying_session": null,
+          "observed_physical_gold_fund_flows_usd_m": {
+            "GLDM": 43.5,
+            "IAUM": 30.7,
+            "SGOL": 12.6
+          },
+          "observed_subset_net_inflow_usd_m": 86.8,
+          "direction_for_observed_subset": "inflow",
+          "not_physical_gold_but_relevant_separate_flows_usd_m": {
+            "GDX_gold_miners_equity": -266.1,
+            "GDXJ_junior_gold_miners_equity": -32.0,
+            "precious_metals_thematic_category": -321.6
+          },
+          "source_url": "https://www.etfaction.com/u-s-growth-and-short-duration-lead-in-net-inflows/",
+          "body_verified": true,
+          "date_verified": true,
+          "uncertainty": "正文僅列商品類別前五名，未列GLD/IAU等所有實體金ETF，故86.8百萬美元只是可見基金小計，不宣稱全市場黃金ETF淨流。World Gold Council截至9月9日的最新官方頁面僅提供2026年8月月資料，沒有cutoff可用的完整日流。",
+          "official_monthly_reference_url": "https://www.gold.org/goldhub/data/gold-etfs-holdings-and-flows",
+          "trade_date_status": "unconfirmed; publication 2026-09-10 only, background not same-day confirmation"
+        },
+        "us_treasury_and_dollar": {
+          "treasury_par_yields_2026_09_10_pct": {
+            "2y": 4.56,
+            "10y": 4.95,
+            "30y": 5.37
+          },
+          "yield_source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve",
+          "yield_source_note": "美國財政部每日殖利率曲線，為接近美東15:30的indicative bid-side par yields。",
+          "bond_etf_actual_flows": {
+            "source_posted_date": "2026-09-10",
+            "fixed_income_total_usd_b": 1.97,
+            "government_ultrashort_category_usd_b": 1.58,
+            "SGOV_usd_m": 386.8,
+            "BND_usd_m": 215.6,
+            "LQD_usd_m": -263.6,
+            "source_url": "https://www.etfaction.com/u-s-growth-and-short-duration-lead-in-net-inflows/",
+            "trade_date_status": "unconfirmed; publication 2026-09-10 only"
+          },
+          "dollar_market_snapshot": {
+            "dxy": 99.081,
+            "asof_utc_approx": "2026-09-11T01:08:00Z",
+            "prior_session_change_pct": 0.3,
+            "source_url": "https://www.reuters.com/world/asia-pacific/dollar-holds-gains-yen-slips-mideast-energy-shock-deepens-2026-09-11/",
+            "classification": "price_direction_only_not_fund_flow"
+          },
+          "interpretation": "殖利率曲線明顯上移與美元偏強，顯示油價/通膨衝擊主導；同時債券ETF仍有申購，且偏向政府超短債。這是避險/現金管理與債價下跌並存，不可把殖利率上升解讀為債券資金流出。",
+          "body_verified": true,
+          "date_verified": true
+        },
+        "equity_fund_flows": {
+          "source_posted_date": "2026-09-10",
+          "likely_underlying_session": null,
+          "actual_flows": {
+            "all_equity_etfs_usd_b": 5.03,
+            "us_large_cap_growth_category_usd_b": 2.99,
+            "us_large_cap_blend_category_usd_b": -2.19,
+            "information_technology_category_usd_b": 1.1,
+            "SOXX_usd_m": 898.0,
+            "SMH_usd_m": 545.1,
+            "SOXX_plus_SMH_usd_m": 1443.1,
+            "IEMG_usd_m": 501.4,
+            "AAXJ_usd_m": 95.5
+          },
+          "fund_level_rotation_examples_usd_b": {
+            "VOO": 2.99,
+            "QQQ": 2.73,
+            "SPY": 1.26,
+            "IVV": -5.5,
+            "SPYM": -2.21
+          },
+          "source_url": "https://www.etfaction.com/u-s-growth-and-short-duration-lead-in-net-inflows/",
+          "body_verified": true,
+          "date_verified": true,
+          "interpretation": "ETF實際申贖方向偏向大型成長、半導體與部分新興市場，但同指數基金間有大額輪動；不能用單一IVV贖回或指數跌幅概括整體股票資金外流。",
+          "uncertainty": "文章正文未在抓取版本中明示underlying create/redeem交易日，只能依9月10日刊登推定為前一美股交易日；數值為ETF Action資料，不是所有共同基金/機構現金流。",
+          "market_performance_not_flow": {
+            "session": "2026-09-10 US close",
+            "SP500_close": 7591.75,
+            "SP500_change_pct": -0.58,
+            "Nasdaq_close": 26081.73,
+            "Nasdaq_change_pct": -0.65,
+            "Dow_close": 52064.1,
+            "Dow_change_pct": -0.6,
+            "Nvidia_change_pct": -2.3,
+            "Micron_change_pct": -4.7,
+            "NYSE_Nasdaq_volume_shares_b": 15.1,
+            "20d_average_volume_shares_b": 14.9,
+            "classification": "price_and_trading_activity_only_not_fund_flow",
+            "source_url": "https://www.reuters.com/world/china/global-markets-corrected-2026-09-11/"
+          },
+          "trade_date_status": "unconfirmed; publication 2026-09-10 only, background not same-day confirmation"
+        }
+      },
+      "taiwan_market_mapping": {
+        "net_read": "外部價格與利率壓力偏空；較早ETF申購只作背景，不作今天半導體承接或中期支撐已成立的證據。",
+        "buckets": [
+          {
+            "bucket": "台積電/先進製程/先進封裝",
+            "direction": "短線評價偏空；配置流中期偏正",
+            "evidence_link": "10Y/30Y殖利率升至4.95%/5.37%，但SOXX與SMH實際申購合計14.431億美元。",
+            "horizon": "當日情緒至數週"
+          },
+          {
+            "bucket": "AI伺服器ODM、散熱、電源、光通訊、PCB/CCL",
+            "direction": "高殖利率壓估值；若美國大型成長與半導體申購延續則有相對支撐",
+            "horizon": "當日至數週"
+          },
+          {
+            "bucket": "記憶體/HBM",
+            "direction": "短線偏空",
+            "evidence_link": "Micron隔夜跌4.7%，且全球再通膨交易抬高折現率；這是價格訊號，不是記憶體ETF流。",
+            "horizon": "當日情緒"
+          },
+          {
+            "bucket": "航空/塑化下游/高耗能製造",
+            "direction": "偏空",
+            "evidence_link": "Brent與WTI均破100美元、航道受限，成本與通膨風險上升。",
+            "horizon": "數日到數月，取決於衝突與航道"
+          },
+          {
+            "bucket": "出口權值與新台幣",
+            "direction": "換算面偏正、資金面偏空，效果混合",
+            "evidence_link": "DXY約99.081且避險美元偏強；但風險降槓桿通常不利外資台股風險承擔。",
+            "horizon": "當日至數週"
+          }
+        ],
+        "not_claimed": "未取得cutoff前台股當日外資買賣超，因此不宣稱台股已出現實際外資淨流入或淨流出。"
+      },
+      "direct_principal_signals": [],
+      "direct_principal_verification_boundary": {
+        "result": "無符合『直接核對原始貼文/逐字稿/正式公司發布且具新增可交易資訊』門檻的Trump、Musk、Tesla、SpaceX或Starlink訊號，因此不填。",
+        "not_promoted": [
+          "Reuters在窗內報導Trump對Iran Pickaxe Mountain的直接引語及戰事時程，但未找到cutoff前可核對的白宮原始逐字稿；僅作Reuters attribution，不升格為directly verified original。",
+          "SpaceX官方8月27日公告CFO將於9月10日出席Goldman Sachs會議，但公告在新聞窗外，且本次未核得cutoff前會議逐字稿中的新增重大訊息。",
+          "未核得窗內Tesla/Starlink官方重大發布或Musk原始貼文。"
+        ],
+        "reuters_trump_url": "https://www.reuters.com/world/trump-says-activity-seen-irans-pickaxe-mountain-urges-tehran-not-get-cute-2026-09-10/",
+        "spacex_event_notice_url": "https://ir.spacex.com/updates/releases-details/2026/SpaceX-to-Participate-in-the-Goldman-Sachs-Communacopia-and-Technology-Conference-2026-hMRDqGksMV"
+      },
+      "global_uncertainties": [
+        "2026-09-10美股交易日的BTC與ETH現貨ETF最終逐基金流量在cutoff未完整，故使用最近完整日2026-09-09 ET。",
+        "黃金ETF僅能驗證ETF Action列出的實體金基金子集，不能宣稱為全球或全美完整黃金ETF淨流。",
+        "股票與債券ETF flow來源文章刊登日為9月10日，但抓取正文未明示底層申贖交易日；已保守標為likely 9月9日。",
+        "CPI在cutoff後才公布；Fed政策仍屬市場定價而非已發生決策。"
+      ],
+      "source_inventory": [
+        {
+          "url": "https://www.reuters.com/world/china/global-markets-corrected-2026-09-11/",
+          "body_verified": true,
+          "date_verified": true,
+          "source_timestamp_utc": "2026-09-11T00:56:00Z",
+          "lastmod_utc": "2026-09-11T02:04:50.107Z"
+        },
+        {
+          "url": "https://www.reuters.com/business/us-producer-prices-increase-expected-august-2026-09-10/",
+          "body_verified": true,
+          "date_verified": true,
+          "lastmod_utc": "2026-09-10T17:13:01.853Z"
+        },
+        {
+          "url": "https://www.reuters.com/world/asia-pacific/dollar-holds-gains-yen-slips-mideast-energy-shock-deepens-2026-09-11/",
+          "body_verified": true,
+          "date_verified": true,
+          "source_timestamp_utc": "2026-09-11T01:08:00Z"
+        },
+        {
+          "url": "https://www.reuters.com/business/energy/oil-prices-set-end-week-over-100-first-time-nearly-4-months-2026-09-11/",
+          "body_verified": true,
+          "date_verified": true,
+          "source_timestamp_utc": "2026-09-11T01:13:00Z"
+        },
+        {
+          "url": "https://www.etfaction.com/u-s-growth-and-short-duration-lead-in-net-inflows/",
+          "body_verified": true,
+          "date_verified": true,
+          "published_date": "2026-09-10"
+        },
+        {
+          "url": "https://farside.co.uk/btc/",
+          "body_verified": true,
+          "date_verified": true,
+          "latest_complete_row": "2026-09-09"
+        },
+        {
+          "url": "https://cointelegraph.com/markets/bitcoin-etfs-shed-167m-after-strongest-three-week-inflow-run-of-2026",
+          "body_verified": true,
+          "date_verified": true,
+          "published_date": "2026-09-10",
+          "evidence_note": "正文引用Farside並列BTC/ETH逐基金flow。"
+        },
+        {
+          "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve",
+          "body_verified": true,
+          "date_verified": true,
+          "data_date": "2026-09-10"
+        },
+        {
+          "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1m&startTime=1789006200000&endTime=1789092599999&limit=1000",
+          "body_verified": true,
+          "date_verified": true,
+          "pagination_required": true
+        },
+        {
+          "url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1m&startTime=1789006200000&endTime=1789092599999&limit=1000",
+          "body_verified": true,
+          "date_verified": true,
+          "pagination_required": true
+        }
+      ],
+      "parent_corrections": [
+        "ETF Action底層交易日未明，不接受likely 9/9作時序依據；其crypto基金值與9/9 Farside不同。",
+        "SPX採Cboe 7591.70，而非Reuters摘要7591.75。",
+        "未核全日流量的9/10 crypto列不當作零流量。"
+      ]
+    },
+    "parent": {
+      "market_return_checks": "pass",
+      "crypto_etf_sums": "pass",
+      "eth_btc_change_24h_pct": 1.0693718730986346,
+      "official_raw_sha256": {
+        "raw_nasdaq_TSM_historical.json": "6b16c5ea444fbde86a3462094cdb13a09feb28eb55a2363f0604f9935618f36a",
+        "raw_nasdaq_UMC_historical.json": "5330807187003454d81042055eff4b4534344f7839425307925e6327f0d9bd87",
+        "raw_nasdaq_NVDA_info.json": "0f51f366d2334b6d33e045e4684c070ad827447bb340d4e4eaa008e2b09dd9cb",
+        "raw_nasdaq_NVDA_historical.json": "22565a43a27537b56ebef49a904815a86f9e02ba98280bee56f54ea3d8e42469",
+        "raw_nasdaq_MSFT_summary.json": "5b78a344c83c4966ef00b8ac215583df5b5856cdd324f5a7f56c853b4383ab17",
+        "raw_nasdaq_META_info.json": "c46446ea9a2aee16c753203dd02a1e7e4e7d48e173649ba67ac126dbacae64b9",
+        "raw_twse_chart.bin": "b2f60c5e357cdbf8012c878cfabfa21d041f71c67ddfb6c29a4885f84526d470",
+        "raw_nasdaq_GOOGL_historical.json": "ccf227cab164d1a05836e0e19ce602fd28241af5160f7e116974616fc38d5455",
+        "raw_spx.bin": "3b6123fad0a898eb1a87ddb7906d4c3b7b3c79075f54bfd52d04def451736dcd",
+        "raw_yahoo_CL_F.json": "c926395ae31adc9f6e5ee52d96febe5e5a829c05d963e0efc097893c7feab779",
+        "raw_nasdaq_ASX_summary.json": "05633171ed41a01f102f981d6f5f791a3a59af353682cf1524b891c1614e9931",
+        "raw_yahoo_BZ_F.json": "b91f922759ad1bdb69e60b1a61871081d5b8c4558d87facbc6dfc5290e604ebe",
+        "raw_yahoo_GSPC.json": "d8074f0b744e2d5c2c1cc2f115bab4d9aa61b3a7a54c06f16e553df31dce8ae4",
+        "raw_nasdaq_TSM_info.json": "4aa7340683ba715fce5132b99811efa477af59ba9b6a64db78bcacbc5a32ea83",
+        "raw_nasdaq_AAPL_info.json": "642142b7fd47ae1c89bb02805a1c8f729311b5cf99ef456954c5666dd316cf08",
+        "raw_vix.bin": "013e6edc73c5d305f96c0b184eb48773852ffb58dfa1d1d5e64adfdcdc7dc2f7",
+        "raw_nasdaq_AAPL_summary.json": "35340fa1ab04936a52b93d42ad1e4d8e220a65ab753ff41f5141e1fcf5b9f73e",
+        "raw_nasdaq_DJI_summary.json": "cbe508b6af79789851ca0053cc7e528bbb2e5a443696388c74b51577a052136f",
+        "raw_nasdaq_ASX_info.json": "01a2b8996ec03f127a64302433b7687d086c119274c7bd85928029932246f803",
+        "raw_nasdaq_UMC_info.json": "73f51d3919c904a703110fb8a89f626e7894986bc37ae3962f0eb1668b7b656e",
+        "raw_nasdaq_NVDA_summary.json": "31bf720cee8b47342cbc6ab86bcd0a057859e783849b4f201f5b3a69f9bc21bc",
+        "raw_nasdaq_AVGO_historical.json": "5fdffb972a10f1245b253501947c5f23cf3c7dd676efa48746b30c454ec255fa",
+        "raw_taifex_chart.json": "e8b3f60c444b9d5282de69b1fa22a9b026e93d39b68ef89683a02bfcdb2fbe35",
+        "raw_twse_MI_INDEX_20260910.json": "9cfaba87ac627d524660d28690f1f1d045691d0a1f3d6165477c46e2012ff9dc",
+        "raw_yahoo_DJI.json": "2da58dab53f3b7f7fb7dd946d50bf45ed694df4afe1f1f80824cbfd3813c0e9f",
+        "raw_taifex_oi.bin": "050e51686dc34a1e8f421eab68d4acfe3e291e5e2d694e9674d5f15968cc4e16",
+        "raw_nasdaq_NDX_info.json": "91f9ae36b5e7cc3f5c0f3bd11c46ec3b712a915604002f9ba4da27f400bcf78f",
+        "raw_nasdaq_SOX_info.json": "ce6de010bf46583b2d9f4e7d8b4473a45fedd99168ff4db11a583eef4ec6ea29",
+        "raw_nasdaq_AMZN_summary.json": "b569016b3df6d48943bcd55e5c65d6a842440eb12cc9b5e0cc54b1a299a8c10d",
+        "raw_nasdaq_AMZN_info.json": "15faf60d667442420accdf252fb6ad8331670116bb272adbfa23ca667793d5c0",
+        "raw_nasdaq_DJI_historical.json": "cbe508b6af79789851ca0053cc7e528bbb2e5a443696388c74b51577a052136f",
+        "raw_taifex_quote.json": "2207fe6d43eeb2507ddab35521dbdc7ccdd7a50aeeb416c414a028dfbb948ebe",
+        "raw_twse_MI_INDEX_20260909.json": "087d9bcd089ae0e8a848a1eb2ded9eeb1e8825816b91e333e525246ec75186ad",
+        "raw_nasdaq_SOX_historical.json": "46d126023b0a8d1cbd6068ecdc88bba71454b48389896dee6824477699182e2c",
+        "raw_nasdaq_UMC_summary.json": "1b35495237ff1804167ec50cf7276153c895f1c12989efdb858bc5d4524122d9",
+        "raw_nasdaq_AMZN_historical.json": "76907a98d9d3a3886f7064de2f837044c76662a6844d93a96334c7680018ddcd",
+        "raw_nasdaq_TSM_summary.json": "7b1e4e32cf2ec26fcb004586413631750370b31bd12b15d58d74bd27e34939aa",
+        "raw_nasdaq_MSFT_historical.json": "a8bf2ebbc12afb2f3ed4a11cbfa8cf7dc36b0a9ed3038bc4900a690b4a763e47",
+        "raw_nasdaq_SOX_summary.json": "2e60cf2286b31f2f337157942b4dbc1e3e7de4a22593a4a7e34d56b81165b0e5",
+        "raw_nasdaq_MSFT_info.json": "9b930d0923d24e308776bb8231c522fb4804f4739503b2ef24932c329bb1bc55",
+        "raw_nasdaq_TSLA_summary.json": "c3bd5319c4b867e46275a8803666ec25f5a1e462ad8105b94174f16a044c50ad",
+        "raw_yahoo_TNX.json": "642c3a407d8746499667819bfdc8a76426cd61c10f25bcd1887b437e30e88ced",
+        "raw_yahoo_DX-Y_NYB.json": "3051a792b86c45988fe63c6f0369dcb8fcad1f16fc68899ddbd930cb4c8e8dde",
+        "raw_nasdaq_ASX_historical.json": "ea4ef6e1f143b2b5334396a7c3343dcdc39664453fa8cb7824dc70930a92377f",
+        "raw_nasdaq_TSLA_historical.json": "a2273b090546c73c45f63a991b0f7008f3e01ce1d0aad36cee8664a54c6f4422",
+        "raw_nasdaq_GOOGL_summary.json": "729c5c401ccea0f4e9739be053df838de571014a706dca4ebaf23ae07e300549",
+        "raw_treasury_yields_2026.csv": "4fc9b0692b4c403f650878277f899986168530c614dd420b8789dd0ccf134aff",
+        "raw_twse_quote.bin": "3670feb05bc622b21a3b50a93cf39d175c7b0f43b46ca76f05e8a81d775fd39a",
+        "raw_nasdaq_META_summary.json": "9cea6e3098e10696102674cbeaf27bfb205c7a79cd792ea73d0f036157c5917e",
+        "raw_nasdaq_GOOGL_info.json": "e45fcfc35399bacbbedc26822a4c651f34820c0a5420756839906a317e432975",
+        "raw_nasdaq_META_historical.json": "82f166ca16a47b8ab378c155ef7c68f43a351a665d1534c8c4edd30b05b08d2c",
+        "raw_nasdaq_NDX_summary.json": "0dc8108a3275192ffa936516720dab06b0974453d341a820602a3bbbe1a359f8",
+        "raw_nasdaq_AAPL_historical.json": "d0e1ffef09028324d11db2c0a47609a5dd1a31010441f84d80dd03e7c79d3b17",
+        "raw_nasdaq_TSLA_info.json": "a6b6252b81e2037c0cbebb02bbb15cf5c3afc8e8f554a8ad2edda302fcc7f22b",
+        "raw_nasdaq_NDX_historical.json": "1bfda33a2a2210536d903b0103a3d5fb9ad6038bc8702abb4f2adfe8071d9c21",
+        "raw_nasdaq_AVGO_summary.json": "690f038165e2145a39556e049e786ab249dcb31aadce49e591986b74e0b5c223"
+      }
+    },
+    "calendar": {
+      "date": "2026-09-11",
+      "is_open": true,
+      "evidence": {
+        "twse_rtcode": "0000",
+        "twse_quote_date": "20260911",
+        "twse_quote_time": "10:08:00",
+        "twse_quote_last": 46154.97,
+        "intraday_bar_count": 70,
+        "first_bar_label": "090100",
+        "tail_bar_label": "101000",
+        "tail_bar_was_forming_at_retrieval": true
+      },
+      "immediate_previous_trading_day": "2026-09-10",
+      "previous_day_verification": {
+        "twse_after_trading_status": "OK",
+        "taiex_close": 46940.49,
+        "taiex_change_abs": -242.87,
+        "taifex_institutional_max_complete_date": "20260910"
+      }
+    }
+  },
+  "xurl_signal_layer": {
+    "status": "no_material_signal",
+    "signals_count": 0,
+    "included_in_revision": false,
+    "window": {
+      "start_local": "2026-09-10T10:10:00+08:00",
+      "end_local": "2026-09-11T10:10:00+08:00",
+      "start_utc": "2026-09-10T02:10:00Z",
+      "end_utc": "2026-09-11T02:10:00Z"
+    },
+    "signals": [],
+    "note": "No qualifying independently opened direct-principal original signal; do not infer posts from wires."
+  }
+}
