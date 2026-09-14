@@ -1,0 +1,131 @@
+{
+  "BTCUSDT": {
+    "last_completed": {
+      "open_time": 1789257600000,
+      "open": 77278.73,
+      "high": 77450.0,
+      "low": 76500.0,
+      "close": 76842.01,
+      "base_volume": 6959.68366,
+      "quote_volume": 536092213.4014395,
+      "trades": 1275503,
+      "date": "2026-09-13"
+    },
+    "return_pct": -0.5651231587268546,
+    "volume_vs_prior20_median": 0.4589135152305349,
+    "ma20": 78491.238,
+    "previous20_high": 82300.0,
+    "close_position": 0.36001052631578395,
+    "ohlc_valid": true,
+    "sep11": {
+      "return_pct": 0.8580266197475872,
+      "volume_ratio": 1.2897285076831209,
+      "close_position": 0.30678926581013677
+    },
+    "other": {
+      "daily_url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1786752000000&endTime=1789343999999&limit=50",
+      "minute_url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1m&startTime=1789344000000&endTime=1789350000000&limit=1000",
+      "partial_2026_09_14_to_0140Z": {
+        "open": 76842.01,
+        "high": 77083.34,
+        "low": 76388.72,
+        "close": 76835.34,
+        "base_volume": 911.58451,
+        "quote_volume": 69945025.53049986,
+        "trades": 249786,
+        "bars": 100,
+        "last_bar_open_utc": "2026-09-14T01:39:00+00:00",
+        "change_vs_2026-09-13_close_pct": -0.00868014774730863
+      },
+      "median20_quote_volume": 1131483361.0157206,
+      "latest_completed_volume_vs_median20": 0.47379593184666474,
+      "latest_completed_change_pct": -0.5651231587268546
+    }
+  },
+  "ETHUSDT": {
+    "last_completed": {
+      "open_time": 1789257600000,
+      "open": 2525.92,
+      "high": 2527.56,
+      "low": 2462.02,
+      "close": 2477.1,
+      "base_volume": 216470.6683,
+      "quote_volume": 540073946.975542,
+      "trades": 1376331,
+      "date": "2026-09-13"
+    },
+    "return_pct": -1.9331493746857609,
+    "volume_vs_prior20_median": 0.7950279727071206,
+    "ma20": 2470.7555,
+    "previous20_high": 2665.99,
+    "close_position": 0.23008849557522026,
+    "ohlc_valid": true,
+    "sep11": {
+      "return_pct": 3.205551477071844,
+      "volume_ratio": 2.264532038605402,
+      "close_position": 0.35595555938334306
+    },
+    "other": {
+      "daily_url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1d&startTime=1786752000000&endTime=1789343999999&limit=50",
+      "minute_url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1m&startTime=1789344000000&endTime=1789350000000&limit=1000",
+      "partial_2026_09_14_to_0140Z": {
+        "open": 2477.1,
+        "high": 2491.63,
+        "low": 2464.71,
+        "close": 2483.01,
+        "base_volume": 15349.651799999998,
+        "quote_volume": 38048355.855054,
+        "trades": 234819,
+        "bars": 100,
+        "last_bar_open_utc": "2026-09-14T01:39:00+00:00",
+        "change_vs_2026-09-13_close_pct": 0.23858544265473736
+      },
+      "median20_quote_volume": 668750291.2498231,
+      "latest_completed_volume_vs_median20": 0.8075868587155323,
+      "latest_completed_change_pct": -1.9331493746857609
+    }
+  },
+  "ETHBTC": {
+    "last_completed": {
+      "open_time": 1789257600000,
+      "open": 0.03269,
+      "high": 0.03271,
+      "low": 0.03216,
+      "close": 0.03223,
+      "base_volume": 4821.6452,
+      "quote_volume": 156.20070504,
+      "trades": 17729,
+      "date": "2026-09-13"
+    },
+    "return_pct": -1.4071581523401488,
+    "volume_vs_prior20_median": 0.8658583155112333,
+    "ma20": 0.0314835,
+    "previous20_high": 0.03342,
+    "close_position": 0.12727272727272795,
+    "ohlc_valid": true,
+    "sep11": {
+      "return_pct": 2.3241206030150785,
+      "volume_ratio": 2.7968437296933546,
+      "close_position": 0.4782608695652172
+    },
+    "other": {
+      "daily_url": "https://api.binance.com/api/v3/klines?symbol=ETHBTC&interval=1d&startTime=1786752000000&endTime=1789343999999&limit=50",
+      "minute_url": "https://api.binance.com/api/v3/klines?symbol=ETHBTC&interval=1m&startTime=1789344000000&endTime=1789350000000&limit=1000",
+      "partial_2026_09_14_to_0140Z": {
+        "open": 0.03223,
+        "high": 0.03236,
+        "low": 0.03223,
+        "close": 0.03231,
+        "base_volume": 646.0859,
+        "quote_volume": 20.851984759999997,
+        "trades": 2028,
+        "bars": 100,
+        "last_bar_open_utc": "2026-09-14T01:39:00+00:00",
+        "change_vs_2026-09-13_close_pct": 0.24821594787463042
+      },
+      "median20_quote_volume": 162.21995373,
+      "latest_completed_volume_vs_median20": 0.9628945234442708,
+      "latest_completed_change_pct": -1.4071581523401488
+    }
+  }
+}

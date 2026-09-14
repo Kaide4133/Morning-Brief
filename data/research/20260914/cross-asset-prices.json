@@ -1,0 +1,1625 @@
+{
+  "BTCUSDT": {
+    "daily_url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1786752000000&endTime=1789343999999&limit=50",
+    "minute_url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1m&startTime=1789344000000&endTime=1789350000000&limit=1000",
+    "completed_daily": [
+      {
+        "open_time": 1786752000000,
+        "open": 63043.56,
+        "high": 63187.98,
+        "low": 62920.0,
+        "close": 63086.01,
+        "base_volume": 5405.16038,
+        "quote_volume": 340890632.3578836,
+        "trades": 540313
+      },
+      {
+        "open_time": 1786838400000,
+        "open": 63086.01,
+        "high": 63390.0,
+        "low": 62716.0,
+        "close": 62900.0,
+        "base_volume": 4737.23135,
+        "quote_volume": 298698048.5551315,
+        "trades": 640294
+      },
+      {
+        "open_time": 1786924800000,
+        "open": 62900.0,
+        "high": 64610.01,
+        "low": 62751.1,
+        "close": 64532.1,
+        "base_volume": 14255.64713,
+        "quote_volume": 909366051.0685227,
+        "trades": 2111256
+      },
+      {
+        "open_time": 1787011200000,
+        "open": 64532.11,
+        "high": 65058.81,
+        "low": 64027.85,
+        "close": 64725.42,
+        "base_volume": 11789.91312,
+        "quote_volume": 759405329.8294215,
+        "trades": 1608019
+      },
+      {
+        "open_time": 1787097600000,
+        "open": 64725.42,
+        "high": 70000.0,
+        "low": 64166.0,
+        "close": 69334.79,
+        "base_volume": 29054.29976,
+        "quote_volume": 1954769139.093191,
+        "trades": 4160596
+      },
+      {
+        "open_time": 1787184000000,
+        "open": 69334.78,
+        "high": 73400.0,
+        "low": 68902.22,
+        "close": 73025.15,
+        "base_volume": 35904.79287,
+        "quote_volume": 2562053707.6099834,
+        "trades": 6249114
+      },
+      {
+        "open_time": 1787270400000,
+        "open": 73027.02,
+        "high": 79500.0,
+        "low": 73027.02,
+        "close": 78338.03,
+        "base_volume": 44339.56568,
+        "quote_volume": 3401672760.033361,
+        "trades": 8928944
+      },
+      {
+        "open_time": 1787356800000,
+        "open": 78338.03,
+        "high": 78828.15,
+        "low": 76500.0,
+        "close": 77074.93,
+        "base_volume": 18524.50847,
+        "quote_volume": 1433768388.597238,
+        "trades": 3950045
+      },
+      {
+        "open_time": 1787443200000,
+        "open": 77074.94,
+        "high": 78052.85,
+        "low": 75545.67,
+        "close": 77734.0,
+        "base_volume": 15367.23185,
+        "quote_volume": 1182628276.059433,
+        "trades": 3627829
+      },
+      {
+        "open_time": 1787529600000,
+        "open": 77734.0,
+        "high": 80000.0,
+        "low": 76670.01,
+        "close": 78992.75,
+        "base_volume": 30179.29391,
+        "quote_volume": 2367960844.302849,
+        "trades": 6334409
+      },
+      {
+        "open_time": 1787616000000,
+        "open": 78992.76,
+        "high": 81272.62,
+        "low": 77851.0,
+        "close": 78539.14,
+        "base_volume": 24772.51394,
+        "quote_volume": 1972170530.2745976,
+        "trades": 6360202
+      },
+      {
+        "open_time": 1787702400000,
+        "open": 78539.13,
+        "high": 79251.6,
+        "low": 77632.58,
+        "close": 79023.75,
+        "base_volume": 14613.75887,
+        "quote_volume": 1148236055.8792386,
+        "trades": 4284527
+      },
+      {
+        "open_time": 1787788800000,
+        "open": 79023.75,
+        "high": 80848.74,
+        "low": 78546.13,
+        "close": 80249.58,
+        "base_volume": 16265.53695,
+        "quote_volume": 1297370375.4734786,
+        "trades": 4932285
+      },
+      {
+        "open_time": 1787875200000,
+        "open": 80249.59,
+        "high": 81478.87,
+        "low": 76888.0,
+        "close": 77845.87,
+        "base_volume": 19756.43646,
+        "quote_volume": 1560927602.2789407,
+        "trades": 4822157
+      },
+      {
+        "open_time": 1787961600000,
+        "open": 77845.88,
+        "high": 78330.0,
+        "low": 77382.37,
+        "close": 78230.0,
+        "base_volume": 7016.30257,
+        "quote_volume": 545867984.8485777,
+        "trades": 1519886
+      },
+      {
+        "open_time": 1788048000000,
+        "open": 78230.0,
+        "high": 79400.0,
+        "low": 77000.0,
+        "close": 77682.0,
+        "base_volume": 9085.42405,
+        "quote_volume": 712506539.5644648,
+        "trades": 2404922
+      },
+      {
+        "open_time": 1788134400000,
+        "open": 77682.0,
+        "high": 79250.0,
+        "low": 77392.0,
+        "close": 78581.29,
+        "base_volume": 15303.90602,
+        "quote_volume": 1198158182.2374198,
+        "trades": 4354737
+      },
+      {
+        "open_time": 1788220800000,
+        "open": 78581.3,
+        "high": 79220.61,
+        "low": 76420.0,
+        "close": 77439.0,
+        "base_volume": 14130.63949,
+        "quote_volume": 1101387276.6513293,
+        "trades": 3662805
+      },
+      {
+        "open_time": 1788307200000,
+        "open": 77439.01,
+        "high": 77792.0,
+        "low": 76264.0,
+        "close": 77340.01,
+        "base_volume": 13070.9782,
+        "quote_volume": 1008333112.5875233,
+        "trades": 3312492
+      },
+      {
+        "open_time": 1788393600000,
+        "open": 77340.01,
+        "high": 82300.0,
+        "low": 76968.0,
+        "close": 81270.37,
+        "base_volume": 19806.42247,
+        "quote_volume": 1579639079.8471653,
+        "trades": 4460645
+      },
+      {
+        "open_time": 1788480000000,
+        "open": 81270.37,
+        "high": 81427.75,
+        "low": 78660.0,
+        "close": 79660.77,
+        "base_volume": 19198.62549,
+        "quote_volume": 1538393292.4845457,
+        "trades": 3417900
+      },
+      {
+        "open_time": 1788566400000,
+        "open": 79660.77,
+        "high": 80200.0,
+        "low": 79442.0,
+        "close": 79831.75,
+        "base_volume": 9117.2402,
+        "quote_volume": 727162100.1671113,
+        "trades": 1276050
+      },
+      {
+        "open_time": 1788652800000,
+        "open": 79831.75,
+        "high": 80559.99,
+        "low": 79233.0,
+        "close": 80341.83,
+        "base_volume": 8854.81827,
+        "quote_volume": 707422224.4650549,
+        "trades": 1658245
+      },
+      {
+        "open_time": 1788739200000,
+        "open": 80341.83,
+        "high": 80443.99,
+        "low": 78680.0,
+        "close": 79112.01,
+        "base_volume": 10572.45495,
+        "quote_volume": 839882674.5423373,
+        "trades": 2464603
+      },
+      {
+        "open_time": 1788825600000,
+        "open": 79112.0,
+        "high": 79485.0,
+        "low": 77620.01,
+        "close": 78455.8,
+        "base_volume": 19235.06605,
+        "quote_volume": 1510077235.7348557,
+        "trades": 4339646
+      },
+      {
+        "open_time": 1788912000000,
+        "open": 78455.8,
+        "high": 79760.0,
+        "low": 77770.0,
+        "close": 78306.43,
+        "base_volume": 14129.92027,
+        "quote_volume": 1114730666.1522026,
+        "trades": 3338369
+      },
+      {
+        "open_time": 1788998400000,
+        "open": 78306.43,
+        "high": 78564.39,
+        "low": 76464.0,
+        "close": 76568.72,
+        "base_volume": 15320.36904,
+        "quote_volume": 1188117943.7720196,
+        "trades": 3080707
+      },
+      {
+        "open_time": 1789084800000,
+        "open": 76568.73,
+        "high": 79890.0,
+        "low": 76046.58,
+        "close": 77225.7,
+        "base_volume": 19713.27729,
+        "quote_volume": 1528809492.0993094,
+        "trades": 3614263
+      },
+      {
+        "open_time": 1789171200000,
+        "open": 77225.71,
+        "high": 77505.67,
+        "low": 77059.75,
+        "close": 77278.73,
+        "base_volume": 8060.44455,
+        "quote_volume": 622849159.587739,
+        "trades": 748574
+      },
+      {
+        "open_time": 1789257600000,
+        "open": 77278.73,
+        "high": 77450.0,
+        "low": 76500.0,
+        "close": 76842.01,
+        "base_volume": 6959.68366,
+        "quote_volume": 536092213.4014395,
+        "trades": 1275503
+      }
+    ],
+    "partial_2026_09_14_to_0140Z": {
+      "open": 76842.01,
+      "high": 77083.34,
+      "low": 76388.72,
+      "close": 76835.34,
+      "base_volume": 911.58451,
+      "quote_volume": 69945025.53049986,
+      "trades": 249786,
+      "bars": 100,
+      "last_bar_open_utc": "2026-09-14T01:39:00+00:00",
+      "change_vs_2026-09-13_close_pct": -0.00868014774730863
+    },
+    "median20_quote_volume": 1131483361.0157206,
+    "latest_completed_volume_vs_median20": 0.47379593184666474,
+    "latest_completed_change_pct": -0.5651231587268546
+  },
+  "ETHUSDT": {
+    "daily_url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1d&startTime=1786752000000&endTime=1789343999999&limit=50",
+    "minute_url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1m&startTime=1789344000000&endTime=1789350000000&limit=1000",
+    "completed_daily": [
+      {
+        "open_time": 1786752000000,
+        "open": 1882.2,
+        "high": 1886.59,
+        "low": 1876.01,
+        "close": 1882.64,
+        "base_volume": 48197.0909,
+        "quote_volume": 90746243.221819,
+        "trades": 409630
+      },
+      {
+        "open_time": 1786838400000,
+        "open": 1882.64,
+        "high": 1892.31,
+        "low": 1869.17,
+        "close": 1876.0,
+        "base_volume": 68574.4231,
+        "quote_volume": 129015861.931003,
+        "trades": 573492
+      },
+      {
+        "open_time": 1786924800000,
+        "open": 1876.01,
+        "high": 1918.71,
+        "low": 1872.46,
+        "close": 1913.6,
+        "base_volume": 175727.2871,
+        "quote_volume": 334347864.033372,
+        "trades": 1441485
+      },
+      {
+        "open_time": 1787011200000,
+        "open": 1913.59,
+        "high": 1923.27,
+        "low": 1885.78,
+        "close": 1917.85,
+        "base_volume": 144436.9084,
+        "quote_volume": 275318271.13079,
+        "trades": 1229278
+      },
+      {
+        "open_time": 1787097600000,
+        "open": 1917.85,
+        "high": 2333.65,
+        "low": 1906.0,
+        "close": 2252.8,
+        "base_volume": 799553.3447,
+        "quote_volume": 1679413731.874303,
+        "trades": 5279678
+      },
+      {
+        "open_time": 1787184000000,
+        "open": 2252.81,
+        "high": 2360.0,
+        "low": 2221.54,
+        "close": 2326.82,
+        "base_volume": 648620.7228,
+        "quote_volume": 1485689117.021437,
+        "trades": 5641127
+      },
+      {
+        "open_time": 1787270400000,
+        "open": 2326.83,
+        "high": 2546.78,
+        "low": 2324.99,
+        "close": 2516.3,
+        "base_volume": 740662.9146,
+        "quote_volume": 1786584876.287799,
+        "trades": 7242698
+      },
+      {
+        "open_time": 1787356800000,
+        "open": 2516.31,
+        "high": 2529.99,
+        "low": 2385.0,
+        "close": 2422.6,
+        "base_volume": 485164.8901,
+        "quote_volume": 1187496571.733471,
+        "trades": 4481778
+      },
+      {
+        "open_time": 1787443200000,
+        "open": 2422.6,
+        "high": 2484.62,
+        "low": 2355.71,
+        "close": 2463.41,
+        "base_volume": 378847.2022,
+        "quote_volume": 920394835.650527,
+        "trades": 3810702
+      },
+      {
+        "open_time": 1787529600000,
+        "open": 2463.42,
+        "high": 2532.95,
+        "low": 2424.73,
+        "close": 2482.31,
+        "base_volume": 467435.1868,
+        "quote_volume": 1158450625.387352,
+        "trades": 4314361
+      },
+      {
+        "open_time": 1787616000000,
+        "open": 2482.31,
+        "high": 2532.5,
+        "low": 2414.64,
+        "close": 2442.64,
+        "base_volume": 341388.961,
+        "quote_volume": 845995551.11382,
+        "trades": 3492228
+      },
+      {
+        "open_time": 1787702400000,
+        "open": 2442.65,
+        "high": 2515.38,
+        "low": 2432.32,
+        "close": 2506.78,
+        "base_volume": 250583.2707,
+        "quote_volume": 617837178.987229,
+        "trades": 2687659
+      },
+      {
+        "open_time": 1787788800000,
+        "open": 2506.78,
+        "high": 2566.53,
+        "low": 2481.74,
+        "close": 2510.94,
+        "base_volume": 336914.06,
+        "quote_volume": 846470842.461466,
+        "trades": 3426529
+      },
+      {
+        "open_time": 1787875200000,
+        "open": 2510.94,
+        "high": 2535.05,
+        "low": 2405.97,
+        "close": 2442.8,
+        "base_volume": 361082.4672,
+        "quote_volume": 893198250.567947,
+        "trades": 3449843
+      },
+      {
+        "open_time": 1787961600000,
+        "open": 2442.79,
+        "high": 2459.76,
+        "low": 2430.45,
+        "close": 2457.67,
+        "base_volume": 103523.9255,
+        "quote_volume": 253031211.667946,
+        "trades": 828389
+      },
+      {
+        "open_time": 1788048000000,
+        "open": 2457.67,
+        "high": 2534.98,
+        "low": 2387.28,
+        "close": 2416.88,
+        "base_volume": 268297.9503,
+        "quote_volume": 662649837.786131,
+        "trades": 2396145
+      },
+      {
+        "open_time": 1788134400000,
+        "open": 2416.89,
+        "high": 2489.95,
+        "low": 2401.35,
+        "close": 2467.65,
+        "base_volume": 265221.8545,
+        "quote_volume": 649538839.131974,
+        "trades": 2904113
+      },
+      {
+        "open_time": 1788220800000,
+        "open": 2467.64,
+        "high": 2485.5,
+        "low": 2383.34,
+        "close": 2418.57,
+        "base_volume": 276587.6824,
+        "quote_volume": 674850744.713515,
+        "trades": 2474291
+      },
+      {
+        "open_time": 1788307200000,
+        "open": 2418.58,
+        "high": 2429.0,
+        "low": 2356.41,
+        "close": 2391.92,
+        "base_volume": 285609.6463,
+        "quote_volume": 683778047.01706,
+        "trades": 2339119
+      },
+      {
+        "open_time": 1788393600000,
+        "open": 2391.91,
+        "high": 2529.84,
+        "low": 2370.14,
+        "close": 2507.51,
+        "base_volume": 351147.3009,
+        "quote_volume": 862055004.242445,
+        "trades": 3098803
+      },
+      {
+        "open_time": 1788480000000,
+        "open": 2507.5,
+        "high": 2546.66,
+        "low": 2431.61,
+        "close": 2455.85,
+        "base_volume": 412267.7587,
+        "quote_volume": 1023013584.896617,
+        "trades": 2876331
+      },
+      {
+        "open_time": 1788566400000,
+        "open": 2455.86,
+        "high": 2493.57,
+        "low": 2444.47,
+        "close": 2480.34,
+        "base_volume": 130096.5621,
+        "quote_volume": 320639325.885406,
+        "trades": 941585
+      },
+      {
+        "open_time": 1788652800000,
+        "open": 2480.33,
+        "high": 2526.2,
+        "low": 2460.92,
+        "close": 2514.48,
+        "base_volume": 217690.0843,
+        "quote_volume": 543742216.505237,
+        "trades": 1673587
+      },
+      {
+        "open_time": 1788739200000,
+        "open": 2514.48,
+        "high": 2536.64,
+        "low": 2466.0,
+        "close": 2490.16,
+        "base_volume": 256448.183,
+        "quote_volume": 639764287.956211,
+        "trades": 2126476
+      },
+      {
+        "open_time": 1788825600000,
+        "open": 2490.16,
+        "high": 2507.99,
+        "low": 2441.68,
+        "close": 2485.06,
+        "base_volume": 244422.1272,
+        "quote_volume": 606459598.20984,
+        "trades": 2434365
+      },
+      {
+        "open_time": 1788912000000,
+        "open": 2485.07,
+        "high": 2523.3,
+        "low": 2442.44,
+        "close": 2468.13,
+        "base_volume": 301745.8701,
+        "quote_volume": 751842583.804927,
+        "trades": 2792573
+      },
+      {
+        "open_time": 1788998400000,
+        "open": 2468.14,
+        "high": 2484.76,
+        "low": 2405.85,
+        "close": 2438.27,
+        "base_volume": 347434.2123,
+        "quote_volume": 850334362.788948,
+        "trades": 2794354
+      },
+      {
+        "open_time": 1789084800000,
+        "open": 2438.27,
+        "high": 2665.99,
+        "low": 2433.77,
+        "close": 2516.43,
+        "base_volume": 639601.9328,
+        "quote_volume": 1625504456.889644,
+        "trades": 4461161
+      },
+      {
+        "open_time": 1789171200000,
+        "open": 2516.44,
+        "high": 2546.01,
+        "low": 2508.64,
+        "close": 2525.93,
+        "base_volume": 159918.3258,
+        "quote_volume": 404101046.867107,
+        "trades": 897690
+      },
+      {
+        "open_time": 1789257600000,
+        "open": 2525.92,
+        "high": 2527.56,
+        "low": 2462.02,
+        "close": 2477.1,
+        "base_volume": 216470.6683,
+        "quote_volume": 540073946.975542,
+        "trades": 1376331
+      }
+    ],
+    "partial_2026_09_14_to_0140Z": {
+      "open": 2477.1,
+      "high": 2491.63,
+      "low": 2464.71,
+      "close": 2483.01,
+      "base_volume": 15349.651799999998,
+      "quote_volume": 38048355.855054,
+      "trades": 234819,
+      "bars": 100,
+      "last_bar_open_utc": "2026-09-14T01:39:00+00:00",
+      "change_vs_2026-09-13_close_pct": 0.23858544265473736
+    },
+    "median20_quote_volume": 668750291.2498231,
+    "latest_completed_volume_vs_median20": 0.8075868587155323,
+    "latest_completed_change_pct": -1.9331493746857609
+  },
+  "ETHBTC": {
+    "daily_url": "https://api.binance.com/api/v3/klines?symbol=ETHBTC&interval=1d&startTime=1786752000000&endTime=1789343999999&limit=50",
+    "minute_url": "https://api.binance.com/api/v3/klines?symbol=ETHBTC&interval=1m&startTime=1789344000000&endTime=1789350000000&limit=1000",
+    "completed_daily": [
+      {
+        "open_time": 1786752000000,
+        "open": 0.02986,
+        "high": 0.0299,
+        "low": 0.02979,
+        "close": 0.02984,
+        "base_volume": 1166.3345,
+        "quote_volume": 34.81907633,
+        "trades": 4619
+      },
+      {
+        "open_time": 1786838400000,
+        "open": 0.02984,
+        "high": 0.0299,
+        "low": 0.02975,
+        "close": 0.02983,
+        "base_volume": 1916.0563,
+        "quote_volume": 57.17071757,
+        "trades": 7741
+      },
+      {
+        "open_time": 1786924800000,
+        "open": 0.02983,
+        "high": 0.03005,
+        "low": 0.0296,
+        "close": 0.02965,
+        "base_volume": 3432.974,
+        "quote_volume": 102.48908976,
+        "trades": 12075
+      },
+      {
+        "open_time": 1787011200000,
+        "open": 0.02965,
+        "high": 0.02967,
+        "low": 0.02945,
+        "close": 0.02963,
+        "base_volume": 5054.1072,
+        "quote_volume": 149.4757556,
+        "trades": 9224
+      },
+      {
+        "open_time": 1787097600000,
+        "open": 0.02963,
+        "high": 0.03342,
+        "low": 0.02957,
+        "close": 0.0325,
+        "base_volume": 48036.8296,
+        "quote_volume": 1505.66314822,
+        "trades": 135348
+      },
+      {
+        "open_time": 1787184000000,
+        "open": 0.0325,
+        "high": 0.03263,
+        "low": 0.03163,
+        "close": 0.03187,
+        "base_volume": 18712.4909,
+        "quote_volume": 601.83920546,
+        "trades": 57571
+      },
+      {
+        "open_time": 1787270400000,
+        "open": 0.03187,
+        "high": 0.03236,
+        "low": 0.0307,
+        "close": 0.03211,
+        "base_volume": 25442.5357,
+        "quote_volume": 797.36756891,
+        "trades": 87228
+      },
+      {
+        "open_time": 1787356800000,
+        "open": 0.03212,
+        "high": 0.03238,
+        "low": 0.03115,
+        "close": 0.03142,
+        "base_volume": 14500.9932,
+        "quote_volume": 457.48634563,
+        "trades": 44645
+      },
+      {
+        "open_time": 1787443200000,
+        "open": 0.03142,
+        "high": 0.03195,
+        "low": 0.03098,
+        "close": 0.03169,
+        "base_volume": 20781.9952,
+        "quote_volume": 653.88295621,
+        "trades": 49524
+      },
+      {
+        "open_time": 1787529600000,
+        "open": 0.03169,
+        "high": 0.03196,
+        "low": 0.03126,
+        "close": 0.03143,
+        "base_volume": 16900.0669,
+        "quote_volume": 534.60465571,
+        "trades": 37237
+      },
+      {
+        "open_time": 1787616000000,
+        "open": 0.03143,
+        "high": 0.03148,
+        "low": 0.03097,
+        "close": 0.0311,
+        "base_volume": 9023.7342,
+        "quote_volume": 281.18623305,
+        "trades": 23449
+      },
+      {
+        "open_time": 1787702400000,
+        "open": 0.0311,
+        "high": 0.03186,
+        "low": 0.03108,
+        "close": 0.03172,
+        "base_volume": 4817.4435,
+        "quote_volume": 151.41097718,
+        "trades": 16887
+      },
+      {
+        "open_time": 1787788800000,
+        "open": 0.03172,
+        "high": 0.03189,
+        "low": 0.03116,
+        "close": 0.03129,
+        "base_volume": 6182.1822,
+        "quote_volume": 194.81596282,
+        "trades": 21454
+      },
+      {
+        "open_time": 1787875200000,
+        "open": 0.03129,
+        "high": 0.0317,
+        "low": 0.03111,
+        "close": 0.03139,
+        "base_volume": 7247.4329,
+        "quote_volume": 227.54829792,
+        "trades": 21489
+      },
+      {
+        "open_time": 1787961600000,
+        "open": 0.03139,
+        "high": 0.03144,
+        "low": 0.03133,
+        "close": 0.03141,
+        "base_volume": 2280.0363,
+        "quote_volume": 71.57163531,
+        "trades": 6946
+      },
+      {
+        "open_time": 1788048000000,
+        "open": 0.03141,
+        "high": 0.03199,
+        "low": 0.03097,
+        "close": 0.03112,
+        "base_volume": 6782.1457,
+        "quote_volume": 213.63956529,
+        "trades": 23197
+      },
+      {
+        "open_time": 1788134400000,
+        "open": 0.03111,
+        "high": 0.03148,
+        "low": 0.03101,
+        "close": 0.0314,
+        "base_volume": 4503.5225,
+        "quote_volume": 140.86872784,
+        "trades": 15235
+      },
+      {
+        "open_time": 1788220800000,
+        "open": 0.0314,
+        "high": 0.03152,
+        "low": 0.03119,
+        "close": 0.03124,
+        "base_volume": 4480.0886,
+        "quote_volume": 140.46568202,
+        "trades": 15400
+      },
+      {
+        "open_time": 1788307200000,
+        "open": 0.03123,
+        "high": 0.03127,
+        "low": 0.03082,
+        "close": 0.03093,
+        "base_volume": 6354.6155,
+        "quote_volume": 197.35752289,
+        "trades": 18133
+      },
+      {
+        "open_time": 1788393600000,
+        "open": 0.03094,
+        "high": 0.03104,
+        "low": 0.03069,
+        "close": 0.03086,
+        "base_volume": 5378.3276,
+        "quote_volume": 165.98372517,
+        "trades": 19215
+      },
+      {
+        "open_time": 1788480000000,
+        "open": 0.03086,
+        "high": 0.03132,
+        "low": 0.03059,
+        "close": 0.03083,
+        "base_volume": 8016.9655,
+        "quote_volume": 247.98626403,
+        "trades": 23746
+      },
+      {
+        "open_time": 1788566400000,
+        "open": 0.03083,
+        "high": 0.03119,
+        "low": 0.03077,
+        "close": 0.03107,
+        "base_volume": 2671.3475,
+        "quote_volume": 82.59224795,
+        "trades": 8155
+      },
+      {
+        "open_time": 1788652800000,
+        "open": 0.03108,
+        "high": 0.0315,
+        "low": 0.03104,
+        "close": 0.0313,
+        "base_volume": 9176.0271,
+        "quote_volume": 287.07276217,
+        "trades": 21466
+      },
+      {
+        "open_time": 1788739200000,
+        "open": 0.03129,
+        "high": 0.03155,
+        "low": 0.03127,
+        "close": 0.03148,
+        "base_volume": 5041.677,
+        "quote_volume": 158.45618229,
+        "trades": 13550
+      },
+      {
+        "open_time": 1788825600000,
+        "open": 0.03147,
+        "high": 0.0318,
+        "low": 0.0314,
+        "close": 0.03167,
+        "base_volume": 3325.8805,
+        "quote_volume": 104.98325962,
+        "trades": 13646
+      },
+      {
+        "open_time": 1788912000000,
+        "open": 0.03168,
+        "high": 0.03174,
+        "low": 0.03141,
+        "close": 0.03152,
+        "base_volume": 3648.5434,
+        "quote_volume": 115.34492551,
+        "trades": 13544
+      },
+      {
+        "open_time": 1788998400000,
+        "open": 0.03153,
+        "high": 0.03198,
+        "low": 0.03133,
+        "close": 0.03184,
+        "base_volume": 7477.5389,
+        "quote_volume": 236.48816386,
+        "trades": 25907
+      },
+      {
+        "open_time": 1789084800000,
+        "open": 0.03184,
+        "high": 0.03342,
+        "low": 0.03181,
+        "close": 0.03258,
+        "base_volume": 16764.0874,
+        "quote_volume": 548.42397723,
+        "trades": 70820
+      },
+      {
+        "open_time": 1789171200000,
+        "open": 0.03259,
+        "high": 0.0329,
+        "low": 0.03248,
+        "close": 0.03269,
+        "base_volume": 4822.9326,
+        "quote_volume": 157.49280819,
+        "trades": 14813
+      },
+      {
+        "open_time": 1789257600000,
+        "open": 0.03269,
+        "high": 0.03271,
+        "low": 0.03216,
+        "close": 0.03223,
+        "base_volume": 4821.6452,
+        "quote_volume": 156.20070504,
+        "trades": 17729
+      }
+    ],
+    "partial_2026_09_14_to_0140Z": {
+      "open": 0.03223,
+      "high": 0.03236,
+      "low": 0.03223,
+      "close": 0.03231,
+      "base_volume": 646.0859,
+      "quote_volume": 20.851984759999997,
+      "trades": 2028,
+      "bars": 100,
+      "last_bar_open_utc": "2026-09-14T01:39:00+00:00",
+      "change_vs_2026-09-13_close_pct": 0.24821594787463042
+    },
+    "median20_quote_volume": 162.21995373,
+    "latest_completed_volume_vs_median20": 0.9628945234442708,
+    "latest_completed_change_pct": -1.4071581523401488
+  },
+  "yahoo_GCZ26.CMX": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/GCZ26.CMX?period1=1788566400&period2=1789360000&interval=1d&events=history&includePrePost=true",
+    "meta": {
+      "currency": "USD",
+      "symbol": "GCZ26.CMX",
+      "exchangeName": "CMX",
+      "fullExchangeName": "COMEX",
+      "instrumentType": "FUTURE",
+      "firstTradeDate": 1609304400,
+      "regularMarketTime": 1789349503,
+      "hasPrePostMarketData": false,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 4374.5,
+      "regularMarketChangePercent": -0.78,
+      "fulldayPrice": 4374.5,
+      "fulldayChange": -34.4,
+      "fulldayChangePercent": -0.78,
+      "fiftyTwoWeekHigh": 5781.8,
+      "fiftyTwoWeekLow": 3806.5,
+      "regularMarketDayHigh": 4388.8,
+      "regularMarketDayLow": 4360.5,
+      "regularMarketVolume": 13372,
+      "longName": "Gold Dec 26",
+      "shortName": "Gold Dec 26",
+      "chartPreviousClose": 4476.6,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1789272000,
+          "end": 1789272000,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1789272000,
+          "end": 1789358340,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1789358340,
+          "end": 1789358340,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "rows": [
+      {
+        "t": 1788840000,
+        "utc": "2026-09-08T04:00:00+00:00",
+        "o": 4466.5,
+        "h": 4488.7998046875,
+        "l": 4381.0,
+        "c": 4439.0,
+        "v": 217162
+      },
+      {
+        "t": 1788926400,
+        "utc": "2026-09-09T04:00:00+00:00",
+        "o": 4399.0,
+        "h": 4479.0,
+        "l": 4384.10009765625,
+        "c": 4460.7001953125,
+        "v": 164390
+      },
+      {
+        "t": 1789012800,
+        "utc": "2026-09-10T04:00:00+00:00",
+        "o": 4448.0,
+        "h": 4479.89990234375,
+        "l": 4354.7001953125,
+        "c": 4407.2998046875,
+        "v": 201300
+      },
+      {
+        "t": 1789099200,
+        "utc": "2026-09-11T04:00:00+00:00",
+        "o": 4359.39990234375,
+        "h": 4444.89990234375,
+        "l": 4333.0,
+        "c": 4408.89990234375,
+        "v": 201300
+      },
+      {
+        "t": 1789349503,
+        "utc": "2026-09-14T01:31:43+00:00",
+        "o": 4375.0,
+        "h": 4388.7998046875,
+        "l": 4360.5,
+        "c": 4374.5,
+        "v": 13372
+      }
+    ]
+  },
+  "yahoo_GC=F": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1788566400&period2=1789360000&interval=1d&events=history&includePrePost=true",
+    "meta": {
+      "currency": "USD",
+      "symbol": "GC=F",
+      "exchangeName": "CMX",
+      "fullExchangeName": "COMEX",
+      "instrumentType": "FUTURE",
+      "firstTradeDate": 967608000,
+      "regularMarketTime": 1789349503,
+      "hasPrePostMarketData": false,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 4374.5,
+      "regularMarketChangePercent": -0.78,
+      "fulldayPrice": 4374.5,
+      "fulldayChange": -34.4,
+      "fulldayChangePercent": -0.78,
+      "fiftyTwoWeekHigh": 5586.2,
+      "fiftyTwoWeekLow": 3635.1,
+      "regularMarketDayHigh": 4388.8,
+      "regularMarketDayLow": 4360.5,
+      "regularMarketVolume": 13372,
+      "shortName": "Gold Dec 26",
+      "chartPreviousClose": 4429.8,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1789272000,
+          "start": 1789272000,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1789358340,
+          "start": 1789272000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1789358340,
+          "start": 1789358340,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "rows": [
+      {
+        "t": 1788840000,
+        "utc": "2026-09-08T04:00:00+00:00",
+        "o": 4391.89990234375,
+        "h": 4406.10009765625,
+        "l": 4384.39990234375,
+        "c": 4393.89990234375,
+        "v": 215
+      },
+      {
+        "t": 1788926400,
+        "utc": "2026-09-09T04:00:00+00:00",
+        "o": 4398.7001953125,
+        "h": 4416.0,
+        "l": 4397.39990234375,
+        "c": 4416.0,
+        "v": 86
+      },
+      {
+        "t": 1789012800,
+        "utc": "2026-09-10T04:00:00+00:00",
+        "o": 4418.89990234375,
+        "h": 4420.0,
+        "l": 4330.7001953125,
+        "c": 4364.5,
+        "v": 73
+      },
+      {
+        "t": 1789099200,
+        "utc": "2026-09-11T04:00:00+00:00",
+        "o": 4365.7998046875,
+        "h": 4389.5,
+        "l": 4365.7998046875,
+        "c": 4366.2001953125,
+        "v": 73
+      },
+      {
+        "t": 1789349503,
+        "utc": "2026-09-14T01:31:43+00:00",
+        "o": 4375.0,
+        "h": 4388.7998046875,
+        "l": 4360.5,
+        "c": 4374.5,
+        "v": 13372
+      }
+    ]
+  },
+  "yahoo_DXU26.NYB": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/DXU26.NYB?period1=1788566400&period2=1789360000&interval=1d&events=history&includePrePost=true",
+    "meta": {
+      "currency": "USD",
+      "symbol": "DXU26.NYB",
+      "exchangeName": "NYB",
+      "fullExchangeName": "ICE Futures",
+      "instrumentType": "FUTURE",
+      "firstTradeDate": 1757995200,
+      "regularMarketTime": 1789347828,
+      "hasPrePostMarketData": false,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 99.18,
+      "regularMarketChangePercent": 0.07,
+      "fulldayPrice": 99.18,
+      "fulldayChange": 0.069,
+      "fulldayChangePercent": 0.07,
+      "fiftyTwoWeekHigh": 101.57,
+      "fiftyTwoWeekLow": 95.253,
+      "regularMarketDayHigh": 99.18,
+      "regularMarketDayLow": 99.13,
+      "regularMarketVolume": 4,
+      "longName": "US Dollar Sep 26",
+      "shortName": "US Dollar Sep 26",
+      "chartPreviousClose": 99.15,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1789272000,
+          "start": 1789272000,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1789358340,
+          "start": 1789272000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1789358340,
+          "start": 1789358340,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "ytd",
+        "max"
+      ]
+    },
+    "rows": [
+      {
+        "t": 1788840000,
+        "utc": "2026-09-08T04:00:00+00:00",
+        "o": 98.80500030517578,
+        "h": 99.0,
+        "l": 98.69499969482422,
+        "c": 98.78199768066406,
+        "v": 20167
+      },
+      {
+        "t": 1788926400,
+        "utc": "2026-09-09T04:00:00+00:00",
+        "o": 98.75499725341797,
+        "h": 98.88999938964844,
+        "l": 98.58000183105469,
+        "c": 98.80999755859375,
+        "v": 25813
+      },
+      {
+        "t": 1789012800,
+        "utc": "2026-09-10T04:00:00+00:00",
+        "o": 98.77999877929688,
+        "h": 99.19999694824219,
+        "l": 98.70999908447266,
+        "c": 99.0469970703125,
+        "v": 13083
+      },
+      {
+        "t": 1789099200,
+        "utc": "2026-09-11T04:00:00+00:00",
+        "o": 99.07499694824219,
+        "h": 99.36499786376953,
+        "l": 98.97000122070312,
+        "c": 99.11100006103516,
+        "v": 13083
+      },
+      {
+        "t": 1789347828,
+        "utc": "2026-09-14T01:03:48+00:00",
+        "o": 99.12999725341797,
+        "h": 99.18000030517578,
+        "l": 99.12999725341797,
+        "c": 99.18000030517578,
+        "v": 4
+      }
+    ]
+  },
+  "yahoo_DXZ26.NYB": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/DXZ26.NYB?period1=1788566400&period2=1789360000&interval=1d&events=history&includePrePost=true",
+    "meta": {
+      "currency": "USD",
+      "symbol": "DXZ26.NYB",
+      "exchangeName": "NYB",
+      "fullExchangeName": "ICE Futures",
+      "instrumentType": "FUTURE",
+      "firstTradeDate": 1765861200,
+      "regularMarketTime": 1789348773,
+      "hasPrePostMarketData": false,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 98.95,
+      "regularMarketChangePercent": 0.11,
+      "fulldayPrice": 98.95,
+      "fulldayChange": 0.109,
+      "fulldayChangePercent": 0.11,
+      "fiftyTwoWeekHigh": 101.305,
+      "fiftyTwoWeekLow": 95.371,
+      "regularMarketDayHigh": 98.955,
+      "regularMarketDayLow": 98.82,
+      "regularMarketVolume": 545,
+      "longName": "US Dollar Dec 26",
+      "shortName": "US Dollar Dec 26",
+      "chartPreviousClose": 98.895,
+      "priceHint": 2,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "start": 1789272000,
+          "end": 1789272000,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "start": 1789272000,
+          "end": 1789358340,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "start": 1789358340,
+          "end": 1789358340,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "ytd",
+        "max"
+      ]
+    },
+    "rows": [
+      {
+        "t": 1788840000,
+        "utc": "2026-09-08T04:00:00+00:00",
+        "o": 98.55000305175781,
+        "h": 98.73500061035156,
+        "l": 98.45500183105469,
+        "c": 98.5270004272461,
+        "v": 9262
+      },
+      {
+        "t": 1788926400,
+        "utc": "2026-09-09T04:00:00+00:00",
+        "o": 98.5199966430664,
+        "h": 98.62999725341797,
+        "l": 98.32499694824219,
+        "c": 98.55400085449219,
+        "v": 17085
+      },
+      {
+        "t": 1789012800,
+        "utc": "2026-09-10T04:00:00+00:00",
+        "o": 98.51000213623047,
+        "h": 98.94000244140625,
+        "l": 98.44999694824219,
+        "c": 98.78399658203125,
+        "v": 17352
+      },
+      {
+        "t": 1789099200,
+        "utc": "2026-09-11T04:00:00+00:00",
+        "o": 98.83499908447266,
+        "h": 99.0999984741211,
+        "l": 98.69999694824219,
+        "c": 98.84100341796875,
+        "v": 17352
+      },
+      {
+        "t": 1789348773,
+        "utc": "2026-09-14T01:19:33+00:00",
+        "o": 98.8499984741211,
+        "h": 98.95500183105469,
+        "l": 98.81999969482422,
+        "c": 98.94999694824219,
+        "v": 545
+      }
+    ]
+  },
+  "yahoo_ZNZ26.CBT": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/ZNZ26.CBT?period1=1788566400&period2=1789360000&interval=1d&events=history&includePrePost=true",
+    "meta": {
+      "currency": "USD",
+      "symbol": "ZNZ26.CBT",
+      "exchangeName": "CBT",
+      "fullExchangeName": "CBOT",
+      "instrumentType": "FUTURE",
+      "firstTradeDate": 1773979200,
+      "regularMarketTime": 1789349486,
+      "hasPrePostMarketData": false,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 106.1875,
+      "regularMarketChangePercent": 0.073627,
+      "fulldayPrice": 106.1875,
+      "fulldayChange": 0.078125,
+      "fulldayChangePercent": 0.073627,
+      "fiftyTwoWeekHigh": 111.40625,
+      "fiftyTwoWeekLow": 105.90625,
+      "regularMarketDayHigh": 106.328125,
+      "regularMarketDayLow": 106.140625,
+      "regularMarketVolume": 101007,
+      "longName": "10-Year T-Note Futures,Dec-2026",
+      "shortName": "10-Year T-Note Futures,Dec-2026",
+      "chartPreviousClose": 107.46875,
+      "priceHint": 6,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1789272000,
+          "start": 1789272000,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1789358340,
+          "start": 1789272000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1789358340,
+          "start": 1789358340,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "ytd",
+        "max"
+      ]
+    },
+    "rows": [
+      {
+        "t": 1788840000,
+        "utc": "2026-09-08T04:00:00+00:00",
+        "o": 107.453125,
+        "h": 107.59375,
+        "l": 107.25,
+        "c": 107.3125,
+        "v": 2177403
+      },
+      {
+        "t": 1788926400,
+        "utc": "2026-09-09T04:00:00+00:00",
+        "o": 107.390625,
+        "h": 107.421875,
+        "l": 106.984375,
+        "c": 107.078125,
+        "v": 2084210
+      },
+      {
+        "t": 1789012800,
+        "utc": "2026-09-10T04:00:00+00:00",
+        "o": 107.046875,
+        "h": 107.171875,
+        "l": 106.21875,
+        "c": 106.359375,
+        "v": 2936141
+      },
+      {
+        "t": 1789099200,
+        "utc": "2026-09-11T04:00:00+00:00",
+        "o": 106.21875,
+        "h": 106.59375,
+        "l": 105.90625,
+        "c": 106.109375,
+        "v": 2936141
+      },
+      {
+        "t": 1789349486,
+        "utc": "2026-09-14T01:31:26+00:00",
+        "o": 106.171875,
+        "h": 106.328125,
+        "l": 106.140625,
+        "c": 106.1875,
+        "v": 101007
+      }
+    ]
+  },
+  "yahoo_ZN=F": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/ZN%3DF?period1=1788566400&period2=1789360000&interval=1d&events=history&includePrePost=true",
+    "meta": {
+      "currency": "USD",
+      "symbol": "ZN=F",
+      "exchangeName": "CBT",
+      "fullExchangeName": "CBOT",
+      "instrumentType": "FUTURE",
+      "firstTradeDate": 969508800,
+      "regularMarketTime": 1789349486,
+      "hasPrePostMarketData": false,
+      "gmtoffset": -14400,
+      "timezone": "EDT",
+      "exchangeTimezoneName": "America/New_York",
+      "regularMarketPrice": 106.1875,
+      "regularMarketChangePercent": 0.073627,
+      "fulldayPrice": 106.1875,
+      "fulldayChange": 0.078125,
+      "fulldayChangePercent": 0.073627,
+      "fiftyTwoWeekHigh": 114.375,
+      "fiftyTwoWeekLow": 106.140625,
+      "regularMarketDayHigh": 106.328125,
+      "regularMarketDayLow": 106.140625,
+      "regularMarketVolume": 101007,
+      "shortName": "10-Year T-Note Futures,Dec-2026",
+      "chartPreviousClose": 107.734375,
+      "priceHint": 6,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "EDT",
+          "end": 1789272000,
+          "start": 1789272000,
+          "gmtoffset": -14400
+        },
+        "regular": {
+          "timezone": "EDT",
+          "end": 1789358340,
+          "start": 1789272000,
+          "gmtoffset": -14400
+        },
+        "post": {
+          "timezone": "EDT",
+          "end": 1789358340,
+          "start": 1789358340,
+          "gmtoffset": -14400
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "rows": [
+      {
+        "t": 1788840000,
+        "utc": "2026-09-08T04:00:00+00:00",
+        "o": 107.703125,
+        "h": 107.84375,
+        "l": 107.53125,
+        "c": 107.578125,
+        "v": 5053
+      },
+      {
+        "t": 1788926400,
+        "utc": "2026-09-09T04:00:00+00:00",
+        "o": 107.671875,
+        "h": 107.671875,
+        "l": 107.28125,
+        "c": 107.34375,
+        "v": 4686
+      },
+      {
+        "t": 1789012800,
+        "utc": "2026-09-10T04:00:00+00:00",
+        "o": 107.28125,
+        "h": 107.421875,
+        "l": 106.5625,
+        "c": 106.640625,
+        "v": 4078
+      },
+      {
+        "t": 1789099200,
+        "utc": "2026-09-11T04:00:00+00:00",
+        "o": 106.515625,
+        "h": 106.84375,
+        "l": 106.328125,
+        "c": 106.359375,
+        "v": 4078
+      },
+      {
+        "t": 1789349486,
+        "utc": "2026-09-14T01:31:26+00:00",
+        "o": 106.171875,
+        "h": 106.328125,
+        "l": 106.140625,
+        "c": 106.1875,
+        "v": 101007
+      }
+    ]
+  }
+}

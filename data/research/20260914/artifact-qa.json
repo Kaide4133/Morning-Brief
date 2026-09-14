@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-14",
+  "cards": 78,
+  "unique_codes": 75,
+  "water": {
+    "level": 82.0,
+    "previous": 79.8,
+    "change": 2.2,
+    "direction": "rising"
+  },
+  "scenario": {
+    "id": "05",
+    "slug": "orderly-pullback",
+    "label": "有序回檔",
+    "confidence": 1.0,
+    "reason": "水位較前一交易日上升2.2個百分點，代表健康度與配置空間改善；但台股早盤跌1.56%、產業價值區30跌1平，價格承接尚待確認。油價與長期利率壓力仍在，先留彈性，不急著增加曝險。",
+    "source": "manual_override",
+    "classifier_suggestion": "03"
+  },
+  "mirror_hashes_match": true,
+  "reader_source_leak": false,
+  "test_status": "pass"
+}
