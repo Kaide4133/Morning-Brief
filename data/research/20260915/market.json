@@ -1,0 +1,1379 @@
+{
+  "schema": "kelvin_morning_brief_market_verification_v1",
+  "brief_date": "2026-09-15",
+  "research_mode": "read_only_no_publish",
+  "research_cutoff": {
+    "timezone": "Asia/Taipei (UTC+08:00)",
+    "live_retrieval_window": {
+      "first": "2026-09-15T10:30:44.235+08:00",
+      "last": "2026-09-15T10:30:44.490+08:00"
+    },
+    "latest_fully_elapsed_common_minute": "2026-09-15T10:29+08:00",
+    "selected_common_minute_label": "102900",
+    "note": "Taiwan values are intraday; U.S. values are the latest completed 2026-09-14 session."
+  },
+  "calendar": {
+    "date": "2026-09-15",
+    "market_status": "OPEN_INTRADAY",
+    "official_live_witness": {
+      "twse_rtcode": "0000",
+      "twse_quote_date": "20260915",
+      "twse_quote_time": "10:30:10",
+      "twse_intraday_bar_count": 91,
+      "twse_first_bar": "090100",
+      "twse_selected_completed_bar": "102900",
+      "twse_forming_tail_at_retrieval": "103100",
+      "taifex_rtcode": "0",
+      "taifex_quote_date": "20260915",
+      "taifex_quote_time": "103039",
+      "taifex_contract": "臺指期096",
+      "taifex_intraday_bar_count": 106,
+      "taifex_first_bar": "084600",
+      "taifex_selected_completed_bar": "102900",
+      "taifex_forming_tail_at_retrieval": "103100"
+    },
+    "immediately_previous_open_trading_day": "2026-09-14",
+    "previous_day_official_witness": {
+      "twse_response_stat": "OK",
+      "twse_table_title": "115年09月14日 價格指數(臺灣證券交易所)",
+      "twse_taiex_row": [
+        "發行量加權股價指數",
+        "45,862.52",
+        "<p style ='color:green'>-</p>",
+        "322.33",
+        "-0.70",
+        ""
+      ],
+      "twse_taiex_close": 45862.52,
+      "live_previous_close_matches": true,
+      "taifex_latest_complete_institutional_data_date": "2026-09-14"
+    },
+    "conclusion": "Official TWSE and TAIFEX live responses both carry 20260915 with non-empty intraday series. Official TWSE dated index table and TAIFEX latest complete institutional file both carry 20260914; the live TWSE previous close equals the 2026-09-14 official TAIEX close."
+  },
+  "twse_weighted_index": {
+    "name": "發行量加權股價指數",
+    "symbol": "tse_t00.tw",
+    "market_status": "OPEN_INTRADAY",
+    "quote_snapshot": {
+      "exchange_date": "20260915",
+      "exchange_time": "10:30:10",
+      "last": 45834.38,
+      "previous_close": 45862.52,
+      "open": 45847.27,
+      "high": 46009.85,
+      "low": 45721.45,
+      "calculation": {
+        "formula_change": "45834.38 - 45862.52",
+        "change": -28.14,
+        "formula_pct": "(45834.38 / 45862.52 - 1) * 100",
+        "change_pct": -0.06,
+        "unrounded_change_pct": "-0.0613572913132553553533473500"
+      },
+      "ohlc_validation": {
+        "valid": true,
+        "checks": {
+          "low_le_open_le_high": true,
+          "low_le_close_le_high": true,
+          "low_le_high": true
+        }
+      },
+      "range_semantics": "session open/high/low as of quote exchange time, not synchronized-minute range",
+      "raw_fields": {
+        "@": "t00.tw",
+        "pid": "2.tse.tw|1083",
+        "^": "20260915",
+        "key": "tse_t00.tw_20260915",
+        "c": "t00",
+        "#": "2.tse.tw|1083",
+        "d": "20260915",
+        "%": "10:30:10",
+        "ch": "t00.tw",
+        "tlong": "1789439410000",
+        "h": "46009.85",
+        "i": "tidx.tw",
+        "it": "t",
+        "l": "45721.45",
+        "m": "4088781",
+        "n": "發行量加權股價指數",
+        "o": "45847.27",
+        "r": "1017331",
+        "ex": "tse",
+        "t": "10:30:10",
+        "y": "45862.52",
+        "z": "45834.38"
+      }
+    },
+    "latest_completed_common_minute": {
+      "date": "2026-09-15",
+      "minute_label": "102900",
+      "minute_close": 45833.36,
+      "reference_previous_close": 45862.52,
+      "raw_row": {
+        "c": "45833.36",
+        "s": "1412",
+        "t": "1789439340000",
+        "ts": "102900"
+      },
+      "calculation": {
+        "formula_change": "45833.36 - 45862.52",
+        "change": -29.16,
+        "formula_pct": "(45833.36 / 45862.52 - 1) * 100",
+        "change_pct": -0.06,
+        "unrounded_change_pct": "-0.0635813295911345473384367000"
+      }
+    },
+    "source_ids": [
+      "twse_quote",
+      "twse_chart",
+      "twse_20260914"
+    ]
+  },
+  "taifex_front_month": {
+    "name": "臺股期貨近月（日盤標準契約）",
+    "selection_rule": "First standard 臺指期 row after excluding TXF-S spot helper; month identity taken from exchange display name.",
+    "contract": {
+      "symbol_id": "TXFI6-F",
+      "display_chinese": "臺指期096",
+      "display_english": "TX096",
+      "contract_month_from_display": "2026-09"
+    },
+    "market_status": "OPEN_INTRADAY",
+    "quote_snapshot": {
+      "exchange_date": "20260915",
+      "exchange_time": "103039",
+      "last": 45879.0,
+      "reference_price": 45777.0,
+      "open": 45777.0,
+      "high": 45964.0,
+      "low": 45659.0,
+      "total_volume": 19175,
+      "best_bid": 45883.0,
+      "best_ask": 45888.0,
+      "calculation": {
+        "formula_change": "45879.00 - 45777.00",
+        "change": 102.0,
+        "formula_pct": "(45879.00 / 45777.00 - 1) * 100",
+        "change_pct": 0.22,
+        "unrounded_change_pct": "0.222819319745723835113703400"
+      },
+      "ohlc_validation": {
+        "valid": true,
+        "checks": {
+          "low_le_open_le_high": true,
+          "low_le_close_le_high": true,
+          "low_le_high": true
+        }
+      },
+      "raw_fields": {
+        "SymbolID": "TXFI6-F",
+        "SpotID": "",
+        "DispCName": "臺指期096",
+        "DispEName": "TX096",
+        "Status": "",
+        "CBidPrice1": "45883.00",
+        "CBidSize1": "2",
+        "CAskPrice1": "45888.00",
+        "CAskSize1": "3",
+        "CTotalVolume": "19175",
+        "COpenPrice": "45777.00",
+        "CHighPrice": "45964.00",
+        "CLowPrice": "45659.00",
+        "CLastPrice": "45879.00",
+        "CRefPrice": "45777.00",
+        "CCeilPrice": "50354.00",
+        "CFloorPrice": "41200.00",
+        "SettlementPrice": "",
+        "OpenInterest": "",
+        "CDate": "20260915",
+        "CTime": "103039",
+        "CTestTime": "084455",
+        "CDiff": "102.00",
+        "CDiffRate": "0.22",
+        "CAmpRate": "0.67",
+        "CBestBidPrice": "45883.00",
+        "CBestAskPrice": "45888.00",
+        "CBestBidSize": "2",
+        "CBestAskSize": "3",
+        "CTestPrice": "45688.00",
+        "CTestVolume": "66"
+      }
+    },
+    "latest_completed_common_minute": {
+      "date": "2026-09-15",
+      "minute_label": "102900",
+      "minute_close": 45879.0,
+      "reference_price": 45777.0,
+      "raw_field_order": [
+        "T",
+        "O",
+        "H",
+        "L",
+        "C",
+        "V"
+      ],
+      "raw_row": {
+        "T": "102900",
+        "O": "45879.00",
+        "H": "45892.00",
+        "L": "45876.00",
+        "C": "45879.00",
+        "V": "31"
+      },
+      "calculation": {
+        "formula_change": "45879.00 - 45777.00",
+        "change": 102.0,
+        "formula_pct": "(45879.00 / 45777.00 - 1) * 100",
+        "change_pct": 0.22,
+        "unrounded_change_pct": "0.222819319745723835113703400"
+      },
+      "ohlc_validation": {
+        "valid": true,
+        "checks": {
+          "low_le_open_le_high": true,
+          "low_le_close_le_high": true,
+          "low_le_high": true
+        }
+      }
+    },
+    "source_ids": [
+      "taifex_quote_list",
+      "taifex_chart"
+    ],
+    "post_bodies": {
+      "quote_list": {
+        "MarketType": "0",
+        "SymbolType": "F",
+        "KindID": "1",
+        "CID": "",
+        "ExpireMonth": ""
+      },
+      "one_minute": {
+        "SymbolID": "TXFI6-F"
+      }
+    }
+  },
+  "synchronized_spot_futures": {
+    "fully_elapsed_minute_rule": "floor(earliest live-source retrieval start) minus one minute, then latest intersected TWSE/TAIFEX minute no later than cutoff",
+    "selected_common_minute_label": "102900",
+    "spot_close": 45833.36,
+    "futures_close": 45879.0,
+    "basis_points": 45.64,
+    "basis_formula": "45879.00 - 45833.36"
+  },
+  "foreign_taiex_futures_latest_complete_oi": {
+    "data_date": "2026-09-14",
+    "contract_code": "臺股期貨",
+    "institution": "外資及陸資",
+    "open_interest": {
+      "long": 9490,
+      "short": 92148,
+      "net_provider": -82658,
+      "net_recomputed": -82658,
+      "formula": "9490 - 92148",
+      "provider_matches_recomputed": true
+    },
+    "trading_volume_kept_separate": {
+      "long": 93734,
+      "short": 91421,
+      "net_provider": 2313,
+      "net_recomputed": 2313,
+      "formula": "93734 - 91421",
+      "provider_matches_recomputed": true
+    },
+    "raw_row": {
+      "Date": "20260914",
+      "ContractCode": "臺股期貨",
+      "Item": "外資及陸資",
+      "TradingVolume(Long)": "93734",
+      "TradingValue(Long)(Thousands)": "860300184",
+      "TradingVolume(Short)": "91421",
+      "TradingValue(Short)(Thousands)": "839749079",
+      "TradingVolume(Net)": "2313",
+      "TradingValue(Net)(Thousands)": "20551104",
+      "OpenInterest(Long)": "9490",
+      "ContractValueofOpenInterest(Long)(Thousands)": "86991971",
+      "OpenInterest(Short)": "92148",
+      "ContractValueofOpenInterest(Short)(Thousands)": "845057277",
+      "OpenInterest(Net)": "-82658",
+      "ContractValueofOpenInterest(Net)(Thousands)": "-758065306"
+    },
+    "date_selection": "max(Date) in official response",
+    "source_id": "taifex_oi"
+  },
+  "us_latest_completed_close": {
+    "trade_date": "2026-09-14",
+    "timezone_semantics": "Daily source date/session anchor only; no exact closing-clock time claimed.",
+    "return_convention": "close_2026-09-14 / close_2026-09-11 - 1",
+    "indices": {
+      "SOX": {
+        "label": "PHLX Semiconductor Index",
+        "symbol": "^SOX",
+        "trade_date": "2026-09-14",
+        "previous_trade_date": "2026-09-11",
+        "open": 11191.82,
+        "high": 11285.3,
+        "low": 11110.11,
+        "close": 11131.28,
+        "previous_close": 11824.0,
+        "raw_latest_row": {
+          "date": "2026-09-14",
+          "open": 11191.818359375,
+          "high": 11285.2978515625,
+          "low": 11110.1103515625,
+          "close": 11131.28125,
+          "volume": 0
+        },
+        "raw_previous_row": {
+          "date": "2026-09-11",
+          "open": 11753.8701171875,
+          "high": 11910.2001953125,
+          "low": 11711.330078125,
+          "close": 11824.0,
+          "volume": 0
+        },
+        "calculation": {
+          "formula_change": "11131.28125 - 11824.0",
+          "change": -692.72,
+          "formula_pct": "(11131.28125 / 11824.0 - 1) * 100",
+          "change_pct": -5.86,
+          "unrounded_change_pct": "-5.858582121109607577807848440"
+        },
+        "ohlc_validation": {
+          "valid": true,
+          "checks": {
+            "low_le_open_le_high": true,
+            "low_le_close_le_high": true,
+            "low_le_high": true
+          }
+        },
+        "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/%5ESOX?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+        "source_id": "yahoo_SOX",
+        "timestamp_semantics": "daily timestamp used only as exchange-local session-date anchor; no exact close time claimed",
+        "nasdaq_official_endpoint_status": {
+          "latest_available_date": "2026-09-11",
+          "latest_row": {
+            "date": "09/11/2026",
+            "close": "11,824.00",
+            "volume": "--",
+            "open": "11,753.87",
+            "high": "11,910.20",
+            "low": "11,711.33"
+          },
+          "stale_for_2026_09_14": true,
+          "source_id": "nasdaq_SOX"
+        }
+      },
+      "VIX": {
+        "label": "CBOE Volatility Index",
+        "symbol": "^VIX",
+        "trade_date": "2026-09-14",
+        "previous_trade_date": "2026-09-11",
+        "open": 17.5,
+        "high": 18.17,
+        "low": 16.58,
+        "close": 17.1,
+        "previous_close": 15.84,
+        "raw_latest_row": {
+          "date": "2026-09-14",
+          "open": 17.5,
+          "high": 18.170000076293945,
+          "low": 16.579999923706055,
+          "close": 17.100000381469727,
+          "volume": 0
+        },
+        "raw_previous_row": {
+          "date": "2026-09-11",
+          "open": 17.510000228881836,
+          "high": 17.709999084472656,
+          "low": 15.59000015258789,
+          "close": 15.84000015258789,
+          "volume": 0
+        },
+        "calculation": {
+          "formula_change": "17.100000381469727 - 15.84000015258789",
+          "change": 1.26,
+          "formula_pct": "(17.100000381469727 / 15.84000015258789 - 1) * 100",
+          "change_pct": 7.95,
+          "unrounded_change_pct": "7.954546822879809620616548400"
+        },
+        "ohlc_validation": {
+          "valid": true,
+          "checks": {
+            "low_le_open_le_high": true,
+            "low_le_close_le_high": true,
+            "low_le_high": true
+          }
+        },
+        "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+        "source_id": "yahoo_VIX",
+        "timestamp_semantics": "daily timestamp used only as exchange-local session-date anchor; no exact close time claimed",
+        "cboe_official_crosscheck": {
+          "row": {
+            "DATE": "09/14/2026",
+            "OPEN": "17.500000",
+            "HIGH": "18.170000",
+            "LOW": "16.580000",
+            "CLOSE": "17.100000"
+          },
+          "close_matches_yahoo_to_0_01": true,
+          "source_id": "cboe_vix"
+        }
+      },
+      "SPX": {
+        "label": "S&P 500 Index",
+        "symbol": "^GSPC",
+        "trade_date": "2026-09-14",
+        "previous_trade_date": "2026-09-11",
+        "open": 7611.44,
+        "high": 7647.99,
+        "low": 7592.28,
+        "close": 7619.98,
+        "previous_close": 7656.98,
+        "raw_latest_row": {
+          "date": "2026-09-14",
+          "open": 7611.43994140625,
+          "high": 7647.990234375,
+          "low": 7592.27978515625,
+          "close": 7619.97998046875,
+          "volume": 2897149000
+        },
+        "raw_previous_row": {
+          "date": "2026-09-11",
+          "open": 7636.75,
+          "high": 7677.02001953125,
+          "low": 7636.75,
+          "close": 7656.97998046875,
+          "volume": 4722480000
+        },
+        "calculation": {
+          "formula_change": "7619.97998046875 - 7656.97998046875",
+          "change": -37.0,
+          "formula_pct": "(7619.97998046875 / 7656.97998046875 - 1) * 100",
+          "change_pct": -0.48,
+          "unrounded_change_pct": "-0.4832192338804431592778622200"
+        },
+        "ohlc_validation": {
+          "valid": true,
+          "checks": {
+            "low_le_open_le_high": true,
+            "low_le_close_le_high": true,
+            "low_le_high": true
+          }
+        },
+        "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+        "source_id": "yahoo_SPX",
+        "timestamp_semantics": "daily timestamp used only as exchange-local session-date anchor; no exact close time claimed",
+        "cboe_official_crosscheck": {
+          "row": {
+            "DATE": "09/14/2026",
+            "SPX": "7619.980000"
+          },
+          "close_matches_yahoo_to_0_01": true,
+          "source_id": "cboe_spx"
+        }
+      },
+      "NDX": {
+        "label": "Nasdaq-100 Index",
+        "symbol": "^NDX",
+        "trade_date": "2026-09-14",
+        "previous_trade_date": "2026-09-11",
+        "open": 28890.93,
+        "high": 29285.5,
+        "low": 28867.67,
+        "close": 29127.16,
+        "previous_close": 29368.44,
+        "raw_latest_row": {
+          "date": "2026-09-14",
+          "open": 28890.931640625,
+          "high": 29285.501953125,
+          "low": 28867.66796875,
+          "close": 29127.158203125,
+          "volume": 1207047000
+        },
+        "raw_previous_row": {
+          "date": "2026-09-11",
+          "open": 29331.48046875,
+          "high": 29473.119140625,
+          "low": 29313.509765625,
+          "close": 29368.439453125,
+          "volume": 6587900000
+        },
+        "calculation": {
+          "formula_change": "29127.158203125 - 29368.439453125",
+          "change": -241.28,
+          "formula_pct": "(29127.158203125 / 29368.439453125 - 1) * 100",
+          "change_pct": -0.82,
+          "unrounded_change_pct": "-0.8215664655424040515431604700"
+        },
+        "ohlc_validation": {
+          "valid": true,
+          "checks": {
+            "low_le_open_le_high": true,
+            "low_le_close_le_high": true,
+            "low_le_high": true
+          }
+        },
+        "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/%5ENDX?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+        "source_id": "yahoo_NDX",
+        "timestamp_semantics": "daily timestamp used only as exchange-local session-date anchor; no exact close time claimed",
+        "nasdaq_official_endpoint_status": {
+          "latest_available_date": "2026-09-11",
+          "latest_row": {
+            "date": "09/11/2026",
+            "close": "29,368.44",
+            "volume": "--",
+            "open": "29,331.48",
+            "high": "29,473.12",
+            "low": "29,313.51"
+          },
+          "stale_for_2026_09_14": true,
+          "source_id": "nasdaq_NDX"
+        }
+      },
+      "DJI": {
+        "label": "Dow Jones Industrial Average",
+        "symbol": "^DJI",
+        "trade_date": "2026-09-14",
+        "previous_trade_date": "2026-09-11",
+        "open": 52750.88,
+        "high": 52750.88,
+        "low": 52278.89,
+        "close": 52421.2,
+        "previous_close": 52573.29,
+        "raw_latest_row": {
+          "date": "2026-09-14",
+          "open": 52750.87890625,
+          "high": 52750.87890625,
+          "low": 52278.890625,
+          "close": 52421.19921875,
+          "volume": 442656621
+        },
+        "raw_previous_row": {
+          "date": "2026-09-11",
+          "open": 52204.4609375,
+          "high": 52720.23828125,
+          "low": 52204.4609375,
+          "close": 52573.2890625,
+          "volume": 354460000
+        },
+        "calculation": {
+          "formula_change": "52421.19921875 - 52573.2890625",
+          "change": -152.09,
+          "formula_pct": "(52421.19921875 / 52573.2890625 - 1) * 100",
+          "change_pct": -0.29,
+          "unrounded_change_pct": "-0.2892910952731016418894992000"
+        },
+        "ohlc_validation": {
+          "valid": true,
+          "checks": {
+            "low_le_open_le_high": true,
+            "low_le_close_le_high": true,
+            "low_le_high": true
+          }
+        },
+        "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/%5EDJI?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+        "source_id": "yahoo_DJI",
+        "timestamp_semantics": "daily timestamp used only as exchange-local session-date anchor; no exact close time claimed"
+      }
+    },
+    "stocks": {
+      "AAPL": {
+        "label": "Apple",
+        "symbol": "AAPL",
+        "trade_date": "2026-09-14",
+        "previous_trade_date": "2026-09-11",
+        "open": 334.79,
+        "high": 335.5,
+        "low": 331.34,
+        "close": 333.08,
+        "previous_close": 332.27,
+        "volume": 39269150,
+        "raw_latest_row": {
+          "date": "09/14/2026",
+          "close": "$333.08",
+          "volume": "39,269,150",
+          "open": "$334.79",
+          "high": "$335.50",
+          "low": "$331.34"
+        },
+        "raw_previous_row": {
+          "date": "09/11/2026",
+          "close": "$332.27",
+          "volume": "50,716,870",
+          "open": "$327.45",
+          "high": "$336.22",
+          "low": "$326.30"
+        },
+        "calculation": {
+          "formula_change": "333.08 - 332.27",
+          "change": 0.81,
+          "formula_pct": "(333.08 / 332.27 - 1) * 100",
+          "change_pct": 0.24,
+          "unrounded_change_pct": "0.243777650705751346796280100"
+        },
+        "ohlc_validation": {
+          "valid": true,
+          "checks": {
+            "low_le_open_le_high": true,
+            "low_le_close_le_high": true,
+            "low_le_high": true
+          }
+        },
+        "source_url": "https://api.nasdaq.com/api/quote/AAPL/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+        "source_id": "nasdaq_AAPL",
+        "source_date_only_no_exact_close_time_claimed": true,
+        "yahoo_crosscheck": {
+          "latest_available_date": "2026-09-14",
+          "latest_row": {
+            "date": "2026-09-14",
+            "open": 334.7900085449219,
+            "high": 335.5,
+            "low": 331.3399963378906,
+            "close": 333.0799865722656,
+            "volume": 39223900
+          },
+          "same_trade_date": true,
+          "close_matches_to_0_01": true,
+          "high_matches_to_0_01": true,
+          "low_matches_to_0_01": true,
+          "source_id": "yahoo_AAPL"
+        }
+      },
+      "MSFT": {
+        "label": "Microsoft",
+        "symbol": "MSFT",
+        "trade_date": "2026-09-14",
+        "previous_trade_date": "2026-09-11",
+        "open": 497.06,
+        "high": 509.95,
+        "low": 495.34,
+        "close": 505.41,
+        "previous_close": 495.63,
+        "volume": 23091890,
+        "raw_latest_row": {
+          "date": "09/14/2026",
+          "close": "$505.41",
+          "volume": "23,091,890",
+          "open": "$497.06",
+          "high": "$509.95",
+          "low": "$495.3416"
+        },
+        "raw_previous_row": {
+          "date": "09/11/2026",
+          "close": "$495.63",
+          "volume": "14,518,440",
+          "open": "$495.65",
+          "high": "$498.97",
+          "low": "$492.58"
+        },
+        "calculation": {
+          "formula_change": "505.41 - 495.63",
+          "change": 9.78,
+          "formula_pct": "(505.41 / 495.63 - 1) * 100",
+          "change_pct": 1.97,
+          "unrounded_change_pct": "1.973246171539253071847951100"
+        },
+        "ohlc_validation": {
+          "valid": true,
+          "checks": {
+            "low_le_open_le_high": true,
+            "low_le_close_le_high": true,
+            "low_le_high": true
+          }
+        },
+        "source_url": "https://api.nasdaq.com/api/quote/MSFT/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+        "source_id": "nasdaq_MSFT",
+        "source_date_only_no_exact_close_time_claimed": true,
+        "yahoo_crosscheck": {
+          "latest_available_date": "2026-09-14",
+          "latest_row": {
+            "date": "2026-09-14",
+            "open": 497.05999755859375,
+            "high": 509.95001220703125,
+            "low": 495.3399963378906,
+            "close": 505.4100036621094,
+            "volume": 23070000
+          },
+          "same_trade_date": true,
+          "close_matches_to_0_01": true,
+          "high_matches_to_0_01": true,
+          "low_matches_to_0_01": true,
+          "source_id": "yahoo_MSFT"
+        }
+      },
+      "AMZN": {
+        "label": "Amazon",
+        "symbol": "AMZN",
+        "trade_date": "2026-09-14",
+        "previous_trade_date": "2026-09-11",
+        "open": 253.15,
+        "high": 255.95,
+        "low": 250.74,
+        "close": 253.54,
+        "previous_close": 256.78,
+        "volume": 34352770,
+        "raw_latest_row": {
+          "date": "09/14/2026",
+          "close": "$253.54",
+          "volume": "34,352,770",
+          "open": "$253.15",
+          "high": "$255.95",
+          "low": "$250.74"
+        },
+        "raw_previous_row": {
+          "date": "09/11/2026",
+          "close": "$256.78",
+          "volume": "26,724,120",
+          "open": "$254.09",
+          "high": "$257.59",
+          "low": "$253.14"
+        },
+        "calculation": {
+          "formula_change": "253.54 - 256.78",
+          "change": -3.24,
+          "formula_pct": "(253.54 / 256.78 - 1) * 100",
+          "change_pct": -1.26,
+          "unrounded_change_pct": "-1.261780512500973596074460630"
+        },
+        "ohlc_validation": {
+          "valid": true,
+          "checks": {
+            "low_le_open_le_high": true,
+            "low_le_close_le_high": true,
+            "low_le_high": true
+          }
+        },
+        "source_url": "https://api.nasdaq.com/api/quote/AMZN/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+        "source_id": "nasdaq_AMZN",
+        "source_date_only_no_exact_close_time_claimed": true,
+        "yahoo_crosscheck": {
+          "latest_available_date": "2026-09-14",
+          "latest_row": {
+            "date": "2026-09-14",
+            "open": 253.14999389648438,
+            "high": 255.9499969482422,
+            "low": 250.74000549316406,
+            "close": 253.5399932861328,
+            "volume": 34292800
+          },
+          "same_trade_date": true,
+          "close_matches_to_0_01": true,
+          "high_matches_to_0_01": true,
+          "low_matches_to_0_01": true,
+          "source_id": "yahoo_AMZN"
+        }
+      },
+      "GOOGL": {
+        "label": "Alphabet Class A",
+        "symbol": "GOOGL",
+        "trade_date": "2026-09-14",
+        "previous_trade_date": "2026-09-11",
+        "open": 343.12,
+        "high": 349.91,
+        "low": 342.14,
+        "close": 349.39,
+        "previous_close": 338.5,
+        "volume": 35905450,
+        "raw_latest_row": {
+          "date": "09/14/2026",
+          "close": "$349.39",
+          "volume": "35,905,450",
+          "open": "$343.12",
+          "high": "$349.91",
+          "low": "$342.1361"
+        },
+        "raw_previous_row": {
+          "date": "09/11/2026",
+          "close": "$338.50",
+          "volume": "24,708,290",
+          "open": "$335.03",
+          "high": "$342.98",
+          "low": "$335.03"
+        },
+        "calculation": {
+          "formula_change": "349.39 - 338.50",
+          "change": 10.89,
+          "formula_pct": "(349.39 / 338.50 - 1) * 100",
+          "change_pct": 3.22,
+          "unrounded_change_pct": "3.217134416543574593796159500"
+        },
+        "ohlc_validation": {
+          "valid": true,
+          "checks": {
+            "low_le_open_le_high": true,
+            "low_le_close_le_high": true,
+            "low_le_high": true
+          }
+        },
+        "source_url": "https://api.nasdaq.com/api/quote/GOOGL/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+        "source_id": "nasdaq_GOOGL",
+        "source_date_only_no_exact_close_time_claimed": true,
+        "yahoo_crosscheck": {
+          "latest_available_date": "2026-09-14",
+          "latest_row": {
+            "date": "2026-09-14",
+            "open": 343.1199951171875,
+            "high": 349.9100036621094,
+            "low": 342.1400146484375,
+            "close": 349.3900146484375,
+            "volume": 35860000
+          },
+          "same_trade_date": true,
+          "close_matches_to_0_01": true,
+          "high_matches_to_0_01": true,
+          "low_matches_to_0_01": true,
+          "source_id": "yahoo_GOOGL"
+        },
+        "share_class": "Alphabet Class A (GOOGL), not GOOG Class C"
+      },
+      "META": {
+        "label": "Meta",
+        "symbol": "META",
+        "trade_date": "2026-09-14",
+        "previous_trade_date": "2026-09-11",
+        "open": 657.83,
+        "high": 668.6,
+        "low": 649.22,
+        "close": 665.6,
+        "previous_close": 648.03,
+        "volume": 19332320,
+        "raw_latest_row": {
+          "date": "09/14/2026",
+          "close": "$665.60",
+          "volume": "19,332,320",
+          "open": "$657.83",
+          "high": "$668.60",
+          "low": "$649.22"
+        },
+        "raw_previous_row": {
+          "date": "09/11/2026",
+          "close": "$648.03",
+          "volume": "16,924,950",
+          "open": "$653.51",
+          "high": "$664.24",
+          "low": "$646.20"
+        },
+        "calculation": {
+          "formula_change": "665.60 - 648.03",
+          "change": 17.57,
+          "formula_pct": "(665.60 / 648.03 - 1) * 100",
+          "change_pct": 2.71,
+          "unrounded_change_pct": "2.711294230205391725691711800"
+        },
+        "ohlc_validation": {
+          "valid": true,
+          "checks": {
+            "low_le_open_le_high": true,
+            "low_le_close_le_high": true,
+            "low_le_high": true
+          }
+        },
+        "source_url": "https://api.nasdaq.com/api/quote/META/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+        "source_id": "nasdaq_META",
+        "source_date_only_no_exact_close_time_claimed": true,
+        "yahoo_crosscheck": {
+          "latest_available_date": "2026-09-11",
+          "latest_row": {
+            "date": "2026-09-11",
+            "open": 653.510009765625,
+            "high": 664.239990234375,
+            "low": 646.2000122070312,
+            "close": 648.030029296875,
+            "volume": 16908400
+          },
+          "same_trade_date": false,
+          "close_matches_to_0_01": false,
+          "high_matches_to_0_01": false,
+          "low_matches_to_0_01": false,
+          "source_id": "yahoo_META"
+        }
+      },
+      "NVDA": {
+        "label": "NVIDIA",
+        "symbol": "NVDA",
+        "trade_date": "2026-09-14",
+        "previous_trade_date": "2026-09-11",
+        "open": 211.24,
+        "high": 212.77,
+        "low": 208.93,
+        "close": 210.96,
+        "previous_close": 218.29,
+        "volume": 132267200,
+        "raw_latest_row": {
+          "date": "09/14/2026",
+          "close": "$210.96",
+          "volume": "132,267,200",
+          "open": "$211.24",
+          "high": "$212.77",
+          "low": "$208.93"
+        },
+        "raw_previous_row": {
+          "date": "09/11/2026",
+          "close": "$218.29",
+          "volume": "89,060,140",
+          "open": "$221.235",
+          "high": "$222.00",
+          "low": "$218.15"
+        },
+        "calculation": {
+          "formula_change": "210.96 - 218.29",
+          "change": -7.33,
+          "formula_pct": "(210.96 / 218.29 - 1) * 100",
+          "change_pct": -3.36,
+          "unrounded_change_pct": "-3.357918365477117595858720050"
+        },
+        "ohlc_validation": {
+          "valid": true,
+          "checks": {
+            "low_le_open_le_high": true,
+            "low_le_close_le_high": true,
+            "low_le_high": true
+          }
+        },
+        "source_url": "https://api.nasdaq.com/api/quote/NVDA/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+        "source_id": "nasdaq_NVDA",
+        "source_date_only_no_exact_close_time_claimed": true,
+        "yahoo_crosscheck": {
+          "latest_available_date": "2026-09-14",
+          "latest_row": {
+            "date": "2026-09-14",
+            "open": 211.24000549316406,
+            "high": 212.77000427246094,
+            "low": 208.92999267578125,
+            "close": 210.9600067138672,
+            "volume": 131942300
+          },
+          "same_trade_date": true,
+          "close_matches_to_0_01": true,
+          "high_matches_to_0_01": true,
+          "low_matches_to_0_01": true,
+          "source_id": "yahoo_NVDA"
+        }
+      },
+      "TSLA": {
+        "label": "Tesla",
+        "symbol": "TSLA",
+        "trade_date": "2026-09-14",
+        "previous_trade_date": "2026-09-11",
+        "open": 359.78,
+        "high": 367.73,
+        "low": 357.04,
+        "close": 358.97,
+        "previous_close": 365.44,
+        "volume": 32477180,
+        "raw_latest_row": {
+          "date": "09/14/2026",
+          "close": "$358.97",
+          "volume": "32,477,180",
+          "open": "$359.78",
+          "high": "$367.73",
+          "low": "$357.04"
+        },
+        "raw_previous_row": {
+          "date": "09/11/2026",
+          "close": "$365.44",
+          "volume": "30,153,020",
+          "open": "$364.20",
+          "high": "$368.66",
+          "low": "$361.60"
+        },
+        "calculation": {
+          "formula_change": "358.97 - 365.44",
+          "change": -6.47,
+          "formula_pct": "(358.97 / 365.44 - 1) * 100",
+          "change_pct": -1.77,
+          "unrounded_change_pct": "-1.770468476357267950963222420"
+        },
+        "ohlc_validation": {
+          "valid": true,
+          "checks": {
+            "low_le_open_le_high": true,
+            "low_le_close_le_high": true,
+            "low_le_high": true
+          }
+        },
+        "source_url": "https://api.nasdaq.com/api/quote/TSLA/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+        "source_id": "nasdaq_TSLA",
+        "source_date_only_no_exact_close_time_claimed": true,
+        "yahoo_crosscheck": {
+          "latest_available_date": "2026-09-14",
+          "latest_row": {
+            "date": "2026-09-14",
+            "open": 359.7799987792969,
+            "high": 367.7300109863281,
+            "low": 357.0400085449219,
+            "close": 358.9700012207031,
+            "volume": 32401500
+          },
+          "same_trade_date": true,
+          "close_matches_to_0_01": true,
+          "high_matches_to_0_01": true,
+          "low_matches_to_0_01": true,
+          "source_id": "yahoo_TSLA"
+        }
+      }
+    }
+  },
+  "quality_checks": {
+    "twse_and_taifex_live_date_20260915": true,
+    "twse_and_taifex_nonempty_intraday": true,
+    "selected_common_minute_not_after_fully_elapsed_cutoff": true,
+    "previous_day_official_evidence_20260914": true,
+    "previous_day_taiex_matches_live_reference": true,
+    "front_contract_identity_matches_chart": true,
+    "foreign_oi_net_recomputed_matches": true,
+    "all_us_primary_rows_latest_completed_date_2026_09_14": true,
+    "all_primary_latest_ohlc_valid": true,
+    "cboe_spx_yahoo_close_match_to_0_01": true,
+    "cboe_vix_yahoo_close_match_to_0_01": true,
+    "all_nasdaq_stock_yahoo_available_same_date_crosschecks_match_to_0_01": true
+  },
+  "sources": [
+    {
+      "source_id": "twse_quote",
+      "url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+      "method": "GET",
+      "retrieval_started_at": "2026-09-15T10:30:44.235+08:00",
+      "retrieved_at": "2026-09-15T10:30:44.345+08:00",
+      "http_status": 200,
+      "final_url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+      "content_type": "text/html;charset=UTF-8",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/twse_quote.json",
+      "bytes": 700
+    },
+    {
+      "source_id": "twse_chart",
+      "url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+      "method": "GET",
+      "retrieval_started_at": "2026-09-15T10:30:44.235+08:00",
+      "retrieved_at": "2026-09-15T10:30:44.367+08:00",
+      "http_status": 200,
+      "final_url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+      "content_type": "text/html;charset=UTF-8",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/twse_chart.json",
+      "bytes": 6548
+    },
+    {
+      "source_id": "twse_20260914",
+      "url": "https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=20260914&type=ALL&response=json",
+      "method": "GET",
+      "retrieval_started_at": "2026-09-15T10:28:17+08:00",
+      "retrieved_at": "2026-09-15T10:28:18+08:00",
+      "http_status": 200,
+      "final_url": "https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=20260914&type=ALL&response=json",
+      "content_type": "application/json;charset=UTF-8",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/twse_20260914.json",
+      "bytes": 4801838
+    },
+    {
+      "source_id": "taifex_quote_list",
+      "url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+      "method": "POST",
+      "body": {
+        "MarketType": "0",
+        "SymbolType": "F",
+        "KindID": "1",
+        "CID": "",
+        "ExpireMonth": ""
+      },
+      "retrieval_started_at": "2026-09-15T10:30:44.236+08:00",
+      "retrieved_at": "2026-09-15T10:30:44.490+08:00",
+      "http_status": 200,
+      "final_url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+      "content_type": "application/json",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/taifex_quote_list.json",
+      "bytes": 6296
+    },
+    {
+      "source_id": "taifex_chart",
+      "url": "https://mis.taifex.com.tw/futures/api/getChartData1M",
+      "method": "POST",
+      "body": {
+        "SymbolID": "TXFI6-F"
+      },
+      "retrieval_started_at": "2026-09-15T10:30:44.236+08:00",
+      "retrieved_at": "2026-09-15T10:30:44.465+08:00",
+      "http_status": 200,
+      "final_url": "https://mis.taifex.com.tw/futures/api/getChartData1M",
+      "content_type": "application/json",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/taifex_chart.json",
+      "bytes": 7498
+    },
+    {
+      "source_id": "taifex_oi",
+      "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+      "method": "GET",
+      "retrieval_started_at": "2026-09-15T10:27:23+08:00",
+      "retrieved_at": "2026-09-15T10:27:23+08:00",
+      "http_status": 200,
+      "final_url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+      "content_type": "application/octet-stream",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/taifex_oi.json",
+      "bytes": 34156
+    },
+    {
+      "source_id": "cboe_vix",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+      "method": "GET",
+      "retrieval_started_at": "2026-09-15T10:27:23+08:00",
+      "retrieved_at": "2026-09-15T10:27:24+08:00",
+      "http_status": 200,
+      "final_url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+      "content_type": "text/csv",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/cboe_vix.csv",
+      "bytes": 472615
+    },
+    {
+      "source_id": "cboe_spx",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SPX_History.csv",
+      "method": "GET",
+      "retrieval_started_at": "2026-09-15T10:27:23+08:00",
+      "retrieved_at": "2026-09-15T10:27:23+08:00",
+      "http_status": 200,
+      "final_url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SPX_History.csv",
+      "content_type": "text/csv",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/cboe_spx.csv",
+      "bytes": 292688
+    },
+    {
+      "source_id": "yahoo_SOX",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/%5ESOX?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+      "method": "GET via web_extract; JSON whitespace normalized",
+      "retrieval_started_at": "2026-09-15T10:28:44+08:00",
+      "retrieved_at": "2026-09-15T10:28:51+08:00",
+      "http_status": "extract_success",
+      "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_SOX_web_extract.txt",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_SOX.json",
+      "bytes": 2101
+    },
+    {
+      "source_id": "yahoo_VIX",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+      "method": "GET via web_extract; JSON whitespace normalized",
+      "retrieval_started_at": "2026-09-15T10:28:44+08:00",
+      "retrieved_at": "2026-09-15T10:28:51+08:00",
+      "http_status": "extract_success",
+      "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_VIX_web_extract.txt",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_VIX.json",
+      "bytes": 2338
+    },
+    {
+      "source_id": "yahoo_SPX",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+      "method": "GET via web_extract; JSON whitespace normalized",
+      "retrieval_started_at": "2026-09-15T10:28:44+08:00",
+      "retrieved_at": "2026-09-15T10:28:51+08:00",
+      "http_status": "extract_success",
+      "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_SPX_web_extract.txt",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_SPX.json",
+      "bytes": 2216
+    },
+    {
+      "source_id": "yahoo_NDX",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/%5ENDX?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+      "method": "GET via web_extract; JSON whitespace normalized",
+      "retrieval_started_at": "2026-09-15T10:28:44+08:00",
+      "retrieved_at": "2026-09-15T10:28:51+08:00",
+      "http_status": "extract_success",
+      "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_NDX_web_extract.txt",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_NDX.json",
+      "bytes": 2202
+    },
+    {
+      "source_id": "yahoo_DJI",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/%5EDJI?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+      "method": "GET via web_extract; JSON whitespace normalized",
+      "retrieval_started_at": "2026-09-15T10:28:44+08:00",
+      "retrieved_at": "2026-09-15T10:28:51+08:00",
+      "http_status": "extract_success",
+      "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_DJI_web_extract.txt",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_DJI.json",
+      "bytes": 2129
+    },
+    {
+      "source_id": "nasdaq_SOX",
+      "url": "https://api.nasdaq.com/api/quote/SOX/historical?assetclass=index&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "method": "GET",
+      "retrieval_started_at": "2026-09-15T10:27:23+08:00",
+      "retrieved_at": "2026-09-15T10:27:25+08:00",
+      "http_status": 200,
+      "final_url": "https://api.nasdaq.com/api/quote/SOX/historical?assetclass=index&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "content_type": "application/json; charset=utf-8",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/nasdaq_SOX.json",
+      "bytes": 602
+    },
+    {
+      "source_id": "nasdaq_NDX",
+      "url": "https://api.nasdaq.com/api/quote/NDX/historical?assetclass=index&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "method": "GET",
+      "retrieval_started_at": "2026-09-15T10:27:23+08:00",
+      "retrieved_at": "2026-09-15T10:27:26+08:00",
+      "http_status": 200,
+      "final_url": "https://api.nasdaq.com/api/quote/NDX/historical?assetclass=index&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "content_type": "application/json; charset=utf-8",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/nasdaq_NDX.json",
+      "bytes": 602
+    },
+    {
+      "source_id": "nasdaq_AAPL",
+      "url": "https://api.nasdaq.com/api/quote/AAPL/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "method": "GET",
+      "retrieval_started_at": "2026-09-15T10:27:23+08:00",
+      "retrieved_at": "2026-09-15T10:27:27+08:00",
+      "http_status": 200,
+      "final_url": "https://api.nasdaq.com/api/quote/AAPL/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "content_type": "application/json; charset=utf-8",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/nasdaq_AAPL.json",
+      "bytes": 716
+    },
+    {
+      "source_id": "nasdaq_MSFT",
+      "url": "https://api.nasdaq.com/api/quote/MSFT/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "method": "GET",
+      "retrieval_started_at": "2026-09-15T10:27:23+08:00",
+      "retrieved_at": "2026-09-15T10:27:27+08:00",
+      "http_status": 200,
+      "final_url": "https://api.nasdaq.com/api/quote/MSFT/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "content_type": "application/json; charset=utf-8",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/nasdaq_MSFT.json",
+      "bytes": 717
+    },
+    {
+      "source_id": "nasdaq_AMZN",
+      "url": "https://api.nasdaq.com/api/quote/AMZN/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "method": "GET",
+      "retrieval_started_at": "2026-09-15T10:27:23+08:00",
+      "retrieved_at": "2026-09-15T10:27:25+08:00",
+      "http_status": 200,
+      "final_url": "https://api.nasdaq.com/api/quote/AMZN/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "content_type": "application/json; charset=utf-8",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/nasdaq_AMZN.json",
+      "bytes": 715
+    },
+    {
+      "source_id": "nasdaq_GOOGL",
+      "url": "https://api.nasdaq.com/api/quote/GOOGL/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "method": "GET",
+      "retrieval_started_at": "2026-09-15T10:27:23+08:00",
+      "retrieved_at": "2026-09-15T10:27:25+08:00",
+      "http_status": 200,
+      "final_url": "https://api.nasdaq.com/api/quote/GOOGL/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "content_type": "application/json; charset=utf-8",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/nasdaq_GOOGL.json",
+      "bytes": 719
+    },
+    {
+      "source_id": "nasdaq_META",
+      "url": "https://api.nasdaq.com/api/quote/META/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "method": "GET",
+      "retrieval_started_at": "2026-09-15T10:27:23+08:00",
+      "retrieved_at": "2026-09-15T10:27:27+08:00",
+      "http_status": 200,
+      "final_url": "https://api.nasdaq.com/api/quote/META/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "content_type": "application/json; charset=utf-8",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/nasdaq_META.json",
+      "bytes": 716
+    },
+    {
+      "source_id": "nasdaq_NVDA",
+      "url": "https://api.nasdaq.com/api/quote/NVDA/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "method": "GET",
+      "retrieval_started_at": "2026-09-15T10:27:24+08:00",
+      "retrieved_at": "2026-09-15T10:27:27+08:00",
+      "http_status": 200,
+      "final_url": "https://api.nasdaq.com/api/quote/NVDA/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "content_type": "application/json; charset=utf-8",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/nasdaq_NVDA.json",
+      "bytes": 720
+    },
+    {
+      "source_id": "nasdaq_TSLA",
+      "url": "https://api.nasdaq.com/api/quote/TSLA/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "method": "GET",
+      "retrieval_started_at": "2026-09-15T10:27:25+08:00",
+      "retrieved_at": "2026-09-15T10:27:29+08:00",
+      "http_status": 200,
+      "final_url": "https://api.nasdaq.com/api/quote/TSLA/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "content_type": "application/json; charset=utf-8",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/nasdaq_TSLA.json",
+      "bytes": 716
+    },
+    {
+      "source_id": "yahoo_AAPL",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/AAPL?range=10d&interval=1d&events=history&includeAdjustedClose=true",
+      "method": "GET via web_extract; JSON whitespace normalized",
+      "retrieved_at": "2026-09-15T10:29:30+08:00",
+      "http_status": "extract_success",
+      "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_AAPL_web_extract.txt",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_AAPL.json",
+      "bytes": 2281
+    },
+    {
+      "source_id": "yahoo_MSFT",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?range=10d&interval=1d&events=history",
+      "method": "GET via web_extract; JSON whitespace normalized",
+      "retrieval_started_at": "2026-09-15T10:29:51+08:00",
+      "retrieved_at": "2026-09-15T10:29:52+08:00",
+      "http_status": "extract_success",
+      "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_MSFT_web_extract.txt",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_MSFT.json",
+      "bytes": 2287
+    },
+    {
+      "source_id": "yahoo_AMZN",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/AMZN?range=10d&interval=1d&events=history&includeAdjustedClose=true",
+      "method": "GET via web_extract; JSON whitespace normalized",
+      "retrieved_at": "2026-09-15T10:29:32+08:00",
+      "http_status": "extract_success",
+      "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_AMZN_web_extract.txt",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_AMZN.json",
+      "bytes": 2281
+    },
+    {
+      "source_id": "yahoo_GOOGL",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/GOOGL?period1=1788134400%26period2=1789603200%26interval=1d%26events=history",
+      "method": "GET via web_extract; JSON whitespace normalized",
+      "retrieval_started_at": "2026-09-15T10:29:53+08:00",
+      "retrieved_at": "2026-09-15T10:29:54+08:00",
+      "http_status": "extract_success",
+      "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_GOOGL_web_extract.txt",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_GOOGL.json",
+      "bytes": 2249
+    },
+    {
+      "source_id": "yahoo_META",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/META?range=1mo%26interval=1d",
+      "method": "GET via web_extract; JSON whitespace normalized",
+      "retrieval_started_at": "2026-09-15T10:30:14+08:00",
+      "retrieved_at": "2026-09-15T10:30:15+08:00",
+      "http_status": "extract_success",
+      "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_META_web_extract.txt",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_META.json",
+      "bytes": 3511
+    },
+    {
+      "source_id": "yahoo_NVDA",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/NVDA?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+      "method": "GET via web_extract; JSON whitespace normalized",
+      "retrieval_started_at": "2026-09-15T10:28:56+08:00",
+      "retrieved_at": "2026-09-15T10:28:57+08:00",
+      "http_status": "extract_success",
+      "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_NVDA_web_extract.txt",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_NVDA.json",
+      "bytes": 2302
+    },
+    {
+      "source_id": "yahoo_TSLA",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/TSLA?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+      "method": "GET via web_extract; JSON whitespace normalized",
+      "retrieval_started_at": "2026-09-15T10:28:56+08:00",
+      "retrieved_at": "2026-09-15T10:28:57+08:00",
+      "http_status": "extract_success",
+      "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_TSLA_web_extract.txt",
+      "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_TSLA.json",
+      "bytes": 2257
+    }
+  ],
+  "raw_directory": "/tmp/mb-20260915-market-raw",
+  "fetch_manifest_path": "/tmp/mb-20260915-market-raw/fetch_manifest.json"
+}

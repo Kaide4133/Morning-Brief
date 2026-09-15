@@ -1,0 +1,6092 @@
+{
+  "date": "2026-09-15",
+  "ark": {
+    "water_level": 78.8,
+    "holding_allocation_suggestion": "78.8%",
+    "as_of": "2026-09-15",
+    "source_time": "2026-09-15T09:05:35.990+08:00",
+    "status": "validated",
+    "source_file": "01_風控水位.png",
+    "prev": 82.0,
+    "previous_water_level": 82.0,
+    "delta": -3.2,
+    "change": -3.2,
+    "direction": "下降",
+    "interpretation": "水位下降代表市場健康度與可部署空間轉弱；78.8%仍有配置空間，但不是追價或買滿指令。",
+    "note": "較前一交易日9/14的82.0%下降 <strong>3.2個百分點</strong>。健康度與可部署空間收縮，先放慢配置、保留彈性。"
+  },
+  "etf": {
+    "value": [
+      {
+        "code": "0053",
+        "name": "元大電子",
+        "price": "237.55",
+        "change": "▼1.4 (-0.59%)",
+        "nav_label": "即時淨值",
+        "nav_value": "237.9",
+        "premium_label": "折溢價",
+        "premium_value": "-0.15%",
+        "market_label": "來源股價",
+        "market_value": "237.55",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "00631L",
+        "name": "元大台灣50正2",
+        "price": "35.2",
+        "change": "▼0.2 (-0.56%)",
+        "nav_label": "即時淨值",
+        "nav_value": "35.26",
+        "premium_label": "折溢價",
+        "premium_value": "0.06%",
+        "market_label": "來源股價",
+        "market_value": "35.2",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0052",
+        "name": "富邦科技",
+        "price": "61.8",
+        "change": "▼0.1 (-0.16%)",
+        "nav_label": "即時淨值",
+        "nav_value": "61.91",
+        "premium_label": "折溢價",
+        "premium_value": "-0.26%",
+        "market_label": "來源股價",
+        "market_value": "61.8",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0057",
+        "name": "富邦摩台",
+        "price": "—",
+        "change": "—",
+        "nav_label": "即時淨值",
+        "nav_value": "317.54",
+        "premium_label": "折溢價",
+        "premium_value": "0.26%",
+        "market_label": "來源股價",
+        "market_value": "—",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "006208",
+        "name": "富邦台50",
+        "price": "243.55",
+        "change": "▼1.1 (-0.45%)",
+        "nav_label": "即時淨值",
+        "nav_value": "244.32",
+        "premium_label": "折溢價",
+        "premium_value": "-0.13%",
+        "market_label": "來源股價",
+        "market_value": "243.55",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0050",
+        "name": "元大台灣50",
+        "price": "106.35",
+        "change": "▼0.55 (-0.51%)",
+        "nav_label": "即時淨值",
+        "nav_value": "106.66",
+        "premium_label": "折溢價",
+        "premium_value": "-0.15%",
+        "market_label": "來源股價",
+        "market_value": "106.35",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "006203",
+        "name": "元大MSCI台灣",
+        "price": "—",
+        "change": "—",
+        "nav_label": "即時淨值",
+        "nav_value": "193.45",
+        "premium_label": "折溢價",
+        "premium_value": "0.59%",
+        "market_label": "來源股價",
+        "market_value": "—",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0056",
+        "name": "元大高股息",
+        "price": "55.1",
+        "change": "▼0.3 (-0.54%)",
+        "nav_label": "即時淨值",
+        "nav_value": "55.22",
+        "premium_label": "折溢價",
+        "premium_value": "-0.13%",
+        "market_label": "來源股價",
+        "market_value": "55.1",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0055",
+        "name": "元大MSCI金融",
+        "price": "50.1",
+        "change": "▼0.2 (-0.4%)",
+        "nav_label": "即時淨值",
+        "nav_value": "50.18",
+        "premium_label": "折溢價",
+        "premium_value": "0.14%",
+        "market_label": "來源股價",
+        "market_value": "50.1",
+        "cross_label": "價值×升溫",
+        "cross_value": "是"
+      },
+      {
+        "code": "00960",
+        "name": "野村全球航運龍頭",
+        "price": "22.38",
+        "change": "▲0.26 (+1.18%)",
+        "nav_label": "即時淨值",
+        "nav_value": "22.35",
+        "premium_label": "折溢價",
+        "premium_value": "0.13%",
+        "market_label": "來源股價",
+        "market_value": "22.38",
+        "cross_label": "價值×升溫",
+        "cross_value": "是"
+      }
+    ],
+    "rising": [
+      {
+        "code": "00701",
+        "name": "國泰股利精選30",
+        "price": "41.34",
+        "change": "▼0.2 (-0.48%)",
+        "nav_label": "即時淨值",
+        "nav_value": "41.4",
+        "premium_label": "折溢價",
+        "premium_value": "-0.12%",
+        "market_label": "來源股價",
+        "market_value": "41.34",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "00642U",
+        "name": "期元大S&P石油",
+        "price": "33.62",
+        "change": "0 (0%)",
+        "nav_label": "即時淨值",
+        "nav_value": "33.61",
+        "premium_label": "折溢價",
+        "premium_value": "0%",
+        "market_label": "來源股價",
+        "market_value": "33.62",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "00960",
+        "name": "野村全球航運龍頭",
+        "price": "22.38",
+        "change": "▲0.26 (+1.18%)",
+        "nav_label": "即時淨值",
+        "nav_value": "22.34",
+        "premium_label": "折溢價",
+        "premium_value": "0.18%",
+        "market_label": "來源股價",
+        "market_value": "22.38",
+        "cross_label": "價值×升溫",
+        "cross_value": "是"
+      },
+      {
+        "code": "00715L",
+        "name": "期街口布蘭特正2",
+        "price": "70.25",
+        "change": "▼0.25 (-0.35%)",
+        "nav_label": "即時淨值",
+        "nav_value": "70.22",
+        "premium_label": "折溢價",
+        "premium_value": "-0.03%",
+        "market_label": "來源股價",
+        "market_value": "70.25",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "00915",
+        "name": "凱基優選高股息30",
+        "price": "33.01",
+        "change": "▼0.13 (-0.39%)",
+        "nav_label": "即時淨值",
+        "nav_value": "33.15",
+        "premium_label": "折溢價",
+        "premium_value": "-0.12%",
+        "market_label": "來源股價",
+        "market_value": "33.01",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      },
+      {
+        "code": "0055",
+        "name": "元大MSCI金融",
+        "price": "50.1",
+        "change": "▼0.2 (-0.4%)",
+        "nav_label": "即時淨值",
+        "nav_value": "50.04",
+        "premium_label": "折溢價",
+        "premium_value": "0.32%",
+        "market_label": "來源股價",
+        "market_value": "50.1",
+        "cross_label": "價值×升溫",
+        "cross_value": "是"
+      },
+      {
+        "code": "00938",
+        "name": "凱基優選30",
+        "price": "26.71",
+        "change": "▼0.11 (-0.41%)",
+        "nav_label": "即時淨值",
+        "nav_value": "26.65",
+        "premium_label": "折溢價",
+        "premium_value": "0.38%",
+        "market_label": "來源股價",
+        "market_value": "26.71",
+        "cross_label": "價值×升溫",
+        "cross_value": "否"
+      }
+    ],
+    "overlap": [
+      "0055",
+      "00960"
+    ],
+    "overlap_names": {
+      "0055": "元大MSCI金融",
+      "00960": "野村全球航運龍頭"
+    },
+    "thesis": "價值區10檔、升溫區7檔；0055元大MSCI金融與00960野村全球航運龍頭雙區重疊。金融、股息與航運提供交叉觀察，不是自動避險；石油期貨與槓桿商品另有轉倉、追價及波動風險。"
+  },
+  "stocks": {
+    "value": [
+      {
+        "code": "2059",
+        "name": "川湖",
+        "industry": "電子零組件",
+        "price": "11,880",
+        "change": "▼110 (-0.92%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "0.92",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "344.42"
+      },
+      {
+        "code": "1785",
+        "name": "光洋科",
+        "industry": "非鐵金屬",
+        "price": "94.4",
+        "change": "▼0.7 (-0.74%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-14.17",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "30.71"
+      },
+      {
+        "code": "2345",
+        "name": "智邦",
+        "industry": "網路設備",
+        "price": "1,890",
+        "change": "▲15 (+0.8%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "3.55",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "59.42"
+      },
+      {
+        "code": "3008",
+        "name": "大立光",
+        "industry": "光學鏡片與鏡頭",
+        "price": "5,965",
+        "change": "▼30 (-0.5%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "2.76",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "-16.23"
+      },
+      {
+        "code": "6285",
+        "name": "啟碁",
+        "industry": "無線通訊設備",
+        "price": "222.5",
+        "change": "▲0.5 (+0.23%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-7.15",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "81.21"
+      },
+      {
+        "code": "2324",
+        "name": "仁寶",
+        "industry": "電子設備",
+        "price": "38",
+        "change": "▲0.1 (+0.26%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-16.87",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "14.5"
+      },
+      {
+        "code": "2313",
+        "name": "華通",
+        "industry": "硬板",
+        "price": "221",
+        "change": "0 (0%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "0.82",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "6.87"
+      },
+      {
+        "code": "2383",
+        "name": "台光電",
+        "industry": "銅箔基板",
+        "price": "5,325",
+        "change": "▼20 (-0.37%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "4.89",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "129.85"
+      },
+      {
+        "code": "2308",
+        "name": "台達電",
+        "industry": "電源供應器",
+        "price": "1,655",
+        "change": "▲35 (+2.16%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-3.71",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "34.95"
+      },
+      {
+        "code": "2330",
+        "name": "台積電",
+        "industry": "晶圓代工",
+        "price": "2,380",
+        "change": "0 (0%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "10.1",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "53.32"
+      },
+      {
+        "code": "6515",
+        "name": "穎崴",
+        "industry": "IC封裝測試設備",
+        "price": "6,650",
+        "change": "▲50 (+0.76%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "6.58",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "233.37"
+      },
+      {
+        "code": "2382",
+        "name": "廣達",
+        "industry": "伺服器組裝代工",
+        "price": "332.5",
+        "change": "0 (0%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "15.75",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "177.45"
+      },
+      {
+        "code": "3665",
+        "name": "貿聯-KY",
+        "industry": "連接線材",
+        "price": "1,975",
+        "change": "▲20 (+1.02%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-7.67",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "53.99"
+      },
+      {
+        "code": "3189",
+        "name": "景碩",
+        "industry": "IC基板",
+        "price": "799",
+        "change": "▲1 (+0.13%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "5.73",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "40.58"
+      },
+      {
+        "code": "6415",
+        "name": "矽力*-KY",
+        "industry": "IC設計",
+        "price": "407",
+        "change": "▼7 (-1.69%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "2.54",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "52.54"
+      },
+      {
+        "code": "6239",
+        "name": "力成",
+        "industry": "IC封裝測試",
+        "price": "272.5",
+        "change": "▲1 (+0.37%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "3.48",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "24.46"
+      },
+      {
+        "code": "2449",
+        "name": "京元電子",
+        "industry": "IC測試",
+        "price": "259",
+        "change": "▼2.5 (-0.96%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "2.24",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "31.58"
+      },
+      {
+        "code": "6213",
+        "name": "聯茂",
+        "industry": "銅箔基板",
+        "price": "518",
+        "change": "▲3 (+0.58%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "6.21",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "97.93"
+      },
+      {
+        "code": "2379",
+        "name": "瑞昱",
+        "industry": "IC設計",
+        "price": "708",
+        "change": "▼5 (-0.7%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-3.38",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "28.08"
+      },
+      {
+        "code": "2360",
+        "name": "致茂",
+        "industry": "半導體設備",
+        "price": "2,125",
+        "change": "▼15 (-0.7%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "3.65",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "156.3"
+      },
+      {
+        "code": "2327",
+        "name": "國巨*",
+        "industry": "MLCC",
+        "price": "550",
+        "change": "▲5 (+0.92%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "1.25",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "51.8"
+      },
+      {
+        "code": "5274",
+        "name": "信驊",
+        "industry": "IC設計",
+        "price": "17,980",
+        "change": "0 (0%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "6.69",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "118.42"
+      },
+      {
+        "code": "4958",
+        "name": "臻鼎-KY",
+        "industry": "軟板",
+        "price": "480",
+        "change": "▼9.5 (-1.94%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "17.42",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "41.05"
+      },
+      {
+        "code": "3711",
+        "name": "日月光投控",
+        "industry": "IC封裝測試",
+        "price": "599",
+        "change": "▼13 (-2.12%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "11.47",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "45.66"
+      },
+      {
+        "code": "6274",
+        "name": "台燿",
+        "industry": "銅箔基板",
+        "price": "1,435",
+        "change": "▲25 (+1.77%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "0.11",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "132.48"
+      },
+      {
+        "code": "2454",
+        "name": "聯發科",
+        "industry": "IC設計",
+        "price": "4,535",
+        "change": "▼25 (-0.55%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "32.41",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "44.08"
+      },
+      {
+        "code": "6223",
+        "name": "旺矽",
+        "industry": "IC封裝測試設備",
+        "price": "5,635",
+        "change": "▲40 (+0.71%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "13.45",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "69.87"
+      },
+      {
+        "code": "3037",
+        "name": "欣興",
+        "industry": "IC基板",
+        "price": "969",
+        "change": "▼1 (-0.1%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "9.18",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "56.26"
+      },
+      {
+        "code": "3034",
+        "name": "聯詠",
+        "industry": "驅動IC",
+        "price": "540",
+        "change": "▼16 (-2.88%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "0.3",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "26.33"
+      },
+      {
+        "code": "2455",
+        "name": "全新",
+        "industry": "砷化鎵代工",
+        "price": "530",
+        "change": "▼5 (-0.93%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "11.56",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "71.16"
+      },
+      {
+        "code": "2303",
+        "name": "聯電",
+        "industry": "晶圓代工",
+        "price": "139.5",
+        "change": "▼3 (-2.11%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "5.04",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "30.71"
+      }
+    ],
+    "rising": [
+      {
+        "code": "6021",
+        "name": "美好證",
+        "industry": "證券",
+        "price": "44.75",
+        "change": "0 (0%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "95.6",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "-35.72"
+      },
+      {
+        "code": "2884",
+        "name": "玉山金",
+        "industry": "金控",
+        "price": "46",
+        "change": "▼0.35 (-0.76%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "12.3",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "19.29"
+      },
+      {
+        "code": "2305",
+        "name": "全友",
+        "industry": "掃描器",
+        "price": "45.3",
+        "change": "▲0.15 (+0.33%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "1.49",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "239.99"
+      },
+      {
+        "code": "2880",
+        "name": "華南金",
+        "industry": "金控",
+        "price": "46.75",
+        "change": "▲0.45 (+0.97%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-8.33",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "11.95"
+      },
+      {
+        "code": "2892",
+        "name": "第一金",
+        "industry": "金控",
+        "price": "39.95",
+        "change": "▲0.1 (+0.25%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-2.36",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "13.9"
+      },
+      {
+        "code": "6538",
+        "name": "倉和",
+        "industry": "太陽能",
+        "price": "370",
+        "change": "▼2.5 (-0.67%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "6.81",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "55.67"
+      },
+      {
+        "code": "2801",
+        "name": "彰銀",
+        "industry": "銀行",
+        "price": "28.25",
+        "change": "▼0.3 (-1.05%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-3.79",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "21.13"
+      },
+      {
+        "code": "3624",
+        "name": "光頡",
+        "industry": "電阻",
+        "price": "125.5",
+        "change": "▲1.5 (+1.21%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "4.41",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "65.76"
+      },
+      {
+        "code": "2883",
+        "name": "凱基金",
+        "industry": "金控",
+        "price": "38.25",
+        "change": "▼0.55 (-1.42%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "—",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "—"
+      },
+      {
+        "code": "2887",
+        "name": "台新新光金",
+        "industry": "金控",
+        "price": "43.45",
+        "change": "▼0.1 (-0.23%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "1.78",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "-15.63"
+      },
+      {
+        "code": "2886",
+        "name": "兆豐金",
+        "industry": "金控",
+        "price": "52.1",
+        "change": "▼0.4 (-0.76%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "6.77",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "4.11"
+      },
+      {
+        "code": "2890",
+        "name": "永豐金",
+        "industry": "金控",
+        "price": "44.65",
+        "change": "▼0.15 (-0.33%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "0.98",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "49.48"
+      },
+      {
+        "code": "6416",
+        "name": "瑞祺電通",
+        "industry": "工業電腦",
+        "price": "121.5",
+        "change": "▲2.5 (+2.1%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "21.45",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "109.34"
+      },
+      {
+        "code": "2885",
+        "name": "元大金",
+        "industry": "金控",
+        "price": "69.7",
+        "change": "▼1.1 (-1.55%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "11.53",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "57.94"
+      },
+      {
+        "code": "8227",
+        "name": "巨有科技",
+        "industry": "矽智財",
+        "price": "246.5",
+        "change": "▲5.5 (+2.28%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "14.2",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "42.25"
+      },
+      {
+        "code": "5464",
+        "name": "霖宏",
+        "industry": "硬板",
+        "price": "88",
+        "change": "▼1.1 (-1.23%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-6.44",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "19.56"
+      },
+      {
+        "code": "3055",
+        "name": "蔚華科",
+        "industry": "半導體設備",
+        "price": "155.5",
+        "change": "▼4 (-2.51%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "14.06",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "108.24"
+      },
+      {
+        "code": "2855",
+        "name": "統一證",
+        "industry": "證券",
+        "price": "52",
+        "change": "▼0.9 (-1.7%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "122.48",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "109.88"
+      },
+      {
+        "code": "3441",
+        "name": "聯一光",
+        "industry": "光學鏡片與鏡頭",
+        "price": "161",
+        "change": "▲0.5 (+0.31%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-14.52",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "0.86"
+      },
+      {
+        "code": "6861",
+        "name": "睿生光電",
+        "industry": "醫療器材",
+        "price": "230",
+        "change": "▼5.5 (-2.34%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-2.51",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "52.47"
+      },
+      {
+        "code": "4198",
+        "name": "欣大健康",
+        "industry": "醫療器材",
+        "price": "—",
+        "change": "—",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-31.16",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "-3.17"
+      },
+      {
+        "code": "2303",
+        "name": "聯電",
+        "industry": "晶圓代工",
+        "price": "139",
+        "change": "▼3.5 (-2.46%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "5.04",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "30.71"
+      },
+      {
+        "code": "6292",
+        "name": "迅德",
+        "industry": "變壓器",
+        "price": "65.1",
+        "change": "▼0.9 (-1.36%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-6.38",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "30.69"
+      },
+      {
+        "code": "3702",
+        "name": "大聯大",
+        "industry": "IC零組件通路商",
+        "price": "107",
+        "change": "0 (0%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-2.64",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "80.46"
+      },
+      {
+        "code": "6173",
+        "name": "信昌電",
+        "industry": "MLCC",
+        "price": "301.5",
+        "change": "▲8 (+2.73%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "2.69",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "54.27"
+      },
+      {
+        "code": "6426",
+        "name": "統新",
+        "industry": "光通訊設備",
+        "price": "304.5",
+        "change": "▼7.5 (-2.4%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-6.33",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "78.21"
+      },
+      {
+        "code": "4556",
+        "name": "旭然",
+        "industry": "水資源處理",
+        "price": "91.8",
+        "change": "▲1.4 (+1.55%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-24.21",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "18.73"
+      },
+      {
+        "code": "6214",
+        "name": "精誠",
+        "industry": "軟體其他",
+        "price": "187.5",
+        "change": "0 (0%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "24.36",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "61.91"
+      },
+      {
+        "code": "3229",
+        "name": "晟鈦",
+        "industry": "硬板",
+        "price": "65.5",
+        "change": "▼1.4 (-2.09%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "-2.34",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "80.41"
+      },
+      {
+        "code": "3044",
+        "name": "健鼎",
+        "industry": "硬板",
+        "price": "499",
+        "change": "▼11 (-2.16%)",
+        "mark": "",
+        "metric_label": "月營收月增率",
+        "metric_value": "4.1",
+        "metric2_label": "月營收年增率",
+        "metric2_value": "65.48"
+      }
+    ],
+    "overlap": [
+      "2303"
+    ],
+    "overlap_names": {
+      "2303": "聯電"
+    },
+    "thesis": "價值區31檔、升溫區30檔，聯電2303雙區重疊。價值區12漲15跌4平，台達電、智邦與貿聯-KY呈現局部承接；升溫區9漲17跌3平、1檔無報價，還不能說多數標的已轉強。"
+  },
+  "ark_source_validation": {
+    "status": "pass",
+    "date": "2026-09-15",
+    "scope": "Ark四區正規化審核；未修改source或repo、未發布",
+    "source": {
+      "input": "/Users/kaide/Pictures/方舟運算截圖/ark_stocks_latest.json",
+      "resolved_target": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-09-15_09-05-03/ark_stocks.json",
+      "run_dir": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-09-15_09-05-03",
+      "source_folder_matches_run_dir": true,
+      "success_file": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-09-15_09-05-03/success.json",
+      "validation_file": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-09-15_09-05-03/ark_validation.json",
+      "ax_file": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-09-15_09-05-03/ark_stocks_ax.json",
+      "run_id": "2026-09-15_09-05-03",
+      "started_at": "2026-09-15T09:05:03+08:00",
+      "finished_at": "2026-09-15T09:08:00+08:00",
+      "generated_at_utc": "2026-09-15T01:08:00.000534+00:00"
+    },
+    "success_gate": {
+      "ok": true,
+      "stage": "complete",
+      "status": "success",
+      "ax_match": true,
+      "reported_counts": {
+        "ETF價值區": 10,
+        "ETF升溫區": 7,
+        "產業價值區": 31,
+        "產業升溫區": 30
+      },
+      "reported_total": 78,
+      "reported_water": "78.8%"
+    },
+    "checksum": {
+      "status": "pass",
+      "checks": {
+        "ark_stocks.json": {
+          "actual": "0458c545f77ec16bac9b9e978cf2c02a97a0dbc8ae72a10fbfec8c4e90b0ca83",
+          "expected": "0458c545f77ec16bac9b9e978cf2c02a97a0dbc8ae72a10fbfec8c4e90b0ca83",
+          "match": true
+        },
+        "ark_stocks_ax.json": {
+          "actual": "691145d6fb03b9a4f436a41c5acadaf8512918e677278d861c29c41baa0642bc",
+          "expected": "691145d6fb03b9a4f436a41c5acadaf8512918e677278d861c29c41baa0642bc",
+          "match": true
+        },
+        "ark_validation.json": {
+          "actual": "ee873e8885abd2ddf020abac12be10e18ea07d0924b23c0db1ea105cc8bed651",
+          "expected": "ee873e8885abd2ddf020abac12be10e18ea07d0924b23c0db1ea105cc8bed651",
+          "match": true
+        },
+        "ark_ocr.json": {
+          "actual": "351459c3946047966827a40a516e577a9829e2ca27d9945b10f10c4c06a6bb74",
+          "expected": "351459c3946047966827a40a516e577a9829e2ca27d9945b10f10c4c06a6bb74",
+          "match": true
+        }
+      },
+      "ark_stocks_latest.json": {
+        "actual": "0458c545f77ec16bac9b9e978cf2c02a97a0dbc8ae72a10fbfec8c4e90b0ca83",
+        "expected": "0458c545f77ec16bac9b9e978cf2c02a97a0dbc8ae72a10fbfec8c4e90b0ca83",
+        "match": true
+      },
+      "latest_equals_run_ark_stocks": true
+    },
+    "validation": {
+      "status": "pass",
+      "ark_validation_ok": true,
+      "sections": {
+        "ETF價值區": {
+          "ok": true,
+          "ocrCount": 10,
+          "axCount": 10,
+          "missingInAx": [],
+          "missingInOcr": [],
+          "nameDifferences": []
+        },
+        "ETF升溫區": {
+          "ok": true,
+          "ocrCount": 7,
+          "axCount": 7,
+          "missingInAx": [],
+          "missingInOcr": [],
+          "nameDifferences": []
+        },
+        "產業價值區": {
+          "ok": true,
+          "ocrCount": 31,
+          "axCount": 31,
+          "missingInAx": [],
+          "missingInOcr": [],
+          "nameDifferences": []
+        },
+        "產業升溫區": {
+          "ok": true,
+          "ocrCount": 30,
+          "axCount": 30,
+          "missingInAx": [],
+          "missingInOcr": [],
+          "nameDifferences": []
+        }
+      },
+      "counts": {
+        "ETF價值區": 10,
+        "ETF升溫區": 7,
+        "產業價值區": 31,
+        "產業升溫區": 30
+      },
+      "total_cards": 78,
+      "code_order_sets_exact": {
+        "ETF價值區": true,
+        "ETF升溫區": true,
+        "產業價值區": true,
+        "產業升溫區": true
+      },
+      "rank_contiguous": {
+        "ETF價值區": true,
+        "ETF升溫區": true,
+        "產業價值區": true,
+        "產業升溫區": true
+      }
+    },
+    "literal_code_validation": {
+      "status": "pass",
+      "rules": {
+        "ETF": "^[0-9]{4,6}[A-Z]?$",
+        "stocks": "^[0-9]{4}$"
+      },
+      "checked_count": 78,
+      "invalid": [],
+      "literal_preserved_against_source": true
+    },
+    "source_priority": {
+      "section_code_order_price": "ark_stocks_latest.json；僅修正截圖明證的 null/欄位錯置與一筆OCR漏欄",
+      "name_industry": "ark_stocks_ax.json（validation code/name sets通過）",
+      "stock_metrics": "ark_stocks_ax.json accessibility columns 3–4（截圖卡頭確認為月營收月增率／年增率；保留完整精度）",
+      "change": "主JSON raw change + 主JSON source price與百分比反算；AX不整批覆寫",
+      "etf_nav_premium": "ark_stocks_ax.json accessibility columns 3–4，且與截圖右側欄位對位",
+      "name_differences_applied": [],
+      "industries_filled_from_ax": 61,
+      "ax_price_differences_rejected": [
+        {
+          "section": "產業價值區",
+          "code": "2324",
+          "source_file": "06_產業價值區_1.png",
+          "main_price_used": "38",
+          "ax_price_rejected": "37.95",
+          "main_change_used": "▲0.1(0.26%)",
+          "ax_change_not_bulk_used": "▲0.05(0.13%)"
+        },
+        {
+          "section": "產業價值區",
+          "code": "3189",
+          "source_file": "08_產業價值區_3.png",
+          "main_price_used": "799",
+          "ax_price_rejected": "800",
+          "main_change_used": "▲1(0.13%)",
+          "ax_change_not_bulk_used": "▲2(0.25%)"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2305",
+          "source_file": "12_產業升溫區_1.png",
+          "main_price_used": "45.3",
+          "ax_price_rejected": "45.35",
+          "main_change_used": "▲0.15(0.33%)",
+          "ax_change_not_bulk_used": "▲0.2(0.44%)"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6416",
+          "source_file": "14_產業升溫區_3.png",
+          "main_price_used": "121.5",
+          "ax_price_rejected": "121",
+          "main_change_used": "▲2.5(2.1%)",
+          "ax_change_not_bulk_used": "▲2(1.68%)"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2303",
+          "source_file": "16_產業升溫區_5.png",
+          "main_price_used": "139",
+          "ax_price_rejected": "139.5",
+          "main_change_used": "73.5(-2.46%)",
+          "ax_change_not_bulk_used": "▼3(-2.11%)"
+        }
+      ]
+    },
+    "trust_corrections": {
+      "null_price_field_traps": [
+        {
+          "section": "ETF價值區",
+          "code": "0057",
+          "source_file": "02_ETF價值區_1.png",
+          "main_json_price_field": "317.54",
+          "ax_source_price": null,
+          "misparsed_as": "ETF NAV 317.54",
+          "action": "price/market_value 設為—；不挪用右側欄位"
+        },
+        {
+          "section": "ETF價值區",
+          "code": "006203",
+          "source_file": "03_ETF價值區_2.png",
+          "main_json_price_field": "193.45",
+          "ax_source_price": null,
+          "misparsed_as": "ETF NAV 193.45",
+          "action": "price/market_value 設為—；不挪用右側欄位"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "4198",
+          "source_file": "15_產業升溫區_4.png",
+          "main_json_price_field": "-31.16",
+          "ax_source_price": null,
+          "misparsed_as": "月營收月增率 -31.16",
+          "action": "price/market_value 設為—；不挪用右側欄位"
+        }
+      ],
+      "screenshot_source_repairs": [
+        {
+          "section": "產業價值區",
+          "code": "6213",
+          "source_file": "09_產業價值區_4.png",
+          "main_json_price_field": null,
+          "main_json_change_field": null,
+          "screenshot_price_used": "518",
+          "screenshot_change_used": "▲3(0.58%)",
+          "ax_agrees": true
+        }
+      ],
+      "ocr_arrow_repairs": [
+        {
+          "section": "ETF價值區",
+          "code": "00631L",
+          "raw": "70.2(-0.56%)",
+          "normalized": "▼0.2 (-0.56%)",
+          "pct_residual": 0.004972
+        },
+        {
+          "section": "ETF價值區",
+          "code": "006208",
+          "raw": "71.1(-0.45%)",
+          "normalized": "▼1.1 (-0.45%)",
+          "pct_residual": 0.000378
+        },
+        {
+          "section": "ETF價值區",
+          "code": "0050",
+          "raw": "70.55(-0.51%)",
+          "normalized": "▼0.55 (-0.51%)",
+          "pct_residual": 0.0045
+        },
+        {
+          "section": "ETF價值區",
+          "code": "00960",
+          "raw": "40.26(1.18%)",
+          "normalized": "▲0.26 (+1.18%)",
+          "pct_residual": 0.004593
+        },
+        {
+          "section": "ETF升溫區",
+          "code": "00715L",
+          "raw": "70.25(-0.35%)",
+          "normalized": "▼0.25 (-0.35%)",
+          "pct_residual": 0.00461
+        },
+        {
+          "section": "ETF升溫區",
+          "code": "00915",
+          "raw": "70.13(-0.39%)",
+          "normalized": "▼0.13 (-0.39%)",
+          "pct_residual": 0.002275
+        },
+        {
+          "section": "ETF升溫區",
+          "code": "0055",
+          "raw": "70.2(-0.4%)",
+          "normalized": "▼0.2 (-0.4%)",
+          "pct_residual": 0.002386
+        },
+        {
+          "section": "ETF升溫區",
+          "code": "00938",
+          "raw": "7O.11(-0.41%)",
+          "normalized": "▼0.11 (-0.41%)",
+          "pct_residual": 0.000142
+        },
+        {
+          "section": "產業價值區",
+          "code": "1785",
+          "raw": "0.7(-0.74%)",
+          "normalized": "▼0.7 (-0.74%)",
+          "pct_residual": 0.003933
+        },
+        {
+          "section": "產業價值區",
+          "code": "2383",
+          "raw": "720(-0.37%)",
+          "normalized": "▼20 (-0.37%)",
+          "pct_residual": 0.004181
+        },
+        {
+          "section": "產業價值區",
+          "code": "2379",
+          "raw": "75(-0.7%)",
+          "normalized": "▼5 (-0.7%)",
+          "pct_residual": 0.001262
+        },
+        {
+          "section": "產業價值區",
+          "code": "2360",
+          "raw": "15(-0.7%)",
+          "normalized": "▼15 (-0.7%)",
+          "pct_residual": 0.000935
+        },
+        {
+          "section": "產業價值區",
+          "code": "2454",
+          "raw": "725(-0.55%)",
+          "normalized": "▼25 (-0.55%)",
+          "pct_residual": 0.001754
+        },
+        {
+          "section": "產業價值區",
+          "code": "2455",
+          "raw": "75(-0.93%)",
+          "normalized": "▼5 (-0.93%)",
+          "pct_residual": 0.004579
+        },
+        {
+          "section": "產業價值區",
+          "code": "2303",
+          "raw": "73(-2.11%)",
+          "normalized": "▼3 (-2.11%)",
+          "pct_residual": 0.004737
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2884",
+          "raw": "70.35(-0.76%)",
+          "normalized": "▼0.35 (-0.76%)",
+          "pct_residual": 0.004876
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2880",
+          "raw": "20.45(0.97%)",
+          "normalized": "▲0.45 (+0.97%)",
+          "pct_residual": 0.001922
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6538",
+          "raw": "2.5(-0.67%)",
+          "normalized": "▼2.5 (-0.67%)",
+          "pct_residual": 0.001141
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2883",
+          "raw": "70.55(-1.42%)",
+          "normalized": "▼0.55 (-1.42%)",
+          "pct_residual": 0.002474
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2887",
+          "raw": "70.1(-0.23%)",
+          "normalized": "▼0.1 (-0.23%)",
+          "pct_residual": 0.000379
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2886",
+          "raw": "70.4(-0.76%)",
+          "normalized": "▼0.4 (-0.76%)",
+          "pct_residual": 0.001905
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2890",
+          "raw": "70.15(-0.33%)",
+          "normalized": "▼0.15 (-0.33%)",
+          "pct_residual": 0.004821
+        },
+        {
+          "section": "產業升溫區",
+          "code": "5464",
+          "raw": "71.1(-1.23%)",
+          "normalized": "▼1.1 (-1.23%)",
+          "pct_residual": 0.004568
+        },
+        {
+          "section": "產業升溫區",
+          "code": "3055",
+          "raw": "4(-2.51%)",
+          "normalized": "▼4 (-2.51%)",
+          "pct_residual": 0.002163
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2855",
+          "raw": "70.9(-1.7%)",
+          "normalized": "▼0.9 (-1.7%)",
+          "pct_residual": 0.001323
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6861",
+          "raw": "5.5(-2.34%)",
+          "normalized": "▼5.5 (-2.34%)",
+          "pct_residual": 0.004544
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2303",
+          "raw": "73.5(-2.46%)",
+          "normalized": "▼3.5 (-2.46%)",
+          "pct_residual": 0.00386
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6292",
+          "raw": "70.9(-1.36%)",
+          "normalized": "▼0.9 (-1.36%)",
+          "pct_residual": 0.003636
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6426",
+          "raw": "77.5(-2.4%)",
+          "normalized": "▼7.5 (-2.4%)",
+          "pct_residual": 0.003846
+        },
+        {
+          "section": "產業升溫區",
+          "code": "3229",
+          "raw": "1.4(-2.09%)",
+          "normalized": "▼1.4 (-2.09%)",
+          "pct_residual": 0.002676
+        },
+        {
+          "section": "產業升溫區",
+          "code": "3044",
+          "raw": "11(-2.16%)",
+          "normalized": "▼11 (-2.16%)",
+          "pct_residual": 0.003137
+        }
+      ],
+      "canonical_name_checks": [
+        {
+          "code": "2305",
+          "source_name": "全友",
+          "ax_name": "全友",
+          "repo_map_evidence": "/Users/kaide/Documents/Morning-Brief/scripts/generate_technical_data.py:136",
+          "normalized_name": "全友",
+          "status": "confirmed"
+        }
+      ]
+    },
+    "change_normalization": {
+      "status": "pass",
+      "formula": "previous=current/(1+pct/100)；abs_change=abs(current*pct/(100+pct))",
+      "formula_checked_count": 75,
+      "missing_source_price_count": 3,
+      "raw_to_output_changed_count": 78,
+      "max_pct_residual": 0.004972,
+      "checks": [
+        {
+          "section": "ETF價值區",
+          "code": "0053",
+          "source_file": "02_ETF價值區_1.png",
+          "rank": 1,
+          "price": "237.55",
+          "raw": "▼1.4(-0.59%)",
+          "normalized": "▼1.4 (-0.59%)",
+          "status": "pass",
+          "reported_pct": -0.59,
+          "expected_abs_change": 1.409863,
+          "selected_abs_change": 1.4,
+          "implied_pct": -0.585897,
+          "pct_residual": 0.004103,
+          "candidate_tokens": [
+            "1.4"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "ETF價值區",
+          "code": "00631L",
+          "source_file": "02_ETF價值區_1.png",
+          "rank": 2,
+          "price": "35.2",
+          "raw": "70.2(-0.56%)",
+          "normalized": "▼0.2 (-0.56%)",
+          "status": "pass",
+          "reported_pct": -0.56,
+          "expected_abs_change": 0.19823,
+          "selected_abs_change": 0.2,
+          "implied_pct": -0.564972,
+          "pct_residual": 0.004972,
+          "candidate_tokens": [
+            "70.2",
+            "0.2"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "ETF價值區",
+          "code": "0052",
+          "source_file": "02_ETF價值區_1.png",
+          "rank": 3,
+          "price": "61.8",
+          "raw": "▼0.1(-0.16%)",
+          "normalized": "▼0.1 (-0.16%)",
+          "status": "pass",
+          "reported_pct": -0.16,
+          "expected_abs_change": 0.099038,
+          "selected_abs_change": 0.1,
+          "implied_pct": -0.161551,
+          "pct_residual": 0.001551,
+          "candidate_tokens": [
+            "0.1"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "ETF價值區",
+          "code": "0057",
+          "source_file": "02_ETF價值區_1.png",
+          "rank": 4,
+          "price": "—",
+          "raw": "(-%)",
+          "normalized": "—",
+          "status": "missing_source_price",
+          "formula_checked": false
+        },
+        {
+          "section": "ETF價值區",
+          "code": "006208",
+          "source_file": "02_ETF價值區_1.png",
+          "rank": 5,
+          "price": "243.55",
+          "raw": "71.1(-0.45%)",
+          "normalized": "▼1.1 (-0.45%)",
+          "status": "pass",
+          "reported_pct": -0.45,
+          "expected_abs_change": 1.100929,
+          "selected_abs_change": 1.1,
+          "implied_pct": -0.449622,
+          "pct_residual": 0.000378,
+          "candidate_tokens": [
+            "71.1",
+            "1.1"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "ETF價值區",
+          "code": "0050",
+          "source_file": "02_ETF價值區_1.png",
+          "rank": 6,
+          "price": "106.35",
+          "raw": "70.55(-0.51%)",
+          "normalized": "▼0.55 (-0.51%)",
+          "status": "pass",
+          "reported_pct": -0.51,
+          "expected_abs_change": 0.545165,
+          "selected_abs_change": 0.55,
+          "implied_pct": -0.5145,
+          "pct_residual": 0.0045,
+          "candidate_tokens": [
+            "70.55",
+            "0.55"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "ETF價值區",
+          "code": "006203",
+          "source_file": "03_ETF價值區_2.png",
+          "rank": 7,
+          "price": "—",
+          "raw": "(-%)",
+          "normalized": "—",
+          "status": "missing_source_price",
+          "formula_checked": false
+        },
+        {
+          "section": "ETF價值區",
+          "code": "0056",
+          "source_file": "03_ETF價值區_2.png",
+          "rank": 8,
+          "price": "55.1",
+          "raw": "▼0.3(-0.54%)",
+          "normalized": "▼0.3 (-0.54%)",
+          "status": "pass",
+          "reported_pct": -0.54,
+          "expected_abs_change": 0.299155,
+          "selected_abs_change": 0.3,
+          "implied_pct": -0.541516,
+          "pct_residual": 0.001516,
+          "candidate_tokens": [
+            "0.3"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "ETF價值區",
+          "code": "0055",
+          "source_file": "03_ETF價值區_2.png",
+          "rank": 9,
+          "price": "50.1",
+          "raw": "▼0.2(-0.4%)",
+          "normalized": "▼0.2 (-0.4%)",
+          "status": "pass",
+          "reported_pct": -0.4,
+          "expected_abs_change": 0.201205,
+          "selected_abs_change": 0.2,
+          "implied_pct": -0.397614,
+          "pct_residual": 0.002386,
+          "candidate_tokens": [
+            "0.2"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "ETF價值區",
+          "code": "00960",
+          "source_file": "03_ETF價值區_2.png",
+          "rank": 10,
+          "price": "22.38",
+          "raw": "40.26(1.18%)",
+          "normalized": "▲0.26 (+1.18%)",
+          "status": "pass",
+          "reported_pct": 1.18,
+          "expected_abs_change": 0.261004,
+          "selected_abs_change": 0.26,
+          "implied_pct": 1.175407,
+          "pct_residual": 0.004593,
+          "candidate_tokens": [
+            "40.26",
+            "0.26"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "ETF升溫區",
+          "code": "00701",
+          "source_file": "04_ETF升溫區_1.png",
+          "rank": 1,
+          "price": "41.34",
+          "raw": "▼0.2(-0.48%)",
+          "normalized": "▼0.2 (-0.48%)",
+          "status": "pass",
+          "reported_pct": -0.48,
+          "expected_abs_change": 0.199389,
+          "selected_abs_change": 0.2,
+          "implied_pct": -0.481464,
+          "pct_residual": 0.001464,
+          "candidate_tokens": [
+            "0.2"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "ETF升溫區",
+          "code": "00642U",
+          "source_file": "04_ETF升溫區_1.png",
+          "rank": 2,
+          "price": "33.62",
+          "raw": "0(0%)",
+          "normalized": "0 (0%)",
+          "status": "pass",
+          "reported_pct": 0.0,
+          "selected_abs_change": 0.0,
+          "expected_abs_change": 0.0,
+          "implied_pct": 0.0,
+          "pct_residual": 0.0,
+          "candidate_tokens": [
+            "0"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "ETF升溫區",
+          "code": "00960",
+          "source_file": "04_ETF升溫區_1.png",
+          "rank": 3,
+          "price": "22.38",
+          "raw": "▲0.26(1.18%)",
+          "normalized": "▲0.26 (+1.18%)",
+          "status": "pass",
+          "reported_pct": 1.18,
+          "expected_abs_change": 0.261004,
+          "selected_abs_change": 0.26,
+          "implied_pct": 1.175407,
+          "pct_residual": 0.004593,
+          "candidate_tokens": [
+            "0.26"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "ETF升溫區",
+          "code": "00715L",
+          "source_file": "04_ETF升溫區_1.png",
+          "rank": 4,
+          "price": "70.25",
+          "raw": "70.25(-0.35%)",
+          "normalized": "▼0.25 (-0.35%)",
+          "status": "pass",
+          "reported_pct": -0.35,
+          "expected_abs_change": 0.246739,
+          "selected_abs_change": 0.25,
+          "implied_pct": -0.35461,
+          "pct_residual": 0.00461,
+          "candidate_tokens": [
+            "70.25",
+            "0.25"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "ETF升溫區",
+          "code": "00915",
+          "source_file": "04_ETF升溫區_1.png",
+          "rank": 5,
+          "price": "33.01",
+          "raw": "70.13(-0.39%)",
+          "normalized": "▼0.13 (-0.39%)",
+          "status": "pass",
+          "reported_pct": -0.39,
+          "expected_abs_change": 0.129243,
+          "selected_abs_change": 0.13,
+          "implied_pct": -0.392275,
+          "pct_residual": 0.002275,
+          "candidate_tokens": [
+            "70.13",
+            "0.13"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "ETF升溫區",
+          "code": "0055",
+          "source_file": "04_ETF升溫區_1.png",
+          "rank": 6,
+          "price": "50.1",
+          "raw": "70.2(-0.4%)",
+          "normalized": "▼0.2 (-0.4%)",
+          "status": "pass",
+          "reported_pct": -0.4,
+          "expected_abs_change": 0.201205,
+          "selected_abs_change": 0.2,
+          "implied_pct": -0.397614,
+          "pct_residual": 0.002386,
+          "candidate_tokens": [
+            "70.2",
+            "0.2"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "ETF升溫區",
+          "code": "00938",
+          "source_file": "05_ETF升溫區_2.png",
+          "rank": 7,
+          "price": "26.71",
+          "raw": "7O.11(-0.41%)",
+          "normalized": "▼0.11 (-0.41%)",
+          "status": "pass",
+          "reported_pct": -0.41,
+          "expected_abs_change": 0.109962,
+          "selected_abs_change": 0.11,
+          "implied_pct": -0.410142,
+          "pct_residual": 0.000142,
+          "candidate_tokens": [
+            "70.11",
+            "0.11"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "2059",
+          "source_file": "06_產業價值區_1.png",
+          "rank": 1,
+          "price": "11,880",
+          "raw": "▼110(-0.92%)",
+          "normalized": "▼110 (-0.92%)",
+          "status": "pass",
+          "reported_pct": -0.92,
+          "expected_abs_change": 110.31086,
+          "selected_abs_change": 110.0,
+          "implied_pct": -0.917431,
+          "pct_residual": 0.002569,
+          "candidate_tokens": [
+            "110"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "1785",
+          "source_file": "06_產業價值區_1.png",
+          "rank": 2,
+          "price": "94.4",
+          "raw": "0.7(-0.74%)",
+          "normalized": "▼0.7 (-0.74%)",
+          "status": "pass",
+          "reported_pct": -0.74,
+          "expected_abs_change": 0.703768,
+          "selected_abs_change": 0.7,
+          "implied_pct": -0.736067,
+          "pct_residual": 0.003933,
+          "candidate_tokens": [
+            "0.7"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "2345",
+          "source_file": "06_產業價值區_1.png",
+          "rank": 3,
+          "price": "1,890",
+          "raw": "▲15(0.8%)",
+          "normalized": "▲15 (+0.8%)",
+          "status": "pass",
+          "reported_pct": 0.8,
+          "expected_abs_change": 15.0,
+          "selected_abs_change": 15.0,
+          "implied_pct": 0.8,
+          "pct_residual": 0.0,
+          "candidate_tokens": [
+            "15"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "3008",
+          "source_file": "06_產業價值區_1.png",
+          "rank": 4,
+          "price": "5,965",
+          "raw": "▼30(-0.5%)",
+          "normalized": "▼30 (-0.5%)",
+          "status": "pass",
+          "reported_pct": -0.5,
+          "expected_abs_change": 29.974874,
+          "selected_abs_change": 30.0,
+          "implied_pct": -0.500417,
+          "pct_residual": 0.000417,
+          "candidate_tokens": [
+            "30"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "6285",
+          "source_file": "06_產業價值區_1.png",
+          "rank": 5,
+          "price": "222.5",
+          "raw": "▲0.5(0.23%)",
+          "normalized": "▲0.5 (+0.23%)",
+          "status": "pass",
+          "reported_pct": 0.23,
+          "expected_abs_change": 0.510576,
+          "selected_abs_change": 0.5,
+          "implied_pct": 0.225225,
+          "pct_residual": 0.004775,
+          "candidate_tokens": [
+            "0.5"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "2324",
+          "source_file": "06_產業價值區_1.png",
+          "rank": 6,
+          "price": "38",
+          "raw": "▲0.1(0.26%)",
+          "normalized": "▲0.1 (+0.26%)",
+          "status": "pass",
+          "reported_pct": 0.26,
+          "expected_abs_change": 0.098544,
+          "selected_abs_change": 0.1,
+          "implied_pct": 0.263852,
+          "pct_residual": 0.003852,
+          "candidate_tokens": [
+            "0.1"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "2313",
+          "source_file": "07_產業價值區_2.png",
+          "rank": 7,
+          "price": "221",
+          "raw": "0(0%)",
+          "normalized": "0 (0%)",
+          "status": "pass",
+          "reported_pct": 0.0,
+          "selected_abs_change": 0.0,
+          "expected_abs_change": 0.0,
+          "implied_pct": 0.0,
+          "pct_residual": 0.0,
+          "candidate_tokens": [
+            "0"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "2383",
+          "source_file": "07_產業價值區_2.png",
+          "rank": 8,
+          "price": "5,325",
+          "raw": "720(-0.37%)",
+          "normalized": "▼20 (-0.37%)",
+          "status": "pass",
+          "reported_pct": -0.37,
+          "expected_abs_change": 19.77567,
+          "selected_abs_change": 20.0,
+          "implied_pct": -0.374181,
+          "pct_residual": 0.004181,
+          "candidate_tokens": [
+            "720",
+            "20"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "2308",
+          "source_file": "07_產業價值區_2.png",
+          "rank": 9,
+          "price": "1,655",
+          "raw": "▲35(2.16%)",
+          "normalized": "▲35 (+2.16%)",
+          "status": "pass",
+          "reported_pct": 2.16,
+          "expected_abs_change": 34.992169,
+          "selected_abs_change": 35.0,
+          "implied_pct": 2.160494,
+          "pct_residual": 0.000494,
+          "candidate_tokens": [
+            "35"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "2330",
+          "source_file": "07_產業價值區_2.png",
+          "rank": 10,
+          "price": "2,380",
+          "raw": "0(0%)",
+          "normalized": "0 (0%)",
+          "status": "pass",
+          "reported_pct": 0.0,
+          "selected_abs_change": 0.0,
+          "expected_abs_change": 0.0,
+          "implied_pct": 0.0,
+          "pct_residual": 0.0,
+          "candidate_tokens": [
+            "0"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "6515",
+          "source_file": "07_產業價值區_2.png",
+          "rank": 11,
+          "price": "6,650",
+          "raw": "▲50(0.76%)",
+          "normalized": "▲50 (+0.76%)",
+          "status": "pass",
+          "reported_pct": 0.76,
+          "expected_abs_change": 50.158793,
+          "selected_abs_change": 50.0,
+          "implied_pct": 0.757576,
+          "pct_residual": 0.002424,
+          "candidate_tokens": [
+            "50"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "2382",
+          "source_file": "08_產業價值區_3.png",
+          "rank": 12,
+          "price": "332.5",
+          "raw": "0(0%)",
+          "normalized": "0 (0%)",
+          "status": "pass",
+          "reported_pct": 0.0,
+          "selected_abs_change": 0.0,
+          "expected_abs_change": 0.0,
+          "implied_pct": 0.0,
+          "pct_residual": 0.0,
+          "candidate_tokens": [
+            "0"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "3665",
+          "source_file": "08_產業價值區_3.png",
+          "rank": 13,
+          "price": "1,975",
+          "raw": "▲20(1.02%)",
+          "normalized": "▲20 (+1.02%)",
+          "status": "pass",
+          "reported_pct": 1.02,
+          "expected_abs_change": 19.941596,
+          "selected_abs_change": 20.0,
+          "implied_pct": 1.023018,
+          "pct_residual": 0.003018,
+          "candidate_tokens": [
+            "20",
+            "0"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "3189",
+          "source_file": "08_產業價值區_3.png",
+          "rank": 14,
+          "price": "799",
+          "raw": "▲1(0.13%)",
+          "normalized": "▲1 (+0.13%)",
+          "status": "pass",
+          "reported_pct": 0.13,
+          "expected_abs_change": 1.037351,
+          "selected_abs_change": 1.0,
+          "implied_pct": 0.125313,
+          "pct_residual": 0.004687,
+          "candidate_tokens": [
+            "1"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "6415",
+          "source_file": "08_產業價值區_3.png",
+          "rank": 15,
+          "price": "407",
+          "raw": "▼7(-1.69%)",
+          "normalized": "▼7 (-1.69%)",
+          "status": "pass",
+          "reported_pct": -1.69,
+          "expected_abs_change": 6.996542,
+          "selected_abs_change": 7.0,
+          "implied_pct": -1.690821,
+          "pct_residual": 0.000821,
+          "candidate_tokens": [
+            "7"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "6239",
+          "source_file": "08_產業價值區_3.png",
+          "rank": 16,
+          "price": "272.5",
+          "raw": "▲1(0.37%)",
+          "normalized": "▲1 (+0.37%)",
+          "status": "pass",
+          "reported_pct": 0.37,
+          "expected_abs_change": 1.004533,
+          "selected_abs_change": 1.0,
+          "implied_pct": 0.368324,
+          "pct_residual": 0.001676,
+          "candidate_tokens": [
+            "1"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "2449",
+          "source_file": "09_產業價值區_4.png",
+          "rank": 17,
+          "price": "259",
+          "raw": "▼2.5(-0.96%)",
+          "normalized": "▼2.5 (-0.96%)",
+          "status": "pass",
+          "reported_pct": -0.96,
+          "expected_abs_change": 2.510501,
+          "selected_abs_change": 2.5,
+          "implied_pct": -0.956023,
+          "pct_residual": 0.003977,
+          "candidate_tokens": [
+            "2.5",
+            ".5"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "6213",
+          "source_file": "09_產業價值區_4.png",
+          "rank": 18,
+          "price": "518",
+          "raw": "▲3(0.58%)",
+          "normalized": "▲3 (+0.58%)",
+          "status": "pass",
+          "reported_pct": 0.58,
+          "expected_abs_change": 2.987075,
+          "selected_abs_change": 3.0,
+          "implied_pct": 0.582524,
+          "pct_residual": 0.002524,
+          "candidate_tokens": [
+            "3"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "2379",
+          "source_file": "09_產業價值區_4.png",
+          "rank": 19,
+          "price": "708",
+          "raw": "75(-0.7%)",
+          "normalized": "▼5 (-0.7%)",
+          "status": "pass",
+          "reported_pct": -0.7,
+          "expected_abs_change": 4.990937,
+          "selected_abs_change": 5.0,
+          "implied_pct": -0.701262,
+          "pct_residual": 0.001262,
+          "candidate_tokens": [
+            "75",
+            "5"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "2360",
+          "source_file": "09_產業價值區_4.png",
+          "rank": 20,
+          "price": "2,125",
+          "raw": "15(-0.7%)",
+          "normalized": "▼15 (-0.7%)",
+          "status": "pass",
+          "reported_pct": -0.7,
+          "expected_abs_change": 14.979859,
+          "selected_abs_change": 15.0,
+          "implied_pct": -0.700935,
+          "pct_residual": 0.000935,
+          "candidate_tokens": [
+            "15"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "2327",
+          "source_file": "09_產業價值區_4.png",
+          "rank": 21,
+          "price": "550",
+          "raw": "▲5(0.92%)",
+          "normalized": "▲5 (+0.92%)",
+          "status": "pass",
+          "reported_pct": 0.92,
+          "expected_abs_change": 5.013872,
+          "selected_abs_change": 5.0,
+          "implied_pct": 0.917431,
+          "pct_residual": 0.002569,
+          "candidate_tokens": [
+            "5"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "5274",
+          "source_file": "10_產業價值區_5.png",
+          "rank": 22,
+          "price": "17,980",
+          "raw": "0(0%)",
+          "normalized": "0 (0%)",
+          "status": "pass",
+          "reported_pct": 0.0,
+          "selected_abs_change": 0.0,
+          "expected_abs_change": 0.0,
+          "implied_pct": 0.0,
+          "pct_residual": 0.0,
+          "candidate_tokens": [
+            "0"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "4958",
+          "source_file": "10_產業價值區_5.png",
+          "rank": 23,
+          "price": "480",
+          "raw": "▼9.5(-1.94%)",
+          "normalized": "▼9.5 (-1.94%)",
+          "status": "pass",
+          "reported_pct": -1.94,
+          "expected_abs_change": 9.496227,
+          "selected_abs_change": 9.5,
+          "implied_pct": -1.940756,
+          "pct_residual": 0.000756,
+          "candidate_tokens": [
+            "9.5"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "3711",
+          "source_file": "10_產業價值區_5.png",
+          "rank": 24,
+          "price": "599",
+          "raw": "▼13(-2.12%)",
+          "normalized": "▼13 (-2.12%)",
+          "status": "pass",
+          "reported_pct": -2.12,
+          "expected_abs_change": 12.973846,
+          "selected_abs_change": 13.0,
+          "implied_pct": -2.124183,
+          "pct_residual": 0.004183,
+          "candidate_tokens": [
+            "13"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "6274",
+          "source_file": "10_產業價值區_5.png",
+          "rank": 25,
+          "price": "1,435",
+          "raw": "▲25(1.77%)",
+          "normalized": "▲25 (+1.77%)",
+          "status": "pass",
+          "reported_pct": 1.77,
+          "expected_abs_change": 24.957748,
+          "selected_abs_change": 25.0,
+          "implied_pct": 1.77305,
+          "pct_residual": 0.00305,
+          "candidate_tokens": [
+            "25",
+            "5"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "2454",
+          "source_file": "10_產業價值區_5.png",
+          "rank": 26,
+          "price": "4,535",
+          "raw": "725(-0.55%)",
+          "normalized": "▼25 (-0.55%)",
+          "status": "pass",
+          "reported_pct": -0.55,
+          "expected_abs_change": 25.080442,
+          "selected_abs_change": 25.0,
+          "implied_pct": -0.548246,
+          "pct_residual": 0.001754,
+          "candidate_tokens": [
+            "725",
+            "25"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "6223",
+          "source_file": "11_產業價值區_6.png",
+          "rank": 27,
+          "price": "5,635",
+          "raw": "▲40(0.71%)",
+          "normalized": "▲40 (+0.71%)",
+          "status": "pass",
+          "reported_pct": 0.71,
+          "expected_abs_change": 39.726442,
+          "selected_abs_change": 40.0,
+          "implied_pct": 0.714924,
+          "pct_residual": 0.004924,
+          "candidate_tokens": [
+            "40",
+            "0"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "3037",
+          "source_file": "11_產業價值區_6.png",
+          "rank": 28,
+          "price": "969",
+          "raw": "▼1(-0.1%)",
+          "normalized": "▼1 (-0.1%)",
+          "status": "pass",
+          "reported_pct": -0.1,
+          "expected_abs_change": 0.96997,
+          "selected_abs_change": 1.0,
+          "implied_pct": -0.103093,
+          "pct_residual": 0.003093,
+          "candidate_tokens": [
+            "1"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "3034",
+          "source_file": "11_產業價值區_6.png",
+          "rank": 29,
+          "price": "540",
+          "raw": "▼16(-2.88%)",
+          "normalized": "▼16 (-2.88%)",
+          "status": "pass",
+          "reported_pct": -2.88,
+          "expected_abs_change": 16.01318,
+          "selected_abs_change": 16.0,
+          "implied_pct": -2.877698,
+          "pct_residual": 0.002302,
+          "candidate_tokens": [
+            "16"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "2455",
+          "source_file": "11_產業價值區_6.png",
+          "rank": 30,
+          "price": "530",
+          "raw": "75(-0.93%)",
+          "normalized": "▼5 (-0.93%)",
+          "status": "pass",
+          "reported_pct": -0.93,
+          "expected_abs_change": 4.97527,
+          "selected_abs_change": 5.0,
+          "implied_pct": -0.934579,
+          "pct_residual": 0.004579,
+          "candidate_tokens": [
+            "75",
+            "5"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業價值區",
+          "code": "2303",
+          "source_file": "11_產業價值區_6.png",
+          "rank": 31,
+          "price": "139.5",
+          "raw": "73(-2.11%)",
+          "normalized": "▼3 (-2.11%)",
+          "status": "pass",
+          "reported_pct": -2.11,
+          "expected_abs_change": 3.006895,
+          "selected_abs_change": 3.0,
+          "implied_pct": -2.105263,
+          "pct_residual": 0.004737,
+          "candidate_tokens": [
+            "73",
+            "3"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6021",
+          "source_file": "12_產業升溫區_1.png",
+          "rank": 1,
+          "price": "44.75",
+          "raw": "0(0%)",
+          "normalized": "0 (0%)",
+          "status": "pass",
+          "reported_pct": 0.0,
+          "selected_abs_change": 0.0,
+          "expected_abs_change": 0.0,
+          "implied_pct": 0.0,
+          "pct_residual": 0.0,
+          "candidate_tokens": [
+            "0"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2884",
+          "source_file": "12_產業升溫區_1.png",
+          "rank": 2,
+          "price": "46",
+          "raw": "70.35(-0.76%)",
+          "normalized": "▼0.35 (-0.76%)",
+          "status": "pass",
+          "reported_pct": -0.76,
+          "expected_abs_change": 0.352277,
+          "selected_abs_change": 0.35,
+          "implied_pct": -0.755124,
+          "pct_residual": 0.004876,
+          "candidate_tokens": [
+            "70.35",
+            "0.35"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2305",
+          "source_file": "12_產業升溫區_1.png",
+          "rank": 3,
+          "price": "45.3",
+          "raw": "▲0.15(0.33%)",
+          "normalized": "▲0.15 (+0.33%)",
+          "status": "pass",
+          "reported_pct": 0.33,
+          "expected_abs_change": 0.148998,
+          "selected_abs_change": 0.15,
+          "implied_pct": 0.332226,
+          "pct_residual": 0.002226,
+          "candidate_tokens": [
+            "0.15"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2880",
+          "source_file": "12_產業升溫區_1.png",
+          "rank": 4,
+          "price": "46.75",
+          "raw": "20.45(0.97%)",
+          "normalized": "▲0.45 (+0.97%)",
+          "status": "pass",
+          "reported_pct": 0.97,
+          "expected_abs_change": 0.449119,
+          "selected_abs_change": 0.45,
+          "implied_pct": 0.971922,
+          "pct_residual": 0.001922,
+          "candidate_tokens": [
+            "20.45",
+            "0.45"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2892",
+          "source_file": "12_產業升溫區_1.png",
+          "rank": 5,
+          "price": "39.95",
+          "raw": "▲0.1(0.25%)",
+          "normalized": "▲0.1 (+0.25%)",
+          "status": "pass",
+          "reported_pct": 0.25,
+          "expected_abs_change": 0.099626,
+          "selected_abs_change": 0.1,
+          "implied_pct": 0.250941,
+          "pct_residual": 0.000941,
+          "candidate_tokens": [
+            "0.1"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6538",
+          "source_file": "12_產業升溫區_1.png",
+          "rank": 6,
+          "price": "370",
+          "raw": "2.5(-0.67%)",
+          "normalized": "▼2.5 (-0.67%)",
+          "status": "pass",
+          "reported_pct": -0.67,
+          "expected_abs_change": 2.495721,
+          "selected_abs_change": 2.5,
+          "implied_pct": -0.671141,
+          "pct_residual": 0.001141,
+          "candidate_tokens": [
+            "2.5",
+            ".5"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2801",
+          "source_file": "13_產業升溫區_2.png",
+          "rank": 7,
+          "price": "28.25",
+          "raw": "▼0.3(-1.05%)",
+          "normalized": "▼0.3 (-1.05%)",
+          "status": "pass",
+          "reported_pct": -1.05,
+          "expected_abs_change": 0.299773,
+          "selected_abs_change": 0.3,
+          "implied_pct": -1.050788,
+          "pct_residual": 0.000788,
+          "candidate_tokens": [
+            "0.3"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "3624",
+          "source_file": "13_產業升溫區_2.png",
+          "rank": 8,
+          "price": "125.5",
+          "raw": "▲1.5(1.21%)",
+          "normalized": "▲1.5 (+1.21%)",
+          "status": "pass",
+          "reported_pct": 1.21,
+          "expected_abs_change": 1.500395,
+          "selected_abs_change": 1.5,
+          "implied_pct": 1.209677,
+          "pct_residual": 0.000323,
+          "candidate_tokens": [
+            "1.5"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2883",
+          "source_file": "13_產業升溫區_2.png",
+          "rank": 9,
+          "price": "38.25",
+          "raw": "70.55(-1.42%)",
+          "normalized": "▼0.55 (-1.42%)",
+          "status": "pass",
+          "reported_pct": -1.42,
+          "expected_abs_change": 0.550974,
+          "selected_abs_change": 0.55,
+          "implied_pct": -1.417526,
+          "pct_residual": 0.002474,
+          "candidate_tokens": [
+            "70.55",
+            "0.55"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2887",
+          "source_file": "13_產業升溫區_2.png",
+          "rank": 10,
+          "price": "43.45",
+          "raw": "70.1(-0.23%)",
+          "normalized": "▼0.1 (-0.23%)",
+          "status": "pass",
+          "reported_pct": -0.23,
+          "expected_abs_change": 0.100165,
+          "selected_abs_change": 0.1,
+          "implied_pct": -0.229621,
+          "pct_residual": 0.000379,
+          "candidate_tokens": [
+            "70.1",
+            "0.1"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2886",
+          "source_file": "13_產業升溫區_2.png",
+          "rank": 11,
+          "price": "52.1",
+          "raw": "70.4(-0.76%)",
+          "normalized": "▼0.4 (-0.76%)",
+          "status": "pass",
+          "reported_pct": -0.76,
+          "expected_abs_change": 0.398992,
+          "selected_abs_change": 0.4,
+          "implied_pct": -0.761905,
+          "pct_residual": 0.001905,
+          "candidate_tokens": [
+            "70.4",
+            "0.4"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2890",
+          "source_file": "14_產業升溫區_3.png",
+          "rank": 12,
+          "price": "44.65",
+          "raw": "70.15(-0.33%)",
+          "normalized": "▼0.15 (-0.33%)",
+          "status": "pass",
+          "reported_pct": -0.33,
+          "expected_abs_change": 0.147833,
+          "selected_abs_change": 0.15,
+          "implied_pct": -0.334821,
+          "pct_residual": 0.004821,
+          "candidate_tokens": [
+            "70.15",
+            "0.15"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6416",
+          "source_file": "14_產業升溫區_3.png",
+          "rank": 13,
+          "price": "121.5",
+          "raw": "▲2.5(2.1%)",
+          "normalized": "▲2.5 (+2.1%)",
+          "status": "pass",
+          "reported_pct": 2.1,
+          "expected_abs_change": 2.499021,
+          "selected_abs_change": 2.5,
+          "implied_pct": 2.10084,
+          "pct_residual": 0.00084,
+          "candidate_tokens": [
+            "2.5",
+            ".5"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2885",
+          "source_file": "14_產業升溫區_3.png",
+          "rank": 14,
+          "price": "69.7",
+          "raw": "▼1.1(-1.55%)",
+          "normalized": "▼1.1 (-1.55%)",
+          "status": "pass",
+          "reported_pct": -1.55,
+          "expected_abs_change": 1.097359,
+          "selected_abs_change": 1.1,
+          "implied_pct": -1.553672,
+          "pct_residual": 0.003672,
+          "candidate_tokens": [
+            "1.1"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "8227",
+          "source_file": "14_產業升溫區_3.png",
+          "rank": 15,
+          "price": "246.5",
+          "raw": "▲5.5(2.28%)",
+          "normalized": "▲5.5 (+2.28%)",
+          "status": "pass",
+          "reported_pct": 2.28,
+          "expected_abs_change": 5.494916,
+          "selected_abs_change": 5.5,
+          "implied_pct": 2.282158,
+          "pct_residual": 0.002158,
+          "candidate_tokens": [
+            "5.5"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "5464",
+          "source_file": "14_產業升溫區_3.png",
+          "rank": 16,
+          "price": "88",
+          "raw": "71.1(-1.23%)",
+          "normalized": "▼1.1 (-1.23%)",
+          "status": "pass",
+          "reported_pct": -1.23,
+          "expected_abs_change": 1.095879,
+          "selected_abs_change": 1.1,
+          "implied_pct": -1.234568,
+          "pct_residual": 0.004568,
+          "candidate_tokens": [
+            "71.1",
+            "1.1"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "3055",
+          "source_file": "15_產業升溫區_4.png",
+          "rank": 17,
+          "price": "155.5",
+          "raw": "4(-2.51%)",
+          "normalized": "▼4 (-2.51%)",
+          "status": "pass",
+          "reported_pct": -2.51,
+          "expected_abs_change": 4.003539,
+          "selected_abs_change": 4.0,
+          "implied_pct": -2.507837,
+          "pct_residual": 0.002163,
+          "candidate_tokens": [
+            "4"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2855",
+          "source_file": "15_產業升溫區_4.png",
+          "rank": 18,
+          "price": "52",
+          "raw": "70.9(-1.7%)",
+          "normalized": "▼0.9 (-1.7%)",
+          "status": "pass",
+          "reported_pct": -1.7,
+          "expected_abs_change": 0.899288,
+          "selected_abs_change": 0.9,
+          "implied_pct": -1.701323,
+          "pct_residual": 0.001323,
+          "candidate_tokens": [
+            "70.9",
+            "0.9"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "3441",
+          "source_file": "15_產業升溫區_4.png",
+          "rank": 19,
+          "price": "161",
+          "raw": "▲0.5(0.31%)",
+          "normalized": "▲0.5 (+0.31%)",
+          "status": "pass",
+          "reported_pct": 0.31,
+          "expected_abs_change": 0.497558,
+          "selected_abs_change": 0.5,
+          "implied_pct": 0.311526,
+          "pct_residual": 0.001526,
+          "candidate_tokens": [
+            "0.5"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6861",
+          "source_file": "15_產業升溫區_4.png",
+          "rank": 20,
+          "price": "230",
+          "raw": "5.5(-2.34%)",
+          "normalized": "▼5.5 (-2.34%)",
+          "status": "pass",
+          "reported_pct": -2.34,
+          "expected_abs_change": 5.510956,
+          "selected_abs_change": 5.5,
+          "implied_pct": -2.335456,
+          "pct_residual": 0.004544,
+          "candidate_tokens": [
+            "5.5"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "4198",
+          "source_file": "15_產業升溫區_4.png",
+          "rank": 21,
+          "price": "—",
+          "raw": "(-%)",
+          "normalized": "—",
+          "status": "missing_source_price",
+          "formula_checked": false
+        },
+        {
+          "section": "產業升溫區",
+          "code": "2303",
+          "source_file": "16_產業升溫區_5.png",
+          "rank": 22,
+          "price": "139",
+          "raw": "73.5(-2.46%)",
+          "normalized": "▼3.5 (-2.46%)",
+          "status": "pass",
+          "reported_pct": -2.46,
+          "expected_abs_change": 3.505639,
+          "selected_abs_change": 3.5,
+          "implied_pct": -2.45614,
+          "pct_residual": 0.00386,
+          "candidate_tokens": [
+            "73.5",
+            "3.5"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6292",
+          "source_file": "16_產業升溫區_5.png",
+          "rank": 23,
+          "price": "65.1",
+          "raw": "70.9(-1.36%)",
+          "normalized": "▼0.9 (-1.36%)",
+          "status": "pass",
+          "reported_pct": -1.36,
+          "expected_abs_change": 0.897567,
+          "selected_abs_change": 0.9,
+          "implied_pct": -1.363636,
+          "pct_residual": 0.003636,
+          "candidate_tokens": [
+            "70.9",
+            "0.9"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "3702",
+          "source_file": "16_產業升溫區_5.png",
+          "rank": 24,
+          "price": "107",
+          "raw": "0(0%)",
+          "normalized": "0 (0%)",
+          "status": "pass",
+          "reported_pct": 0.0,
+          "selected_abs_change": 0.0,
+          "expected_abs_change": 0.0,
+          "implied_pct": 0.0,
+          "pct_residual": 0.0,
+          "candidate_tokens": [
+            "0"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6173",
+          "source_file": "16_產業升溫區_5.png",
+          "rank": 25,
+          "price": "301.5",
+          "raw": "▲8(2.73%)",
+          "normalized": "▲8 (+2.73%)",
+          "status": "pass",
+          "reported_pct": 2.73,
+          "expected_abs_change": 8.012216,
+          "selected_abs_change": 8.0,
+          "implied_pct": 2.725724,
+          "pct_residual": 0.004276,
+          "candidate_tokens": [
+            "8"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6426",
+          "source_file": "16_產業升溫區_5.png",
+          "rank": 26,
+          "price": "304.5",
+          "raw": "77.5(-2.4%)",
+          "normalized": "▼7.5 (-2.4%)",
+          "status": "pass",
+          "reported_pct": -2.4,
+          "expected_abs_change": 7.487705,
+          "selected_abs_change": 7.5,
+          "implied_pct": -2.403846,
+          "pct_residual": 0.003846,
+          "candidate_tokens": [
+            "77.5",
+            "7.5"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "4556",
+          "source_file": "17_產業升溫區_6.png",
+          "rank": 27,
+          "price": "91.8",
+          "raw": "▲1.4(1.55%)",
+          "normalized": "▲1.4 (+1.55%)",
+          "status": "pass",
+          "reported_pct": 1.55,
+          "expected_abs_change": 1.401182,
+          "selected_abs_change": 1.4,
+          "implied_pct": 1.548673,
+          "pct_residual": 0.001327,
+          "candidate_tokens": [
+            "1.4"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6214",
+          "source_file": "17_產業升溫區_6.png",
+          "rank": 28,
+          "price": "187.5",
+          "raw": "0(0%)",
+          "normalized": "0 (0%)",
+          "status": "pass",
+          "reported_pct": 0.0,
+          "selected_abs_change": 0.0,
+          "expected_abs_change": 0.0,
+          "implied_pct": 0.0,
+          "pct_residual": 0.0,
+          "candidate_tokens": [
+            "0"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "3229",
+          "source_file": "17_產業升溫區_6.png",
+          "rank": 29,
+          "price": "65.5",
+          "raw": "1.4(-2.09%)",
+          "normalized": "▼1.4 (-2.09%)",
+          "status": "pass",
+          "reported_pct": -2.09,
+          "expected_abs_change": 1.398172,
+          "selected_abs_change": 1.4,
+          "implied_pct": -2.092676,
+          "pct_residual": 0.002676,
+          "candidate_tokens": [
+            "1.4"
+          ],
+          "formula_checked": true
+        },
+        {
+          "section": "產業升溫區",
+          "code": "3044",
+          "source_file": "17_產業升溫區_6.png",
+          "rank": 30,
+          "price": "499",
+          "raw": "11(-2.16%)",
+          "normalized": "▼11 (-2.16%)",
+          "status": "pass",
+          "reported_pct": -2.16,
+          "expected_abs_change": 11.016353,
+          "selected_abs_change": 11.0,
+          "implied_pct": -2.156863,
+          "pct_residual": 0.003137,
+          "candidate_tokens": [
+            "11"
+          ],
+          "formula_checked": true
+        }
+      ]
+    },
+    "overlap_unique": {
+      "etf": {
+        "value_cards": 10,
+        "rising_cards": 7,
+        "overlap": [
+          "0055",
+          "00960"
+        ],
+        "overlap_names": {
+          "0055": "元大MSCI金融",
+          "00960": "野村全球航運龍頭"
+        },
+        "unique_codes": 15
+      },
+      "stocks": {
+        "value_cards": 31,
+        "rising_cards": 30,
+        "overlap": [
+          "2303"
+        ],
+        "overlap_names": {
+          "2303": "聯電"
+        },
+        "unique_codes": 60
+      },
+      "all_four_zones": {
+        "card_entries": 78,
+        "unique_codes": 75,
+        "overlap_surplus_entries": 3
+      },
+      "source_summary_duplicate_counts": {
+        "main": 19,
+        "ax": 18
+      },
+      "note": "source summary duplicateCount為分頁擷取去重統計，不是價值×升溫交集；實際交集由四區code lists程式計算。"
+    },
+    "schema_validation": {
+      "status": "pass",
+      "reference_issue": "/Users/kaide/Documents/Morning-Brief/data/issues/20260914.json",
+      "template": "/Users/kaide/Documents/Morning-Brief/templates/morning-brief.html.j2",
+      "etf_card_keys": [
+        "code",
+        "name",
+        "price",
+        "change",
+        "nav_label",
+        "nav_value",
+        "premium_label",
+        "premium_value",
+        "market_label",
+        "market_value",
+        "cross_label",
+        "cross_value"
+      ],
+      "stock_card_keys": [
+        "code",
+        "name",
+        "industry",
+        "price",
+        "change",
+        "mark",
+        "metric_label",
+        "metric_value",
+        "metric2_label",
+        "metric2_value"
+      ],
+      "required_zone_keys_present": true
+    },
+    "trend_counts": {
+      "etf.value": {
+        "up": 1,
+        "down": 7,
+        "flat": 0,
+        "missing": 2
+      },
+      "etf.rising": {
+        "up": 1,
+        "down": 5,
+        "flat": 1,
+        "missing": 0
+      },
+      "stocks.value": {
+        "up": 12,
+        "down": 15,
+        "flat": 4,
+        "missing": 0
+      },
+      "stocks.rising": {
+        "up": 9,
+        "down": 17,
+        "flat": 3,
+        "missing": 1
+      }
+    },
+    "validation_counts": {
+      "source_rows": 78,
+      "normalized_rows": 78,
+      "unique_codes": 75,
+      "formula_checked": 75,
+      "missing_source_prices": 3,
+      "arrow_repairs": 31,
+      "null_price_traps": 3,
+      "screenshot_repairs": 1,
+      "ax_price_differences_rejected": 5,
+      "name_differences_applied": 0,
+      "industry_fields_source_proven": 61,
+      "stock_metric_pairs_source_proven": 60,
+      "etf_nav_premium_pairs_source_proven": 17
+    },
+    "warnings": [
+      "main/AX分頁 duplicateCount 為19/18且定義非四區交集；success、checksum、validation、四區順序/集合與卡數均通過"
+    ],
+    "water_comparison_deferred_to_parent": true,
+    "source_modified": false,
+    "repository_modified": false,
+    "published": false
+  },
+  "day": "Tuesday",
+  "issue_no": 87,
+  "data_as_of": "2026-09-15",
+  "brief_label": "盤中整合版",
+  "source_ark": "ark_stocks_latest.json",
+  "draft_cutoff": "2026-09-15T10:30:44+08:00",
+  "session_label": "9/15 10:29盤中快照，非收盤",
+  "hero": {
+    "headline": "<span class=\"mark\">水位回落，</span>先放慢配置。",
+    "subhead": "方舟水位78.8%，費半重挫；台股暫時守穩，不代表外部壓力解除。",
+    "reader_subhead": "水位78.8%，較9/14下降3.2個百分點；費半跌5.86%，台股10:29小跌0.06%。先留彈性，別把局部反彈當成全面轉強。"
+  },
+  "strategy": {
+    "thesis": "配置空間收縮 × 科技股外部壓力升高",
+    "playbook": "不追反彈；先檢查偏熱與弱勢標的，保留現金彈性，再等承接擴散。",
+    "tape": "台股10:29小跌0.06%；產業價值區12漲15跌4平，升溫區9漲17跌3平、1檔無報價。",
+    "risk": "AI發展放緩呼聲、油價與升息預期同時壓抑科技估值；美國10年公債殖利率4.97%。",
+    "reader": {
+      "thesis": "水位回落，配置速度先慢下來。",
+      "playbook": "不追反彈，偏熱與弱勢標的優先檢查。",
+      "tape": "台股10:29近乎持平，價值區仍15跌、12漲。",
+      "risk": "只看科技承接、油價與長期利率。"
+    }
+  },
+  "editorial": {
+    "pull_quote": "指數撐住，不代表風險已經退場。",
+    "body": "方舟水位由82.0%降至78.8%，是市場健康度與可部署空間收縮，不是單因水位仍高就能忽略風險。9/14美股費半跌5.86%、輝達跌3.36%，AI發展放緩的呼聲與高利率一起壓低科技估值。台股10:29只小跌0.06%，早盤價值名單也出現台達電、智邦與貿聯-KY等上漲個股，顯示局部承接存在；但下跌家數仍較多。<span class=\"mark\">今天採風險收縮：放慢新增配置、保留彈性，不把個別反彈放大成全面轉強。</span>能源供應風險與聯準會決議尚待釐清，價格反應比題材口號重要。"
+  },
+  "home": {
+    "water_note": "9/15水位78.8%，較前一交易日9/14的82.0%下降3.2個百分點；健康度轉弱，配置先放慢。",
+    "thesis_blurb": "水位回落、費半重挫；台股暫穩，先放慢配置。",
+    "recent_summary": "9/15水位78.8%；費半跌5.86%，台股10:29小跌0.06%，保留彈性。",
+    "risk_tagline": "06 風險收縮｜水位回落，先放慢配置"
+  },
+  "temperature": {
+    "label": "水位回落，配置放慢",
+    "score": 78.8,
+    "change": -3.2,
+    "note": "水位下降是防禦訊號；不是因為絕對水位高就認定風險高。",
+    "signal_headline": "台股局部承接，尚未扭轉科技股壓力。",
+    "signal_note": "ETF價值／升溫10／7檔，產業價值／升溫31／30檔；0055、00960與聯電為雙區重疊。",
+    "vix_note": "VIX 9/14收17.10、上升7.95%；波動升溫但尚非極端恐慌，搭配費半與利率一起觀察。"
+  },
+  "scenario_reason": "方舟水位較前一開市日下降3.2個百分點，費半重挫5.86%、VIX升7.95%；台股雖暫穩，產業價值與升溫區仍以下跌家數較多，採風險收縮而非全面增加曝險。",
+  "market": {
+    "sp500": {
+      "value": "7,619.98",
+      "change_pct": -0.48,
+      "data_as_of": "2026-09-14"
+    },
+    "nasdaq100": {
+      "value": "29,127.16",
+      "change_pct": -0.82,
+      "data_as_of": "2026-09-14"
+    },
+    "dow": {
+      "value": "52,421.20",
+      "change_pct": -0.29,
+      "data_as_of": "2026-09-14"
+    },
+    "sox": {
+      "value": "11,131.28",
+      "change_pct": -5.86,
+      "data_as_of": "2026-09-14"
+    },
+    "vix": {
+      "value": "17.10",
+      "change_pct": 7.95,
+      "data_as_of": "2026-09-14"
+    },
+    "tw_index": {
+      "line": "9/15 10:29盤中：45,833.36點，-29.16點（-0.06%）。",
+      "value": 45833.36,
+      "change_pct": -0.06,
+      "data_as_of": "2026-09-15T10:29:00+08:00"
+    },
+    "futures": {
+      "line": "9/15 10:29臺指期2026/09：45,879點，較參考價+102點（+0.22%）；正價差45.64點。",
+      "value": 45879,
+      "contract": "TXFI6-F",
+      "contract_month": "2026-09",
+      "data_as_of": "2026-09-15T10:29:00+08:00"
+    },
+    "foreign_oi": {
+      "value": -82658,
+      "note": "9/14日終：多單9,490、空單92,148口；未沖銷淨空82,658口。",
+      "data_as_of": "2026-09-14"
+    },
+    "systemic_risk": "偏高"
+  },
+  "analysis": {
+    "us_close": "美股9/14收盤：S&P500跌0.48%、Nasdaq-100跌0.82%、道瓊跌0.29%、費半跌5.86%。七巨頭四漲三跌，Alphabet Class A漲3.22%、Meta漲2.71%、微軟漲1.97%，輝達跌3.36%。科技內部分歧明顯，半導體壓力比大盤重；局部上漲不是整體資金流入的證明。",
+    "tx_night": "9/15 10:29盤中：45,833.36點，-29.16點（-0.06%）。9/15 10:29臺指期2026/09：45,879點，較參考價+102點（+0.22%）；正價差45.64點。均為盤中，非收盤。外資9/14臺股期貨未沖銷淨空82,658口；當日交易量淨多2,313口是不同統計，不能混稱現貨買超。",
+    "axes": {
+      "thesis": "水位下降先收斂配置速度；台股局部承接可以觀察，但不能抹去費半重挫與較廣的下跌家數。",
+      "policy": "聯準會將於美東9/16公布利率決議，台北時間9/17凌晨；市場高度預期升息，不代表升息已發生。",
+      "risk": "美國財政部9/14的2年、10年、30年殖利率分別4.65%、4.97%、5.34%；油價與高長期利率壓抑科技估值和企業成本。"
+    }
+  },
+  "intelligence": {
+    "trump": [
+      {
+        "time": "截至9/15上午",
+        "content": "本期未納入已獨立確認的同日川普原始社群新訊號；政策影響以正式決議與市場反應為準。"
+      }
+    ],
+    "musk": "本期未納入已獨立確認的同日馬斯克、Tesla、SpaceX或Starlink重大原始社群新訊號；不把轉述或舊公告當成新訂單。",
+    "policy": [
+      "9/14美股：AI公司高層呼籲放慢發展速度，半導體股承壓、部分軟體股反彈。這是情緒與估值重估，不等於台灣供應鏈已收到減單通知。",
+      "9/14 Brent原油期貨結算每桶105.68美元、上漲約1%；中東能源設施與船舶受襲增加供應不確定性。油價高位可能同時推升通膨與營運成本。",
+      "9/15亞洲早盤美元指數99.55，美元偏強；聯準會升息預期升高，但決議與後續指引仍未落地。",
+      "台股映射屬推論：半導體、AI伺服器、PCB與電源鏈先看自身承接；航運要分運價、航線、保險與燃油成本，不能把能源風險等同整族群受惠。"
+    ]
+  },
+  "mag7": [
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "price": "333.08",
+      "change_abs": "+0.81",
+      "change_pct": 0.24,
+      "tier": "watch",
+      "tier_label": "小幅上漲",
+      "signal": "漲0.24%，相對穩定但不是整條硬體鏈轉強。",
+      "data_as_of": "2026-09-14"
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "price": "505.41",
+      "change_abs": "+9.78",
+      "change_pct": 1.97,
+      "tier": "watch",
+      "tier_label": "相對強勢",
+      "signal": "漲1.97%，與半導體走勢分歧，續看雲端及企業軟體承接。",
+      "data_as_of": "2026-09-14"
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Class A",
+      "price": "349.39",
+      "change_abs": "+10.89",
+      "change_pct": 3.22,
+      "tier": "watch",
+      "tier_label": "相對強勢",
+      "signal": "Class A漲3.22%；與前期Class C報價分開，不跨股別計算漲跌。",
+      "data_as_of": "2026-09-14"
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "price": "253.54",
+      "change_abs": "-3.24",
+      "change_pct": -1.26,
+      "tier": "watch",
+      "tier_label": "承壓",
+      "signal": "跌1.26%，高利率下仍需價格止穩。",
+      "data_as_of": "2026-09-14"
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "price": "210.96",
+      "change_abs": "-7.33",
+      "change_pct": -3.36,
+      "tier": "watch",
+      "tier_label": "明顯承壓",
+      "signal": "跌3.36%，費半跌幅更大；AI題材不等於短線免疫。",
+      "data_as_of": "2026-09-14"
+    },
+    {
+      "ticker": "META",
+      "name": "Meta",
+      "price": "665.60",
+      "change_abs": "+17.57",
+      "change_pct": 2.71,
+      "tier": "watch",
+      "tier_label": "相對強勢",
+      "signal": "漲2.71%，屬科技內部分歧，不代表半導體已回穩。",
+      "data_as_of": "2026-09-14"
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "price": "358.97",
+      "change_abs": "-6.47",
+      "change_pct": -1.77,
+      "tier": "watch",
+      "tier_label": "承壓",
+      "signal": "跌1.77%；不以未確認社群訊息當作反彈催化。",
+      "data_as_of": "2026-09-14"
+    }
+  ],
+  "validation": {
+    "strengthened": [
+      "台股10:29小跌0.06%，產業價值區有12檔上漲；局部承接存在，與美股半導體跌勢不同步。",
+      "截至9/11的近5個已公布交易日，ETH現貨ETF淨流入2.228億美元；配置需求優於同期仍流出的BTC。"
+    ],
+    "pressure": [
+      "水位由82.0%降至78.8%，下降3.2個百分點；健康度與可部署空間轉弱。",
+      "費半跌5.86%、輝達跌3.36%、VIX升至17.10，科技風險需要重新評估。",
+      "油價高位、10年美債殖利率4.97%；產業升溫區17跌9漲，尚未全面改善。"
+    ],
+    "long_term": [
+      "黃金ETF八月淨流入180億美元、持有量增121噸至4,189噸，屬月度配置支持；短線仍受美元與利率壓制。",
+      "AI中長期需求、企業正式訂單與當日股價必須分開觀察；風控轉弱不等於否定產業，保留彈性也不等於永遠空手。"
+    ]
+  },
+  "appendix": {
+    "after_hours": "美股行情為9/14完整收盤；台股與臺指期為9/15 10:29盤中快照。方舟名單為9/15 09:05–09:08分頁快照，跨區價格可能不同。加密貨幣採9/14 UTC完整日線；價格與ETF申贖日期分別標示。",
+    "execution": "先檢查偏熱與弱勢部位、放慢新增配置。若台股承接擴散、油價和長期利率降溫，再評估節奏；若科技賣壓加重或反彈迅速回吐，保留更多彈性。",
+    "map_bullets": [
+      "半導體／AI → 台積電2330、廣達2382、台達電2308、智邦2345為產業觀察，不把海外言論當作已確認減單或台股買點。",
+      "BTC／ETH → IBIT、FBTC與ETHA、FETH分開觀察；COIN另有公司及估值風險，所有相關股票／ETF仍須自身價量支持。",
+      "黃金／美元／債券 → GLD、IAU、UUP、SGOV、TLT分別觀察；短期公債與長期公債的利率敏感度不同，不能互相替代。",
+      "能源／航運 → 00642U、00715L、00960依期貨、槓桿、運價與成本分別判讀，不追事件刺激下的溢價。"
+    ]
+  },
+  "conclusion": "水位回落是防禦訊號，台股暫穩是觀察線索。<em>今天先放慢配置、保留彈性；等承接擴散，不讓局部反彈掩蓋費半、油價與利率壓力。</em>",
+  "capital_flow": {
+    "as_of": "美股／美債：9/14；台股：9/15 10:29；加密完整日K：9/14 UTC；ETF申贖：9/11最新完整表；WGC：2026年8月。",
+    "headline": "科技承壓，ETH申購較強；不是全面資金回補。",
+    "stance": "選擇性分流，保留流動性",
+    "summary": "先看價格與成交量：BTC、ETH反彈但未突破，ETH/BTC單日略弱；再看ETF實際申贖，ETH優於BTC。黃金月度配置增加，但短線價格受壓。美元偏強和高殖利率不等於已驗證美元／長債淨流入。",
+    "reader": {
+      "headline": "有資金分流，還不是全面回補。",
+      "flow": "截至9/11的近5個已公布交易日，BTC ETF流出2.881億美元、ETH ETF流入2.228億美元；黃金八月也有配置流入。",
+      "meaning": "BTC、ETH反彈但都未突破，ETH單日也沒跑贏BTC；不能把申購優勢直接當成追價理由。",
+      "action": "台股先放慢配置，科技、金融與能源分開看；美元現金與短債只作彈性工具，不混同長債。",
+      "watch": "科技股承接、油價與長期利率、BTC／ETH最新申贖及ETH/BTC能否轉強。"
+    },
+    "assets": [
+      {
+        "asset": "美元／現金",
+        "role": "美元流動性與短期資金停泊",
+        "evidence": "Reuters 9/15亞洲早盤DXY 99.55；美元偏強，油價與升息預期提供支撐。",
+        "flow_signal": "未取得同日美元基金淨申贖，價格走強不等於已證實資金大幅回流美元。",
+        "watch": "DXY與前端利率是否續升；UUP和SGOV須分開看。",
+        "tone": "neutral",
+        "confidence": "中"
+      },
+      {
+        "asset": "美國公債",
+        "role": "利率與存續期間風險",
+        "evidence": "財政部9/14：2Y 4.65%、10Y 4.97%、30Y 5.34%；較9/11分別+2、+1、-1基點。",
+        "flow_signal": "長端略抗跌但殖利率仍高；沒有長債ETF淨申購證據，不能宣稱避險資金全面買入。",
+        "watch": "10Y是否穩定回落；TLT與短債的利率風險不同。",
+        "tone": "negative",
+        "confidence": "中"
+      },
+      {
+        "asset": "黃金",
+        "role": "非主權信用風險儲備與通膨分散",
+        "evidence": "Reuters授權版9/14 09:07 UTC現貨金4,308.24美元、跌0.9%；WGC八月淨流入180億美元，持有量增121噸至4,189噸。",
+        "flow_signal": "月度實際配置有證據，但短線價格受美元與利率壓制；不是今日接盤證明。",
+        "watch": "金價止穩且ETF持有量續增，才強化配置訊號。",
+        "tone": "neutral",
+        "confidence": "高：月度流量；中：盤中價格"
+      },
+      {
+        "asset": "Bitcoin",
+        "role": "高波動非主權稀缺資產",
+        "evidence": "9/14 UTC收78,189.21、漲1.75%，成交額為前20完整日中位數1.06倍，仍低於20日最高收盤81,270.37。",
+        "flow_signal": "9/11 BTC ETF淨流出1,320萬美元，近5個公布交易日流出2.881億；9/14尚未完整，反彈沒有新申購確認。",
+        "watch": "價格站穩壓力上方且ETF持續淨流入；IBIT、FBTC僅列觀察。",
+        "tone": "negative",
+        "confidence": "高：歷史流量；中：單一交易所價量"
+      },
+      {
+        "asset": "Ethereum",
+        "role": "應用型高波動加密資產，非黃金替代",
+        "evidence": "9/14 UTC收2,515.75、漲1.56%，成交額1.34倍；收在日內區間較低位置，低於20日最高收盤2,525.93。ETH/BTC收0.03218、跌0.16%。",
+        "flow_signal": "9/11 ETH ETF淨流入2.164億美元，近5日流入2.228億；實際申購較強，單日相對價格尚未領先。",
+        "watch": "ETH/BTC與價格共同轉強且申贖延續；ETHA、FETH自身未驗證突破。",
+        "tone": "neutral",
+        "confidence": "高：歷史流量；中：輪動推論"
+      },
+      {
+        "asset": "股票風險",
+        "role": "股權成長曝險",
+        "evidence": "費半9/14跌5.86%，S&P500跌0.48%；台股9/15 10:29跌0.06%，科技內部走勢分歧。",
+        "flow_signal": "價格分化不等於淨流入；未取得同日全市場股票ETF完整申贖。",
+        "watch": "科技承接擴散、反彈不再迅速回吐，才改善風險偏好。",
+        "tone": "negative",
+        "confidence": "中"
+      }
+    ],
+    "interpretation": [
+      "價量先行，流量確認，新聞只解釋可能原因。ETH有歷史申購優勢，但BTC／ETH都未完成突破；美元與高利率壓力使股票新增配置要更挑選。"
+    ],
+    "confirmation": [
+      "科技股承接擴散，台股下跌家數收斂。",
+      "油價和長期殖利率不再同步上衝。",
+      "BTC／ETH各自ETF淨流量完整公布，並與自身價格、ETH/BTC交叉驗證。"
+    ],
+    "caveat": "9/14 ETF欄位未齊，部分合計不可當作全日流量；不同頻率不混為同時配置。未取得同一切點的OI/funding/basis、穩定幣與交易所淨流，不加入評分；相關股票ETF亦未驗證自身觸發。",
+    "flow_details": {
+      "BTC": {
+        "source_url": "https://farside.co.uk/btc/?asof=20260915",
+        "latest_complete_date": "2026-09-11",
+        "rows": [
+          {
+            "date": "2026-08-27",
+            "fund_columns": [
+              277.6,
+              -83.6,
+              21.7,
+              29.7,
+              0.0,
+              0.0,
+              0.0,
+              5.7,
+              0.0,
+              6.7,
+              -27.2,
+              11.7
+            ],
+            "total_usdm": 242.3
+          },
+          {
+            "date": "2026-08-28",
+            "fund_columns": [
+              -33.4,
+              0.0,
+              -49.7,
+              -114.9,
+              0.0,
+              0.0,
+              0.0,
+              -13.2,
+              0.0,
+              9.3,
+              0.0,
+              0.0
+            ],
+            "total_usdm": -201.9
+          },
+          {
+            "date": "2026-08-31",
+            "fund_columns": [
+              205.9,
+              6.9,
+              4.3,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -13.4,
+              0.0,
+              3.6,
+              0.0,
+              9.4
+            ],
+            "total_usdm": 216.7
+          },
+          {
+            "date": "2026-09-01",
+            "fund_columns": [
+              -201.2,
+              -43.7,
+              8.4,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "total_usdm": -236.5
+          },
+          {
+            "date": "2026-09-02",
+            "fund_columns": [
+              115.4,
+              0.0,
+              4.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              7.3,
+              -56.2,
+              30.4
+            ],
+            "total_usdm": 101.1
+          },
+          {
+            "date": "2026-09-03",
+            "fund_columns": [
+              454.0,
+              74.4,
+              24.8,
+              137.7,
+              0.0,
+              0.0,
+              0.0,
+              -19.6,
+              -5.2,
+              7.7,
+              8.2,
+              48.8
+            ],
+            "total_usdm": 730.8
+          },
+          {
+            "date": "2026-09-04",
+            "fund_columns": [
+              117.4,
+              57.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "total_usdm": 174.6
+          },
+          {
+            "date": "2026-09-08",
+            "fund_columns": [
+              10.7,
+              -17.1,
+              14.5,
+              8.1,
+              -4.7,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              7.4,
+              -65.5,
+              0.0
+            ],
+            "total_usdm": -46.6
+          },
+          {
+            "date": "2026-09-09",
+            "fund_columns": [
+              -19.5,
+              0.0,
+              0.0,
+              -78.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              4.5,
+              -27.2,
+              0.0
+            ],
+            "total_usdm": -120.2
+          },
+          {
+            "date": "2026-09-10",
+            "fund_columns": [
+              -24.5,
+              -33.6,
+              -12.6,
+              -164.3,
+              0.0,
+              0.0,
+              0.0,
+              -15.3,
+              0.0,
+              4.0,
+              -36.4,
+              0.0
+            ],
+            "total_usdm": -282.7
+          },
+          {
+            "date": "2026-09-11",
+            "fund_columns": [
+              -19.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              2.2,
+              0.0,
+              3.8,
+              0.0,
+              0.0
+            ],
+            "total_usdm": -13.2
+          }
+        ],
+        "incomplete_rows": [
+          {
+            "date": "2026-09-14",
+            "cells": [
+              "14 Sep 2026",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "9.7",
+              "-",
+              "-",
+              "9.7"
+            ]
+          }
+        ],
+        "five_session_net_usdm": -288.1
+      },
+      "ETH": {
+        "source_url": "https://farside.co.uk/eth/?asof=20260915",
+        "latest_complete_date": "2026-09-11",
+        "rows": [
+          {
+            "date": "2026-08-27",
+            "fund_columns": [
+              130.2,
+              20.7,
+              56.2,
+              1.4,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              3.0,
+              14.3
+            ],
+            "total_usdm": 225.8
+          },
+          {
+            "date": "2026-08-28",
+            "fund_columns": [
+              83.8,
+              42.6,
+              -24.3,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "total_usdm": 102.1
+          },
+          {
+            "date": "2026-08-31",
+            "fund_columns": [
+              59.9,
+              0.0,
+              9.3,
+              3.7,
+              1.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              13.5
+            ],
+            "total_usdm": 87.6
+          },
+          {
+            "date": "2026-09-01",
+            "fund_columns": [
+              0.0,
+              11.2,
+              4.8,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -7.4,
+              0.0
+            ],
+            "total_usdm": 8.6
+          },
+          {
+            "date": "2026-09-02",
+            "fund_columns": [
+              -53.4,
+              52.9,
+              -26.2,
+              0.0,
+              2.0,
+              0.0,
+              0.0,
+              0.0,
+              -23.5,
+              0.0
+            ],
+            "total_usdm": -48.2
+          },
+          {
+            "date": "2026-09-03",
+            "fund_columns": [
+              72.1,
+              1.3,
+              65.1,
+              0.0,
+              0.0,
+              0.0,
+              5.4,
+              0.0,
+              -6.1,
+              3.6
+            ],
+            "total_usdm": 141.4
+          },
+          {
+            "date": "2026-09-04",
+            "fund_columns": [
+              57.8,
+              16.4,
+              -48.3,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "total_usdm": 25.9
+          },
+          {
+            "date": "2026-09-08",
+            "fund_columns": [
+              0.0,
+              0.0,
+              9.9,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -9.6,
+              -24.6
+            ],
+            "total_usdm": -24.3
+          },
+          {
+            "date": "2026-09-09",
+            "fund_columns": [
+              9.7,
+              22.9,
+              0.0,
+              0.0,
+              2.1,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "total_usdm": 34.7
+          },
+          {
+            "date": "2026-09-10",
+            "fund_columns": [
+              -18.6,
+              13.9,
+              -25.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -7.7,
+              7.7
+            ],
+            "total_usdm": -29.9
+          },
+          {
+            "date": "2026-09-11",
+            "fund_columns": [
+              148.8,
+              18.3,
+              11.4,
+              29.1,
+              0.0,
+              3.7,
+              0.0,
+              0.0,
+              0.0,
+              5.1
+            ],
+            "total_usdm": 216.4
+          }
+        ],
+        "incomplete_rows": [
+          {
+            "date": "2026-09-14",
+            "cells": [
+              "14 Sep 2026",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "0.0"
+            ]
+          }
+        ],
+        "five_session_net_usdm": 222.8
+      }
+    },
+    "crypto_price_details": {
+      "BTCUSDT": {
+        "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&limit=45&endTime=1789439280000",
+        "raw_rows": [
+          [
+            1785628800000,
+            "62823.65000000",
+            "63796.33000000",
+            "62806.58000000",
+            "63570.00000000",
+            "8387.01154000",
+            1785715199999,
+            "531238376.42127370",
+            1286064,
+            "4566.33112000",
+            "289282425.13673770",
+            "0"
+          ],
+          [
+            1785715200000,
+            "63570.01000000",
+            "64080.00000000",
+            "62300.00000000",
+            "63520.00000000",
+            "15543.29743000",
+            1785801599999,
+            "983698515.95577920",
+            2494364,
+            "7987.90387000",
+            "505558159.39526640",
+            "0"
+          ],
+          [
+            1785801600000,
+            "63520.00000000",
+            "64549.16000000",
+            "63322.01000000",
+            "64106.56000000",
+            "13690.47909000",
+            1785887999999,
+            "875057683.29647230",
+            2388039,
+            "7360.46366000",
+            "470519870.70858920",
+            "0"
+          ],
+          [
+            1785888000000,
+            "64106.55000000",
+            "65025.22000000",
+            "63880.00000000",
+            "64665.23000000",
+            "12742.85528000",
+            1785974399999,
+            "820929974.25524970",
+            2402227,
+            "6522.48250000",
+            "420180741.60884970",
+            "0"
+          ],
+          [
+            1785974400000,
+            "64665.24000000",
+            "64999.00000000",
+            "64172.00000000",
+            "64323.61000000",
+            "9864.43284000",
+            1786060799999,
+            "637366646.71670770",
+            2087951,
+            "4666.15261000",
+            "301530716.38684180",
+            "0"
+          ],
+          [
+            1786060800000,
+            "64323.61000000",
+            "65390.99000000",
+            "64166.00000000",
+            "64923.19000000",
+            "11807.40403000",
+            1786147199999,
+            "765604113.53555880",
+            2283383,
+            "5639.26621000",
+            "365759790.12034750",
+            "0"
+          ],
+          [
+            1786147200000,
+            "64923.20000000",
+            "65192.54000000",
+            "64784.19000000",
+            "64962.60000000",
+            "5760.14298000",
+            1786233599999,
+            "374451358.83061990",
+            540447,
+            "2810.00611000",
+            "182668411.39869090",
+            "0"
+          ],
+          [
+            1786233600000,
+            "64962.60000000",
+            "65474.46000000",
+            "64730.08000000",
+            "64901.59000000",
+            "7031.23606000",
+            1786319999999,
+            "457366207.40422350",
+            803981,
+            "3207.32922000",
+            "208616902.93426420",
+            "0"
+          ],
+          [
+            1786320000000,
+            "64901.59000000",
+            "65391.14000000",
+            "63806.27000000",
+            "63970.01000000",
+            "13638.40877000",
+            1786406399999,
+            "880502559.65311250",
+            2054347,
+            "6946.62767000",
+            "448395344.72269970",
+            "0"
+          ],
+          [
+            1786406400000,
+            "63970.01000000",
+            "64515.43000000",
+            "63238.00000000",
+            "63600.00000000",
+            "12891.63248000",
+            1786492799999,
+            "823992195.66591810",
+            1660517,
+            "6363.01318000",
+            "406580591.52596730",
+            "0"
+          ],
+          [
+            1786492800000,
+            "63600.01000000",
+            "64500.00000000",
+            "63310.34000000",
+            "63479.99000000",
+            "13627.06822000",
+            1786579199999,
+            "868963134.22856060",
+            1990499,
+            "6993.82626000",
+            "445813941.04264210",
+            "0"
+          ],
+          [
+            1786579200000,
+            "63479.99000000",
+            "64010.00000000",
+            "62802.27000000",
+            "63490.86000000",
+            "10793.85853000",
+            1786665599999,
+            "685844694.24948480",
+            2078777,
+            "5588.30192000",
+            "355148234.43938670",
+            "0"
+          ],
+          [
+            1786665600000,
+            "63490.86000000",
+            "63617.45000000",
+            "62535.24000000",
+            "63043.56000000",
+            "12340.82899000",
+            1786751999999,
+            "777408844.70579770",
+            2184530,
+            "6678.27723000",
+            "420633226.24807670",
+            "0"
+          ],
+          [
+            1786752000000,
+            "63043.56000000",
+            "63187.98000000",
+            "62920.00000000",
+            "63086.01000000",
+            "5405.16038000",
+            1786838399999,
+            "340890632.35788360",
+            540313,
+            "3110.52011000",
+            "196180469.50074570",
+            "0"
+          ],
+          [
+            1786838400000,
+            "63086.01000000",
+            "63390.00000000",
+            "62716.00000000",
+            "62900.00000000",
+            "4737.23135000",
+            1786924799999,
+            "298698048.55513150",
+            640294,
+            "2498.03555000",
+            "157497828.26996570",
+            "0"
+          ],
+          [
+            1786924800000,
+            "62900.00000000",
+            "64610.01000000",
+            "62751.10000000",
+            "64532.10000000",
+            "14255.64713000",
+            1787011199999,
+            "909366051.06852270",
+            2111256,
+            "7186.91098000",
+            "458508023.19464200",
+            "0"
+          ],
+          [
+            1787011200000,
+            "64532.11000000",
+            "65058.81000000",
+            "64027.85000000",
+            "64725.42000000",
+            "11789.91312000",
+            1787097599999,
+            "759405329.82942150",
+            1608019,
+            "5759.24912000",
+            "370988128.63305250",
+            "0"
+          ],
+          [
+            1787097600000,
+            "64725.42000000",
+            "70000.00000000",
+            "64166.00000000",
+            "69334.79000000",
+            "29054.29976000",
+            1787183999999,
+            "1954769139.09319090",
+            4160596,
+            "15646.86527000",
+            "1052899268.55794110",
+            "0"
+          ],
+          [
+            1787184000000,
+            "69334.78000000",
+            "73400.00000000",
+            "68902.22000000",
+            "73025.15000000",
+            "35904.79287000",
+            1787270399999,
+            "2562053707.60998330",
+            6249114,
+            "18144.94133000",
+            "1294796740.99114590",
+            "0"
+          ],
+          [
+            1787270400000,
+            "73027.02000000",
+            "79500.00000000",
+            "73027.02000000",
+            "78338.03000000",
+            "44339.56568000",
+            1787356799999,
+            "3401672760.03336090",
+            8928944,
+            "23033.87661000",
+            "1766188726.33158330",
+            "0"
+          ],
+          [
+            1787356800000,
+            "78338.03000000",
+            "78828.15000000",
+            "76500.00000000",
+            "77074.93000000",
+            "18524.50847000",
+            1787443199999,
+            "1433768388.59723810",
+            3950045,
+            "9413.19226000",
+            "728650560.29909650",
+            "0"
+          ],
+          [
+            1787443200000,
+            "77074.94000000",
+            "78052.85000000",
+            "75545.67000000",
+            "77734.00000000",
+            "15367.23185000",
+            1787529599999,
+            "1182628276.05943290",
+            3627829,
+            "8207.35031000",
+            "631901958.23575150",
+            "0"
+          ],
+          [
+            1787529600000,
+            "77734.00000000",
+            "80000.00000000",
+            "76670.01000000",
+            "78992.75000000",
+            "30179.29391000",
+            1787615999999,
+            "2367960844.30284900",
+            6334409,
+            "15033.99548000",
+            "1180076077.88272360",
+            "0"
+          ],
+          [
+            1787616000000,
+            "78992.76000000",
+            "81272.62000000",
+            "77851.00000000",
+            "78539.14000000",
+            "24772.51394000",
+            1787702399999,
+            "1972170530.27459760",
+            6360202,
+            "12633.43254000",
+            "1006294174.85469470",
+            "0"
+          ],
+          [
+            1787702400000,
+            "78539.13000000",
+            "79251.60000000",
+            "77632.58000000",
+            "79023.75000000",
+            "14613.75887000",
+            1787788799999,
+            "1148236055.87923850",
+            4284527,
+            "7299.27224000",
+            "573666484.09954990",
+            "0"
+          ],
+          [
+            1787788800000,
+            "79023.75000000",
+            "80848.74000000",
+            "78546.13000000",
+            "80249.58000000",
+            "16265.53695000",
+            1787875199999,
+            "1297370375.47347860",
+            4932285,
+            "7358.50047000",
+            "587134078.76529430",
+            "0"
+          ],
+          [
+            1787875200000,
+            "80249.59000000",
+            "81478.87000000",
+            "76888.00000000",
+            "77845.87000000",
+            "19756.43646000",
+            1787961599999,
+            "1560927602.27894060",
+            4822157,
+            "9300.40971000",
+            "735228439.30105630",
+            "0"
+          ],
+          [
+            1787961600000,
+            "77845.88000000",
+            "78330.00000000",
+            "77382.37000000",
+            "78230.00000000",
+            "7016.30257000",
+            1788047999999,
+            "545867984.84857770",
+            1519886,
+            "3594.89663000",
+            "279676173.87169260",
+            "0"
+          ],
+          [
+            1788048000000,
+            "78230.00000000",
+            "79400.00000000",
+            "77000.00000000",
+            "77682.00000000",
+            "9085.42405000",
+            1788134399999,
+            "712506539.56446480",
+            2404922,
+            "4314.34369000",
+            "338432867.34651110",
+            "0"
+          ],
+          [
+            1788134400000,
+            "77682.00000000",
+            "79250.00000000",
+            "77392.00000000",
+            "78581.29000000",
+            "15303.90602000",
+            1788220799999,
+            "1198158182.23741980",
+            4354737,
+            "8150.63510000",
+            "638244851.35762190",
+            "0"
+          ],
+          [
+            1788220800000,
+            "78581.30000000",
+            "79220.61000000",
+            "76420.00000000",
+            "77439.00000000",
+            "14130.63949000",
+            1788307199999,
+            "1101387276.65132930",
+            3662805,
+            "7128.14511000",
+            "555981558.22935560",
+            "0"
+          ],
+          [
+            1788307200000,
+            "77439.01000000",
+            "77792.00000000",
+            "76264.00000000",
+            "77340.01000000",
+            "13070.97820000",
+            1788393599999,
+            "1008333112.58752340",
+            3312492,
+            "6647.38296000",
+            "512773293.69380870",
+            "0"
+          ],
+          [
+            1788393600000,
+            "77340.01000000",
+            "82300.00000000",
+            "76968.00000000",
+            "81270.37000000",
+            "19806.42247000",
+            1788479999999,
+            "1579639079.84716540",
+            4460645,
+            "10841.35467000",
+            "864605005.48359890",
+            "0"
+          ],
+          [
+            1788480000000,
+            "81270.37000000",
+            "81427.75000000",
+            "78660.00000000",
+            "79660.77000000",
+            "19198.62549000",
+            1788566399999,
+            "1538393292.48454570",
+            3417900,
+            "9282.35949000",
+            "744028777.52453620",
+            "0"
+          ],
+          [
+            1788566400000,
+            "79660.77000000",
+            "80200.00000000",
+            "79442.00000000",
+            "79831.75000000",
+            "9117.24020000",
+            1788652799999,
+            "727162100.16711130",
+            1276050,
+            "4255.28225000",
+            "339348475.70742010",
+            "0"
+          ],
+          [
+            1788652800000,
+            "79831.75000000",
+            "80559.99000000",
+            "79233.00000000",
+            "80341.83000000",
+            "8854.81827000",
+            1788739199999,
+            "707422224.46505490",
+            1658245,
+            "4212.19077000",
+            "336600182.64951080",
+            "0"
+          ],
+          [
+            1788739200000,
+            "80341.83000000",
+            "80443.99000000",
+            "78680.00000000",
+            "79112.01000000",
+            "10572.45495000",
+            1788825599999,
+            "839882674.54233730",
+            2464603,
+            "5180.15668000",
+            "411563607.50570850",
+            "0"
+          ],
+          [
+            1788825600000,
+            "79112.00000000",
+            "79485.00000000",
+            "77620.01000000",
+            "78455.80000000",
+            "19235.06605000",
+            1788911999999,
+            "1510077235.73485570",
+            4339646,
+            "8541.11569000",
+            "670838741.16665150",
+            "0"
+          ],
+          [
+            1788912000000,
+            "78455.80000000",
+            "79760.00000000",
+            "77770.00000000",
+            "78306.43000000",
+            "14129.92027000",
+            1788998399999,
+            "1114730666.15220270",
+            3338369,
+            "6620.08219000",
+            "522307227.44916110",
+            "0"
+          ],
+          [
+            1788998400000,
+            "78306.43000000",
+            "78564.39000000",
+            "76464.00000000",
+            "76568.72000000",
+            "15320.36904000",
+            1789084799999,
+            "1188117943.77201960",
+            3080707,
+            "6426.97352000",
+            "498398012.04048190",
+            "0"
+          ],
+          [
+            1789084800000,
+            "76568.73000000",
+            "79890.00000000",
+            "76046.58000000",
+            "77225.70000000",
+            "19713.27729000",
+            1789171199999,
+            "1528809492.09930950",
+            3614263,
+            "9852.15345000",
+            "764153169.81810270",
+            "0"
+          ],
+          [
+            1789171200000,
+            "77225.71000000",
+            "77505.67000000",
+            "77059.75000000",
+            "77278.73000000",
+            "8060.44455000",
+            1789257599999,
+            "622849159.58773900",
+            748574,
+            "4312.77118000",
+            "333247676.74929380",
+            "0"
+          ],
+          [
+            1789257600000,
+            "77278.73000000",
+            "77450.00000000",
+            "76500.00000000",
+            "76842.01000000",
+            "6959.68366000",
+            1789343999999,
+            "536092213.40143950",
+            1275503,
+            "3615.73308000",
+            "278537359.61126710",
+            "0"
+          ],
+          [
+            1789344000000,
+            "76842.01000000",
+            "79600.00000000",
+            "76388.72000000",
+            "78189.21000000",
+            "15413.48971000",
+            1789430399999,
+            "1204563026.13293760",
+            3225517,
+            "8203.69526000",
+            "641079205.43312760",
+            "0"
+          ],
+          [
+            1789430400000,
+            "78189.20000000",
+            "78250.46000000",
+            "77750.00000000",
+            "77853.00000000",
+            "1123.33123000",
+            1789516799999,
+            "87590641.09834000",
+            219299,
+            "535.02642000",
+            "41711162.47173090",
+            "0"
+          ]
+        ],
+        "date": "2026-09-14",
+        "close": 78189.21,
+        "change_pct": 1.753207652949218,
+        "quote_volume": 1204563026.1329377,
+        "volume_vs_prior20_median": 1.064587485450616,
+        "prior20_high": 82300.0,
+        "prior20_max_close": 81270.37
+      },
+      "ETHUSDT": {
+        "url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1d&limit=45&endTime=1789439280000",
+        "raw_rows": [
+          [
+            1785628800000,
+            "1844.95000000",
+            "1898.50000000",
+            "1843.67000000",
+            "1885.36000000",
+            "123655.06320000",
+            1785715199999,
+            "231569308.36133000",
+            1129827,
+            "64503.12810000",
+            "120832647.37738200",
+            "0"
+          ],
+          [
+            1785715200000,
+            "1885.36000000",
+            "1885.95000000",
+            "1828.62000000",
+            "1860.50000000",
+            "175607.00990000",
+            1785801599999,
+            "326076474.96779900",
+            1775363,
+            "84775.06800000",
+            "157413137.21243000",
+            "0"
+          ],
+          [
+            1785801600000,
+            "1860.50000000",
+            "1882.44000000",
+            "1848.38000000",
+            "1869.75000000",
+            "185254.54520000",
+            1785887999999,
+            "346008910.63318500",
+            1809806,
+            "93966.21610000",
+            "175497269.60035300",
+            "0"
+          ],
+          [
+            1785888000000,
+            "1869.74000000",
+            "1928.00000000",
+            "1855.50000000",
+            "1908.90000000",
+            "238330.32690000",
+            1785974399999,
+            "449606273.05195600",
+            2270605,
+            "124423.25620000",
+            "234764608.50645100",
+            "0"
+          ],
+          [
+            1785974400000,
+            "1908.91000000",
+            "1920.51000000",
+            "1892.04000000",
+            "1904.10000000",
+            "177529.71350000",
+            1786060799999,
+            "338698286.22608400",
+            1782371,
+            "81160.13510000",
+            "154863365.37594100",
+            "0"
+          ],
+          [
+            1786060800000,
+            "1904.10000000",
+            "1943.02000000",
+            "1894.35000000",
+            "1914.18000000",
+            "210276.52900000",
+            1786147199999,
+            "402813740.00758400",
+            1579936,
+            "95029.11010000",
+            "182129075.30802100",
+            "0"
+          ],
+          [
+            1786147200000,
+            "1914.19000000",
+            "1926.72000000",
+            "1912.27000000",
+            "1916.74000000",
+            "56872.39310000",
+            1786233599999,
+            "109167138.29444500",
+            433955,
+            "27552.60040000",
+            "52896287.21693300",
+            "0"
+          ],
+          [
+            1786233600000,
+            "1916.75000000",
+            "1938.22000000",
+            "1907.56000000",
+            "1910.65000000",
+            "87855.32530000",
+            1786319999999,
+            "168708494.41975900",
+            681191,
+            "42718.97530000",
+            "82040536.50463800",
+            "0"
+          ],
+          [
+            1786320000000,
+            "1910.65000000",
+            "1931.57000000",
+            "1867.96000000",
+            "1873.16000000",
+            "209809.02210000",
+            1786406399999,
+            "398374618.80309900",
+            1866587,
+            "92868.03290000",
+            "176475384.21032800",
+            "0"
+          ],
+          [
+            1786406400000,
+            "1873.16000000",
+            "1897.80000000",
+            "1853.62000000",
+            "1882.59000000",
+            "193300.51660000",
+            1786492799999,
+            "362843503.93788900",
+            1441139,
+            "89434.21150000",
+            "167959705.93085700",
+            "0"
+          ],
+          [
+            1786492800000,
+            "1882.58000000",
+            "1925.00000000",
+            "1873.29000000",
+            "1879.81000000",
+            "171255.99750000",
+            1786579199999,
+            "324722723.54109800",
+            1564544,
+            "84089.63580000",
+            "159452911.22825900",
+            "0"
+          ],
+          [
+            1786579200000,
+            "1879.80000000",
+            "1900.00000000",
+            "1863.67000000",
+            "1886.15000000",
+            "154140.63080000",
+            1786665599999,
+            "290611294.67327200",
+            1514857,
+            "79343.62380000",
+            "149608701.24476900",
+            "0"
+          ],
+          [
+            1786665600000,
+            "1886.16000000",
+            "1891.30000000",
+            "1864.28000000",
+            "1882.20000000",
+            "108123.77340000",
+            1786751999999,
+            "203030687.46395900",
+            1319228,
+            "53799.61720000",
+            "101010965.42669600",
+            "0"
+          ],
+          [
+            1786752000000,
+            "1882.20000000",
+            "1886.59000000",
+            "1876.01000000",
+            "1882.64000000",
+            "48197.09090000",
+            1786838399999,
+            "90746243.22181900",
+            409630,
+            "23013.47990000",
+            "43325615.84651000",
+            "0"
+          ],
+          [
+            1786838400000,
+            "1882.64000000",
+            "1892.31000000",
+            "1869.17000000",
+            "1876.00000000",
+            "68574.42310000",
+            1786924799999,
+            "129015861.93100300",
+            573492,
+            "34107.20410000",
+            "64161768.91174400",
+            "0"
+          ],
+          [
+            1786924800000,
+            "1876.01000000",
+            "1918.71000000",
+            "1872.46000000",
+            "1913.60000000",
+            "175727.28710000",
+            1787011199999,
+            "334347864.03337200",
+            1441485,
+            "88860.74170000",
+            "169080642.52118400",
+            "0"
+          ],
+          [
+            1787011200000,
+            "1913.59000000",
+            "1923.27000000",
+            "1885.78000000",
+            "1917.85000000",
+            "144436.90840000",
+            1787097599999,
+            "275318271.13079000",
+            1229278,
+            "67921.87670000",
+            "129492928.96138600",
+            "0"
+          ],
+          [
+            1787097600000,
+            "1917.85000000",
+            "2333.65000000",
+            "1906.00000000",
+            "2252.80000000",
+            "799553.34470000",
+            1787183999999,
+            "1679413731.87430300",
+            5279678,
+            "417055.94350000",
+            "875655985.88562600",
+            "0"
+          ],
+          [
+            1787184000000,
+            "2252.81000000",
+            "2360.00000000",
+            "2221.54000000",
+            "2326.82000000",
+            "648620.72280000",
+            1787270399999,
+            "1485689117.02143700",
+            5641127,
+            "338052.54150000",
+            "774404487.42539800",
+            "0"
+          ],
+          [
+            1787270400000,
+            "2326.83000000",
+            "2546.78000000",
+            "2324.99000000",
+            "2516.30000000",
+            "740662.91460000",
+            1787356799999,
+            "1786584876.28779900",
+            7242698,
+            "402068.93830000",
+            "970815337.27767000",
+            "0"
+          ],
+          [
+            1787356800000,
+            "2516.31000000",
+            "2529.99000000",
+            "2385.00000000",
+            "2422.60000000",
+            "485164.89010000",
+            1787443199999,
+            "1187496571.73347100",
+            4481778,
+            "244219.42540000",
+            "598108530.04623700",
+            "0"
+          ],
+          [
+            1787443200000,
+            "2422.60000000",
+            "2484.62000000",
+            "2355.71000000",
+            "2463.41000000",
+            "378847.20220000",
+            1787529599999,
+            "920394835.65052700",
+            3810702,
+            "204739.20320000",
+            "497508572.06380000",
+            "0"
+          ],
+          [
+            1787529600000,
+            "2463.42000000",
+            "2532.95000000",
+            "2424.73000000",
+            "2482.31000000",
+            "467435.18680000",
+            1787615999999,
+            "1158450625.38735200",
+            4314361,
+            "239011.31650000",
+            "592554091.58182300",
+            "0"
+          ],
+          [
+            1787616000000,
+            "2482.31000000",
+            "2532.50000000",
+            "2414.64000000",
+            "2442.64000000",
+            "341388.96100000",
+            1787702399999,
+            "845995551.11382000",
+            3492228,
+            "156179.94930000",
+            "387259836.28023800",
+            "0"
+          ],
+          [
+            1787702400000,
+            "2442.65000000",
+            "2515.38000000",
+            "2432.32000000",
+            "2506.78000000",
+            "250583.27070000",
+            1787788799999,
+            "617837178.98722900",
+            2687659,
+            "128221.36980000",
+            "316297592.49925100",
+            "0"
+          ],
+          [
+            1787788800000,
+            "2506.78000000",
+            "2566.53000000",
+            "2481.74000000",
+            "2510.94000000",
+            "336914.06000000",
+            1787875199999,
+            "846470842.46146600",
+            3426529,
+            "163836.32250000",
+            "411885668.15482600",
+            "0"
+          ],
+          [
+            1787875200000,
+            "2510.94000000",
+            "2535.05000000",
+            "2405.97000000",
+            "2442.80000000",
+            "361082.46720000",
+            1787961599999,
+            "893198250.56794700",
+            3449843,
+            "167131.53560000",
+            "413743417.33423800",
+            "0"
+          ],
+          [
+            1787961600000,
+            "2442.79000000",
+            "2459.76000000",
+            "2430.45000000",
+            "2457.67000000",
+            "103523.92550000",
+            1788047999999,
+            "253031211.66794600",
+            828389,
+            "54147.51030000",
+            "132374030.70889000",
+            "0"
+          ],
+          [
+            1788048000000,
+            "2457.67000000",
+            "2534.98000000",
+            "2387.28000000",
+            "2416.88000000",
+            "268297.95030000",
+            1788134399999,
+            "662649837.78613100",
+            2396145,
+            "126372.70200000",
+            "312682978.40090600",
+            "0"
+          ],
+          [
+            1788134400000,
+            "2416.89000000",
+            "2489.95000000",
+            "2401.35000000",
+            "2467.65000000",
+            "265221.85450000",
+            1788220799999,
+            "649538839.13197400",
+            2904113,
+            "132003.04170000",
+            "323442658.21536100",
+            "0"
+          ],
+          [
+            1788220800000,
+            "2467.64000000",
+            "2485.50000000",
+            "2383.34000000",
+            "2418.57000000",
+            "276587.68240000",
+            1788307199999,
+            "674850744.71351500",
+            2474291,
+            "134387.91630000",
+            "327977292.68120900",
+            "0"
+          ],
+          [
+            1788307200000,
+            "2418.58000000",
+            "2429.00000000",
+            "2356.41000000",
+            "2391.92000000",
+            "285609.64630000",
+            1788393599999,
+            "683778047.01706000",
+            2339119,
+            "146949.78360000",
+            "351839915.52104900",
+            "0"
+          ],
+          [
+            1788393600000,
+            "2391.91000000",
+            "2529.84000000",
+            "2370.14000000",
+            "2507.51000000",
+            "351147.30090000",
+            1788479999999,
+            "862055004.24244500",
+            3098803,
+            "202192.57690000",
+            "496048638.40178500",
+            "0"
+          ],
+          [
+            1788480000000,
+            "2507.50000000",
+            "2546.66000000",
+            "2431.61000000",
+            "2455.85000000",
+            "412267.75870000",
+            1788566399999,
+            "1023013584.89661700",
+            2876331,
+            "201826.01020000",
+            "501675167.70726000",
+            "0"
+          ],
+          [
+            1788566400000,
+            "2455.86000000",
+            "2493.57000000",
+            "2444.47000000",
+            "2480.34000000",
+            "130096.56210000",
+            1788652799999,
+            "320639325.88540600",
+            941585,
+            "67343.66400000",
+            "165975257.37387400",
+            "0"
+          ],
+          [
+            1788652800000,
+            "2480.33000000",
+            "2526.20000000",
+            "2460.92000000",
+            "2514.48000000",
+            "217690.08430000",
+            1788739199999,
+            "543742216.50523700",
+            1673587,
+            "102182.80590000",
+            "255345948.43414800",
+            "0"
+          ],
+          [
+            1788739200000,
+            "2514.48000000",
+            "2536.64000000",
+            "2466.00000000",
+            "2490.16000000",
+            "256448.18300000",
+            1788825599999,
+            "639764287.95621100",
+            2126476,
+            "121549.70820000",
+            "303387280.98393400",
+            "0"
+          ],
+          [
+            1788825600000,
+            "2490.16000000",
+            "2507.99000000",
+            "2441.68000000",
+            "2485.06000000",
+            "244422.12720000",
+            1788911999999,
+            "606459598.20984000",
+            2434365,
+            "120340.30550000",
+            "298652073.55766500",
+            "0"
+          ],
+          [
+            1788912000000,
+            "2485.07000000",
+            "2523.30000000",
+            "2442.44000000",
+            "2468.13000000",
+            "301745.87010000",
+            1788998399999,
+            "751842583.80492700",
+            2792573,
+            "142289.22660000",
+            "354915452.19319700",
+            "0"
+          ],
+          [
+            1788998400000,
+            "2468.14000000",
+            "2484.76000000",
+            "2405.85000000",
+            "2438.27000000",
+            "347434.21230000",
+            1789084799999,
+            "850334362.78894800",
+            2794354,
+            "171562.67780000",
+            "419688444.32544700",
+            "0"
+          ],
+          [
+            1789084800000,
+            "2438.27000000",
+            "2665.99000000",
+            "2433.77000000",
+            "2516.43000000",
+            "639601.93280000",
+            1789171199999,
+            "1625504456.88964400",
+            4461161,
+            "322139.15850000",
+            "819289136.98390500",
+            "0"
+          ],
+          [
+            1789171200000,
+            "2516.44000000",
+            "2546.01000000",
+            "2508.64000000",
+            "2525.93000000",
+            "159918.32580000",
+            1789257599999,
+            "404101046.86710700",
+            897690,
+            "79325.59820000",
+            "200469432.33478200",
+            "0"
+          ],
+          [
+            1789257600000,
+            "2525.92000000",
+            "2527.56000000",
+            "2462.02000000",
+            "2477.10000000",
+            "216470.66830000",
+            1789343999999,
+            "540073946.97554200",
+            1376331,
+            "96180.02500000",
+            "239952064.65582300",
+            "0"
+          ],
+          [
+            1789344000000,
+            "2477.10000000",
+            "2615.00000000",
+            "2464.71000000",
+            "2515.75000000",
+            "355412.39530000",
+            1789430399999,
+            "898631029.92054600",
+            3140018,
+            "183077.82680000",
+            "463193502.68672900",
+            "0"
+          ],
+          [
+            1789430400000,
+            "2515.72000000",
+            "2520.00000000",
+            "2506.80000000",
+            "2511.68000000",
+            "28749.40440000",
+            1789516799999,
+            "72284024.58992600",
+            220997,
+            "12658.36170000",
+            "31827530.17097200",
+            "0"
+          ]
+        ],
+        "date": "2026-09-14",
+        "close": 2515.75,
+        "change_pct": 1.5602922772597116,
+        "quote_volume": 898631029.920546,
+        "volume_vs_prior20_median": 1.3437467492404382,
+        "prior20_high": 2665.99,
+        "prior20_max_close": 2525.93
+      },
+      "ETHBTC": {
+        "url": "https://api.binance.com/api/v3/klines?symbol=ETHBTC&interval=1d&limit=45&endTime=1789439280000",
+        "raw_rows": [
+          [
+            1785628800000,
+            "0.02937000",
+            "0.02978000",
+            "0.02934000",
+            "0.02965000",
+            "2235.41280000",
+            1785715199999,
+            "66.02746746",
+            16574,
+            "1125.03320000",
+            "33.26503891",
+            "0"
+          ],
+          [
+            1785715200000,
+            "0.02965000",
+            "0.02966000",
+            "0.02921000",
+            "0.02929000",
+            "4784.41300000",
+            1785801599999,
+            "140.43617728",
+            19824,
+            "1522.31260000",
+            "44.73778256",
+            "0"
+          ],
+          [
+            1785801600000,
+            "0.02928000",
+            "0.02940000",
+            "0.02912000",
+            "0.02917000",
+            "2692.00310000",
+            1785887999999,
+            "78.66361212",
+            14499,
+            "1240.67230000",
+            "36.25547247",
+            "0"
+          ],
+          [
+            1785888000000,
+            "0.02917000",
+            "0.02975000",
+            "0.02904000",
+            "0.02951000",
+            "6190.56050000",
+            1785974399999,
+            "181.49369055",
+            21924,
+            "3303.10430000",
+            "97.01148481",
+            "0"
+          ],
+          [
+            1785974400000,
+            "0.02952000",
+            "0.02965000",
+            "0.02938000",
+            "0.02960000",
+            "2978.10460000",
+            1786060799999,
+            "87.97067009",
+            13276,
+            "1726.51350000",
+            "51.01502880",
+            "0"
+          ],
+          [
+            1786060800000,
+            "0.02959000",
+            "0.02975000",
+            "0.02942000",
+            "0.02949000",
+            "3218.76310000",
+            1786147199999,
+            "95.15943198",
+            11937,
+            "1753.72510000",
+            "51.88547744",
+            "0"
+          ],
+          [
+            1786147200000,
+            "0.02949000",
+            "0.02958000",
+            "0.02946000",
+            "0.02951000",
+            "1318.76260000",
+            1786233599999,
+            "38.93787209",
+            3871,
+            "710.44870000",
+            "20.98187844",
+            "0"
+          ],
+          [
+            1786233600000,
+            "0.02952000",
+            "0.02964000",
+            "0.02942000",
+            "0.02944000",
+            "1806.60840000",
+            1786319999999,
+            "53.36191783",
+            6380,
+            "931.36300000",
+            "27.51945093",
+            "0"
+          ],
+          [
+            1786320000000,
+            "0.02944000",
+            "0.02958000",
+            "0.02905000",
+            "0.02928000",
+            "2975.87180000",
+            1786406399999,
+            "87.38752159",
+            12570,
+            "1018.18470000",
+            "29.89249498",
+            "0"
+          ],
+          [
+            1786406400000,
+            "0.02927000",
+            "0.02966000",
+            "0.02921000",
+            "0.02960000",
+            "2217.32010000",
+            1786492799999,
+            "65.17322150",
+            11511,
+            "1111.53120000",
+            "32.70640963",
+            "0"
+          ],
+          [
+            1786492800000,
+            "0.02961000",
+            "0.02987000",
+            "0.02952000",
+            "0.02962000",
+            "3959.40800000",
+            1786579199999,
+            "117.57278235",
+            12964,
+            "2250.94260000",
+            "66.80555202",
+            "0"
+          ],
+          [
+            1786579200000,
+            "0.02961000",
+            "0.02980000",
+            "0.02954000",
+            "0.02971000",
+            "2951.28750000",
+            1786665599999,
+            "87.50663025",
+            9971,
+            "1267.82110000",
+            "37.57941899",
+            "0"
+          ],
+          [
+            1786665600000,
+            "0.02972000",
+            "0.02991000",
+            "0.02969000",
+            "0.02985000",
+            "2407.53080000",
+            1786751999999,
+            "71.80280926",
+            10427,
+            "1413.46860000",
+            "42.15972180",
+            "0"
+          ],
+          [
+            1786752000000,
+            "0.02986000",
+            "0.02990000",
+            "0.02979000",
+            "0.02984000",
+            "1166.33450000",
+            1786838399999,
+            "34.81907633",
+            4619,
+            "797.25740000",
+            "23.80606562",
+            "0"
+          ],
+          [
+            1786838400000,
+            "0.02984000",
+            "0.02990000",
+            "0.02975000",
+            "0.02983000",
+            "1916.05630000",
+            1786924799999,
+            "57.17071757",
+            7741,
+            "1008.46500000",
+            "30.09357677",
+            "0"
+          ],
+          [
+            1786924800000,
+            "0.02983000",
+            "0.03005000",
+            "0.02960000",
+            "0.02965000",
+            "3432.97400000",
+            1787011199999,
+            "102.48908976",
+            12075,
+            "1856.05980000",
+            "55.43777795",
+            "0"
+          ],
+          [
+            1787011200000,
+            "0.02965000",
+            "0.02967000",
+            "0.02945000",
+            "0.02963000",
+            "5054.10720000",
+            1787097599999,
+            "149.47575560",
+            9224,
+            "3056.38710000",
+            "90.40153888",
+            "0"
+          ],
+          [
+            1787097600000,
+            "0.02963000",
+            "0.03342000",
+            "0.02957000",
+            "0.03250000",
+            "48036.82960000",
+            1787183999999,
+            "1505.66314822",
+            135348,
+            "26949.15310000",
+            "845.93645167",
+            "0"
+          ],
+          [
+            1787184000000,
+            "0.03250000",
+            "0.03263000",
+            "0.03163000",
+            "0.03187000",
+            "18712.49090000",
+            1787270399999,
+            "601.83920546",
+            57571,
+            "9037.99590000",
+            "290.88171846",
+            "0"
+          ],
+          [
+            1787270400000,
+            "0.03187000",
+            "0.03236000",
+            "0.03070000",
+            "0.03211000",
+            "25442.53570000",
+            1787356799999,
+            "797.36756891",
+            87228,
+            "11804.49070000",
+            "370.32653228",
+            "0"
+          ],
+          [
+            1787356800000,
+            "0.03212000",
+            "0.03238000",
+            "0.03115000",
+            "0.03142000",
+            "14500.99320000",
+            1787443199999,
+            "457.48634563",
+            44645,
+            "7007.29340000",
+            "221.09083618",
+            "0"
+          ],
+          [
+            1787443200000,
+            "0.03142000",
+            "0.03195000",
+            "0.03098000",
+            "0.03169000",
+            "20781.99520000",
+            1787529599999,
+            "653.88295621",
+            49524,
+            "10592.12900000",
+            "333.44862417",
+            "0"
+          ],
+          [
+            1787529600000,
+            "0.03169000",
+            "0.03196000",
+            "0.03126000",
+            "0.03143000",
+            "16900.06690000",
+            1787615999999,
+            "534.60465571",
+            37237,
+            "8005.74200000",
+            "253.43204102",
+            "0"
+          ],
+          [
+            1787616000000,
+            "0.03143000",
+            "0.03148000",
+            "0.03097000",
+            "0.03110000",
+            "9023.73420000",
+            1787702399999,
+            "281.18623305",
+            23449,
+            "3836.80710000",
+            "119.58735926",
+            "0"
+          ],
+          [
+            1787702400000,
+            "0.03110000",
+            "0.03186000",
+            "0.03108000",
+            "0.03172000",
+            "4817.44350000",
+            1787788799999,
+            "151.41097718",
+            16887,
+            "2725.17700000",
+            "85.70068256",
+            "0"
+          ],
+          [
+            1787788800000,
+            "0.03172000",
+            "0.03189000",
+            "0.03116000",
+            "0.03129000",
+            "6182.18220000",
+            1787875199999,
+            "194.81596282",
+            21454,
+            "2907.14940000",
+            "91.68837810",
+            "0"
+          ],
+          [
+            1787875200000,
+            "0.03129000",
+            "0.03170000",
+            "0.03111000",
+            "0.03139000",
+            "7247.43290000",
+            1787961599999,
+            "227.54829792",
+            21489,
+            "3494.44700000",
+            "109.74318887",
+            "0"
+          ],
+          [
+            1787961600000,
+            "0.03139000",
+            "0.03144000",
+            "0.03133000",
+            "0.03141000",
+            "2280.03630000",
+            1788047999999,
+            "71.57163531",
+            6946,
+            "1137.44320000",
+            "35.71395552",
+            "0"
+          ],
+          [
+            1788048000000,
+            "0.03141000",
+            "0.03199000",
+            "0.03097000",
+            "0.03112000",
+            "6782.14570000",
+            1788134399999,
+            "213.63956529",
+            23197,
+            "3776.22280000",
+            "119.24668582",
+            "0"
+          ],
+          [
+            1788134400000,
+            "0.03111000",
+            "0.03148000",
+            "0.03101000",
+            "0.03140000",
+            "4503.52250000",
+            1788220799999,
+            "140.86872784",
+            15235,
+            "2584.27470000",
+            "80.87572750",
+            "0"
+          ],
+          [
+            1788220800000,
+            "0.03140000",
+            "0.03152000",
+            "0.03119000",
+            "0.03124000",
+            "4480.08860000",
+            1788307199999,
+            "140.46568202",
+            15400,
+            "2242.82510000",
+            "70.37099061",
+            "0"
+          ],
+          [
+            1788307200000,
+            "0.03123000",
+            "0.03127000",
+            "0.03082000",
+            "0.03093000",
+            "6354.61550000",
+            1788393599999,
+            "197.35752289",
+            18133,
+            "3470.27030000",
+            "107.80134120",
+            "0"
+          ],
+          [
+            1788393600000,
+            "0.03094000",
+            "0.03104000",
+            "0.03069000",
+            "0.03086000",
+            "5378.32760000",
+            1788479999999,
+            "165.98372517",
+            19215,
+            "2586.50330000",
+            "79.84122797",
+            "0"
+          ],
+          [
+            1788480000000,
+            "0.03086000",
+            "0.03132000",
+            "0.03059000",
+            "0.03083000",
+            "8016.96550000",
+            1788566399999,
+            "247.98626403",
+            23746,
+            "3994.75380000",
+            "123.60484865",
+            "0"
+          ],
+          [
+            1788566400000,
+            "0.03083000",
+            "0.03119000",
+            "0.03077000",
+            "0.03107000",
+            "2671.34750000",
+            1788652799999,
+            "82.59224795",
+            8155,
+            "1486.11670000",
+            "45.96566304",
+            "0"
+          ],
+          [
+            1788652800000,
+            "0.03108000",
+            "0.03150000",
+            "0.03104000",
+            "0.03130000",
+            "9176.02710000",
+            1788739199999,
+            "287.07276217",
+            21466,
+            "6404.00030000",
+            "200.38779883",
+            "0"
+          ],
+          [
+            1788739200000,
+            "0.03129000",
+            "0.03155000",
+            "0.03127000",
+            "0.03148000",
+            "5041.67700000",
+            1788825599999,
+            "158.45618229",
+            13550,
+            "2856.53260000",
+            "89.79147326",
+            "0"
+          ],
+          [
+            1788825600000,
+            "0.03147000",
+            "0.03180000",
+            "0.03140000",
+            "0.03167000",
+            "3325.88050000",
+            1788911999999,
+            "104.98325962",
+            13646,
+            "1675.51020000",
+            "52.90045891",
+            "0"
+          ],
+          [
+            1788912000000,
+            "0.03168000",
+            "0.03174000",
+            "0.03141000",
+            "0.03152000",
+            "3648.54340000",
+            1788998399999,
+            "115.34492551",
+            13544,
+            "1580.21530000",
+            "49.97244160",
+            "0"
+          ],
+          [
+            1788998400000,
+            "0.03153000",
+            "0.03198000",
+            "0.03133000",
+            "0.03184000",
+            "7477.53890000",
+            1789084799999,
+            "236.48816386",
+            25907,
+            "3738.03470000",
+            "118.18302410",
+            "0"
+          ],
+          [
+            1789084800000,
+            "0.03184000",
+            "0.03342000",
+            "0.03181000",
+            "0.03258000",
+            "16764.08740000",
+            1789171199999,
+            "548.42397723",
+            70820,
+            "9558.93680000",
+            "312.73571890",
+            "0"
+          ],
+          [
+            1789171200000,
+            "0.03259000",
+            "0.03290000",
+            "0.03248000",
+            "0.03269000",
+            "4822.93260000",
+            1789257599999,
+            "157.49280819",
+            14813,
+            "1886.74120000",
+            "61.62764105",
+            "0"
+          ],
+          [
+            1789257600000,
+            "0.03269000",
+            "0.03271000",
+            "0.03216000",
+            "0.03223000",
+            "4821.64520000",
+            1789343999999,
+            "156.20070504",
+            17729,
+            "1614.91580000",
+            "52.34055337",
+            "0"
+          ],
+          [
+            1789344000000,
+            "0.03223000",
+            "0.03287000",
+            "0.03186000",
+            "0.03218000",
+            "7424.50860000",
+            1789430399999,
+            "239.68937057",
+            34539,
+            "3908.70650000",
+            "126.34012408",
+            "0"
+          ],
+          [
+            1789430400000,
+            "0.03217000",
+            "0.03233000",
+            "0.03213000",
+            "0.03227000",
+            "1605.11420000",
+            1789516799999,
+            "51.74628083",
+            3591,
+            "1183.62530000",
+            "38.17281695",
+            "0"
+          ]
+        ],
+        "date": "2026-09-14",
+        "close": 0.03218,
+        "change_pct": -0.15513496742166621,
+        "quote_volume": 239.68937057,
+        "volume_vs_prior20_median": 1.4775578777993035,
+        "prior20_high": 0.03342,
+        "prior20_max_close": 0.03269
+      }
+    },
+    "treasury_details": {
+      "2026-09-11": {
+        "2": 4.63,
+        "10": 4.96,
+        "30": 5.35
+      },
+      "2026-09-14": {
+        "2": 4.65,
+        "10": 4.97,
+        "30": 5.34
+      },
+      "bp_changes": {
+        "2": 2.0,
+        "10": 1.0,
+        "30": -1.0
+      }
+    }
+  },
+  "research_sources": [
+    {
+      "title": "Wall Street AI slowdown and oil settlement",
+      "url": "https://au.marketscreener.com/news/wall-street-ends-down-calls-for-ai-slowdown-pummel-chipmakers-ce785bdcd189f025",
+      "data_as_of": "2026-09-14T20:02:00Z",
+      "body_checked": true
+    },
+    {
+      "title": "Fed meeting preview; expectation not decision",
+      "url": "https://www.reuters.com/business/feds-table-is-set-rate-hike-first-under-warsh-2026-09-14/",
+      "data_as_of": "2026-09-14T10:02:00Z",
+      "body_checked": true
+    },
+    {
+      "title": "Dollar near two-week high",
+      "url": "https://in.marketscreener.com/news/dollar-near-two-week-high-as-oil-surge-lifts-yields-fed-hike-bets-ce785bddd98bf723",
+      "data_as_of": "2026-09-15T02:10:00Z",
+      "body_checked": true
+    },
+    {
+      "title": "Gold Reuters authorized version 09:07 UTC price",
+      "url": "https://www.marketscreener.com/news/gold-falls-on-growing-fed-rate-hike-bets-ahead-of-policy-meeting-ce785bdcda8bf423",
+      "data_as_of": "2026-09-14T09:25:00Z",
+      "body_checked": true
+    },
+    {
+      "title": "WGC August actual ETF flows",
+      "url": "https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2026/09",
+      "data_as_of": "2026-09-09",
+      "body_checked": true
+    },
+    {
+      "title": "U.S. Treasury dated yield curve",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "data_as_of": "2026-09-14",
+      "body_checked": true
+    },
+    {
+      "title": "BTC Farside fund-column verified flows",
+      "url": "https://farside.co.uk/btc/?asof=20260915",
+      "data_as_of": "2026-09-11"
+    },
+    {
+      "title": "ETH Farside fund-column verified flows",
+      "url": "https://farside.co.uk/eth/?asof=20260915",
+      "data_as_of": "2026-09-11"
+    },
+    {
+      "title": "BTCUSDT official Binance dated Kline",
+      "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&limit=45&endTime=1789439280000",
+      "data_as_of": "2026-09-14 UTC"
+    },
+    {
+      "title": "ETHUSDT official Binance dated Kline",
+      "url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1d&limit=45&endTime=1789439280000",
+      "data_as_of": "2026-09-14 UTC"
+    },
+    {
+      "title": "ETHBTC official Binance dated Kline",
+      "url": "https://api.binance.com/api/v3/klines?symbol=ETHBTC&interval=1d&limit=45&endTime=1789439280000",
+      "data_as_of": "2026-09-14 UTC"
+    },
+    {
+      "title": "twse_quote",
+      "url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+      "retrieved_at": "2026-09-15T10:30:44.345+08:00"
+    },
+    {
+      "title": "twse_chart",
+      "url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+      "retrieved_at": "2026-09-15T10:30:44.367+08:00"
+    },
+    {
+      "title": "twse_20260914",
+      "url": "https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=20260914&type=ALL&response=json",
+      "retrieved_at": "2026-09-15T10:28:18+08:00"
+    },
+    {
+      "title": "taifex_quote_list",
+      "url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+      "retrieved_at": "2026-09-15T10:30:44.490+08:00"
+    },
+    {
+      "title": "taifex_chart",
+      "url": "https://mis.taifex.com.tw/futures/api/getChartData1M",
+      "retrieved_at": "2026-09-15T10:30:44.465+08:00"
+    },
+    {
+      "title": "taifex_oi",
+      "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+      "retrieved_at": "2026-09-15T10:27:23+08:00"
+    },
+    {
+      "title": "cboe_vix",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+      "retrieved_at": "2026-09-15T10:27:24+08:00"
+    },
+    {
+      "title": "cboe_spx",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SPX_History.csv",
+      "retrieved_at": "2026-09-15T10:27:23+08:00"
+    },
+    {
+      "title": "yahoo_SOX",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/%5ESOX?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+      "retrieved_at": "2026-09-15T10:28:51+08:00"
+    },
+    {
+      "title": "yahoo_VIX",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+      "retrieved_at": "2026-09-15T10:28:51+08:00"
+    },
+    {
+      "title": "yahoo_SPX",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+      "retrieved_at": "2026-09-15T10:28:51+08:00"
+    },
+    {
+      "title": "yahoo_NDX",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/%5ENDX?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+      "retrieved_at": "2026-09-15T10:28:51+08:00"
+    },
+    {
+      "title": "yahoo_DJI",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/%5EDJI?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+      "retrieved_at": "2026-09-15T10:28:51+08:00"
+    },
+    {
+      "title": "nasdaq_SOX",
+      "url": "https://api.nasdaq.com/api/quote/SOX/historical?assetclass=index&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "retrieved_at": "2026-09-15T10:27:25+08:00"
+    },
+    {
+      "title": "nasdaq_NDX",
+      "url": "https://api.nasdaq.com/api/quote/NDX/historical?assetclass=index&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "retrieved_at": "2026-09-15T10:27:26+08:00"
+    },
+    {
+      "title": "nasdaq_AAPL",
+      "url": "https://api.nasdaq.com/api/quote/AAPL/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "retrieved_at": "2026-09-15T10:27:27+08:00"
+    },
+    {
+      "title": "nasdaq_MSFT",
+      "url": "https://api.nasdaq.com/api/quote/MSFT/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "retrieved_at": "2026-09-15T10:27:27+08:00"
+    },
+    {
+      "title": "nasdaq_AMZN",
+      "url": "https://api.nasdaq.com/api/quote/AMZN/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "retrieved_at": "2026-09-15T10:27:25+08:00"
+    },
+    {
+      "title": "nasdaq_GOOGL",
+      "url": "https://api.nasdaq.com/api/quote/GOOGL/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "retrieved_at": "2026-09-15T10:27:25+08:00"
+    },
+    {
+      "title": "nasdaq_META",
+      "url": "https://api.nasdaq.com/api/quote/META/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "retrieved_at": "2026-09-15T10:27:27+08:00"
+    },
+    {
+      "title": "nasdaq_NVDA",
+      "url": "https://api.nasdaq.com/api/quote/NVDA/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "retrieved_at": "2026-09-15T10:27:27+08:00"
+    },
+    {
+      "title": "nasdaq_TSLA",
+      "url": "https://api.nasdaq.com/api/quote/TSLA/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+      "retrieved_at": "2026-09-15T10:27:29+08:00"
+    },
+    {
+      "title": "yahoo_AAPL",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/AAPL?range=10d&interval=1d&events=history&includeAdjustedClose=true",
+      "retrieved_at": "2026-09-15T10:29:30+08:00"
+    },
+    {
+      "title": "yahoo_MSFT",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?range=10d&interval=1d&events=history",
+      "retrieved_at": "2026-09-15T10:29:52+08:00"
+    },
+    {
+      "title": "yahoo_AMZN",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/AMZN?range=10d&interval=1d&events=history&includeAdjustedClose=true",
+      "retrieved_at": "2026-09-15T10:29:32+08:00"
+    },
+    {
+      "title": "yahoo_GOOGL",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/GOOGL?period1=1788134400%26period2=1789603200%26interval=1d%26events=history",
+      "retrieved_at": "2026-09-15T10:29:54+08:00"
+    },
+    {
+      "title": "yahoo_META",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/META?range=1mo%26interval=1d",
+      "retrieved_at": "2026-09-15T10:30:15+08:00"
+    },
+    {
+      "title": "yahoo_NVDA",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/NVDA?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+      "retrieved_at": "2026-09-15T10:28:57+08:00"
+    },
+    {
+      "title": "yahoo_TSLA",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/TSLA?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+      "retrieved_at": "2026-09-15T10:28:57+08:00"
+    }
+  ],
+  "research_verification": {
+    "calendar": {
+      "date": "2026-09-15",
+      "market_status": "OPEN_INTRADAY",
+      "official_live_witness": {
+        "twse_rtcode": "0000",
+        "twse_quote_date": "20260915",
+        "twse_quote_time": "10:30:10",
+        "twse_intraday_bar_count": 91,
+        "twse_first_bar": "090100",
+        "twse_selected_completed_bar": "102900",
+        "twse_forming_tail_at_retrieval": "103100",
+        "taifex_rtcode": "0",
+        "taifex_quote_date": "20260915",
+        "taifex_quote_time": "103039",
+        "taifex_contract": "臺指期096",
+        "taifex_intraday_bar_count": 106,
+        "taifex_first_bar": "084600",
+        "taifex_selected_completed_bar": "102900",
+        "taifex_forming_tail_at_retrieval": "103100"
+      },
+      "immediately_previous_open_trading_day": "2026-09-14",
+      "previous_day_official_witness": {
+        "twse_response_stat": "OK",
+        "twse_table_title": "115年09月14日 價格指數(臺灣證券交易所)",
+        "twse_taiex_row": [
+          "發行量加權股價指數",
+          "45,862.52",
+          "<p style ='color:green'>-</p>",
+          "322.33",
+          "-0.70",
+          ""
+        ],
+        "twse_taiex_close": 45862.52,
+        "live_previous_close_matches": true,
+        "taifex_latest_complete_institutional_data_date": "2026-09-14"
+      },
+      "conclusion": "Official TWSE and TAIFEX live responses both carry 20260915 with non-empty intraday series. Official TWSE dated index table and TAIFEX latest complete institutional file both carry 20260914; the live TWSE previous close equals the 2026-09-14 official TAIEX close."
+    },
+    "official_snapshot": {
+      "fully_elapsed_minute_rule": "floor(earliest live-source retrieval start) minus one minute, then latest intersected TWSE/TAIFEX minute no later than cutoff",
+      "selected_common_minute_label": "102900",
+      "spot_close": 45833.36,
+      "futures_close": 45879.0,
+      "basis_points": 45.64,
+      "basis_formula": "45879.00 - 45833.36"
+    },
+    "oi": {
+      "data_date": "2026-09-14",
+      "contract_code": "臺股期貨",
+      "institution": "外資及陸資",
+      "open_interest": {
+        "long": 9490,
+        "short": 92148,
+        "net_provider": -82658,
+        "net_recomputed": -82658,
+        "formula": "9490 - 92148",
+        "provider_matches_recomputed": true
+      },
+      "trading_volume_kept_separate": {
+        "long": 93734,
+        "short": 91421,
+        "net_provider": 2313,
+        "net_recomputed": 2313,
+        "formula": "93734 - 91421",
+        "provider_matches_recomputed": true
+      },
+      "raw_row": {
+        "Date": "20260914",
+        "ContractCode": "臺股期貨",
+        "Item": "外資及陸資",
+        "TradingVolume(Long)": "93734",
+        "TradingValue(Long)(Thousands)": "860300184",
+        "TradingVolume(Short)": "91421",
+        "TradingValue(Short)(Thousands)": "839749079",
+        "TradingVolume(Net)": "2313",
+        "TradingValue(Net)(Thousands)": "20551104",
+        "OpenInterest(Long)": "9490",
+        "ContractValueofOpenInterest(Long)(Thousands)": "86991971",
+        "OpenInterest(Short)": "92148",
+        "ContractValueofOpenInterest(Short)(Thousands)": "845057277",
+        "OpenInterest(Net)": "-82658",
+        "ContractValueofOpenInterest(Net)(Thousands)": "-758065306"
+      },
+      "date_selection": "max(Date) in official response",
+      "source_id": "taifex_oi"
+    },
+    "market_evidence_artifact": "data/research/20260915/market.json",
+    "ark_evidence_artifact": "data/research/20260915/ark-audit.json",
+    "flows_fund_sum_recomputed": true,
+    "crypto_ohlc_valid": true,
+    "parent_corrections": [
+      "UST XML 2Y=4.65, not child summary 4.66; curve recalculated.",
+      "Gold bound to reopened authorized version 9/14 09:07 UTC 4308.24 -0.9%, not unmatched later quote.",
+      "DXY=99.55 from 9/15 02:10 UTC body; no unsupported daily percentage.",
+      "Optional China and unverified direct-social claims omitted.",
+      "9/14 fund rows incomplete, not zero net flow."
+    ],
+    "missing": [
+      "same-cut OI/funding/basis",
+      "stablecoin/exchange netflow",
+      "same-day USD/Treasury ETF actual flows",
+      "direct independently opened same-day principal social signal"
+    ]
+  },
+  "xurl_signal_layer": {
+    "status": "no_material_signal",
+    "signals_count": 0,
+    "included_in_revision": false,
+    "window": {
+      "start_local": "2026-09-14T16:00:00+08:00",
+      "end_local": "2026-09-15T10:30:44+08:00",
+      "start_utc": "2026-09-14T08:00:00Z",
+      "end_utc": "2026-09-15T02:30:44Z"
+    },
+    "signals": [],
+    "note": "No qualifying independently verified direct-principal original."
+  },
+  "technical_spider_sync": {
+    "as_of": "2026-09-15",
+    "expected_unique_codes": 75,
+    "source": "current four-zone union",
+    "separate_product": true
+  }
+}

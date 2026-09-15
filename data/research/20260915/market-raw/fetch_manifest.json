@@ -1,0 +1,324 @@
+{
+  "twse_quote": {
+    "url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+    "method": "GET",
+    "retrieval_started_at": "2026-09-15T10:30:44.235+08:00",
+    "retrieved_at": "2026-09-15T10:30:44.345+08:00",
+    "http_status": 200,
+    "final_url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+    "content_type": "text/html;charset=UTF-8",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/twse_quote.json",
+    "bytes": 700
+  },
+  "twse_chart": {
+    "url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+    "method": "GET",
+    "retrieval_started_at": "2026-09-15T10:30:44.235+08:00",
+    "retrieved_at": "2026-09-15T10:30:44.367+08:00",
+    "http_status": 200,
+    "final_url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+    "content_type": "text/html;charset=UTF-8",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/twse_chart.json",
+    "bytes": 6548
+  },
+  "twse_20260914": {
+    "url": "https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=20260914&type=ALL&response=json",
+    "method": "GET",
+    "retrieval_started_at": "2026-09-15T10:28:17+08:00",
+    "retrieved_at": "2026-09-15T10:28:18+08:00",
+    "http_status": 200,
+    "final_url": "https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=20260914&type=ALL&response=json",
+    "content_type": "application/json;charset=UTF-8",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/twse_20260914.json",
+    "bytes": 4801838
+  },
+  "twse_holidays_2026": {
+    "url": "https://www.twse.com.tw/rwd/en/holidaySchedule/holidaySchedule?response=json&queryYear=2026",
+    "method": "GET",
+    "retrieval_started_at": "2026-09-15T10:27:23+08:00",
+    "retrieved_at": "2026-09-15T10:27:23+08:00",
+    "error": "<HTTPError 307: 'Temporary Redirect'>"
+  },
+  "taifex_oi": {
+    "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+    "method": "GET",
+    "retrieval_started_at": "2026-09-15T10:27:23+08:00",
+    "retrieved_at": "2026-09-15T10:27:23+08:00",
+    "http_status": 200,
+    "final_url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+    "content_type": "application/octet-stream",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/taifex_oi.json",
+    "bytes": 34156
+  },
+  "cboe_vix": {
+    "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+    "method": "GET",
+    "retrieval_started_at": "2026-09-15T10:27:23+08:00",
+    "retrieved_at": "2026-09-15T10:27:24+08:00",
+    "http_status": 200,
+    "final_url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+    "content_type": "text/csv",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/cboe_vix.csv",
+    "bytes": 472615
+  },
+  "cboe_spx": {
+    "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SPX_History.csv",
+    "method": "GET",
+    "retrieval_started_at": "2026-09-15T10:27:23+08:00",
+    "retrieved_at": "2026-09-15T10:27:23+08:00",
+    "http_status": 200,
+    "final_url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SPX_History.csv",
+    "content_type": "text/csv",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/cboe_spx.csv",
+    "bytes": 292688
+  },
+  "yahoo_SOX": {
+    "url": "https://query2.finance.yahoo.com/v8/finance/chart/%5ESOX?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+    "method": "GET via web_extract; JSON whitespace normalized",
+    "retrieval_started_at": "2026-09-15T10:28:44+08:00",
+    "retrieved_at": "2026-09-15T10:28:51+08:00",
+    "http_status": "extract_success",
+    "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_SOX_web_extract.txt",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_SOX.json",
+    "bytes": 2101
+  },
+  "yahoo_VIX": {
+    "url": "https://query2.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+    "method": "GET via web_extract; JSON whitespace normalized",
+    "retrieval_started_at": "2026-09-15T10:28:44+08:00",
+    "retrieved_at": "2026-09-15T10:28:51+08:00",
+    "http_status": "extract_success",
+    "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_VIX_web_extract.txt",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_VIX.json",
+    "bytes": 2338
+  },
+  "yahoo_SPX": {
+    "url": "https://query2.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+    "method": "GET via web_extract; JSON whitespace normalized",
+    "retrieval_started_at": "2026-09-15T10:28:44+08:00",
+    "retrieved_at": "2026-09-15T10:28:51+08:00",
+    "http_status": "extract_success",
+    "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_SPX_web_extract.txt",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_SPX.json",
+    "bytes": 2216
+  },
+  "yahoo_NDX": {
+    "url": "https://query2.finance.yahoo.com/v8/finance/chart/%5ENDX?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+    "method": "GET via web_extract; JSON whitespace normalized",
+    "retrieval_started_at": "2026-09-15T10:28:44+08:00",
+    "retrieved_at": "2026-09-15T10:28:51+08:00",
+    "http_status": "extract_success",
+    "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_NDX_web_extract.txt",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_NDX.json",
+    "bytes": 2202
+  },
+  "yahoo_DJI": {
+    "url": "https://query2.finance.yahoo.com/v8/finance/chart/%5EDJI?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+    "method": "GET via web_extract; JSON whitespace normalized",
+    "retrieval_started_at": "2026-09-15T10:28:44+08:00",
+    "retrieved_at": "2026-09-15T10:28:51+08:00",
+    "http_status": "extract_success",
+    "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_DJI_web_extract.txt",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_DJI.json",
+    "bytes": 2129
+  },
+  "yahoo_AAPL": {
+    "url": "https://query2.finance.yahoo.com/v8/finance/chart/AAPL?range=10d&interval=1d&events=history&includeAdjustedClose=true",
+    "method": "GET via web_extract; JSON whitespace normalized",
+    "retrieved_at": "2026-09-15T10:29:30+08:00",
+    "http_status": "extract_success",
+    "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_AAPL_web_extract.txt",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_AAPL.json",
+    "bytes": 2281
+  },
+  "yahoo_MSFT": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?range=10d&interval=1d&events=history",
+    "method": "GET via web_extract; JSON whitespace normalized",
+    "retrieval_started_at": "2026-09-15T10:29:51+08:00",
+    "retrieved_at": "2026-09-15T10:29:52+08:00",
+    "http_status": "extract_success",
+    "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_MSFT_web_extract.txt",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_MSFT.json",
+    "bytes": 2287
+  },
+  "yahoo_AMZN": {
+    "url": "https://query2.finance.yahoo.com/v8/finance/chart/AMZN?range=10d&interval=1d&events=history&includeAdjustedClose=true",
+    "method": "GET via web_extract; JSON whitespace normalized",
+    "retrieved_at": "2026-09-15T10:29:32+08:00",
+    "http_status": "extract_success",
+    "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_AMZN_web_extract.txt",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_AMZN.json",
+    "bytes": 2281
+  },
+  "yahoo_GOOGL": {
+    "url": "https://query2.finance.yahoo.com/v8/finance/chart/GOOGL?period1=1788134400%26period2=1789603200%26interval=1d%26events=history",
+    "method": "GET via web_extract; JSON whitespace normalized",
+    "retrieval_started_at": "2026-09-15T10:29:53+08:00",
+    "retrieved_at": "2026-09-15T10:29:54+08:00",
+    "http_status": "extract_success",
+    "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_GOOGL_web_extract.txt",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_GOOGL.json",
+    "bytes": 2249
+  },
+  "yahoo_META": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/META?range=1mo%26interval=1d",
+    "method": "GET via web_extract; JSON whitespace normalized",
+    "retrieval_started_at": "2026-09-15T10:30:14+08:00",
+    "retrieved_at": "2026-09-15T10:30:15+08:00",
+    "http_status": "extract_success",
+    "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_META_web_extract.txt",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_META.json",
+    "bytes": 3511
+  },
+  "yahoo_NVDA": {
+    "url": "https://query2.finance.yahoo.com/v8/finance/chart/NVDA?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+    "method": "GET via web_extract; JSON whitespace normalized",
+    "retrieval_started_at": "2026-09-15T10:28:56+08:00",
+    "retrieved_at": "2026-09-15T10:28:57+08:00",
+    "http_status": "extract_success",
+    "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_NVDA_web_extract.txt",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_NVDA.json",
+    "bytes": 2302
+  },
+  "yahoo_TSLA": {
+    "url": "https://query2.finance.yahoo.com/v8/finance/chart/TSLA?period1=1788134400&period2=1789603200&interval=1d&events=history&includeAdjustedClose=true",
+    "method": "GET via web_extract; JSON whitespace normalized",
+    "retrieval_started_at": "2026-09-15T10:28:56+08:00",
+    "retrieved_at": "2026-09-15T10:28:57+08:00",
+    "http_status": "extract_success",
+    "raw_extracted_response_path": "/tmp/mb-20260915-market-raw/yahoo_TSLA_web_extract.txt",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/yahoo_TSLA.json",
+    "bytes": 2257
+  },
+  "nasdaq_SOX": {
+    "url": "https://api.nasdaq.com/api/quote/SOX/historical?assetclass=index&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+    "method": "GET",
+    "retrieval_started_at": "2026-09-15T10:27:23+08:00",
+    "retrieved_at": "2026-09-15T10:27:25+08:00",
+    "http_status": 200,
+    "final_url": "https://api.nasdaq.com/api/quote/SOX/historical?assetclass=index&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+    "content_type": "application/json; charset=utf-8",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/nasdaq_SOX.json",
+    "bytes": 602
+  },
+  "nasdaq_NDX": {
+    "url": "https://api.nasdaq.com/api/quote/NDX/historical?assetclass=index&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+    "method": "GET",
+    "retrieval_started_at": "2026-09-15T10:27:23+08:00",
+    "retrieved_at": "2026-09-15T10:27:26+08:00",
+    "http_status": 200,
+    "final_url": "https://api.nasdaq.com/api/quote/NDX/historical?assetclass=index&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+    "content_type": "application/json; charset=utf-8",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/nasdaq_NDX.json",
+    "bytes": 602
+  },
+  "nasdaq_AAPL": {
+    "url": "https://api.nasdaq.com/api/quote/AAPL/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+    "method": "GET",
+    "retrieval_started_at": "2026-09-15T10:27:23+08:00",
+    "retrieved_at": "2026-09-15T10:27:27+08:00",
+    "http_status": 200,
+    "final_url": "https://api.nasdaq.com/api/quote/AAPL/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+    "content_type": "application/json; charset=utf-8",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/nasdaq_AAPL.json",
+    "bytes": 716
+  },
+  "nasdaq_MSFT": {
+    "url": "https://api.nasdaq.com/api/quote/MSFT/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+    "method": "GET",
+    "retrieval_started_at": "2026-09-15T10:27:23+08:00",
+    "retrieved_at": "2026-09-15T10:27:27+08:00",
+    "http_status": 200,
+    "final_url": "https://api.nasdaq.com/api/quote/MSFT/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+    "content_type": "application/json; charset=utf-8",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/nasdaq_MSFT.json",
+    "bytes": 717
+  },
+  "nasdaq_AMZN": {
+    "url": "https://api.nasdaq.com/api/quote/AMZN/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+    "method": "GET",
+    "retrieval_started_at": "2026-09-15T10:27:23+08:00",
+    "retrieved_at": "2026-09-15T10:27:25+08:00",
+    "http_status": 200,
+    "final_url": "https://api.nasdaq.com/api/quote/AMZN/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+    "content_type": "application/json; charset=utf-8",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/nasdaq_AMZN.json",
+    "bytes": 715
+  },
+  "nasdaq_GOOGL": {
+    "url": "https://api.nasdaq.com/api/quote/GOOGL/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+    "method": "GET",
+    "retrieval_started_at": "2026-09-15T10:27:23+08:00",
+    "retrieved_at": "2026-09-15T10:27:25+08:00",
+    "http_status": 200,
+    "final_url": "https://api.nasdaq.com/api/quote/GOOGL/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+    "content_type": "application/json; charset=utf-8",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/nasdaq_GOOGL.json",
+    "bytes": 719
+  },
+  "nasdaq_META": {
+    "url": "https://api.nasdaq.com/api/quote/META/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+    "method": "GET",
+    "retrieval_started_at": "2026-09-15T10:27:23+08:00",
+    "retrieved_at": "2026-09-15T10:27:27+08:00",
+    "http_status": 200,
+    "final_url": "https://api.nasdaq.com/api/quote/META/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+    "content_type": "application/json; charset=utf-8",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/nasdaq_META.json",
+    "bytes": 716
+  },
+  "nasdaq_NVDA": {
+    "url": "https://api.nasdaq.com/api/quote/NVDA/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+    "method": "GET",
+    "retrieval_started_at": "2026-09-15T10:27:24+08:00",
+    "retrieved_at": "2026-09-15T10:27:27+08:00",
+    "http_status": 200,
+    "final_url": "https://api.nasdaq.com/api/quote/NVDA/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+    "content_type": "application/json; charset=utf-8",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/nasdaq_NVDA.json",
+    "bytes": 720
+  },
+  "nasdaq_TSLA": {
+    "url": "https://api.nasdaq.com/api/quote/TSLA/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+    "method": "GET",
+    "retrieval_started_at": "2026-09-15T10:27:25+08:00",
+    "retrieved_at": "2026-09-15T10:27:29+08:00",
+    "http_status": 200,
+    "final_url": "https://api.nasdaq.com/api/quote/TSLA/historical?assetclass=stocks&fromdate=2026-09-09&todate=2026-09-15&limit=10",
+    "content_type": "application/json; charset=utf-8",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/nasdaq_TSLA.json",
+    "bytes": 716
+  },
+  "taifex_quote_list": {
+    "url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+    "method": "POST",
+    "body": {
+      "MarketType": "0",
+      "SymbolType": "F",
+      "KindID": "1",
+      "CID": "",
+      "ExpireMonth": ""
+    },
+    "retrieval_started_at": "2026-09-15T10:30:44.236+08:00",
+    "retrieved_at": "2026-09-15T10:30:44.490+08:00",
+    "http_status": 200,
+    "final_url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+    "content_type": "application/json",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/taifex_quote_list.json",
+    "bytes": 6296
+  },
+  "taifex_chart": {
+    "url": "https://mis.taifex.com.tw/futures/api/getChartData1M",
+    "method": "POST",
+    "body": {
+      "SymbolID": "TXFI6-F"
+    },
+    "retrieval_started_at": "2026-09-15T10:30:44.236+08:00",
+    "retrieved_at": "2026-09-15T10:30:44.465+08:00",
+    "http_status": 200,
+    "final_url": "https://mis.taifex.com.tw/futures/api/getChartData1M",
+    "content_type": "application/json",
+    "raw_response_path": "/tmp/mb-20260915-market-raw/taifex_chart.json",
+    "bytes": 7498
+  }
+}
