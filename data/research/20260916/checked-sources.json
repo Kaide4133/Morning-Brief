@@ -1,0 +1,201 @@
+[
+  {
+    "title": "TWSE TAIEX live quote and open-day proof",
+    "url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+    "retrieved_at": "2026-09-16T10:22:44+08:00"
+  },
+  {
+    "title": "TWSE TAIEX official minute-close series",
+    "url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+    "retrieved_at": "2026-09-16T10:22:44+08:00"
+  },
+  {
+    "title": "TWSE completed daily market rows for previous open date",
+    "url": "https://www.twse.com.tw/rwd/zh/afterTrading/FMTQIK?date=20260916&response=json",
+    "retrieved_at": "2026-09-16T10:22:45+08:00"
+  },
+  {
+    "title": "TAIFEX regular-session domestic equity-index futures quote list",
+    "url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+    "retrieved_at": "2026-09-16T10:22:45+08:00"
+  },
+  {
+    "title": "TAIFEX exact front-contract official 1-minute chart",
+    "url": "https://mis.taifex.com.tw/futures/api/getChartData1M",
+    "retrieved_at": "2026-09-16T10:22:45+08:00"
+  },
+  {
+    "title": "TAIFEX major institutional traders futures detail",
+    "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+    "retrieved_at": "2026-09-16T10:24:32+08:00"
+  },
+  {
+    "title": "Nasdaq official SOX latest index summary",
+    "url": "https://api.nasdaq.com/api/quote/SOX/summary?assetclass=index",
+    "retrieved_at": "2026-09-16T10:24:34+08:00"
+  },
+  {
+    "title": "Nasdaq official SOX historical lag/date context",
+    "url": "https://api.nasdaq.com/api/quote/SOX/historical?assetclass=index&fromdate=2026-09-11&todate=2026-09-16&limit=10",
+    "retrieved_at": "2026-09-16T10:24:36+08:00"
+  },
+  {
+    "title": "Nasdaq official NDX latest index summary",
+    "url": "https://api.nasdaq.com/api/quote/NDX/summary?assetclass=index",
+    "retrieved_at": "2026-09-16T10:24:38+08:00"
+  },
+  {
+    "title": "Nasdaq official NDX historical lag/date context",
+    "url": "https://api.nasdaq.com/api/quote/NDX/historical?assetclass=index&fromdate=2026-09-11&todate=2026-09-16&limit=10",
+    "retrieved_at": "2026-09-16T10:24:40+08:00"
+  },
+  {
+    "title": "Yahoo daily-chart dated cross-check for SOX",
+    "url": "https://query2.finance.yahoo.com/v8/finance/chart/%5ESOX?period1=1788998400&period2=1789603200&interval=1d&events=history&crumb=",
+    "retrieved_at": "2026-09-16T10:24:40+08:00"
+  },
+  {
+    "title": "Yahoo daily-chart dated cross-check for NDX",
+    "url": "https://query2.finance.yahoo.com/v8/finance/chart/%5ENDX?period1=1788998400&period2=1789603200&interval=1d&events=history&crumb=",
+    "retrieved_at": "2026-09-16T10:24:41+08:00"
+  },
+  {
+    "title": "Yahoo daily-chart dated cross-check for DJI",
+    "url": "https://query2.finance.yahoo.com/v8/finance/chart/%5EDJI?period1=1788998400&period2=1789603200&interval=1d&events=history&crumb=",
+    "retrieved_at": "2026-09-16T10:24:41+08:00"
+  },
+  {
+    "title": "Cboe official VIX daily history",
+    "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+    "retrieved_at": "2026-09-16T10:24:42+08:00"
+  },
+  {
+    "title": "Cboe official SPX daily history",
+    "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SPX_History.csv",
+    "retrieved_at": "2026-09-16T10:24:43+08:00"
+  },
+  {
+    "title": "Cboe official DJX daily history",
+    "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/DJX_History.csv",
+    "retrieved_at": "2026-09-16T10:24:44+08:00"
+  },
+  {
+    "title": "Nasdaq official NVDA historical closes",
+    "url": "https://api.nasdaq.com/api/quote/NVDA/historical?assetclass=stocks&fromdate=2026-09-11&todate=2026-09-16&limit=10",
+    "retrieved_at": "2026-09-16T10:24:45+08:00"
+  },
+  {
+    "title": "Nasdaq official AAPL historical closes",
+    "url": "https://api.nasdaq.com/api/quote/AAPL/historical?assetclass=stocks&fromdate=2026-09-11&todate=2026-09-16&limit=10",
+    "retrieved_at": "2026-09-16T10:24:49+08:00"
+  },
+  {
+    "title": "Nasdaq official MSFT historical closes",
+    "url": "https://api.nasdaq.com/api/quote/MSFT/historical?assetclass=stocks&fromdate=2026-09-11&todate=2026-09-16&limit=10",
+    "retrieved_at": "2026-09-16T10:24:52+08:00"
+  },
+  {
+    "title": "Nasdaq official AMZN historical closes",
+    "url": "https://api.nasdaq.com/api/quote/AMZN/historical?assetclass=stocks&fromdate=2026-09-11&todate=2026-09-16&limit=10",
+    "retrieved_at": "2026-09-16T10:24:55+08:00"
+  },
+  {
+    "title": "Nasdaq official GOOGL historical closes",
+    "url": "https://api.nasdaq.com/api/quote/GOOGL/historical?assetclass=stocks&fromdate=2026-09-11&todate=2026-09-16&limit=10",
+    "retrieved_at": "2026-09-16T10:24:57+08:00"
+  },
+  {
+    "title": "Nasdaq official META historical closes",
+    "url": "https://api.nasdaq.com/api/quote/META/historical?assetclass=stocks&fromdate=2026-09-11&todate=2026-09-16&limit=10",
+    "retrieved_at": "2026-09-16T10:25:00+08:00"
+  },
+  {
+    "title": "Nasdaq official TSLA historical closes",
+    "url": "https://api.nasdaq.com/api/quote/TSLA/historical?assetclass=stocks&fromdate=2026-09-11&todate=2026-09-16&limit=10",
+    "retrieved_at": "2026-09-16T10:25:02+08:00"
+  },
+  {
+    "title": "Brent and WTI final settlements / supply disruption",
+    "url": "https://www.reuters.com/business/energy/oil-prices-rise-saudi-pipeline-outage-fresh-attacks-raise-supply-concerns-2026-09-15/",
+    "data_as_of": "2026-09-15",
+    "body_checked": true
+  },
+  {
+    "title": "Wall Street final session / Fed expectations",
+    "url": "https://www.reuters.com/business/wall-st-futures-slip-rising-oil-treasury-yields-compound-ai-anxiety-2026-09-15/",
+    "data_as_of": "2026-09-15",
+    "body_checked": true
+  },
+  {
+    "title": "Senate procedural vote 15:00 EDT",
+    "url": "https://www.dailypress.senate.gov/tuesday-september-15-2026/",
+    "data_as_of": "2026-09-15T19:00:00Z",
+    "body_checked": true
+  },
+  {
+    "title": "FOMC official meeting calendar",
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "data_as_of": "2026-09-15/16",
+    "body_checked": true
+  },
+  {
+    "title": "WGC August monthly actual flows",
+    "url": "https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2026/09",
+    "data_as_of": "2026-08-31",
+    "body_checked": true
+  },
+  {
+    "title": "BTC fund columns summed",
+    "url": "https://farside.co.uk/btc/?asof=20260916",
+    "data_as_of": "2026-09-14",
+    "body_checked": true
+  },
+  {
+    "title": "ETH fund columns summed",
+    "url": "https://farside.co.uk/eth/?asof=20260916",
+    "data_as_of": "2026-09-14",
+    "body_checked": true
+  },
+  {
+    "title": "treasury",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026",
+    "data_as_of": "2026-09-15",
+    "body_checked": true
+  },
+  {
+    "title": "BTCUSDT",
+    "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&limit=45&endTime=1789525200000",
+    "data_as_of": "2026-09-15",
+    "body_checked": true
+  },
+  {
+    "title": "ETHUSDT",
+    "url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1d&limit=45&endTime=1789525200000",
+    "data_as_of": "2026-09-15",
+    "body_checked": true
+  },
+  {
+    "title": "ETHBTC",
+    "url": "https://api.binance.com/api/v3/klines?symbol=ETHBTC&interval=1d&limit=45&endTime=1789525200000",
+    "data_as_of": "2026-09-15",
+    "body_checked": true
+  },
+  {
+    "title": "senate",
+    "url": "https://www.dailypress.senate.gov/tuesday-september-15-2026/",
+    "data_as_of": "2026-09-15",
+    "body_checked": true
+  },
+  {
+    "title": "GLD",
+    "url": "https://api.nasdaq.com/api/quote/GLD/historical?assetclass=etf&fromdate=2026-09-14&todate=2026-09-15&limit=5",
+    "data_as_of": "2026-09-15",
+    "body_checked": true
+  },
+  {
+    "title": "DX-Y.NYB",
+    "url": "https://query2.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1788998400&period2=1789516800&interval=1d",
+    "data_as_of": "2026-09-15",
+    "body_checked": true
+  }
+]

@@ -1,0 +1,96 @@
+{
+  "preflight": {
+    "errors": [],
+    "warnings": [
+      "Official exchange calendar, source prices/news and source-to-zone agreement still require producer verification"
+    ],
+    "zone_counts": {
+      "etf.value": 10,
+      "etf.rising": 7,
+      "stocks.value": 31,
+      "stocks.rising": 30
+    },
+    "overlaps": {
+      "etf": [
+        "0055",
+        "00960"
+      ],
+      "stocks": [
+        "2303"
+      ]
+    }
+  },
+  "context": {
+    "date": "2026-09-16",
+    "water": {
+      "level": 78.5,
+      "previous": 78.8,
+      "change": -0.3,
+      "direction": "falling"
+    },
+    "scenario": {
+      "id": "03",
+      "slug": "high-level-speed-control",
+      "label": "高位控速",
+      "confidence": 0.76,
+      "reason": "水位 78.5% 仍健康但斜率 -0.3pt 放緩/外部壓力升高，追價需控速",
+      "source": "classifier"
+    },
+    "leader_policy": {
+      "source": "morning_brief_editorial_policy",
+      "short_term_bias": "cautious_review",
+      "risk_posture": "balanced_cautious",
+      "water_policy": {
+        "direction": "falling",
+        "change": -0.3,
+        "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
+      },
+      "scenario_context": {
+        "id": "03",
+        "label": "高位控速",
+        "confidence": 0.76
+      },
+      "policy_focus": [
+        "不追急彈；有品質且回檔守穩的標的才小步評估，偏熱與弱勢先檢查，保留事件後調整空間。",
+        "油價上衝、美國10年公債殖利率5.00%；聯準會決議尚未公布，科技小彈不等於壓力解除。",
+        "台股10:16漲0.53%；方舟早盤價值區16漲8跌7平，升溫區20漲7跌3平。",
+        "9/15原油結算：Brent每桶108.75美元、漲2.9%，WTI每桶105.83美元、漲4.38%。沙烏地Yanbu裝運受阻及部分貨載取消增加供應風險；能源題材升溫，也同時增加其他產業成本。"
+      ],
+      "systemic_risk": "中偏高",
+      "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+    }
+  },
+  "mirrors": "equal",
+  "cards": 78,
+  "unique_codes": 75,
+  "technical_records": 75,
+  "all_series_current": true,
+  "browser": {
+    "desktop_width": 1440,
+    "mobile_width": 390,
+    "stock_cards_each": 78,
+    "overflow": false,
+    "expanded_sections_checked": [
+      "s6",
+      "s7",
+      "s8",
+      "s9",
+      "s13"
+    ],
+    "js_exceptions": 0,
+    "technical_loaded_codes": [
+      "2330",
+      "0050",
+      "0052",
+      "2305",
+      "00875"
+    ]
+  },
+  "tests": {
+    "unit_tests_passed": 20,
+    "scenario_regressions_passed": 7
+  },
+  "source_cards_exact": true,
+  "basis_recomputed": -30.8,
+  "foreign_oi_recomputed": -83223
+}
