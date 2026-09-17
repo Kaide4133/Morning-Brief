@@ -1,0 +1,94 @@
+{
+  "generated_at": "2026-09-17T10:15:21+08:00",
+  "window": "2026-09-16 US session through 2026-09-17 09:45 Asia/Taipei",
+  "sources": [
+    {
+      "title": "TWSE MIS 加權指數即時與分鐘資料",
+      "url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+      "data_as_of": "2026-09-17 09:45 Asia/Taipei"
+    },
+    {
+      "title": "TAIFEX MIS 臺指期報價與分鐘資料",
+      "url": "https://mis.taifex.com.tw/futures/RegularSession/EquityIndices/FuturesDomestic/",
+      "data_as_of": "2026-09-17 09:45 Asia/Taipei"
+    },
+    {
+      "title": "TAIFEX 外資期貨交易與未平倉",
+      "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+      "data_as_of": "2026-09-16"
+    },
+    {
+      "title": "Federal Reserve FOMC statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+      "data_as_of": "2026-09-16"
+    },
+    {
+      "title": "Federal Reserve Chairman Warsh opening statement",
+      "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20260916.pdf",
+      "data_as_of": "2026-09-16"
+    },
+    {
+      "title": "Nasdaq SOX official quote",
+      "url": "https://api.nasdaq.com/api/quote/SOX/summary?assetclass=index",
+      "data_as_of": "2026-09-16 close"
+    },
+    {
+      "title": "Nasdaq NDX official quote",
+      "url": "https://api.nasdaq.com/api/quote/NDX/summary?assetclass=index",
+      "data_as_of": "2026-09-16 close"
+    },
+    {
+      "title": "Cboe SPX history",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SPX_History.csv",
+      "data_as_of": "2026-09-16 close"
+    },
+    {
+      "title": "Cboe VIX history",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+      "data_as_of": "2026-09-16 close"
+    },
+    {
+      "title": "FRED Dow Jones Industrial Average",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DJIA&cosd=2026-09-10&coed=2026-09-16",
+      "data_as_of": "2026-09-16 close"
+    },
+    {
+      "title": "Farside Bitcoin ETF flows",
+      "url": "https://farside.co.uk/btc/?t=20260917",
+      "data_as_of": "2026-09-16"
+    },
+    {
+      "title": "Farside Ethereum ETF flows",
+      "url": "https://farside.co.uk/eth/?t=20260917",
+      "data_as_of": "2026-09-16"
+    },
+    {
+      "title": "Binance Spot Klines",
+      "url": "https://api.binance.com/api/v3/klines",
+      "data_as_of": "2026-09-16 UTC"
+    },
+    {
+      "title": "Binance Futures OI and funding",
+      "url": "https://fapi.binance.com/futures/data/openInterestHist",
+      "data_as_of": "2026-09-17 morning"
+    },
+    {
+      "title": "U.S. Treasury Daily Treasury Par Yield Curve",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "data_as_of": "2026-09-16"
+    },
+    {
+      "title": "SPDR Gold Shares holdings history",
+      "url": "https://www.spdrgoldshares.com/usa/gld/",
+      "data_as_of": "2026-09-16"
+    }
+  ],
+  "policy_facts": [
+    "FOMC raised the target range 25bp to 3.75%-4.00% by a 12-0 vote.",
+    "Chairman Warsh said inflation remains too high and broad financial conditions are hard to describe as restrictive."
+  ],
+  "direct_social_signal": {
+    "trump": "secondary Reuters report only; no original permalink",
+    "musk": "none found"
+  }
+}

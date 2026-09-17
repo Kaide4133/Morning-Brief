@@ -1,0 +1,143 @@
+{
+  "generated_at": "2026-09-17T10:15:21+08:00",
+  "price_volume": {
+    "BTCUSDT": {
+      "date": "2026-09-16 UTC",
+      "open": 75644.48,
+      "high": 76560.76,
+      "low": 75064.82,
+      "close": 76206.01,
+      "change_pct": 0.742,
+      "quote_volume_usdt": 1129239634.11,
+      "volume_vs_prior_day_pct": -31.9
+    },
+    "ETHUSDT": {
+      "date": "2026-09-16 UTC",
+      "open": 2398.26,
+      "high": 2430.64,
+      "low": 2369.11,
+      "close": 2418.26,
+      "change_pct": 0.834,
+      "quote_volume_usdt": 772662967.11,
+      "volume_vs_prior_day_pct": -28.5
+    },
+    "ETHBTC": {
+      "date": "2026-09-16 UTC",
+      "open": 0.03171,
+      "high": 0.03184,
+      "low": 0.03144,
+      "close": 0.03173,
+      "change_pct": 0.063,
+      "quote_volume_btc": 174.87,
+      "volume_vs_prior_day_pct": -41.9
+    }
+  },
+  "derivatives": {
+    "BTC": {
+      "oi_contract_units_2026_09_16": 107491.942,
+      "first_2026_09_17_funding": 9.351e-05,
+      "mark": 76347.2,
+      "index": 76376.34130435
+    },
+    "ETH": {
+      "oi_contract_units_2026_09_16": 2314780.32,
+      "first_2026_09_17_funding": 3.297e-05,
+      "mark": 2426.68362016,
+      "index": 2427.8344186
+    }
+  },
+  "treasury_yields_pct": {
+    "2026-09-15": {
+      "2Y": 4.22,
+      "10Y": 5.0,
+      "30Y": 5.46
+    },
+    "2026-09-16": {
+      "2Y": 4.32,
+      "10Y": 5.0,
+      "30Y": 5.42
+    }
+  },
+  "stablecoin_onchain": {
+    "status": "not_confirmed",
+    "note": "No same-cutoff stablecoin or exchange net-flow signal met the publication standard."
+  },
+  "capital_flow": {
+    "as_of": "美股／美債／ETF申贖：9/16；台股：9/17 09:45；加密日K：9/16 UTC。",
+    "headline": "黃金有實際申購，加密反彈未獲現貨資金確認。",
+    "stance": "偏防禦，保留流動性",
+    "summary": "先看價量：BTC、ETH小幅反彈但成交額縮減，ETH/BTC近乎持平；再看實際申贖，BTC與ETH現貨ETF同日淨流出，GLD則增持2.86噸黃金並增發100萬股。美元走強、短端殖利率上升，風險資產尚未形成一致回補。",
+    "reader": {
+      "headline": "資金偏向黃金，沒有全面回補風險資產。",
+      "flow": "9/16 BTC、ETH現貨ETF分別流出1.518億、0.943億美元；GLD增持2.86噸黃金。",
+      "meaning": "幣價雖小彈但量縮，現貨ETF仍流出；反彈更依賴衍生品，不能當成風險全面轉強。",
+      "action": "台股早盤急漲不追；水位下降先控速，美元短債留彈性，黃金不追單日價格。",
+      "watch": "台股漲勢能否守住、美元與短率、BTC／ETH ETF流量是否翻正。"
+    },
+    "assets": [
+      {
+        "asset": "美元／現金",
+        "role": "流動性與短期停泊",
+        "evidence": "聯準會升息後美元對主要貨幣走強；未取得全市場美元基金同日淨流量。",
+        "flow_signal": "價格顯示美元相對需求升高，但不能量化為全市場現金淨流入。",
+        "confidence": "中",
+        "watch": "美元強勢與前端利率是否延續。",
+        "tone": "positive"
+      },
+      {
+        "asset": "美國公債",
+        "role": "利率與存續期間風險",
+        "evidence": "9/16官方殖利率：2Y 4.32%、10Y 5.00%、30Y 5.42%；曲線平坦化。",
+        "flow_signal": "長端價格相對抗跌，但沒有同日全市場債券ETF現金流可核。",
+        "confidence": "高：殖利率；低：流量歸因",
+        "watch": "短端是否續升、10Y能否跌破5%。",
+        "tone": "neutral"
+      },
+      {
+        "asset": "黃金",
+        "role": "非主權信用與通膨分散",
+        "evidence": "GLD持倉由1,047.42增至1,050.28噸，流通份額增加100萬股。",
+        "flow_signal": "約3.94億美元的一級市場淨申購估算，實際持倉增加2.86噸。",
+        "confidence": "高：持倉與份額；中：金額估算",
+        "watch": "美元偏強下GLD持倉能否續增。",
+        "tone": "positive"
+      },
+      {
+        "asset": "Bitcoin",
+        "role": "高波動非主權稀缺資產",
+        "evidence": "9/16 UTC收76,206.01 USDT、漲0.74%，成交額較前日少31.9%。",
+        "flow_signal": "美國現貨ETF流出1.518億美元，連三日合計流出4.423億。",
+        "confidence": "高：ETF流量；中：單一交易所價量",
+        "watch": "ETF是否翻正、槓桿OI是否引發去槓桿。",
+        "tone": "negative"
+      },
+      {
+        "asset": "Ethereum",
+        "role": "應用型高波動資產",
+        "evidence": "9/16 UTC收2,418.26 USDT、漲0.83%；ETH/BTC僅漲0.06%，兩者皆量縮。",
+        "flow_signal": "美國現貨ETF流出0.943億美元；三日流出1.155億，五日仍流入0.710億。",
+        "confidence": "高：ETF流量；中：相對強弱",
+        "watch": "ETH/BTC與ETF申贖能否同步改善。",
+        "tone": "negative"
+      },
+      {
+        "asset": "股票風險",
+        "role": "股權成長曝險",
+        "evidence": "道瓊跌1.21%、S&P500跌0.45%，費半漲0.63%；台股9:45漲1.84%。",
+        "flow_signal": "價格顯示區域與產業分化；未取得9/16全市場股票ETF完整同日流量。",
+        "confidence": "高：指數；低：流量歸因",
+        "watch": "台股急漲能否守住、費半承接是否延續。",
+        "tone": "neutral"
+      }
+    ],
+    "interpretation": [
+      "價量先行、實際申贖確認、新聞只解釋原因。9/16最清楚的流量是黃金申購與加密ETF贖回；美元、公債與股票僅有價格證據。"
+    ],
+    "confirmation": [
+      "台股急漲後不迅速回吐，強勢名單仍有承接。",
+      "美元與前端殖利率不再同步上升。",
+      "BTC／ETH現貨ETF申贖翻正，且價格與ETH/BTC同步改善。"
+    ],
+    "caveat": "GLD約3.94億美元為份額變化乘NAV的估算；美元、殖利率和股價不是現金流。Farside自動表可能事後修正，破折號未擅自當作零。"
+  }
+}

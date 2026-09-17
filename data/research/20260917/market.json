@@ -1,0 +1,203 @@
+{
+  "generated_at": "2026-09-17T10:15:21+08:00",
+  "cutoff": "2026-09-17T09:45:00+08:00",
+  "taiwan": {
+    "sp500": {
+      "value": "7,551.81",
+      "change_pct": -0.4472,
+      "data_as_of": "2026-09-16"
+    },
+    "nasdaq100": {
+      "value": "28,945.06",
+      "change_pct": 0.025,
+      "data_as_of": "2026-09-16"
+    },
+    "nasdaq": {
+      "value": "28,945.06",
+      "change_pct": 0.025,
+      "data_as_of": "2026-09-16"
+    },
+    "dow": {
+      "value": "51,461.90",
+      "change_pct": -1.2117,
+      "data_as_of": "2026-09-16"
+    },
+    "sox": {
+      "value": "11,246.11",
+      "change_pct": 0.6314,
+      "data_as_of": "2026-09-16"
+    },
+    "vix": {
+      "value": "17.71",
+      "change_pct": 2.9651,
+      "data_as_of": "2026-09-16"
+    },
+    "tw_index": {
+      "line": "9/17 09:45盤中：46,690.21點，+841.31點（+1.84%）。",
+      "value": 46690.21,
+      "change_pct": 1.835,
+      "data_as_of": "2026-09-17T09:45:00+08:00"
+    },
+    "futures": {
+      "line": "9/17 09:45臺指期2026/10：46,853點，較參考價+793點（+1.72%）；正價差162.79點。",
+      "value": 46853.0,
+      "contract": "TXFJ6-F",
+      "contract_month": "2026-10",
+      "data_as_of": "2026-09-17T09:45:00+08:00"
+    },
+    "foreign_oi": {
+      "value": -76351,
+      "note": "9/16日終：多單7,805、空單84,156口；未沖銷淨空76,351口。當日交易量多53,295、空50,697口，淨多2,598口。",
+      "data_as_of": "2026-09-16"
+    },
+    "systemic_risk": "中偏高"
+  },
+  "us_indices": {
+    "sp500": {
+      "value": "7,551.81",
+      "change_pct": -0.4472,
+      "data_as_of": "2026-09-16"
+    },
+    "nasdaq100": {
+      "value": "28,945.06",
+      "change_pct": 0.025,
+      "data_as_of": "2026-09-16"
+    },
+    "dow": {
+      "value": "51,461.90",
+      "change_pct": -1.2117,
+      "data_as_of": "2026-09-16"
+    },
+    "sox": {
+      "value": "11,246.11",
+      "change_pct": 0.6314,
+      "data_as_of": "2026-09-16"
+    },
+    "vix": {
+      "value": "17.71",
+      "change_pct": 2.9651,
+      "data_as_of": "2026-09-16"
+    }
+  },
+  "mag7": [
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "price": "332.41",
+      "change_abs": "+1.07",
+      "change_pct": 0.3229,
+      "tier": "watch",
+      "tier_label": "相對抗跌",
+      "signal": "漲0.32%；相對有承接，仍需下一交易日確認。",
+      "data_as_of": "2026-09-16"
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "price": "490.30",
+      "change_abs": "-6.82",
+      "change_pct": -1.3719,
+      "tier": "watch",
+      "tier_label": "承壓",
+      "signal": "跌1.37%；升息後承壓，先看價格能否止穩。",
+      "data_as_of": "2026-09-16"
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Class A",
+      "price": "342.87",
+      "change_abs": "-2.11",
+      "change_pct": -0.6116,
+      "tier": "watch",
+      "tier_label": "承壓",
+      "signal": "跌0.61%；升息後承壓，先看價格能否止穩。",
+      "data_as_of": "2026-09-16"
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "price": "245.96",
+      "change_abs": "-2.46",
+      "change_pct": -0.9903,
+      "tier": "watch",
+      "tier_label": "承壓",
+      "signal": "跌0.99%；升息後承壓，先看價格能否止穩。",
+      "data_as_of": "2026-09-16"
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "price": "213.90",
+      "change_abs": "+1.73",
+      "change_pct": 0.8154,
+      "tier": "watch",
+      "tier_label": "相對抗跌",
+      "signal": "漲0.82%；相對有承接，仍需下一交易日確認。",
+      "data_as_of": "2026-09-16"
+    },
+    {
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "price": "673.31",
+      "change_abs": "+3.07",
+      "change_pct": 0.458,
+      "tier": "watch",
+      "tier_label": "相對抗跌",
+      "signal": "漲0.46%；相對有承接，仍需下一交易日確認。",
+      "data_as_of": "2026-09-16"
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "price": "358.08",
+      "change_abs": "+1.50",
+      "change_pct": 0.4207,
+      "tier": "watch",
+      "tier_label": "相對抗跌",
+      "signal": "漲0.42%；相對有承接，仍需下一交易日確認。",
+      "data_as_of": "2026-09-16"
+    }
+  ],
+  "source_ids": [
+    {
+      "title": "TWSE MIS 加權指數即時與分鐘資料",
+      "url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+      "data_as_of": "2026-09-17 09:45 Asia/Taipei"
+    },
+    {
+      "title": "TAIFEX MIS 臺指期報價與分鐘資料",
+      "url": "https://mis.taifex.com.tw/futures/RegularSession/EquityIndices/FuturesDomestic/",
+      "data_as_of": "2026-09-17 09:45 Asia/Taipei"
+    },
+    {
+      "title": "TAIFEX 外資期貨交易與未平倉",
+      "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+      "data_as_of": "2026-09-16"
+    },
+    {
+      "title": "Nasdaq SOX official quote",
+      "url": "https://api.nasdaq.com/api/quote/SOX/summary?assetclass=index",
+      "data_as_of": "2026-09-16 close"
+    },
+    {
+      "title": "Nasdaq NDX official quote",
+      "url": "https://api.nasdaq.com/api/quote/NDX/summary?assetclass=index",
+      "data_as_of": "2026-09-16 close"
+    },
+    {
+      "title": "Cboe SPX history",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SPX_History.csv",
+      "data_as_of": "2026-09-16 close"
+    },
+    {
+      "title": "Cboe VIX history",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+      "data_as_of": "2026-09-16 close"
+    },
+    {
+      "title": "FRED Dow Jones Industrial Average",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DJIA&cosd=2026-09-10&coed=2026-09-16",
+      "data_as_of": "2026-09-16 close"
+    }
+  ]
+}

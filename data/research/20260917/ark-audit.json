@@ -1,0 +1,664 @@
+{
+  "status": "PASS_WITH_NORMALIZATIONS",
+  "source_policy": {
+    "zone_code_order": "ark_stocks_latest.json / same-run screenshot rows",
+    "price_change": "same-run retained screenshot values; OCR arrow glyph normalized only",
+    "name_industry": "same-run accessibility rows",
+    "technical_spider_used": false
+  },
+  "run_validation": {
+    "latest_pointer_resolved": "ark_stocks_latest.json -> 2026-09-17_09-30-40/ark_stocks.json",
+    "expected_source": "2026-09-17_09-30-40/ark_stocks.json",
+    "pointer_target_match": true,
+    "source_sha256": "4ef5797f7fdb8e30291e883364752eeef2d90e7772b74665d0a45b038a0833a2",
+    "success_ok": true,
+    "stage": "complete",
+    "run_id": "2026-09-17_09-30-40",
+    "trading_day_confirmed": true,
+    "capture_cards": 78,
+    "unique_codes": 75,
+    "four_zone_counts": {
+      "ETF價值區": 10,
+      "ETF升溫區": 7,
+      "產業價值區": 31,
+      "產業升溫區": 30
+    },
+    "etf_overlap": [
+      "0055",
+      "00960"
+    ],
+    "stock_overlap": [
+      "2303"
+    ],
+    "change_repairs": 77,
+    "change_checks_ok": true,
+    "previous_water": {
+      "date": "2026-09-16",
+      "water_level": 78.5
+    },
+    "water_delta_points": -5.2
+  },
+  "corrections": [
+    {
+      "section": "ETF價值區",
+      "rank": 1,
+      "code": "0053",
+      "raw": "45.2(2.17%)",
+      "clean": "▲5.2 (+2.17%)",
+      "source_file": "02_ETF價值區_1.png"
+    },
+    {
+      "section": "ETF價值區",
+      "rank": 2,
+      "code": "0057",
+      "raw": "46.35(1.99%)",
+      "clean": "▲6.35 (+1.99%)",
+      "source_file": "02_ETF價值區_1.png"
+    },
+    {
+      "section": "ETF價值區",
+      "rank": 3,
+      "code": "0052",
+      "raw": "41.35(2.18%)",
+      "clean": "▲1.35 (+2.18%)",
+      "source_file": "02_ETF價值區_1.png"
+    },
+    {
+      "section": "ETF價值區",
+      "rank": 4,
+      "code": "00631L",
+      "raw": "41.38(3.88%)",
+      "clean": "▲1.38 (+3.88%)",
+      "source_file": "02_ETF價值區_1.png"
+    },
+    {
+      "section": "ETF價值區",
+      "rank": 5,
+      "code": "0050",
+      "raw": "42.1(1.96%)",
+      "clean": "▲2.1 (+1.96%)",
+      "source_file": "02_ETF價值區_1.png"
+    },
+    {
+      "section": "ETF價值區",
+      "rank": 6,
+      "code": "006208",
+      "raw": "45.35(2.19%)",
+      "clean": "▲5.35 (+2.19%)",
+      "source_file": "02_ETF價值區_1.png"
+    },
+    {
+      "section": "ETF價值區",
+      "rank": 7,
+      "code": "00875",
+      "raw": "70.15(-0.26%)",
+      "clean": "▼0.15 (-0.26%)",
+      "source_file": "03_ETF價值區_2.png"
+    },
+    {
+      "section": "ETF價值區",
+      "rank": 8,
+      "code": "0056",
+      "raw": "40.8(1.44%)",
+      "clean": "▲0.8 (+1.44%)",
+      "source_file": "03_ETF價值區_2.png"
+    },
+    {
+      "section": "ETF價值區",
+      "rank": 9,
+      "code": "0055",
+      "raw": "40.3(0.6%)",
+      "clean": "▲0.3 (+0.6%)",
+      "source_file": "03_ETF價值區_2.png"
+    },
+    {
+      "section": "ETF價值區",
+      "rank": 10,
+      "code": "00960",
+      "raw": "40.08(0.35%)",
+      "clean": "▲0.08 (+0.35%)",
+      "source_file": "03_ETF價值區_2.png"
+    },
+    {
+      "section": "ETF升溫區",
+      "rank": 1,
+      "code": "00701",
+      "raw": "40.33(0.79%)",
+      "clean": "▲0.33 (+0.79%)",
+      "source_file": "04_ETF升溫區_1.png"
+    },
+    {
+      "section": "ETF升溫區",
+      "rank": 2,
+      "code": "00960",
+      "raw": "40.08(0.35%)",
+      "clean": "▲0.08 (+0.35%)",
+      "source_file": "04_ETF升溫區_1.png"
+    },
+    {
+      "section": "ETF升溫區",
+      "rank": 3,
+      "code": "00939",
+      "raw": "40.17(0.7%)",
+      "clean": "▲0.17 (+0.7%)",
+      "source_file": "04_ETF升溫區_1.png"
+    },
+    {
+      "section": "ETF升溫區",
+      "rank": 4,
+      "code": "00878",
+      "raw": "40.4(1.16%)",
+      "clean": "▲0.4 (+1.16%)",
+      "source_file": "04_ETF升溫區_1.png"
+    },
+    {
+      "section": "ETF升溫區",
+      "rank": 5,
+      "code": "00642U",
+      "raw": "70.79(-2.31%)",
+      "clean": "▼0.79 (-2.31%)",
+      "source_file": "04_ETF升溫區_1.png"
+    },
+    {
+      "section": "ETF升溫區",
+      "rank": 6,
+      "code": "0055",
+      "raw": "40.3(0.6%)",
+      "clean": "▲0.3 (+0.6%)",
+      "source_file": "04_ETF升溫區_1.png"
+    },
+    {
+      "section": "ETF升溫區",
+      "rank": 7,
+      "code": "00715L",
+      "raw": "72.15(-3%)",
+      "clean": "▼2.15 (-3%)",
+      "source_file": "05_ETF升溫區_2.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 1,
+      "code": "2345",
+      "raw": "425(1.36%)",
+      "clean": "▲25 (+1.36%)",
+      "source_file": "06_產業價值區_1.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 2,
+      "code": "1785",
+      "raw": "42.4(2.53%)",
+      "clean": "▲2.4 (+2.53%)",
+      "source_file": "06_產業價值區_1.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 3,
+      "code": "6515",
+      "raw": "▲330(5.31%)",
+      "clean": "▲330 (+5.31%)",
+      "source_file": "06_產業價值區_1.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 4,
+      "code": "2059",
+      "raw": "▲375(3.11%)",
+      "clean": "▲375 (+3.11%)",
+      "source_file": "06_產業價值區_1.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 5,
+      "code": "2324",
+      "raw": "40.55(1.47%)",
+      "clean": "▲0.55 (+1.47%)",
+      "source_file": "06_產業價值區_1.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 6,
+      "code": "6285",
+      "raw": "48.5(3.88%)",
+      "clean": "▲8.5 (+3.88%)",
+      "source_file": "06_產業價值區_1.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 7,
+      "code": "2383",
+      "raw": "420(0.39%)",
+      "clean": "▲20 (+0.39%)",
+      "source_file": "07_產業價值區_2.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 8,
+      "code": "3008",
+      "raw": "430(0.48%)",
+      "clean": "▲30 (+0.48%)",
+      "source_file": "07_產業價值區_2.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 9,
+      "code": "2330",
+      "raw": "455(2.31%)",
+      "clean": "▲55 (+2.31%)",
+      "source_file": "07_產業價值區_2.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 10,
+      "code": "2360",
+      "raw": "465(3.11%)",
+      "clean": "▲65 (+3.11%)",
+      "source_file": "07_產業價值區_2.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 11,
+      "code": "2313",
+      "raw": "▲4(1.78%)",
+      "clean": "▲4 (+1.78%)",
+      "source_file": "07_產業價值區_2.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 12,
+      "code": "2327",
+      "raw": "415(2.8%)",
+      "clean": "▲15 (+2.8%)",
+      "source_file": "08_產業價值區_3.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 13,
+      "code": "2308",
+      "raw": "▲20(1.17%)",
+      "clean": "▲20 (+1.17%)",
+      "source_file": "08_產業價值區_3.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 14,
+      "code": "2449",
+      "raw": "49(3.44%)",
+      "clean": "▲9 (+3.44%)",
+      "source_file": "08_產業價值區_3.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 15,
+      "code": "5274",
+      "raw": "▲550(3.01%)",
+      "clean": "▲550 (+3.01%)",
+      "source_file": "08_產業價值區_3.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 16,
+      "code": "2454",
+      "raw": "4125(2.76%)",
+      "clean": "▲125 (+2.76%)",
+      "source_file": "08_產業價值區_3.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 17,
+      "code": "6239",
+      "raw": "46.5(2.37%)",
+      "clean": "▲6.5 (+2.37%)",
+      "source_file": "09_產業價值區_4.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 18,
+      "code": "3665",
+      "raw": "480(4.01%)",
+      "clean": "▲80 (+4.01%)",
+      "source_file": "09_產業價值區_4.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 19,
+      "code": "3711",
+      "raw": "▲18(2.98%)",
+      "clean": "▲18 (+2.98%)",
+      "source_file": "09_產業價值區_4.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 20,
+      "code": "6415",
+      "raw": "43.5(0.84%)",
+      "clean": "▲3.5 (+0.84%)",
+      "source_file": "09_產業價值區_4.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 21,
+      "code": "2382",
+      "raw": "43(0.88%)",
+      "clean": "▲3 (+0.88%)",
+      "source_file": "09_產業價值區_4.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 22,
+      "code": "4958",
+      "raw": "46.5(1.32%)",
+      "clean": "▲6.5 (+1.32%)",
+      "source_file": "10_產業價值區_5.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 23,
+      "code": "6223",
+      "raw": "▲245(4.38%)",
+      "clean": "▲245 (+4.38%)",
+      "source_file": "10_產業價值區_5.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 24,
+      "code": "3189",
+      "raw": "46(0.73%)",
+      "clean": "▲6 (+0.73%)",
+      "source_file": "10_產業價值區_5.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 25,
+      "code": "2379",
+      "raw": "▲11(1.53%)",
+      "clean": "▲11 (+1.53%)",
+      "source_file": "10_產業價值區_5.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 26,
+      "code": "6213",
+      "raw": "713(-2.36%)",
+      "clean": "▼13 (-2.36%)",
+      "source_file": "10_產業價值區_5.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 27,
+      "code": "3034",
+      "raw": "48(1.46%)",
+      "clean": "▲8 (+1.46%)",
+      "source_file": "11_產業價值區_6.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 28,
+      "code": "6274",
+      "raw": "▲20(1.41%)",
+      "clean": "▲20 (+1.41%)",
+      "source_file": "11_產業價值區_6.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 29,
+      "code": "3037",
+      "raw": "431(3.23%)",
+      "clean": "▲31 (+3.23%)",
+      "source_file": "11_產業價值區_6.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 30,
+      "code": "2455",
+      "raw": "442(8.16%)",
+      "clean": "▲42 (+8.16%)",
+      "source_file": "11_產業價值區_6.png"
+    },
+    {
+      "section": "產業價值區",
+      "rank": 31,
+      "code": "2303",
+      "raw": "45(3.52%)",
+      "clean": "▲5 (+3.52%)",
+      "source_file": "11_產業價值區_6.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 1,
+      "code": "2305",
+      "raw": "44.9(9.92%)",
+      "clean": "▲4.9 (+9.92%)",
+      "source_file": "12_產業升溫區_1.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 2,
+      "code": "8227",
+      "raw": "40.5(0.18%)",
+      "clean": "▲0.5 (+0.18%)",
+      "source_file": "12_產業升溫區_1.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 3,
+      "code": "6021",
+      "raw": "▲0.2(0.45%)",
+      "clean": "▲0.2 (+0.45%)",
+      "source_file": "12_產業升溫區_1.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 4,
+      "code": "2883",
+      "raw": "40.65(1.66%)",
+      "clean": "▲0.65 (+1.66%)",
+      "source_file": "12_產業升溫區_1.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 5,
+      "code": "2801",
+      "raw": "40.4(1.38%)",
+      "clean": "▲0.4 (+1.38%)",
+      "source_file": "12_產業升溫區_1.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 6,
+      "code": "3441",
+      "raw": "▲12(6.45%)",
+      "clean": "▲12 (+6.45%)",
+      "source_file": "12_產業升溫區_1.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 8,
+      "code": "2890",
+      "raw": "40.05(0.11%)",
+      "clean": "▲0.05 (+0.11%)",
+      "source_file": "13_產業升溫區_2.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 9,
+      "code": "2887",
+      "raw": "70.05(-0.11%)",
+      "clean": "▼0.05 (-0.11%)",
+      "source_file": "13_產業升溫區_2.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 10,
+      "code": "5464",
+      "raw": "42.6(2.77%)",
+      "clean": "▲2.6 (+2.77%)",
+      "source_file": "13_產業升溫區_2.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 11,
+      "code": "2880",
+      "raw": "40.45(0.95%)",
+      "clean": "▲0.45 (+0.95%)",
+      "source_file": "13_產業升溫區_2.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 12,
+      "code": "2892",
+      "raw": "40.15(0.37%)",
+      "clean": "▲0.15 (+0.37%)",
+      "source_file": "14_產業升溫區_3.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 13,
+      "code": "6426",
+      "raw": "433(10%)",
+      "clean": "▲33 (+10%)",
+      "source_file": "14_產業升溫區_3.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 14,
+      "code": "6957",
+      "raw": "▲11.5(4.45%)",
+      "clean": "▲11.5 (+4.45%)",
+      "source_file": "14_產業升溫區_3.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 15,
+      "code": "3055",
+      "raw": "▲2(1.22%)",
+      "clean": "▲2 (+1.22%)",
+      "source_file": "14_產業升溫區_3.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 16,
+      "code": "6227",
+      "raw": "46(4.51%)",
+      "clean": "▲6 (+4.51%)",
+      "source_file": "14_產業升溫區_3.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 17,
+      "code": "6538",
+      "raw": "▲4.5(1.18%)",
+      "clean": "▲4.5 (+1.18%)",
+      "source_file": "15_產業升溫區_4.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 18,
+      "code": "3624",
+      "raw": "43(2.44%)",
+      "clean": "▲3 (+2.44%)",
+      "source_file": "15_產業升溫區_4.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 19,
+      "code": "2891",
+      "raw": "▲0.1(0.14%)",
+      "clean": "▲0.1 (+0.14%)",
+      "source_file": "15_產業升溫區_4.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 20,
+      "code": "2413",
+      "raw": "40.4(0.75%)",
+      "clean": "▲0.4 (+0.75%)",
+      "source_file": "15_產業升溫區_4.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 21,
+      "code": "2221",
+      "raw": "▲10.5(9.95%)",
+      "clean": "▲10.5 (+9.95%)",
+      "source_file": "15_產業升溫區_4.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 22,
+      "code": "2303",
+      "raw": "44.5(3.17%)",
+      "clean": "▲4.5 (+3.17%)",
+      "source_file": "16_產業升溫區_5.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 23,
+      "code": "6416",
+      "raw": "43(2.54%)",
+      "clean": "▲3 (+2.54%)",
+      "source_file": "16_產業升溫區_5.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 24,
+      "code": "6218",
+      "raw": "41.6(2.96%)",
+      "clean": "▲1.6 (+2.96%)",
+      "source_file": "16_產業升溫區_5.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 25,
+      "code": "6168",
+      "raw": "40.6(1.87%)",
+      "clean": "▲0.6 (+1.87%)",
+      "source_file": "16_產業升溫區_5.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 26,
+      "code": "6173",
+      "raw": "46(1.9%)",
+      "clean": "▲6 (+1.9%)",
+      "source_file": "16_產業升溫區_5.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 27,
+      "code": "6147",
+      "raw": "▲2.5(1.2%)",
+      "clean": "▲2.5 (+1.2%)",
+      "source_file": "17_產業升溫區_6.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 28,
+      "code": "4198",
+      "raw": "40.55(1.11%)",
+      "clean": "▲0.55 (+1.11%)",
+      "source_file": "17_產業升溫區_6.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 29,
+      "code": "6861",
+      "raw": "▲2.5(1.12%)",
+      "clean": "▲2.5 (+1.12%)",
+      "source_file": "17_產業升溫區_6.png"
+    },
+    {
+      "section": "產業升溫區",
+      "rank": 30,
+      "code": "6870",
+      "raw": "76(-1.9%)",
+      "clean": "▼6 (-1.9%)",
+      "source_file": "17_產業升溫區_6.png"
+    }
+  ],
+  "source_file": "ark_stocks_latest.json",
+  "source_hash": "4ef5797f7fdb8e30291e883364752eeef2d90e7772b74665d0a45b038a0833a2",
+  "success_hash": "93cdd9c2fd6636a9394d1a48cbe12da92ad5ce98908708fe93e83d15537446b1",
+  "ark_validation_hash": "f89d690797de8266d8384efdd065c96a31dafea2eeec68d99d39be606831c6c9",
+  "manifest_entries_checked": 23
+}

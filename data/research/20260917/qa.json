@@ -1,0 +1,147 @@
+{
+  "generated_at": "2026-09-17T10:26:10+08:00",
+  "status": "PASS",
+  "pipeline_check": {
+    "date": "2026-09-17",
+    "mode": "check",
+    "status": "checked_not_published",
+    "published": false,
+    "errors": [],
+    "warnings": [
+      "Official exchange calendar, source prices/news and source-to-zone agreement still require producer verification"
+    ],
+    "timings_seconds": {
+      "preflight": 0.0005,
+      "render_checks": 0.036,
+      "total": 0.0365
+    },
+    "issue_sha256": "09a7c934f697682428419f096c343316827b7b0ea27fa039808f88cc13104b4f",
+    "zone_counts": {
+      "etf.value": 10,
+      "etf.rising": 7,
+      "stocks.value": 31,
+      "stocks.rising": 30
+    },
+    "overlaps": {
+      "etf": [
+        "0055",
+        "00960"
+      ],
+      "stocks": [
+        "2303"
+      ]
+    }
+  },
+  "acceptance": {
+    "date": "2026-09-17",
+    "scenario": "06",
+    "water": 73.3,
+    "delta": -5.2,
+    "cards": 78,
+    "unique_codes": 75,
+    "technical_records": 75,
+    "mirror_sets": 7
+  },
+  "browser_qa": {
+    "checked_at": "2026-09-17T02:24:48.236Z",
+    "pages": {
+      "report-mobile": {
+        "status": 200,
+        "title": "Kelvin Wiggly｜2026/09/17 市場晨報",
+        "h1": "盤面急漲，水位先收縮。",
+        "date_present": true,
+        "water_present": true,
+        "scenario_present": true,
+        "card_count": 78,
+        "deep_dive_open": [
+          false,
+          false
+        ],
+        "horizontal_overflow_px": 0,
+        "disclaimer_nonempty": true,
+        "forbidden_found": []
+      },
+      "report-desktop": {
+        "status": 200,
+        "title": "Kelvin Wiggly｜2026/09/17 市場晨報",
+        "h1": "盤面急漲，水位先收縮。",
+        "date_present": true,
+        "water_present": true,
+        "scenario_present": true,
+        "card_count": 78,
+        "deep_dive_open": [
+          false,
+          false
+        ],
+        "horizontal_overflow_px": 0,
+        "disclaimer_nonempty": true
+      },
+      "index-mobile": {
+        "status": 200,
+        "title": "Kelvin Wiggly｜Morning Brief Home",
+        "h1": "Kelvin Wiggly 每日市場晨報",
+        "date_present": true,
+        "water_present": true,
+        "scenario_present": true,
+        "card_count": 0,
+        "deep_dive_open": [],
+        "horizontal_overflow_px": 0,
+        "disclaimer_nonempty": true
+      },
+      "water-mobile": {
+        "status": 200,
+        "title": "水位 × 大盤｜Kelvin Wiggly Morning Brief",
+        "h1": "水位，與大盤的距離。",
+        "date_present": true,
+        "water_present": true,
+        "scenario_present": true,
+        "card_count": 0,
+        "deep_dive_open": [],
+        "horizontal_overflow_px": 0,
+        "disclaimer_nonempty": true
+      }
+    },
+    "console_errors": [
+      {
+        "name": "report-mobile",
+        "text": "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "location": {
+          "url": "http://127.0.0.1:18081/favicon.ico",
+          "line": 0,
+          "column": 0,
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      }
+    ],
+    "page_errors": [],
+    "request_failures": [],
+    "response_errors": [],
+    "technical": {
+      "status": 200,
+      "as_of": "2026-09-17",
+      "record_count": 75,
+      "missing_count": 0
+    },
+    "ignored_errors": [
+      {
+        "name": "report-mobile",
+        "text": "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "location": {
+          "url": "http://127.0.0.1:18081/favicon.ico",
+          "line": 0,
+          "column": 0,
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      }
+    ],
+    "failures": [],
+    "ok": true
+  },
+  "notes": [
+    "Mobile and desktop report, mobile index, and mobile water page returned HTTP 200 with zero horizontal overflow.",
+    "Both deep-dive sections were closed by default.",
+    "The only ignored browser console item was the browser-requested /favicon.ico 404; no application request, page, or console error remained."
+  ]
+}

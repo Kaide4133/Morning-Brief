@@ -1,0 +1,33 @@
+{
+  "generated_at": "2026-09-17T10:15:21+08:00",
+  "btc_etf_2026_09_16_usdm": -151.8,
+  "btc_three_session_usdm": -442.3,
+  "btc_five_session_usdm": -738.2,
+  "eth_etf_2026_09_16_usdm": -94.3,
+  "eth_three_session_usdm": -115.5,
+  "eth_five_session_usdm": 71.0,
+  "gld_holdings_tonnes": {
+    "2026-09-15": 1047.42,
+    "2026-09-16": 1050.28,
+    "change": 2.86
+  },
+  "gld_shares_created": 1000000,
+  "gld_approx_creation_value_usd": 393931899,
+  "sources": [
+    {
+      "title": "Farside Bitcoin ETF flows",
+      "url": "https://farside.co.uk/btc/?t=20260917",
+      "data_as_of": "2026-09-16"
+    },
+    {
+      "title": "Farside Ethereum ETF flows",
+      "url": "https://farside.co.uk/eth/?t=20260917",
+      "data_as_of": "2026-09-16"
+    },
+    {
+      "title": "SPDR Gold Shares holdings history",
+      "url": "https://www.spdrgoldshares.com/usa/gld/",
+      "data_as_of": "2026-09-16"
+    }
+  ]
+}
