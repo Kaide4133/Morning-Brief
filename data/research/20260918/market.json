@@ -1,0 +1,127 @@
+{
+  "as_of": "2026-09-18T09:23:00+08:00",
+  "tw_index": {
+    "line": "9/18 09:23盤中：46,791.70點，+503.70點（+1.09%）。",
+    "value": 46791.7,
+    "change_pct": 1.09,
+    "data_as_of": "2026-09-18T09:23:00+08:00"
+  },
+  "futures": {
+    "line": "9/18 09:23臺指期2026/10：47,037點，較參考價+578點（+1.24%）；正價差245.30點。",
+    "value": 47037.0,
+    "contract": "TXFJ6-F",
+    "contract_month": "2026-10",
+    "data_as_of": "2026-09-18T09:23:00+08:00"
+  },
+  "foreign_oi": {
+    "value": -78674,
+    "note": "9/17日終：多單8,161、空單86,835口；未沖銷淨空78,674口。",
+    "data_as_of": "2026-09-17"
+  },
+  "us_close": {
+    "sp500": {
+      "value": "7,637.76",
+      "change_pct": 1.14,
+      "data_as_of": "2026-09-17"
+    },
+    "nasdaq100": {
+      "value": "29,446.98",
+      "change_pct": 1.73,
+      "data_as_of": "2026-09-17"
+    },
+    "dow": {
+      "value": "51,778.04",
+      "change_pct": 0.61,
+      "data_as_of": "2026-09-17"
+    },
+    "sox": {
+      "value": "11,599.49",
+      "change_pct": 3.14,
+      "data_as_of": "2026-09-17"
+    },
+    "vix": {
+      "value": "15.44",
+      "change_pct": -12.82,
+      "data_as_of": "2026-09-17"
+    }
+  },
+  "mag7": [
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "price": "337.00",
+      "change_abs": "+4.59",
+      "change_pct": 1.38,
+      "tier": "watch",
+      "tier_label": "跟漲",
+      "signal": "漲1.38%；隨科技風險偏好回升，仍看下一交易日承接。",
+      "data_as_of": "2026-09-17"
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "price": "497.75",
+      "change_abs": "+7.45",
+      "change_pct": 1.52,
+      "tier": "positive",
+      "tier_label": "偏強",
+      "signal": "漲1.52%；隨科技風險偏好回升，仍看下一交易日承接。",
+      "data_as_of": "2026-09-17"
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Class A",
+      "price": "347.33",
+      "change_abs": "+4.46",
+      "change_pct": 1.3,
+      "tier": "watch",
+      "tier_label": "跟漲",
+      "signal": "漲1.30%；隨科技風險偏好回升，仍看下一交易日承接。",
+      "data_as_of": "2026-09-17"
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "price": "251.19",
+      "change_abs": "+5.23",
+      "change_pct": 2.13,
+      "tier": "positive",
+      "tier_label": "偏強",
+      "signal": "漲2.13%；隨科技風險偏好回升，仍看下一交易日承接。",
+      "data_as_of": "2026-09-17"
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "price": "219.34",
+      "change_abs": "+5.44",
+      "change_pct": 2.54,
+      "tier": "strong",
+      "tier_label": "領先",
+      "signal": "漲2.54%；隨科技風險偏好回升，仍看下一交易日承接。",
+      "data_as_of": "2026-09-17"
+    },
+    {
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "price": "682.31",
+      "change_abs": "+9.00",
+      "change_pct": 1.34,
+      "tier": "watch",
+      "tier_label": "跟漲",
+      "signal": "漲1.34%；隨科技風險偏好回升，仍看下一交易日承接。",
+      "data_as_of": "2026-09-17"
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "price": "366.20",
+      "change_abs": "+8.12",
+      "change_pct": 2.27,
+      "tier": "positive",
+      "tier_label": "偏強",
+      "signal": "漲2.27%；隨科技風險偏好回升，仍看下一交易日承接。",
+      "data_as_of": "2026-09-17"
+    }
+  ]
+}

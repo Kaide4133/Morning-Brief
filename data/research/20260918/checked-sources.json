@@ -1,0 +1,95 @@
+{
+  "checked_at": "2026-09-18T09:35:00+08:00",
+  "sources": [
+    {
+      "title": "TWSE MIS 加權指數即時與分鐘資料",
+      "url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+      "data_as_of": "2026-09-18 09:23 Asia/Taipei"
+    },
+    {
+      "title": "TWSE 加權指數前收",
+      "url": "https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=20260917&type=IND&response=json",
+      "data_as_of": "2026-09-17"
+    },
+    {
+      "title": "TAIFEX MIS 臺指期報價與分鐘資料",
+      "url": "https://mis.taifex.com.tw/futures/RegularSession/EquityIndices/FuturesDomestic/",
+      "data_as_of": "2026-09-18 09:23 Asia/Taipei"
+    },
+    {
+      "title": "TAIFEX 外資期貨未平倉",
+      "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+      "data_as_of": "2026-09-17"
+    },
+    {
+      "title": "Cboe SPX history",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SPX_History.csv",
+      "data_as_of": "2026-09-17 close"
+    },
+    {
+      "title": "Nasdaq NDX official quote",
+      "url": "https://api.nasdaq.com/api/quote/NDX/info?assetclass=index",
+      "data_as_of": "2026-09-17 close"
+    },
+    {
+      "title": "Nasdaq SOX official quote",
+      "url": "https://api.nasdaq.com/api/quote/SOX/info?assetclass=index",
+      "data_as_of": "2026-09-17 close"
+    },
+    {
+      "title": "Cboe VIX history",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+      "data_as_of": "2026-09-17 close"
+    },
+    {
+      "title": "FRED Dow Jones Industrial Average",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DJIA&cosd=2026-09-15&coed=2026-09-18",
+      "data_as_of": "2026-09-17 close"
+    },
+    {
+      "title": "Reuters Wall Street close",
+      "url": "https://reuters.com/business/wall-st-futures-rise-fed-rate-hike-lifts-long-standing-overhang-2026-09-17",
+      "data_as_of": "2026-09-17"
+    },
+    {
+      "title": "Reuters Taiwan semiconductor policy report",
+      "url": "https://www.reuters.com/world/china/taiwan-voices-concern-over-trumps-claim-its-chip-industry-stole-us-business-2026-09-17/",
+      "data_as_of": "2026-09-17"
+    },
+    {
+      "title": "Reuters China AI forum report",
+      "url": "https://www.reuters.com/business/huawei-alibaba-unveil-new-tech-capture-ai-frenzy-china-forum-2026-09-17/",
+      "data_as_of": "2026-09-17"
+    },
+    {
+      "title": "U.S. Treasury Daily Treasury Par Yield Curve",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "data_as_of": "2026-09-17"
+    },
+    {
+      "title": "Farside Bitcoin ETF flows",
+      "url": "https://farside.co.uk/btc/",
+      "data_as_of": "latest final verified 2026-09-16"
+    },
+    {
+      "title": "Farside Ethereum ETF flows",
+      "url": "https://farside.co.uk/eth/",
+      "data_as_of": "latest final verified 2026-09-16"
+    },
+    {
+      "title": "Binance Spot Klines",
+      "url": "https://api.binance.com/api/v3/klines",
+      "data_as_of": "2026-09-17 UTC"
+    },
+    {
+      "title": "SPDR Gold Shares",
+      "url": "https://www.spdrgoldshares.com/usa/gld/",
+      "data_as_of": "2026-09-18 checked; 9/17 final holdings unavailable"
+    }
+  ],
+  "warnings": [
+    "台股與臺指期均為盤中分鐘收值，非日終。",
+    "美元、殖利率、黃金與股價為價格證據，不冒充現金流。",
+    "9/17加密現貨ETF最終申贖截至查核尚未核得，沿用9/16最新可核終值並明示日期。"
+  ]
+}

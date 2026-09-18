@@ -1,0 +1,34 @@
+{
+  "date": "2026-09-18",
+  "source": "local ark_stocks_latest.json",
+  "generatedAt": "2026-09-18T01:16:15.629679+00:00",
+  "water_level": 69.9,
+  "previous_water_level": 73.3,
+  "delta": -3.4,
+  "direction": "下降",
+  "summary_total_rows": 78,
+  "actual_total_rows": 78,
+  "unique_codes": 75,
+  "zone_counts": {
+    "ETF價值區": 10,
+    "ETF升溫區": 7,
+    "產業價值區": 31,
+    "產業升溫區": 30
+  },
+  "within_zone_duplicates": 0,
+  "cross_zone_overlaps": {
+    "ETF": ["0055", "00960"],
+    "stocks": ["2303"]
+  },
+  "verified_name_mapping": {
+    "2305": "全友",
+    "6239": "力成",
+    "2801": "彰銀"
+  },
+  "source_numeric_suppression": {
+    "price_and_change": ["0053", "0057", "6223", "6168"],
+    "truncated_monthly_metrics": ["2324", "2360", "2327", "2892", "2413"],
+    "policy": "保留代碼與區域歸屬；來源缺值或截斷數值顯示為破折號，不以NAV、鄰卡AX值或推估數字代替。"
+  },
+  "status": "pass"
+}

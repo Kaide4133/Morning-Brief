@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-18",
+  "status": "pass",
+  "pipeline_check": {
+    "errors": 0,
+    "warnings": ["官方交易日、盤中市場與方舟區域內容已由製作者依官方API及同輪來源人工覆核"],
+    "zone_counts": [10, 7, 31, 30],
+    "etf_overlap": ["0055", "00960"],
+    "stock_overlap": ["2303"]
+  },
+  "tests": {
+    "unittest": "43/43 passed",
+    "scenario_regression": "7/7 passed"
+  },
+  "rendered": {
+    "cards": 78,
+    "unique_codes": 75,
+    "overlap_markers": 6,
+    "water_level": 69.9,
+    "context_date": "2026-09-18",
+    "dated_html_sha256": "589ca15f1505dcb30e86aa502dc8cb9c2ae2a8320f7121b77075dad28e0559fc",
+    "root_docs_site_mirrors": "identical"
+  },
+  "reader_boundary": {
+    "source_urls_exposed": false,
+    "internal_paths_exposed": false,
+    "internal_workflow_terms_exposed": false,
+    "other_trading_frameworks_inserted": false
+  },
+  "visual": {
+    "desktop_1440x1400": "pass",
+    "mobile_iframe_390px": "pass",
+    "notes": "封面、標題、日期、水位、06情境與導言均可見；390 CSS像素手機版無水平截斷或重疊。"
+  },
+  "http": {
+    "dated_report": 200,
+    "homepage": 200,
+    "water_page": 200,
+    "report_asset_requests": 200,
+    "favicon": 404,
+    "favicon_effect": "non-blocking"
+  }
+}

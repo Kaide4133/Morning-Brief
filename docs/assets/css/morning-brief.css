@@ -1217,6 +1217,7 @@ a:hover { text-decoration: underline; }
 }
 
 @media (max-width: 768px) {
+  html, body { max-width: 100%; overflow-x: hidden; }
   .masthead-inner {
     padding: 10px 20px;
     gap: 8px;
@@ -1237,8 +1238,16 @@ a:hover { text-decoration: underline; }
     white-space: normal;
   }
   .masthead-inner .nav-link { margin-left: 0; }
-  .container { padding: 0 20px; }
+  .container { width: 100%; max-width: 100%; padding: 0 20px; }
   .hero-zone { padding: 32px 0; }
+  .hero-panel { width: 100%; min-width: 0; padding: 22px 18px; }
+  .hero-headline {
+    max-width: 100%;
+    font-size: clamp(29px, 8.2vw, 38px);
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+  .hero-subhead { max-width: 100%; overflow-wrap: anywhere; }
   .section-zone { padding: 36px 0; }
   .section-head { grid-template-columns: 1fr; }
   .section-icon { width: 44px; height: 44px; }

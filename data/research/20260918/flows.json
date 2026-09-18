@@ -1,0 +1,62 @@
+{
+  "as_of": "美股／美債：9/17；台股：9/18 09:23；加密日K：9/17 UTC；加密ETF最新可核終值：9/16。",
+  "method": "price/volume first; actual ETF or holdings flow second; news only for causal context",
+  "headline": "價格風險偏好回升，新增現貨資金尚未全面確認。",
+  "assets": [
+    {
+      "asset": "美元／現金",
+      "role": "流動性與短期停泊",
+      "evidence": "美元指數9/17約收100.23，較9/16的100.31小跌約0.08%，但仍在七週高檔附近。",
+      "flow_signal": "只有匯價證據，未取得全市場美元基金同日淨流量。",
+      "confidence": "中：價格；低：流量歸因",
+      "watch": "美元是否重新站回100.31上方。",
+      "tone": "neutral"
+    },
+    {
+      "asset": "美國公債",
+      "role": "利率與存續期間風險",
+      "evidence": "9/17官方殖利率：2Y 4.67%、10Y 4.94%、30Y 5.29%；較前日各下降7、7、6個基點。",
+      "flow_signal": "殖利率下降代表債券價格回升，但沒有同日全市場債券ETF現金流可核。",
+      "confidence": "高：殖利率；低：流量歸因",
+      "watch": "10Y能否持續低於5%，前端是否再轉升。",
+      "tone": "positive"
+    },
+    {
+      "asset": "黃金",
+      "role": "非主權信用與通膨分散",
+      "evidence": "COMEX黃金期貨9/17約收4,397.7美元，較前日上漲約0.23%。",
+      "flow_signal": "未取得9/17 GLD持倉與份額最終更新，不以價格上漲代替申購流量。",
+      "confidence": "中：價格；低：同日流量",
+      "watch": "GLD官方持倉更新與美元方向。",
+      "tone": "neutral"
+    },
+    {
+      "asset": "Bitcoin",
+      "role": "高波動非主權稀缺資產",
+      "evidence": "9/17 UTC收76,417.01 USDT、漲0.28%；成交額8.36億USDT，較前日少25.9%。",
+      "flow_signal": "9/17美國現貨ETF最終總額待核；最新可核9/16為淨流出5.233億美元。",
+      "confidence": "中：交易所價量；中：前一日ETF流量",
+      "watch": "ETF是否翻正、價格上漲時成交能否放大。",
+      "tone": "neutral"
+    },
+    {
+      "asset": "Ethereum",
+      "role": "應用型高波動資產",
+      "evidence": "9/17 UTC收2,447.28 USDT、漲1.20%；成交額5.83億USDT，較前日少24.5%；ETH/BTC升0.91%。",
+      "flow_signal": "9/17美國現貨ETF最終總額待核；最新可核9/16為淨流出0.887億美元。",
+      "confidence": "中：交易所價量；中：前一日ETF流量",
+      "watch": "ETH/BTC改善能否與ETF申贖同步。",
+      "tone": "neutral"
+    },
+    {
+      "asset": "股票風險",
+      "role": "股權成長曝險",
+      "evidence": "S&P500漲1.14%、Nasdaq-100漲1.73%、費半漲3.14%；台股9:23漲1.09%。",
+      "flow_signal": "價格顯示科技風險偏好回升；未取得9/17全市場股票ETF完整同日流量。",
+      "confidence": "高：指數；低：流量歸因",
+      "watch": "台股早盤漲勢與費半承接能否延續。",
+      "tone": "positive"
+    }
+  ],
+  "caveat": "美元、殖利率、黃金與股價都是價格證據，不冒充現金流；Farside同日資料可能於美股收盤後分批更新，因此本期保留待確認標記。"
+}
