@@ -1,0 +1,62 @@
+{
+  "as_of": "美股／美債／加密ETF：9/18；台股：9/21 09:59；加密日K：9/20 UTC；黃金ETF：8/31。",
+  "method": "price/volume first; actual ETF or holdings flow second; news only for causal context",
+  "headline": "半導體與加密價格修復，流量只得到局部確認。",
+  "assets": [
+    {
+      "asset": "美元／現金",
+      "role": "流動性與短期停泊",
+      "evidence": "9/21亞洲早盤歐元約1.1477美元、美元兌日圓約157；美元廣泛偏強。",
+      "flow_signal": "匯率是價格訊號，未取得美元基金同日實際申贖。",
+      "confidence": "中：價格；低：流量歸因",
+      "watch": "美元是否續強並壓抑新台幣與風險資產。",
+      "tone": "negative"
+    },
+    {
+      "asset": "美國公債",
+      "role": "利率與存續期間風險",
+      "evidence": "9/18官方殖利率：2Y 4.76%、10Y 5.01%、30Y 5.34%，較9/17上升9、7、5個基點。",
+      "flow_signal": "殖利率上升代表債券價格承壓，不等同債券基金實際流出。",
+      "confidence": "高：官方殖利率；低：流量歸因",
+      "watch": "10Y能否回到5%下方、前端升息預期是否降溫。",
+      "tone": "negative"
+    },
+    {
+      "asset": "黃金",
+      "role": "非主權信用與通膨分散",
+      "evidence": "WGC：8月全球實體黃金ETF淨流入180億美元，持有量增121噸至4,189噸；9/21亞洲早盤現貨約4,368美元。",
+      "flow_signal": "月度實際流入仍強；9月短線價格不冒充單日ETF流量。",
+      "confidence": "高：WGC月度流量；中：即時價格",
+      "watch": "美元與殖利率續強時，金價能否守住高檔。",
+      "tone": "positive"
+    },
+    {
+      "asset": "Bitcoin",
+      "role": "高波動非主權稀缺資產",
+      "evidence": "9/20 UTC收81,178 USDT，3日+6.23%、5日+7.32%，高於MA20；成交額僅20日中位數0.80倍，未突破20日高。",
+      "flow_signal": "Farside 9/18現貨ETF淨流入4.330億美元；9/14–18合計僅約+610萬美元，延續性待確認。",
+      "confidence": "高：交易所日K；中：自動更新ETF表",
+      "watch": "成交量能否放大、價格能否突破82,300與ETF流量續正。",
+      "tone": "neutral"
+    },
+    {
+      "asset": "Ethereum",
+      "role": "應用型高波動資產",
+      "evidence": "9/20 UTC收2,645.21 USDT，3日+8.09%、5日+10.30%，高於MA20；ETH/BTC 5日+2.74%，但量能未達門檻。",
+      "flow_signal": "Farside 9/18現貨ETF淨流入1.437億美元；9/14–18合計仍淨流出約1.406億美元。",
+      "confidence": "高：交易所日K；中：自動更新ETF表",
+      "watch": "ETH/BTC能否突破20日高且ETF週流量轉正。",
+      "tone": "neutral"
+    },
+    {
+      "asset": "股票風險",
+      "role": "股權成長曝險",
+      "evidence": "9/18費半+2.78%、Nasdaq-100 +0.67%、S&P 500 +0.17%；9/21台股09:59 +0.71%。",
+      "flow_signal": "半導體價格領先，但未取得全市場股票ETF完整同日流量。",
+      "confidence": "高：指數價格；低：流量歸因",
+      "watch": "台股漲勢能否擴散、期貨正價差能否維持。",
+      "tone": "positive"
+    }
+  ],
+  "caveat": "美元、殖利率、油價與股價都是價格證據，不冒充現金流；Farside為自動更新表，9/18數據後續仍可能修訂。"
+}

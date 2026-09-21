@@ -1,0 +1,40 @@
+{
+  "ok": true,
+  "generatedAt": "2026-09-21T01:08:37.740692+00:00",
+  "ocrSource": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-09-21_09-05-05/ark_stocks.json",
+  "axSource": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-09-21_09-05-05/ark_stocks_ax.json",
+  "sections": {
+    "ETF價值區": {
+      "ok": true,
+      "ocrCount": 11,
+      "axCount": 11,
+      "missingInAx": [],
+      "missingInOcr": [],
+      "nameDifferences": []
+    },
+    "ETF升溫區": {
+      "ok": true,
+      "ocrCount": 7,
+      "axCount": 7,
+      "missingInAx": [],
+      "missingInOcr": [],
+      "nameDifferences": []
+    },
+    "產業價值區": {
+      "ok": true,
+      "ocrCount": 31,
+      "axCount": 31,
+      "missingInAx": [],
+      "missingInOcr": [],
+      "nameDifferences": []
+    },
+    "產業升溫區": {
+      "ok": true,
+      "ocrCount": 30,
+      "axCount": 30,
+      "missingInAx": [],
+      "missingInOcr": [],
+      "nameDifferences": []
+    }
+  }
+}

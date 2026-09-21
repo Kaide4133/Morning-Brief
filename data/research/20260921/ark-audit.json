@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-21",
+  "source": "local ark_stocks_latest.json",
+  "generatedAt": "2026-09-21T01:08:37.693604+00:00",
+  "source_sha256": "cef5edda5705ef62774fe972889bfeccaa8bcf82e63a31834567efa1bcdeae60",
+  "success_sha256_verified": true,
+  "ark_validation_ok": true,
+  "water_level": 67.7,
+  "previous_water_level": 69.9,
+  "delta": -2.2,
+  "direction": "下降",
+  "summary_total_rows": 79,
+  "actual_total_rows": 79,
+  "unique_codes": 77,
+  "zone_counts": {
+    "ETF價值區": 11,
+    "ETF升溫區": 7,
+    "產業價值區": 31,
+    "產業升溫區": 30
+  },
+  "within_zone_duplicates": 0,
+  "cross_zone_overlaps": {
+    "ETF": [
+      "00960"
+    ],
+    "stocks": [
+      "2303"
+    ]
+  },
+  "visual_corrections": [
+    "0057 NAV trap",
+    "6147 OCR fields recovered from screenshot+AX",
+    "2324/2454/3711/1560 screenshot values preserved over AX conflicts"
+  ],
+  "status": "pass"
+}

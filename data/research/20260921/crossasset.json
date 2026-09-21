@@ -1,0 +1,39 @@
+{
+  "crypto_completed_daily": {
+    "BTCUSDT": {
+      "date": "2026-09-20",
+      "close": 81178.0,
+      "ret_1d_pct": -0.0886,
+      "ret_3d_pct": 6.2303,
+      "ret_5d_pct": 7.3152,
+      "ma20": 78472.085,
+      "high20": 82300.0,
+      "volume_vs_median20": 0.8012,
+      "close_location": 0.7671
+    },
+    "ETHUSDT": {
+      "date": "2026-09-20",
+      "close": 2645.21,
+      "ret_1d_pct": 0.4756,
+      "ret_3d_pct": 8.0878,
+      "ret_5d_pct": 10.297,
+      "ma20": 2491.967,
+      "high20": 2668.0,
+      "volume_vs_median20": 0.8484,
+      "close_location": 0.9453
+    },
+    "ETHBTC": {
+      "date": "2026-09-20",
+      "close": 0.03258,
+      "ret_1d_pct": 0.5556,
+      "ret_3d_pct": 1.7489,
+      "ret_5d_pct": 2.7436,
+      "ma20": 0.0317575,
+      "high20": 0.03342,
+      "volume_vs_median20": 1.0923,
+      "close_location": 0.9683
+    }
+  },
+  "stage": "價量觀察",
+  "reason": "BTC/ETH站上MA20但未突破20日高，成交量未達門檻；ETH/BTC也未突破20日高。"
+}

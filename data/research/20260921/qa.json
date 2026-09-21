@@ -1,0 +1,71 @@
+{
+  "date": "2026-09-21",
+  "status": "pass",
+  "source": {
+    "success_ok": true,
+    "stage": "complete",
+    "hashes_verified": 23,
+    "water_level": 67.7,
+    "previous_water_level": 69.9,
+    "delta": -2.2,
+    "zone_counts": [
+      11,
+      7,
+      31,
+      30
+    ],
+    "unique_codes": 77,
+    "visual_repairs": [
+      "0057 NAV trap",
+      "6147 screenshot recovery",
+      "2324/2454/3711/1560 primary screenshot preserved"
+    ]
+  },
+  "tests": {
+    "unittest": "20/20 passed",
+    "scenario_regression": "7/7 passed",
+    "technical_spider_node": "0 errors"
+  },
+  "rendered": {
+    "cards": 79,
+    "unique_codes": 77,
+    "overlap_markers": 4,
+    "water_level": 67.7,
+    "scenario": "05 有序回檔",
+    "context_date": "2026-09-21",
+    "dated_html_sha256": "b974420f532686d9d0926ce4df56c694e2dfedfeec8cd3a376d08fdb8b47d1e5",
+    "root_docs_site_mirrors": "identical"
+  },
+  "reader_boundary": {
+    "source_urls_exposed": false,
+    "internal_paths_exposed": false,
+    "internal_workflow_terms_exposed": false,
+    "other_trading_frameworks_inserted": false
+  },
+  "visual": {
+    "desktop_1440x1400": "pass",
+    "mobile_cdp_390x844": "pass",
+    "mobile_inner_width": 390,
+    "mobile_scroll_width": 390,
+    "ticker_cards": 79,
+    "collapsed_deep_dives": 2,
+    "console_errors_focused_recheck": 0,
+    "screenshots": [
+      "/tmp/mb-20260921-desktop.png",
+      "/tmp/mb-20260921-mobile.png"
+    ]
+  },
+  "technical_spider": {
+    "as_of": "2026-09-21",
+    "records": 77,
+    "missing": 0,
+    "2305_name": "全友",
+    "mirrors": "identical",
+    "node_qa_errors": 0,
+    "browser_loaded": "資料池已載入 77 檔 · 截至 2026-09-21"
+  },
+  "local_http": {
+    "dated_report": 200,
+    "homepage": 200
+  }
+}

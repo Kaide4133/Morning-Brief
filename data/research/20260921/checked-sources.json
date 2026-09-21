@@ -1,0 +1,100 @@
+{
+  "checked_at": "2026-09-21T10:22:00+08:00",
+  "sources": [
+    {
+      "title": "TWSE MIS 加權指數即時與分鐘資料",
+      "url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+      "data_as_of": "2026-09-21 09:59 Asia/Taipei"
+    },
+    {
+      "title": "TAIFEX MIS 臺指期報價與分鐘資料",
+      "url": "https://mis.taifex.com.tw/futures/RegularSession/EquityIndices/FuturesDomestic/",
+      "data_as_of": "2026-09-21 09:59 Asia/Taipei"
+    },
+    {
+      "title": "TAIFEX 外資期貨未平倉",
+      "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+      "data_as_of": "2026-09-18"
+    },
+    {
+      "title": "Nasdaq SOX historical data",
+      "url": "https://api.nasdaq.com/api/quote/SOX/historical?assetclass=index&fromdate=2026-09-15&todate=2026-09-21&limit=10",
+      "data_as_of": "2026-09-18 close"
+    },
+    {
+      "title": "Nasdaq NDX historical data",
+      "url": "https://api.nasdaq.com/api/quote/NDX/historical?assetclass=index&fromdate=2026-09-15&todate=2026-09-21&limit=10",
+      "data_as_of": "2026-09-18 close"
+    },
+    {
+      "title": "Cboe SPX history",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SPX_History.csv",
+      "data_as_of": "2026-09-18 close"
+    },
+    {
+      "title": "Cboe VIX history",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+      "data_as_of": "2026-09-18 close"
+    },
+    {
+      "title": "S&P Dow Jones Indices DJI page",
+      "url": "https://www.spglobal.com/spdji/en/indices/equity/dow-jones-industrial-average/",
+      "data_as_of": "2026-09-18 close"
+    },
+    {
+      "title": "Reuters Tech leads shares higher in Asia, oil eases",
+      "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-09-21/",
+      "data_as_of": "2026-09-21 00:39 UTC"
+    },
+    {
+      "title": "Reuters S&P 500, Nasdaq advance",
+      "url": "https://www.reuters.com/business/nasdaq-futures-lead-wall-st-gains-oil-retreat-eases-inflation-worries-2026-09-18/",
+      "data_as_of": "2026-09-18"
+    },
+    {
+      "title": "Federal Reserve FOMC statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+      "data_as_of": "2026-09-16"
+    },
+    {
+      "title": "Reuters US-China talks on AI, trade and critical minerals",
+      "url": "https://www.reuters.com/business/finance/us-treasurys-bessent-chinas-he-launch-talks-ai-trade-critical-minerals-2026-09-20/",
+      "data_as_of": "2026-09-20"
+    },
+    {
+      "title": "World Gold Council Global demand drives record holdings",
+      "url": "https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2026/09",
+      "data_as_of": "2026-08-31"
+    },
+    {
+      "title": "U.S. Treasury Daily Treasury Par Yield Curve",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "data_as_of": "2026-09-18"
+    },
+    {
+      "title": "Farside Bitcoin ETF flows",
+      "url": "https://farside.co.uk/btc/",
+      "data_as_of": "2026-09-18"
+    },
+    {
+      "title": "Farside Ethereum ETF flows",
+      "url": "https://farside.co.uk/eth/",
+      "data_as_of": "2026-09-18"
+    },
+    {
+      "title": "Binance Spot Klines",
+      "url": "https://api.binance.com/api/v3/klines",
+      "data_as_of": "2026-09-20 UTC"
+    },
+    {
+      "title": "Trump Truth Social original AI Czar post",
+      "url": "https://truthsocial.com/@realDonaldTrump/posts/117298821562014906",
+      "data_as_of": "2026-09-20 01:12 Asia/Taipei"
+    }
+  ],
+  "warnings": [
+    "台股與臺指期均為09:59完整分鐘收值，非日終。",
+    "美元、殖利率、油價、黃金與股價為價格證據，不冒充現金流。",
+    "Farside 9/18流量來自自動更新表，可能後續修訂；黃金實際流量截至8月月報。"
+  ]
+}
