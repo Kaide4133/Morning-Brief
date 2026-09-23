@@ -1,0 +1,485 @@
+{
+  "brief": "Kelvin Morning Brief",
+  "edition_date": "2026-09-23",
+  "research_scope": "隔夜新聞與跨資產資金流；USD、Treasury、gold、BTC、ETH 分開；價格優先，實際資金流另列日期；新聞只作解釋背景。",
+  "window": {
+    "start_taipei": "2026-09-22T10:00:00+08:00",
+    "cutoff_taipei": "2026-09-23T10:00:00+08:00",
+    "cutoff_utc": "2026-09-23T02:00:00Z",
+    "retrieved_utc": "2026-09-23T02:09:45Z",
+    "notes": [
+      "24 小時報酬採相同時鐘或最接近且不晚於 cutoff 的觀測值；美債採財政部最新完成日資料。",
+      "價格變動不等於資金流。ETF 申購贖回、黃金 ETF 流量與公債標售分配另列並保留各自資料日期。",
+      "BTC/ETH 於 2026-09-22 的 Farside 表格仍缺主要發行商，僅可視為未完成小計，不當作最終日流量。"
+    ]
+  },
+  "topline_zh_TW": [
+    "美元偏強、短端美債殖利率回落、黃金小跌；不是單純 risk-on 或 risk-off，而是美元與高利率預期仍壓著無息資產。",
+    "BTC、ETH 都守住前一日急漲後的高檔，但 BTC 24 小時表現較強，ETH/BTC 下跌 0.70%。",
+    "真實流量仍正向：9/22 加密 ETF 只取得未完成小計；最近完整日 9/21 為 BTC +US$999.0m、ETH +US$270.0m。"
+  ],
+  "assets": {
+    "USD": {
+      "price_first": {
+        "instrument": "U.S. Dollar Index (DXY)",
+        "value": 100.636,
+        "as_of_utc": "2026-09-23T01:59:05Z",
+        "as_of_taipei": "2026-09-23T09:59:05+08:00",
+        "reference_value": 100.437,
+        "reference_as_of_utc": "2026-09-22T02:00:00Z",
+        "change_24h_pct": 0.1981,
+        "observed_24h_low": 100.307,
+        "observed_24h_high": 100.703,
+        "calculation": "(100.636 / 100.437 - 1) * 100",
+        "source_id": "S1",
+        "quality": "indicative captured intraminute snapshot, not a completed archive bar; reader rounded to 100.64"
+      },
+      "actual_flow": {
+        "status": "not_available_as_daily_aggregate",
+        "statement": "未找到可在 cutoff 前核實、可代表整體美元市場的逐日淨資金流；不以 DXY 上漲冒充美元流入。",
+        "omitted_items": [
+          "ETF 單一產品流量不能代表全球 USD 流",
+          "CFTC 部位是持倉快照，不是當日現金流"
+        ]
+      },
+      "news_context_only": [
+        {
+          "fact": "Reuters 9/22 早盤報導顯示市場同時關注美伊潛在會談、接近 US$100 的 Brent 與接近 4.9% 的 10 年債殖利率；此為背景，不是對 DXY 變動的單一因果證明。",
+          "source_id": "S11"
+        },
+        {
+          "fact": "Reuters 授權轉載指出，市場提高對 Fed 年內進一步升息的定價，且美元轉強；這與美元維持強勢的價格證據方向一致。",
+          "source_id": "S12"
+        }
+      ],
+      "reader_suggestion_zh_TW": "DXY 接近 100.70 的 24 小時高點，先把 100.70 視為美元壓力確認線；未突破前不把美元走強外推成全面避險資金流。"
+    },
+    "Treasury": {
+      "price_first": {
+        "instrument": "U.S. Treasury daily par yield curve",
+        "trade_date": "2026-09-22",
+        "yields_pct": {
+          "2y": 4.71,
+          "10y": 4.96,
+          "30y": 5.29
+        },
+        "prior_trade_date": "2026-09-21",
+        "prior_yields_pct": {
+          "2y": 4.76,
+          "10y": 4.96,
+          "30y": 5.29
+        },
+        "daily_change_bp": {
+          "2y": -5,
+          "10y": 0,
+          "30y": 0
+        },
+        "curve_2s10s_bp": 25,
+        "prior_curve_2s10s_bp": 20,
+        "curve_change_bp": 5,
+        "interpretation": "殖利率下滑集中短端；10年與30年官方日資料持平，2s10s陡峭5bp。",
+        "source_id": "S2",
+        "quality": "official U.S. Treasury completed daily row"
+      },
+      "actual_flow": {
+        "flow_type": "primary-auction allocation, not secondary-market fund flow",
+        "auction_date": "2026-09-22",
+        "security": "2-Year Note",
+        "cusip": "91282CRP8",
+        "offering_usd_bn": 69.0,
+        "high_yield_pct": 4.787,
+        "bid_to_cover": 2.63,
+        "competitive_accepted_usd_bn": 67.6859352,
+        "allocation": {
+          "indirect_accepted_usd_bn": 39.116326,
+          "indirect_share_pct": 57.7909,
+          "direct_accepted_usd_bn": 19.6412192,
+          "direct_share_pct": 29.0182,
+          "primary_dealer_accepted_usd_bn": 8.92839,
+          "primary_dealer_share_pct": 13.1909
+        },
+        "calculation": "各類 competitive accepted / 67.6859352bn",
+        "source_id": "S3",
+        "quality": "official U.S. Fiscal Data auction record"
+      },
+      "news_context_only": [
+        {
+          "fact": "油價回落與中東外交消息降低即時通膨壓力，可能解釋短端殖利率回落；但 Fed 進一步升息預期仍限制長債追價。",
+          "source_ids": [
+            "S11",
+            "S12"
+          ]
+        }
+      ],
+      "reader_suggestion_zh_TW": "先看 10Y 能否明確跌破 4.96%，不要只因 2Y 單日 -5bp 就判定全面寬鬆；9/23 還有 US$70bn 5 年債標售供給。"
+    },
+    "gold": {
+      "price_first": {
+        "instrument": "XAU/USD spot sampled series",
+        "value_usd_per_oz": 4340.600098,
+        "as_of_utc": "2026-09-23T01:58:01Z",
+        "as_of_taipei": "2026-09-23T09:58:01+08:00",
+        "reference_value_usd_per_oz": 4350.299805,
+        "reference_as_of_utc": "2026-09-22T01:58:01Z",
+        "change_24h_pct": -0.223,
+        "observed_24h_low": 4297.399902,
+        "observed_24h_high": 4371.899902,
+        "calculation": "(4340.600098 / 4350.299805 - 1) * 100",
+        "source_id": "S4",
+        "cross_check": {
+          "source_id": "S5",
+          "timestamp_utc": "2026-09-23T02:04:55.318Z",
+          "swissquote_elite_bid": 4338.603,
+          "swissquote_elite_ask": 4339.107,
+          "note": "cross-check is after cutoff and therefore not substituted for the cutoff observation"
+        },
+        "quality": "matched-clock 2-minute sampled spot series; indicative, not LBMA fixing"
+      },
+      "actual_flow": {
+        "flow_type": "global physically-backed gold ETF net fund flow",
+        "period": "Week 38 ending 2026-09-18",
+        "net_flow_usd_mn": 3893.35477142,
+        "net_demand_tonnes": 27.07674753,
+        "regional_flow_usd_mn": {
+          "North_America": 2207.40894472,
+          "Europe": 1054.41126016,
+          "Asia": 622.31156654,
+          "Other": 9.223
+        },
+        "gross_positive_flow_usd_mn": 4141.73460903,
+        "gross_negative_flow_usd_mn": -248.37983761,
+        "source_id": "S6",
+        "quality": "official World Gold Council weekly table; five calendar days before brief cutoff"
+      },
+      "news_context_only": [
+        {
+          "fact": "Reuters 9/22 報導將金價壓力背景連到美元偏強與市場提高 Fed 年內再升息定價；13:25 UTC 時現貨金為 US$4,332.34、期金為 US$4,370.40。此新聞數值只作盤中背景，主價格仍採 cutoff 觀測。",
+          "source_id": "S12"
+        },
+        {
+          "fact": "WGC 的實際週流量仍為淨流入，顯示中期配置需求沒有因單日價格小跌而消失；但週流量不能解讀成 9/22 當日買盤。",
+          "source_id": "S6"
+        }
+      ],
+      "reader_suggestion_zh_TW": "金價 24 小時仍在 4,297–4,372 區間，先等站回 4,372 再確認轉強；若跌破 4,297，週度 ETF 流入也不能替代價格停損。"
+    },
+    "BTC": {
+      "price_first": {
+        "instrument": "BTC-USD Coinbase Exchange",
+        "value_usd": 86360.01,
+        "bar_end_utc": "2026-09-23T02:00:00Z",
+        "bar_end_taipei": "2026-09-23T10:00:00+08:00",
+        "reference_value_usd": 85598.67,
+        "reference_bar_end_utc": "2026-09-22T02:00:00Z",
+        "change_24h_pct": 0.8894,
+        "completed_24h_low": 85059.28,
+        "completed_24h_high": 86838.78,
+        "calculation": "(86360.01 / 85598.67 - 1) * 100",
+        "source_id": "S7",
+        "quality": "24 completed hourly bars, exact matched bar-end"
+      },
+      "actual_flow": {
+        "latest_complete": {
+          "session_date_us": "2026-09-21",
+          "us_spot_etf_net_flow_usd_mn": 999.0,
+          "fund_breakdown_usd_mn": {
+            "IBIT": 381.4,
+            "FBTC": 238.8,
+            "BITB": 21.6,
+            "ARKB": 289.1,
+            "MSBT": 61.7,
+            "GBTC": 3.3,
+            "BTC": 3.1
+          },
+          "source_ids": [
+            "S8",
+            "S10"
+          ]
+        },
+        "cutoff_day_partial": {
+          "session_date_us": "2026-09-22",
+          "reported_subtotal_usd_mn": 364.4,
+          "missing_major_funds": [
+            "IBIT"
+          ],
+          "reported_components_usd_mn": {
+            "FBTC": 257.4,
+            "BITB": 0.0,
+            "ARKB": 0.6,
+            "HODL": 2.4,
+            "MSBT": 99.0,
+            "GBTC": 0.0,
+            "BTC": 5.0
+          },
+          "status": "incomplete_do_not_treat_as_final",
+          "source_id": "S8"
+        }
+      },
+      "news_context_only": [
+        {
+          "fact": "The Block 9/22 報導 BTC 前一日曾高於 US$87,000，並把漲速背景連到現貨 ETF 需求、突破後的空單回補；CoinGlass 數據被引述為 24 小時全市場清算 US$1.06bn，其中空單 US$844m。這是解釋背景，不把清算額當 ETF 流量。",
+          "source_id": "S10"
+        }
+      ],
+      "reader_suggestion_zh_TW": "BTC 仍在 85,059–86,839 的完成 24 小時區間上半部；不追 86.8k 上緣，先看 85k 能否守住，並等待 9/22 ETF 最終流量補齊。"
+    },
+    "ETH": {
+      "price_first": {
+        "instrument": "ETH-USD Coinbase Exchange",
+        "value_usd": 2753.14,
+        "bar_end_utc": "2026-09-23T02:00:00Z",
+        "bar_end_taipei": "2026-09-23T10:00:00+08:00",
+        "reference_value_usd": 2748.21,
+        "reference_bar_end_utc": "2026-09-22T02:00:00Z",
+        "change_24h_pct": 0.1794,
+        "completed_24h_low": 2715.02,
+        "completed_24h_high": 2775.54,
+        "calculation": "(2753.14 / 2748.21 - 1) * 100",
+        "source_id": "S9",
+        "quality": "24 completed hourly bars, exact matched bar-end"
+      },
+      "actual_flow": {
+        "latest_complete": {
+          "session_date_us": "2026-09-21",
+          "us_spot_etf_net_flow_usd_mn": 270.0,
+          "fund_breakdown_usd_mn": {
+            "ETHA": 110.1,
+            "ETHB": 12.8,
+            "FETH": 73.0,
+            "ETHW": 4.3,
+            "TETH": 4.1,
+            "MSSE": 1.5,
+            "ETHE": 4.9,
+            "ETH": 59.3
+          },
+          "source_ids": [
+            "S9_FLOW",
+            "S10"
+          ]
+        },
+        "cutoff_day_partial": {
+          "session_date_us": "2026-09-22",
+          "reported_subtotal_usd_mn": 71.3,
+          "missing_major_funds": [
+            "ETHA",
+            "ETHB"
+          ],
+          "reported_components_usd_mn": {
+            "FETH": 33.6,
+            "ETHW": 0.0,
+            "TETH": 0.0,
+            "ETHV": 0.0,
+            "QETH": 0.0,
+            "EZET": 0.0,
+            "MSSE": 0.0,
+            "ETHE": 10.4,
+            "ETH": 27.3
+          },
+          "status": "incomplete_do_not_treat_as_final",
+          "source_id": "S9_FLOW"
+        }
+      },
+      "news_context_only": [
+        {
+          "fact": "9/21 ETH 現貨 ETF 完整日流入 US$270.0m，和 BTC 同向，但美元金額較小；隔夜價格也上漲但弱於 BTC。",
+          "source_ids": [
+            "S9_FLOW",
+            "S10"
+          ]
+        }
+      ],
+      "reader_suggestion_zh_TW": "ETH 價格守在 2,700 上方，但相對 BTC 轉弱；先看 2,776 能否突破，否則以 2,715 作短線風險線，不因未完成 ETF 小計追價。"
+    },
+    "ETH_BTC": {
+      "price_first": {
+        "ratio_eth_per_btc": 0.0318798018,
+        "as_of_utc": "2026-09-23T02:00:00Z",
+        "reference_ratio": 0.0321057558,
+        "reference_as_of_utc": "2026-09-22T02:00:00Z",
+        "change_24h_pct": -0.7038,
+        "calculation": "(2753.14 / 86360.01) versus (2748.21 / 85598.67)",
+        "source_ids": [
+          "S7",
+          "S9"
+        ]
+      },
+      "flow_comparison": {
+        "latest_complete_session_date_us": "2026-09-21",
+        "btc_etf_net_flow_usd_mn": 999.0,
+        "eth_etf_net_flow_usd_mn": 270.0,
+        "eth_as_pct_of_btc_flow": 27.027,
+        "statement": "美元流量規模 BTC 約為 ETH 的 3.70 倍；這不是按市值或 AUM 正規化的比較。",
+        "partial_2026_09_22_not_comparable": "BTC 缺 IBIT、ETH 缺 ETHA/ETHB，兩個未完成小計不可用來判斷當日輪動。"
+      },
+      "reader_suggestion_zh_TW": "跨幣優先看 ETH/BTC 是否收復 0.0321；未收復前，把反彈視為 BTC 領漲，而不是 ETH 接棒。"
+    }
+  },
+  "cross_asset_flow_ledger": [
+    {
+      "asset": "USD",
+      "data_date": null,
+      "flow": null,
+      "status": "無可核實的每日整體 USD 淨流量；明確留白"
+    },
+    {
+      "asset": "U.S. Treasury",
+      "data_date": "2026-09-22",
+      "flow": "US$69bn 2Y auction; indirect accepted US$39.116326bn (57.79% of competitive accepted)",
+      "status": "官方標售分配；不是次級市場基金流"
+    },
+    {
+      "asset": "Gold",
+      "data_date": "week ending 2026-09-18",
+      "flow": "+US$3.893354771bn / +27.07674753 tonnes",
+      "status": "WGC 全球實體黃金 ETF 週淨流入"
+    },
+    {
+      "asset": "BTC",
+      "data_date": "2026-09-21 complete; 2026-09-22 partial",
+      "flow": "+US$999.0m complete; +US$364.4m incomplete subtotal",
+      "status": "9/22 缺 IBIT，不能當最終數"
+    },
+    {
+      "asset": "ETH",
+      "data_date": "2026-09-21 complete; 2026-09-22 partial",
+      "flow": "+US$270.0m complete; +US$71.3m incomplete subtotal",
+      "status": "9/22 缺 ETHA、ETHB，不能當最終數"
+    }
+  ],
+  "reader_actions_zh_TW": [
+    "先價格、後敘事：DXY 100.70、10Y 4.96%、金價 4,297/4,372、BTC 85k/86.8k、ETH 2,715/2,776。",
+    "BTC/ETH 不把 9/22 未完成 ETF 小計當成最終機構流；等待 IBIT、ETHA、ETHB 回報。",
+    "ETH/BTC 未收復 0.0321 前，維持 BTC 相對強勢解讀；不要把 ETH 絕對價格上漲誤判成相對領漲。",
+    "美債只看到短端日內改善，長端沒有同步下行；利率敏感資產仍需保留風險預算。",
+    "黃金週度實際流入正向，但當日價格仍弱；配置需求與交易進場點分開處理。"
+  ],
+  "source_inventory": [
+    {
+      "id": "S1",
+      "title": "XAUS multi-asset chart API — DXY 5-minute bars",
+      "url": "https://xaus.com/api/v1/chart?symbol=dxy&range=5d&interval=5m",
+      "source_version_timestamp": "2026-09-23T01:59:05Z",
+      "evidence_class": "transparent third-party market-data API",
+      "checked": true
+    },
+    {
+      "id": "S2",
+      "title": "U.S. Treasury Daily Treasury Par Yield Curve Rates XML",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "source_version_timestamp": "2026-09-22T15:48:38Z",
+      "evidence_class": "official/original",
+      "checked": true,
+      "fields_used": [
+        "2026-09-21 BC_2YEAR/BC_10YEAR/BC_30YEAR",
+        "2026-09-22 BC_2YEAR/BC_10YEAR/BC_30YEAR"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "U.S. Fiscal Data Auctions Query — auction_date 2026-09-22",
+      "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query?filter=auction_date:eq:2026-09-22&page%5Bsize%5D=100",
+      "source_version_timestamp": "record returned at 2026-09-23T02:09:45Z retrieval",
+      "evidence_class": "official/original",
+      "checked": true,
+      "record_used": "CUSIP 91282CRP8"
+    },
+    {
+      "id": "S4",
+      "title": "XAUS first-party recorded XAU intraday series",
+      "url": "https://xaus.com/api/v1/intraday?symbol=xau&hours=48",
+      "source_version_timestamp": "2026-09-23T02:08:01Z",
+      "selected_observation_timestamp": "2026-09-23T01:58:01Z",
+      "evidence_class": "transparent third-party sampled market-data API",
+      "checked": true
+    },
+    {
+      "id": "S5",
+      "title": "Swissquote public BBO — XAU/USD",
+      "url": "https://forex-data-feed.swissquote.com/public-quotes/bboquotes/instrument/XAU/USD",
+      "source_version_timestamp": "2026-09-23T02:04:55.318Z",
+      "evidence_class": "broker/original quote feed",
+      "checked": true
+    },
+    {
+      "id": "S6",
+      "title": "World Gold Council Gold-Backed ETF archive tablegroup",
+      "url": "https://fsapi.gold.org/api/v11/charts/etfv2/revised/archive-tablegroup/all?break-cache=21Sep26",
+      "source_version_timestamp": "2026-09-21T11:15:13Z request_time; table as of 2026-09-18",
+      "evidence_class": "official/original WGC dataset",
+      "checked": true,
+      "table_key": "chartData.data.regional.Weekly"
+    },
+    {
+      "id": "S7",
+      "title": "Coinbase Exchange BTC-USD hourly candles",
+      "url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=3600&start=2026-09-22T00:00:00Z&end=2026-09-23T03:00:00Z",
+      "source_version_timestamp": "retrieved 2026-09-23 after 02:00Z",
+      "evidence_class": "exchange/original",
+      "checked": true
+    },
+    {
+      "id": "S8",
+      "title": "Farside Investors Bitcoin ETF Flow (US$m)",
+      "url": "https://farside.co.uk/btc/?kmb=20260923",
+      "source_version_timestamp": "retrieved 2026-09-23T02:09:45Z vicinity",
+      "evidence_class": "specialist ETF-flow tracker",
+      "checked": true
+    },
+    {
+      "id": "S9",
+      "title": "Coinbase Exchange ETH-USD hourly candles",
+      "url": "https://api.exchange.coinbase.com/products/ETH-USD/candles?granularity=3600&start=2026-09-22T00:00:00Z&end=2026-09-23T03:00:00Z",
+      "source_version_timestamp": "retrieved 2026-09-23 after 02:00Z",
+      "evidence_class": "exchange/original",
+      "checked": true
+    },
+    {
+      "id": "S9_FLOW",
+      "title": "Farside Investors Ethereum ETF Flow (US$m)",
+      "url": "https://farside.co.uk/eth/?kmb=20260923",
+      "source_version_timestamp": "retrieved 2026-09-23T02:09:45Z vicinity",
+      "evidence_class": "specialist ETF-flow tracker",
+      "checked": true
+    },
+    {
+      "id": "S10",
+      "title": "Spot bitcoin ETFs attract nearly $1 billion in largest daily inflow in 11 months",
+      "url": "https://www.theblock.co/news/markets/2026-09-22-spot-bitcoin-etfs-1-billion-daily-inflow-416005",
+      "published": "2026-09-22T03:44:00-04:00",
+      "evidence_class": "checked secondary reporting citing SoSoValue/CoinGlass",
+      "checked": true
+    },
+    {
+      "id": "S11",
+      "title": "Wall St futures pause after AI rally, focus on Mideast tensions",
+      "url": "https://www.reuters.com/business/wall-st-futures-pause-after-ai-rally-focus-mideast-tensions-2026-09-22/",
+      "published": "2026-09-22",
+      "evidence_class": "Reuters attributed; canonical page discovery/search evidence",
+      "checked": "headline and indexed excerpt only; no unsupported body expansion"
+    },
+    {
+      "id": "S12",
+      "title": "Gold eases as traders cement bets for higher for longer interest rates",
+      "url": "https://ca.marketscreener.com/news/gold-eases-as-traders-cement-bets-for-higher-for-longer-interest-rates-ce785ad8dc8ef522",
+      "canonical_reuters_url": "https://www.reuters.com/world/india/gold-muted-higher-for-longer-rate-outlook-weighs-2026-09-22",
+      "published": "2026-09-22T09:46:00-04:00",
+      "evidence_class": "authorized Reuters syndication",
+      "checked": true
+    }
+  ],
+  "quality_controls": {
+    "price_is_not_flow": true,
+    "flow_dates_explicit": true,
+    "partial_flow_not_promoted_to_final": true,
+    "news_used_as_explanation_not_price_substitute": true,
+    "unsupported_usd_flow_omitted": true,
+    "official_treasury_rows_used": true,
+    "eth_btc_included": true,
+    "known_limitations": [
+      "DXY cutoff quote comes from a transparent third-party upstream chart because ICE official live data was not directly accessible.",
+      "Gold cutoff quote is an indicative sampled spot series rather than the LBMA benchmark fixing.",
+      "Farside 2026-09-22 BTC and ETH rows are incomplete at the cutoff; completed 2026-09-21 rows remain the latest final daily comparison.",
+      "No daily aggregate USD capital-flow series was supportable inside the research window."
+    ]
+  }
+}
