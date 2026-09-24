@@ -1,0 +1,276 @@
+{
+  "research_for": "2026-09-24 Taiwan Morning Brief",
+  "requested_snapshot_cutoff": "2026-09-24T09:45:00+08:00",
+  "retrieved_at": {
+    "utc": "2026-09-24T02:06:21.116316+00:00",
+    "asia_taipei": "2026-09-24T10:06:21.116316+08:00"
+  },
+  "calendar": {
+    "today": {
+      "date": "2026-09-24",
+      "status": "open",
+      "official_holiday_schedule_entry": null,
+      "affirmative_open_evidence": {
+        "twse_rtcode": "0000",
+        "exchange_date": "20260924",
+        "exchange_quote_time": "10:05:25",
+        "intraday_bar_count": 66,
+        "first_bar_label": "090100",
+        "requested_bar_present": true
+      }
+    },
+    "previous_open_day": {
+      "date": "2026-09-23",
+      "taiex_close": 48157.29,
+      "daily_change_points": 357.12,
+      "evidence": "latest completed row in official September daily market report; also equals current quote previous-close field"
+    },
+    "nearby_official_closures": [
+      {
+        "date": "2026-09-25",
+        "name": "中秋節",
+        "description": "依規定放假1日。"
+      },
+      {
+        "date": "2026-09-28",
+        "name": "孔子誕辰紀念日/ 教師節",
+        "description": "依規定放假1日。"
+      }
+    ],
+    "sources": {
+      "holiday_schedule_url": "https://www.twse.com.tw/holidaySchedule/holidaySchedule?response=json",
+      "daily_market_report_url": "https://www.twse.com.tw/rwd/zh/afterTrading/FMTQIK?date=20260901&response=json",
+      "live_quote_url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+      "intraday_chart_url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw"
+    }
+  },
+  "taiwan_snapshot_09_45": {
+    "timestamp": "2026-09-24T09:45:00+08:00",
+    "observation_type": "official one-minute bar label at requested cutoff; not an instantaneous tick",
+    "taiex": {
+      "symbol": "tse_t00.tw",
+      "name": "發行量加權股價指數",
+      "minute_close": 47943.69,
+      "previous_close": 48157.29,
+      "change_points_derived": -213.6,
+      "change_percent_derived": -0.44,
+      "source_url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+      "reference_source_url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0"
+    },
+    "txf_front_month": {
+      "symbol_id": "TXFJ6-F",
+      "display_name_zh": "臺指期106",
+      "display_name_en": "TX106",
+      "contract_month": "2026-10",
+      "minute_close": 48105.0,
+      "reference_price": 48312.0,
+      "change_points_derived": -207.0,
+      "change_percent_derived": -0.43,
+      "minute_ohlcv": {
+        "open": 48129.0,
+        "high": 48131.0,
+        "low": 48103.0,
+        "close": 48105.0,
+        "volume_contracts": 403
+      },
+      "source_url": "https://mis.taifex.com.tw/futures/api/getChartData1M",
+      "source_post_body": {
+        "SymbolID": "TXFJ6-F"
+      },
+      "front_contract_selection_source_url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+      "front_contract_selection_post_body": {
+        "MarketType": "0",
+        "SymbolType": "F",
+        "KindID": "1",
+        "CID": "",
+        "ExpireMonth": ""
+      }
+    },
+    "basis_points_derived_txf_minus_taiex": 161.31
+  },
+  "latest_institutional_txf": {
+    "date": "2026-09-23",
+    "max_complete_date_in_response": "20260923",
+    "contract_code": "臺股期貨",
+    "item": "外資及陸資",
+    "trading_volume_contracts": {
+      "long": 36860,
+      "short": 37378,
+      "net_reported": -518,
+      "net_recomputed": -518
+    },
+    "open_interest_contracts": {
+      "long": 10855,
+      "short": 86939,
+      "net_reported": -76084,
+      "net_recomputed": -76084
+    },
+    "headline_net_convention": "open-interest net = long OI minus short OI",
+    "source_url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate"
+  },
+  "us_indices_2026_09_23_close": {
+    "SOX": {
+      "name": "PHLX Semiconductor Sector",
+      "trade_date": "2026-09-23",
+      "close": 12534.27,
+      "previous_close": 12689.82,
+      "change_points_derived": -155.55,
+      "change_percent_derived": -1.23,
+      "nasdaq_info_timestamp": "Sep 23, 2026",
+      "market_status": "Closed",
+      "historical_endpoint_latest_date_at_retrieval": "09/22/2026",
+      "sources": {
+        "info_url": "https://api.nasdaq.com/api/quote/SOX/info?assetclass=index",
+        "historical_url": "https://api.nasdaq.com/api/quote/SOX/historical?assetclass=index&fromdate=2026-09-21&todate=2026-09-24&limit=10"
+      },
+      "evidence_note": "Nasdaq historical endpoint lagged at 2026-09-22; dated closed-market info endpoint supplied the 2026-09-23 close."
+    },
+    "VIX": {
+      "trade_date": "2026-09-23",
+      "close": 15.18,
+      "previous_close": 14.21,
+      "change_points_derived": 0.97,
+      "change_percent_derived": 6.83,
+      "ohlc": {
+        "open": 14.16,
+        "high": 15.45,
+        "low": 14.12,
+        "close": 15.18
+      },
+      "official_history_timestamp": "2026-09-24 01:01:53",
+      "official_quote_last_trade_time": "2026-09-23T16:15:01",
+      "sources": {
+        "historical_url": "https://cdn-api.cboe.com/api/global/delayed_quotes/charts/historical/_VIX.json",
+        "quote_url": "https://cdn-api.cboe.com/api/global/delayed_quotes/quotes/_VIX.json"
+      },
+      "evidence_note": "Used Cboe historical OHLC and independently calculated percent change; legacy VIX_History.csv had not yet appended Sep 23 at retrieval."
+    }
+  },
+  "mag7_2026_09_23_close": [
+    {
+      "symbol": "AAPL",
+      "company_name": "Apple Inc. Common Stock",
+      "trade_date": "2026-09-23",
+      "close_usd": 337.02,
+      "previous_close_usd": 339.75,
+      "change_usd": -2.73,
+      "change_percent_derived": -0.8,
+      "nasdaq_info_timestamp": "Sep 23, 2026",
+      "nasdaq_info_market_status": "Closed",
+      "historical_endpoint_has_2026_09_23": true,
+      "close_evidence": "historical_and_info_agree",
+      "sources": {
+        "historical_url": "https://api.nasdaq.com/api/quote/AAPL/historical?assetclass=stocks&fromdate=2026-09-22&todate=2026-09-24&limit=10",
+        "info_url": "https://api.nasdaq.com/api/quote/AAPL/info?assetclass=stocks"
+      }
+    },
+    {
+      "symbol": "MSFT",
+      "company_name": "Microsoft Corporation Common Stock",
+      "trade_date": "2026-09-23",
+      "close_usd": 500.59,
+      "previous_close_usd": 498.0,
+      "change_usd": 2.59,
+      "change_percent_derived": 0.52,
+      "nasdaq_info_timestamp": "Sep 23, 2026",
+      "nasdaq_info_market_status": "Closed",
+      "historical_endpoint_has_2026_09_23": true,
+      "close_evidence": "historical_and_info_agree",
+      "sources": {
+        "historical_url": "https://api.nasdaq.com/api/quote/MSFT/historical?assetclass=stocks&fromdate=2026-09-22&todate=2026-09-24&limit=10",
+        "info_url": "https://api.nasdaq.com/api/quote/MSFT/info?assetclass=stocks"
+      }
+    },
+    {
+      "symbol": "NVDA",
+      "company_name": "NVIDIA Corporation Common Stock",
+      "trade_date": "2026-09-23",
+      "close_usd": 225.51,
+      "previous_close_usd": 228.87,
+      "change_usd": -3.36,
+      "change_percent_derived": -1.47,
+      "nasdaq_info_timestamp": "Sep 23, 2026",
+      "nasdaq_info_market_status": "Closed",
+      "historical_endpoint_has_2026_09_23": true,
+      "close_evidence": "historical_and_info_agree",
+      "sources": {
+        "historical_url": "https://api.nasdaq.com/api/quote/NVDA/historical?assetclass=stocks&fromdate=2026-09-22&todate=2026-09-24&limit=10",
+        "info_url": "https://api.nasdaq.com/api/quote/NVDA/info?assetclass=stocks"
+      }
+    },
+    {
+      "symbol": "AMZN",
+      "company_name": "Amazon.com, Inc. Common Stock",
+      "trade_date": "2026-09-23",
+      "close_usd": 249.27,
+      "previous_close_usd": 254.98,
+      "change_usd": -5.71,
+      "change_percent_derived": -2.24,
+      "nasdaq_info_timestamp": "Sep 23, 2026",
+      "nasdaq_info_market_status": "Closed",
+      "historical_endpoint_has_2026_09_23": true,
+      "close_evidence": "historical_and_info_agree",
+      "sources": {
+        "historical_url": "https://api.nasdaq.com/api/quote/AMZN/historical?assetclass=stocks&fromdate=2026-09-22&todate=2026-09-24&limit=10",
+        "info_url": "https://api.nasdaq.com/api/quote/AMZN/info?assetclass=stocks"
+      }
+    },
+    {
+      "symbol": "META",
+      "company_name": "Meta Platforms, Inc. Class A Common Stock",
+      "trade_date": "2026-09-23",
+      "close_usd": 744.1,
+      "previous_close_usd": 736.595,
+      "change_usd": 7.51,
+      "change_percent_derived": 1.02,
+      "nasdaq_info_timestamp": "Sep 23, 2026",
+      "nasdaq_info_market_status": "Closed",
+      "historical_endpoint_has_2026_09_23": true,
+      "close_evidence": "historical_and_info_agree",
+      "sources": {
+        "historical_url": "https://api.nasdaq.com/api/quote/META/historical?assetclass=stocks&fromdate=2026-09-22&todate=2026-09-24&limit=10",
+        "info_url": "https://api.nasdaq.com/api/quote/META/info?assetclass=stocks"
+      }
+    },
+    {
+      "symbol": "GOOGL",
+      "company_name": "Alphabet Inc. Class A Common Stock",
+      "trade_date": "2026-09-23",
+      "close_usd": 337.83,
+      "previous_close_usd": 351.16,
+      "change_usd": -13.33,
+      "change_percent_derived": -3.8,
+      "nasdaq_info_timestamp": "Sep 23, 2026",
+      "nasdaq_info_market_status": "Closed",
+      "historical_endpoint_has_2026_09_23": true,
+      "close_evidence": "historical_and_info_agree",
+      "sources": {
+        "historical_url": "https://api.nasdaq.com/api/quote/GOOGL/historical?assetclass=stocks&fromdate=2026-09-22&todate=2026-09-24&limit=10",
+        "info_url": "https://api.nasdaq.com/api/quote/GOOGL/info?assetclass=stocks"
+      }
+    },
+    {
+      "symbol": "TSLA",
+      "company_name": "Tesla, Inc. Common Stock",
+      "trade_date": "2026-09-23",
+      "close_usd": 380.12,
+      "previous_close_usd": 378.9,
+      "change_usd": 1.22,
+      "change_percent_derived": 0.32,
+      "nasdaq_info_timestamp": "Sep 23, 2026",
+      "nasdaq_info_market_status": "Closed",
+      "historical_endpoint_has_2026_09_23": true,
+      "close_evidence": "historical_and_info_agree",
+      "sources": {
+        "historical_url": "https://api.nasdaq.com/api/quote/TSLA/historical?assetclass=stocks&fromdate=2026-09-22&todate=2026-09-24&limit=10",
+        "info_url": "https://api.nasdaq.com/api/quote/TSLA/info?assetclass=stocks"
+      }
+    }
+  ],
+  "methods": {
+    "percent_change": "(value / reference - 1) * 100; rounded to 2 decimals only at output",
+    "basis": "TXF minute close - TAIEX minute close",
+    "institutional_net": "long - short; both reported and recomputed values retained",
+    "cutoff_rule": "selected official bar labeled 09:45 from each exchange; retrieval occurred after that minute was fully elapsed"
+  }
+}

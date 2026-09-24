@@ -1,0 +1,360 @@
+{
+  "schema_version": "1.0",
+  "brief_id": "taipei-morning-brief-2026-09-24-0945",
+  "title": "Taipei Morning Brief research pack",
+  "cutoff": {
+    "taipei": "2026-09-24T09:45:00+08:00",
+    "utc": "2026-09-24T01:45:00Z",
+    "research_window": "Overnight developments available by the cutoff; completed 2026-09-23 US session for USD, US Treasuries and gold, and a synchronized rolling 24-hour crypto window ending at the cutoff.",
+    "generated_at_taipei": "2026-09-24T09:53:03+08:00",
+    "future_data_guard": "No observation after 2026-09-24 09:45 Taipei is used. Sources fetched after the cutoff were used only to verify already completed bars, dated ETF rows, and pre-cutoff reporting. The 2026-09-24 Trump-Xi summit is an upcoming catalyst, not a completed event; no outcome is assumed."
+  },
+  "topline": [
+    "The overnight impulse was a rates-and-oil shock: strong US flash PMIs, a hawkish Fed message and a weak 5-year Treasury auction pushed the official 10-year par yield from 4.96% to 5.11%, while the dollar strengthened.",
+    "Gold, BTC and ETH all printed bearish candles despite geopolitical tension; ETH underperformed BTC slightly. This is consistent with a higher-real-yield/liquidity headwind dominating safe-haven demand at the cutoff.",
+    "US spot-crypto ETF flows were strongly positive through the latest complete Farside date, 2026-09-22, but that lagged evidence did not prevent the subsequent 24-hour BTC/ETH decline. Do not treat the incomplete 2026-09-23 Farside row as a final daily flow.",
+    "For Taiwan, the immediate setup is a valuation and foreign-flow headwind for duration-heavy electronics, partially offset by a stronger-dollar translation cushion for exporters. Oil above USD100 adds margin risk for energy-intensive and transport sectors."
+  ],
+  "material_news": [
+    {
+      "rank": 1,
+      "headline": "Hot US flash PMIs and Barr's hawkish message repriced the rate path",
+      "source_time": {
+        "event_date": "2026-09-23",
+        "reuters_wrap_published_utc": "2026-09-23T21:10:10Z",
+        "reuters_wrap_published_taipei": "2026-09-24T05:10:10+08:00",
+        "note": "The official S&P Global and Federal Reserve pages expose the date but not a normalized publication time in the checked text."
+      },
+      "verified_facts": [
+        "S&P Global's flash US Composite PMI rose to 58.4 from 56.0, the highest since July 2021; services activity was 58.7 and manufacturing PMI was 57.0.",
+        "S&P Global said input costs rose at the steepest pace in four years, with fuel and transport costs contributing.",
+        "Fed Governor Michael Barr said growth was strong, the labor market solid, inflation above 2% and not clearly returning to target in a timely way; in his base case, further policy adjustments were likely needed.",
+        "Reuters reported the 2-year yield up 11.4 bp to 4.891% and the 10-year yield up 13.89 bp to 5.106%; fed-funds futures assigned a 66% probability to an October hike, up from 53% earlier that day."
+      ],
+      "evidence_class": "Official/original for PMI and Barr; Reuters attributed for market reaction.",
+      "sources": [
+        "https://pmi.spglobal.com/Public/Home/PressRelease/ed177f50167b4203ac490a961ea706be",
+        "https://www.federalreserve.gov/newsevents/speech/barr20260923a.htm",
+        "https://live.euronext.com/en/financial-news/us-stocks-fall-10-year-treasury-yield-hits-highest-2007",
+        "https://wtbx.com/2026/09/23/trading-day-us-yields-cross-5-threshold/"
+      ],
+      "taiwan_mapping_inference": "Negative immediate valuation impulse for long-duration Taiwan electronics and AI supply-chain equities; a stronger USD can cushion TWD-reported exporter revenue, but no USD/TWD move was verified in this pack.",
+      "uncertainty": "PMI is a flash survey, not hard activity data. The 66% hike probability was a Reuters snapshot, not a policy commitment."
+    },
+    {
+      "rank": 2,
+      "headline": "Weak Treasury auction reinforced the long-end selloff",
+      "source_time": {
+        "report_date": "2026-09-23",
+        "checked_reuters_syndication_display": "2026-09-23 22:37 on Euronext",
+        "official_treasury_feed_updated_utc": "2026-09-23T15:50:04Z"
+      },
+      "verified_facts": [
+        "Reuters reported weak demand at the USD70bn 5-year note auction and the highest auction yield since 2007.",
+        "The US Treasury's official daily curve shows 2Y 4.85%, 5Y 4.99%, 10Y 5.11% and 30Y 5.40% for 2026-09-23, versus 4.71%, 4.83%, 4.96% and 5.29% on 2026-09-22."
+      ],
+      "evidence_class": "Official/original for the daily curve; Reuters attributed for auction characterization.",
+      "sources": [
+        "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value_month=202609",
+        "https://live.euronext.com/en/financial-news/us-stocks-fall-10-year-treasury-yield-hits-highest-2007"
+      ],
+      "taiwan_mapping_inference": "The 10Y/30Y rise raises the global discount rate and can pressure high-multiple growth stocks even if earnings expectations are unchanged. Taiwan financials may receive a mixed signal: higher yields can help reinvestment income but worsen mark-to-market and global risk appetite.",
+      "uncertainty": "A single auction does not establish a durable term-premium trend; subsequent inflation, supply and policy evidence is required."
+    },
+    {
+      "rank": 3,
+      "headline": "Iran-US tensions lifted oil above USD100 and compounded inflation risk",
+      "source_time": {
+        "event_date": "2026-09-23",
+        "reuters_wrap_published_utc": "2026-09-23T21:10:10Z",
+        "reuters_wrap_published_taipei": "2026-09-24T05:10:10+08:00"
+      },
+      "verified_facts": [
+        "Reuters reported that Iran's president told the UN General Assembly that Tehran would not bow to US pressure while diplomacy should continue; this is wire attribution, not direct transcript verification in this pack.",
+        "The Reuters market wrap reported US crude at USD92.60, up 2.3%, and Brent at USD103.50, up 4.28%.",
+        "The same report recorded spot gold down 1.64% to USD4,283.40, showing that higher yields and USD strength outweighed the geopolitical bid during the session."
+      ],
+      "evidence_class": "Reuters attributed via checked Euronext syndication.",
+      "sources": [
+        "https://live.euronext.com/en/financial-news/us-stocks-fall-10-year-treasury-yield-hits-highest-2007",
+        "https://wtbx.com/2026/09/23/trading-day-us-yields-cross-5-threshold/"
+      ],
+      "taiwan_mapping_inference": "Higher crude is negative for airlines, transport and energy-intensive manufacturers; refiners and petrochemicals depend on crack spreads and pass-through rather than crude direction alone. Persistent oil pressure would also reduce the odds of near-term global easing.",
+      "uncertainty": "War and diplomacy headlines can reverse quickly. No ceasefire, blockade or shipping-policy change is inferred beyond the checked report."
+    },
+    {
+      "rank": 4,
+      "headline": "Wall Street closed lower; technology and communication services led the risk-off move",
+      "source_time": {
+        "trade_date": "2026-09-23",
+        "checked_reuters_syndication_display": "2026-09-23 22:37 on Euronext"
+      },
+      "verified_facts": [
+        "Dow -0.68%, S&P 500 -0.75%, Nasdaq Composite -1.13%.",
+        "Reuters' closing report said Alphabet fell 3.8%, Amazon 2.2%, the PHLX semiconductor index 1.2% and Nvidia 1.5%."
+      ],
+      "evidence_class": "Reuters attributed via checked Euronext/MarketScreener syndication.",
+      "sources": [
+        "https://live.euronext.com/en/financial-news/us-stocks-fall-10-year-treasury-yield-hits-highest-2007",
+        "https://www.marketscreener.com/news/wall-street-ends-down-as-oil-prices-treasury-yields-rise-ce785aded98ff222"
+      ],
+      "taiwan_mapping_inference": "Negative opening sentiment for semiconductors and AI hardware, but the move is macro-led; it is not evidence of a Taiwan supply-chain order cut.",
+      "uncertainty": "US sector performance is a sentiment input, not a one-for-one forecast for TWSE returns."
+    }
+  ],
+  "cross_asset_kline_first": {
+    "method": "Use completed US-session daily candles for DXY, CBOE 10Y yield and COMEX Gold Dec-2026. Use 96 completed Coinbase 15-minute bars from 2026-09-23 09:45 Taipei through the bar ending 2026-09-24 09:45 Taipei for BTC and ETH. Exclude bars starting at the cutoff. Percent change is close/open minus one.",
+    "assets": [
+      {
+        "asset": "US dollar index",
+        "symbol": "DX-Y.NYB",
+        "window": "2026-09-23 daily candle",
+        "ohlc": {
+          "open": 100.56,
+          "high": 101.23,
+          "low": 100.54,
+          "close": 101.1
+        },
+        "body_change_pct": 0.54,
+        "range_pct_of_open": 0.69,
+        "cutoff_follow_through": "Latest fully elapsed 15-minute bar ended at the 09:45 Taipei cutoff at 101.135, 0.03% above the daily close.",
+        "kline_read": "Bullish wide body, close near the session high; USD strength was confirmed rather than merely intraday noise.",
+        "source_quality": "Yahoo Finance direct chart feed; secondary market-data source.",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1789344000&period2=1790214360&interval=1d&includePrePost=true&events=div%2Csplits"
+      },
+      {
+        "asset": "US Treasury 10-year yield",
+        "symbol": "^TNX plus official Treasury par curve",
+        "window": "2026-09-23 US session",
+        "ohlc_yield_pct": {
+          "open": 4.99,
+          "high": 5.135,
+          "low": 4.984,
+          "close": 5.114
+        },
+        "body_change_bp": 12.4,
+        "official_daily_par_yield_pct": 5.11,
+        "official_change_vs_2026_09_22_bp": 15.0,
+        "kline_read": "Large bullish yield candle closing near the high; this is bearish for Treasury prices and the clearest cross-asset tightening signal.",
+        "source_quality": "US Treasury official daily curve for the daily close; Yahoo/CBOE proxy for intraday OHLC.",
+        "source_urls": [
+          "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value_month=202609",
+          "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1789344000&period2=1790214360&interval=1d&includePrePost=true&events=div%2Csplits"
+        ]
+      },
+      {
+        "asset": "COMEX Gold Dec-2026 futures",
+        "symbol": "GC=F",
+        "window": "2026-09-23 daily candle",
+        "ohlc_usd_per_oz": {
+          "open": 4394.7,
+          "high": 4407.5,
+          "low": 4310.7,
+          "close": 4318.4
+        },
+        "body_change_pct": -1.74,
+        "range_pct_of_open": 2.2,
+        "cutoff_follow_through": "Latest fully elapsed 15-minute bar ended at the 09:45 Taipei cutoff at 4329.8, a 0.26% rebound from the daily close but still below the prior open.",
+        "kline_read": "Bearish long body and close near the low; higher yields/USD dominated the geopolitical safe-haven impulse. The small Asian rebound did not repair the daily candle.",
+        "source_quality": "Yahoo Finance direct chart feed for the identified Gold Dec-2026 contract; Reuters separately reported spot gold down 1.64% to USD4,283.40.",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1789344000&period2=1790214360&interval=1d&includePrePost=true&events=div%2Csplits"
+      },
+      {
+        "asset": "Bitcoin",
+        "symbol": "BTC-USD",
+        "window": "Rolling 24h, 2026-09-23T01:45:00Z to 2026-09-24T01:45:00Z",
+        "ohlc_usd": {
+          "open": 86270.15,
+          "high": 87282.81,
+          "low": 83513.0,
+          "close": 84128.68
+        },
+        "change_pct": -2.48,
+        "range_pct_of_open": 4.37,
+        "kline_read": "Bearish 24-hour candle; the push above USD87k failed and the close stayed in the lower half of the range.",
+        "source_quality": "Coinbase Exchange original venue API, 96 synchronized completed 15-minute candles.",
+        "source_url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=900&start=2026-09-23T01%3A45%3A00Z&end=2026-09-24T01%3A45%3A00Z"
+      },
+      {
+        "asset": "Ether",
+        "symbol": "ETH-USD",
+        "window": "Rolling 24h, 2026-09-23T01:45:00Z to 2026-09-24T01:45:00Z",
+        "ohlc_usd": {
+          "open": 2752.54,
+          "high": 2788.35,
+          "low": 2635.0,
+          "close": 2678.5
+        },
+        "change_pct": -2.69,
+        "range_pct_of_open": 5.57,
+        "kline_read": "Bearish 24-hour candle with a wider percentage range than BTC; ETH showed slightly higher beta to the risk-off move.",
+        "source_quality": "Coinbase Exchange original venue API, 96 synchronized completed 15-minute candles.",
+        "source_url": "https://api.exchange.coinbase.com/products/ETH-USD/candles?granularity=900&start=2026-09-23T01%3A45%3A00Z&end=2026-09-24T01%3A45%3A00Z"
+      }
+    ]
+  },
+  "eth_btc": {
+    "method": "Derived from synchronized Coinbase ETH-USD divided by BTC-USD at the same window endpoints; this avoids implying synchronization from separate latest ticks.",
+    "open_ratio": 0.031906,
+    "close_ratio": 0.031838,
+    "change_pct": -0.21,
+    "interpretation": "ETH underperformed BTC modestly. This is a relative-risk signal, not a standalone trend break; the move is small compared with the direct ETH-BTC pair's 24-hour range.",
+    "cross_check": "Coinbase's direct ETH-BTC market closed at 0.031835. It returned 82 non-empty 15-minute bars in the window, so the synchronized USD-derived ratio is used for the displayed change.",
+    "source_urls": [
+      "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=900&start=2026-09-23T01%3A45%3A00Z&end=2026-09-24T01%3A45%3A00Z",
+      "https://api.exchange.coinbase.com/products/ETH-USD/candles?granularity=900&start=2026-09-23T01%3A45%3A00Z&end=2026-09-24T01%3A45%3A00Z",
+      "https://api.exchange.coinbase.com/products/ETH-BTC/candles?granularity=900&start=2026-09-23T01%3A45%3A00Z&end=2026-09-24T01%3A45%3A00Z"
+    ]
+  },
+  "etf_flow_evidence_separately_dated": {
+    "crypto_us_spot_farside": {
+      "unit": "USD millions",
+      "latest_complete_rows_used": [
+        {
+          "asset": "BTC",
+          "trade_date": "2026-09-22",
+          "net_flow_usd_m": 714.7,
+          "prior_trade_date": "2026-09-21",
+          "prior_net_flow_usd_m": 999.0,
+          "two_day_sum_usd_m": 1713.7,
+          "validation": "2026-09-22 constituent sum independently recomputed: 350.3 + 257.4 + 0.0 + 0.6 + 0 + 0 + 0 + 2.4 + 0 + 99.0 + 0 + 5.0 = 714.7."
+        },
+        {
+          "asset": "ETH",
+          "trade_date": "2026-09-22",
+          "net_flow_usd_m": 162.2,
+          "prior_trade_date": "2026-09-21",
+          "prior_net_flow_usd_m": 270.0,
+          "two_day_sum_usd_m": 432.2,
+          "validation": "2026-09-22 constituent sum independently recomputed: 88.1 + 2.8 + 33.6 + 0 + 0 + 0 + 0 + 0 + 0 + 10.4 + 27.3 = 162.2."
+        }
+      ],
+      "incomplete_row_policy": "The current BTC table exposed a 2026-09-23 row with most major fund cells marked '-' and only MSBT +32.4, while an all-data snapshot showed a conflicting/incomplete zero row. The 2026-09-23 row is therefore excluded from final daily-flow evidence. No complete 2026-09-23 ETH row was verified by the cutoff.",
+      "interpretation": "Strong completed inflows through 2026-09-22 were supportive medium-term demand evidence, but they are dated and cannot be used to explain away the subsequent bearish 24-hour price candles.",
+      "source_quality": "Farside primary flow aggregator; direct origin returned HTTP 403, so canonical-page extractions from multiple search backends were reconciled. Only complete dated rows with constituent totals were retained.",
+      "source_urls": [
+        "https://farside.co.uk/btc/",
+        "https://farside.co.uk/bitcoin-etf-flow-all-data/",
+        "https://farside.co.uk/eth/",
+        "https://farside.co.uk/ethereum-etf-flow-all-data/"
+      ]
+    },
+    "gold_global_wgc": {
+      "data_period_end": "2026-08-31",
+      "published_date": "2026-09-09",
+      "current_data_page_date": "2026-09-21",
+      "monthly_net_flow_usd_bn": 18.0,
+      "monthly_holdings_change_tonnes": 121,
+      "month_end_holdings_tonnes": 4189,
+      "month_end_aum_usd_bn": 615,
+      "ytd_net_flow_usd_bn": 29,
+      "ytd_holdings_change_tonnes": 160,
+      "regional_monthly_flow_usd_bn": {
+        "north_america": 7.7,
+        "europe": 7.9,
+        "asia": 2.0,
+        "other_regions": 0.234
+      },
+      "interpretation": "August showed strong structural ETF demand and record holdings, but this is monthly evidence dated 31 August, not proof of buying during the 23 September gold selloff.",
+      "source_quality": "World Gold Council original report. The current data page states weekly and monthly updates; the latest downloadable monthly dataset checked was August 2026.",
+      "source_urls": [
+        "https://gold.org/goldhub/research/gold-etfs-holdings-and-flows/2026/09",
+        "https://gold.org/goldhub/data/gold-etfs-holdings-and-flows"
+      ]
+    }
+  },
+  "taiwan_implications": [
+    {
+      "horizon": "Immediate/opening sentiment",
+      "signal": "Negative for high-duration electronics and AI/semiconductor multiples because US 10Y closed around 5.11% and Nasdaq fell 1.13%.",
+      "offset": "A stronger USD may help exporter translation if TWD weakens, but USD/TWD was not collected and no FX benefit should be assumed.",
+      "confidence": "Medium"
+    },
+    {
+      "horizon": "Days to weeks",
+      "signal": "Oil above USD100 raises costs for airlines, shipping fuel users, plastics, chemicals and other energy-intensive manufacturers; pass-through ability is the key differentiator.",
+      "offset": "Refiners may benefit only if product crack spreads improve; crude direction alone is insufficient.",
+      "confidence": "Medium"
+    },
+    {
+      "horizon": "Near-term event risk",
+      "signal": "The scheduled 2026-09-24 Trump-Xi Washington summit can create trade, technology-control and AI-chain headline volatility.",
+      "offset": "Reuters described possible trade-truce extension discussion but low mutual trust on AI; no agreement or policy change had occurred by the cutoff.",
+      "confidence": "High that the event is scheduled; low on outcome"
+    },
+    {
+      "horizon": "Risk-appetite cross-check",
+      "signal": "BTC -2.48%, ETH -2.69% and ETH/BTC -0.21% indicate softer speculative risk appetite.",
+      "offset": "Completed US spot-ETF flows were positive through 22 September, so the crypto signal is risk-off at the margin rather than evidence of a structural demand collapse.",
+      "confidence": "Medium"
+    }
+  ],
+  "ranked_risks_to_watch": [
+    "1. US long-end yields: confirmation above the 5.10%-5.14% area versus a reversal after the weak auction.",
+    "2. Oil and Iran diplomacy: persistence of Brent above USD100 and any verified shipping/Strait policy change.",
+    "3. Trump-Xi summit: only signed measures or official statements count; do not trade rumors as completed policy.",
+    "4. Crypto follow-through: BTC response around the USD83.5k window low and whether ETH/BTC continues to weaken.",
+    "5. ETF data completion: wait for a fully populated 2026-09-23 Farside row before citing that day's net flow."
+  ],
+  "verification_notes": {
+    "calculation_rules": [
+      "Price return = close/open - 1; basis-point yield moves use percentage-point differences multiplied by 100.",
+      "BTC and ETH use the same 96 completed Coinbase 15-minute intervals. ETH/BTC is derived from synchronized USD legs.",
+      "Farside daily totals were recomputed from available fund columns; incomplete or conflicting rows were excluded.",
+      "Source date, market trade date and data-period end are kept separate."
+    ],
+    "known_limitations": [
+      "DXY and futures OHLC use Yahoo Finance, a secondary distributor; the US Treasury official feed anchors the principal rates close.",
+      "Gold futures and spot gold are different instruments. The Kline table uses COMEX Dec-2026 futures and separately cites Reuters spot gold.",
+      "Direct Farside origin access returned HTTP 403; canonical-page search extractions were reconciled instead of treating a partial table as final.",
+      "No direct social/X posts were used or inferred. Trump and Iranian remarks are included only as Reuters-attributed public-speech reporting."
+    ]
+  },
+  "source_inventory": [
+    {
+      "name": "US Treasury daily par yield curve",
+      "class": "official/original",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value_month=202609"
+    },
+    {
+      "name": "Federal Reserve Governor Barr speech",
+      "class": "official/original",
+      "url": "https://www.federalreserve.gov/newsevents/speech/barr20260923a.htm"
+    },
+    {
+      "name": "S&P Global Flash US PMI",
+      "class": "official/original",
+      "url": "https://pmi.spglobal.com/Public/Home/PressRelease/ed177f50167b4203ac490a961ea706be"
+    },
+    {
+      "name": "Reuters global-markets close via Euronext",
+      "class": "Reuters attributed, checked authorized syndication",
+      "url": "https://live.euronext.com/en/financial-news/us-stocks-fall-10-year-treasury-yield-hits-highest-2007"
+    },
+    {
+      "name": "Reuters Trading Day wrap via WTBX",
+      "class": "Reuters attributed, checked syndication",
+      "url": "https://wtbx.com/2026/09/23/trading-day-us-yields-cross-5-threshold/"
+    },
+    {
+      "name": "Coinbase Exchange candles",
+      "class": "original exchange API",
+      "url": "https://api.exchange.coinbase.com/"
+    },
+    {
+      "name": "Yahoo Finance chart API",
+      "class": "secondary market-data distributor",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/"
+    },
+    {
+      "name": "Farside Investors US spot ETF flows",
+      "class": "primary specialist flow aggregator",
+      "url": "https://farside.co.uk/"
+    },
+    {
+      "name": "World Gold Council gold ETF holdings and flows",
+      "class": "original industry-council dataset/report",
+      "url": "https://gold.org/goldhub/data/gold-etfs-holdings-and-flows"
+    }
+  ]
+}

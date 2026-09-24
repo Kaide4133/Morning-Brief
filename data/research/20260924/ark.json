@@ -1,0 +1,1638 @@
+{
+  "schema_version": "kmb.ark.normalized.v1",
+  "date": "2026-09-24",
+  "source_latest_pointer": "/Users/kaide/Pictures/方舟運算截圖/ark_stocks_latest.json",
+  "source_resolved": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-09-24_09-41-04/ark_stocks.json",
+  "source_folder": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-09-24_09-41-04",
+  "source_sha256": {
+    "ark_stocks.json": "2c9f4d324b3c7341e77b1deb4684ed1ed14d57c8b3255fca01598a9bfccea582",
+    "ark_stocks_ax.json": "3dd47fbbb13775a9396f36594f2600dfe3a556e72966852e0acb205d0151fd0a",
+    "ark_ocr.json": "8b1224c8077299154b5f10a01a7bc0e8b688c165a6375c5aee93fe59ba1e6486",
+    "ark_validation.json": "30e6c0f12555625510fa4498a7452f5c0e1079c97fa0db99ab68930948404632",
+    "success.json": "e2f9a22dc4408ae9707dd9fc9b2d5608fb84d8ce2e277a6d6a5f878a374e25d5"
+  },
+  "schema_reference": {
+    "path": "/Users/kaide/Documents/Morning-Brief/data/issues/20260923.json",
+    "schema_version": "morning_brief.issue.v2",
+    "read_only": true,
+    "compatibility": "issue_payload mirrors current ark/etf/stocks shape; sections preserves rank and source_file."
+  },
+  "water": {
+    "current": 67.1,
+    "current_date": "2026-09-24",
+    "previous": 66.7,
+    "previous_date": "2026-09-23",
+    "delta": 0.4,
+    "direction": "上升",
+    "source_file": "01_風控水位.png",
+    "visual_check": "67.1% confirmed; visible adjacent timer is a countdown, not capture time."
+  },
+  "overlap": {
+    "ETF": [
+      "00911",
+      "00875"
+    ],
+    "ETF_names": {
+      "00911": "兆豐洲際半導體",
+      "00875": "國泰網路資安"
+    },
+    "產業": [],
+    "產業_names": {}
+  },
+  "sections": {
+    "ETF價值區": [
+      {
+        "rank": 1,
+        "code": "00960",
+        "name": "野村全球航運龍頭",
+        "price": "22",
+        "change": "▼0.21 (-0.95%)",
+        "source_file": "02_ETF價值區_1.png"
+      },
+      {
+        "rank": 2,
+        "code": "0055",
+        "name": "元大MSCI金融",
+        "price": "49.7",
+        "change": "▼0.18 (-0.36%)",
+        "source_file": "02_ETF價值區_1.png"
+      },
+      {
+        "rank": 3,
+        "code": "0056",
+        "name": "元大高股息",
+        "price": "56.3",
+        "change": "▼0.3 (-0.53%)",
+        "source_file": "02_ETF價值區_1.png"
+      },
+      {
+        "rank": 4,
+        "code": "0053",
+        "name": "元大電子",
+        "price": "252.65",
+        "change": "▼0.35 (-0.14%)",
+        "source_file": "02_ETF價值區_1.png"
+      },
+      {
+        "rank": 5,
+        "code": "0050",
+        "name": "元大台灣50",
+        "price": "112.05",
+        "change": "▼0.4 (-0.36%)",
+        "source_file": "02_ETF價值區_1.png"
+      },
+      {
+        "rank": 6,
+        "code": "00631L",
+        "name": "元大台灣50正2",
+        "price": "38.75",
+        "change": "▼0.24 (-0.62%)",
+        "source_file": "02_ETF價值區_1.png"
+      },
+      {
+        "rank": 7,
+        "code": "0052",
+        "name": "富邦科技",
+        "price": "65.25",
+        "change": "▼0.2 (-0.31%)",
+        "source_file": "03_ETF價值區_2.png"
+      },
+      {
+        "rank": 8,
+        "code": "00911",
+        "name": "兆豐洲際半導體",
+        "price": "56.2",
+        "change": "▼0.95 (-1.66%)",
+        "source_file": "03_ETF價值區_2.png"
+      },
+      {
+        "rank": 9,
+        "code": "00830",
+        "name": "國泰費城半導體",
+        "price": "87.95",
+        "change": "▼0.65 (-0.73%)",
+        "source_file": "03_ETF價值區_2.png"
+      },
+      {
+        "rank": 10,
+        "code": "00875",
+        "name": "國泰網路資安",
+        "price": "58.7",
+        "change": "▲0.9 (+1.56%)",
+        "source_file": "03_ETF價值區_2.png"
+      }
+    ],
+    "ETF升溫區": [
+      {
+        "rank": 1,
+        "code": "00898",
+        "name": "國泰基因免疫革命",
+        "price": "11.49",
+        "change": "▼0.27 (-2.3%)",
+        "source_file": "04_ETF升溫區_1.png"
+      },
+      {
+        "rank": 2,
+        "code": "00897",
+        "name": "富邦基因免疫生技",
+        "price": "13.57",
+        "change": "▼0.21 (-1.52%)",
+        "source_file": "04_ETF升溫區_1.png"
+      },
+      {
+        "rank": 3,
+        "code": "00875",
+        "name": "國泰網路資安",
+        "price": "58.7",
+        "change": "▲0.9 (+1.56%)",
+        "source_file": "04_ETF升溫區_1.png"
+      },
+      {
+        "rank": 4,
+        "code": "009809",
+        "name": "富邦淨零ESG50",
+        "price": "18.53",
+        "change": "▼0.16 (-0.86%)",
+        "source_file": "04_ETF升溫區_1.png"
+      },
+      {
+        "rank": 5,
+        "code": "00911",
+        "name": "兆豐洲際半導體",
+        "price": "56.2",
+        "change": "▼0.95 (-1.66%)",
+        "source_file": "04_ETF升溫區_1.png"
+      },
+      {
+        "rank": 6,
+        "code": "00878",
+        "name": "國泰永續高股息",
+        "price": "34.92",
+        "change": "▼0.17 (-0.48%)",
+        "source_file": "04_ETF升溫區_1.png"
+      },
+      {
+        "rank": 7,
+        "code": "00701",
+        "name": "國泰股利精選30",
+        "price": "41.62",
+        "change": "▼0.35 (-0.83%)",
+        "source_file": "05_ETF升溫區_2.png"
+      }
+    ],
+    "產業價值區": [
+      {
+        "rank": 1,
+        "code": "2324",
+        "name": "仁寶",
+        "price": "36.5",
+        "change": "▼0.3 (-0.82%)",
+        "source_file": "06_產業價值區_1.png",
+        "industry": "電子設備"
+      },
+      {
+        "rank": 2,
+        "code": "6515",
+        "name": "穎崴",
+        "price": "5,835",
+        "change": "▼160 (-2.67%)",
+        "source_file": "06_產業價值區_1.png",
+        "industry": "IC封裝測試設備"
+      },
+      {
+        "rank": 3,
+        "code": "4958",
+        "name": "臻鼎-KY",
+        "price": "474.5",
+        "change": "▲1.5 (+0.32%)",
+        "source_file": "06_產業價值區_1.png",
+        "industry": "軟板"
+      },
+      {
+        "rank": 4,
+        "code": "3008",
+        "name": "大立光",
+        "price": "6,300",
+        "change": "▲110 (+1.78%)",
+        "source_file": "06_產業價值區_1.png",
+        "industry": "光學鏡片與鏡頭"
+      },
+      {
+        "rank": 5,
+        "code": "2383",
+        "name": "台光電",
+        "price": "5,110",
+        "change": "▲90 (+1.79%)",
+        "source_file": "06_產業價值區_1.png",
+        "industry": "銅箔基板"
+      },
+      {
+        "rank": 6,
+        "code": "1785",
+        "name": "光洋科",
+        "price": "95.2",
+        "change": "▼1.3 (-1.35%)",
+        "source_file": "06_產業價值區_1.png",
+        "industry": "非鐵金屬"
+      },
+      {
+        "rank": 7,
+        "code": "2313",
+        "name": "華通",
+        "price": "220.5",
+        "change": "▼3.5 (-1.56%)",
+        "source_file": "07_產業價值區_2.png",
+        "industry": "硬板"
+      },
+      {
+        "rank": 8,
+        "code": "2345",
+        "name": "智邦",
+        "price": "1,875",
+        "change": "▼15 (-0.79%)",
+        "source_file": "07_產業價值區_2.png",
+        "industry": "網路設備"
+      },
+      {
+        "rank": 9,
+        "code": "2059",
+        "name": "川湖",
+        "price": "12,430",
+        "change": "▲40 (+0.32%)",
+        "source_file": "07_產業價值區_2.png",
+        "industry": "電子零組件"
+      },
+      {
+        "rank": 10,
+        "code": "3034",
+        "name": "聯詠",
+        "price": "529",
+        "change": "▼16 (-2.94%)",
+        "source_file": "07_產業價值區_2.png",
+        "industry": "驅動IC"
+      },
+      {
+        "rank": 11,
+        "code": "6223",
+        "name": "旺矽",
+        "price": "5,455",
+        "change": "▼165 (-2.94%)",
+        "source_file": "07_產業價值區_2.png",
+        "industry": "IC封裝測試設備"
+      },
+      {
+        "rank": 12,
+        "code": "2360",
+        "name": "致茂",
+        "price": "2,310",
+        "change": "▼15 (-0.65%)",
+        "source_file": "08_產業價值區_3.png",
+        "industry": "半導體設備"
+      },
+      {
+        "rank": 13,
+        "code": "6285",
+        "name": "啟碁",
+        "price": "234",
+        "change": "▲4 (+1.74%)",
+        "source_file": "08_產業價值區_3.png",
+        "industry": "無線通訊設備"
+      },
+      {
+        "rank": 14,
+        "code": "2382",
+        "name": "廣達",
+        "price": "337",
+        "change": "▼4.5 (-1.32%)",
+        "source_file": "08_產業價值區_3.png",
+        "industry": "伺服器組裝代工"
+      },
+      {
+        "rank": 15,
+        "code": "2455",
+        "name": "全新",
+        "price": "552",
+        "change": "0 (0%)",
+        "source_file": "08_產業價值區_3.png",
+        "industry": "砷化鎵代工"
+      },
+      {
+        "rank": 16,
+        "code": "2327",
+        "name": "國巨*",
+        "price": "580",
+        "change": "▲7 (+1.22%)",
+        "source_file": "08_產業價值區_3.png",
+        "industry": "MLCC"
+      },
+      {
+        "rank": 17,
+        "code": "6239",
+        "name": "力成",
+        "price": "288.5",
+        "change": "▲2 (+0.7%)",
+        "source_file": "09_產業價值區_4.png",
+        "industry": "IC封裝測試"
+      },
+      {
+        "rank": 18,
+        "code": "2379",
+        "name": "瑞昱",
+        "price": "733",
+        "change": "▼28 (-3.68%)",
+        "source_file": "09_產業價值區_4.png",
+        "industry": "IC設計"
+      },
+      {
+        "rank": 19,
+        "code": "5274",
+        "name": "信驊",
+        "price": "20,500",
+        "change": "▲220 (+1.08%)",
+        "source_file": "09_產業價值區_4.png",
+        "industry": "IC設計"
+      },
+      {
+        "rank": 20,
+        "code": "6415",
+        "name": "矽力*-KY",
+        "price": "422.5",
+        "change": "▼3.5 (-0.82%)",
+        "source_file": "09_產業價值區_4.png",
+        "industry": "IC設計"
+      },
+      {
+        "rank": 21,
+        "code": "2330",
+        "name": "台積電",
+        "price": "2,480",
+        "change": "▼20 (-0.8%)",
+        "source_file": "09_產業價值區_4.png",
+        "industry": "晶圓代工"
+      },
+      {
+        "rank": 22,
+        "code": "2449",
+        "name": "京元電子",
+        "price": "306",
+        "change": "▲2 (+0.66%)",
+        "source_file": "10_產業價值區_5.png",
+        "industry": "IC測試"
+      },
+      {
+        "rank": 23,
+        "code": "2454",
+        "name": "聯發科",
+        "price": "5,315",
+        "change": "▲130 (+2.51%)",
+        "source_file": "10_產業價值區_5.png",
+        "industry": "IC設計"
+      },
+      {
+        "rank": 24,
+        "code": "2303",
+        "name": "聯電",
+        "price": "153.5",
+        "change": "▼6.5 (-4.06%)",
+        "source_file": "10_產業價值區_5.png",
+        "industry": "晶圓代工"
+      },
+      {
+        "rank": 25,
+        "code": "6213",
+        "name": "聯茂",
+        "price": "595",
+        "change": "▲54 (+9.98%)",
+        "source_file": "10_產業價值區_5.png",
+        "industry": "銅箔基板"
+      },
+      {
+        "rank": 26,
+        "code": "6274",
+        "name": "台燿",
+        "price": "1,495",
+        "change": "▲35 (+2.4%)",
+        "source_file": "10_產業價值區_5.png",
+        "industry": "銅箔基板"
+      },
+      {
+        "rank": 27,
+        "code": "3711",
+        "name": "日月光投控",
+        "price": "692",
+        "change": "▼1 (-0.14%)",
+        "source_file": "11_產業價值區_6.png",
+        "industry": "IC封裝測試"
+      },
+      {
+        "rank": 28,
+        "code": "2308",
+        "name": "台達電",
+        "price": "1,905",
+        "change": "▲5 (+0.26%)",
+        "source_file": "11_產業價值區_6.png",
+        "industry": "電源供應器"
+      },
+      {
+        "rank": 29,
+        "code": "3189",
+        "name": "景碩",
+        "price": "956",
+        "change": "▲50 (+5.52%)",
+        "source_file": "11_產業價值區_6.png",
+        "industry": "IC基板"
+      },
+      {
+        "rank": 30,
+        "code": "3037",
+        "name": "欣興",
+        "price": "1,165",
+        "change": "▲5 (+0.43%)",
+        "source_file": "11_產業價值區_6.png",
+        "industry": "IC基板"
+      },
+      {
+        "rank": 31,
+        "code": "3665",
+        "name": "貿聯-KY",
+        "price": "2,335",
+        "change": "▼5 (-0.21%)",
+        "source_file": "11_產業價值區_6.png",
+        "industry": "連接線材"
+      }
+    ],
+    "產業升溫區": [
+      {
+        "rank": 1,
+        "code": "3016",
+        "name": "嘉晶",
+        "price": "160",
+        "change": "▲14.5 (+9.97%)",
+        "source_file": "12_產業升溫區_1.png",
+        "industry": "矽晶圓"
+      },
+      {
+        "rank": 2,
+        "code": "2305",
+        "name": "全友",
+        "price": "63.6",
+        "change": "0 (0%)",
+        "source_file": "12_產業升溫區_1.png",
+        "industry": "掃描器"
+      },
+      {
+        "rank": 3,
+        "code": "8227",
+        "name": "巨有科技",
+        "price": "306.5",
+        "change": "▼3.5 (-1.13%)",
+        "source_file": "12_產業升溫區_1.png",
+        "industry": "矽智財"
+      },
+      {
+        "rank": 4,
+        "code": "3443",
+        "name": "創意",
+        "price": "8,445",
+        "change": "▲60 (+0.72%)",
+        "source_file": "12_產業升溫區_1.png",
+        "industry": "矽智財"
+      },
+      {
+        "rank": 5,
+        "code": "2221",
+        "name": "大甲",
+        "price": "160",
+        "change": "▲1.5 (+0.95%)",
+        "source_file": "12_產業升溫區_1.png",
+        "industry": "不鏽鋼產品"
+      },
+      {
+        "rank": 6,
+        "code": "1560",
+        "name": "中砂",
+        "price": "956",
+        "change": "▲1 (+0.1%)",
+        "source_file": "12_產業升溫區_1.png",
+        "industry": "矽晶圓"
+      },
+      {
+        "rank": 7,
+        "code": "6426",
+        "name": "統新",
+        "price": "385",
+        "change": "▼6.5 (-1.66%)",
+        "source_file": "13_產業升溫區_2.png",
+        "industry": "光通訊設備"
+      },
+      {
+        "rank": 8,
+        "code": "3605",
+        "name": "宏致",
+        "price": "181.5",
+        "change": "▲1.5 (+0.83%)",
+        "source_file": "13_產業升溫區_2.png",
+        "industry": "連接器"
+      },
+      {
+        "rank": 9,
+        "code": "3324",
+        "name": "雙鴻",
+        "price": "1,700",
+        "change": "▲105 (+6.58%)",
+        "source_file": "13_產業升溫區_2.png",
+        "industry": "散熱模組"
+      },
+      {
+        "rank": 10,
+        "code": "6491",
+        "name": "晶碩",
+        "price": "403",
+        "change": "▼4.5 (-1.1%)",
+        "source_file": "13_產業升溫區_2.png",
+        "industry": "應用生技"
+      },
+      {
+        "rank": 11,
+        "code": "6715",
+        "name": "嘉基",
+        "price": "466.5",
+        "change": "▲7 (+1.52%)",
+        "source_file": "13_產業升溫區_2.png",
+        "industry": "連接線材"
+      },
+      {
+        "rank": 12,
+        "code": "6526",
+        "name": "達發",
+        "price": "842",
+        "change": "▲2 (+0.24%)",
+        "source_file": "14_產業升溫區_3.png",
+        "industry": "IC設計"
+      },
+      {
+        "rank": 13,
+        "code": "8021",
+        "name": "尖點",
+        "price": "477",
+        "change": "▼1 (-0.21%)",
+        "source_file": "14_產業升溫區_3.png",
+        "industry": "PCB原材料"
+      },
+      {
+        "rank": 14,
+        "code": "3675",
+        "name": "德微",
+        "price": "327.5",
+        "change": "▼4.5 (-1.36%)",
+        "source_file": "14_產業升溫區_3.png",
+        "industry": "二極體"
+      },
+      {
+        "rank": 15,
+        "code": "3044",
+        "name": "健鼎",
+        "price": "539",
+        "change": "▼4 (-0.74%)",
+        "source_file": "14_產業升溫區_3.png",
+        "industry": "硬板"
+      },
+      {
+        "rank": 16,
+        "code": "1727",
+        "name": "中華化",
+        "price": "120",
+        "change": "▲3.5 (+3%)",
+        "source_file": "14_產業升溫區_3.png",
+        "industry": "電子化工品"
+      },
+      {
+        "rank": 17,
+        "code": "2033",
+        "name": "佳大",
+        "price": "35.9",
+        "change": "▼1.4 (-3.75%)",
+        "source_file": "15_產業升溫區_4.png",
+        "industry": "鋼鐵產品"
+      },
+      {
+        "rank": 18,
+        "code": "2409",
+        "name": "友達",
+        "price": "34.1",
+        "change": "▼0.6 (-1.73%)",
+        "source_file": "15_產業升溫區_4.png",
+        "industry": "TFT-LCD"
+      },
+      {
+        "rank": 19,
+        "code": "6861",
+        "name": "睿生光電",
+        "price": "282",
+        "change": "▲9 (+3.3%)",
+        "source_file": "15_產業升溫區_4.png",
+        "industry": "醫療器材"
+      },
+      {
+        "rank": 20,
+        "code": "6957",
+        "name": "裕慶-KY",
+        "price": "290",
+        "change": "▼5.5 (-1.86%)",
+        "source_file": "15_產業升溫區_4.png",
+        "industry": "傳產其他"
+      },
+      {
+        "rank": 21,
+        "code": "3702",
+        "name": "大聯大",
+        "price": "114.5",
+        "change": "▲0.5 (+0.44%)",
+        "source_file": "15_產業升溫區_4.png",
+        "industry": "IC零組件通路商"
+      },
+      {
+        "rank": 22,
+        "code": "6168",
+        "name": "宏齊",
+        "price": "44.9",
+        "change": "▲3.7 (+8.98%)",
+        "source_file": "16_產業升溫區_5.png",
+        "industry": "發光二極體"
+      },
+      {
+        "rank": 23,
+        "code": "2527",
+        "name": "宏璟",
+        "price": "47.85",
+        "change": "▼0.55 (-1.14%)",
+        "source_file": "16_產業升溫區_5.png",
+        "industry": "營造工程"
+      },
+      {
+        "rank": 24,
+        "code": "3055",
+        "name": "蔚華科",
+        "price": "202",
+        "change": "▼1.5 (-0.74%)",
+        "source_file": "16_產業升溫區_5.png",
+        "industry": "半導體設備"
+      },
+      {
+        "rank": 25,
+        "code": "4542",
+        "name": "科嶠",
+        "price": "324.5",
+        "change": "▼7 (-2.11%)",
+        "source_file": "16_產業升溫區_5.png",
+        "industry": "印刷電路板設備"
+      },
+      {
+        "rank": 26,
+        "code": "4924",
+        "name": "欣厚-KY",
+        "price": "16.95",
+        "change": "▲0.05 (+0.3%)",
+        "source_file": "16_產業升溫區_5.png",
+        "industry": "電腦及周邊產品"
+      },
+      {
+        "rank": 27,
+        "code": "1709",
+        "name": "和益",
+        "price": "44.25",
+        "change": "▼4.05 (-8.39%)",
+        "source_file": "17_產業升溫區_6.png",
+        "industry": "化學工業"
+      },
+      {
+        "rank": 28,
+        "code": "2030",
+        "name": "彰源",
+        "price": "30.4",
+        "change": "▲2.75 (+9.95%)",
+        "source_file": "17_產業升溫區_6.png",
+        "industry": "不鏽鋼加工"
+      },
+      {
+        "rank": 29,
+        "code": "8996",
+        "name": "高力",
+        "price": "1,510",
+        "change": "▼30 (-1.95%)",
+        "source_file": "17_產業升溫區_6.png",
+        "industry": "散熱模組"
+      },
+      {
+        "rank": 30,
+        "code": "6218",
+        "name": "豪勉",
+        "price": "63",
+        "change": "▲1.7 (+2.77%)",
+        "source_file": "17_產業升溫區_6.png",
+        "industry": "網路設備"
+      }
+    ]
+  },
+  "issue_payload": {
+    "ark": {
+      "schema_version": "kmb.ark.normalized.v1",
+      "water_level": 67.1,
+      "holding_allocation_suggestion": "67.1%",
+      "as_of": "2026-09-24",
+      "source_time": "2026-09-24T09:41:04+08:00",
+      "status": "validated",
+      "source_file": "data/research/20260924/ark.json",
+      "prev": 66.7,
+      "previous_water_level": 66.7,
+      "delta": 0.4,
+      "change": 0.4,
+      "direction": "上升",
+      "comparison_date": "2026-09-23",
+      "previous_trading_date": "2026-09-23",
+      "comparison_is_provisional": false,
+      "note": "9/24 方舟持股配置建議67.1%，較9/23晨報水位66.7%上升0.4個百分點。",
+      "interpretation": "水位上升代表可部署空間改善，但外部利率衝擊與價格回落仍要求放慢，不是直接買進指令。"
+    },
+    "etf": {
+      "value": [
+        {
+          "code": "00960",
+          "name": "野村全球航運龍頭",
+          "price": "22",
+          "change": "▼0.21 (-0.95%)",
+          "mark": ""
+        },
+        {
+          "code": "0055",
+          "name": "元大MSCI金融",
+          "price": "49.7",
+          "change": "▼0.18 (-0.36%)",
+          "mark": ""
+        },
+        {
+          "code": "0056",
+          "name": "元大高股息",
+          "price": "56.3",
+          "change": "▼0.3 (-0.53%)",
+          "mark": ""
+        },
+        {
+          "code": "0053",
+          "name": "元大電子",
+          "price": "252.65",
+          "change": "▼0.35 (-0.14%)",
+          "mark": ""
+        },
+        {
+          "code": "0050",
+          "name": "元大台灣50",
+          "price": "112.05",
+          "change": "▼0.4 (-0.36%)",
+          "mark": ""
+        },
+        {
+          "code": "00631L",
+          "name": "元大台灣50正2",
+          "price": "38.75",
+          "change": "▼0.24 (-0.62%)",
+          "mark": ""
+        },
+        {
+          "code": "0052",
+          "name": "富邦科技",
+          "price": "65.25",
+          "change": "▼0.2 (-0.31%)",
+          "mark": ""
+        },
+        {
+          "code": "00911",
+          "name": "兆豐洲際半導體",
+          "price": "56.2",
+          "change": "▼0.95 (-1.66%)",
+          "mark": "價值×升溫"
+        },
+        {
+          "code": "00830",
+          "name": "國泰費城半導體",
+          "price": "87.95",
+          "change": "▼0.65 (-0.73%)",
+          "mark": ""
+        },
+        {
+          "code": "00875",
+          "name": "國泰網路資安",
+          "price": "58.7",
+          "change": "▲0.9 (+1.56%)",
+          "mark": "價值×升溫"
+        }
+      ],
+      "rising": [
+        {
+          "code": "00898",
+          "name": "國泰基因免疫革命",
+          "price": "11.49",
+          "change": "▼0.27 (-2.3%)",
+          "mark": ""
+        },
+        {
+          "code": "00897",
+          "name": "富邦基因免疫生技",
+          "price": "13.57",
+          "change": "▼0.21 (-1.52%)",
+          "mark": ""
+        },
+        {
+          "code": "00875",
+          "name": "國泰網路資安",
+          "price": "58.7",
+          "change": "▲0.9 (+1.56%)",
+          "mark": "價值×升溫"
+        },
+        {
+          "code": "009809",
+          "name": "富邦淨零ESG50",
+          "price": "18.53",
+          "change": "▼0.16 (-0.86%)",
+          "mark": ""
+        },
+        {
+          "code": "00911",
+          "name": "兆豐洲際半導體",
+          "price": "56.2",
+          "change": "▼0.95 (-1.66%)",
+          "mark": "價值×升溫"
+        },
+        {
+          "code": "00878",
+          "name": "國泰永續高股息",
+          "price": "34.92",
+          "change": "▼0.17 (-0.48%)",
+          "mark": ""
+        },
+        {
+          "code": "00701",
+          "name": "國泰股利精選30",
+          "price": "41.62",
+          "change": "▼0.35 (-0.83%)",
+          "mark": ""
+        }
+      ],
+      "overlap": [
+        "00911",
+        "00875"
+      ],
+      "overlap_names": {
+        "00911": "兆豐洲際半導體",
+        "00875": "國泰網路資安"
+      }
+    },
+    "stocks": {
+      "value": [
+        {
+          "code": "2324",
+          "name": "仁寶",
+          "price": "36.5",
+          "change": "▼0.3 (-0.82%)",
+          "industry": "電子設備",
+          "mark": ""
+        },
+        {
+          "code": "6515",
+          "name": "穎崴",
+          "price": "5,835",
+          "change": "▼160 (-2.67%)",
+          "industry": "IC封裝測試設備",
+          "mark": ""
+        },
+        {
+          "code": "4958",
+          "name": "臻鼎-KY",
+          "price": "474.5",
+          "change": "▲1.5 (+0.32%)",
+          "industry": "軟板",
+          "mark": ""
+        },
+        {
+          "code": "3008",
+          "name": "大立光",
+          "price": "6,300",
+          "change": "▲110 (+1.78%)",
+          "industry": "光學鏡片與鏡頭",
+          "mark": ""
+        },
+        {
+          "code": "2383",
+          "name": "台光電",
+          "price": "5,110",
+          "change": "▲90 (+1.79%)",
+          "industry": "銅箔基板",
+          "mark": ""
+        },
+        {
+          "code": "1785",
+          "name": "光洋科",
+          "price": "95.2",
+          "change": "▼1.3 (-1.35%)",
+          "industry": "非鐵金屬",
+          "mark": ""
+        },
+        {
+          "code": "2313",
+          "name": "華通",
+          "price": "220.5",
+          "change": "▼3.5 (-1.56%)",
+          "industry": "硬板",
+          "mark": ""
+        },
+        {
+          "code": "2345",
+          "name": "智邦",
+          "price": "1,875",
+          "change": "▼15 (-0.79%)",
+          "industry": "網路設備",
+          "mark": ""
+        },
+        {
+          "code": "2059",
+          "name": "川湖",
+          "price": "12,430",
+          "change": "▲40 (+0.32%)",
+          "industry": "電子零組件",
+          "mark": ""
+        },
+        {
+          "code": "3034",
+          "name": "聯詠",
+          "price": "529",
+          "change": "▼16 (-2.94%)",
+          "industry": "驅動IC",
+          "mark": ""
+        },
+        {
+          "code": "6223",
+          "name": "旺矽",
+          "price": "5,455",
+          "change": "▼165 (-2.94%)",
+          "industry": "IC封裝測試設備",
+          "mark": ""
+        },
+        {
+          "code": "2360",
+          "name": "致茂",
+          "price": "2,310",
+          "change": "▼15 (-0.65%)",
+          "industry": "半導體設備",
+          "mark": ""
+        },
+        {
+          "code": "6285",
+          "name": "啟碁",
+          "price": "234",
+          "change": "▲4 (+1.74%)",
+          "industry": "無線通訊設備",
+          "mark": ""
+        },
+        {
+          "code": "2382",
+          "name": "廣達",
+          "price": "337",
+          "change": "▼4.5 (-1.32%)",
+          "industry": "伺服器組裝代工",
+          "mark": ""
+        },
+        {
+          "code": "2455",
+          "name": "全新",
+          "price": "552",
+          "change": "0 (0%)",
+          "industry": "砷化鎵代工",
+          "mark": ""
+        },
+        {
+          "code": "2327",
+          "name": "國巨*",
+          "price": "580",
+          "change": "▲7 (+1.22%)",
+          "industry": "MLCC",
+          "mark": ""
+        },
+        {
+          "code": "6239",
+          "name": "力成",
+          "price": "288.5",
+          "change": "▲2 (+0.7%)",
+          "industry": "IC封裝測試",
+          "mark": ""
+        },
+        {
+          "code": "2379",
+          "name": "瑞昱",
+          "price": "733",
+          "change": "▼28 (-3.68%)",
+          "industry": "IC設計",
+          "mark": ""
+        },
+        {
+          "code": "5274",
+          "name": "信驊",
+          "price": "20,500",
+          "change": "▲220 (+1.08%)",
+          "industry": "IC設計",
+          "mark": ""
+        },
+        {
+          "code": "6415",
+          "name": "矽力*-KY",
+          "price": "422.5",
+          "change": "▼3.5 (-0.82%)",
+          "industry": "IC設計",
+          "mark": ""
+        },
+        {
+          "code": "2330",
+          "name": "台積電",
+          "price": "2,480",
+          "change": "▼20 (-0.8%)",
+          "industry": "晶圓代工",
+          "mark": ""
+        },
+        {
+          "code": "2449",
+          "name": "京元電子",
+          "price": "306",
+          "change": "▲2 (+0.66%)",
+          "industry": "IC測試",
+          "mark": ""
+        },
+        {
+          "code": "2454",
+          "name": "聯發科",
+          "price": "5,315",
+          "change": "▲130 (+2.51%)",
+          "industry": "IC設計",
+          "mark": ""
+        },
+        {
+          "code": "2303",
+          "name": "聯電",
+          "price": "153.5",
+          "change": "▼6.5 (-4.06%)",
+          "industry": "晶圓代工",
+          "mark": ""
+        },
+        {
+          "code": "6213",
+          "name": "聯茂",
+          "price": "595",
+          "change": "▲54 (+9.98%)",
+          "industry": "銅箔基板",
+          "mark": ""
+        },
+        {
+          "code": "6274",
+          "name": "台燿",
+          "price": "1,495",
+          "change": "▲35 (+2.4%)",
+          "industry": "銅箔基板",
+          "mark": ""
+        },
+        {
+          "code": "3711",
+          "name": "日月光投控",
+          "price": "692",
+          "change": "▼1 (-0.14%)",
+          "industry": "IC封裝測試",
+          "mark": ""
+        },
+        {
+          "code": "2308",
+          "name": "台達電",
+          "price": "1,905",
+          "change": "▲5 (+0.26%)",
+          "industry": "電源供應器",
+          "mark": ""
+        },
+        {
+          "code": "3189",
+          "name": "景碩",
+          "price": "956",
+          "change": "▲50 (+5.52%)",
+          "industry": "IC基板",
+          "mark": ""
+        },
+        {
+          "code": "3037",
+          "name": "欣興",
+          "price": "1,165",
+          "change": "▲5 (+0.43%)",
+          "industry": "IC基板",
+          "mark": ""
+        },
+        {
+          "code": "3665",
+          "name": "貿聯-KY",
+          "price": "2,335",
+          "change": "▼5 (-0.21%)",
+          "industry": "連接線材",
+          "mark": ""
+        }
+      ],
+      "rising": [
+        {
+          "code": "3016",
+          "name": "嘉晶",
+          "price": "160",
+          "change": "▲14.5 (+9.97%)",
+          "industry": "矽晶圓",
+          "mark": ""
+        },
+        {
+          "code": "2305",
+          "name": "全友",
+          "price": "63.6",
+          "change": "0 (0%)",
+          "industry": "掃描器",
+          "mark": ""
+        },
+        {
+          "code": "8227",
+          "name": "巨有科技",
+          "price": "306.5",
+          "change": "▼3.5 (-1.13%)",
+          "industry": "矽智財",
+          "mark": ""
+        },
+        {
+          "code": "3443",
+          "name": "創意",
+          "price": "8,445",
+          "change": "▲60 (+0.72%)",
+          "industry": "矽智財",
+          "mark": ""
+        },
+        {
+          "code": "2221",
+          "name": "大甲",
+          "price": "160",
+          "change": "▲1.5 (+0.95%)",
+          "industry": "不鏽鋼產品",
+          "mark": ""
+        },
+        {
+          "code": "1560",
+          "name": "中砂",
+          "price": "956",
+          "change": "▲1 (+0.1%)",
+          "industry": "矽晶圓",
+          "mark": ""
+        },
+        {
+          "code": "6426",
+          "name": "統新",
+          "price": "385",
+          "change": "▼6.5 (-1.66%)",
+          "industry": "光通訊設備",
+          "mark": ""
+        },
+        {
+          "code": "3605",
+          "name": "宏致",
+          "price": "181.5",
+          "change": "▲1.5 (+0.83%)",
+          "industry": "連接器",
+          "mark": ""
+        },
+        {
+          "code": "3324",
+          "name": "雙鴻",
+          "price": "1,700",
+          "change": "▲105 (+6.58%)",
+          "industry": "散熱模組",
+          "mark": ""
+        },
+        {
+          "code": "6491",
+          "name": "晶碩",
+          "price": "403",
+          "change": "▼4.5 (-1.1%)",
+          "industry": "應用生技",
+          "mark": ""
+        },
+        {
+          "code": "6715",
+          "name": "嘉基",
+          "price": "466.5",
+          "change": "▲7 (+1.52%)",
+          "industry": "連接線材",
+          "mark": ""
+        },
+        {
+          "code": "6526",
+          "name": "達發",
+          "price": "842",
+          "change": "▲2 (+0.24%)",
+          "industry": "IC設計",
+          "mark": ""
+        },
+        {
+          "code": "8021",
+          "name": "尖點",
+          "price": "477",
+          "change": "▼1 (-0.21%)",
+          "industry": "PCB原材料",
+          "mark": ""
+        },
+        {
+          "code": "3675",
+          "name": "德微",
+          "price": "327.5",
+          "change": "▼4.5 (-1.36%)",
+          "industry": "二極體",
+          "mark": ""
+        },
+        {
+          "code": "3044",
+          "name": "健鼎",
+          "price": "539",
+          "change": "▼4 (-0.74%)",
+          "industry": "硬板",
+          "mark": ""
+        },
+        {
+          "code": "1727",
+          "name": "中華化",
+          "price": "120",
+          "change": "▲3.5 (+3%)",
+          "industry": "電子化工品",
+          "mark": ""
+        },
+        {
+          "code": "2033",
+          "name": "佳大",
+          "price": "35.9",
+          "change": "▼1.4 (-3.75%)",
+          "industry": "鋼鐵產品",
+          "mark": ""
+        },
+        {
+          "code": "2409",
+          "name": "友達",
+          "price": "34.1",
+          "change": "▼0.6 (-1.73%)",
+          "industry": "TFT-LCD",
+          "mark": ""
+        },
+        {
+          "code": "6861",
+          "name": "睿生光電",
+          "price": "282",
+          "change": "▲9 (+3.3%)",
+          "industry": "醫療器材",
+          "mark": ""
+        },
+        {
+          "code": "6957",
+          "name": "裕慶-KY",
+          "price": "290",
+          "change": "▼5.5 (-1.86%)",
+          "industry": "傳產其他",
+          "mark": ""
+        },
+        {
+          "code": "3702",
+          "name": "大聯大",
+          "price": "114.5",
+          "change": "▲0.5 (+0.44%)",
+          "industry": "IC零組件通路商",
+          "mark": ""
+        },
+        {
+          "code": "6168",
+          "name": "宏齊",
+          "price": "44.9",
+          "change": "▲3.7 (+8.98%)",
+          "industry": "發光二極體",
+          "mark": ""
+        },
+        {
+          "code": "2527",
+          "name": "宏璟",
+          "price": "47.85",
+          "change": "▼0.55 (-1.14%)",
+          "industry": "營造工程",
+          "mark": ""
+        },
+        {
+          "code": "3055",
+          "name": "蔚華科",
+          "price": "202",
+          "change": "▼1.5 (-0.74%)",
+          "industry": "半導體設備",
+          "mark": ""
+        },
+        {
+          "code": "4542",
+          "name": "科嶠",
+          "price": "324.5",
+          "change": "▼7 (-2.11%)",
+          "industry": "印刷電路板設備",
+          "mark": ""
+        },
+        {
+          "code": "4924",
+          "name": "欣厚-KY",
+          "price": "16.95",
+          "change": "▲0.05 (+0.3%)",
+          "industry": "電腦及周邊產品",
+          "mark": ""
+        },
+        {
+          "code": "1709",
+          "name": "和益",
+          "price": "44.25",
+          "change": "▼4.05 (-8.39%)",
+          "industry": "化學工業",
+          "mark": ""
+        },
+        {
+          "code": "2030",
+          "name": "彰源",
+          "price": "30.4",
+          "change": "▲2.75 (+9.95%)",
+          "industry": "不鏽鋼加工",
+          "mark": ""
+        },
+        {
+          "code": "8996",
+          "name": "高力",
+          "price": "1,510",
+          "change": "▼30 (-1.95%)",
+          "industry": "散熱模組",
+          "mark": ""
+        },
+        {
+          "code": "6218",
+          "name": "豪勉",
+          "price": "63",
+          "change": "▲1.7 (+2.77%)",
+          "industry": "網路設備",
+          "mark": ""
+        }
+      ],
+      "overlap": [],
+      "overlap_names": {}
+    }
+  },
+  "audit": {
+    "status": "pass",
+    "run_ok": true,
+    "run_status": "success",
+    "stage": "complete",
+    "run_id": "2026-09-24_09-41-04",
+    "run_date": "2026-09-24",
+    "timezone": "Asia/Taipei",
+    "screenshot_count": 17,
+    "latest_pointer_is_symlink": true,
+    "latest_pointer_target_verified": true,
+    "all_declared_hashes_verified": true,
+    "hashes_verified": 23,
+    "ark_validation_ok": true,
+    "row_count": 78,
+    "unique_code_count": 76,
+    "within_zone_duplicates": 0,
+    "cross_zone_duplicate_occurrences": 2,
+    "section_counts": {
+      "ETF價值區": 10,
+      "ETF升溫區": 7,
+      "產業價值區": 31,
+      "產業升溫區": 30
+    },
+    "code_name_order_ax_matches": 78,
+    "price_change_arithmetic_checks_passed": 78,
+    "industry_values_taken_from_ax": 61,
+    "primary_price_change_direct_matches_after_arrow_normalization": 72,
+    "primary_null_rows_filled_from_ax_and_confirmed_by_screenshot": 4,
+    "screenshot_overrides_over_ax": 2,
+    "etf_cards_visually_checked": 17,
+    "etf_price_null_count": 0,
+    "etf_change_null_count": 0,
+    "source_ocr_arrow_strings_normalized": 63,
+    "source_policy": "Primary Ark JSON controls zone and rank. AX confirms all code/name/order and supplies industry plus null fields. Screenshot wins material primary/AX price conflicts. ETF payload uses 股價/漲跌幅, not 即時淨值/折溢價%.",
+    "extractor_duplicate_count_note": "Primary summary duplicateCount=19 and AX duplicateCount=18 are capture/page-dedupe diagnostics, not within-zone duplicate counts.",
+    "hash_manifest": {
+      "ark_ocr.json": {
+        "declared": "8b1224c8077299154b5f10a01a7bc0e8b688c165a6375c5aee93fe59ba1e6486",
+        "actual": "8b1224c8077299154b5f10a01a7bc0e8b688c165a6375c5aee93fe59ba1e6486",
+        "ok": true
+      },
+      "ark_stocks.json": {
+        "declared": "2c9f4d324b3c7341e77b1deb4684ed1ed14d57c8b3255fca01598a9bfccea582",
+        "actual": "2c9f4d324b3c7341e77b1deb4684ed1ed14d57c8b3255fca01598a9bfccea582",
+        "ok": true
+      },
+      "ark_stocks_ax.json": {
+        "declared": "3dd47fbbb13775a9396f36594f2600dfe3a556e72966852e0acb205d0151fd0a",
+        "actual": "3dd47fbbb13775a9396f36594f2600dfe3a556e72966852e0acb205d0151fd0a",
+        "ok": true
+      },
+      "ark_validation.json": {
+        "declared": "30e6c0f12555625510fa4498a7452f5c0e1079c97fa0db99ab68930948404632",
+        "actual": "30e6c0f12555625510fa4498a7452f5c0e1079c97fa0db99ab68930948404632",
+        "ok": true
+      },
+      "01_風控水位.png": {
+        "declared": "6ecb3fb9ae559fb6068bcab0b33e4cb8f80802f7b426480b18e20d9540c2f9fa",
+        "actual": "6ecb3fb9ae559fb6068bcab0b33e4cb8f80802f7b426480b18e20d9540c2f9fa",
+        "ok": true
+      },
+      "02_ETF價值區_1.png": {
+        "declared": "ee48fdf7b549aa01e6d2d786f41c01bdef4a617aeaf3aa3b5d88d18e64e6e4cf",
+        "actual": "ee48fdf7b549aa01e6d2d786f41c01bdef4a617aeaf3aa3b5d88d18e64e6e4cf",
+        "ok": true
+      },
+      "03_ETF價值區_2.png": {
+        "declared": "0b61dae78adffa294d5d0b6dc4416fb15cc9ec21c9c33eed66b776d480d66cf8",
+        "actual": "0b61dae78adffa294d5d0b6dc4416fb15cc9ec21c9c33eed66b776d480d66cf8",
+        "ok": true
+      },
+      "04_ETF升溫區_1.png": {
+        "declared": "75a89466fbf49d6b47aa1381886fa13eccb0b1cc81b3bfbc8b43923edb914300",
+        "actual": "75a89466fbf49d6b47aa1381886fa13eccb0b1cc81b3bfbc8b43923edb914300",
+        "ok": true
+      },
+      "05_ETF升溫區_2.png": {
+        "declared": "72e95e79b87ca03f294528423c87e137e0f92eac710677c806ee40b3938c4aed",
+        "actual": "72e95e79b87ca03f294528423c87e137e0f92eac710677c806ee40b3938c4aed",
+        "ok": true
+      },
+      "06_產業價值區_1.png": {
+        "declared": "9395f18f16e27f9cd2189e6473115ab90e99e263309f0ee836bb60fda13de691",
+        "actual": "9395f18f16e27f9cd2189e6473115ab90e99e263309f0ee836bb60fda13de691",
+        "ok": true
+      },
+      "07_產業價值區_2.png": {
+        "declared": "8caad9004c5e9cc665be6e39dd42f6916dccb7238cb3682143679df10679a0cf",
+        "actual": "8caad9004c5e9cc665be6e39dd42f6916dccb7238cb3682143679df10679a0cf",
+        "ok": true
+      },
+      "08_產業價值區_3.png": {
+        "declared": "b00fbf0b97d4923369b33e11b8510542f282be630f06ec4a318e5ed6ed509d92",
+        "actual": "b00fbf0b97d4923369b33e11b8510542f282be630f06ec4a318e5ed6ed509d92",
+        "ok": true
+      },
+      "09_產業價值區_4.png": {
+        "declared": "e8fdcc4522daf564dbcf4f6e50ca7716c826a695f124c084b72a543dfc76fb3d",
+        "actual": "e8fdcc4522daf564dbcf4f6e50ca7716c826a695f124c084b72a543dfc76fb3d",
+        "ok": true
+      },
+      "10_產業價值區_5.png": {
+        "declared": "dd01a8d5b76c285b06275c179aa94b6a0405cbaa617de98f4da0ee17996f3cf8",
+        "actual": "dd01a8d5b76c285b06275c179aa94b6a0405cbaa617de98f4da0ee17996f3cf8",
+        "ok": true
+      },
+      "11_產業價值區_6.png": {
+        "declared": "863b5148142124844974dbb32236d9fc69e36cd32efab6bcac2bdf634dc1b08b",
+        "actual": "863b5148142124844974dbb32236d9fc69e36cd32efab6bcac2bdf634dc1b08b",
+        "ok": true
+      },
+      "12_產業升溫區_1.png": {
+        "declared": "fdcbcb514f182bf19f2ff16b0ea4b2cfa0fbd9734deb88a04a8aadce5da4daa1",
+        "actual": "fdcbcb514f182bf19f2ff16b0ea4b2cfa0fbd9734deb88a04a8aadce5da4daa1",
+        "ok": true
+      },
+      "13_產業升溫區_2.png": {
+        "declared": "cd081e982b83818dffece5ffe775a3cd39450ebe3fb6acb534a06386c3058879",
+        "actual": "cd081e982b83818dffece5ffe775a3cd39450ebe3fb6acb534a06386c3058879",
+        "ok": true
+      },
+      "14_產業升溫區_3.png": {
+        "declared": "6942b0ea759c2937adea5789c61b9160755acedb889057e33b1bb6212e1689c9",
+        "actual": "6942b0ea759c2937adea5789c61b9160755acedb889057e33b1bb6212e1689c9",
+        "ok": true
+      },
+      "15_產業升溫區_4.png": {
+        "declared": "e7533b4c8fec815592768b757e7e6af9b7c4e7d3146c242042533649a1febd27",
+        "actual": "e7533b4c8fec815592768b757e7e6af9b7c4e7d3146c242042533649a1febd27",
+        "ok": true
+      },
+      "16_產業升溫區_5.png": {
+        "declared": "bf1ccf3c4f2030205dec02a51692adadf91737a4432abec416af0d0f973bafa6",
+        "actual": "bf1ccf3c4f2030205dec02a51692adadf91737a4432abec416af0d0f973bafa6",
+        "ok": true
+      },
+      "17_產業升溫區_6.png": {
+        "declared": "b9542693908df6065c4edfb5aeb3823dd225b708653073c432cbfddf601b2c42",
+        "actual": "b9542693908df6065c4edfb5aeb3823dd225b708653073c432cbfddf601b2c42",
+        "ok": true
+      },
+      "capture_manifest.jsonl": {
+        "declared": "634b1a874362304b26393a005e43099c34828f75bf4ec7b974cc8c37927f4dfa",
+        "actual": "634b1a874362304b26393a005e43099c34828f75bf4ec7b974cc8c37927f4dfa",
+        "ok": true
+      },
+      "ark_ax_rows.jsonl": {
+        "declared": "4068c4d640cd52fa0df7296984870a3a4ae148c6f0c98193a55706ba85dcfd6b",
+        "actual": "4068c4d640cd52fa0df7296984870a3a4ae148c6f0c98193a55706ba85dcfd6b",
+        "ok": true
+      }
+    },
+    "checks": {
+      "success_ok_complete": true,
+      "success_date_is_2026_09_24": true,
+      "four_zone_counts_exact": true,
+      "ranks_contiguous": true,
+      "within_zone_duplicates_absent": true,
+      "overlaps_preserved": true,
+      "all_codes_names_order_match_ax": true,
+      "all_price_change_pairs_non_null": true,
+      "all_change_math_consistent_with_display_rounding": true,
+      "etf_market_price_not_nav": true,
+      "morning_brief_source_unchanged": true
+    },
+    "anomalies": [
+      {
+        "scope": "all zones",
+        "field": "change glyph",
+        "source_issue": "63 primary OCR change strings used 7/4/O-like arrow artifacts.",
+        "resolution": "Normalized to ▲/▼ via AX, sign, and percentage-implied move; all 78 arithmetic checks pass."
+      },
+      {
+        "section": "產業價值區",
+        "rank": 18,
+        "code": "2379",
+        "name": "瑞昱",
+        "field": "price/change",
+        "primary": null,
+        "ax": "733 / ▼28 (-3.68%)",
+        "screenshot": "733 / ▼28 (-3.68%)",
+        "resolution": "AX confirmed by 09_產業價值區_4.png"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 2,
+        "code": "2305",
+        "name": "全友",
+        "field": "price/change",
+        "primary": null,
+        "ax": "63.6 / 0 (0%)",
+        "screenshot": "63.6 / 0 (0%)",
+        "resolution": "AX confirmed by 12_產業升溫區_1.png"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 9,
+        "code": "3324",
+        "name": "雙鴻",
+        "field": "price/change",
+        "primary": null,
+        "ax": "1,700 / ▲105 (+6.58%)",
+        "screenshot": "1,700 / ▲105 (+6.58%)",
+        "resolution": "AX confirmed by 13_產業升溫區_2.png"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 10,
+        "code": "6491",
+        "name": "晶碩",
+        "field": "price/change",
+        "primary": null,
+        "ax": "403 / ▼4.5 (-1.1%)",
+        "screenshot": "403 / ▼4.5 (-1.1%)",
+        "resolution": "AX confirmed by 13_產業升溫區_2.png"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 24,
+        "code": "2303",
+        "name": "聯電",
+        "field": "AX price/change conflict",
+        "primary": "153.5 / ▼6.5 (-4.06%)",
+        "ax": "153 / ▼7 (-4.38%)",
+        "screenshot": "153.5 / ▼6.5 (-4.06%)",
+        "resolution": "screenshot/primary"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 6,
+        "code": "1560",
+        "name": "中砂",
+        "field": "AX price/change conflict",
+        "primary": "956 / ▲1 (+0.1%)",
+        "ax": "955 / 0 (0%)",
+        "screenshot": "956 / ▲1 (+0.1%)",
+        "resolution": "screenshot/primary"
+      },
+      {
+        "section": "ETF價值區",
+        "rank": 6,
+        "code": "00631L",
+        "name": "元大台灣50正2",
+        "field": "carryover intrarun drift",
+        "authoritative_first_card": "38.75 / ▼0.24 (-0.62%) in 02_ETF價值區_1.png",
+        "later_partial_carryover": "38.77 / ▼0.22 (-0.56%) in 03_ETF價值區_2.png",
+        "resolution": "Preserved primary ranked capture; later carryover is not a second row."
+      }
+    ]
+  }
+}
