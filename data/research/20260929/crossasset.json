@@ -1,0 +1,174 @@
+{
+  "evidence_pack": "bounded_cross_asset",
+  "cutoff": {
+    "taipei": "2026-09-29T09:26:00+08:00",
+    "utc": "2026-09-29T01:26:00Z"
+  },
+  "generated_at_utc": "2026-09-29T01:40:45Z",
+  "scope_note": "Cross-asset market evidence only; parent-owned Reuters news items are intentionally omitted.",
+  "crypto": {
+    "selection_rule": "Yahoo 15-minute bars are labeled by start time. Selected the latest bar whose inferred end (start + 15 minutes) is <= cutoff; excluded 01:15Z bar because it ended 01:30Z after cutoff.",
+    "assets": {
+      "BTC-USD": {
+        "bar_start_utc": "2026-09-29T01:00:00Z",
+        "bar_end_utc": "2026-09-29T01:15:00Z",
+        "ohlcv": {
+          "open": 83127.4765625,
+          "high": 83205.9765625,
+          "low": 82961.8125,
+          "close": 82973.796875,
+          "volume": 128446464
+        },
+        "reference_24h_bar_start_utc": "2026-09-28T01:00:00Z",
+        "reference_24h_bar_end_utc": "2026-09-28T01:15:00Z",
+        "reference_24h_close_usd": 83942.6171875,
+        "change_24h_pct": -1.1541459451234082,
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?period1=1790467200&period2=1790645220&interval=15m&includePrePost=true&events=div%2Csplits",
+        "source_timezone": "UTC",
+        "data_granularity": "15m",
+        "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/yahoo-BTC-USD-15m-cutoff0929.json",
+        "retrieved_at_utc": "2026-09-29T01:40:10.639905Z",
+        "validation": {
+          "complete_by_cutoff": true,
+          "close_within_reported_high_low": true
+        }
+      },
+      "ETH-USD": {
+        "bar_start_utc": "2026-09-29T01:00:00Z",
+        "bar_end_utc": "2026-09-29T01:15:00Z",
+        "ohlcv": {
+          "open": 2674.7900390625,
+          "high": 2680.2099609375,
+          "low": 2666.7900390625,
+          "close": 2668.320068359375,
+          "volume": 208277504
+        },
+        "reference_24h_bar_start_utc": "2026-09-28T01:00:00Z",
+        "reference_24h_bar_end_utc": "2026-09-28T01:15:00Z",
+        "reference_24h_close_usd": 2667.570068359375,
+        "change_24h_pct": 0.028115475162060477,
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ETH-USD?period1=1790467200&period2=1790645220&interval=15m&includePrePost=true&events=div%2Csplits",
+        "source_timezone": "UTC",
+        "data_granularity": "15m",
+        "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/yahoo-ETH-USD-15m-cutoff0929.json",
+        "retrieved_at_utc": "2026-09-29T01:40:10.895197Z",
+        "validation": {
+          "complete_by_cutoff": true,
+          "close_within_reported_high_low": true
+        }
+      }
+    },
+    "eth_btc": {
+      "bar_end_utc": "2026-09-29T01:15:00Z",
+      "ratio_eth_per_btc": 0.03215858703415969,
+      "reference_24h_bar_end_utc": "2026-09-28T01:15:00Z",
+      "reference_ratio_eth_per_btc": 0.03177849533093431,
+      "change_24h_pct": 1.1960657648110384,
+      "formula": "(ETH_close/BTC_close)/(ETH_close_24h/BTC_close_24h)-1, multiplied by 100",
+      "source_urls": [
+        "https://query1.finance.yahoo.com/v8/finance/chart/ETH-USD?period1=1790467200&period2=1790645220&interval=15m&includePrePost=true&events=div%2Csplits",
+        "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?period1=1790467200&period2=1790645220&interval=15m&includePrePost=true&events=div%2Csplits"
+      ]
+    }
+  },
+  "gold_etf": {
+    "latest_week_date": "2026-09-25",
+    "flows": {
+      "usd": {
+        "regions": {
+          "North America": -610328633.48,
+          "Europe": 614506339.42,
+          "Asia": 101482177.47,
+          "Other": 28499700
+        },
+        "sum_excluding_gold_price_rhs": 134159583.41
+      },
+      "tonnes": {
+        "regions": {
+          "North America": -4.78032816,
+          "Europe": 2.44148747,
+          "Asia": 0.49990565,
+          "Other": 0.20130688
+        },
+        "sum_excluding_gold_price_rhs": -1.63762816
+      }
+    },
+    "holdings": {
+      "latest_week_date": "2026-09-25",
+      "tonnes": {
+        "regions": {
+          "North America": 2111.98,
+          "Europe": 1522.99,
+          "Asia": 537.28,
+          "Other": 76.67
+        },
+        "sum_excluding_gold_price_rhs": 4248.92
+      },
+      "usd": {
+        "regions": {
+          "North America": 289351256449.95,
+          "Europe": 208643607027.55,
+          "Asia": 76649819282.37,
+          "Other": 10512926327.86
+        },
+        "sum_excluding_gold_price_rhs": 585157609087.73
+      }
+    },
+    "calculation": "Sum North America + Europe + Asia + Other; explicitly exclude Gold Price (rhs).",
+    "flow_source": {
+      "url": "https://fsapi.gold.org/api/v11/charts/etfv2/revised/flows-chart2?break-cache=25Jul22",
+      "source_request_time_reported": "2026-09-28 13:20:46",
+      "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/wgc_api_0.json"
+    },
+    "holdings_source": {
+      "url": "https://fsapi.gold.org/api/v11/charts/etfv2/revised/holdings-chart2?break-cache=23Dec24",
+      "source_request_time_reported": "2026-09-28 12:48:25",
+      "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/wgc_api_2.json"
+    }
+  },
+  "us_treasury": {
+    "date": "2026-09-28",
+    "unit": "percent",
+    "daily_treasury_par_yield_curve_rates": {
+      "1 Mo": 4.04,
+      "1.5 Mo": 4.14,
+      "2 Mo": 4.2,
+      "3 Mo": 4.28,
+      "4 Mo": 4.33,
+      "6 Mo": 4.41,
+      "1 Yr": 4.59,
+      "2 Yr": 4.92,
+      "3 Yr": 5.01,
+      "5 Yr": 5.06,
+      "7 Yr": 5.15,
+      "10 Yr": 5.24,
+      "20 Yr": 5.6,
+      "30 Yr": 5.56
+    },
+    "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+    "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/treasury-2026.html",
+    "evidence_row_label": "09/28/2026"
+  },
+  "crypto_etf_flows": {
+    "status": "latest_actual_flow_unavailable",
+    "reason": "Farside direct access returned HTTP 403 in the prior bounded retrieval; no substitute value inferred or copied from snippets.",
+    "sources": [
+      {
+        "asset": "BTC",
+        "url": "https://farside.co.uk/btc/",
+        "http_status": 403
+      },
+      {
+        "asset": "ETH",
+        "url": "https://farside.co.uk/eth/",
+        "http_status": 403
+      }
+    ],
+    "as_of_cutoff_utc": "2026-09-29T01:26:00Z"
+  },
+  "methods": {
+    "return_pct": "(current_close/reference_close - 1) * 100",
+    "precision": "Source precision is retained; binary floating-point artifacts in derived WGC sums and regional values are normalized to source decimal precision.",
+    "availability_policy": "Unavailable values are explicitly marked and not estimated."
+  }
+}

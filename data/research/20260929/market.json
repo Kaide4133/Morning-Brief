@@ -1,0 +1,260 @@
+{
+  "brief": "Morning Brief 2026-09-29",
+  "requested_cutoff": "2026-09-29T09:26:27+08:00",
+  "timezone": "Asia/Taipei",
+  "generated_at": "2026-09-29T09:32:24+08:00",
+  "read_only_research": true,
+  "trading_calendar": {
+    "market_date": "2026-09-29",
+    "market_status": "OPEN",
+    "immediately_previous_open_trading_day": "2026-09-24",
+    "reasoning": [
+      {
+        "date": "2026-09-25",
+        "status": "CLOSED",
+        "reason": "Mid-Autumn Festival",
+        "evidence": "TWSE 115-year holiday calendar and TAIFEX 2026-09-18 closure announcement"
+      },
+      {
+        "date": "2026-09-26",
+        "status": "CLOSED",
+        "reason": "Saturday"
+      },
+      {
+        "date": "2026-09-27",
+        "status": "CLOSED",
+        "reason": "Sunday"
+      },
+      {
+        "date": "2026-09-28",
+        "status": "CLOSED",
+        "reason": "Confucius Birthday Commemoration / Teachers' Day",
+        "evidence": "TWSE 115-year holiday calendar and TAIFEX 2026-09-18 closure announcement"
+      }
+    ],
+    "affirmative_open_evidence": {
+      "source": "TWSE MIS",
+      "trade_date": "2026-09-29",
+      "quote_time": "09:26:20+08:00",
+      "rtcode": "0000",
+      "nonempty_intraday_bars": true
+    },
+    "previous_open_close_evidence": {
+      "trade_date": "2026-09-24",
+      "instrument": "TAIEX",
+      "close": 48024.60,
+      "source": "TWSE after-trading MI_INDEX"
+    }
+  },
+  "taiwan_intraday_snapshot": {
+    "snapshot_type": "latest fully elapsed common one-minute bar at the requested cutoff",
+    "common_bar_time": "2026-09-29T09:25:00+08:00",
+    "selection_note": "At 09:26:27 the 09:26 bars were still forming; 09:25 was the latest fully elapsed common minute. TWSE's contemporaneous 09:26:20 tick is retained separately but not used as the synchronized bar.",
+    "taiex": {
+      "name": "發行量加權股價指數",
+      "symbol": "tse_t00.tw",
+      "bar_close": 47860.90,
+      "reference_close": 48024.60,
+      "reference_trade_date": "2026-09-24",
+      "change_points": -163.70,
+      "change_percent": -0.34,
+      "cutoff_consistent_open": 47873.89,
+      "cutoff_consistent_high": 48045.13,
+      "cutoff_consistent_low": 47832.99,
+      "near_cutoff_tick": {
+        "exchange_time": "2026-09-29T09:26:20+08:00",
+        "value": 47865.02,
+        "status": "forming-minute tick; not the synchronized close"
+      },
+      "source_urls": [
+        "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+        "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0"
+      ]
+    },
+    "taifex_front_month": {
+      "name": "臺指期106",
+      "english_display": "TX106",
+      "contract_month": "2026-10",
+      "symbol_id": "TXFJ6-F",
+      "bar_close": 48028.00,
+      "reference_price": 48125.00,
+      "reference_trade_date": "2026-09-24",
+      "change_points": -97.00,
+      "change_percent": -0.20,
+      "cutoff_consistent_open": 48098.00,
+      "cutoff_consistent_high": 48127.00,
+      "cutoff_consistent_low": 47896.00,
+      "source_urls": [
+        "https://mis.taifex.com.tw/futures/api/getQuoteList",
+        "https://mis.taifex.com.tw/futures/api/getChartData1M"
+      ],
+      "post_bodies": {
+        "quote_list": {
+          "MarketType": "0",
+          "SymbolType": "F",
+          "KindID": "1",
+          "CID": "",
+          "ExpireMonth": ""
+        },
+        "one_minute_chart": {
+          "SymbolID": "TXFJ6-F"
+        }
+      }
+    },
+    "derived_basis_tx_minus_taiex": 167.10,
+    "calculation_methods": {
+      "change_points": "bar_close - reference_close_or_price",
+      "change_percent": "(bar_close / reference_close_or_price - 1) * 100",
+      "basis": "TX front-month bar close - TAIEX bar close"
+    }
+  },
+  "us_completed_session": {
+    "trade_date": "2026-09-28",
+    "previous_session": "2026-09-25",
+    "session_status": "completed before the Taiwan cutoff",
+    "indices": [
+      {
+        "symbol": "SOX",
+        "name": "PHLX Semiconductor Index",
+        "close": 12465.24,
+        "previous_close": 12668.93,
+        "change": -203.69,
+        "change_percent": -1.61,
+        "primary_source": "Nasdaq summary API",
+        "source_urls": [
+          "https://api.nasdaq.com/api/quote/SOX/summary?assetclass=index",
+          "https://indexes.nasdaqomx.com/Index/Overview/SOX",
+          "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?period1=1790121600&period2=1790726400&interval=1d&events=history"
+        ]
+      },
+      {
+        "symbol": "NDX",
+        "name": "Nasdaq-100",
+        "close": 30276.81,
+        "previous_close": 30608.14,
+        "change": -331.33,
+        "change_percent": -1.08,
+        "primary_source": "Nasdaq summary API",
+        "source_urls": [
+          "https://api.nasdaq.com/api/quote/NDX/summary?assetclass=index",
+          "https://indexes.nasdaqomx.com/Index/Overview/NDX",
+          "https://query1.finance.yahoo.com/v8/finance/chart/%5ENDX?period1=1790121600&period2=1790726400&interval=1d&events=history"
+        ]
+      },
+      {
+        "symbol": "SPX",
+        "name": "S&P 500",
+        "close": 7683.69,
+        "previous_close": 7743.41,
+        "change": -59.72,
+        "change_percent": -0.77,
+        "primary_source": "S&P Dow Jones Indices page for the dated close; Yahoo chart for the dated row and prior close",
+        "source_urls": [
+          "https://www.spglobal.com/spdji/es/indices/equity/sp-500/",
+          "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=1790121600&period2=1790726400&interval=1d&events=history",
+          "https://www.reuters.com/business/wall-st-futures-drop-oil-spikes-after-trump-rejects-iran-peace-proposal-2026-09-28/"
+        ]
+      },
+      {
+        "symbol": "DJI",
+        "name": "Dow Jones Industrial Average",
+        "close": 51481.51,
+        "previous_close": 51828.62,
+        "change": -347.11,
+        "change_percent": -0.67,
+        "primary_source": "Yahoo chart dated row, corroborated by Reuters completed-session report",
+        "source_urls": [
+          "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?period1=1790121600&period2=1790726400&interval=1d&events=history",
+          "https://www.reuters.com/business/wall-st-futures-drop-oil-spikes-after-trump-rejects-iran-peace-proposal-2026-09-28/"
+        ]
+      },
+      {
+        "symbol": "VIX",
+        "name": "Cboe Volatility Index",
+        "close": 16.07,
+        "previous_close": 14.87,
+        "change": 1.20,
+        "change_percent": 8.07,
+        "primary_source": "Cboe VIX product page",
+        "source_urls": [
+          "https://www.cboe.com/tradable-products/vix/",
+          "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1790121600&period2=1790726400&interval=1d&events=history"
+        ]
+      }
+    ]
+  },
+  "other_useful_market_quotes": [
+    {
+      "symbol": "IXIC",
+      "name": "Nasdaq Composite",
+      "trade_date": "2026-09-28",
+      "close": 26820.38,
+      "previous_close": 27068.72,
+      "change": -248.34,
+      "change_percent": -0.92,
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?period1=1790121600&period2=1790726400&interval=1d&events=history"
+    },
+    {
+      "symbol": "RUT",
+      "name": "Russell 2000",
+      "trade_date": "2026-09-28",
+      "close": 2817.91,
+      "previous_close": 2837.55,
+      "change": -19.64,
+      "change_percent": -0.69,
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ERUT?period1=1790121600&period2=1790726400&interval=1d&events=history"
+    },
+    {
+      "symbol": "UST10Y_CMT",
+      "name": "U.S. Treasury 10-year par yield",
+      "trade_date": "2026-09-28",
+      "value_percent": 5.24,
+      "previous_session_value_percent": 5.17,
+      "change_basis_points": 7.00,
+      "source": "U.S. Department of the Treasury daily par yield curve XML",
+      "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026"
+    },
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA",
+      "trade_date": "2026-09-28",
+      "close_usd": 228.86,
+      "previous_close_usd": 225.07,
+      "change_usd": 3.79,
+      "change_percent": 1.68,
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1790121600&period2=1790726400&interval=1d&events=history"
+    },
+    {
+      "symbol": "TSM",
+      "name": "TSMC ADR",
+      "trade_date": "2026-09-28",
+      "close_usd": 452.88,
+      "previous_close_usd": 450.61,
+      "change_usd": 2.27,
+      "change_percent": 0.50,
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/TSM?period1=1790121600&period2=1790726400&interval=1d&events=history"
+    }
+  ],
+  "calendar_sources": [
+    {
+      "publisher": "Taiwan Stock Exchange",
+      "url": "https://www.twse.com.tw/zh/trading/holiday.html",
+      "checked_facts": "2026-09-25 Mid-Autumn Festival closed; 2026-09-28 Confucius Birthday Commemoration / Teachers' Day closed"
+    },
+    {
+      "publisher": "Taiwan Futures Exchange",
+      "url": "https://www.taifex.com.tw/cht/11/announcement",
+      "announcement_date": "2026-09-18",
+      "checked_facts": "TAIFEX centralized futures market closed on 2026-09-25 and 2026-09-28"
+    }
+  ],
+  "uncertainties_and_source_limits": [
+    "TAIFEX quote-list response was observed at 09:27:11, after the requested cutoff. The selected 09:25 official one-minute bar is historical and cutoff-consistent; no post-cutoff tick was used in the synchronized comparison.",
+    "Nasdaq historical endpoints had not yet added the 2026-09-28 row and returned only through 2026-09-25. SOX and NDX therefore use Nasdaq's current summary API plus dated Nasdaq GIW pages, with Yahoo chart rows as the dated-history fallback.",
+    "Nasdaq GIW overview pages showed internally inconsistent net-change fields while showing the correct 2026-09-28 last value. Those GIW net-change fields were rejected; changes were recomputed from the verified current and prior closes, and agree with Nasdaq summary API to displayed precision.",
+    "NDX's 2026-09-25 prior close differs by 0.01 across Nasdaq surfaces: summary API 30,608.14 versus Nasdaq historical/Yahoo 30,608.13 after display rounding. This file follows the current official Nasdaq summary API, yielding -331.33; using the dated historical row would yield -331.32. The 2026-09-28 close and rounded -1.08% return are unaffected.",
+    "The Cboe daily CSV was blocked by Cloudflare in this environment. The official Cboe VIX product page directly displayed 16.07, +1.20, +8.07% as of 2026-09-28; Yahoo supplied the dated prior row.",
+    "Reuters canonical body triggered device verification. Reuters search metadata and an authorized-syndication snippet corroborated the SPX/DJI/Nasdaq Composite closes, but they were not used as sole numeric evidence.",
+    "Yahoo daily timestamps are session anchors, not authoritative closing-clock timestamps; only the exchange trade date is asserted."
+  ]
+}
