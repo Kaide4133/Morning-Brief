@@ -1,0 +1,424 @@
+{
+  "schema_version": "1.0",
+  "research_cutoff": "2026-09-30T10:10:32+08:00",
+  "timezone": "Asia/Taipei",
+  "requested_date": "2026-09-30",
+  "calendar_open_status": {
+    "date": "2026-09-30",
+    "weekday": "Wednesday",
+    "twse_scheduled_open": true,
+    "taifex_scheduled_open": true,
+    "observed_live_trading": true,
+    "status": "OPEN / regular trading observed",
+    "reason": "2026-09-30 is absent from the official TWSE holiday list; adjacent exchange holidays were 2026-09-25 and 2026-09-28. Live TWSE and TAIFEX regular-session quotes dated 2026-09-30 were returned.",
+    "twse_calendar_url": "https://www.twse.com.tw/rwd/zh/holidaySchedule/holidaySchedule?response=json&queryYear=2026",
+    "taifex_calendar_url": "https://www.taifex.com.tw/file/taifex/eng/eng4/2026Calendar_en.pdf",
+    "adjacent_holidays": [
+      {
+        "date": "2026-09-25",
+        "name": "中秋節"
+      },
+      {
+        "date": "2026-09-28",
+        "name": "孔子誕辰紀念日/ 教師節"
+      }
+    ],
+    "evidence_class": "official exchange calendar + official live quote endpoints"
+  },
+  "taiwan_intraday": {
+    "snapshot_retrieved_at": "2026-09-30T10:10:32+08:00",
+    "twse_taiex": {
+      "index_name": "發行量加權股價指數",
+      "value": 48373.55,
+      "previous_close": 47631.96,
+      "change_points": 741.59,
+      "change_percent": 1.5569,
+      "open": 47767.49,
+      "high": 48377.71,
+      "low": 47767.49,
+      "quote_date": "20260930",
+      "quote_time": "10:10:00",
+      "query_system_time": "10:10:01",
+      "source_url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+      "evidence_class": "official TWSE MIS intraday quote",
+      "status": "intraday; not official close"
+    },
+    "taifex_front_txf": {
+      "contract": "TXF 202610",
+      "raw_symbol_id": "TXFJ6-F",
+      "display_name_zh": "臺指期106",
+      "last": 48596.0,
+      "reference_price": 47781.0,
+      "change_points": 815.0,
+      "change_percent": 1.71,
+      "open": 48467.0,
+      "high": 48646.0,
+      "low": 48288.0,
+      "best_bid": 48594.0,
+      "best_ask": 48598.0,
+      "volume_contracts": 16685,
+      "quote_date": "20260930",
+      "quote_time": "101030",
+      "basis_vs_twse_taiex_points": 222.45,
+      "previous_session_settlement": 47781.0,
+      "source_url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+      "request_payload": {
+        "MarketType": "0",
+        "SymbolType": "F",
+        "KindID": "1",
+        "CID": "",
+        "ExpireMonth": ""
+      },
+      "evidence_class": "official TAIFEX MIS intraday quote",
+      "status": "intraday; not official close"
+    }
+  },
+  "previous_trading_day_taiwan_flows": {
+    "as_of_date": "2026-09-29",
+    "stale_relative_to_intraday": true,
+    "cut_label": "previous completed trading day; 2026-09-30 data unavailable intraday by design",
+    "twse_cash_market_institutional": {
+      "foreign_and_mainland_ex_foreign_dealers": {
+        "buy_twd": 337936156534,
+        "sell_twd": 400518707059,
+        "net_twd": -62582550525,
+        "net_100m_twd": -625.82550525
+      },
+      "investment_trust": {
+        "buy_twd": 16429816007,
+        "sell_twd": 15850428682,
+        "net_twd": 579387325,
+        "net_100m_twd": 5.79387325
+      },
+      "dealer_proprietary": {
+        "buy_twd": 7185151629,
+        "sell_twd": 7993779743,
+        "net_twd": -808628114,
+        "net_100m_twd": -8.08628114
+      },
+      "dealer_hedging": {
+        "buy_twd": 21346786408,
+        "sell_twd": 36940679145,
+        "net_twd": -15593892737,
+        "net_100m_twd": -155.93892737
+      },
+      "dealer_combined": {
+        "net_twd": -16402520851,
+        "net_100m_twd": -164.02520851
+      },
+      "total_three_institutions": {
+        "buy_twd": 382897910578,
+        "sell_twd": 461303594629,
+        "net_twd": -78405684051,
+        "net_100m_twd": -784.05684051
+      },
+      "source_url": "https://www.twse.com.tw/rwd/zh/fund/BFI82U?date=20260929&response=json",
+      "evidence_class": "official TWSE daily institutional statistics",
+      "unit_note": "net_twd is TWD; net_100m_twd is 億元 (TWD 100 million)"
+    },
+    "taifex_taiwan_stock_futures_by_institution": {
+      "contract_scope": "臺股期貨 (TX)",
+      "rows": [
+        {
+          "item": "自營商",
+          "trading_long_contracts": 4255,
+          "trading_short_contracts": 3274,
+          "trading_net_contracts": 981,
+          "open_interest_long_contracts": 3465,
+          "open_interest_short_contracts": 3953,
+          "open_interest_net_contracts": -488,
+          "open_interest_net_value_thousand_twd": -4653317
+        },
+        {
+          "item": "投信",
+          "trading_long_contracts": 68,
+          "trading_short_contracts": 120,
+          "trading_net_contracts": -52,
+          "open_interest_long_contracts": 75767,
+          "open_interest_short_contracts": 2955,
+          "open_interest_net_contracts": 72812,
+          "open_interest_net_value_thousand_twd": 695806034
+        },
+        {
+          "item": "外資及陸資",
+          "trading_long_contracts": 42631,
+          "trading_short_contracts": 43640,
+          "trading_net_contracts": -1009,
+          "open_interest_long_contracts": 8788,
+          "open_interest_short_contracts": 87817,
+          "open_interest_net_contracts": -79029,
+          "open_interest_net_value_thousand_twd": -755298847
+        }
+      ],
+      "foreign_summary": {
+        "item": "外資及陸資",
+        "trading_long_contracts": 42631,
+        "trading_short_contracts": 43640,
+        "trading_net_contracts": -1009,
+        "open_interest_long_contracts": 8788,
+        "open_interest_short_contracts": 87817,
+        "open_interest_net_contracts": -79029,
+        "open_interest_net_value_thousand_twd": -755298847
+      },
+      "source_url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+      "evidence_class": "official TAIFEX OpenAPI",
+      "interpretation_note": "OpenInterest(Net) = long OI minus short OI; negative means net short."
+    },
+    "taifex_all_futures_by_institution": {
+      "scope": "all futures products, not only TX",
+      "rows": [
+        {
+          "item": "自營商",
+          "futures_trading_net_contracts": -12208,
+          "futures_trading_net_value_thousand_twd": 6487461,
+          "futures_open_interest_net_contracts": -293452,
+          "futures_open_interest_net_value_thousand_twd": -252088368
+        },
+        {
+          "item": "投信",
+          "futures_trading_net_contracts": 127,
+          "futures_trading_net_value_thousand_twd": 766183,
+          "futures_open_interest_net_contracts": 89082,
+          "futures_open_interest_net_value_thousand_twd": 720341037
+        },
+        {
+          "item": "外資及陸資",
+          "futures_trading_net_contracts": -15501,
+          "futures_trading_net_value_thousand_twd": -23023304,
+          "futures_open_interest_net_contracts": -490425,
+          "futures_open_interest_net_value_thousand_twd": -966118865
+        }
+      ],
+      "source_url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDividedByFuturesAndOptionsBytheDate",
+      "evidence_class": "official TAIFEX OpenAPI"
+    }
+  },
+  "us_2026_09_29_closes": {
+    "session_date": "2026-09-29",
+    "session_state": "official regular session completed",
+    "indices": {
+      "SOX": {
+        "name": "PHLX Semiconductor Sector Index",
+        "close": 12629.16,
+        "previous_close": 12465.24,
+        "change": 163.92,
+        "change_percent": 1.32,
+        "currency": "USD",
+        "session_date": "2026-09-29",
+        "source_last_time": "Sep 29, 2026",
+        "source_url": "https://api.nasdaq.com/api/quote/SOX/info?assetclass=index",
+        "evidence_class": "official Nasdaq index quote; CNBC cross-check"
+      },
+      "NASDAQ_COMPOSITE": {
+        "name": "Nasdaq Composite",
+        "close": 26797.54,
+        "previous_close": 26820.38,
+        "change": -22.84,
+        "change_percent": -0.09,
+        "currency": "USD",
+        "session_date": "2026-09-29",
+        "source_last_time": "Sep 29, 2026",
+        "source_url": "https://api.nasdaq.com/api/quote/COMP/info?assetclass=index",
+        "evidence_class": "official Nasdaq index quote; CNBC cross-check"
+      },
+      "SPX": {
+        "name": "S&P 500",
+        "close": 7670.8398,
+        "previous_close": 7683.69,
+        "change": -12.8502,
+        "change_percent": -0.1675,
+        "currency": "USD",
+        "session_date": "2026-09-29",
+        "source_last_time": "2026-09-29T16:14:59",
+        "source_url": "https://cdn.cboe.com/api/global/delayed_quotes/quotes/_SPX.json",
+        "evidence_class": "official Cboe exchange quote",
+        "source_file_timestamp_utc": "2026-09-30 02:09:57"
+      },
+      "DJI": {
+        "name": "Dow Jones Industrial Average",
+        "close": 51349.92,
+        "previous_close": 51481.51,
+        "change": -131.59,
+        "change_percent": -0.26,
+        "currency": "USD",
+        "session_date": "2026-09-29",
+        "source_last_time": "2026-09-29T16:38:50.000-0400",
+        "source_url": "https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol?symbols=.SPX%7C.DJI%7C.IXIC%7C.SOX%7C.VIX&requestMethod=quick&noform=1&partnerId=2&fund=1&exthrs=1&output=json",
+        "evidence_class": "exchange-sourced CNBC quote cache"
+      },
+      "VIX": {
+        "name": "Cboe Volatility Index",
+        "close": 16.04,
+        "previous_close": 16.07,
+        "change": -0.03,
+        "change_percent": -0.19,
+        "currency": "USD",
+        "session_date": "2026-09-29",
+        "source_last_time": "2026-09-29 regular-session close",
+        "source_url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+        "evidence_class": "official Cboe historical daily file",
+        "open": 16.17,
+        "high": 16.44,
+        "low": 15.73
+      }
+    },
+    "megacaps_and_tsm": {
+      "AAPL": {
+        "close": 329.4,
+        "previous_close": 338.4,
+        "change": -9.0,
+        "change_percent": -2.6596,
+        "currency": "USD",
+        "session_date": "2026-09-29",
+        "official_close_time": "2026-09-29T16:00:00-04:00",
+        "volume": 38478040,
+        "open": 336.965,
+        "high": 337.085,
+        "low": 328.7,
+        "source_url": "https://api.nasdaq.com/api/quote/AAPL/historical?assetclass=stocks&fromdate=2026-09-28&todate=2026-09-30&limit=10",
+        "evidence_class": "official Nasdaq historical API (consolidated U.S. stock data)"
+      },
+      "MSFT": {
+        "close": 508.96,
+        "previous_close": 509.22,
+        "change": -0.26,
+        "change_percent": -0.0511,
+        "currency": "USD",
+        "session_date": "2026-09-29",
+        "official_close_time": "2026-09-29T16:00:00-04:00",
+        "volume": 21341830,
+        "open": 508.31,
+        "high": 513.64,
+        "low": 502.4,
+        "source_url": "https://api.nasdaq.com/api/quote/MSFT/historical?assetclass=stocks&fromdate=2026-09-28&todate=2026-09-30&limit=10",
+        "evidence_class": "official Nasdaq historical API (consolidated U.S. stock data)"
+      },
+      "NVDA": {
+        "close": 227.21,
+        "previous_close": 228.86,
+        "change": -1.65,
+        "change_percent": -0.721,
+        "currency": "USD",
+        "session_date": "2026-09-29",
+        "official_close_time": "2026-09-29T16:00:00-04:00",
+        "volume": 101494900,
+        "open": 230.97,
+        "high": 232.82,
+        "low": 227.025,
+        "source_url": "https://api.nasdaq.com/api/quote/NVDA/historical?assetclass=stocks&fromdate=2026-09-28&todate=2026-09-30&limit=10",
+        "evidence_class": "official Nasdaq historical API (consolidated U.S. stock data)"
+      },
+      "AMZN": {
+        "close": 246.67,
+        "previous_close": 246.15,
+        "change": 0.52,
+        "change_percent": 0.2113,
+        "currency": "USD",
+        "session_date": "2026-09-29",
+        "official_close_time": "2026-09-29T16:00:00-04:00",
+        "volume": 33730400,
+        "open": 246.705,
+        "high": 248.8389,
+        "low": 245.14,
+        "source_url": "https://api.nasdaq.com/api/quote/AMZN/historical?assetclass=stocks&fromdate=2026-09-28&todate=2026-09-30&limit=10",
+        "evidence_class": "official Nasdaq historical API (consolidated U.S. stock data)"
+      },
+      "META": {
+        "close": 738.79,
+        "previous_close": 715.62,
+        "change": 23.17,
+        "change_percent": 3.2378,
+        "currency": "USD",
+        "session_date": "2026-09-29",
+        "official_close_time": "2026-09-29T16:00:00-04:00",
+        "volume": 23591090,
+        "open": 725.0,
+        "high": 740.45,
+        "low": 715.1,
+        "source_url": "https://api.nasdaq.com/api/quote/META/historical?assetclass=stocks&fromdate=2026-09-28&todate=2026-09-30&limit=10",
+        "evidence_class": "official Nasdaq historical API (consolidated U.S. stock data)"
+      },
+      "GOOGL": {
+        "close": 340.92,
+        "previous_close": 342.75,
+        "change": -1.83,
+        "change_percent": -0.5339,
+        "currency": "USD",
+        "session_date": "2026-09-29",
+        "official_close_time": "2026-09-29T16:00:00-04:00",
+        "volume": 21066900,
+        "open": 341.95,
+        "high": 342.84,
+        "low": 338.02,
+        "source_url": "https://api.nasdaq.com/api/quote/GOOGL/historical?assetclass=stocks&fromdate=2026-09-28&todate=2026-09-30&limit=10",
+        "evidence_class": "official Nasdaq historical API (consolidated U.S. stock data)"
+      },
+      "TSLA": {
+        "close": 352.84,
+        "previous_close": 357.45,
+        "change": -4.61,
+        "change_percent": -1.2897,
+        "currency": "USD",
+        "session_date": "2026-09-29",
+        "official_close_time": "2026-09-29T16:00:00-04:00",
+        "volume": 32492410,
+        "open": 358.4,
+        "high": 358.74,
+        "low": 351.67,
+        "source_url": "https://api.nasdaq.com/api/quote/TSLA/historical?assetclass=stocks&fromdate=2026-09-28&todate=2026-09-30&limit=10",
+        "evidence_class": "official Nasdaq historical API (consolidated U.S. stock data)"
+      },
+      "TSM": {
+        "close": 456.94,
+        "previous_close": 452.88,
+        "change": 4.06,
+        "change_percent": 0.8965,
+        "currency": "USD",
+        "session_date": "2026-09-29",
+        "official_close_time": "2026-09-29T16:00:00-04:00",
+        "volume": 9939606,
+        "open": 452.27,
+        "high": 459.43,
+        "low": 447.07,
+        "source_url": "https://api.nasdaq.com/api/quote/TSM/historical?assetclass=stocks&fromdate=2026-09-28&todate=2026-09-30&limit=10",
+        "evidence_class": "official Nasdaq historical API (consolidated U.S. stock data)"
+      }
+    },
+    "common_crosscheck_url": "https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol?symbols=.SPX%7C.DJI%7C.IXIC%7C.SOX%7C.VIX&requestMethod=quick&noform=1&partnerId=2&fund=1&exthrs=1&output=json",
+    "source_note": "SOX and Nasdaq Composite use official Nasdaq quote API; SPX and VIX use official Cboe endpoints; DJI uses an exchange-sourced CNBC quote-cache endpoint. Stock OHLC/volume uses Nasdaq historical API. Yahoo chart endpoints were attempted but returned HTTP 429, so no Yahoo values were used."
+  },
+  "verification": {
+    "checks": [
+      {
+        "name": "calendar_excludes_2026_09_30",
+        "passed": true
+      },
+      {
+        "name": "twse_live_quote_date",
+        "passed": true
+      },
+      {
+        "name": "taifex_live_quote_date",
+        "passed": true
+      },
+      {
+        "name": "twse_institution_date",
+        "passed": true
+      },
+      {
+        "name": "taifex_institution_date",
+        "passed": true
+      },
+      {
+        "name": "us_index_crosschecks",
+        "passed": true
+      }
+    ],
+    "limitations": [
+      "TAIFEX and TWSE snapshots are source-version intraday observations and must not be presented as closes.",
+      "2026-09-29 Taiwan institutional figures are intentionally stale relative to the 2026-09-30 live session; they are the latest completed daily cut.",
+      "DJI close is not from the index owner; it is exchange-sourced via CNBC Quote Cache.",
+      "Yahoo Finance chart API was rate-limited (HTTP 429); verified official/exchange alternatives were used."
+    ]
+  }
+}
