@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-01",
+  "mode": "check",
+  "status": "checked_not_published",
+  "published": false,
+  "errors": [],
+  "warnings": [
+    "Official exchange calendar, source prices/news and source-to-zone agreement still require producer verification"
+  ],
+  "timings_seconds": {
+    "preflight": 0.0004,
+    "render_checks": 0.0379,
+    "total": 0.0384
+  },
+  "issue_sha256": "1ab4cc39182d023c75b79be7203c640e718f58187d2f161478dd40a8b9f0314d",
+  "zone_counts": {
+    "etf.value": 10,
+    "etf.rising": 7,
+    "stocks.value": 31,
+    "stocks.rising": 30
+  },
+  "overlaps": {
+    "etf": [
+      "00830",
+      "00911"
+    ],
+    "stocks": [
+      "3037",
+      "3665"
+    ]
+  }
+}

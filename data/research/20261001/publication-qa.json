@@ -1,0 +1,410 @@
+{
+  "status": "pass",
+  "date": "2026-10-01",
+  "checks": {
+    "water": {
+      "pass": true,
+      "detail": {
+        "schema_version": "kmb.ark.normalized.v1",
+        "water_level": 70.4,
+        "holding_allocation_suggestion": "70.4%",
+        "as_of": "2026-10-01",
+        "source_time": "2026-10-01T09:08:30+08:00",
+        "status": "validated",
+        "prev": 68.9,
+        "previous_water_level": 68.9,
+        "delta": 1.5,
+        "change": 1.5,
+        "direction": "上升",
+        "comparison_date": "2026-09-30",
+        "previous_trading_date": "2026-09-30",
+        "comparison_is_provisional": false,
+        "note": "方舟水位70.4%，較前一交易日9/30上升1.5個百分點；增加的是選擇空間，不是追價速度。",
+        "interpretation": "水位上升提供更多配置空間，但外部利率壓力未退，仍應確認承接再提高速度。",
+        "source_file": "data/research/20261001/ark.json"
+      }
+    },
+    "scenario": {
+      "pass": true,
+      "detail": "水位升至70.4%並增加1.5個百分點，但10年債殖利率仍高、ETF廣度分化；允許選擇性加碼，維持高位控速與不追價。"
+    },
+    "zone_counts": {
+      "pass": true,
+      "detail": {
+        "etf.value": 10,
+        "etf.rising": 7,
+        "stocks.value": 31,
+        "stocks.rising": 30
+      }
+    },
+    "overlaps": {
+      "pass": true,
+      "detail": {
+        "etf": [
+          "00830",
+          "00911"
+        ],
+        "stocks": [
+          "3037",
+          "3665"
+        ]
+      }
+    },
+    "render_validator": {
+      "pass": true,
+      "detail": "card order, overlap boxes/highlights, banned internal terms"
+    },
+    "overlap_card_count": {
+      "pass": true,
+      "detail": {
+        "s4": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true
+          ],
+          [
+            false,
+            false,
+            true,
+            true,
+            false,
+            false,
+            false
+          ]
+        ],
+        "s5": [
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        ]
+      }
+    },
+    "section_s6": {
+      "pass": true,
+      "detail": "SECTION VI 主線交叉驗證 Thesis Validation 已強化主線 水位升至70.4%，較9/30增加1.5個百分點。 Micron盤後財測高於預期，來源名單中產業價值與升溫區漲多於跌。 短線壓力 9/30美國10年債殖利率5.290%，長端壓力未退。 ETF價值區2漲6跌，廣度未支持全面追價。 中長線"
+    },
+    "section_s7": {
+      "pass": true,
+      "detail": "SECTION VII 川普 X 訊號 Trump Signal 截至10/1研究截止 本期未核實新增川普直接貼文；美國政府停擺與經濟數據發布時程，以官方機關公告為準。"
+    },
+    "section_s8": {
+      "pass": true,
+      "detail": "SECTION VIII 馬斯克 X 訊號 Musk Signal 本期未核實新增馬斯克直接貼文；不以社群傳聞提高Tesla或太空供應鏈判斷權重。"
+    },
+    "section_s9": {
+      "pass": true,
+      "detail": "SECTION IX 關鍵科技 &amp; 政策訊號 Tech &amp; Policy BEA公布8月PCE年增3.4%、核心PCE年增3.0%；通膨仍高於2%目標。 Micron公布FY2026 Q4營收135.4億美元，並預估FY2027 Q1營收187億美元正負4億美元；財測屬公司預估，不等同台廠已認列訂單。 "
+    },
+    "section_s10": {
+      "pass": true,
+      "detail": "SECTION X 七巨頭收盤與本日訊號 Magnificent Seven — 收高 — AAPL AAPL 333.02 1.10% / +3.62 Today's Signal 9/30收高，觀察價格延續，不用題材代替承接。 — 收高 — MSFT MSFT 512.90 0.77% / +3.94 Today'"
+    },
+    "section_s13": {
+      "pass": true,
+      "detail": "SECTION XIII 影響因素三軸拆解 Three Axes 主線軸 水位上升提供選擇空間，記憶體與科技相對強；高利率環境下先確認承接，再提高速度。 政策軸 8月PCE與核心PCE仍高於2%目標；政府停擺提高後續官方數據延後風險。 風控軸 9/30美國10年債殖利率5.290%，長端壓力未退；若題材只有開盤反應而無"
+    },
+    "section_sa": {
+      "pass": true,
+      "detail": "APPENDIX A 美股盤後重點分析 After Hours 美股採9/30完成日；台股為10/1 10:24:45官方MIS快照。方舟四區為09:05起依序擷取，各卡可能有時間差。"
+    },
+    "section_sb": {
+      "pass": true,
+      "detail": "APPENDIX B 美股 → 台股產業對照 US → TW Map 國際事件 → 台股族群 記憶體／HBM → 2408、2344、8299與00911：Micron財測支撐情緒，但台廠訂單與價格要另行驗證。 價值×升溫 → ETF為00830,00911；產業為3037,3665。雙區交集是比較線索，不是自動買進命"
+    },
+    "banned_Sources": {
+      "pass": true,
+      "detail": "Sources"
+    },
+    "banned_source-list": {
+      "pass": true,
+      "detail": "source-list"
+    },
+    "banned_fallback": {
+      "pass": true,
+      "detail": "fallback"
+    },
+    "banned_mock": {
+      "pass": true,
+      "detail": "mock"
+    },
+    "banned_xurl": {
+      "pass": true,
+      "detail": "xurl"
+    },
+    "banned_X Console": {
+      "pass": true,
+      "detail": "X Console"
+    },
+    "banned_URL-backed": {
+      "pass": true,
+      "detail": "URL-backed"
+    },
+    "banned_regenerated": {
+      "pass": true,
+      "detail": "regenerated"
+    },
+    "banned_DATA CUT": {
+      "pass": true,
+      "detail": "DATA CUT"
+    },
+    "dated_html_water": {
+      "pass": true,
+      "detail": {
+        "70.4": 11,
+        "68.9": 0
+      }
+    },
+    "index_link": {
+      "pass": true,
+      "detail": null
+    },
+    "history_unique": {
+      "pass": true,
+      "detail": [
+        {
+          "date": "2026-10-01",
+          "water_level": 70.4,
+          "scenario_id": "03",
+          "scenario_label": "03 高位控速"
+        }
+      ]
+    },
+    "context": {
+      "pass": true,
+      "detail": {
+        "schema_version": "morning_brief_context.v1",
+        "taxonomy_version": "ark_eight_regime.v1",
+        "date": "2026-10-01",
+        "valid_for_trading_date": "2026-10-01",
+        "data_as_of": "2026-10-01",
+        "stale": false,
+        "issue_no": 96,
+        "scenario": {
+          "id": "03",
+          "slug": "high-level-speed-control",
+          "label": "高位控速",
+          "confidence": 1.0,
+          "reason": "水位升至70.4%並增加1.5個百分點，但10年債殖利率仍高、ETF廣度分化；允許選擇性加碼，維持高位控速與不追價。",
+          "source": "manual_override",
+          "classifier_suggestion": "01"
+        },
+        "water": {
+          "level": 70.4,
+          "previous": 68.9,
+          "change": 1.5,
+          "direction": "rising"
+        },
+        "leader_policy": {
+          "source": "morning_brief_editorial_policy",
+          "short_term_bias": "increase_exposure_allowed",
+          "risk_posture": "balanced_cautious",
+          "water_policy": {
+            "direction": "rising",
+            "change": 1.5,
+            "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
+          },
+          "scenario_context": {
+            "id": "03",
+            "label": "高位控速",
+            "confidence": 1.0
+          },
+          "policy_focus": [
+            "優先比較價值區、升溫區與雙區交集的承接；有空間但不追開盤急漲。",
+            "PCE通膨仍高、長債殖利率續處高位；美國政府停擺也提高後續數據時程不確定性。",
+            "9/30美股：Nasdaq漲0.24%、費半+0.00%，10年債殖利率5.290%。10/1台股10:24:45快照-0.00%。",
+            "BEA公布8月PCE年增3.4%、核心PCE年增3.0%；通膨仍高於2%目標。"
+          ],
+          "systemic_risk": "中",
+          "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+        },
+        "action_guidance": {
+          "risk_bias": "balanced_cautious",
+          "allow_add": true,
+          "allow_trim": true,
+          "deploy_mode": "slow_selective_add",
+          "max_initial_deploy_pct": 0.25,
+          "trim": {
+            "allowed": true,
+            "mode": "selective_trim",
+            "max_overshoot_pct": 0.25,
+            "priority": [
+              "positive_return_overheated_branch",
+              "non_moat_branch",
+              "leveraged_etf_overheat",
+              "low_efficiency_small_branch"
+            ]
+          },
+          "deploy": {
+            "allowed": true,
+            "mode": "slow_selective_add",
+            "max_initial_deploy_pct": 0.25,
+            "conditions": [
+              "conditional_only",
+              "core_or_high_quality_only",
+              "pullback_confirmed",
+              "no_chase"
+            ]
+          },
+          "rebuy": {
+            "allowed": true,
+            "mode": "wait_for_pullback",
+            "conditions": [
+              "sold_name_drawdown_2_to_3_pct",
+              "MA20_support",
+              "murphy_right_side_reconfirmation"
+            ]
+          },
+          "trim_priority": [
+            "positive_return_overheated_branch",
+            "non_moat_branch",
+            "leveraged_etf_overheat",
+            "low_efficiency_small_branch"
+          ],
+          "confidence": 1.0,
+          "source": "morning_brief_classifier"
+        },
+        "editorial": {
+          "state_label": "高位控速",
+          "summary": "水位升至70.4%並增加1.5個百分點，但10年債殖利率仍高、ETF廣度分化；允許選擇性加碼，維持高位控速與不追價。"
+        },
+        "source": {
+          "issue_file": "data/issues/20261001.json",
+          "generated_at": "2026-10-01T10:28:40+08:00"
+        }
+      }
+    },
+    "technical_exact_universe": {
+      "pass": true,
+      "detail": {
+        "records": 74,
+        "watch": 74,
+        "extra": [],
+        "missing": []
+      }
+    },
+    "technical_as_of": {
+      "pass": true,
+      "detail": "2026-10-01"
+    },
+    "mirror_20261001-stock-news-kelvin.html": {
+      "pass": true,
+      "detail": [
+        "50f918926ba6082114413441168af52d02429021149bfdf06cd4cb9ec82f3875",
+        "50f918926ba6082114413441168af52d02429021149bfdf06cd4cb9ec82f3875",
+        "50f918926ba6082114413441168af52d02429021149bfdf06cd4cb9ec82f3875"
+      ]
+    },
+    "mirror_index.html": {
+      "pass": true,
+      "detail": [
+        "30b0dfcf67147a550393987a363fcd1f57e02a8de3ded15a1aea0c7dbe30710d",
+        "30b0dfcf67147a550393987a363fcd1f57e02a8de3ded15a1aea0c7dbe30710d",
+        "30b0dfcf67147a550393987a363fcd1f57e02a8de3ded15a1aea0c7dbe30710d"
+      ]
+    },
+    "mirror_technical-data.json": {
+      "pass": true,
+      "detail": [
+        "0bf813cb140be86f090d959eb09dbb72c23164bd83c1f20c24ad5f9cbacd6d63",
+        "0bf813cb140be86f090d959eb09dbb72c23164bd83c1f20c24ad5f9cbacd6d63",
+        "0bf813cb140be86f090d959eb09dbb72c23164bd83c1f20c24ad5f9cbacd6d63"
+      ]
+    },
+    "mirror_water-level-history.json": {
+      "pass": true,
+      "detail": [
+        "c1f0c043394fdb6e5ed5c6020104dcdae62b128e7b2857614788d3a0fe16a59e",
+        "c1f0c043394fdb6e5ed5c6020104dcdae62b128e7b2857614788d3a0fe16a59e",
+        "c1f0c043394fdb6e5ed5c6020104dcdae62b128e7b2857614788d3a0fe16a59e"
+      ]
+    },
+    "mirror_water-level-log.json": {
+      "pass": true,
+      "detail": [
+        "f028c9eb73cbb94c28a5fc7c06ab867efe36100f6e86ca44425b232d747a97cd",
+        "f028c9eb73cbb94c28a5fc7c06ab867efe36100f6e86ca44425b232d747a97cd",
+        "f028c9eb73cbb94c28a5fc7c06ab867efe36100f6e86ca44425b232d747a97cd"
+      ]
+    },
+    "mirror_water-level.html": {
+      "pass": true,
+      "detail": [
+        "9985cda6ee3618c19e751d49c6da414aeea79eccb7a2b2edb475333c785ed99a",
+        "9985cda6ee3618c19e751d49c6da414aeea79eccb7a2b2edb475333c785ed99a",
+        "9985cda6ee3618c19e751d49c6da414aeea79eccb7a2b2edb475333c785ed99a"
+      ]
+    }
+  },
+  "report_sha256": "50f918926ba6082114413441168af52d02429021149bfdf06cd4cb9ec82f3875",
+  "technical_sha256": "0bf813cb140be86f090d959eb09dbb72c23164bd83c1f20c24ad5f9cbacd6d63"
+}

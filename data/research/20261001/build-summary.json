@@ -1,0 +1,61 @@
+{
+  "cutoff": "2026-10-01T10:25:32+08:00",
+  "source_sha": "7164fed02515acc660f760aabef2e6bc95faab4392b6cc89738b8ea87aa53bf0",
+  "source_realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-01_09-05-05/ark_stocks.json",
+  "zone_counts": {
+    "ETF價值區": 10,
+    "ETF升溫區": 7,
+    "產業價值區": 31,
+    "產業升溫區": 30
+  },
+  "overlaps": {
+    "etf": [
+      "00830",
+      "00911"
+    ],
+    "stocks": [
+      "3037",
+      "3665"
+    ]
+  },
+  "water": {
+    "current": 70.4,
+    "previous": 68.9,
+    "delta": 1.5,
+    "direction": "上升",
+    "as_of": "2026-10-01",
+    "previous_date": "2026-09-30",
+    "note": "水位較前一交易日上升1.5個百分點，配置空間增加；外部利率仍高，執行維持控速。"
+  },
+  "calendar_sep30_open": true,
+  "tw_quote": {
+    "date": "20261001",
+    "time": "10:24:45",
+    "value": 47939.73
+  },
+  "us": {
+    "SPX": -0.25,
+    "DJI": -0.86,
+    "NASDAQ_COMPOSITE": 0.24,
+    "SOX": 0.0,
+    "VIX": 1.87
+  },
+  "rates": {
+    "2Y": 4.88,
+    "10Y": 5.29,
+    "30Y": 5.64,
+    "as_of": "2026-09-30"
+  },
+  "flows": {
+    "btc_etf": -125.6,
+    "eth_etf": -59.6,
+    "wgc_usd": 134159583.41000006,
+    "wgc_tonnes": -1.6376281599999996
+  },
+  "files": [
+    "/Users/kaide/.hermes/cache/scratch/Morning-Brief-20261001/data/research/20261001/ark-audit.json",
+    "/Users/kaide/.hermes/cache/scratch/Morning-Brief-20261001/data/research/20261001/market.json",
+    "/Users/kaide/.hermes/cache/scratch/Morning-Brief-20261001/data/research/20261001/crossasset.json",
+    "/Users/kaide/.hermes/cache/scratch/Morning-Brief-20261001/data/issues/20261001.json"
+  ]
+}

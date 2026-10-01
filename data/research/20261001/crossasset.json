@@ -1,0 +1,309 @@
+{
+  "cutoff": "2026-10-01T10:25:32+08:00",
+  "rates": {
+    "as_of": "2026-09-30",
+    "2Y": 4.88,
+    "10Y": 5.29,
+    "30Y": 5.64,
+    "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve&field_tdr_date_value=2026&page&_format=csv",
+    "evidence_class": "official U.S. Treasury daily par yield curve"
+  },
+  "fx_commodities": {
+    ".DXY": {
+      "last": "101.579",
+      "change_pct": "+0.13%",
+      "last_time": "2026-09-30T22:25:31.000-0400"
+    },
+    "@GC.1": {
+      "last": "4,184.20",
+      "change_pct": "-0.06%",
+      "last_time": "2026-09-30T22:15:29.000-0400"
+    },
+    "@SI.1": {
+      "last": "61.105",
+      "change_pct": "+0.89%",
+      "last_time": "2026-09-30T22:15:29.000-0400"
+    },
+    "EUR=": {
+      "last": "1.1324",
+      "change_pct": "-0.0353%",
+      "last_time": "2026-09-30T22:25:00.000-0400"
+    },
+    "JPY=": {
+      "last": "158.08",
+      "change_pct": "+0.44%",
+      "last_time": "2026-09-30T22:25:00.000-0400"
+    }
+  },
+  "common_market_source": "https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol?symbols=.SPX%7C.DJI%7C.IXIC%7C.SOX%7C.VIX%7C.DXY%7C@GC.1%7C@SI.1%7CEUR=%7CJPY=&requestMethod=quick&noform=1&partnerId=2&fund=1&exthrs=1&output=json",
+  "gold_weekly": {
+    "as_of": "2026-09-25",
+    "usd_by_region": [
+      {
+        "region": "North America",
+        "last": [
+          1790294400000,
+          -610328633.48
+        ]
+      },
+      {
+        "region": "Europe",
+        "last": [
+          1790294400000,
+          614506339.4200001
+        ]
+      },
+      {
+        "region": "Asia",
+        "last": [
+          1790294400000,
+          101482177.47
+        ]
+      },
+      {
+        "region": "Other",
+        "last": [
+          1790294400000,
+          28499700
+        ]
+      }
+    ],
+    "usd_flow": 134159583.41000006,
+    "tonnes_by_region": [
+      {
+        "region": "North America",
+        "last": [
+          1790294400000,
+          -4.78032816
+        ]
+      },
+      {
+        "region": "Europe",
+        "last": [
+          1790294400000,
+          2.44148747
+        ]
+      },
+      {
+        "region": "Asia",
+        "last": [
+          1790294400000,
+          0.49990565
+        ]
+      },
+      {
+        "region": "Other",
+        "last": [
+          1790294400000,
+          0.20130688
+        ]
+      }
+    ],
+    "tonnes_flow": -1.6376281599999996,
+    "sign_conflict": true,
+    "source_url": "https://fsapi.gold.org/api/v11/charts/etfv2/revised/flows-chart2?break-cache=01Oct26",
+    "evidence_class": "World Gold Council chart API; weekly node; Gold Price excluded"
+  },
+  "crypto": {
+    "venue": "Coinbase Exchange",
+    "BTC": {
+      "url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=86400&start=2026-09-24T00:00:00Z&end=2026-10-01T00:00:00Z",
+      "candles": [
+        [
+          1790208000,
+          82708.96,
+          84929.78,
+          84378.31,
+          84385.46,
+          6839.37550902
+        ],
+        [
+          1790294400,
+          83091.19,
+          85250,
+          84385.47,
+          84093.13,
+          7277.8815177
+        ],
+        [
+          1790380800,
+          83777.77,
+          84470.44,
+          84093.13,
+          84416.65,
+          1990.34470923
+        ],
+        [
+          1790467200,
+          84113.56,
+          85158.5,
+          84416.64,
+          84462.14,
+          2958.05456342
+        ],
+        [
+          1790553600,
+          82510.37,
+          84992,
+          84463.08,
+          83456.74,
+          6680.12066817
+        ],
+        [
+          1790640000,
+          82736,
+          84557.01,
+          83456.74,
+          83638.42,
+          4975.86563586
+        ],
+        [
+          1790726400,
+          82911.86,
+          85613.72,
+          83638.42,
+          83556.14,
+          7049.23875006
+        ],
+        [
+          1790812800,
+          83360.09,
+          83633.05,
+          83556.14,
+          83391.41,
+          312.24137026
+        ]
+      ],
+      "date": "2026-09-30 UTC complete",
+      "close": 83391.41,
+      "change_percent": -0.1971,
+      "volume": 312.24137026,
+      "volume_change_percent": -95.5706
+    },
+    "ETH": {
+      "url": "https://api.exchange.coinbase.com/products/ETH-USD/candles?granularity=86400&start=2026-09-24T00:00:00Z&end=2026-10-01T00:00:00Z",
+      "candles": [
+        [
+          1790208000,
+          2626.94,
+          2706.26,
+          2683.87,
+          2687.28,
+          98245.00296246
+        ],
+        [
+          1790294400,
+          2666.86,
+          2742.75,
+          2687.22,
+          2691.4,
+          105672.89150455
+        ],
+        [
+          1790380800,
+          2663.54,
+          2697.41,
+          2691.24,
+          2695.53,
+          28518.33327125
+        ],
+        [
+          1790467200,
+          2669.01,
+          2723.29,
+          2695.53,
+          2688.23,
+          47319.86560281
+        ],
+        [
+          1790553600,
+          2634.38,
+          2720,
+          2688.23,
+          2687.41,
+          97173.06220934
+        ],
+        [
+          1790640000,
+          2650.54,
+          2748.05,
+          2687.44,
+          2677.06,
+          125451.35060279
+        ],
+        [
+          1790726400,
+          2656.27,
+          2737.77,
+          2677.2,
+          2683.93,
+          88982.54650052
+        ],
+        [
+          1790812800,
+          2676.82,
+          2693,
+          2683.92,
+          2683.73,
+          9584.8059208
+        ]
+      ],
+      "date": "2026-09-30 UTC complete",
+      "close": 2683.73,
+      "change_percent": -0.0075,
+      "volume": 9584.8059208,
+      "volume_change_percent": -89.2284
+    },
+    "eth_btc": 0.03218233148953831,
+    "derivatives_and_onchain_status": "unverified; no leverage/stablecoin inference"
+  },
+  "crypto_etf": {
+    "BTC": {
+      "source_url": "https://farside.co.uk/btc/?date=2026-09-30",
+      "as_of": "2026-09-30",
+      "row": [
+        "30 Sep 2026",
+        "-",
+        "(125.6)",
+        "-",
+        "0.0",
+        "0.0",
+        "0.0",
+        "0.0",
+        "0.0",
+        "0.0",
+        "0.0",
+        "0.0",
+        "0.0",
+        "(125.6)"
+      ],
+      "total_usd_millions": -125.6,
+      "evidence_class": "primary Farside Investors table; earlier successful fetch in same run, subsequent retry unavailable (HTTPError)"
+    },
+    "ETH": {
+      "source_url": "https://farside.co.uk/eth/?date=2026-09-30",
+      "as_of": "2026-09-30",
+      "row": [
+        "30 Sep 2026",
+        "-",
+        "-",
+        "(26.6)",
+        "-",
+        "0.0",
+        "0.0",
+        "0.0",
+        "0.0",
+        "0.0",
+        "(7.5)",
+        "(25.5)",
+        "(59.6)"
+      ],
+      "total_usd_millions": -59.6,
+      "evidence_class": "primary Farside Investors table; earlier successful fetch in same run, subsequent retry unavailable (HTTPError)"
+    }
+  },
+  "limitations": [
+    "WGC weekly USD and tonnes signs diverge; no unified inflow/outflow claim.",
+    "Coinbase bars are UTC-day venue bars, not a global crypto close."
+  ]
+}
