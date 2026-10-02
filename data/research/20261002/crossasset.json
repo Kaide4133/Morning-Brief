@@ -1,0 +1,35 @@
+{
+  "cutoff": "2026-10-02T09:26:10+08:00",
+  "btc": {
+    "close_utc": 84848.73,
+    "change_pct": 1.55,
+    "spot_etf_flow_usd_m": -92.9
+  },
+  "eth": {
+    "close_utc": 2705.5,
+    "change_pct": 0.8,
+    "spot_etf_flow_usd_m": -55.4
+  },
+  "eth_btc": {
+    "close": 0.031881,
+    "change_pct": -0.74
+  },
+  "derivatives_snapshot": {
+    "btc_funding": 1.193e-05,
+    "btc_oi": 96748.696,
+    "eth_funding": 3.562e-05,
+    "eth_oi": 2297007.406
+  },
+  "stablecoins": {
+    "total_usd": 311468082079.9,
+    "change_1d_usd": 756658192.9,
+    "change_7d_usd": 2955176631.9
+  },
+  "gold": {
+    "comex_close_20261001": 4202.3,
+    "wgc_week_ending": "2026-09-25",
+    "wgc_usd_flow": 134159583.41,
+    "wgc_tonnes_flow": -1.63762816
+  },
+  "farside_rows_reconciled": true
+}

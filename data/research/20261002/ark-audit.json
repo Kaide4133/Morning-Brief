@@ -1,0 +1,56 @@
+{
+  "status": "pass_with_ax_price_normalization",
+  "source_primary": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-02_09-05-05/ark_stocks.json",
+  "source_ax": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-02_09-05-05/ark_stocks_ax.json",
+  "success_ok": true,
+  "validation_ok": true,
+  "generated_at": "2026-10-02T09:07:57+08:00",
+  "risk_control": 69.9,
+  "membership_rows": 78,
+  "unique_codes": 76,
+  "zone_counts": {
+    "ETF價值區": 10,
+    "ETF升溫區": 7,
+    "產業價值區": 31,
+    "產業升溫區": 30
+  },
+  "overlap": {
+    "etf": [],
+    "stocks": [
+      "3037",
+      "3189"
+    ]
+  },
+  "breadth": {
+    "ETF價值區": {
+      "up": 4,
+      "down": 5,
+      "flat": 1,
+      "missing": 0
+    },
+    "ETF升溫區": {
+      "up": 1,
+      "down": 2,
+      "flat": 1,
+      "missing": 3
+    },
+    "產業價值區": {
+      "up": 19,
+      "down": 12,
+      "flat": 0,
+      "missing": 0
+    },
+    "產業升溫區": {
+      "up": 20,
+      "down": 9,
+      "flat": 1,
+      "missing": 0
+    }
+  },
+  "sha256": {
+    "primary": "e0d989d657e877bf944f6622e53ce49a7ba05ade5222732f852f79c7b6146574",
+    "ax": "5d86ceefaeeef806c1ccbe6700637e6c84e9626492a87e77e834a80601ec811a",
+    "validation": "d5f1605f0b3f1821921c682a2a0a50d143b9b46fadaf3b8665b83bcaf78e0703",
+    "success": "880768935b474282f7d70e4515aa4edc711bbe0666b0fabb659818f99d03200d"
+  }
+}

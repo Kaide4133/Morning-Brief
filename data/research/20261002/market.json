@@ -1,0 +1,61 @@
+{
+  "cutoff": "2026-10-02T09:26:10+08:00",
+  "twse_intraday": {
+    "line": "10/2 09:26加權48,336.56點、-0.03%（盤中）。",
+    "value": 48336.56,
+    "change_pct": -0.03,
+    "data_as_of": "20261002 09:26:00 Asia/Taipei"
+  },
+  "taifex_intraday": {
+    "line": "近月臺指期48,603點、-0.20%（盤中）。",
+    "value": 48603.0,
+    "change_pct": -0.2,
+    "contract": "TXFJ6-F",
+    "contract_month": "2026-10",
+    "data_as_of": "20261002 09:26:07 Asia/Taipei"
+  },
+  "foreign_futures_oi": {
+    "value": "-79,554 口",
+    "net": -79554,
+    "note": "10/1日終外資臺股期貨未平倉淨額，較9/30淨空增加1,403口；非今日盤中部位。",
+    "data_as_of": "2026-10-01"
+  },
+  "twse_20261001_close": {
+    "value": 48353.49,
+    "change_pct": 0.86
+  },
+  "twse_20261001_foreign_net_twd": 21937328872,
+  "us_close": {
+    "sp500": {
+      "value": "7,666.45",
+      "change_pct": 0.19,
+      "data_as_of": "2026-10-01 close"
+    },
+    "nasdaq": {
+      "value": "26,871.60",
+      "change_pct": 0.04,
+      "data_as_of": "2026-10-01 close"
+    },
+    "dow": {
+      "value": "50,926.56",
+      "change_pct": 0.04,
+      "data_as_of": "2026-10-01 close"
+    },
+    "sox": {
+      "value": "12,829.00",
+      "change_pct": 1.59,
+      "data_as_of": "2026-10-01 close"
+    },
+    "vix": {
+      "value": "16.39",
+      "change_pct": 0.31,
+      "data_as_of": "2026-10-01 close"
+    }
+  },
+  "treasury": {
+    "date": "2026-10-01",
+    "2y": 4.78,
+    "10y": 5.24,
+    "30y": 5.61
+  }
+}
