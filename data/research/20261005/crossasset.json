@@ -1,0 +1,49 @@
+{
+  "cutoff": "2026-10-05T09:24:28+08:00",
+  "latest_completed_price_session": "2026-10-04 UTC for crypto; 2026-10-02 close for traditional assets",
+  "btc": {
+    "close_utc": 86507.11,
+    "change_pct": 2.08,
+    "volume": 2622.78236607,
+    "spot_etf_flow_20261002_usd_m": 31.7,
+    "spot_etf_3d_usd_m": -14.3,
+    "flow_note": "10/2 Farside complete row; 3D covers 9/30-10/2"
+  },
+  "eth": {
+    "close_utc": 2726.66,
+    "change_pct": 1.48,
+    "volume": 31222.0766346,
+    "spot_etf_flow_20261002_usd_m": -17.3,
+    "spot_etf_3d_usd_m": -132.3,
+    "flow_note": "10/2 Farside row has two unavailable cells; reported Total equals visible fund sum -17.3, treated as provider complete total with caveat"
+  },
+  "eth_btc": {
+    "close": 0.031521,
+    "change_pct": -0.53
+  },
+  "dollar": {
+    "dxy_close_20261002": 101.93,
+    "change_pct": -0.17,
+    "flow_note": "price index only; no direct fund-flow claim"
+  },
+  "gold": {
+    "comex_close_20261002": 4162.3,
+    "change_pct": -0.95,
+    "flow_note": "No in-window comparable actual gold ETF-flow release verified before cutoff; no flow conclusion published."
+  },
+  "duration": {
+    "treasury_10y_20261002": 5.28,
+    "change_bp": 4,
+    "flow_note": "yield/price signal only; no long-duration ETF subscription evidence"
+  },
+  "oil_news": {
+    "brent_snapshot": 103.06,
+    "change_pct": 0.79,
+    "wti_snapshot": 91.57,
+    "wti_change_pct": 0.5,
+    "as_of": "2026-10-04 22:02 UTC",
+    "cause": "Reuters reported prices rose after Houthis said they attacked Saudi Aramco sites; actual production disruption was not established in checked version."
+  },
+  "farside_rows_reconciled": true,
+  "crypto_rotation_stage": "價量觀察：10/4 BTC/ETH回升但週末量低、ETH/BTC下跌，且3日ETF流BTC -14.3m、ETH -132.3m；不稱資金全面回流。"
+}

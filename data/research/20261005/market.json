@@ -1,0 +1,94 @@
+{
+  "cutoff": "2026-10-05T09:24:28+08:00",
+  "research_window": "2026-10-02T09:26:10+08:00 to 2026-10-05T09:24:28+08:00",
+  "calendar": {
+    "official_source": "TWSE 115年市場開休市日期",
+    "today": "2026-10-05",
+    "today_status": "交易日（官方10月休市表未列10/5，且MIS有盤中成交）",
+    "previous_trading_date": "2026-10-02",
+    "proof": "TWSE MI_INDEX returned OK for 20261002; weekend 10/3-10/4; 10/5 MIS active"
+  },
+  "twse_intraday": {
+    "line": "10/5 09:24加權49,470.43點、+2.05%（盤中）。",
+    "value": 49470.43,
+    "change_pct": 2.05,
+    "open": 48574.95,
+    "high": 49646.72,
+    "low": 48574.95,
+    "reference": 48475.74,
+    "data_as_of": "20261005 09:24:00 Asia/Taipei"
+  },
+  "taifex_intraday": {
+    "line": "近月臺指期49,689點、+2.10%（盤中）。",
+    "value": 49689.0,
+    "change_pct": 2.1,
+    "contract": "TXFJ6-F",
+    "contract_month": "2026-10",
+    "open": 49470.0,
+    "high": 50005.0,
+    "low": 49461.0,
+    "reference": 48669.0,
+    "data_as_of": "20261005 09:24:28 Asia/Taipei"
+  },
+  "foreign_futures_oi": {
+    "value": "-80,304 口",
+    "net": -80304,
+    "note": "10/2日終外資臺股期貨未平倉淨額，較10/1淨空增加750口；非今日盤中部位。",
+    "data_as_of": "2026-10-02"
+  },
+  "twse_20261002_close": {
+    "value": 48475.74,
+    "change_pct": 0.25
+  },
+  "twse_20261002_institutional": {
+    "foreign_net_twd": 2621799962,
+    "investment_trust_net_twd": 5768811349,
+    "dealer_proprietary_net_twd": 4741375500,
+    "dealer_hedge_net_twd": -2714959070,
+    "total_net_twd": 10417027741
+  },
+  "us_close": {
+    "sp500": {
+      "value": "7,722.72",
+      "change_pct": 0.73,
+      "data_as_of": "2026-10-02 close"
+    },
+    "nasdaq": {
+      "value": "27,190.86",
+      "change_pct": 1.19,
+      "data_as_of": "2026-10-02 close"
+    },
+    "dow": {
+      "value": "51,176.96",
+      "change_pct": 0.49,
+      "data_as_of": "2026-10-02 close"
+    },
+    "sox": {
+      "value": "13,136.67",
+      "change_pct": 2.4,
+      "data_as_of": "2026-10-02 close"
+    },
+    "vix": {
+      "value": "15.31",
+      "change_pct": -6.59,
+      "data_as_of": "2026-10-02 close"
+    }
+  },
+  "treasury": {
+    "date": "2026-10-02",
+    "2y": 4.83,
+    "10y": 5.28,
+    "30y": 5.63,
+    "change_vs_20261001_bp": {
+      "2y": 5,
+      "10y": 4,
+      "30y": 2
+    }
+  },
+  "jobs": {
+    "release": "2026-10-02 08:30 ET",
+    "nonfarm_payroll_change": 29000,
+    "unemployment_rate_pct": 4.2,
+    "reuters_consensus_payroll_change": 90000
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "status": "pass_with_same_run_ax_field_normalization",
+  "source_primary": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-05_09-05-05/ark_stocks.json",
+  "source_ax": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-05_09-05-05/ark_stocks_ax.json",
+  "success_ok": true,
+  "validation_ok": true,
+  "generated_at": "2026-10-05T09:08:13+08:00",
+  "risk_control": 69.2,
+  "membership_rows": 78,
+  "unique_codes": 76,
+  "zone_counts": {
+    "ETF價值區": 10,
+    "ETF升溫區": 7,
+    "產業價值區": 31,
+    "產業升溫區": 30
+  },
+  "within_zone_duplicates": {
+    "ETF價值區": 0,
+    "ETF升溫區": 0,
+    "產業價值區": 0,
+    "產業升溫區": 0
+  },
+  "overlap": {
+    "etf": [
+      "00830"
+    ],
+    "stocks": [
+      "3037"
+    ]
+  },
+  "breadth": {
+    "ETF價值區": {
+      "up": 8,
+      "down": 0,
+      "flat": 2,
+      "missing": 0
+    },
+    "ETF升溫區": {
+      "up": 2,
+      "down": 1,
+      "flat": 1,
+      "missing": 3
+    },
+    "產業價值區": {
+      "up": 28,
+      "down": 3,
+      "flat": 0,
+      "missing": 0
+    },
+    "產業升溫區": {
+      "up": 21,
+      "down": 6,
+      "flat": 2,
+      "missing": 1
+    }
+  },
+  "source_policy": "四區 membership/order 採 primary JSON；同次擷取 AX 修正代碼、名稱、產業與漲跌箭頭。00682U、00886、00707R 保留股價缺失，右欄只標 NAV；不把 OCR 箭頭殘字當漲跌值。",
+  "special_cases": {
+    "00682U": {
+      "price": null,
+      "change": null,
+      "nav": "21.14",
+      "premium_discount": "-0.9%",
+      "verified_from": "same-run AX and original screenshot"
+    },
+    "missing_price_codes": [
+      "00682U",
+      "00886",
+      "00707R"
+    ],
+    "ocr_arrow_repair": "AX values preserved; OCR 40.19/40.5/42.9/41.9-style prefixes rejected"
+  },
+  "sha256": {
+    "primary": "bdcb7b1b261af14f4ffed74908f24f06087c065614ca86b85d02b0aa7fbc285e",
+    "ax": "aafdadf383198476485a159e594fc5ff377d82a02f05bdd0c1a7daffdb8e035e",
+    "validation": "c5cd9ce4c05e75eb72012137671d3e5aee39f959d3d90e3a959b52acbd95f1d1",
+    "success": "662bf30d17f3c192fe1d97f57b785a858b2730a3440494b94c92d8a2383e1bc3"
+  },
+  "success_manifest_hashes_verified": true
+}

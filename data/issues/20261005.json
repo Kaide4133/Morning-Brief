@@ -1,0 +1,1163 @@
+{
+  "schema_version": "morning_brief.issue.v2",
+  "issue_no": 98,
+  "date": "2026-10-05",
+  "day": "MONDAY",
+  "data_as_of": "2026-10-05",
+  "brief_label": "盤中版",
+  "draft_cutoff": "2026-10-05T09:24:28+08:00",
+  "session_label": "10/5 09:24盤中",
+  "source_ark": "data/research/20261005/ark.json",
+  "title": "水位降至69.2%：費半續強、台股跳升，先守節奏再看承接",
+  "eyebrow": "2026年10月5日｜方舟早報 No.98",
+  "scenario_id": "04",
+  "scenario_label": "04 輪動換手",
+  "scenario_override": true,
+  "ark": {
+    "schema_version": "kmb.ark.normalized.v1",
+    "water_level": 69.2,
+    "holding_allocation_suggestion": "69.2%",
+    "as_of": "2026-10-05",
+    "source_time": "2026-10-05T09:08:13+08:00",
+    "status": "validated",
+    "prev": 69.9,
+    "previous_water_level": 69.9,
+    "delta": -0.7,
+    "change": -0.7,
+    "direction": "下降",
+    "comparison_date": "2026-10-02",
+    "previous_trading_date": "2026-10-02",
+    "comparison_is_provisional": false,
+    "note": "方舟水位69.2%，較前一交易日10/2下降0.7個百分點；盤中指數雖跳升，配置上限沒有同步擴張。",
+    "interpretation": "水位仍近七成但連續收斂；四區多數上漲，先用價格承接辨認主線，不把開盤急漲當成全面追價許可。",
+    "source_file": "data/research/20261005/ark.json"
+  },
+  "hero": {
+    "headline": "水位69.2%，台股跳升但先守節奏",
+    "subhead": "10/2美股因就業增幅低於預期而上漲，費半漲2.40%；10年債殖利率反升至5.28%。台股09:24漲2.05%，先看半導體、PCB與伺服器鏈能否承接。",
+    "reader_subhead": "水位較10/2降0.7點至69.2%；台股盤中大漲，先看承接，不把急拉當加速許可。"
+  },
+  "water": {
+    "current": 69.2,
+    "previous": 69.9,
+    "delta": -0.7,
+    "direction": "下降",
+    "as_of": "2026-10-05",
+    "previous_date": "2026-10-02",
+    "note": "水位較前一交易日下降0.7個百分點；市場強、風控卻收斂，執行重點是守節奏與汰弱留強。"
+  },
+  "temperature": {
+    "label": "指數跳升、水位收斂、名單偏強",
+    "score": 69.2,
+    "change": -0.7,
+    "note": "ETF價值區8漲2平；ETF升溫區2漲1跌1平、3筆無股價。產業價值區28漲3跌，產業升溫區21漲6跌2平、1筆無股價。",
+    "signal_headline": "費半與台股同步偏強，半導體、PCB／CCL、伺服器鏈是承接觀察主線。",
+    "signal_note": "ETF價值／升溫10／7檔，交集00830；產業價值／升溫31／30檔，交集3037。",
+    "vix_note": "10/2 VIX收15.31、下跌6.59%；但10年債殖利率反升4bp至5.28%，風險偏好與長端壓力並存。"
+  },
+  "strategy": {
+    "thesis": "費半、台股與方舟名單同步偏強，但水位連續下降；今天先做強弱分流，不追第一段。",
+    "tape": "10/2美股：S&P 500 +0.73%、Nasdaq +1.19%、SOX +2.40%；10/5台股09:24 +2.05%。",
+    "playbook": "優先看半導體、PCB／CCL、伺服器鏈回測承接；雙區交集只作比較線索。",
+    "risk": "10年債升至5.28%，外資臺指期淨空增至80,304口；油價因中東供給疑慮上升。",
+    "reader": {
+      "thesis": "市場很強，但水位下降；今天做強弱分流，不追第一段。",
+      "tape": "SOX +2.40%，台股09:24 +2.05%；10年債升至5.28%。",
+      "playbook": "先看半導體、PCB與伺服器鏈回測承接。",
+      "risk": "長債仍高、外資期貨淨空增加，油價風險升溫。"
+    }
+  },
+  "analysis": {
+    "us_close": "10/2 S&P 500 +0.73%、Nasdaq +1.19%、道瓊 +0.49%、費半 +2.40%。美國9月非農只增2.9萬、低於Reuters調查9萬；升息預期降溫推升股票，但10年債殖利率仍反升至5.28%。",
+    "tx_night": "10/5 09:24加權49,470.43點、+2.05%；近月臺指期49,689點、+2.10%。10/2外資現貨買超26.22億元，外資臺股期貨淨空80,304口。",
+    "axes": {
+      "thesis": "海外晶片股與台股盤中同步偏強，但水位下降，先確認回測與量價延續。",
+      "policy": "美國就業增幅弱於預期降低10月升息押注；長端殖利率卻上升，顯示期限與通膨風險未解除。",
+      "risk": "油價因Houthi宣稱攻擊Saudi Aramco設施而上升；是否實際中斷生產仍未獲 checked Reuters 版本確認。"
+    }
+  },
+  "home": {
+    "water_note": "方舟水位69.2%，較10/2下降0.7個百分點；盤中大漲也先守節奏。",
+    "thesis_blurb": "費半漲2.40%、台股盤中漲2.05%；先看半導體、PCB與伺服器鏈承接。",
+    "risk_tagline": "水位收斂、長債仍高；強勢不追第一段。",
+    "recent_summary": "10/5：水位69.2%續降，費半與台股偏強；先看承接與強弱分流。"
+  },
+  "editorial": {
+    "pull_quote": "市場給方向，水位決定速度。",
+    "body": "10/2美股因就業增幅低於預期而收高，Nasdaq上漲1.19%、費半上漲2.40%；但美國10年債殖利率反升至5.28%，代表股票風險偏好改善，並不等於資金成本壓力解除。週末後，油價又因Houthi宣稱攻擊Saudi Aramco設施而上升，checked Reuters版本尚未確認實際生產中斷。\n\n方舟水位由69.9%降至69.2%。09:05起的來源名單中，ETF價值區8漲2平，產業價值區28漲3跌，產業升溫區21漲6跌2平、另1筆無股價；這是方舟名單廣度，不是全市場漲跌家數。00682U來源左欄股價與漲跌缺失，21.14是右欄即時淨值，未當成股價。\n\n因此本期仍定位為輪動換手：半導體、PCB／CCL與伺服器鏈可優先比較，但要等回測承接，不因指數第一段大漲擴大追價。ETF雙區交集是00830，產業雙區交集是3037；交集是觀察線索，不是買進命令。"
+  },
+  "market_summary": {
+    "twse": "官方TWSE MIS 09:24快照：加權49,470.43點，+2.05%（盤中）。",
+    "taifex": "官方TAIFEX MIS 09:24快照：近月臺指期49,689點，+2.10%（盤中）。",
+    "us": "10/2收盤：S&P 500 +0.73%、Nasdaq +1.19%、Dow +0.49%、SOX +2.40%。",
+    "rates": "美國財政部10/2：2年4.83%、10年5.28%、30年5.63%。"
+  },
+  "market": {
+    "systemic_risk": "中",
+    "sox": {
+      "value": "13,136.67",
+      "change_pct": 2.4,
+      "data_as_of": "2026-10-02 close"
+    },
+    "vix": {
+      "value": "15.31",
+      "change_pct": -6.59,
+      "data_as_of": "2026-10-02 close"
+    },
+    "sp500": {
+      "value": "7,722.72",
+      "change_pct": 0.73,
+      "data_as_of": "2026-10-02 close"
+    },
+    "dow": {
+      "value": "51,176.96",
+      "change_pct": 0.49,
+      "data_as_of": "2026-10-02 close"
+    },
+    "nasdaq": {
+      "value": "27,190.86",
+      "change_pct": 1.19,
+      "data_as_of": "2026-10-02 close"
+    },
+    "tw_index": {
+      "line": "10/5 09:24加權49,470.43點、+2.05%（盤中）。",
+      "value": 49470.43,
+      "change_pct": 2.05,
+      "open": 48574.95,
+      "high": 49646.72,
+      "low": 48574.95,
+      "reference": 48475.74,
+      "data_as_of": "20261005 09:24:00 Asia/Taipei"
+    },
+    "futures": {
+      "line": "近月臺指期49,689點、+2.10%（盤中）。",
+      "value": 49689.0,
+      "change_pct": 2.1,
+      "contract": "TXFJ6-F",
+      "contract_month": "2026-10",
+      "open": 49470.0,
+      "high": 50005.0,
+      "low": 49461.0,
+      "reference": 48669.0,
+      "data_as_of": "20261005 09:24:28 Asia/Taipei"
+    },
+    "foreign_oi": {
+      "value": "-80,304 口",
+      "net": -80304,
+      "note": "10/2日終外資臺股期貨未平倉淨額，較10/1淨空增加750口；非今日盤中部位。",
+      "data_as_of": "2026-10-02"
+    }
+  },
+  "capital_flow": {
+    "headline": "股票價格偏強，跨資產實際流量仍未全面確認",
+    "stance": "selective_risk_on",
+    "summary": "SOX與台股價格偏強；BTC 10/2 ETF小幅流入，但3日仍淨流出，ETH流量續弱；長債殖利率與油價上升。",
+    "caveat": "價格與資金流分開判讀。股價、美元、黃金或債券單日漲跌不等於資金申贖；缺少同口徑實際流量時只陳述價格。",
+    "as_of": "美股、利率、美元、黃金與ETF流量截至10/2；加密為10/4 UTC完成日K；油價新聞截至10/5 09:24台北。",
+    "assets": [
+      {
+        "asset": "黃金",
+        "role": "儲備與通膨避險",
+        "evidence": "COMEX黃金期貨10/2收4,162.3美元，單日約-0.95%。",
+        "flow_signal": "截止前未核實窗口內可比的黃金ETF實際流量，不把價格下跌寫成資金流出。",
+        "confidence": "中：價格可核，當期flow缺失",
+        "watch": "油價與長債上升後，金價是否恢復避險承接。",
+        "tone": "neutral"
+      },
+      {
+        "asset": "Bitcoin / BTC",
+        "role": "高波動稀缺資產",
+        "evidence": "Coinbase 10/4 UTC收86,507.11；Farside 10/2現貨BTC ETF +3,170萬美元。",
+        "flow_signal": "單日轉正，但9/30至10/2三日合計仍-1,430萬美元；週末上漲量能偏低。",
+        "confidence": "高：完成日K與Farside完整日表",
+        "watch": "ETF三日累計能否翻正，價格是否有工作日量能確認。",
+        "tone": "neutral"
+      },
+      {
+        "asset": "Ethereum / ETH",
+        "role": "高波動鏈上風險資產",
+        "evidence": "Coinbase 10/4 UTC收2,726.66；Farside 10/2現貨ETH ETF -1,730萬美元。",
+        "flow_signal": "9/30至10/2三日合計-1.323億美元，ETH/BTC 10/4再跌0.53%；未見接棒。",
+        "confidence": "中高：日K可核；Farside兩欄為未提供但Total與可見欄相符",
+        "watch": "ETH/BTC與ETF流量是否同步翻正。",
+        "tone": "caution"
+      },
+      {
+        "asset": "美元 / DXY",
+        "role": "現金與匯率基準",
+        "evidence": "DXY 10/2收101.93，約-0.17%。",
+        "flow_signal": "這是價格指數，不是美元基金流量；只顯示美元當日偏弱。",
+        "confidence": "中：價格代理，無直接流量",
+        "watch": "油價與長債上升是否帶動美元重新走強。",
+        "tone": "neutral"
+      },
+      {
+        "asset": "美國公債 / Duration",
+        "role": "利率與久期風險",
+        "evidence": "美國財政部10/2：2年4.83%、10年5.28%、30年5.63%；10年升4bp。",
+        "flow_signal": "債券價格承壓，但沒有長債ETF申購證據，不宣告資金流出久期。",
+        "confidence": "高：官方利率；無直接基金流",
+        "watch": "10年是否續升，以及就業降溫能否壓低長端。",
+        "tone": "caution"
+      }
+    ],
+    "interpretation": [
+      "費半與台股價格偏強，支持台股AI／半導體鏈做相對強弱比較。",
+      "BTC單日ETF轉正但三日仍負，ETH流量更弱；不是跨資產全面冒險。",
+      "長債殖利率與油價上升，限制高估值資產追價空間。"
+    ],
+    "confirmation": [
+      "觀察台股半導體、PCB／CCL與伺服器鏈回測承接。",
+      "追蹤10年債、油價與美元是否同步走高。",
+      "追蹤BTC／ETH下一筆完整ETF流量與ETH/BTC。"
+    ],
+    "reader": {
+      "headline": "股票很強，但實際流量還沒全面跟上",
+      "flow": "費半與台股上漲；BTC單日ETF轉正，ETH仍流出，長債與油價上升。",
+      "meaning": "較像股票主線偏強，不是所有風險資產一起回流。",
+      "action": "先看半導體、PCB與伺服器鏈承接；不追第一段。",
+      "watch": "看台股量價、10年債、油價與下一筆加密ETF流量。"
+    }
+  },
+  "etf": {
+    "value": [
+      {
+        "code": "0055",
+        "name": "元大MSCI金融",
+        "price": "48.85",
+        "change": "0(0%)",
+        "industry": "台灣",
+        "mark": ""
+      },
+      {
+        "code": "00960",
+        "name": "野村全球航運龍頭",
+        "price": "22.8",
+        "change": "▲0.19(0.84%)",
+        "industry": "全球",
+        "mark": ""
+      },
+      {
+        "code": "0056",
+        "name": "元大高股息",
+        "price": "57.55",
+        "change": "▲0.5(0.88%)",
+        "industry": "台灣",
+        "mark": ""
+      },
+      {
+        "code": "00875",
+        "name": "國泰網路資安",
+        "price": "58.55",
+        "change": "0(0%)",
+        "industry": "全球",
+        "mark": ""
+      },
+      {
+        "code": "0050",
+        "name": "元大台灣50",
+        "price": "115.7",
+        "change": "▲2.9(2.57%)",
+        "industry": "台灣",
+        "mark": ""
+      },
+      {
+        "code": "00631L",
+        "name": "元大台灣50正2",
+        "price": "41.55",
+        "change": "▲1.97(4.98%)",
+        "industry": "台灣",
+        "mark": ""
+      },
+      {
+        "code": "0052",
+        "name": "富邦科技",
+        "price": "67.75",
+        "change": "▲1.8(2.73%)",
+        "industry": "台灣",
+        "mark": ""
+      },
+      {
+        "code": "0053",
+        "name": "元大電子",
+        "price": "262.5",
+        "change": "▲6.95(2.72%)",
+        "industry": "台灣",
+        "mark": ""
+      },
+      {
+        "code": "00911",
+        "name": "兆豐洲際半導體",
+        "price": "59.25",
+        "change": "▲1.15(1.98%)",
+        "industry": "全球",
+        "mark": ""
+      },
+      {
+        "code": "00830",
+        "name": "國泰費城半導體",
+        "price": "93.25",
+        "change": "▲2(2.19%)",
+        "industry": "美國",
+        "mark": ""
+      }
+    ],
+    "rising": [
+      {
+        "code": "009807",
+        "name": "台新標普科技精選",
+        "price": "18.2",
+        "change": "0(0%)",
+        "industry": "美國",
+        "mark": ""
+      },
+      {
+        "code": "00733",
+        "name": "富邦臺灣中小",
+        "price": "76.1",
+        "change": "▲1.5(2.01%)",
+        "industry": "台灣",
+        "mark": ""
+      },
+      {
+        "code": "00682U",
+        "name": "期元大美元指數",
+        "price": "—",
+        "change": "—",
+        "industry": "美國",
+        "mark": "",
+        "price_available": false,
+        "nav": "21.14",
+        "premium_discount": "-0.9%",
+        "meta": "股價 —｜即時淨值 21.14｜折溢價 -0.9%"
+      },
+      {
+        "code": "00830",
+        "name": "國泰費城半導體",
+        "price": "93.3",
+        "change": "▲2.05(2.25%)",
+        "industry": "美國",
+        "mark": ""
+      },
+      {
+        "code": "00683L",
+        "name": "期元大美元指正2",
+        "price": "22.49",
+        "change": "▼0.07(-0.31%)",
+        "industry": "美國",
+        "mark": ""
+      },
+      {
+        "code": "00886",
+        "name": "永豐美國科技",
+        "price": "—",
+        "change": "—",
+        "industry": "美國",
+        "mark": "",
+        "price_available": false,
+        "nav": "49.96",
+        "premium_discount": "-0.58%",
+        "meta": "股價 —｜即時淨值 49.96｜折溢價 -0.58%"
+      },
+      {
+        "code": "00707R",
+        "name": "期元大S&P日圓反1",
+        "price": "—",
+        "change": "—",
+        "industry": "日本",
+        "mark": "",
+        "price_available": false,
+        "nav": "32.16",
+        "premium_discount": "-0.47%",
+        "meta": "股價 —｜即時淨值 32.16｜折溢價 -0.47%"
+      }
+    ],
+    "overlap": [
+      "00830"
+    ],
+    "overlap_names": {
+      "00830": "國泰費城半導體"
+    }
+  },
+  "stocks": {
+    "value": [
+      {
+        "code": "2324",
+        "name": "仁寶",
+        "price": "36.4",
+        "change": "▲0.2(0.55%)",
+        "industry": "電子設備",
+        "mark": ""
+      },
+      {
+        "code": "2382",
+        "name": "廣達",
+        "price": "334.5",
+        "change": "▲2.5(0.75%)",
+        "industry": "伺服器組裝代工",
+        "mark": ""
+      },
+      {
+        "code": "5274",
+        "name": "信驊",
+        "price": "19,260",
+        "change": "▲420(2.23%)",
+        "industry": "IC設計",
+        "mark": ""
+      },
+      {
+        "code": "6223",
+        "name": "旺矽",
+        "price": "5,355",
+        "change": "▲45(0.85%)",
+        "industry": "IC封裝測試設備",
+        "mark": ""
+      },
+      {
+        "code": "2360",
+        "name": "致茂",
+        "price": "2,285",
+        "change": "▲95(4.34%)",
+        "industry": "半導體設備",
+        "mark": ""
+      },
+      {
+        "code": "2059",
+        "name": "川湖",
+        "price": "12,785",
+        "change": "▲640(5.27%)",
+        "industry": "電子零組件",
+        "mark": ""
+      },
+      {
+        "code": "6515",
+        "name": "穎崴",
+        "price": "6,035",
+        "change": "▼35(-0.58%)",
+        "industry": "IC封裝測試設備",
+        "mark": ""
+      },
+      {
+        "code": "3034",
+        "name": "聯詠",
+        "price": "543",
+        "change": "▲6(1.12%)",
+        "industry": "驅動IC",
+        "mark": ""
+      },
+      {
+        "code": "2449",
+        "name": "京元電子",
+        "price": "301",
+        "change": "▲5.5(1.86%)",
+        "industry": "IC測試",
+        "mark": ""
+      },
+      {
+        "code": "2454",
+        "name": "聯發科",
+        "price": "5,085",
+        "change": "▲135(2.73%)",
+        "industry": "IC設計",
+        "mark": ""
+      },
+      {
+        "code": "6415",
+        "name": "矽力*-KY",
+        "price": "438",
+        "change": "▲13(3.06%)",
+        "industry": "IC設計",
+        "mark": ""
+      },
+      {
+        "code": "3008",
+        "name": "大立光",
+        "price": "6,625",
+        "change": "▲335(5.33%)",
+        "industry": "光學鏡片與鏡頭",
+        "mark": ""
+      },
+      {
+        "code": "2379",
+        "name": "瑞昱",
+        "price": "765",
+        "change": "▲11(1.46%)",
+        "industry": "IC設計",
+        "mark": ""
+      },
+      {
+        "code": "2313",
+        "name": "華通",
+        "price": "239",
+        "change": "▲13(5.75%)",
+        "industry": "硬板",
+        "mark": ""
+      },
+      {
+        "code": "2303",
+        "name": "聯電",
+        "price": "162",
+        "change": "▲0.5(0.31%)",
+        "industry": "晶圓代工",
+        "mark": ""
+      },
+      {
+        "code": "2345",
+        "name": "智邦",
+        "price": "2,035",
+        "change": "▲70(3.56%)",
+        "industry": "網路設備",
+        "mark": ""
+      },
+      {
+        "code": "6239",
+        "name": "力成",
+        "price": "307.5",
+        "change": "▼0.5(-0.16%)",
+        "industry": "IC封裝測試",
+        "mark": ""
+      },
+      {
+        "code": "2455",
+        "name": "全新",
+        "price": "592",
+        "change": "▲12(2.07%)",
+        "industry": "砷化鎵代工",
+        "mark": ""
+      },
+      {
+        "code": "2383",
+        "name": "台光電",
+        "price": "5,700",
+        "change": "▲515(9.93%)",
+        "industry": "銅箔基板",
+        "mark": ""
+      },
+      {
+        "code": "2327",
+        "name": "國巨*",
+        "price": "642",
+        "change": "▲16(2.56%)",
+        "industry": "MLCC",
+        "mark": ""
+      },
+      {
+        "code": "3665",
+        "name": "貿聯-KY",
+        "price": "2,535",
+        "change": "▼5(-0.2%)",
+        "industry": "連接線材",
+        "mark": ""
+      },
+      {
+        "code": "1785",
+        "name": "光洋科",
+        "price": "103.5",
+        "change": "▲1(0.98%)",
+        "industry": "非鐵金屬",
+        "mark": ""
+      },
+      {
+        "code": "6285",
+        "name": "啟碁",
+        "price": "244",
+        "change": "▲6(2.52%)",
+        "industry": "無線通訊設備",
+        "mark": ""
+      },
+      {
+        "code": "2308",
+        "name": "台達電",
+        "price": "1,970",
+        "change": "▲85(4.51%)",
+        "industry": "電源供應器",
+        "mark": ""
+      },
+      {
+        "code": "4958",
+        "name": "臻鼎-KY",
+        "price": "584",
+        "change": "▲23(4.1%)",
+        "industry": "軟板",
+        "mark": ""
+      },
+      {
+        "code": "2330",
+        "name": "台積電",
+        "price": "2,565",
+        "change": "▲65(2.6%)",
+        "industry": "晶圓代工",
+        "mark": ""
+      },
+      {
+        "code": "3711",
+        "name": "日月光投控",
+        "price": "741",
+        "change": "▲28(3.93%)",
+        "industry": "IC封裝測試",
+        "mark": ""
+      },
+      {
+        "code": "6274",
+        "name": "台燿",
+        "price": "1,730",
+        "change": "▲110(6.79%)",
+        "industry": "銅箔基板",
+        "mark": ""
+      },
+      {
+        "code": "3189",
+        "name": "景碩",
+        "price": "1,060",
+        "change": "▲10(0.95%)",
+        "industry": "IC基板",
+        "mark": ""
+      },
+      {
+        "code": "6213",
+        "name": "聯茂",
+        "price": "715",
+        "change": "▲32(4.69%)",
+        "industry": "銅箔基板",
+        "mark": ""
+      },
+      {
+        "code": "3037",
+        "name": "欣興",
+        "price": "1,360",
+        "change": "▲55(4.21%)",
+        "industry": "IC基板",
+        "mark": ""
+      }
+    ],
+    "rising": [
+      {
+        "code": "6708",
+        "name": "天擎",
+        "price": "68.6",
+        "change": "▲6.2(9.94%)",
+        "industry": "IC設計",
+        "mark": ""
+      },
+      {
+        "code": "6122",
+        "name": "擎邦",
+        "price": "63.1",
+        "change": "▼0.8(-1.25%)",
+        "industry": "機電工程",
+        "mark": ""
+      },
+      {
+        "code": "6672",
+        "name": "騰輝電子-KY",
+        "price": "448",
+        "change": "▲9(2.05%)",
+        "industry": "銅箔基板",
+        "mark": ""
+      },
+      {
+        "code": "1459",
+        "name": "聯發",
+        "price": "20.55",
+        "change": "▲1.85(9.89%)",
+        "industry": "加工絲",
+        "mark": ""
+      },
+      {
+        "code": "5013",
+        "name": "強新",
+        "price": "51.5",
+        "change": "▲4.6(9.93%)",
+        "industry": "不鏽鋼產品",
+        "mark": ""
+      },
+      {
+        "code": "3037",
+        "name": "欣興",
+        "price": "1,360",
+        "change": "▲55(4.21%)",
+        "industry": "IC基板",
+        "mark": ""
+      },
+      {
+        "code": "6199",
+        "name": "天品",
+        "price": "132.5",
+        "change": "▲0.5(0.38%)",
+        "industry": "傳產其他",
+        "mark": ""
+      },
+      {
+        "code": "8046",
+        "name": "南電",
+        "price": "1,480",
+        "change": "▲20(1.37%)",
+        "industry": "IC基板",
+        "mark": ""
+      },
+      {
+        "code": "3016",
+        "name": "嘉晶",
+        "price": "190",
+        "change": "▲9.5(5.26%)",
+        "industry": "矽晶圓",
+        "mark": ""
+      },
+      {
+        "code": "2033",
+        "name": "佳大",
+        "price": "50.8",
+        "change": "▼0.4(-0.78%)",
+        "industry": "鋼鐵產品",
+        "mark": ""
+      },
+      {
+        "code": "3105",
+        "name": "穩懋",
+        "price": "626",
+        "change": "▲35(5.92%)",
+        "industry": "砷化鎵代工",
+        "mark": ""
+      },
+      {
+        "code": "6877",
+        "name": "鏵友益",
+        "price": "143.5",
+        "change": "▼8.5(-5.59%)",
+        "industry": "自動化設備",
+        "mark": ""
+      },
+      {
+        "code": "1709",
+        "name": "和益",
+        "price": "64.3",
+        "change": "▲5.8(9.91%)",
+        "industry": "化學工業",
+        "mark": ""
+      },
+      {
+        "code": "6197",
+        "name": "佳必琪",
+        "price": "349.5",
+        "change": "▲10(2.95%)",
+        "industry": "連接線材",
+        "mark": ""
+      },
+      {
+        "code": "2030",
+        "name": "彰源",
+        "price": "39.4",
+        "change": "▲1(2.6%)",
+        "industry": "不鏽鋼加工",
+        "mark": ""
+      },
+      {
+        "code": "6196",
+        "name": "帆宣",
+        "price": "626",
+        "change": "▲8(1.29%)",
+        "industry": "半導體設備",
+        "mark": ""
+      },
+      {
+        "code": "1560",
+        "name": "中砂",
+        "price": "1,015",
+        "change": "0(0%)",
+        "industry": "矽晶圓",
+        "mark": ""
+      },
+      {
+        "code": "8021",
+        "name": "尖點",
+        "price": "552",
+        "change": "▼1(-0.18%)",
+        "industry": "PCB原材料",
+        "mark": ""
+      },
+      {
+        "code": "3311",
+        "name": "閎暉",
+        "price": "51.4",
+        "change": "▲1.8(3.52%)",
+        "industry": "電子零組件",
+        "mark": ""
+      },
+      {
+        "code": "8150",
+        "name": "南茂",
+        "price": "130.5",
+        "change": "▲3.5(2.76%)",
+        "industry": "IC封裝測試",
+        "mark": ""
+      },
+      {
+        "code": "8227",
+        "name": "巨有科技",
+        "price": "370",
+        "change": "0(0%)",
+        "industry": "矽智財",
+        "mark": ""
+      },
+      {
+        "code": "3707",
+        "name": "漢磊",
+        "price": "88.3",
+        "change": "▲3.1(3.64%)",
+        "industry": "矽晶圓",
+        "mark": ""
+      },
+      {
+        "code": "3094",
+        "name": "聯傑",
+        "price": "72.5",
+        "change": "▲2.2(3.13%)",
+        "industry": "IC設計",
+        "mark": ""
+      },
+      {
+        "code": "3219",
+        "name": "倚強科",
+        "price": "131",
+        "change": "▲2.5(1.95%)",
+        "industry": "無線通訊設備",
+        "mark": ""
+      },
+      {
+        "code": "6957",
+        "name": "裕慶-KY",
+        "price": "390",
+        "change": "▲13(3.45%)",
+        "industry": "傳產其他",
+        "mark": ""
+      },
+      {
+        "code": "2221",
+        "name": "大甲",
+        "price": "190.5",
+        "change": "▲2.5(1.33%)",
+        "industry": "不鏽鋼產品",
+        "mark": ""
+      },
+      {
+        "code": "6533",
+        "name": "晶心科",
+        "price": "346.5",
+        "change": "▼5.5(-1.56%)",
+        "industry": "矽智財",
+        "mark": ""
+      },
+      {
+        "code": "3226",
+        "name": "龍鋒",
+        "price": "—",
+        "change": "—",
+        "industry": "汽機車零組件",
+        "mark": "",
+        "price_available": false,
+        "nav": "4.62",
+        "premium_discount": "123.95",
+        "meta": "股價 —｜即時淨值 4.62｜折溢價 123.95"
+      },
+      {
+        "code": "6168",
+        "name": "宏齊",
+        "price": "46.85",
+        "change": "▲0.85(1.85%)",
+        "industry": "發光二極體",
+        "mark": ""
+      },
+      {
+        "code": "6491",
+        "name": "晶碩",
+        "price": "420",
+        "change": "▼4(-0.94%)",
+        "industry": "應用生技",
+        "mark": ""
+      }
+    ],
+    "overlap": [
+      "3037"
+    ],
+    "overlap_names": {
+      "3037": "欣興"
+    }
+  },
+  "zone_breadth": {
+    "ETF價值區": {
+      "up": 8,
+      "down": 0,
+      "flat": 2,
+      "missing": 0
+    },
+    "ETF升溫區": {
+      "up": 2,
+      "down": 1,
+      "flat": 1,
+      "missing": 3
+    },
+    "產業價值區": {
+      "up": 28,
+      "down": 3,
+      "flat": 0,
+      "missing": 0
+    },
+    "產業升溫區": {
+      "up": 21,
+      "down": 6,
+      "flat": 2,
+      "missing": 1
+    }
+  },
+  "mag7": [
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "price": "333.69",
+      "change_abs": "+3.37",
+      "change_pct": 1.02,
+      "tier": "positive",
+      "tier_label": "收高",
+      "signal": "10/2收高1.02%，觀察延續，不用題材代替承接。",
+      "data_as_of": "2026-10-02"
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "price": "517.53",
+      "change_abs": "+4.73",
+      "change_pct": 0.92,
+      "tier": "weak",
+      "tier_label": "收高",
+      "signal": "10/2收高0.92%，觀察延續，不用題材代替承接。",
+      "data_as_of": "2026-10-02"
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "price": "233.95",
+      "change_abs": "+3.09",
+      "change_pct": 1.34,
+      "tier": "positive",
+      "tier_label": "收高",
+      "signal": "10/2收高1.34%，觀察延續，不用題材代替承接。",
+      "data_as_of": "2026-10-02"
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "price": "251.52",
+      "change_abs": "+3.29",
+      "change_pct": 1.33,
+      "tier": "positive",
+      "tier_label": "收高",
+      "signal": "10/2收高1.33%，觀察延續，不用題材代替承接。",
+      "data_as_of": "2026-10-02"
+    },
+    {
+      "ticker": "META",
+      "name": "Meta",
+      "price": "728.08",
+      "change_abs": "+2.15",
+      "change_pct": 0.3,
+      "tier": "weak",
+      "tier_label": "收高",
+      "signal": "10/2收高0.30%，觀察延續，不用題材代替承接。",
+      "data_as_of": "2026-10-02"
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "price": "343.50",
+      "change_abs": "+5.26",
+      "change_pct": 1.56,
+      "tier": "positive",
+      "tier_label": "收高",
+      "signal": "10/2收高1.56%，觀察延續，不用題材代替承接。",
+      "data_as_of": "2026-10-02"
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "price": "370.59",
+      "change_abs": "+16.48",
+      "change_pct": 4.65,
+      "tier": "positive",
+      "tier_label": "收高",
+      "signal": "10/2收高4.65%，觀察延續，不用題材代替承接。",
+      "data_as_of": "2026-10-02"
+    }
+  ],
+  "intelligence": {
+    "trump": [
+      {
+        "time": "截至10/5 09:24研究截止",
+        "content": "未取得可獨立驗證且足以改變本期結論的同日川普直接貼文；週末關稅宣傳不替代正式政策文件。"
+      }
+    ],
+    "musk": "未取得可獨立驗證且足以改變交易結論的同日馬斯克直接貼文；Tesla 10/2上漲4.65%，仍以價格、交付與正式公告驗證。",
+    "policy": [
+      "美國9月非農只增2.9萬、失業率4.2%；就業降溫降低10月升息押注。",
+      "10/2股票上漲但10年債殖利率升至5.28%，顯示政策路徑與長端風險並未同向。",
+      "Reuters 10/5報導油價因Houthi宣稱攻擊Saudi Aramco設施而上升；checked版本未確認實際生產中斷。"
+    ]
+  },
+  "validation": {
+    "strengthened": [
+      "10/2費半上漲2.40%，10/5台股與近月期指09:24同步上漲逾2%。",
+      "四區廣度偏強：ETF價值8漲、產業價值28漲、產業升溫21漲。"
+    ],
+    "pressure": [
+      "水位由69.9%降至69.2%，連續收斂；外資臺指期淨空增至80,304口。",
+      "10年債殖利率升至5.28%，油價因供給疑慮上升。"
+    ],
+    "long_term": [
+      "半導體、PCB／CCL與伺服器需求仍要由後續訂單、營收與量價延續驗證。",
+      "BTC三日ETF流仍負、ETH流量更弱；週末價格上漲不是全面資金回流證據。"
+    ]
+  },
+  "appendix": {
+    "after_hours": "美股、利率、美元、黃金與ETF流量採10/2完成日；加密採10/4 UTC完成日K；台股與臺指期為10/5 09:24官方MIS快照。方舟四區09:05起依序擷取。",
+    "execution": "優先比較半導體、PCB／CCL、伺服器鏈與雙區交集的承接；強勢等回測，弱勢不攤，不追第一段。",
+    "map_bullets": [
+      "AI／晶圓代工 → 台積電、聯電、日月光投控、京元電子：費半偏強支撐情緒，但台廠訂單需另證。",
+      "PCB／CCL／IC基板 → 台光電、台燿、聯茂、欣興、景碩、南電：名單廣度偏強，仍以量價承接為準。",
+      "伺服器／電源／網通 → 廣達、台達電、智邦、啟碁：台股盤中強勢，後續看回測與成交延續。",
+      "雙區交集 → ETF 00830、產業3037；交集是比較線索，不是自動買進命令。"
+    ]
+  },
+  "xurl_signal_layer": {
+    "status": "no_material_signal",
+    "signals_count": 0,
+    "included_in_revision": true,
+    "signals": [],
+    "note": "截至10/5 09:24未取得可獨立驗證且足以改變本期交易結論的直接X原文；不以二手摘錄提高權重。"
+  },
+  "research_sources": [
+    {
+      "title": "方舟完整擷取 2026-10-05",
+      "url": "https://github.com/Kaide4133/Morning-Brief/blob/main/data/research/20261005/ark.json",
+      "as_of": "2026-10-05 09:05-09:08 Asia/Taipei",
+      "source_type": "primary local capture"
+    },
+    {
+      "title": "TWSE 115年市場開休市日期",
+      "url": "https://www.twse.com.tw/holidaySchedule/holidaySchedule?response=json&queryYear=115",
+      "as_of": "2026-10-05 cutoff",
+      "source_type": "official exchange"
+    },
+    {
+      "title": "TWSE MIS 加權指數",
+      "url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+      "as_of": "2026-10-05 09:24 Asia/Taipei",
+      "source_type": "official exchange intraday"
+    },
+    {
+      "title": "TAIFEX MIS 近月臺指期",
+      "url": "https://mis.taifex.com.tw/futures/RegularSession/EquityIndices/FuturesDomestic/",
+      "as_of": "2026-10-05 09:24 Asia/Taipei",
+      "source_type": "official exchange intraday"
+    },
+    {
+      "title": "TWSE 10/2收盤指數",
+      "url": "https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=20261002&type=ALL&response=json",
+      "as_of": "2026-10-02",
+      "source_type": "official exchange"
+    },
+    {
+      "title": "TWSE 10/2三大法人",
+      "url": "https://www.twse.com.tw/rwd/zh/fund/BFI82U?date=20261002&response=json",
+      "as_of": "2026-10-02",
+      "source_type": "official exchange"
+    },
+    {
+      "title": "TAIFEX 10/2三大法人期貨未平倉",
+      "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+      "as_of": "2026-10-02",
+      "source_type": "official exchange"
+    },
+    {
+      "title": "U.S. Treasury daily par yield curve",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=202610",
+      "as_of": "2026-10-02",
+      "source_type": "official agency"
+    },
+    {
+      "title": "BLS Employment Situation — September 2026",
+      "url": "https://www.bls.gov/news.release/archives/empsit_10022026.htm",
+      "as_of": "2026-10-02 08:30 ET",
+      "source_type": "official agency"
+    },
+    {
+      "title": "Reuters: Stocks rise after weak US jobs data but bonds resume selling",
+      "url": "https://finance.yahoo.com/markets/currencies/articles/asian-shares-fall-wild-swings-020953867.html",
+      "as_of": "2026-10-02 U.S. close",
+      "source_type": "authorized Reuters syndication"
+    },
+    {
+      "title": "Nasdaq PHLX Semiconductor Index",
+      "url": "https://indexes.nasdaq.com/Index/Overview/SOX",
+      "as_of": "2026-10-02 close",
+      "source_type": "official exchange"
+    },
+    {
+      "title": "Cboe VIX",
+      "url": "https://www.cboe.com/tradable-products/vix/",
+      "as_of": "2026-10-02 close",
+      "source_type": "official exchange"
+    },
+    {
+      "title": "Farside BTC ETF flows",
+      "url": "https://farside.co.uk/bitcoin-etf-flow-all-data/",
+      "as_of": "2026-10-02",
+      "source_type": "primary flow table"
+    },
+    {
+      "title": "Farside ETH ETF flows",
+      "url": "https://farside.co.uk/ethereum-etf-flow-all-data/",
+      "as_of": "2026-10-02",
+      "source_type": "primary flow table"
+    },
+    {
+      "title": "Coinbase Exchange daily candles",
+      "url": "https://api.exchange.coinbase.com/products/BTC-USD/candles",
+      "as_of": "2026-10-04 UTC",
+      "source_type": "exchange API"
+    },
+    {
+      "title": "Reuters: Oil climbs after Yemeni Houthis attack Saudi Aramco sites",
+      "url": "https://www.investing.com/news/commodities-news/oil-climbs-after-yemeni-houthis-attack-saudi-aramco-sites-4930963",
+      "as_of": "2026-10-04 22:18 UTC",
+      "source_type": "authorized Reuters syndication"
+    }
+  ],
+  "ark_source_validation": {
+    "status": "pass_with_same_run_ax_field_normalization",
+    "audit_file": "data/research/20261005/ark-audit.json",
+    "source_sha256": "bdcb7b1b261af14f4ffed74908f24f06087c065614ca86b85d02b0aa7fbc285e",
+    "counts": {
+      "membership_rows": 78,
+      "unique_codes": 76,
+      "zones": {
+        "ETF價值區": 10,
+        "ETF升溫區": 7,
+        "產業價值區": 31,
+        "產業升溫區": 30
+      }
+    },
+    "source_policy": "四區 membership/order 採 primary JSON；同次擷取 AX 修正代碼、名稱、產業與漲跌箭頭。00682U、00886、00707R 保留股價缺失，右欄只標 NAV；不把 OCR 箭頭殘字當漲跌值。"
+  },
+  "research_verification": {
+    "previous_trading_date": "2026-10-02",
+    "market_cutoff": "2026-10-05T09:24:28+08:00",
+    "tw_quote": "09:24:00",
+    "latest_complete_us_session": "2026-10-02",
+    "latest_complete_crypto_session": "2026-10-04 UTC",
+    "market_evidence": "data/research/20261005/market.json",
+    "crossasset_evidence": "data/research/20261005/crossasset.json"
+  },
+  "conclusion": "水位降至69.2%，費半與台股盤中偏強，但長債、油價與期貨淨空仍有壓力。先看半導體、PCB與伺服器鏈承接；強勢不追第一段，弱勢不攤。",
+  "disclaimer": "本報告僅供資訊整理，不構成投資建議。盤中資料、新聞與推論均需自行驗證。",
+  "scenario_reason": "水位由69.9%降至69.2%，但四區廣度與盤中指數偏強；採輪動換手與強弱分流，不把急漲直接當成擴大追價許可。",
+  "lock_scenario": true
+}
