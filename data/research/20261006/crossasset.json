@@ -1,0 +1,731 @@
+{
+  "brief": "Kelvin Morning Brief overnight cross-asset research",
+  "cutoff": {
+    "timezone": "Asia/Taipei",
+    "start": "2026-10-05T00:00:00+08:00",
+    "end": "2026-10-06T10:05:00+08:00",
+    "utc_end": "2026-10-06T02:05:00Z",
+    "market_convention": "US market assets use completed 2026-10-05 New York session; crypto uses completed 2026-10-05 UTC daily candle plus separately labeled partial Oct 6 UTC candle at cutoff. News must fall inside window; earlier facts only as dated background."
+  },
+  "status": "complete_with_latest_farside_and_wgc_coverage_limits",
+  "prices": {
+    "gold": {
+      "instrument": "GC=F",
+      "provider": "Yahoo chart API",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1785542400&period2=1791331200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "basis": "Yahoo daily exchange/session candle",
+      "metrics": {
+        "session_date": "2026-10-05",
+        "open": 4169.39990234375,
+        "high": 4198.89990234375,
+        "low": 4150.39990234375,
+        "close": 4156.7998046875,
+        "candle_return_open_close_pct": -0.30220410494006256,
+        "range_pct_of_open": 1.1685620938023833,
+        "close_location_in_range": 0.13195674935567012,
+        "ret_1_session_pct": -0.13213848732871458,
+        "ret_3_sessions_pct": -0.7141755853088516,
+        "ret_5_sessions_pct": -0.2782865830537884,
+        "ret_20_sessions_pct": -7.143820890684061,
+        "ma20": 4318.3399658203125,
+        "close_vs_ma20_pct": -3.7407930457398875,
+        "high20": 4488.7998046875,
+        "close_vs_high20_pct": -7.396186384906356,
+        "low20": 4143.10009765625,
+        "volume_vs_prior20_median": 1.0263852322866087
+      }
+    },
+    "bitcoin": {
+      "instrument": "BTCUSDT",
+      "provider": "Binance official spot API",
+      "source_url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1785542400000&endTime=1791252300000&limit=1000",
+      "basis": "UTC daily spot candle",
+      "metrics": {
+        "session_date": "2026-10-05",
+        "open": 86530.0,
+        "high": 86999.11,
+        "low": 84972.01,
+        "close": 85766.87,
+        "candle_return_open_close_pct": -0.8819253438113961,
+        "range_pct_of_open": 2.3856090964542442,
+        "close_location_in_range": 0.3921168171279159,
+        "ret_1_session_pct": -0.8819253438113961,
+        "ret_3_sessions_pct": 1.477625892990142,
+        "ret_5_sessions_pct": 2.5629965703461544,
+        "ret_20_sessions_pct": 13.381531606800646,
+        "ma20": 83390.6065,
+        "close_vs_ma20_pct": 2.8495577616406864,
+        "high20": 87395.67,
+        "close_vs_high20_pct": -1.8637078930798356,
+        "low20": 75064.82,
+        "volume_vs_prior20_median": 0.9296781603415388
+      }
+    },
+    "ethereum": {
+      "instrument": "ETHUSDT",
+      "provider": "Binance official spot API",
+      "source_url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1d&startTime=1785542400000&endTime=1791252300000&limit=1000",
+      "basis": "UTC daily spot candle",
+      "metrics": {
+        "session_date": "2026-10-05",
+        "open": 2726.93,
+        "high": 2738.0,
+        "low": 2679.63,
+        "close": 2709.98,
+        "candle_return_open_close_pct": -0.6215781116493568,
+        "range_pct_of_open": 2.178285808115299,
+        "close_location_in_range": 0.5199588829878357,
+        "ret_1_session_pct": -0.6219425436569948,
+        "ret_3_sessions_pct": 1.5510063366796611,
+        "ret_5_sessions_pct": 0.8924017408721507,
+        "ret_20_sessions_pct": 12.99775670694585,
+        "ma20": 2664.3305,
+        "close_vs_ma20_pct": 1.713357258042869,
+        "high20": 2807.34,
+        "close_vs_high20_pct": -3.4680516075715873,
+        "low20": 2369.11,
+        "volume_vs_prior20_median": 1.0040697427812142
+      }
+    },
+    "usd": {
+      "instrument": "DX-Y.NYB",
+      "provider": "Yahoo chart API",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1785542400&period2=1791331200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "basis": "Yahoo daily exchange/session candle",
+      "metrics": {
+        "session_date": "2026-10-05",
+        "open": 101.91999816894531,
+        "high": 102.54000091552734,
+        "low": 101.86000061035156,
+        "close": 102.16999816894531,
+        "candle_return_open_close_pct": 0.24529042826864078,
+        "range_pct_of_open": 0.6675832526027659,
+        "close_location_in_range": 0.4558785580450807,
+        "ret_1_session_pct": 0.23545360840868668,
+        "ret_3_sessions_pct": 0.7097104409677257,
+        "ret_5_sessions_pct": 0.9584992588480334,
+        "ret_20_sessions_pct": 3.0354925329496574,
+        "ma20": 100.51449928283691,
+        "close_vs_ma20_pct": 1.647024954529197,
+        "high20": 102.54000091552734,
+        "close_vs_high20_pct": -0.3608374715023066,
+        "low20": 98.5999984741211,
+        "volume_vs_prior20_median": null
+      }
+    },
+    "treasury_duration_proxy": {
+      "instrument": "TLT",
+      "provider": "Yahoo chart API",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/TLT?period1=1785542400&period2=1791331200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "basis": "Yahoo daily exchange/session candle",
+      "metrics": {
+        "session_date": "2026-10-05",
+        "open": 77.16000366210938,
+        "high": 77.26000213623047,
+        "low": 76.69000244140625,
+        "close": 77.11000061035156,
+        "candle_return_open_close_pct": -0.0648043667503928,
+        "range_pct_of_open": 0.7432516321272953,
+        "close_location_in_range": 0.7368392873873995,
+        "ret_1_session_pct": -0.4775461158378014,
+        "ret_3_sessions_pct": -0.8614016192600493,
+        "ret_5_sessions_pct": -1.9206335327889734,
+        "ret_20_sessions_pct": -6.203623076167086,
+        "ma20": 80.04050025939941,
+        "close_vs_ma20_pct": -3.66127103097873,
+        "high20": 82.45999908447266,
+        "close_vs_high20_pct": -6.487992400582632,
+        "low20": 76.69000244140625,
+        "volume_vs_prior20_median": 1.0306754270696452
+      }
+    },
+    "equities": {
+      "SPY": {
+        "instrument": "SPY",
+        "provider": "Yahoo chart API",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1785542400&period2=1791331200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+        "basis": "Yahoo daily exchange/session candle",
+        "metrics": {
+          "session_date": "2026-10-05",
+          "open": 769.6900024414062,
+          "high": 776.6099853515625,
+          "low": 769.6300048828125,
+          "close": 774.8300170898438,
+          "candle_return_open_close_pct": 0.6678032236528519,
+          "range_pct_of_open": 0.906926760192106,
+          "close_location_in_range": 0.7449895068205666,
+          "ret_1_session_pct": 0.674341554834168,
+          "ret_3_sessions_pct": 1.5997288500215756,
+          "ret_5_sessions_pct": 1.2042726603216147,
+          "ret_20_sessions_pct": 0.6024506464286983,
+          "ma20": 765.0605010986328,
+          "close_vs_ma20_pct": 1.2769599237160811,
+          "high20": 776.6099853515625,
+          "close_vs_high20_pct": -0.22919718974678815,
+          "low20": 749.5999755859375,
+          "volume_vs_prior20_median": 0.9924771878199135
+        }
+      },
+      "QQQ": {
+        "instrument": "QQQ",
+        "provider": "Yahoo chart API",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/QQQ?period1=1785542400&period2=1791331200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+        "basis": "Yahoo daily exchange/session candle",
+        "metrics": {
+          "session_date": "2026-10-05",
+          "open": 749.3499755859375,
+          "high": 756.9199829101562,
+          "low": 749.0800170898438,
+          "close": 756.2000122070312,
+          "candle_return_open_close_pct": 0.9141304923293792,
+          "range_pct_of_open": 1.046612596978691,
+          "close_location_in_range": 0.90816660179058,
+          "ret_1_session_pct": 0.883160565417529,
+          "ret_3_sessions_pct": 2.220959520121135,
+          "ret_5_sessions_pct": 2.6706287765257963,
+          "ret_20_sessions_pct": 5.179702500313899,
+          "ma20": 729.6415008544922,
+          "close_vs_ma20_pct": 3.639939795287961,
+          "high20": 756.9199829101562,
+          "close_vs_high20_pct": -0.09511846950543967,
+          "low20": 700.0,
+          "volume_vs_prior20_median": 0.7730935214772588
+        }
+      },
+      "IWM": {
+        "instrument": "IWM",
+        "provider": "Yahoo chart API",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/IWM?period1=1785542400&period2=1791331200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+        "basis": "Yahoo daily exchange/session candle",
+        "metrics": {
+          "session_date": "2026-10-05",
+          "open": 281.95001220703125,
+          "high": 284.239990234375,
+          "low": 280.0299987792969,
+          "close": 283.3800048828125,
+          "candle_return_open_close_pct": 0.5071795048305239,
+          "range_pct_of_open": 1.5034073040139484,
+          "close_location_in_range": 0.7957275303907853,
+          "ret_1_session_pct": 0.6607047249672648,
+          "ret_3_sessions_pct": 1.9755982385047055,
+          "ret_5_sessions_pct": 1.199920006059485,
+          "ret_20_sessions_pct": -4.266749253787971,
+          "ma20": 284.37900390625,
+          "close_vs_ma20_pct": -0.3512914138228074,
+          "high20": 296.1000061035156,
+          "close_vs_high20_pct": -4.295846321683716,
+          "low20": 275.45001220703125,
+          "volume_vs_prior20_median": 0.9033847868708884
+        }
+      },
+      "SOX": {
+        "instrument": "^SOX",
+        "provider": "Yahoo chart API",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?period1=1785542400&period2=1791331200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+        "basis": "Yahoo daily exchange/session candle",
+        "metrics": {
+          "session_date": "2026-10-05",
+          "open": 13148.8427734375,
+          "high": 13179.7060546875,
+          "low": 13004.66796875,
+          "close": 13172.736328125,
+          "candle_return_open_close_pct": 0.18171602702381495,
+          "range_pct_of_open": 1.345963513702264,
+          "close_location_in_range": 0.9601816568938679,
+          "ret_1_session_pct": 0.27454755630225147,
+          "ret_3_sessions_pct": 4.3085959185434675,
+          "ret_5_sessions_pct": 5.6757517741131025,
+          "ret_20_sessions_pct": 12.249209571914776,
+          "ma20": 12200.582421875,
+          "close_vs_ma20_pct": 7.968094248574387,
+          "high20": 13269.330078125,
+          "close_vs_high20_pct": -0.7279474504838679,
+          "low20": 11110.1103515625,
+          "volume_vs_prior20_median": null
+        }
+      },
+      "VIX": {
+        "instrument": "^VIX",
+        "provider": "Yahoo chart API",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1785542400&period2=1791331200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+        "basis": "Yahoo daily exchange/session candle",
+        "metrics": {
+          "session_date": "2026-10-05",
+          "open": 16.239999771118164,
+          "high": 16.3799991607666,
+          "low": 15.479999542236328,
+          "close": 15.520000457763672,
+          "candle_return_open_close_pct": -4.433493371317443,
+          "range_pct_of_open": 5.813951196023459,
+          "close_location_in_range": 0.04444548053549895,
+          "ret_1_session_pct": 1.3716527262657596,
+          "ret_3_sessions_pct": -5.018357938597385,
+          "ret_5_sessions_pct": -3.4225217641895123,
+          "ret_20_sessions_pct": 1.4379102240928976,
+          "ma20": 15.92950005531311,
+          "close_vs_ma20_pct": -2.5706996210019373,
+          "high20": 18.940000534057617,
+          "close_vs_high20_pct": -18.057022068949546,
+          "low20": 14.119999885559082,
+          "volume_vs_prior20_median": null
+        }
+      }
+    },
+    "crypto_cutoff_snapshot": {
+      "basis": "Binance current Oct 6 UTC daily candle, incomplete at 2026-10-06 02:05 UTC; close field is the observed price, not an official daily close.",
+      "BTC": {
+        "date": "2026-10-06",
+        "ts_utc": "2026-10-06T00:00:00+00:00",
+        "o": 85766.87,
+        "h": 86130.45,
+        "l": 85522.27,
+        "c": 85530.0,
+        "v": 1107.29784
+      },
+      "ETH": {
+        "date": "2026-10-06",
+        "ts_utc": "2026-10-06T00:00:00+00:00",
+        "o": 2709.99,
+        "h": 2723.56,
+        "l": 2703.75,
+        "c": 2704.38,
+        "v": 9929.3552
+      }
+    },
+    "treasury_official": {
+      "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve&field_tdr_date_value=2026&page&_format=csv",
+      "provider": "U.S. Department of the Treasury daily par yield curve",
+      "rows": {
+        "10/05/2026": {
+          "Date": "10/05/2026",
+          "1 Mo": "4.05",
+          "1.5 Month": "4.10",
+          "2 Mo": "4.13",
+          "3 Mo": "4.22",
+          "4 Mo": "4.27",
+          "6 Mo": "4.30",
+          "1 Yr": "4.47",
+          "2 Yr": "4.84",
+          "3 Yr": "4.97",
+          "5 Yr": "5.06",
+          "7 Yr": "5.19",
+          "10 Yr": "5.31",
+          "20 Yr": "5.70",
+          "30 Yr": "5.66"
+        },
+        "10/02/2026": {
+          "Date": "10/02/2026",
+          "1 Mo": "4.04",
+          "1.5 Month": "4.09",
+          "2 Mo": "4.11",
+          "3 Mo": "4.19",
+          "4 Mo": "4.26",
+          "6 Mo": "4.27",
+          "1 Yr": "4.46",
+          "2 Yr": "4.83",
+          "3 Yr": "4.96",
+          "5 Yr": "5.06",
+          "7 Yr": "5.17",
+          "10 Yr": "5.28",
+          "20 Yr": "5.67",
+          "30 Yr": "5.63"
+        },
+        "10/01/2026": {
+          "Date": "10/01/2026",
+          "1 Mo": "4.06",
+          "1.5 Month": "4.10",
+          "2 Mo": "4.13",
+          "3 Mo": "4.17",
+          "4 Mo": "4.26",
+          "6 Mo": "4.27",
+          "1 Yr": "4.44",
+          "2 Yr": "4.78",
+          "3 Yr": "4.91",
+          "5 Yr": "5.01",
+          "7 Yr": "5.12",
+          "10 Yr": "5.24",
+          "20 Yr": "5.64",
+          "30 Yr": "5.61"
+        },
+        "09/30/2026": {
+          "Date": "09/30/2026",
+          "1 Mo": "4.02",
+          "1.5 Month": "4.13",
+          "2 Mo": "4.16",
+          "3 Mo": "4.20",
+          "4 Mo": "4.29",
+          "6 Mo": "4.33",
+          "1 Yr": "4.54",
+          "2 Yr": "4.88",
+          "3 Yr": "5.00",
+          "5 Yr": "5.09",
+          "7 Yr": "5.19",
+          "10 Yr": "5.29",
+          "20 Yr": "5.68",
+          "30 Yr": "5.64"
+        }
+      },
+      "latest": {
+        "date": "2026-10-05",
+        "2Y_pct": 4.84,
+        "10Y_pct": 5.31,
+        "30Y_pct": 5.66,
+        "2s10s_bp": 46.99999999999997,
+        "daily_bp_change": {
+          "2Y": 0.9999999999999787,
+          "10Y": 2.999999999999936,
+          "30Y": 3.000000000000025
+        }
+      }
+    },
+    "relative_strength": {
+      "one_session_rank_pct": {
+        "QQQ": 0.8832,
+        "SPY": 0.6743,
+        "IWM": 0.6607,
+        "SOX": 0.2745,
+        "DXY": 0.2355,
+        "gold_futures": -0.1321,
+        "TLT": -0.4775,
+        "ETH": -0.6219,
+        "BTC": -0.8819
+      },
+      "five_session_rank_pct": {
+        "SOX": 5.6758,
+        "QQQ": 2.6706,
+        "BTC": 2.563,
+        "SPY": 1.2043,
+        "IWM": 1.1999,
+        "DXY": 0.9585,
+        "ETH": 0.8924,
+        "gold_futures": -0.2783,
+        "TLT": -1.9206
+      },
+      "twenty_session_selected_pct": {
+        "BTC": 13.3815,
+        "ETH": 12.9978,
+        "SOX": 12.2492,
+        "QQQ": 5.1797,
+        "DXY": 3.0355,
+        "SPY": 0.6025,
+        "IWM": -4.2667,
+        "TLT": -6.2036,
+        "gold_futures": -7.1438
+      },
+      "ETH_BTC": {
+        "latest": {
+          "date": "2026-10-05",
+          "eth_btc": 0.03159704907034616
+        },
+        "ret_1d_pct": 0.26229605554406454,
+        "ret_3d_pct": 0.07231194368588767,
+        "raw_last6": [
+          {
+            "date": "2026-09-30",
+            "eth_btc": 0.03212023878426664
+          },
+          {
+            "date": "2026-10-01",
+            "eth_btc": 0.031885230981838486
+          },
+          {
+            "date": "2026-10-02",
+            "eth_btc": 0.03157421714022846
+          },
+          {
+            "date": "2026-10-03",
+            "eth_btc": 0.0317063967578471
+          },
+          {
+            "date": "2026-10-04",
+            "eth_btc": 0.03151438807350052
+          },
+          {
+            "date": "2026-10-05",
+            "eth_btc": 0.03159704907034616
+          }
+        ]
+      },
+      "interpretation": "Overnight leadership was QQQ/equities while DXY and long yields also rose; over five sessions SOX led. This is concentrated growth/AI leadership under tight financial conditions, not a broad liquidity rally. BTC remained stronger than ETH over five sessions despite ETH/BTC improving marginally on Oct 5."
+    }
+  },
+  "actual_flows": {
+    "farside_btc": {
+      "unit": "USD millions",
+      "source_url": "https://farside.co.uk/bitcoin-etf-flow-all-data/",
+      "as_of_cutoff": "2026-10-06 10:05 Asia/Taipei",
+      "latest_observed": {
+        "trade_date": "2026-10-05",
+        "reported_total": -159.7,
+        "known_issuer_flows": {
+          "FBTC": -74.5,
+          "BITB": 0.0,
+          "ARKB": -85.2,
+          "BTCO": 0.0,
+          "EZBC": 0.0,
+          "HODL": 0.0,
+          "BTCW": 0.0,
+          "MSBT": 0.0,
+          "GBTC": 0.0,
+          "BTC": 0.0
+        },
+        "missing_issuers": [
+          "IBIT",
+          "BRRR"
+        ],
+        "status": "provisional_incomplete"
+      },
+      "last_complete_week": {
+        "trade_dates": [
+          "2026-09-28",
+          "2026-09-29",
+          "2026-09-30",
+          "2026-10-01",
+          "2026-10-02"
+        ],
+        "daily_totals": [
+          31.0,
+          66.2,
+          -148.7,
+          102.7,
+          189.9
+        ],
+        "net": 241.1,
+        "status": "all table issuer cells populated"
+      },
+      "evidence_class": "producer table / actual ETF net flow, not trading volume or AUM change"
+    },
+    "farside_eth": {
+      "unit": "USD millions",
+      "source_url": "https://farside.co.uk/ethereum-etf-flow-all-data/",
+      "as_of_cutoff": "2026-10-06 10:05 Asia/Taipei",
+      "latest_observed": {
+        "trade_date": "2026-10-05",
+        "reported_total": -18.9,
+        "known_issuer_flows": {
+          "FETH": -18.9,
+          "TETH": 0.0,
+          "ETHV": 0.0,
+          "QETH": 0.0,
+          "EZET": 0.0,
+          "MSSE": 0.0,
+          "ETHE": 0.0,
+          "ETH": 0.0,
+          "ETHW": 0.0
+        },
+        "missing_issuers": [
+          "ETHA",
+          "ETHB"
+        ],
+        "status": "provisional_incomplete"
+      },
+      "last_complete_week": {
+        "trade_dates": [
+          "2026-09-28",
+          "2026-09-29",
+          "2026-09-30",
+          "2026-10-01",
+          "2026-10-02"
+        ],
+        "daily_totals": [
+          17.1,
+          -2.8,
+          -59.6,
+          -55.4,
+          -37.4
+        ],
+        "net": -138.1,
+        "status": "all table issuer cells populated"
+      },
+      "evidence_class": "producer table / actual ETF net flow, not trading volume or AUM change"
+    },
+    "wgc_gold": {
+      "unit": "USD millions and tonnes",
+      "source_url": "https://www.gold.org/download/file/21217/WMM_5_Oct_2026_Out_of_the_ordinary.pdf",
+      "publication_date": "2026-10-05",
+      "data_period": "week ending 2026-10-02",
+      "latest_week": {
+        "total": {
+          "fund_flow_usd_mn": 1818.4,
+          "demand_tonnes": 10.7,
+          "aum_usd_bn": 576.3,
+          "holdings_tonnes": 4259.5
+        },
+        "regions": {
+          "North America": {
+            "flow_usd_mn": 666.2,
+            "demand_tonnes": 4.7
+          },
+          "Europe": {
+            "flow_usd_mn": 435.6,
+            "demand_tonnes": 1.3
+          },
+          "Asia": {
+            "flow_usd_mn": 680.0,
+            "demand_tonnes": 4.7
+          },
+          "Other": {
+            "flow_usd_mn": 36.6,
+            "demand_tonnes": -0.1
+          }
+        }
+      },
+      "coverage": {
+        "funds_complete": 71,
+        "funds_complete_pct": 36,
+        "funds_incomplete": 127,
+        "funds_incomplete_pct": 64,
+        "aum_complete_pct": 57.5,
+        "aum_incomplete_pct": 42.5,
+        "status": "producer marks data incomplete/provisional"
+      },
+      "evidence_file": "/Users/kaide/.hermes/cache/scratch/wgc-page-18.png",
+      "evidence_class": "WGC producer weekly ETF fund flow and tonnes demand; chart visually checked"
+    }
+  },
+  "news": [
+    {
+      "headline": "Nasdaq hits record as dollar and Treasury yields climb, oil prices ease",
+      "publisher": "Reuters syndicated by Euronext",
+      "source_displayed_timestamp": "Mon 05/10/2026 - 20:14 (timezone not displayed; inside cutoff under UTC or Europe venue time)",
+      "url": "https://live.euronext.com/en/financial-news/nasdaq-hits-record-dollar-and-treasury-yields-climb-oil-prices-ease",
+      "checked_body_facts": [
+        "Megacap/growth stocks including Nvidia, Meta and Microsoft supported US equities; the article snapshot showed S&P 500 about +0.7% and Nasdaq about +1%.",
+        "Euro fell as low as $1.1160 on French fiscal concerns; dollar index +0.3%.",
+        "Article snapshot placed US 10-year yield +6.8 bp at 5.34%; official Treasury end-of-day par yield later printed 5.31%.",
+        "Spot gold was near $4,135/oz and oil prices eased."
+      ],
+      "use": "Explains the coexistence of tech leadership, stronger USD and rising long yields; price close authority remains the OHLC/rate sources.",
+      "evidence_class": "Reuters body checked via authorized exchange syndication"
+    },
+    {
+      "headline": "Euro drops to 17-month low on France debt concerns",
+      "publisher": "Reuters syndicated by Euronext",
+      "source_displayed_timestamp": "Mon 05/10/2026 - 21:06 (timezone not displayed; inside cutoff under UTC or Europe venue time)",
+      "url": "https://live.euronext.com/en/financial-news/dollar-holds-firm-french-fiscal-woes-keep-euro-back-foot",
+      "checked_body_facts": [
+        "Euro fell to a 17-month low of $1.1160 and later traded near $1.1211.",
+        "ISM services PMI was 54.9 versus Reuters estimate 55.2; prices paid rose to 74.0 from 72.6.",
+        "Dollar index rose 0.28% to 102.19, after touching 102.53."
+      ],
+      "use": "Supports DXY strength narrative through euro-zone fiscal risk and sticky US services prices.",
+      "evidence_class": "Reuters body checked via authorized exchange syndication"
+    },
+    {
+      "headline": "September 2026 ISM Services PMI Report",
+      "publisher": "Institute for Supply Management",
+      "event_timestamp": "2026-10-05 10:00 ET / 2026-10-05 22:00 Asia/Taipei (standard third-business-day release time stated on page)",
+      "url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-report-on-business/services/september/",
+      "checked_body_facts": [
+        "Services PMI 54.9, down 0.5 point from August 55.4.",
+        "Prices index 74.0, up 1.4 points and highest since July 2022.",
+        "Employment index returned above 50 at 50.1."
+      ],
+      "use": "Official confirmation that activity expanded but input-price pressure accelerated, consistent with long-end yield and dollar firmness.",
+      "evidence_class": "official/original; page metadata title line is stale, but heading, body and table all explicitly identify September 2026"
+    },
+    {
+      "headline": "Gold prices today, Monday, October 5, 2026",
+      "publisher": "Yahoo Finance",
+      "source_timestamp": "2026-10-05 07:18 EDT / 2026-10-05 19:18 Asia/Taipei",
+      "url": "https://finance.yahoo.com/personal-finance/investing/article/gold-prices-today-monday-october-5-2026-gold-prices-climbing-this-morning-as-interest-rate-expectations-shift-111842935.html",
+      "checked_body_facts": [
+        "December gold futures opened at $4,169.40 and traded at $4,191.20 at 07:07 EDT.",
+        "Final Yahoo daily candle later closed at $4,156.80, showing the early gain was not retained."
+      ],
+      "use": "Documents intraday fade; not used as proof of ETF flow.",
+      "evidence_class": "checked media body plus price API close"
+    },
+    {
+      "headline": "Bitcoin and ethereum prices today, Monday, October 5, 2026",
+      "publisher": "Yahoo Finance",
+      "source_timestamp": "2026-10-05 07:44 EDT / 2026-10-05 19:44 Asia/Taipei",
+      "url": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-monday-october-5-2026-bitcoin-back-above-86000-after-higher-rate-expectations-fade-114459647.html",
+      "checked_body_facts": [
+        "Early snapshot had BTC at $86,121.88 and ETH at $2,717.55 at 07:37 EDT after higher opens.",
+        "Completed Binance UTC candles later closed BTC $85,766.87 and ETH $2,709.98, both red versus their UTC opens."
+      ],
+      "use": "Documents that early crypto gains faded; causal attribution remains tentative because the completed candle spans multiple sessions.",
+      "evidence_class": "checked media body plus official exchange API close"
+    }
+  ],
+  "reader_conclusions_zh": [
+    "資金主線仍偏向美股成長股，但不是全面風險偏好：10/5 QQQ +0.88% 領先 SPY +0.67%、IWM +0.66%，SOX 當日僅 +0.27%，但五個交易日仍以 +5.68% 居首；同時美元、長債殖利率上行，TLT 與黃金收弱。這更像「AI／大型成長股集中領漲＋金融條件偏緊」，不是美元轉弱帶動的全面流動性行情。",
+    "黃金出現「價格弱、實體 ETF 需求仍正」的背離：COMEX 日線收 4,156.8、日跌 0.13%，收在當日區間低檔，且低於 20 日均線 3.74%；WGC 最新一週（截至 10/2）則記錄 +US$18.184 億、+10.7 噸。WGC 也把較高殖利率／美元與期貨多頭縮減列為價格壓力，因此不能用單日 K 線倒推出 ETF 資金外流。",
+    "加密貨幣日線回吐但中期結構未破：BTC 10/5 收 85,766.87（-0.88%）、ETH 收 2,709.98（-0.62%），兩者仍分別高於 20 日均線 2.85%／1.71%。五日 BTC +2.56% 明顯強於 ETH +0.89%；ETH/BTC 當日僅小升 0.26%，還不足以證明 ETH 已重奪主導。",
+    "ETF 完整週也偏向 BTC：Farside 9/28–10/2 的 BTC 現貨 ETF 淨流入 US$2.411 億，ETH 現貨 ETF 淨流出 US$1.381 億。10/5 最新表暫見 BTC -US$1.597 億、ETH -US$1,890 萬，但 BTC 缺 IBIT／BRRR、ETH 缺 ETHA／ETHW，截止 10:05 仍只能標為未完成，不能當最終日流量。",
+    "債券市場仍是主要壓力源：美國財政部 10/5 收盤曲線為 2Y 4.84%、10Y 5.31%、30Y 5.66%，10Y／30Y 各日升 3bp，TLT -0.48% 且低於 20 日均線 3.66%；DXY +0.24% 至 102.17、接近 20 日高點。ISM 服務業價格指數升至 74.0，與法國財政疑慮共同為美元與長端殖利率提供解釋，但不是單一因果證明。",
+    "短線只看四件事：QQQ／SOX 能否續強而非只靠少數巨頭；10Y 是否守在 5.3% 上方；DXY 是否突破 102.54；Farside 缺失欄位補齊後，10/5 BTC／ETH ETF 流量是否仍為淨流出。"
+  ],
+  "unavailable": [
+    {
+      "field": "2026-10-05 final BTC spot ETF net flow",
+      "reason": "Farside row still missing IBIT and BRRR at cutoff; -159.7m is provisional."
+    },
+    {
+      "field": "2026-10-05 final ETH spot ETF net flow",
+      "reason": "Farside row still missing ETHA and ETHW at cutoff; -18.9m is provisional."
+    },
+    {
+      "field": "fully finalized WGC week-ending 2026-10-02 global gold ETF flow",
+      "reason": "WGC producer chart reports only 36% of funds / 57.5% of AUM complete; +$1.8184bn and +10.7t are latest producer figures but provisional."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Binance official klines BTCUSDT/ETHUSDT",
+      "url": "https://api.binance.com/api/v3/klines",
+      "purpose": "crypto OHLCV"
+    },
+    {
+      "name": "Yahoo Finance chart API",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/",
+      "purpose": "GC=F, DXY, TLT, SPY, QQQ, IWM, SOX, VIX daily OHLCV"
+    },
+    {
+      "name": "U.S. Treasury daily par yield curve",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve&field_tdr_date_value=2026&page&_format=csv",
+      "purpose": "official 2Y/10Y/30Y close rates"
+    },
+    {
+      "name": "Farside Bitcoin ETF flow all data",
+      "url": "https://farside.co.uk/bitcoin-etf-flow-all-data/",
+      "purpose": "actual BTC ETF net flows"
+    },
+    {
+      "name": "Farside Ethereum ETF flow all data",
+      "url": "https://farside.co.uk/ethereum-etf-flow-all-data/",
+      "purpose": "actual ETH ETF net flows"
+    },
+    {
+      "name": "World Gold Council Weekly Markets Monitor 5 Oct 2026",
+      "url": "https://www.gold.org/download/file/21217/WMM_5_Oct_2026_Out_of_the_ordinary.pdf",
+      "purpose": "weekly gold ETF flows and gold context"
+    },
+    {
+      "name": "Reuters via Euronext market wrap",
+      "url": "https://live.euronext.com/en/financial-news/nasdaq-hits-record-dollar-and-treasury-yields-climb-oil-prices-ease",
+      "purpose": "checked explanatory market news"
+    },
+    {
+      "name": "Reuters via Euronext FX wrap",
+      "url": "https://live.euronext.com/en/financial-news/dollar-holds-firm-french-fiscal-woes-keep-euro-back-foot",
+      "purpose": "checked DXY/euro/ISM explanatory news"
+    },
+    {
+      "name": "ISM September 2026 Services PMI",
+      "url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-report-on-business/services/september/",
+      "purpose": "official macro release"
+    }
+  ],
+  "calculation_notes": {
+    "returns": "n-session return = latest completed close / close n bars earlier - 1; crypto daily bars are UTC, US assets are exchange-session daily bars.",
+    "farside_weekly_sum": "BTC 31.0 + 66.2 - 148.7 + 102.7 + 189.9 = 241.1; ETH 17.1 - 2.8 - 59.6 - 55.4 - 37.4 = -138.1 (USD millions).",
+    "wgc_sum_check": "Regional USD flows 666.2 + 435.6 + 680.0 + 36.6 = 1818.4m; regional tonnes 4.7 + 1.3 + 4.7 - 0.1 = 10.6t, while producer total displays 10.7t due to underlying precision/rounding. Preserve producer total and region labels rather than force-recompute it.",
+    "artifacts": {
+      "metrics": "/Users/kaide/.hermes/cache/scratch/kmb1006-metrics.json",
+      "wgc_pdf": "/Users/kaide/.hermes/cache/scratch/WMM_5_Oct_2026_Out_of_the_ordinary.pdf",
+      "wgc_chart_image": "/Users/kaide/.hermes/cache/scratch/wgc-page-18.png"
+    }
+  }
+}
