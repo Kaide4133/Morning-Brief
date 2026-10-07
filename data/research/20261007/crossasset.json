@@ -1,0 +1,342 @@
+{
+  "brief_id": "kmb-20261007",
+  "title": "Taiwan morning brief research pack — price first, actual flows separated",
+  "editorial_cutoff": {
+    "timezone": "Asia/Taipei",
+    "local": "2026-10-07T10:23:00+08:00",
+    "utc": "2026-10-07T02:23:00Z",
+    "us_session": "2026-10-06 completed session"
+  },
+  "methodology": [
+    "Observed prices and primary/dated flow records are evidence; news narratives are possible explanations, not proof of flows.",
+    "Crypto prices use the Yahoo Finance one-minute bar stamped exactly 2026-10-07 02:23 UTC and the corresponding minute 24 hours earlier.",
+    "Gold and dollar prices use the completed October 6 US session; the latest independently reported Asia-morning dollar print is also shown.",
+    "October 6 US spot-crypto ETF totals were incomplete at the editorial cutoff, so the latest completed actual-flow date, October 5, is used and the incomplete date is explicitly excluded.",
+    "No X/Twitter claim is used. Taiwan implications are analyst inference and are labeled as such."
+  ],
+  "cross_asset": {
+    "gold": {
+      "price": {
+        "instrument": "COMEX December gold futures",
+        "session": "2026-10-06 US settlement",
+        "close_usd_per_oz": 4187.1,
+        "change_percent": 0.7,
+        "source": "Reuters closing update"
+      },
+      "price_read": "Gold advanced while the US dollar and Treasury yields eased. This is a price observation; the cited safe-haven and rate narratives are explanations, not flow proof.",
+      "actual_flow": {
+        "period": "2026-09",
+        "metric": "global physically backed gold ETF net inflow",
+        "tonnes": 70,
+        "end_period_holdings_tonnes": 4096,
+        "year_to_date_holdings_change_percent": 17.4,
+        "published": "2026-10-05",
+        "source": "World Gold Council Weekly Markets Monitor",
+        "frequency_note": "Monthly actual-flow figure; no verified complete global daily flow for October 6 was available by cutoff."
+      },
+      "taiwan_implication": "Higher gold alongside lower yields is mildly supportive for defensive/precious-metal positioning, but it is not a standalone risk-off signal because US equities simultaneously set records. Avoid treating the monthly ETF inflow as an October 6 daily flow."
+    },
+    "usd": {
+      "price": {
+        "instrument": "US Dollar Index (DXY)",
+        "session": "2026-10-06 US session",
+        "close": 101.83,
+        "change_percent": -0.33,
+        "asia_morning_reference": {
+          "value": 101.94,
+          "change_from_prior_close_percent_reported": 0.03,
+          "reported_at": "2026-10-07 Asia morning before cutoff",
+          "source": "Reuters"
+        }
+      },
+      "price_read": "The dollar gave back part of the prior risk/fiscal premium as European bond stress eased and immediate Fed-hike odds fell, though DXY remained above 101.",
+      "actual_flow_proxy": {
+        "metric": "US money market fund total net assets",
+        "as_of": "2026-09-30",
+        "usd_billions": 7673.69,
+        "prior_week_usd_billions": 7656.15,
+        "weekly_change_usd_billions": 17.54,
+        "weekly_change_percent": 0.229,
+        "source": "Investment Company Institute weekly money market fund assets",
+        "limitation": "This is a verified USD-liquidity/cash-vehicle asset flow proxy, not a daily DXY flow measure."
+      },
+      "taiwan_implication": "A softer overnight dollar can ease immediate TWD pressure and help foreign-risk appetite, but Fed minutes and US yields remain the decisive confirmation. Do not infer Taiwan foreign buying from DXY alone."
+    },
+    "us_treasuries": {
+      "price": {
+        "metric": "US Treasury par yield curve",
+        "date": "2026-10-06",
+        "yields_percent": {
+          "2y": 4.79,
+          "3y": 4.88,
+          "5y": 5.03,
+          "10y": 5.27,
+          "30y": 5.64
+        },
+        "daily_change_basis_points": {
+          "2y": -5,
+          "3y": -9,
+          "5y": -3,
+          "10y": -4,
+          "30y": -2
+        },
+        "source": "US Treasury daily par yield curve, October 5 versus October 6"
+      },
+      "actual_flow": {
+        "event": "3-year note auction",
+        "auction_date": "2026-10-06",
+        "cusip": "91282CRQ6",
+        "offering_usd_billions": 58.0,
+        "high_yield_percent": 4.932,
+        "bid_to_cover": 2.62,
+        "accepted_usd_billions": {
+          "indirect_bidders": 32.82649,
+          "direct_bidders": 18.04761,
+          "primary_dealers": 6.1214375,
+          "soma_add_on": 1.3775598
+        },
+        "source": "TreasuryDirect auction API",
+        "interpretation": "Actual auction demand was orderly, with a 2.62 bid-to-cover ratio, after September's weak auctions had raised concern."
+      },
+      "additional_demand_context": {
+        "period": "2026 first three quarters",
+        "money_market_fund_inflows_usd_billions": 158,
+        "comparison": "823 billion for full-year 2025 and 840 billion for full-year 2024",
+        "source": "TD Securities data reported by Reuters on 2026-10-06",
+        "limitation": "Reuters-reported institutional data, not a primary daily Treasury transaction series."
+      },
+      "taiwan_implication": "The one-day yield decline supports long-duration technology valuations, but 10-year and 30-year yields remain high at 5.27% and 5.64%. Taiwan growth stocks may get a tactical valuation tailwind, not an all-clear; upcoming 10-year/30-year auctions and Fed minutes are the next tests."
+    },
+    "bitcoin": {
+      "price": {
+        "instrument": "BTC-USD",
+        "as_of": "2026-10-07T10:23:00+08:00",
+        "value_usd": 83836.47,
+        "value_24h_prior_usd": 85714.02,
+        "change_24h_percent": -2.19,
+        "source": "Yahoo Finance one-minute chart data"
+      },
+      "actual_etf_flow": {
+        "market": "US spot Bitcoin ETFs",
+        "latest_complete_date": "2026-10-05",
+        "net_flow_usd_millions": -89.8,
+        "fund_detail_usd_millions": {
+          "IBIT": 69.9,
+          "FBTC": -74.5,
+          "BITB": 0.0,
+          "ARKB": -85.2,
+          "BTCO": 0.0,
+          "EZBC": 0.0,
+          "BRRR": 0.0,
+          "HODL": 0.0,
+          "BTCW": 0.0,
+          "MSBT": 0.0,
+          "GBTC": 0.0,
+          "BTC": 0.0
+        },
+        "five_completed_sessions": {
+          "period": "2026-09-29 through 2026-10-05",
+          "net_flow_usd_millions": 120.3
+        },
+        "source": "Farside Investors",
+        "cutoff_status": "October 6 table was still incomplete at cutoff and is not treated as final."
+      },
+      "read": "BTC sold off into the Taiwan morning, but its latest five completed ETF sessions were still net positive despite October 5 outflows. Price weakness and medium-window ETF demand therefore diverged."
+    },
+    "ethereum": {
+      "price": {
+        "instrument": "ETH-USD",
+        "as_of": "2026-10-07T10:23:00+08:00",
+        "value_usd": 2609.94,
+        "value_24h_prior_usd": 2709.98,
+        "change_24h_percent": -3.692,
+        "source": "Yahoo Finance one-minute chart data"
+      },
+      "actual_etf_flow": {
+        "market": "US spot Ethereum ETFs",
+        "latest_complete_date": "2026-10-05",
+        "net_flow_usd_millions": -50.8,
+        "fund_detail_usd_millions": {
+          "ETHA": -31.9,
+          "ETHB": 0.0,
+          "FETH": -18.9,
+          "ETHW": 0.0,
+          "TETH": 0.0,
+          "ETHV": 0.0,
+          "QETH": 0.0,
+          "EZET": 0.0,
+          "MSSE": 0.0,
+          "ETHE": 0.0,
+          "ETH": 0.0
+        },
+        "five_completed_sessions": {
+          "period": "2026-09-29 through 2026-10-05",
+          "net_flow_usd_millions": -206.0
+        },
+        "source": "Farside Investors",
+        "cutoff_status": "October 6 table was still incomplete at cutoff and is not treated as final."
+      },
+      "read": "ETH fell more than BTC and its ETF flow record was weaker: five consecutive completed sessions through October 5 summed to a 206.0 million dollar outflow."
+    },
+    "eth_btc": {
+      "price": {
+        "instrument": "ETH-BTC",
+        "as_of": "2026-10-07T10:23:00+08:00",
+        "value": 0.031146,
+        "value_24h_prior": 0.031611,
+        "change_24h_percent": -1.471,
+        "source": "Yahoo Finance one-minute chart data"
+      },
+      "read": "ETH underperformed BTC over 24 hours. The relative-price move agrees with the weaker completed ETH ETF-flow trend, but it does not prove causality."
+    }
+  },
+  "risk_tape": {
+    "session": "2026-10-06 US close",
+    "sp500": {
+      "close": 7818.93,
+      "change_percent": 0.58,
+      "record_close": true
+    },
+    "nasdaq_composite": {
+      "close": 27599.79,
+      "change_percent": 0.45,
+      "record_close": true
+    },
+    "semiconductor_index_sox": {
+      "close": 13217.82,
+      "change_percent": 0.342
+    },
+    "vix": {
+      "close": 15.01,
+      "change_percent": -3.286
+    },
+    "source": "Reuters close report; Yahoo Finance for SOX and VIX closes"
+  },
+  "material_verified_news": [
+    {
+      "rank": 1,
+      "date": "2026-10-06",
+      "headline": "S&P 500 and Nasdaq set record closing highs as yields eased and AI-linked shares advanced",
+      "verified_facts": [
+        "S&P 500 rose 0.58% to 7,818.93 and Nasdaq rose 0.45% to 27,599.79.",
+        "Marvell gained 5.8% after lifting its fiscal-2028 revenue forecast to about 20 billion dollars; it projected fiscal-2029 custom-chip revenue of at least 12 billion dollars.",
+        "AMD gained 2.8% after management said 2027 chip supply would be increased substantially."
+      ],
+      "taiwan_implication": "Positive demand read-through for Taiwan foundry, advanced packaging, substrate, networking and server-ODM groups. Keep it sector-level: the evidence does not establish supplier-specific order wins.",
+      "sources": [
+        "https://www.reuters.com/business/wall-st-futures-rise-yields-oil-dip-2026-10-06/",
+        "https://www.reuters.com/business/marvell-raises-2028-revenue-forecast-strong-ai-data-center-demand-2026-10-06/"
+      ]
+    },
+    {
+      "rank": 2,
+      "date": "2026-10-06",
+      "headline": "Google signed a 3,590-MW power arrangement with Constellation Energy",
+      "verified_facts": [
+        "The arrangement includes a 20-year PPA for 890 MW from upgraded nuclear plants and a 15-year supply agreement for 2,700 MW in PJM.",
+        "Constellation plans more than 4.3 billion dollars of fleet investment; first upgraded-plant delivery is expected in 2028.",
+        "Constellation shares rose 12.3% in the completed US session."
+      ],
+      "taiwan_implication": "Confirms power availability as a binding AI-data-center constraint. Supports the long-cycle case for Taiwan server power, thermal-management and electrical-equipment suppliers, while also warning that grid limits can delay deployments and raise customer capex.",
+      "source": "https://www.reuters.com/business/energy/google-enters-massive-36-gw-power-deal-with-constellation-energy-2026-10-06/"
+    },
+    {
+      "rank": 3,
+      "date": "2026-10-06",
+      "headline": "US August imports reached a record as AI-related capital-goods demand stayed strong",
+      "verified_facts": [
+        "The US trade deficit widened 13.7% to 105.6 billion dollars, above the 102.0 billion dollar Reuters consensus.",
+        "Imports rose 4.3% to a record 420.8 billion dollars.",
+        "Capital-goods imports rose 6.2 billion dollars to a record 146.4 billion dollars, driven by semiconductors and industrial machinery.",
+        "The US maintained a goods deficit with Taiwan."
+      ],
+      "taiwan_implication": "Near-term evidence of firm US demand for semiconductors and AI equipment is export-positive for Taiwan. The persistent bilateral deficit also raises medium-term tariff and trade-policy scrutiny; strong demand and political risk should be tracked together.",
+      "source": "https://www.reuters.com/business/us-trade-deficit-widens-august-amid-strong-imports-2026-10-06/"
+    },
+    {
+      "rank": 4,
+      "date": "2026-10-06",
+      "headline": "Treasury demand cleared the 3-year auction, but short-end structural demand has slowed",
+      "verified_facts": [
+        "The Treasury sold 58 billion dollars of 3-year notes at a 4.932% high yield with a 2.62 bid-to-cover ratio.",
+        "Money-market-fund inflows totaled 158 billion dollars in the first three quarters of 2026, sharply below 823 billion dollars in full-year 2025, according to TD Securities data reported by Reuters.",
+        "Barclays estimated 225 billion dollars of bill issuance in October and 160 billion dollars in November."
+      ],
+      "taiwan_implication": "The auction reduces immediate tail-risk after September's weak sales, but heavy supply and slower money-fund inflows can keep global discount rates elevated. Taiwan's long-duration technology leadership remains sensitive to US auction quality and Fed communication.",
+      "sources": [
+        "https://www.treasurydirect.gov/TA_WS/securities/search?startdate=2026-10-06&enddate=2026-10-06&format=json",
+        "https://www.reuters.com/business/slowdown-money-fund-cash-flow-hits-short-term-treasuries-2026-10-06/"
+      ]
+    }
+  ],
+  "taiwan_open_framework": {
+    "base_case": "Constructive but rate-sensitive: US record closes, a stronger AI capex read-through, lower Treasury yields and a softer dollar favor Taiwan technology at the open.",
+    "counterweights": [
+      "Crypto risk appetite deteriorated sharply into 10:23 Taipei, with ETH underperforming BTC and completed ETH ETF flows persistently negative.",
+      "US 10-year and 30-year yields remain historically high despite the overnight decline.",
+      "Record US imports validate demand but can intensify tariff and bilateral-trade scrutiny.",
+      "October 6 crypto ETF flows were not final by cutoff; do not use preliminary table totals as settled evidence."
+    ],
+    "confirmation_checks_after_open": [
+      "TWD direction and verified foreign institutional net buying/selling in Taiwan equities",
+      "TAIEX semiconductor breadth rather than index-only strength",
+      "US 10-year yield reaction ahead of the next Treasury auction",
+      "Final October 6 Farside spot-BTC and spot-ETH ETF tables",
+      "Fed September meeting minutes due later October 7"
+    ]
+  },
+  "sources": [
+    {
+      "name": "US Treasury daily par yield curve XML",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "accessed": "2026-10-07"
+    },
+    {
+      "name": "TreasuryDirect auction API",
+      "url": "https://www.treasurydirect.gov/TA_WS/securities/search?startdate=2026-10-06&enddate=2026-10-06&format=json",
+      "accessed": "2026-10-07"
+    },
+    {
+      "name": "Farside Bitcoin ETF daily flow table",
+      "url": "https://farside.co.uk/bitcoin-etf-flow-all-data/",
+      "accessed": "2026-10-07"
+    },
+    {
+      "name": "Farside Ethereum ETF daily flow table",
+      "url": "https://farside.co.uk/ethereum-etf-flow-all-data/",
+      "accessed": "2026-10-07"
+    },
+    {
+      "name": "World Gold Council Weekly Markets Monitor",
+      "url": "https://www.gold.org/goldhub/gold-focus/2026/10/weekly-markets-monitor-out-ordinary",
+      "published": "2026-10-05"
+    },
+    {
+      "name": "Investment Company Institute money market fund assets",
+      "url": "https://www.ici.org/research/stats/mmf",
+      "latest_used_date": "2026-09-30"
+    },
+    {
+      "name": "Reuters gold close",
+      "url": "https://www.reuters.com/world/india/gold-inches-lower-firmer-dollar-higher-yields-weigh-2026-10-06/",
+      "published": "2026-10-06"
+    },
+    {
+      "name": "Reuters dollar Asia update",
+      "url": "https://www.reuters.com/world/asia-pacific/dollar-holds-losses-markets-await-fed-minutes-speakers-2026-10-07/",
+      "published": "2026-10-07"
+    },
+    {
+      "name": "Yahoo Finance chart API",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/",
+      "note": "Instrument endpoints used for BTC-USD, ETH-USD, ETH-BTC, DXY, gold futures, SOX and VIX."
+    }
+  ],
+  "data_gaps": [
+    "No verified complete October 6 US spot-Bitcoin or spot-Ethereum ETF total was available at the 10:23 Taipei cutoff; October 5 is the latest completed date.",
+    "No complete global daily gold-ETF flow for October 6 was verified; the latest WGC actual-flow evidence is monthly September data published October 5.",
+    "A daily transaction-flow measure for DXY does not exist in the cited public sources; ICI money-market-fund net assets are used only as a dated USD-liquidity proxy.",
+    "No Taiwan cash-market foreign institutional flow is included because the Taiwan session had not yet completed at the morning cutoff."
+  ],
+  "independent_recheck": "recheck.json"
+}

@@ -1,0 +1,357 @@
+{
+  "schema_version": "1.0",
+  "requested_for": "Kelvin Morning Brief 2026-10-07",
+  "collected_at_taipei": "2026-10-07T10:29:54+08:00",
+  "cutoff_note": "Taiwan values are source-version intraday snapshots at embedded exchange timestamps; they are not official closes. Institutional data use the prior completed session, 2026-10-06. U.S. values are completed 2026-10-06 regular-session closes.",
+  "taiwan_trading_calendar": {
+    "date": "2026-10-07",
+    "weekday": "Wednesday",
+    "status": "open_regular_trading_day",
+    "official_marketwide_verification": {
+      "source_url": "https://www.twse.com.tw/holidaySchedule/holidaySchedule?response=html",
+      "source_class": "TWSE official annual market holiday schedule",
+      "target_date_listed_as_closure": false,
+      "nearby_october_closures": [
+        {
+          "date": "2026-10-09",
+          "name": "國慶日",
+          "description": "國慶日為10月10日適逢星期六，於10月9日（星期五）補假。"
+        },
+        {
+          "date": "2026-10-10",
+          "name": "國慶日",
+          "description": "依規定放假1日。"
+        },
+        {
+          "date": "2026-10-25",
+          "name": "臺灣光復暨金門古寧頭大捷紀念日",
+          "description": "依規定放假1日。"
+        },
+        {
+          "date": "2026-10-26",
+          "name": "臺灣光復暨金門古寧頭大捷紀念日",
+          "description": "臺灣光復暨金門古寧頭大捷紀念日為10月25日適逢星期日，於10月26日（星期一）補假。"
+        }
+      ],
+      "corroboration": "Both TWSE MIS and TAIFEX MIS returned live records dated 20261007 during regular-session hours."
+    }
+  },
+  "taiwan_intraday": {
+    "twse_taiex": {
+      "date": "20261007",
+      "time_taipei": "10:29:05",
+      "status": "intraday_not_close",
+      "name": "發行量加權股價指數",
+      "last": 49636.82,
+      "reference_previous_close": 49822.55,
+      "change": -185.73,
+      "change_pct": -0.3728,
+      "open": 49857.32,
+      "high": 49966.89,
+      "low": 49567.52,
+      "source_url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+      "source_class": "TWSE official MIS",
+      "raw_key": "tse_t00.tw_20261007"
+    },
+    "taifex_tx_front_month": {
+      "date": "20261007",
+      "time_taipei": "10:29:54",
+      "status": "intraday_not_close",
+      "symbol_id": "TXFJ6-F",
+      "contract_label": "臺指期106",
+      "expiry_yyyymm": "202610",
+      "selection_rule": "First active non-spot TXF monthly contract with non-zero volume in official quote list",
+      "last": 49910.0,
+      "reference_price": 50082.0,
+      "change": -172.0,
+      "change_pct": -0.34,
+      "open": 50050.0,
+      "high": 50110.0,
+      "low": 49842.0,
+      "volume_contracts": 15907,
+      "best_bid": 49907.0,
+      "best_ask": 49910.0,
+      "source_url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+      "source_page": "https://mis.taifex.com.tw/futures/RegularSession/EquityIndices/FuturesDomestic/",
+      "source_class": "TAIFEX official MIS"
+    }
+  },
+  "prior_completed_institutional": {
+    "date": "2026-10-06",
+    "twse_cash_market": {
+      "unit": "NTD; net_100m_ntd is 億元",
+      "rows": [
+        {
+          "category": "自營商(自行買賣)",
+          "buy_ntd": 12155667098,
+          "sell_ntd": 8543703603,
+          "net_ntd": 3611963495,
+          "net_100m_ntd": 36.1196
+        },
+        {
+          "category": "自營商(避險)",
+          "buy_ntd": 29749547024,
+          "sell_ntd": 31640298320,
+          "net_ntd": -1890751296,
+          "net_100m_ntd": -18.9075
+        },
+        {
+          "category": "投信",
+          "buy_ntd": 24610502092,
+          "sell_ntd": 38875420860,
+          "net_ntd": -14264918768,
+          "net_100m_ntd": -142.6492
+        },
+        {
+          "category": "外資及陸資(不含外資自營商)",
+          "buy_ntd": 361368559612,
+          "sell_ntd": 368025901222,
+          "net_ntd": -6657341610,
+          "net_100m_ntd": -66.5734
+        },
+        {
+          "category": "外資自營商",
+          "buy_ntd": 0,
+          "sell_ntd": 0,
+          "net_ntd": 0,
+          "net_100m_ntd": 0.0
+        },
+        {
+          "category": "合計",
+          "buy_ntd": 427884275826,
+          "sell_ntd": 447085324005,
+          "net_ntd": -19201048179,
+          "net_100m_ntd": -192.0105
+        }
+      ],
+      "summary": {
+        "dealer_combined_net_ntd": 1721212199,
+        "dealer_combined_net_100m_ntd": 17.2121,
+        "investment_trust_net_ntd": -14264918768,
+        "investment_trust_net_100m_ntd": -142.6492,
+        "foreign_excl_foreign_dealers_net_ntd": -6657341610,
+        "foreign_excl_foreign_dealers_net_100m_ntd": -66.5734,
+        "total_net_ntd": -19201048179,
+        "total_net_100m_ntd": -192.0105
+      },
+      "source_url": "https://www.twse.com.tw/rwd/zh/fund/BFI82U?date=20261006&response=json",
+      "source_class": "TWSE official post-trade API",
+      "title": "115年10月06日 三大法人買賣金額統計表",
+      "notes": [
+        "自營商表示證券自營商專戶。",
+        "投信表示本國投資信託基金。",
+        "外資及陸資表示依「華僑及外國人投資證券管理辦法」及「大陸地區投資人來臺從事證券投資及期貨交易管理辦法」辦理登記等投資人。",
+        "因外資自營商買賣金額已計入自營商買賣金額，故不納入三大法人買賣金額之合計數計算。",
+        "本統計資訊含一般、零股、盤後定價、鉅額，不含拍賣、標購。",
+        "本資訊以當日原始成交情形統計，不以證券商申報錯帳、更正帳號等調整後資料統計。",
+        "外幣成交值係以本公司當日下午3時30分公告匯率換算後加入成交金額。<br>公告匯率請參考本公司首頁>產品與服務>交易系統>雙幣ETF專區>代號對應及每日公告匯率。"
+      ]
+    },
+    "taifex": {
+      "general_table": {
+        "unit": "contracts; contract value in NTD millions",
+        "scope_note": "Official general table includes domestic index futures (excluding named overseas index futures), options, stock futures, and stock options.",
+        "rows": [
+          {
+            "日期": "20261006",
+            "身份別": "自營商",
+            "多方交易口數": 135392,
+            "多方交易契約金額(百萬元)": 70880,
+            "空方交易口數": 154014,
+            "空方交易契約金額(百萬元)": 76498,
+            "多空交易口數淨額": -18622,
+            "多空交易契約金額淨額(百萬元)": -5618,
+            "多方未平倉口數": 173532,
+            "多方未平倉契約金額(百萬元)": 81320,
+            "空方未平倉口數": 465037,
+            "空方未平倉契約金額(百萬元)": 369844,
+            "多空未平倉口數淨額": -291505,
+            "多空未平倉契約金額淨額(百萬元)": -288524
+          },
+          {
+            "日期": "20261006",
+            "身份別": "投信",
+            "多方交易口數": 1160,
+            "多方交易契約金額(百萬元)": 11303,
+            "空方交易口數": 227,
+            "空方交易契約金額(百萬元)": 395,
+            "多空交易口數淨額": 933,
+            "多空交易契約金額淨額(百萬元)": 10908,
+            "多方未平倉口數": 95564,
+            "多方未平倉契約金額(百萬元)": 817619,
+            "空方未平倉口數": 11162,
+            "空方未平倉契約金額(百萬元)": 28805,
+            "多空未平倉口數淨額": 84402,
+            "多空未平倉契約金額淨額(百萬元)": 788814
+          },
+          {
+            "日期": "20261006",
+            "身份別": "外資及陸資",
+            "多方交易口數": 525023,
+            "多方交易契約金額(百萬元)": 634775,
+            "空方交易口數": 549528,
+            "空方交易契約金額(百萬元)": 681435,
+            "多空交易口數淨額": -24505,
+            "多空交易契約金額淨額(百萬元)": -46660,
+            "多方未平倉口數": 258778,
+            "多方未平倉契約金額(百萬元)": 327311,
+            "空方未平倉口數": 792338,
+            "空方未平倉契約金額(百萬元)": 1365691,
+            "多空未平倉口數淨額": -533560,
+            "多空未平倉契約金額淨額(百萬元)": -1038380
+          }
+        ],
+        "source_url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersGeneralBytheDate",
+        "source_class": "TAIFEX official OpenAPI"
+      },
+      "tx_futures_contract": {
+        "unit": "contracts; value in NTD thousands",
+        "rows": [
+          {
+            "Date": "20261006",
+            "ContractCode": "臺股期貨",
+            "Item": "自營商",
+            "TradingVolume(Long)": 3339,
+            "TradingValue(Long)(Thousands)": 33386313,
+            "TradingVolume(Short)": 3096,
+            "TradingValue(Short)(Thousands)": 30976333,
+            "TradingVolume(Net)": 243,
+            "TradingValue(Net)(Thousands)": 2409980,
+            "OpenInterest(Long)": 3067,
+            "ContractValueofOpenInterest(Long)(Thousands)": 30757579,
+            "OpenInterest(Short)": 4951,
+            "ContractValueofOpenInterest(Short)(Thousands)": 49627020,
+            "OpenInterest(Net)": -1884,
+            "ContractValueofOpenInterest(Net)(Thousands)": -18869441
+          },
+          {
+            "Date": "20261006",
+            "ContractCode": "臺股期貨",
+            "Item": "投信",
+            "TradingVolume(Long)": 1099,
+            "TradingValue(Long)(Thousands)": 11014536,
+            "TradingVolume(Short)": 35,
+            "TradingValue(Short)(Thousands)": 350524,
+            "TradingVolume(Net)": 1064,
+            "TradingValue(Net)(Thousands)": 10664012,
+            "OpenInterest(Long)": 78956,
+            "ContractValueofOpenInterest(Long)(Thousands)": 790854878,
+            "OpenInterest(Short)": 2748,
+            "ContractValueofOpenInterest(Short)(Thousands)": 27525067,
+            "OpenInterest(Net)": 76208,
+            "ContractValueofOpenInterest(Net)(Thousands)": 763329811
+          },
+          {
+            "Date": "20261006",
+            "ContractCode": "臺股期貨",
+            "Item": "外資及陸資",
+            "TradingVolume(Long)": 28633,
+            "TradingValue(Long)(Thousands)": 286345523,
+            "TradingVolume(Short)": 31112,
+            "TradingValue(Short)(Thousands)": 311131230,
+            "TradingVolume(Net)": -2479,
+            "TradingValue(Net)(Thousands)": -24785707,
+            "OpenInterest(Long)": 12968,
+            "ContractValueofOpenInterest(Long)(Thousands)": 129921490,
+            "OpenInterest(Short)": 92485,
+            "ContractValueofOpenInterest(Short)(Thousands)": 926487705,
+            "OpenInterest(Net)": -79517,
+            "ContractValueofOpenInterest(Net)(Thousands)": -796566215
+          }
+        ],
+        "foreign_net_open_interest_contracts": -79517,
+        "source_url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+        "source_class": "TAIFEX official OpenAPI"
+      }
+    }
+  },
+  "us_completed_2026_10_06": {
+    "session_status": "completed",
+    "timezone": "America/New_York (EDT)",
+    "indices": [
+      {
+        "symbol": "^GSPC",
+        "name": "S&P 500",
+        "session_date": "2026-10-06",
+        "status": "completed_close",
+        "close": 7818.93,
+        "change": 44.98,
+        "change_pct": 0.58,
+        "previous_close": 7773.95,
+        "open": 7805.96,
+        "high": 7844.52,
+        "low": 7805.96,
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=1791244800&period2=1791417600&interval=1d&events=history",
+        "source_class": "Yahoo Finance chart API; cross-checked with AP/Reuters",
+        "retrieval_note": "Verified earlier in this research run; final bounded refetch was rate-limited (HTTP 429)."
+      },
+      {
+        "symbol": "^DJI",
+        "name": "Dow Jones Industrial Average",
+        "session_date": "2026-10-06",
+        "status": "completed_close",
+        "close": 51521.28,
+        "change": 253.38,
+        "change_pct": 0.49,
+        "previous_close": 51267.9,
+        "open": 51444.1,
+        "high": 51672.25,
+        "low": 51422.9,
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?period1=1791244800&period2=1791417600&interval=1d&events=history",
+        "source_class": "Yahoo Finance chart API; cross-checked with AP/Reuters",
+        "retrieval_note": "Verified earlier in this research run; final bounded refetch was rate-limited (HTTP 429)."
+      },
+      {
+        "symbol": "COMP",
+        "name": "Nasdaq Composite",
+        "session_date": "2026-10-06",
+        "status": "completed_close",
+        "close": 27599.79,
+        "change": 122.48,
+        "change_pct": 0.45,
+        "previous_close": 27477.31,
+        "day_low": 27592.56,
+        "day_high": 27722.75,
+        "market_status_at_retrieval": "Closed",
+        "source_timestamp_label": "Oct 6, 2026",
+        "source_url": "https://api.nasdaq.com/api/quote/COMP/info?assetclass=index",
+        "source_class": "Nasdaq official quote API"
+      },
+      {
+        "symbol": "SOX",
+        "name": "PHLX Semiconductor Sector",
+        "session_date": "2026-10-06",
+        "status": "completed_close",
+        "close": 13217.82,
+        "change": 45.08,
+        "change_pct": 0.34,
+        "previous_close": 13172.74,
+        "day_low": 13196.5,
+        "day_high": 13349.96,
+        "market_status_at_retrieval": "Closed",
+        "source_timestamp_label": "Oct 6, 2026",
+        "source_url": "https://api.nasdaq.com/api/quote/SOX/info?assetclass=index",
+        "source_class": "Nasdaq official quote API"
+      }
+    ],
+    "cross_checks": [
+      {
+        "source": "Reuters final market wrap",
+        "url": "https://www.reuters.com/business/wall-st-futures-rise-yields-oil-dip-2026-10-06/",
+        "note": "Confirmed positive closes and rounded percentages for Dow, S&P 500, Nasdaq."
+      },
+      {
+        "source": "Associated Press syndicated close table",
+        "url": "https://www.wvnews.com/business/how-major-us-stock-indexes-fared-tuesday-10-6-2026/article_ef775e25-94ce-5f17-aa79-e7f31e207fd2.html",
+        "note": "Confirmed S&P 500 7,818.93, Dow 51,521.28, Nasdaq 27,599.79."
+      }
+    ]
+  },
+  "quality_notes": [
+    "2026-10-07 is verified as an open day by the official TWSE marketwide holiday schedule plus same-date live official exchange feeds; individual-security suspensions do not alter marketwide status.",
+    "Intraday values can move after this evidence pack timestamp and must not be presented as closing values.",
+    "TWSE institutional dealer combined net equals proprietary plus hedge books.",
+    "TAIFEX general-table totals are not interchangeable with TX-only foreign net open interest; both scopes are preserved.",
+    "Nasdaq official API is used for COMP and SOX. Yahoo chart API is used for SPX and DJI and cross-checked against AP/Reuters completed-close reports."
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "brief_id": "kmb-20261007",
+  "recheck_type": "independent_read_only_fact_recheck",
+  "rechecked_at_utc": "2026-10-07T02:34:30.450163Z",
+  "scope": [
+    "US Treasury October 6 yields versus October 5",
+    "Farside October 5 Bitcoin and Ethereum ETF full rows",
+    "Google/Constellation and Marvell news using primary or directly accessible Reuters evidence",
+    "S&P 500 October 6 close discrepancy",
+    "October 6 completed Magnificent Seven closes"
+  ],
+  "treasury": {
+    "status": "verified",
+    "source": {
+      "name": "US Treasury daily par yield curve XML",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "evidence_class": "official/original"
+    },
+    "rows_percent": {
+      "2026-10-05": {
+        "2y": 4.84,
+        "3y": 4.97,
+        "5y": 5.06,
+        "10y": 5.31,
+        "30y": 5.66
+      },
+      "2026-10-06": {
+        "2y": 4.79,
+        "3y": 4.88,
+        "5y": 5.03,
+        "10y": 5.27,
+        "30y": 5.64
+      }
+    },
+    "oct6_minus_oct5_basis_points": {
+      "2y": -5,
+      "3y": -9,
+      "5y": -3,
+      "10y": -4,
+      "30y": -2
+    },
+    "pack_assessment": "All listed October 6 yields and day-over-day basis-point changes are correct."
+  },
+  "farside": {
+    "units": "USD millions",
+    "bitcoin": {
+      "status": "total_verified_but_pack_fund_detail_incorrect",
+      "source": "https://farside.co.uk/bitcoin-etf-flow-all-data/",
+      "columns": [
+        "IBIT",
+        "FBTC",
+        "BITB",
+        "ARKB",
+        "BTCO",
+        "EZBC",
+        "BRRR",
+        "HODL",
+        "BTCW",
+        "MSBT",
+        "GBTC",
+        "BTC"
+      ],
+      "row_2026-10-05": {
+        "IBIT": 69.9,
+        "FBTC": -74.5,
+        "BITB": 0.0,
+        "ARKB": -85.2,
+        "BTCO": 0.0,
+        "EZBC": 0.0,
+        "BRRR": 0.0,
+        "HODL": 0.0,
+        "BTCW": 0.0,
+        "MSBT": 0.0,
+        "GBTC": 0.0,
+        "BTC": 0.0,
+        "reported_total": -89.8,
+        "recomputed_total": -89.8
+      },
+      "pack_correction": "The -89.8 total is correct, but the pack's IBIT -71.8 and FBTC -18.0 breakdown is wrong. The full row is IBIT +69.9, FBTC -74.5, ARKB -85.2, all other funds 0.0.",
+      "five_session_check_2026-09-29_through_2026-10-05": {
+        "daily_totals": [
+          66.2,
+          -148.7,
+          102.7,
+          189.9,
+          -89.8
+        ],
+        "recomputed_total": 120.3,
+        "pack_value": 138.5,
+        "assessment": "pack value is incorrect"
+      }
+    },
+    "ethereum": {
+      "status": "total_verified_but_pack_fund_detail_incorrect",
+      "source": "https://farside.co.uk/ethereum-etf-flow-all-data/",
+      "columns": [
+        "ETHA",
+        "ETHB",
+        "FETH",
+        "ETHW",
+        "TETH",
+        "ETHV",
+        "QETH",
+        "EZET",
+        "MSSE",
+        "ETHE",
+        "ETH"
+      ],
+      "row_2026-10-05": {
+        "ETHA": -31.9,
+        "ETHB": 0.0,
+        "FETH": -18.9,
+        "ETHW": 0.0,
+        "TETH": 0.0,
+        "ETHV": 0.0,
+        "QETH": 0.0,
+        "EZET": 0.0,
+        "MSSE": 0.0,
+        "ETHE": 0.0,
+        "ETH": 0.0,
+        "reported_total": -50.8,
+        "recomputed_total": -50.8
+      },
+      "pack_correction": "The -50.8 total is correct, but the pack's ETHA -41.1 and FETH -9.7 breakdown is wrong. The full row is ETHA -31.9, FETH -18.9, all other funds 0.0.",
+      "five_session_check_2026-09-29_through_2026-10-05": {
+        "daily_totals": [
+          -2.8,
+          -59.6,
+          -55.4,
+          -37.4,
+          -50.8
+        ],
+        "recomputed_total": -206.0,
+        "pack_value": -137.6,
+        "assessment": "pack value is incorrect"
+      }
+    },
+    "october_6_completeness_at_recheck": {
+      "bitcoin": "still incomplete: the displayed row contains unresolved dashes for several funds",
+      "ethereum": "still incomplete: ETHA and ETHB are unresolved dashes",
+      "assessment": "The pack was correct not to promote October 6 preliminary totals to completed actual flows."
+    }
+  },
+  "news": {
+    "google_constellation": {
+      "status": "verified_with_primary_google_and_accessible_reuters",
+      "primary": {
+        "title": "Why we're backing America's existing nuclear plants",
+        "published": "2026-10-06",
+        "url": "https://blog.google/company-news/why-were-backing-americas-existing-nuclear-plants/",
+        "verified": [
+          "890 MW of additional nuclear capacity for the PJM grid",
+          "PPA with Constellation",
+          "physical and digital upgrades at six operating nuclear plants across Illinois, Pennsylvania, and New Jersey",
+          "upgrades cover 11 reactors and are expected to add the 890 MW before the end of 2032"
+        ]
+      },
+      "wire": {
+        "title": "Google enters massive 3.6-GW power deal with Constellation Energy",
+        "url": "https://www.reuters.com/business/energy/google-enters-massive-36-gw-power-deal-with-constellation-energy-2026-10-06/",
+        "access": "full article body directly accessible",
+        "verified": [
+          "3,590 MW total contracted power",
+          "20-year agreement covering 890 MW from upgraded nuclear plants",
+          "15-year supply agreement for an additional 2,700 MW in PJM",
+          "Constellation to make more than $4.3 billion of fleet investment",
+          "first upgraded plant expected to deliver electricity in 2028"
+        ]
+      },
+      "assessment": "The pack's core deal figures are supported. The 2,700 MW, $4.3 billion, and first-delivery-in-2028 details are wire-supported; the checked Google primary page directly supports the 890 MW PPA and upgrade program."
+    },
+    "marvell": {
+      "status": "verified_with_primary_deck_and_accessible_reuters",
+      "primary": {
+        "title": "Marvell Investor Day 2026",
+        "date": "2026-10-06",
+        "url": "https://d1io3yog0oux5.cloudfront.net/_150b852dda059845723bdeeb90b063b6/marvell/files/654831/marvell-investor-day-2026-presentaion-deck.pdf",
+        "verified": [
+          "FY28 updated total-revenue outlook of $20 billion",
+          "FY29 updated custom-revenue target of $12 billion or more",
+          "FY31 total-revenue outlook of $70 billion to $90 billion"
+        ]
+      },
+      "wire": {
+        "title": "Marvell raises 2028 revenue forecast on strong AI data center demand",
+        "url": "https://www.reuters.com/business/marvell-raises-2028-revenue-forecast-strong-ai-data-center-demand-2026-10-06/",
+        "access": "full article body directly accessible",
+        "verified": [
+          "fiscal-2028 revenue forecast about $20 billion",
+          "fiscal-2029 custom-chip revenue could reach $12 billion",
+          "shares rose about 6% in the company-specific story"
+        ]
+      },
+      "market_close_wire": {
+        "url": "https://www.reuters.com/business/wall-st-futures-rise-yields-oil-dip-2026-10-06/",
+        "verified": "Marvell closed up 5.8% in Reuters' closing report"
+      },
+      "assessment": "The pack's $20 billion FY28 forecast, $12 billion FY29 custom target, and 5.8% closing gain are supported. Primary deck wording is $12B+ for the custom target."
+    }
+  },
+  "sp500_close_resolution": {
+    "status": "resolved",
+    "date": "2026-10-06",
+    "selected_close": 7818.93,
+    "selected_change_points": 44.98,
+    "selected_change_percent": 0.58,
+    "evidence": [
+      {
+        "source": "S&P Dow Jones Indices search result/current index value",
+        "value": 7818.93,
+        "url": "https://www.spglobal.com/spdji/en/"
+      },
+      {
+        "source": "Yahoo Finance historical daily data / chart API",
+        "value": 7818.93,
+        "raw_api_value": 7818.93017578125,
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC"
+      },
+      {
+        "source": "WSJ/Dow Jones Market Data and Barron's search results",
+        "value": 7818.93
+      },
+      {
+        "source": "Reuters closing report",
+        "value": 7818.95,
+        "change_points": 45.0,
+        "url": "https://www.reuters.com/business/wall-st-futures-rise-yields-oil-dip-2026-10-06/"
+      }
+    ],
+    "assessment": "Use 7,818.93 as the final close. The 7,818.95 Reuters figure conflicts with S&P DJI and multiple final historical-data sources and appears to be an uncorrected/preliminary vendor print. The pack should change 7,818.95 to 7,818.93 and 45.00 points to 44.98 if point change is shown."
+  },
+  "magnificent_seven_2026-10-06": {
+    "status": "completed_closes_fetched",
+    "source": {
+      "name": "Yahoo Finance daily chart API",
+      "url_base": "https://query1.finance.yahoo.com/v8/finance/chart/",
+      "note": "Unadjusted and adjusted closes were identical for the retrieved October 6 daily bars. Alphabet is represented by GOOGL."
+    },
+    "closes_usd_and_day_change_percent": {
+      "AAPL": {
+        "close": 333.63,
+        "change_percent": 0.222
+      },
+      "MSFT": {
+        "close": 529.3,
+        "change_percent": 0.784
+      },
+      "AMZN": {
+        "close": 256.29,
+        "change_percent": 1.945
+      },
+      "GOOGL": {
+        "close": 347.68,
+        "change_percent": 0.349
+      },
+      "META": {
+        "close": 738.88,
+        "change_percent": -0.407
+      },
+      "NVDA": {
+        "close": 239.24,
+        "change_percent": 0.142
+      },
+      "TSLA": {
+        "close": 380.68,
+        "change_percent": 0.515
+      }
+    },
+    "breadth_check": "Six advanced and META declined, matching Reuters' closing report that six of the Magnificent Seven advanced."
+  },
+  "priority_corrections_to_research_pack": [
+    "Replace BTC October 5 fund detail with IBIT +69.9, FBTC -74.5, ARKB -85.2, others 0.0; keep total -89.8.",
+    "Replace ETH October 5 fund detail with ETHA -31.9, FETH -18.9, others 0.0; keep total -50.8.",
+    "Replace five-session BTC total 138.5 with 120.3 and five-session ETH total -137.6 with -206.0 for September 29 through October 5.",
+    "Replace S&P 500 close 7,818.95 with final 7,818.93."
+  ],
+  "gaps_and_cautions": [
+    "The checked Google primary page does not itself state the additional 2,700 MW supply agreement; that figure is verified from the directly accessible Reuters body.",
+    "The guessed Constellation press-release deep link returned a not-found page, but Constellation's homepage search result exposed the matching October 6 release title; no unsupported claim relies on that unavailable page.",
+    "October 6 Farside rows were still incomplete at recheck time and were not treated as final."
+  ]
+}
