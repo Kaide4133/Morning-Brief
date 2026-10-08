@@ -1,0 +1,3074 @@
+{
+  "audit_version": "mb1008.ark-audit.v1",
+  "generated_at": "2026-10-08T09:31:47.383478+08:00",
+  "status": "pass_with_deterministic_normalization_required",
+  "source_edits_performed": false,
+  "repo_edits_performed": false,
+  "canonical_input": {
+    "requested_path": "/Users/kaide/Pictures/方舟運算截圖/ark_stocks_latest.json",
+    "symlink_chain": [
+      {
+        "path": "/Users/kaide/Pictures/方舟運算截圖/ark_stocks_latest.json",
+        "is_symlink": true,
+        "link_target": ".ark_latest/ark_stocks.json"
+      },
+      {
+        "path": "/Users/kaide/Pictures/方舟運算截圖/.ark_latest",
+        "is_symlink": true,
+        "link_target": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05"
+      },
+      {
+        "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/ark_stocks.json",
+        "is_symlink": false,
+        "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/ark_stocks.json"
+      }
+    ],
+    "resolved_run_directory": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05",
+    "resolved_ark_stocks": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/ark_stocks.json",
+    "resolved_success": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/success.json",
+    "resolved_ark_validation": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/ark_validation.json",
+    "resolved_ark_stocks_ax": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/ark_stocks_ax.json",
+    "hashes": {
+      "ark_stocks_latest_dereferenced": {
+        "path": "/Users/kaide/Pictures/方舟運算截圖/ark_stocks_latest.json",
+        "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/ark_stocks.json",
+        "bytes": 66560,
+        "sha256": "fb5fabae5cd69406cdf18d34e824549b12857b252146c9aa88a5d7440069e113",
+        "matches_run_target": true
+      },
+      "manifest_files": {
+        "ark_ocr.json": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/ark_ocr.json",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/ark_ocr.json",
+          "bytes": 253166,
+          "sha256": "2f47c76c21f3e4e059ebab7d5c42ef58c52deeb6bdbb46f3af45cb472c23c433",
+          "manifest_sha256": "2f47c76c21f3e4e059ebab7d5c42ef58c52deeb6bdbb46f3af45cb472c23c433",
+          "matches_manifest": true
+        },
+        "ark_stocks.json": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/ark_stocks.json",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/ark_stocks.json",
+          "bytes": 66560,
+          "sha256": "fb5fabae5cd69406cdf18d34e824549b12857b252146c9aa88a5d7440069e113",
+          "manifest_sha256": "fb5fabae5cd69406cdf18d34e824549b12857b252146c9aa88a5d7440069e113",
+          "matches_manifest": true
+        },
+        "ark_stocks_ax.json": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/ark_stocks_ax.json",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/ark_stocks_ax.json",
+          "bytes": 58871,
+          "sha256": "8ea8228800154469077e0d62e8eda653412ebb0fe319e9345bfe6b3e75aea9da",
+          "manifest_sha256": "8ea8228800154469077e0d62e8eda653412ebb0fe319e9345bfe6b3e75aea9da",
+          "matches_manifest": true
+        },
+        "ark_validation.json": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/ark_validation.json",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/ark_validation.json",
+          "bytes": 999,
+          "sha256": "7a83bdc9fddde49c5ecde56ea2f88a9c3cda8922d2b39dd87960b17be1ea509a",
+          "manifest_sha256": "7a83bdc9fddde49c5ecde56ea2f88a9c3cda8922d2b39dd87960b17be1ea509a",
+          "matches_manifest": true
+        },
+        "01_風控水位.png": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/01_風控水位.png",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/01_風控水位.png",
+          "bytes": 243973,
+          "sha256": "6f2925fd552341355349b9ab53593a372e36cbb982e3a2403bd7cba3c0e5b49a",
+          "manifest_sha256": "6f2925fd552341355349b9ab53593a372e36cbb982e3a2403bd7cba3c0e5b49a",
+          "matches_manifest": true
+        },
+        "02_ETF價值區_1.png": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/02_ETF價值區_1.png",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/02_ETF價值區_1.png",
+          "bytes": 630701,
+          "sha256": "7784432f15a804a0018f0ff21d5c1b23c939945b095cbed9e280a1ec99f5c137",
+          "manifest_sha256": "7784432f15a804a0018f0ff21d5c1b23c939945b095cbed9e280a1ec99f5c137",
+          "matches_manifest": true
+        },
+        "03_ETF價值區_2.png": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/03_ETF價值區_2.png",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/03_ETF價值區_2.png",
+          "bytes": 640869,
+          "sha256": "dc6cda518dfad27f3f541d3280111eaf45fbe5ebe08e151ee0365097d202739e",
+          "manifest_sha256": "dc6cda518dfad27f3f541d3280111eaf45fbe5ebe08e151ee0365097d202739e",
+          "matches_manifest": true
+        },
+        "04_ETF升溫區_1.png": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/04_ETF升溫區_1.png",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/04_ETF升溫區_1.png",
+          "bytes": 606422,
+          "sha256": "b52aa5a61646c68c0bbf905453d3f1784074adaac080bbe071fb12b01dfe8ea7",
+          "manifest_sha256": "b52aa5a61646c68c0bbf905453d3f1784074adaac080bbe071fb12b01dfe8ea7",
+          "matches_manifest": true
+        },
+        "05_ETF升溫區_2.png": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/05_ETF升溫區_2.png",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/05_ETF升溫區_2.png",
+          "bytes": 609808,
+          "sha256": "6d75bcff828c4afeb6768c98973b2d450a8a07c11be7791cbdca5e8fa3c86f94",
+          "manifest_sha256": "6d75bcff828c4afeb6768c98973b2d450a8a07c11be7791cbdca5e8fa3c86f94",
+          "matches_manifest": true
+        },
+        "06_產業價值區_1.png": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/06_產業價值區_1.png",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/06_產業價值區_1.png",
+          "bytes": 586363,
+          "sha256": "3a2e2ba6e76c94654874ab3ab33039068ddf5ebcbd401b6861daa56ccffa1851",
+          "manifest_sha256": "3a2e2ba6e76c94654874ab3ab33039068ddf5ebcbd401b6861daa56ccffa1851",
+          "matches_manifest": true
+        },
+        "07_產業價值區_2.png": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/07_產業價值區_2.png",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/07_產業價值區_2.png",
+          "bytes": 581499,
+          "sha256": "e004f0a9587bdc8e1bc216a1d6817b03c460a75b7c76206c2ab9010a5c23da9f",
+          "manifest_sha256": "e004f0a9587bdc8e1bc216a1d6817b03c460a75b7c76206c2ab9010a5c23da9f",
+          "matches_manifest": true
+        },
+        "08_產業價值區_3.png": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/08_產業價值區_3.png",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/08_產業價值區_3.png",
+          "bytes": 577121,
+          "sha256": "a7f8c6c0dc7372125dfd3e1b86979a334ee8db730832103d343d21585f7234a8",
+          "manifest_sha256": "a7f8c6c0dc7372125dfd3e1b86979a334ee8db730832103d343d21585f7234a8",
+          "matches_manifest": true
+        },
+        "09_產業價值區_4.png": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/09_產業價值區_4.png",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/09_產業價值區_4.png",
+          "bytes": 580463,
+          "sha256": "6f16bdd02153f78e1eea11eac9c035b0a5f120472dea54517f374c9daf47c5f5",
+          "manifest_sha256": "6f16bdd02153f78e1eea11eac9c035b0a5f120472dea54517f374c9daf47c5f5",
+          "matches_manifest": true
+        },
+        "10_產業價值區_5.png": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/10_產業價值區_5.png",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/10_產業價值區_5.png",
+          "bytes": 578854,
+          "sha256": "70f78e5e308d2bf3c8661749c7de395869cfca37c6f07abf1eaac11c81f6e4fe",
+          "manifest_sha256": "70f78e5e308d2bf3c8661749c7de395869cfca37c6f07abf1eaac11c81f6e4fe",
+          "matches_manifest": true
+        },
+        "11_產業價值區_6.png": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/11_產業價值區_6.png",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/11_產業價值區_6.png",
+          "bytes": 589447,
+          "sha256": "eac2efbe97ff70306cd318e1a1f095231cc36fa884f082da704ee6bffb60df7d",
+          "manifest_sha256": "eac2efbe97ff70306cd318e1a1f095231cc36fa884f082da704ee6bffb60df7d",
+          "matches_manifest": true
+        },
+        "12_產業升溫區_1.png": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/12_產業升溫區_1.png",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/12_產業升溫區_1.png",
+          "bytes": 591720,
+          "sha256": "8204ceef0394c6b9292d3a080fd1fa1cf5214c55973eccc44ecca4a268253d32",
+          "manifest_sha256": "8204ceef0394c6b9292d3a080fd1fa1cf5214c55973eccc44ecca4a268253d32",
+          "matches_manifest": true
+        },
+        "13_產業升溫區_2.png": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/13_產業升溫區_2.png",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/13_產業升溫區_2.png",
+          "bytes": 581965,
+          "sha256": "275b71dacbddc4308063ee2e7583b2d33a00bda8de25e97b031f3b277bfa9a5d",
+          "manifest_sha256": "275b71dacbddc4308063ee2e7583b2d33a00bda8de25e97b031f3b277bfa9a5d",
+          "matches_manifest": true
+        },
+        "14_產業升溫區_3.png": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/14_產業升溫區_3.png",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/14_產業升溫區_3.png",
+          "bytes": 574775,
+          "sha256": "818f530f983309afc4729480e0e294dd4ed43e3ec96524abb1e5b4cb660a441c",
+          "manifest_sha256": "818f530f983309afc4729480e0e294dd4ed43e3ec96524abb1e5b4cb660a441c",
+          "matches_manifest": true
+        },
+        "15_產業升溫區_4.png": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/15_產業升溫區_4.png",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/15_產業升溫區_4.png",
+          "bytes": 571740,
+          "sha256": "8d5804e197a42fe19012b80fbe0028ca0967d45122d06905b08ebae46b99766b",
+          "manifest_sha256": "8d5804e197a42fe19012b80fbe0028ca0967d45122d06905b08ebae46b99766b",
+          "matches_manifest": true
+        },
+        "16_產業升溫區_5.png": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/16_產業升溫區_5.png",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/16_產業升溫區_5.png",
+          "bytes": 571640,
+          "sha256": "bbd1f8db00ab30328d33b089d616931e1321e68ef7f35f4f7f69ef684781d4a0",
+          "manifest_sha256": "bbd1f8db00ab30328d33b089d616931e1321e68ef7f35f4f7f69ef684781d4a0",
+          "matches_manifest": true
+        },
+        "17_產業升溫區_6.png": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/17_產業升溫區_6.png",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/17_產業升溫區_6.png",
+          "bytes": 583916,
+          "sha256": "109fcc5e774e35ecc839f0ccad3c32fbf4427d29f905bd22413528ec2a00ae30",
+          "manifest_sha256": "109fcc5e774e35ecc839f0ccad3c32fbf4427d29f905bd22413528ec2a00ae30",
+          "matches_manifest": true
+        },
+        "capture_manifest.jsonl": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/capture_manifest.jsonl",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/capture_manifest.jsonl",
+          "bytes": 4420,
+          "sha256": "ac5e85ff6ff2807807fcea5398b8568869758b54b36ea2d8969dc52fabf34467",
+          "manifest_sha256": "ac5e85ff6ff2807807fcea5398b8568869758b54b36ea2d8969dc52fabf34467",
+          "matches_manifest": true
+        },
+        "ark_ax_rows.jsonl": {
+          "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/ark_ax_rows.jsonl",
+          "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/ark_ax_rows.jsonl",
+          "bytes": 25809,
+          "sha256": "f30d0ca60477e6b186a2c9b4cd425021422de0c37b05b5cba64c6c3a5f0249a8",
+          "manifest_sha256": "f30d0ca60477e6b186a2c9b4cd425021422de0c37b05b5cba64c6c3a5f0249a8",
+          "matches_manifest": true
+        }
+      },
+      "success": {
+        "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/success.json",
+        "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/success.json",
+        "bytes": 7535,
+        "sha256": "74b30141e5da2bd721324298714836a9c8845b8595a27fb608d0db0487744f55"
+      },
+      "run_report": {
+        "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/run_report.json",
+        "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/run_report.json",
+        "bytes": 7535,
+        "sha256": "74b30141e5da2bd721324298714836a9c8845b8595a27fb608d0db0487744f55",
+        "matches_success": true
+      },
+      "capture_complete": {
+        "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/capture_complete.json",
+        "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/capture_complete.json",
+        "bytes": 2544,
+        "sha256": "577b9fc7341aeedbe231ddf87416da55ab11b7d09e4f2db6aa0a4b1b7c597a63"
+      },
+      "trading_day": {
+        "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/trading_day.json",
+        "realpath": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-08_09-05-05/trading_day.json",
+        "bytes": 876,
+        "sha256": "f2c415980db42d6457424833b93744e3dbc59a11cb69bc1ab3f51491c2771e04"
+      }
+    }
+  },
+  "source_date_and_success": {
+    "source_date": "2026-10-08",
+    "run_id": "2026-10-08_09-05-05",
+    "timezone": "Asia/Taipei",
+    "capture_started_at": "2026-10-08T09:05:05+08:00",
+    "risk_captured_at": "2026-10-08T09:05:41.133+08:00",
+    "capture_finished_at": "2026-10-08T09:08:09+08:00",
+    "primary_generated_at_utc": "2026-10-08T01:08:09.373544+00:00",
+    "success_ok": true,
+    "success_stage": "complete",
+    "success_status": "success",
+    "success_summary": {
+      "screenshots": 17,
+      "totalStocks": 77,
+      "sections": {
+        "ETF價值區": 10,
+        "ETF升溫區": 7,
+        "產業價值區": 30,
+        "產業升溫區": 30
+      },
+      "riskControl": "66.5%",
+      "axMatch": true
+    },
+    "validation_ok": true,
+    "validation_scope_note": "ark_validation proves section code/name agreement only; it does not validate every price/change field.",
+    "validation_sections": {
+      "ETF價值區": {
+        "ok": true,
+        "ocr_count": 10,
+        "ax_count": 10,
+        "missing_in_ax": [],
+        "missing_in_ocr": [],
+        "name_differences": []
+      },
+      "ETF升溫區": {
+        "ok": true,
+        "ocr_count": 7,
+        "ax_count": 7,
+        "missing_in_ax": [],
+        "missing_in_ocr": [],
+        "name_differences": []
+      },
+      "產業價值區": {
+        "ok": true,
+        "ocr_count": 30,
+        "ax_count": 30,
+        "missing_in_ax": [],
+        "missing_in_ocr": [],
+        "name_differences": []
+      },
+      "產業升溫區": {
+        "ok": true,
+        "ocr_count": 30,
+        "ax_count": 30,
+        "missing_in_ax": [],
+        "missing_in_ocr": [],
+        "name_differences": []
+      }
+    }
+  },
+  "water_comparison": {
+    "current_date": "2026-10-08",
+    "current_water_level": 66.5,
+    "source_literal": "66.5%",
+    "source_file": "01_風控水位.png",
+    "risk_captured_at": "2026-10-08T09:05:41.133+08:00",
+    "current_trading_day": {
+      "confirmed_open": true,
+      "path": "/Users/kaide/Pictures/方舟運算截圖/trading_day_confirmed_2026-10-08.json",
+      "sha256": "f2c415980db42d6457424833b93744e3dbc59a11cb69bc1ab3f51491c2771e04",
+      "status": "confirmed",
+      "reason": "年度行事曆開市；台北市停班與交易所特殊停市查核通過。",
+      "source": "local-market-dgpa-html",
+      "manual": false
+    },
+    "previous_open_trading_day": {
+      "date": "2026-10-07",
+      "confirmed_open": true,
+      "calendar_path": "/Users/kaide/Pictures/方舟運算截圖/trading_day_confirmed_2026-10-07.json",
+      "calendar_sha256": "668c845c92fbc0a422b9a93511ae81dc68dbf8fd0caf51d108c71ba6e0492e1d",
+      "status": "confirmed",
+      "reason": "年度行事曆開市；台北市停班與交易所特殊停市查核通過。",
+      "source": "local-market-dgpa-html",
+      "manual": false,
+      "history_path": "/Users/kaide/Documents/Morning-Brief/data/water-level-history.json",
+      "history_sha256": "efb0615ccccc48ca9e301298c7e758290fb66efa05ede69366c7a26d905c321d",
+      "history_record_count_for_date": 1,
+      "history_record": {
+        "date": "2026-10-07",
+        "water_level": 67.4,
+        "scenario_id": "06",
+        "scenario_label": "06 風險收縮"
+      }
+    },
+    "current_date_history_record_count_before_publication": 0,
+    "current_date_history_note": "No 2026-10-08 record exists yet; source/repo were audited read-only. Publication should prepend exactly one 66.5 record.",
+    "previous_water_level": 67.4,
+    "delta_percentage_points": -0.9,
+    "direction": "下降",
+    "comparison_is_provisional": false
+  },
+  "zones": {
+    "ETF價值區": {
+      "target_zone": "etf.value",
+      "declared_count": 10,
+      "success_count": 10,
+      "validation_ocr_count": 10,
+      "validation_ax_count": 10,
+      "actual_count": 10,
+      "unique_code_count": 10,
+      "unique_name_count": 10,
+      "summary_codes_match_row_order": true,
+      "ranks_contiguous": true,
+      "duplicate_codes_within_zone": [],
+      "ordered_members": [
+        {
+          "rank": 1,
+          "code": "00927",
+          "name": "群益半導體收益"
+        },
+        {
+          "rank": 2,
+          "code": "00735",
+          "name": "國泰臺韓科技"
+        },
+        {
+          "rank": 3,
+          "code": "00947",
+          "name": "台新臺灣IC設計"
+        },
+        {
+          "rank": 4,
+          "code": "00690",
+          "name": "兆豐藍籌30"
+        },
+        {
+          "rank": 5,
+          "code": "00913",
+          "name": "兆豐台灣晶圓製造"
+        },
+        {
+          "rank": 6,
+          "code": "00888",
+          "name": "永豐台灣ESG"
+        },
+        {
+          "rank": 7,
+          "code": "00891",
+          "name": "中信關鍵半導體"
+        },
+        {
+          "rank": 8,
+          "code": "00935",
+          "name": "野村臺灣新科技50"
+        },
+        {
+          "rank": 9,
+          "code": "00981A",
+          "name": "主動統一台股增長"
+        },
+        {
+          "rank": 10,
+          "code": "00631L",
+          "name": "元大台灣50正2"
+        }
+      ]
+    },
+    "ETF升溫區": {
+      "target_zone": "etf.rising",
+      "declared_count": 7,
+      "success_count": 7,
+      "validation_ocr_count": 7,
+      "validation_ax_count": 7,
+      "actual_count": 7,
+      "unique_code_count": 7,
+      "unique_name_count": 7,
+      "summary_codes_match_row_order": true,
+      "ranks_contiguous": true,
+      "duplicate_codes_within_zone": [],
+      "ordered_members": [
+        {
+          "rank": 1,
+          "code": "009807",
+          "name": "台新標普科技精選"
+        },
+        {
+          "rank": 2,
+          "code": "00689R",
+          "name": "國泰20年美債反1"
+        },
+        {
+          "rank": 3,
+          "code": "00681R",
+          "name": "元大美債20反1"
+        },
+        {
+          "rank": 4,
+          "code": "009818",
+          "name": "華南永昌NASDAQxT"
+        },
+        {
+          "rank": 5,
+          "code": "00733",
+          "name": "富邦臺灣中小"
+        },
+        {
+          "rank": 6,
+          "code": "00986A",
+          "name": "主動台新龍頭成長"
+        },
+        {
+          "rank": 7,
+          "code": "00990A",
+          "name": "主動元大AI新經濟"
+        }
+      ]
+    },
+    "產業價值區": {
+      "target_zone": "stocks.value",
+      "declared_count": 30,
+      "success_count": 30,
+      "validation_ocr_count": 30,
+      "validation_ax_count": 30,
+      "actual_count": 30,
+      "unique_code_count": 30,
+      "unique_name_count": 30,
+      "summary_codes_match_row_order": true,
+      "ranks_contiguous": true,
+      "duplicate_codes_within_zone": [],
+      "ordered_members": [
+        {
+          "rank": 1,
+          "code": "6510",
+          "name": "精測"
+        },
+        {
+          "rank": 2,
+          "code": "5274",
+          "name": "信驊"
+        },
+        {
+          "rank": 3,
+          "code": "8299",
+          "name": "群聯"
+        },
+        {
+          "rank": 4,
+          "code": "2454",
+          "name": "聯發科"
+        },
+        {
+          "rank": 5,
+          "code": "3529",
+          "name": "力旺"
+        },
+        {
+          "rank": 6,
+          "code": "2303",
+          "name": "聯電"
+        },
+        {
+          "rank": 7,
+          "code": "3034",
+          "name": "聯詠"
+        },
+        {
+          "rank": 8,
+          "code": "2449",
+          "name": "京元電子"
+        },
+        {
+          "rank": 9,
+          "code": "3264",
+          "name": "欣銓"
+        },
+        {
+          "rank": 10,
+          "code": "2379",
+          "name": "瑞昱"
+        },
+        {
+          "rank": 11,
+          "code": "6531",
+          "name": "愛普*"
+        },
+        {
+          "rank": 12,
+          "code": "2360",
+          "name": "致茂"
+        },
+        {
+          "rank": 13,
+          "code": "6223",
+          "name": "旺矽"
+        },
+        {
+          "rank": 14,
+          "code": "6147",
+          "name": "頎邦"
+        },
+        {
+          "rank": 15,
+          "code": "2467",
+          "name": "志聖"
+        },
+        {
+          "rank": 16,
+          "code": "1785",
+          "name": "光洋科"
+        },
+        {
+          "rank": 17,
+          "code": "3711",
+          "name": "日月光投控"
+        },
+        {
+          "rank": 18,
+          "code": "6239",
+          "name": "力成"
+        },
+        {
+          "rank": 19,
+          "code": "2344",
+          "name": "華邦電"
+        },
+        {
+          "rank": 20,
+          "code": "3443",
+          "name": "創意"
+        },
+        {
+          "rank": 21,
+          "code": "5434",
+          "name": "崇越"
+        },
+        {
+          "rank": 22,
+          "code": "6257",
+          "name": "矽格"
+        },
+        {
+          "rank": 23,
+          "code": "3105",
+          "name": "穩懋"
+        },
+        {
+          "rank": 24,
+          "code": "1717",
+          "name": "長興"
+        },
+        {
+          "rank": 25,
+          "code": "5483",
+          "name": "中美晶"
+        },
+        {
+          "rank": 26,
+          "code": "3189",
+          "name": "景碩"
+        },
+        {
+          "rank": 27,
+          "code": "5347",
+          "name": "世界"
+        },
+        {
+          "rank": 28,
+          "code": "6488",
+          "name": "環球晶"
+        },
+        {
+          "rank": 29,
+          "code": "2330",
+          "name": "台積電"
+        },
+        {
+          "rank": 30,
+          "code": "5536",
+          "name": "聖暉*"
+        }
+      ]
+    },
+    "產業升溫區": {
+      "target_zone": "stocks.rising",
+      "declared_count": 30,
+      "success_count": 30,
+      "validation_ocr_count": 30,
+      "validation_ax_count": 30,
+      "actual_count": 30,
+      "unique_code_count": 30,
+      "unique_name_count": 30,
+      "summary_codes_match_row_order": true,
+      "ranks_contiguous": true,
+      "duplicate_codes_within_zone": [],
+      "ordered_members": [
+        {
+          "rank": 1,
+          "code": "6199",
+          "name": "天品"
+        },
+        {
+          "rank": 2,
+          "code": "6672",
+          "name": "騰輝電子-KY"
+        },
+        {
+          "rank": 3,
+          "code": "3016",
+          "name": "嘉晶"
+        },
+        {
+          "rank": 4,
+          "code": "6957",
+          "name": "裕慶-KY"
+        },
+        {
+          "rank": 5,
+          "code": "2466",
+          "name": "冠西電"
+        },
+        {
+          "rank": 6,
+          "code": "3597",
+          "name": "映興"
+        },
+        {
+          "rank": 7,
+          "code": "6197",
+          "name": "佳必琪"
+        },
+        {
+          "rank": 8,
+          "code": "3268",
+          "name": "海德威"
+        },
+        {
+          "rank": 9,
+          "code": "4556",
+          "name": "旭然"
+        },
+        {
+          "rank": 10,
+          "code": "2241",
+          "name": "艾姆勒"
+        },
+        {
+          "rank": 11,
+          "code": "6213",
+          "name": "聯茂"
+        },
+        {
+          "rank": 12,
+          "code": "6278",
+          "name": "台表科"
+        },
+        {
+          "rank": 13,
+          "code": "6691",
+          "name": "洋基工程"
+        },
+        {
+          "rank": 14,
+          "code": "1301",
+          "name": "台塑"
+        },
+        {
+          "rank": 15,
+          "code": "6196",
+          "name": "帆宣"
+        },
+        {
+          "rank": 16,
+          "code": "3518",
+          "name": "柏騰"
+        },
+        {
+          "rank": 17,
+          "code": "1303",
+          "name": "南亞"
+        },
+        {
+          "rank": 18,
+          "code": "3147",
+          "name": "大綜"
+        },
+        {
+          "rank": 19,
+          "code": "6708",
+          "name": "天擎"
+        },
+        {
+          "rank": 20,
+          "code": "1708",
+          "name": "東鹼"
+        },
+        {
+          "rank": 21,
+          "code": "6152",
+          "name": "百一"
+        },
+        {
+          "rank": 22,
+          "code": "2340",
+          "name": "台亞"
+        },
+        {
+          "rank": 23,
+          "code": "8227",
+          "name": "巨有科技"
+        },
+        {
+          "rank": 24,
+          "code": "1569",
+          "name": "濱川"
+        },
+        {
+          "rank": 25,
+          "code": "3167",
+          "name": "大量"
+        },
+        {
+          "rank": 26,
+          "code": "6456",
+          "name": "GIS-KY"
+        },
+        {
+          "rank": 27,
+          "code": "8046",
+          "name": "南電"
+        },
+        {
+          "rank": 28,
+          "code": "2033",
+          "name": "佳大"
+        },
+        {
+          "rank": 29,
+          "code": "3707",
+          "name": "漢磊"
+        },
+        {
+          "rank": 30,
+          "code": "3031",
+          "name": "佰鴻"
+        }
+      ]
+    }
+  },
+  "cross_zone_summary": {
+    "row_occurrences": 77,
+    "unique_codes": 77,
+    "unique_names": 77,
+    "repeated_row_occurrences_due_to_cross_zone_overlap": 0,
+    "etf_overlap_count": 0,
+    "etf_overlap": [],
+    "stocks_overlap_count": 0,
+    "stocks_overlap": [],
+    "all_pairwise_intersections": [
+      {
+        "left": "ETF價值區",
+        "right": "ETF升溫區",
+        "codes": [],
+        "count": 0
+      },
+      {
+        "left": "ETF價值區",
+        "right": "產業價值區",
+        "codes": [],
+        "count": 0
+      },
+      {
+        "left": "ETF價值區",
+        "right": "產業升溫區",
+        "codes": [],
+        "count": 0
+      },
+      {
+        "left": "ETF升溫區",
+        "right": "產業價值區",
+        "codes": [],
+        "count": 0
+      },
+      {
+        "left": "ETF升溫區",
+        "right": "產業升溫區",
+        "codes": [],
+        "count": 0
+      },
+      {
+        "left": "產業價值區",
+        "right": "產業升溫區",
+        "codes": [],
+        "count": 0
+      }
+    ],
+    "same_name_different_code": [],
+    "same_code_different_name": [],
+    "source_declared_duplicate_count": 25,
+    "source_duplicate_records": 25,
+    "ax_declared_duplicate_count": 19,
+    "ax_duplicate_records": 19,
+    "duplicate_count_warning": "Primary duplicateCount=25 and AX duplicateCount=19 are overlapping-page dedupe events, not cross-zone intersections. Derive overlap only from per-zone code-set intersections; all current intersections are empty."
+  },
+  "zone_breadth_from_primary_changes": {
+    "ETF價值區": {
+      "up": 0,
+      "down": 10,
+      "flat": 0,
+      "missing": 0
+    },
+    "ETF升溫區": {
+      "up": 0,
+      "down": 3,
+      "flat": 0,
+      "missing": 4
+    },
+    "產業價值區": {
+      "up": 8,
+      "down": 19,
+      "flat": 3,
+      "missing": 0
+    },
+    "產業升溫區": {
+      "up": 12,
+      "down": 17,
+      "flat": 1,
+      "missing": 0
+    }
+  },
+  "price_change_and_name_audit": {
+    "critical_etf_missing_price_nav_traps": [
+      {
+        "section": "ETF升溫區",
+        "rank": 1,
+        "code": "009807",
+        "name": "台新標普科技精選",
+        "primary_price": "18.39",
+        "primary_change": "(-%)",
+        "ax_price": null,
+        "ax_change": null,
+        "decision": "null_missing_price_NAV_trap",
+        "displayed_source_price": null,
+        "displayed_source_change": null,
+        "displayed_nav": "18.39",
+        "displayed_premium_discount": "-0.08%",
+        "issue_target": {
+          "code": "009807",
+          "name": "台新標普科技精選",
+          "price": "—",
+          "industry": "美國",
+          "mark": "",
+          "change": "—",
+          "price_available": false,
+          "nav": "18.39",
+          "premium_discount": "-0.08%",
+          "meta": "股價 —｜即時淨值 18.39｜折溢價 -0.08%"
+        },
+        "forbidden": [
+          "Do not publish the NAV as market price.",
+          "Do not derive a return from NAV.",
+          "Do not replace the missing source price with a later quote."
+        ]
+      },
+      {
+        "section": "ETF升溫區",
+        "rank": 2,
+        "code": "00689R",
+        "name": "國泰20年美債反1",
+        "primary_price": "24.43",
+        "primary_change": "(-%)",
+        "ax_price": null,
+        "ax_change": null,
+        "decision": "null_missing_price_NAV_trap",
+        "displayed_source_price": null,
+        "displayed_source_change": null,
+        "displayed_nav": "24.43",
+        "displayed_premium_discount": "-0.29%",
+        "issue_target": {
+          "code": "00689R",
+          "name": "國泰20年美債反1",
+          "price": "—",
+          "industry": "美國",
+          "mark": "",
+          "change": "—",
+          "price_available": false,
+          "nav": "24.43",
+          "premium_discount": "-0.29%",
+          "meta": "股價 —｜即時淨值 24.43｜折溢價 -0.29%"
+        },
+        "forbidden": [
+          "Do not publish the NAV as market price.",
+          "Do not derive a return from NAV.",
+          "Do not replace the missing source price with a later quote."
+        ]
+      },
+      {
+        "section": "ETF升溫區",
+        "rank": 3,
+        "code": "00681R",
+        "name": "元大美債20反1",
+        "primary_price": "23.27",
+        "primary_change": "(-%)",
+        "ax_price": null,
+        "ax_change": null,
+        "decision": "null_missing_price_NAV_trap",
+        "displayed_source_price": null,
+        "displayed_source_change": null,
+        "displayed_nav": "23.27",
+        "displayed_premium_discount": "-0.1%",
+        "issue_target": {
+          "code": "00681R",
+          "name": "元大美債20反1",
+          "price": "—",
+          "industry": "美國",
+          "mark": "",
+          "change": "—",
+          "price_available": false,
+          "nav": "23.27",
+          "premium_discount": "-0.1%",
+          "meta": "股價 —｜即時淨值 23.27｜折溢價 -0.1%"
+        },
+        "forbidden": [
+          "Do not publish the NAV as market price.",
+          "Do not derive a return from NAV.",
+          "Do not replace the missing source price with a later quote."
+        ]
+      },
+      {
+        "section": "ETF升溫區",
+        "rank": 4,
+        "code": "009818",
+        "name": "華南永昌NASDAQxT",
+        "primary_price": "21.72",
+        "primary_change": "(-%)",
+        "ax_price": null,
+        "ax_change": null,
+        "decision": "null_missing_price_NAV_trap",
+        "displayed_source_price": null,
+        "displayed_source_change": null,
+        "displayed_nav": "21.72",
+        "displayed_premium_discount": "-0.14%",
+        "issue_target": {
+          "code": "009818",
+          "name": "華南永昌NASDAQxT",
+          "price": "—",
+          "industry": "美國",
+          "mark": "",
+          "change": "—",
+          "price_available": false,
+          "nav": "21.72",
+          "premium_discount": "-0.14%",
+          "meta": "股價 —｜即時淨值 21.72｜折溢價 -0.14%"
+        },
+        "forbidden": [
+          "Do not publish the NAV as market price.",
+          "Do not derive a return from NAV.",
+          "Do not replace the missing source price with a later quote."
+        ]
+      }
+    ],
+    "critical_etf_missing_price_nav_trap_count": 4,
+    "primary_vs_ax_price_mismatch_count": 12,
+    "primary_vs_ax_price_mismatches": [
+      {
+        "section": "ETF價值區",
+        "rank": 9,
+        "code": "00981A",
+        "name": "主動統一台股增長",
+        "primary_price": "31.99",
+        "primary_change": "7O.27(-0.84%)",
+        "ax_price": "32",
+        "ax_change": "▼0.26(-0.81%)",
+        "decision": "preserve_primary_screenshot_snapshot"
+      },
+      {
+        "section": "ETF升溫區",
+        "rank": 1,
+        "code": "009807",
+        "name": "台新標普科技精選",
+        "primary_price": "18.39",
+        "primary_change": "(-%)",
+        "ax_price": null,
+        "ax_change": null,
+        "decision": "null_missing_price_NAV_trap"
+      },
+      {
+        "section": "ETF升溫區",
+        "rank": 2,
+        "code": "00689R",
+        "name": "國泰20年美債反1",
+        "primary_price": "24.43",
+        "primary_change": "(-%)",
+        "ax_price": null,
+        "ax_change": null,
+        "decision": "null_missing_price_NAV_trap"
+      },
+      {
+        "section": "ETF升溫區",
+        "rank": 3,
+        "code": "00681R",
+        "name": "元大美債20反1",
+        "primary_price": "23.27",
+        "primary_change": "(-%)",
+        "ax_price": null,
+        "ax_change": null,
+        "decision": "null_missing_price_NAV_trap"
+      },
+      {
+        "section": "ETF升溫區",
+        "rank": 4,
+        "code": "009818",
+        "name": "華南永昌NASDAQxT",
+        "primary_price": "21.72",
+        "primary_change": "(-%)",
+        "ax_price": null,
+        "ax_change": null,
+        "decision": "null_missing_price_NAV_trap"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 13,
+        "code": "6223",
+        "name": "旺矽",
+        "primary_price": "5,595",
+        "primary_change": "465(1.18%)",
+        "ax_price": "5,570",
+        "ax_change": "▲40(0.72%)",
+        "decision": "preserve_primary_screenshot_snapshot"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 17,
+        "code": "3711",
+        "name": "日月光投控",
+        "primary_price": "716",
+        "primary_change": "716(-2.19%)",
+        "ax_price": "717",
+        "ax_change": "▼15(-2.05%)",
+        "decision": "preserve_primary_screenshot_snapshot"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 22,
+        "code": "6257",
+        "name": "矽格",
+        "primary_price": "285.5",
+        "primary_change": "47.5(2.7%)",
+        "ax_price": "285",
+        "ax_change": "▲7(2.52%)",
+        "decision": "preserve_primary_screenshot_snapshot"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 23,
+        "code": "3105",
+        "name": "穩懋",
+        "primary_price": "586",
+        "primary_change": "72(-0.34%)",
+        "ax_price": "587",
+        "ax_change": "▼1(-0.17%)",
+        "decision": "preserve_primary_screenshot_snapshot"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 14,
+        "code": "1301",
+        "name": "台塑",
+        "primary_price": "78.6",
+        "primary_change": "43.2(4.24%)",
+        "ax_price": "78.4",
+        "ax_change": "▲3(3.98%)",
+        "decision": "preserve_primary_screenshot_snapshot"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 16,
+        "code": "3518",
+        "name": "柏騰",
+        "primary_price": "50",
+        "primary_change": "70.3(-0.6%)",
+        "ax_price": "49.8",
+        "ax_change": "▼0.5(-0.99%)",
+        "decision": "preserve_primary_screenshot_snapshot"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 29,
+        "code": "3707",
+        "name": "漢磊",
+        "primary_price": "87.8",
+        "primary_change": "72.1(-2.34%)",
+        "ax_price": "87.9",
+        "ax_change": "▼2(-2.22%)",
+        "decision": "preserve_primary_screenshot_snapshot"
+      }
+    ],
+    "non_nav_snapshot_price_mismatch_count": 8,
+    "price_mismatch_rule": "For the four explicit NAV traps, source price/change are missing and must remain unavailable. For the other eight mismatches, preserve the primary screenshot snapshot price/change; AX was captured at a slightly different moment and is not a bulk price replacement source.",
+    "primary_vs_ax_change_mismatch_count": 72,
+    "change_decision_counts": {
+      "strip_ocr_prefix_7_as_down_arrow": 49,
+      "missing_source_change": 4,
+      "strip_ocr_prefix_4_as_up_arrow": 19,
+      "preserve_zero": 4,
+      "preserve_valid_primary_change": 1
+    },
+    "primary_change_normalization_rule": "Negative OCR prefixes 7/7O represent ▼ and positive prefix 4 represents ▲. Repair only that prefix, preserve primary absolute move and percentage, format positive percentages with +, and keep 0(0%) as 0 (0%).",
+    "primary_change_math_check": {
+      "checked_nonzero_rows": 69,
+      "max_absolute_percentage_error_points": 0.004992,
+      "status": "pass",
+      "note": "Every non-missing primary price/change pair is internally consistent within rounding tolerance; this supports primary snapshot preservation for the eight non-NAV AX mismatches."
+    },
+    "change_row_decisions": [
+      {
+        "section": "ETF價值區",
+        "rank": 1,
+        "code": "00927",
+        "name": "群益半導體收益",
+        "primary_change": "70.15(-0.37%)",
+        "ax_change": "▼0.15(-0.37%)",
+        "normalized_change": "▼0.15 (-0.37%)",
+        "issue_change": "▼0.15 (-0.37%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "ETF價值區",
+        "rank": 2,
+        "code": "00735",
+        "name": "國泰臺韓科技",
+        "primary_change": "70.9(-0.81%)",
+        "ax_change": "▼0.9(-0.81%)",
+        "normalized_change": "▼0.9 (-0.81%)",
+        "issue_change": "▼0.9 (-0.81%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "ETF價值區",
+        "rank": 3,
+        "code": "00947",
+        "name": "台新臺灣IC設計",
+        "primary_change": "7O.12(-0.29%)",
+        "ax_change": "▼0.12(-0.29%)",
+        "normalized_change": "▼0.12 (-0.29%)",
+        "issue_change": "▼0.12 (-0.29%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "ETF價值區",
+        "rank": 4,
+        "code": "00690",
+        "name": "兆豐藍籌30",
+        "primary_change": "70.75(-0.88%)",
+        "ax_change": "▼0.75(-0.88%)",
+        "normalized_change": "▼0.75 (-0.88%)",
+        "issue_change": "▼0.75 (-0.88%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "ETF價值區",
+        "rank": 5,
+        "code": "00913",
+        "name": "兆豐台灣晶圓製造",
+        "primary_change": "70.5(-0.93%)",
+        "ax_change": "▼0.5(-0.93%)",
+        "normalized_change": "▼0.5 (-0.93%)",
+        "issue_change": "▼0.5 (-0.93%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "ETF價值區",
+        "rank": 6,
+        "code": "00888",
+        "name": "永豐台灣ESG",
+        "primary_change": "70.23(-0.62%)",
+        "ax_change": "▼0.23(-0.62%)",
+        "normalized_change": "▼0.23 (-0.62%)",
+        "issue_change": "▼0.23 (-0.62%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "ETF價值區",
+        "rank": 7,
+        "code": "00891",
+        "name": "中信關鍵半導體",
+        "primary_change": "7O.3(-0.78%)",
+        "ax_change": "▼0.3(-0.78%)",
+        "normalized_change": "▼0.3 (-0.78%)",
+        "issue_change": "▼0.3 (-0.78%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "ETF價值區",
+        "rank": 8,
+        "code": "00935",
+        "name": "野村臺灣新科技50",
+        "primary_change": "7O.75(-1.19%)",
+        "ax_change": "▼0.75(-1.19%)",
+        "normalized_change": "▼0.75 (-1.19%)",
+        "issue_change": "▼0.75 (-1.19%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "ETF價值區",
+        "rank": 9,
+        "code": "00981A",
+        "name": "主動統一台股增長",
+        "primary_change": "7O.27(-0.84%)",
+        "ax_change": "▼0.26(-0.81%)",
+        "normalized_change": "▼0.27 (-0.84%)",
+        "issue_change": "▼0.27 (-0.84%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "ETF價值區",
+        "rank": 10,
+        "code": "00631L",
+        "name": "元大台灣50正2",
+        "primary_change": "7O.73(-1.75%)",
+        "ax_change": "▼0.73(-1.75%)",
+        "normalized_change": "▼0.73 (-1.75%)",
+        "issue_change": "▼0.73 (-1.75%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "ETF升溫區",
+        "rank": 1,
+        "code": "009807",
+        "name": "台新標普科技精選",
+        "primary_change": "(-%)",
+        "ax_change": null,
+        "normalized_change": null,
+        "issue_change": "—",
+        "decision": "missing_source_change"
+      },
+      {
+        "section": "ETF升溫區",
+        "rank": 2,
+        "code": "00689R",
+        "name": "國泰20年美債反1",
+        "primary_change": "(-%)",
+        "ax_change": null,
+        "normalized_change": null,
+        "issue_change": "—",
+        "decision": "missing_source_change"
+      },
+      {
+        "section": "ETF升溫區",
+        "rank": 3,
+        "code": "00681R",
+        "name": "元大美債20反1",
+        "primary_change": "(-%)",
+        "ax_change": null,
+        "normalized_change": null,
+        "issue_change": "—",
+        "decision": "missing_source_change"
+      },
+      {
+        "section": "ETF升溫區",
+        "rank": 4,
+        "code": "009818",
+        "name": "華南永昌NASDAQxT",
+        "primary_change": "(-%)",
+        "ax_change": null,
+        "normalized_change": null,
+        "issue_change": "—",
+        "decision": "missing_source_change"
+      },
+      {
+        "section": "ETF升溫區",
+        "rank": 5,
+        "code": "00733",
+        "name": "富邦臺灣中小",
+        "primary_change": "70.5(-0.64%)",
+        "ax_change": "▼0.5(-0.64%)",
+        "normalized_change": "▼0.5 (-0.64%)",
+        "issue_change": "▼0.5 (-0.64%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "ETF升溫區",
+        "rank": 6,
+        "code": "00986A",
+        "name": "主動台新龍頭成長",
+        "primary_change": "70.09(-0.59%)",
+        "ax_change": "▼0.09(-0.59%)",
+        "normalized_change": "▼0.09 (-0.59%)",
+        "issue_change": "▼0.09 (-0.59%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "ETF升溫區",
+        "rank": 7,
+        "code": "00990A",
+        "name": "主動元大AI新經濟",
+        "primary_change": "7O.19(-1.13%)",
+        "ax_change": "▼0.19(-1.13%)",
+        "normalized_change": "▼0.19 (-1.13%)",
+        "issue_change": "▼0.19 (-1.13%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 1,
+        "code": "6510",
+        "name": "精測",
+        "primary_change": "4110(3.64%)",
+        "ax_change": "▲110(3.64%)",
+        "normalized_change": "▲110 (+3.64%)",
+        "issue_change": "▲110 (+3.64%)",
+        "decision": "strip_ocr_prefix_4_as_up_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 2,
+        "code": "5274",
+        "name": "信驊",
+        "primary_change": "71,775(-10%)",
+        "ax_change": "▼1,775(-10%)",
+        "normalized_change": "▼1,775 (-10%)",
+        "issue_change": "▼1,775 (-10%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 3,
+        "code": "8299",
+        "name": "群聯",
+        "primary_change": "45(0.24%)",
+        "ax_change": "▲5(0.24%)",
+        "normalized_change": "▲5 (+0.24%)",
+        "issue_change": "▲5 (+0.24%)",
+        "decision": "strip_ocr_prefix_4_as_up_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 4,
+        "code": "2454",
+        "name": "聯發科",
+        "primary_change": "745(-0.93%)",
+        "ax_change": "▼45(-0.93%)",
+        "normalized_change": "▼45 (-0.93%)",
+        "issue_change": "▼45 (-0.93%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 5,
+        "code": "3529",
+        "name": "力旺",
+        "primary_change": "730(-1%)",
+        "ax_change": "▼30(-1%)",
+        "normalized_change": "▼30 (-1%)",
+        "issue_change": "▼30 (-1%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 6,
+        "code": "2303",
+        "name": "聯電",
+        "primary_change": "0(0%)",
+        "ax_change": "0(0%)",
+        "normalized_change": "0 (0%)",
+        "issue_change": "0 (0%)",
+        "decision": "preserve_zero"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 7,
+        "code": "3034",
+        "name": "聯詠",
+        "primary_change": "45(0.95%)",
+        "ax_change": "▲5(0.95%)",
+        "normalized_change": "▲5 (+0.95%)",
+        "issue_change": "▲5 (+0.95%)",
+        "decision": "strip_ocr_prefix_4_as_up_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 8,
+        "code": "2449",
+        "name": "京元電子",
+        "primary_change": "79(-3.01%)",
+        "ax_change": "▼9(-3.01%)",
+        "normalized_change": "▼9 (-3.01%)",
+        "issue_change": "▼9 (-3.01%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 9,
+        "code": "3264",
+        "name": "欣銓",
+        "primary_change": "73(-1.2%)",
+        "ax_change": "▼3(-1.2%)",
+        "normalized_change": "▼3 (-1.2%)",
+        "issue_change": "▼3 (-1.2%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 10,
+        "code": "2379",
+        "name": "瑞昱",
+        "primary_change": "71(-0.13%)",
+        "ax_change": "▼1(-0.13%)",
+        "normalized_change": "▼1 (-0.13%)",
+        "issue_change": "▼1 (-0.13%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 11,
+        "code": "6531",
+        "name": "愛普*",
+        "primary_change": "0(0%)",
+        "ax_change": "0(0%)",
+        "normalized_change": "0 (0%)",
+        "issue_change": "0 (0%)",
+        "decision": "preserve_zero"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 12,
+        "code": "2360",
+        "name": "致茂",
+        "primary_change": "725(-1.04%)",
+        "ax_change": "▼25(-1.04%)",
+        "normalized_change": "▼25 (-1.04%)",
+        "issue_change": "▼25 (-1.04%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 13,
+        "code": "6223",
+        "name": "旺矽",
+        "primary_change": "465(1.18%)",
+        "ax_change": "▲40(0.72%)",
+        "normalized_change": "▲65 (+1.18%)",
+        "issue_change": "▲65 (+1.18%)",
+        "decision": "strip_ocr_prefix_4_as_up_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 14,
+        "code": "6147",
+        "name": "頎邦",
+        "primary_change": "42.5(1.08%)",
+        "ax_change": "▲2.5(1.08%)",
+        "normalized_change": "▲2.5 (+1.08%)",
+        "issue_change": "▲2.5 (+1.08%)",
+        "decision": "strip_ocr_prefix_4_as_up_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 15,
+        "code": "2467",
+        "name": "志聖",
+        "primary_change": "79(-1.58%)",
+        "ax_change": "▼9(-1.58%)",
+        "normalized_change": "▼9 (-1.58%)",
+        "issue_change": "▼9 (-1.58%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 16,
+        "code": "1785",
+        "name": "光洋科",
+        "primary_change": "72.5(-2.34%)",
+        "ax_change": "▼2.5(-2.34%)",
+        "normalized_change": "▼2.5 (-2.34%)",
+        "issue_change": "▼2.5 (-2.34%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 17,
+        "code": "3711",
+        "name": "日月光投控",
+        "primary_change": "716(-2.19%)",
+        "ax_change": "▼15(-2.05%)",
+        "normalized_change": "▼16 (-2.19%)",
+        "issue_change": "▼16 (-2.19%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 18,
+        "code": "6239",
+        "name": "力成",
+        "primary_change": "73.5(-1.14%)",
+        "ax_change": "▼3.5(-1.14%)",
+        "normalized_change": "▼3.5 (-1.14%)",
+        "issue_change": "▼3.5 (-1.14%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 19,
+        "code": "2344",
+        "name": "華邦電",
+        "primary_change": "40.5(0.28%)",
+        "ax_change": "▲0.5(0.28%)",
+        "normalized_change": "▲0.5 (+0.28%)",
+        "issue_change": "▲0.5 (+0.28%)",
+        "decision": "strip_ocr_prefix_4_as_up_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 20,
+        "code": "3443",
+        "name": "創意",
+        "primary_change": "0(0%)",
+        "ax_change": "0(0%)",
+        "normalized_change": "0 (0%)",
+        "issue_change": "0 (0%)",
+        "decision": "preserve_zero"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 21,
+        "code": "5434",
+        "name": "崇越",
+        "primary_change": "75(-0.83%)",
+        "ax_change": "▼5(-0.83%)",
+        "normalized_change": "▼5 (-0.83%)",
+        "issue_change": "▼5 (-0.83%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 22,
+        "code": "6257",
+        "name": "矽格",
+        "primary_change": "47.5(2.7%)",
+        "ax_change": "▲7(2.52%)",
+        "normalized_change": "▲7.5 (+2.7%)",
+        "issue_change": "▲7.5 (+2.7%)",
+        "decision": "strip_ocr_prefix_4_as_up_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 23,
+        "code": "3105",
+        "name": "穩懋",
+        "primary_change": "72(-0.34%)",
+        "ax_change": "▼1(-0.17%)",
+        "normalized_change": "▼2 (-0.34%)",
+        "issue_change": "▼2 (-0.34%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 24,
+        "code": "1717",
+        "name": "長興",
+        "primary_change": "70.6(-0.79%)",
+        "ax_change": "▼0.6(-0.79%)",
+        "normalized_change": "▼0.6 (-0.79%)",
+        "issue_change": "▼0.6 (-0.79%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 25,
+        "code": "5483",
+        "name": "中美晶",
+        "primary_change": "76.5(-2.9%)",
+        "ax_change": "▼6.5(-2.9%)",
+        "normalized_change": "▼6.5 (-2.9%)",
+        "issue_change": "▼6.5 (-2.9%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 26,
+        "code": "3189",
+        "name": "景碩",
+        "primary_change": "715(-1.36%)",
+        "ax_change": "▼15(-1.36%)",
+        "normalized_change": "▼15 (-1.36%)",
+        "issue_change": "▼15 (-1.36%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 27,
+        "code": "5347",
+        "name": "世界",
+        "primary_change": "72.5(-1.32%)",
+        "ax_change": "▼2.5(-1.32%)",
+        "normalized_change": "▼2.5 (-1.32%)",
+        "issue_change": "▼2.5 (-1.32%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 28,
+        "code": "6488",
+        "name": "環球晶",
+        "primary_change": "755(-4.53%)",
+        "ax_change": "▼55(-4.53%)",
+        "normalized_change": "▼55 (-4.53%)",
+        "issue_change": "▼55 (-4.53%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 29,
+        "code": "2330",
+        "name": "台積電",
+        "primary_change": "730(-1.16%)",
+        "ax_change": "▼30(-1.16%)",
+        "normalized_change": "▼30 (-1.16%)",
+        "issue_change": "▼30 (-1.16%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業價值區",
+        "rank": 30,
+        "code": "5536",
+        "name": "聖暉*",
+        "primary_change": "▲15(1.44%)",
+        "ax_change": "▲15(1.44%)",
+        "normalized_change": "▲15 (+1.44%)",
+        "issue_change": "▲15 (+1.44%)",
+        "decision": "preserve_valid_primary_change"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 1,
+        "code": "6199",
+        "name": "天品",
+        "primary_change": "42.5(1.79%)",
+        "ax_change": "▲2.5(1.79%)",
+        "normalized_change": "▲2.5 (+1.79%)",
+        "issue_change": "▲2.5 (+1.79%)",
+        "decision": "strip_ocr_prefix_4_as_up_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 2,
+        "code": "6672",
+        "name": "騰輝電子-KY",
+        "primary_change": "426(5.15%)",
+        "ax_change": "▲26(5.15%)",
+        "normalized_change": "▲26 (+5.15%)",
+        "issue_change": "▲26 (+5.15%)",
+        "decision": "strip_ocr_prefix_4_as_up_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 3,
+        "code": "3016",
+        "name": "嘉晶",
+        "primary_change": "71(-0.51%)",
+        "ax_change": "▼1(-0.51%)",
+        "normalized_change": "▼1 (-0.51%)",
+        "issue_change": "▼1 (-0.51%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 4,
+        "code": "6957",
+        "name": "裕慶-KY",
+        "primary_change": "79(-2.03%)",
+        "ax_change": "▼9(-2.03%)",
+        "normalized_change": "▼9 (-2.03%)",
+        "issue_change": "▼9 (-2.03%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 5,
+        "code": "2466",
+        "name": "冠西電",
+        "primary_change": "70.5(-0.28%)",
+        "ax_change": "▼0.5(-0.28%)",
+        "normalized_change": "▼0.5 (-0.28%)",
+        "issue_change": "▼0.5 (-0.28%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 6,
+        "code": "3597",
+        "name": "映興",
+        "primary_change": "43.65(9.93%)",
+        "ax_change": "▲3.65(9.93%)",
+        "normalized_change": "▲3.65 (+9.93%)",
+        "issue_change": "▲3.65 (+9.93%)",
+        "decision": "strip_ocr_prefix_4_as_up_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 7,
+        "code": "6197",
+        "name": "佳必琪",
+        "primary_change": "46(1.62%)",
+        "ax_change": "▲6(1.62%)",
+        "normalized_change": "▲6 (+1.62%)",
+        "issue_change": "▲6 (+1.62%)",
+        "decision": "strip_ocr_prefix_4_as_up_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 8,
+        "code": "3268",
+        "name": "海德威",
+        "primary_change": "70.3(-1.23%)",
+        "ax_change": "▼0.3(-1.23%)",
+        "normalized_change": "▼0.3 (-1.23%)",
+        "issue_change": "▼0.3 (-1.23%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 9,
+        "code": "4556",
+        "name": "旭然",
+        "primary_change": "71(-0.69%)",
+        "ax_change": "▼1(-0.69%)",
+        "normalized_change": "▼1 (-0.69%)",
+        "issue_change": "▼1 (-0.69%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 10,
+        "code": "2241",
+        "name": "艾姆勒",
+        "primary_change": "45.2(10%)",
+        "ax_change": "▲5.2(10%)",
+        "normalized_change": "▲5.2 (+10%)",
+        "issue_change": "▲5.2 (+10%)",
+        "decision": "strip_ocr_prefix_4_as_up_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 11,
+        "code": "6213",
+        "name": "聯茂",
+        "primary_change": "73(-0.38%)",
+        "ax_change": "▼3(-0.38%)",
+        "normalized_change": "▼3 (-0.38%)",
+        "issue_change": "▼3 (-0.38%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 12,
+        "code": "6278",
+        "name": "台表科",
+        "primary_change": "73(-1.2%)",
+        "ax_change": "▼3(-1.2%)",
+        "normalized_change": "▼3 (-1.2%)",
+        "issue_change": "▼3 (-1.2%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 13,
+        "code": "6691",
+        "name": "洋基工程",
+        "primary_change": "49(1.16%)",
+        "ax_change": "▲9(1.16%)",
+        "normalized_change": "▲9 (+1.16%)",
+        "issue_change": "▲9 (+1.16%)",
+        "decision": "strip_ocr_prefix_4_as_up_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 14,
+        "code": "1301",
+        "name": "台塑",
+        "primary_change": "43.2(4.24%)",
+        "ax_change": "▲3(3.98%)",
+        "normalized_change": "▲3.2 (+4.24%)",
+        "issue_change": "▲3.2 (+4.24%)",
+        "decision": "strip_ocr_prefix_4_as_up_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 15,
+        "code": "6196",
+        "name": "帆宣",
+        "primary_change": "0(0%)",
+        "ax_change": "0(0%)",
+        "normalized_change": "0 (0%)",
+        "issue_change": "0 (0%)",
+        "decision": "preserve_zero"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 16,
+        "code": "3518",
+        "name": "柏騰",
+        "primary_change": "70.3(-0.6%)",
+        "ax_change": "▼0.5(-0.99%)",
+        "normalized_change": "▼0.3 (-0.6%)",
+        "issue_change": "▼0.3 (-0.6%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 17,
+        "code": "1303",
+        "name": "南亞",
+        "primary_change": "73.5(-1.11%)",
+        "ax_change": "▼3.5(-1.11%)",
+        "normalized_change": "▼3.5 (-1.11%)",
+        "issue_change": "▼3.5 (-1.11%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 18,
+        "code": "3147",
+        "name": "大綜",
+        "primary_change": "74(-1.36%)",
+        "ax_change": "▼4(-1.36%)",
+        "normalized_change": "▼4 (-1.36%)",
+        "issue_change": "▼4 (-1.36%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 19,
+        "code": "6708",
+        "name": "天擎",
+        "primary_change": "40.5(0.73%)",
+        "ax_change": "▲0.5(0.73%)",
+        "normalized_change": "▲0.5 (+0.73%)",
+        "issue_change": "▲0.5 (+0.73%)",
+        "decision": "strip_ocr_prefix_4_as_up_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 20,
+        "code": "1708",
+        "name": "東鹼",
+        "primary_change": "40.6(1.05%)",
+        "ax_change": "▲0.6(1.05%)",
+        "normalized_change": "▲0.6 (+1.05%)",
+        "issue_change": "▲0.6 (+1.05%)",
+        "decision": "strip_ocr_prefix_4_as_up_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 21,
+        "code": "6152",
+        "name": "百一",
+        "primary_change": "70.1(-0.51%)",
+        "ax_change": "▼0.1(-0.51%)",
+        "normalized_change": "▼0.1 (-0.51%)",
+        "issue_change": "▼0.1 (-0.51%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 22,
+        "code": "2340",
+        "name": "台亞",
+        "primary_change": "41.15(2.39%)",
+        "ax_change": "▲1.15(2.39%)",
+        "normalized_change": "▲1.15 (+2.39%)",
+        "issue_change": "▲1.15 (+2.39%)",
+        "decision": "strip_ocr_prefix_4_as_up_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 23,
+        "code": "8227",
+        "name": "巨有科技",
+        "primary_change": "79(-2.42%)",
+        "ax_change": "▼9(-2.42%)",
+        "normalized_change": "▼9 (-2.42%)",
+        "issue_change": "▼9 (-2.42%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 24,
+        "code": "1569",
+        "name": "濱川",
+        "primary_change": "71.4(-1.94%)",
+        "ax_change": "▼1.4(-1.94%)",
+        "normalized_change": "▼1.4 (-1.94%)",
+        "issue_change": "▼1.4 (-1.94%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 25,
+        "code": "3167",
+        "name": "大量",
+        "primary_change": "75(-0.49%)",
+        "ax_change": "▼5(-0.49%)",
+        "normalized_change": "▼5 (-0.49%)",
+        "issue_change": "▼5 (-0.49%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 26,
+        "code": "6456",
+        "name": "GIS-KY",
+        "primary_change": "40.5(0.49%)",
+        "ax_change": "▲0.5(0.49%)",
+        "normalized_change": "▲0.5 (+0.49%)",
+        "issue_change": "▲0.5 (+0.49%)",
+        "decision": "strip_ocr_prefix_4_as_up_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 27,
+        "code": "8046",
+        "name": "南電",
+        "primary_change": "710(-0.68%)",
+        "ax_change": "▼10(-0.68%)",
+        "normalized_change": "▼10 (-0.68%)",
+        "issue_change": "▼10 (-0.68%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 28,
+        "code": "2033",
+        "name": "佳大",
+        "primary_change": "71.2(-2.26%)",
+        "ax_change": "▼1.2(-2.26%)",
+        "normalized_change": "▼1.2 (-2.26%)",
+        "issue_change": "▼1.2 (-2.26%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 29,
+        "code": "3707",
+        "name": "漢磊",
+        "primary_change": "72.1(-2.34%)",
+        "ax_change": "▼2(-2.22%)",
+        "normalized_change": "▼2.1 (-2.34%)",
+        "issue_change": "▼2.1 (-2.34%)",
+        "decision": "strip_ocr_prefix_7_as_down_arrow"
+      },
+      {
+        "section": "產業升溫區",
+        "rank": 30,
+        "code": "3031",
+        "name": "佰鴻",
+        "primary_change": "40.85(2.54%)",
+        "ax_change": "▲0.85(2.54%)",
+        "normalized_change": "▲0.85 (+2.54%)",
+        "issue_change": "▲0.85 (+2.54%)",
+        "decision": "strip_ocr_prefix_4_as_up_arrow"
+      }
+    ],
+    "name_issue_count": 0,
+    "name_issues": [],
+    "name_rule": "No OCR↔AX name differences were found. Use AX names verbatim for publication; preserve symbols/case such as 愛普*, 聖暉*, 騰輝電子-KY, 裕慶-KY, GIS-KY, and 華南永昌NASDAQxT.",
+    "page_provenance_difference_count": 2,
+    "page_provenance_differences": [
+      {
+        "section": "產業價值區",
+        "code": "3034",
+        "name": "聯詠",
+        "primary_page": 1,
+        "primary_sourceFile": "06_產業價值區_1.png",
+        "ax_page": 2,
+        "ax_sourceFile": "07_產業價值區_2.png",
+        "assessment": "non_blocking_overlap-page_dedupe_provenance_difference"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "6197",
+        "name": "佳必琪",
+        "primary_page": 1,
+        "primary_sourceFile": "12_產業升溫區_1.png",
+        "ax_page": 2,
+        "ax_sourceFile": "13_產業升溫區_2.png",
+        "assessment": "non_blocking_overlap-page_dedupe_provenance_difference"
+      }
+    ],
+    "trust_boundary": "Use primary Ark rows for zone/order and screenshot price/change; AX for code/name/industry and for detecting explicit missing-price/NAV layout. ark_validation does not validate numeric fields."
+  },
+  "schema_hints": {
+    "source_ark_stocks_schema": {
+      "top_level_keys": [
+        "sourceOcr",
+        "sourceAx",
+        "sourceFolder",
+        "generatedAt",
+        "summary",
+        "riskControl",
+        "stocks",
+        "duplicates",
+        "recoveries"
+      ],
+      "summary_keys": [
+        "totalStocks",
+        "sections",
+        "duplicateCount"
+      ],
+      "summary_section_keys": [
+        "count",
+        "codes"
+      ],
+      "riskControl_keys": [
+        "sourceFile",
+        "value",
+        "fullText"
+      ],
+      "stock_row_keys": [
+        "section",
+        "page",
+        "sourceFile",
+        "name",
+        "code",
+        "price",
+        "change",
+        "columns",
+        "rawLines",
+        "ocrConfidence",
+        "rank"
+      ],
+      "stock_row_types": {
+        "section": "string",
+        "page": "integer",
+        "sourceFile": "string",
+        "name": "string",
+        "code": "string (preserve leading zeros and suffix letters)",
+        "price": "string|null",
+        "change": "string|null",
+        "columns": "array<object{x:number,y:number,text:string}>",
+        "rawLines": "array<string>",
+        "ocrConfidence": "number",
+        "rank": "integer"
+      },
+      "duplicate_row_keys": [
+        "section",
+        "code",
+        "kept",
+        "duplicate"
+      ],
+      "recoveries_count": 0
+    },
+    "source_ax_schema": {
+      "top_level_keys": [
+        "sourceAxRows",
+        "sourceFolder",
+        "generatedAt",
+        "summary",
+        "stocks",
+        "duplicates"
+      ],
+      "stock_row_keys": [
+        "section",
+        "page",
+        "sourceFile",
+        "name",
+        "code",
+        "price",
+        "change",
+        "columns",
+        "rawDescription",
+        "axValues",
+        "source",
+        "rank"
+      ],
+      "stock_row_types": {
+        "section": "string",
+        "page": "integer",
+        "sourceFile": "string",
+        "name": "string",
+        "code": "string",
+        "price": "string|null",
+        "change": "string|null",
+        "columns": "array<string>",
+        "rawDescription": "string",
+        "axValues": "array",
+        "source": "string",
+        "rank": "integer"
+      }
+    },
+    "issue_baseline": {
+      "baseline_path": "/Users/kaide/Documents/Morning-Brief/data/issues/20261007.json",
+      "baseline_sha256": "be87879272af03bde6a64f62639b0567b6fa51dbf836de2bef135841e773834d",
+      "schema_version": "morning_brief.issue.v2",
+      "top_level_keys": [
+        "schema_version",
+        "issue_no",
+        "date",
+        "day",
+        "data_as_of",
+        "brief_label",
+        "draft_cutoff",
+        "session_label",
+        "source_ark",
+        "title",
+        "eyebrow",
+        "scenario_id",
+        "scenario_label",
+        "scenario_override",
+        "lock_scenario",
+        "scenario_reason",
+        "ark",
+        "hero",
+        "water",
+        "temperature",
+        "strategy",
+        "analysis",
+        "home",
+        "editorial",
+        "market_summary",
+        "market",
+        "capital_flow",
+        "etf",
+        "stocks",
+        "zone_breadth",
+        "mag7",
+        "intelligence",
+        "validation",
+        "appendix",
+        "xurl_signal_layer",
+        "research_sources",
+        "ark_source_validation",
+        "research_verification",
+        "conclusion",
+        "disclaimer"
+      ],
+      "source_ark_type": "string path to copied research Ark JSON",
+      "ark_keys": [
+        "schema_version",
+        "water_level",
+        "holding_allocation_suggestion",
+        "as_of",
+        "source_time",
+        "status",
+        "prev",
+        "previous_water_level",
+        "delta",
+        "change",
+        "direction",
+        "comparison_date",
+        "previous_trading_date",
+        "comparison_is_provisional",
+        "note",
+        "interpretation",
+        "source_file"
+      ],
+      "zone_container_keys": {
+        "etf": [
+          "value",
+          "rising",
+          "overlap",
+          "overlap_names"
+        ],
+        "stocks": [
+          "value",
+          "rising",
+          "overlap",
+          "overlap_names"
+        ]
+      },
+      "observed_zone_row_key_union": {
+        "etf.value": [
+          "change",
+          "code",
+          "industry",
+          "mark",
+          "name",
+          "price"
+        ],
+        "etf.rising": [
+          "change",
+          "code",
+          "industry",
+          "mark",
+          "meta",
+          "name",
+          "nav",
+          "premium_discount",
+          "price",
+          "price_available"
+        ],
+        "stocks.value": [
+          "change",
+          "code",
+          "industry",
+          "mark",
+          "name",
+          "price"
+        ],
+        "stocks.rising": [
+          "change",
+          "code",
+          "industry",
+          "mark",
+          "name",
+          "price"
+        ]
+      },
+      "required_zone_row_core": [
+        "code",
+        "name",
+        "price",
+        "industry",
+        "mark",
+        "change"
+      ],
+      "missing_price_etf_optional_keys": [
+        "price_available",
+        "nav",
+        "premium_discount",
+        "meta"
+      ],
+      "overlap_fields": {
+        "etf.overlap": "array of code strings",
+        "etf.overlap_names": "object code->name",
+        "stocks.overlap": "array of code strings",
+        "stocks.overlap_names": "object code->name"
+      },
+      "renderer_behavior": {
+        "missing_price": "Use price/change string — plus price_available=false and explicit NAV meta for current issue compatibility; semantic source values remain null.",
+        "overlap": "Set overlap arrays and overlap_names explicitly, even when empty.",
+        "cards": "Explicit non-empty meta overrides derived industry/change meta."
+      }
+    },
+    "source_to_issue_mapping": {
+      "ETF價值區": "etf.value",
+      "ETF升溫區": "etf.rising",
+      "產業價值區": "stocks.value",
+      "產業升溫區": "stocks.rising",
+      "riskControl.value": "ark.water_level numeric and ark.holding_allocation_suggestion percent string",
+      "AX columns[4] for ETF": "industry/region, map - to empty string",
+      "AX columns[-1] for stocks": "industry",
+      "primary price/change": "issue price/change after deterministic arrow repair, except missing-price NAV traps"
+    }
+  },
+  "deterministic_normalization_recommendation": {
+    "date_fields": {
+      "date": "2026-10-08",
+      "day": "THURSDAY",
+      "data_as_of": "2026-10-08"
+    },
+    "ark_fields": {
+      "schema_version": "kmb.ark.normalized.v1",
+      "water_level": 66.5,
+      "holding_allocation_suggestion": "66.5%",
+      "as_of": "2026-10-08",
+      "source_time": "2026-10-08T09:08:09+08:00",
+      "status": "validated",
+      "prev": 67.4,
+      "previous_water_level": 67.4,
+      "delta": -0.9,
+      "change": -0.9,
+      "direction": "下降",
+      "comparison_date": "2026-10-07",
+      "previous_trading_date": "2026-10-07",
+      "comparison_is_provisional": false
+    },
+    "overlap_fields": {
+      "etf.overlap": [],
+      "etf.overlap_names": {},
+      "stocks.overlap": [],
+      "stocks.overlap_names": {}
+    },
+    "zone_breadth": {
+      "ETF價值區": {
+        "up": 0,
+        "down": 10,
+        "flat": 0,
+        "missing": 0
+      },
+      "ETF升溫區": {
+        "up": 0,
+        "down": 3,
+        "flat": 0,
+        "missing": 4
+      },
+      "產業價值區": {
+        "up": 8,
+        "down": 19,
+        "flat": 3,
+        "missing": 0
+      },
+      "產業升溫區": {
+        "up": 12,
+        "down": 17,
+        "flat": 1,
+        "missing": 0
+      }
+    },
+    "normalized_zone_rows": {
+      "etf": {
+        "value": [
+          {
+            "code": "00927",
+            "name": "群益半導體收益",
+            "price": "40.37",
+            "industry": "台灣",
+            "mark": "",
+            "change": "▼0.15 (-0.37%)"
+          },
+          {
+            "code": "00735",
+            "name": "國泰臺韓科技",
+            "price": "110.3",
+            "industry": "其他國家",
+            "mark": "",
+            "change": "▼0.9 (-0.81%)"
+          },
+          {
+            "code": "00947",
+            "name": "台新臺灣IC設計",
+            "price": "40.65",
+            "industry": "台灣",
+            "mark": "",
+            "change": "▼0.12 (-0.29%)"
+          },
+          {
+            "code": "00690",
+            "name": "兆豐藍籌30",
+            "price": "84.25",
+            "industry": "台灣",
+            "mark": "",
+            "change": "▼0.75 (-0.88%)"
+          },
+          {
+            "code": "00913",
+            "name": "兆豐台灣晶圓製造",
+            "price": "53.5",
+            "industry": "台灣",
+            "mark": "",
+            "change": "▼0.5 (-0.93%)"
+          },
+          {
+            "code": "00888",
+            "name": "永豐台灣ESG",
+            "price": "36.63",
+            "industry": "台灣",
+            "mark": "",
+            "change": "▼0.23 (-0.62%)"
+          },
+          {
+            "code": "00891",
+            "name": "中信關鍵半導體",
+            "price": "38.2",
+            "industry": "台灣",
+            "mark": "",
+            "change": "▼0.3 (-0.78%)"
+          },
+          {
+            "code": "00935",
+            "name": "野村臺灣新科技50",
+            "price": "62.2",
+            "industry": "台灣",
+            "mark": "",
+            "change": "▼0.75 (-1.19%)"
+          },
+          {
+            "code": "00981A",
+            "name": "主動統一台股增長",
+            "price": "31.99",
+            "industry": "",
+            "mark": "",
+            "change": "▼0.27 (-0.84%)"
+          },
+          {
+            "code": "00631L",
+            "name": "元大台灣50正2",
+            "price": "41.02",
+            "industry": "台灣",
+            "mark": "",
+            "change": "▼0.73 (-1.75%)"
+          }
+        ],
+        "rising": [
+          {
+            "code": "009807",
+            "name": "台新標普科技精選",
+            "price": "—",
+            "industry": "美國",
+            "mark": "",
+            "change": "—",
+            "price_available": false,
+            "nav": "18.39",
+            "premium_discount": "-0.08%",
+            "meta": "股價 —｜即時淨值 18.39｜折溢價 -0.08%"
+          },
+          {
+            "code": "00689R",
+            "name": "國泰20年美債反1",
+            "price": "—",
+            "industry": "美國",
+            "mark": "",
+            "change": "—",
+            "price_available": false,
+            "nav": "24.43",
+            "premium_discount": "-0.29%",
+            "meta": "股價 —｜即時淨值 24.43｜折溢價 -0.29%"
+          },
+          {
+            "code": "00681R",
+            "name": "元大美債20反1",
+            "price": "—",
+            "industry": "美國",
+            "mark": "",
+            "change": "—",
+            "price_available": false,
+            "nav": "23.27",
+            "premium_discount": "-0.1%",
+            "meta": "股價 —｜即時淨值 23.27｜折溢價 -0.1%"
+          },
+          {
+            "code": "009818",
+            "name": "華南永昌NASDAQxT",
+            "price": "—",
+            "industry": "美國",
+            "mark": "",
+            "change": "—",
+            "price_available": false,
+            "nav": "21.72",
+            "premium_discount": "-0.14%",
+            "meta": "股價 —｜即時淨值 21.72｜折溢價 -0.14%"
+          },
+          {
+            "code": "00733",
+            "name": "富邦臺灣中小",
+            "price": "77.85",
+            "industry": "台灣",
+            "mark": "",
+            "change": "▼0.5 (-0.64%)"
+          },
+          {
+            "code": "00986A",
+            "name": "主動台新龍頭成長",
+            "price": "15.18",
+            "industry": "",
+            "mark": "",
+            "change": "▼0.09 (-0.59%)"
+          },
+          {
+            "code": "00990A",
+            "name": "主動元大AI新經濟",
+            "price": "16.58",
+            "industry": "",
+            "mark": "",
+            "change": "▼0.19 (-1.13%)"
+          }
+        ]
+      },
+      "stocks": {
+        "value": [
+          {
+            "code": "6510",
+            "name": "精測",
+            "price": "3,130",
+            "industry": "IC封裝測試設備",
+            "mark": "",
+            "change": "▲110 (+3.64%)"
+          },
+          {
+            "code": "5274",
+            "name": "信驊",
+            "price": "15,975",
+            "industry": "IC設計",
+            "mark": "",
+            "change": "▼1,775 (-10%)"
+          },
+          {
+            "code": "8299",
+            "name": "群聯",
+            "price": "2,065",
+            "industry": "DRAM",
+            "mark": "",
+            "change": "▲5 (+0.24%)"
+          },
+          {
+            "code": "2454",
+            "name": "聯發科",
+            "price": "4,790",
+            "industry": "IC設計",
+            "mark": "",
+            "change": "▼45 (-0.93%)"
+          },
+          {
+            "code": "3529",
+            "name": "力旺",
+            "price": "2,985",
+            "industry": "矽智財",
+            "mark": "",
+            "change": "▼30 (-1%)"
+          },
+          {
+            "code": "2303",
+            "name": "聯電",
+            "price": "148.5",
+            "industry": "晶圓代工",
+            "mark": "",
+            "change": "0 (0%)"
+          },
+          {
+            "code": "3034",
+            "name": "聯詠",
+            "price": "534",
+            "industry": "驅動IC",
+            "mark": "",
+            "change": "▲5 (+0.95%)"
+          },
+          {
+            "code": "2449",
+            "name": "京元電子",
+            "price": "290.5",
+            "industry": "IC測試",
+            "mark": "",
+            "change": "▼9 (-3.01%)"
+          },
+          {
+            "code": "3264",
+            "name": "欣銓",
+            "price": "247",
+            "industry": "IC測試",
+            "mark": "",
+            "change": "▼3 (-1.2%)"
+          },
+          {
+            "code": "2379",
+            "name": "瑞昱",
+            "price": "740",
+            "industry": "IC設計",
+            "mark": "",
+            "change": "▼1 (-0.13%)"
+          },
+          {
+            "code": "6531",
+            "name": "愛普*",
+            "price": "1,000",
+            "industry": "矽智財",
+            "mark": "",
+            "change": "0 (0%)"
+          },
+          {
+            "code": "2360",
+            "name": "致茂",
+            "price": "2,375",
+            "industry": "半導體設備",
+            "mark": "",
+            "change": "▼25 (-1.04%)"
+          },
+          {
+            "code": "6223",
+            "name": "旺矽",
+            "price": "5,595",
+            "industry": "IC封裝測試設備",
+            "mark": "",
+            "change": "▲65 (+1.18%)"
+          },
+          {
+            "code": "6147",
+            "name": "頎邦",
+            "price": "234",
+            "industry": "IC封裝測試",
+            "mark": "",
+            "change": "▲2.5 (+1.08%)"
+          },
+          {
+            "code": "2467",
+            "name": "志聖",
+            "price": "560",
+            "industry": "印刷電路板設備",
+            "mark": "",
+            "change": "▼9 (-1.58%)"
+          },
+          {
+            "code": "1785",
+            "name": "光洋科",
+            "price": "104.5",
+            "industry": "非鐵金屬",
+            "mark": "",
+            "change": "▼2.5 (-2.34%)"
+          },
+          {
+            "code": "3711",
+            "name": "日月光投控",
+            "price": "716",
+            "industry": "IC封裝測試",
+            "mark": "",
+            "change": "▼16 (-2.19%)"
+          },
+          {
+            "code": "6239",
+            "name": "力成",
+            "price": "304",
+            "industry": "IC封裝測試",
+            "mark": "",
+            "change": "▼3.5 (-1.14%)"
+          },
+          {
+            "code": "2344",
+            "name": "華邦電",
+            "price": "180",
+            "industry": "FLASH",
+            "mark": "",
+            "change": "▲0.5 (+0.28%)"
+          },
+          {
+            "code": "3443",
+            "name": "創意",
+            "price": "8,460",
+            "industry": "矽智財",
+            "mark": "",
+            "change": "0 (0%)"
+          },
+          {
+            "code": "5434",
+            "name": "崇越",
+            "price": "600",
+            "industry": "半導體設備",
+            "mark": "",
+            "change": "▼5 (-0.83%)"
+          },
+          {
+            "code": "6257",
+            "name": "矽格",
+            "price": "285.5",
+            "industry": "IC封裝測試",
+            "mark": "",
+            "change": "▲7.5 (+2.7%)"
+          },
+          {
+            "code": "3105",
+            "name": "穩懋",
+            "price": "586",
+            "industry": "砷化鎵代工",
+            "mark": "",
+            "change": "▼2 (-0.34%)"
+          },
+          {
+            "code": "1717",
+            "name": "長興",
+            "price": "75",
+            "industry": "合成樹脂",
+            "mark": "",
+            "change": "▼0.6 (-0.79%)"
+          },
+          {
+            "code": "5483",
+            "name": "中美晶",
+            "price": "217.5",
+            "industry": "矽晶圓",
+            "mark": "",
+            "change": "▼6.5 (-2.9%)"
+          },
+          {
+            "code": "3189",
+            "name": "景碩",
+            "price": "1,085",
+            "industry": "IC基板",
+            "mark": "",
+            "change": "▼15 (-1.36%)"
+          },
+          {
+            "code": "5347",
+            "name": "世界",
+            "price": "187.5",
+            "industry": "晶圓代工",
+            "mark": "",
+            "change": "▼2.5 (-1.32%)"
+          },
+          {
+            "code": "6488",
+            "name": "環球晶",
+            "price": "1,160",
+            "industry": "矽晶圓",
+            "mark": "",
+            "change": "▼55 (-4.53%)"
+          },
+          {
+            "code": "2330",
+            "name": "台積電",
+            "price": "2,555",
+            "industry": "晶圓代工",
+            "mark": "",
+            "change": "▼30 (-1.16%)"
+          },
+          {
+            "code": "5536",
+            "name": "聖暉*",
+            "price": "1,060",
+            "industry": "機電工程",
+            "mark": "",
+            "change": "▲15 (+1.44%)"
+          }
+        ],
+        "rising": [
+          {
+            "code": "6199",
+            "name": "天品",
+            "price": "142",
+            "industry": "傳產其他",
+            "mark": "",
+            "change": "▲2.5 (+1.79%)"
+          },
+          {
+            "code": "6672",
+            "name": "騰輝電子-KY",
+            "price": "531",
+            "industry": "銅箔基板",
+            "mark": "",
+            "change": "▲26 (+5.15%)"
+          },
+          {
+            "code": "3016",
+            "name": "嘉晶",
+            "price": "194",
+            "industry": "矽晶圓",
+            "mark": "",
+            "change": "▼1 (-0.51%)"
+          },
+          {
+            "code": "6957",
+            "name": "裕慶-KY",
+            "price": "435",
+            "industry": "傳產其他",
+            "mark": "",
+            "change": "▼9 (-2.03%)"
+          },
+          {
+            "code": "2466",
+            "name": "冠西電",
+            "price": "180",
+            "industry": "電子零組件",
+            "mark": "",
+            "change": "▼0.5 (-0.28%)"
+          },
+          {
+            "code": "3597",
+            "name": "映興",
+            "price": "40.4",
+            "industry": "連接線材",
+            "mark": "",
+            "change": "▲3.65 (+9.93%)"
+          },
+          {
+            "code": "6197",
+            "name": "佳必琪",
+            "price": "377",
+            "industry": "連接線材",
+            "mark": "",
+            "change": "▲6 (+1.62%)"
+          },
+          {
+            "code": "3268",
+            "name": "海德威",
+            "price": "24",
+            "industry": "IC設計",
+            "mark": "",
+            "change": "▼0.3 (-1.23%)"
+          },
+          {
+            "code": "4556",
+            "name": "旭然",
+            "price": "144",
+            "industry": "水資源處理",
+            "mark": "",
+            "change": "▼1 (-0.69%)"
+          },
+          {
+            "code": "2241",
+            "name": "艾姆勒",
+            "price": "57.2",
+            "industry": "散熱模組",
+            "mark": "",
+            "change": "▲5.2 (+10%)"
+          },
+          {
+            "code": "6213",
+            "name": "聯茂",
+            "price": "793",
+            "industry": "銅箔基板",
+            "mark": "",
+            "change": "▼3 (-0.38%)"
+          },
+          {
+            "code": "6278",
+            "name": "台表科",
+            "price": "247.5",
+            "industry": "硬板",
+            "mark": "",
+            "change": "▼3 (-1.2%)"
+          },
+          {
+            "code": "6691",
+            "name": "洋基工程",
+            "price": "785",
+            "industry": "無塵室工程",
+            "mark": "",
+            "change": "▲9 (+1.16%)"
+          },
+          {
+            "code": "1301",
+            "name": "台塑",
+            "price": "78.6",
+            "industry": "塑膠原料",
+            "mark": "",
+            "change": "▲3.2 (+4.24%)"
+          },
+          {
+            "code": "6196",
+            "name": "帆宣",
+            "price": "670",
+            "industry": "半導體設備",
+            "mark": "",
+            "change": "0 (0%)"
+          },
+          {
+            "code": "3518",
+            "name": "柏騰",
+            "price": "50",
+            "industry": "電子零組件",
+            "mark": "",
+            "change": "▼0.3 (-0.6%)"
+          },
+          {
+            "code": "1303",
+            "name": "南亞",
+            "price": "310.5",
+            "industry": "塑膠原料",
+            "mark": "",
+            "change": "▼3.5 (-1.11%)"
+          },
+          {
+            "code": "3147",
+            "name": "大綜",
+            "price": "291",
+            "industry": "系統整合",
+            "mark": "",
+            "change": "▼4 (-1.36%)"
+          },
+          {
+            "code": "6708",
+            "name": "天擎",
+            "price": "69",
+            "industry": "IC設計",
+            "mark": "",
+            "change": "▲0.5 (+0.73%)"
+          },
+          {
+            "code": "1708",
+            "name": "東鹼",
+            "price": "57.9",
+            "industry": "農藥及肥料",
+            "mark": "",
+            "change": "▲0.6 (+1.05%)"
+          },
+          {
+            "code": "6152",
+            "name": "百一",
+            "price": "19.7",
+            "industry": "網路設備",
+            "mark": "",
+            "change": "▼0.1 (-0.51%)"
+          },
+          {
+            "code": "2340",
+            "name": "台亞",
+            "price": "49.3",
+            "industry": "發光二極體",
+            "mark": "",
+            "change": "▲1.15 (+2.39%)"
+          },
+          {
+            "code": "8227",
+            "name": "巨有科技",
+            "price": "363",
+            "industry": "矽智財",
+            "mark": "",
+            "change": "▼9 (-2.42%)"
+          },
+          {
+            "code": "1569",
+            "name": "濱川",
+            "price": "70.8",
+            "industry": "電腦機殼",
+            "mark": "",
+            "change": "▼1.4 (-1.94%)"
+          },
+          {
+            "code": "3167",
+            "name": "大量",
+            "price": "1,020",
+            "industry": "印刷電路板設備",
+            "mark": "",
+            "change": "▼5 (-0.49%)"
+          },
+          {
+            "code": "6456",
+            "name": "GIS-KY",
+            "price": "102.5",
+            "industry": "TFT-LCD",
+            "mark": "",
+            "change": "▲0.5 (+0.49%)"
+          },
+          {
+            "code": "8046",
+            "name": "南電",
+            "price": "1,470",
+            "industry": "IC基板",
+            "mark": "",
+            "change": "▼10 (-0.68%)"
+          },
+          {
+            "code": "2033",
+            "name": "佳大",
+            "price": "52",
+            "industry": "鋼鐵產品",
+            "mark": "",
+            "change": "▼1.2 (-2.26%)"
+          },
+          {
+            "code": "3707",
+            "name": "漢磊",
+            "price": "87.8",
+            "industry": "矽晶圓",
+            "mark": "",
+            "change": "▼2.1 (-2.34%)"
+          },
+          {
+            "code": "3031",
+            "name": "佰鴻",
+            "price": "34.35",
+            "industry": "發光二極體",
+            "mark": "",
+            "change": "▲0.85 (+2.54%)"
+          }
+        ]
+      }
+    },
+    "rules": [
+      "Preserve source order and all 77 rows; no cross-zone duplicates exist.",
+      "Set every mark to an empty string because all intersections are empty.",
+      "For 009807, 00689R, 00681R, and 009818, keep source price/change unavailable; expose NAV and premium/discount only in explicit fields/meta.",
+      "For all other rows preserve primary screenshot prices and absolute/percentage moves; repair only OCR arrow prefixes.",
+      "For code/name/industry use the AX row with the same section and code; do not reuse adjacent-card values.",
+      "Do not infer scenario/editorial/market fields from this Ark audit."
+    ]
+  },
+  "anomalies": [
+    {
+      "severity": "critical_if_unfixed",
+      "type": "etf_nav_as_price",
+      "count": 4,
+      "codes": [
+        "009807",
+        "00689R",
+        "00681R",
+        "009818"
+      ],
+      "action": "Serialize price/change as unavailable and publish explicit NAV/premium metadata."
+    },
+    {
+      "severity": "required_normalization",
+      "type": "ocr_arrow_prefix",
+      "count": 68,
+      "action": "Apply exact deterministic prefix repair; do not copy malformed 4/7/7O strings."
+    },
+    {
+      "severity": "non_blocking",
+      "type": "same_run_snapshot_drift",
+      "count": 8,
+      "codes": [
+        "00981A",
+        "6223",
+        "3711",
+        "6257",
+        "3105",
+        "1301",
+        "3518",
+        "3707"
+      ],
+      "action": "Preserve primary screenshot values."
+    },
+    {
+      "severity": "non_blocking",
+      "type": "overlap_page_provenance",
+      "count": 2,
+      "codes": [
+        "3034",
+        "6197"
+      ],
+      "action": "No membership/order change; note dedupe source-page difference."
+    },
+    {
+      "severity": "none",
+      "type": "name_difference",
+      "count": 0,
+      "action": "No name correction required beyond using AX verbatim."
+    }
+  ],
+  "verification": {
+    "assertions_passed": [
+      "canonical pointer resolves through two symlinks to the 2026-10-08 09:05:05 run",
+      "pointer content hash equals resolved ark_stocks.json hash",
+      "every success.json manifest hash matches the run artifact",
+      "success ok=true, status=success, stage=complete",
+      "ark_validation ok=true and all four code/name sets match AX",
+      "section counts/order are 10, 7, 30, 30 and sum to 77",
+      "all 77 final rows have unique codes/names and every pairwise zone intersection is empty",
+      "2026-10-07 is confirmed open and has exactly one history record at 67.4",
+      "water comparison is 66.5 - 67.4 = -0.9 percentage points",
+      "four ETF rows have missing displayed price and were separated from NAV",
+      "68 malformed changes have exact prefix repairs; four missing changes remain unavailable; five valid/zero changes are preserved",
+      "all non-missing primary price/change pairs pass percentage-implied move consistency",
+      "no OCR↔AX name differences exist"
+    ]
+  }
+}

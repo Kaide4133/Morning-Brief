@@ -1,0 +1,252 @@
+{
+  "brief": {
+    "edition": "2026-10-08 Taipei morning",
+    "cutoff": "approximately 2026-10-08T09:30:00+08:00",
+    "scope": "read-only overnight news and cross-asset evidence relevant to Taiwan",
+    "rules": [
+      "Price and trading volume are observations, not evidence of fund inflows.",
+      "ETF flows are reported separately and only with the source's observation date.",
+      "Incomplete Farside rows are not presented as final daily totals."
+    ]
+  },
+  "market_price_volume_first": [
+    {
+      "asset": "Gold",
+      "instrument": "COMEX gold futures GC=F",
+      "observation_time": "2026-10-08T09:23:50+08:00",
+      "price_usd_per_oz": 4145.7,
+      "rolling_24h_change_pct": -0.81,
+      "rolling_24h_yahoo_bar_volume_contracts": 164220,
+      "prior_24h_yahoo_bar_volume_contracts": 119610,
+      "volume_ratio_vs_prior_24h": 1.37,
+      "cross_check": "Reuters/CNA reported spot gold at US$4,105/oz around the Asian open and near two-month lows; the instrument basis differs from futures.",
+      "meaning": "Gold weakened while the dollar and Treasury yields stayed high; heavier futures turnover confirms activity, not ETF outflow.",
+      "sources": [
+        "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=5d&interval=5m&includePrePost=true",
+        "https://www.channelnewsasia.com/business/asia-shares-subdued-bonds-swamped-ai-debt-wave-6441181"
+      ]
+    },
+    {
+      "asset": "US dollar",
+      "instrument": "ICE US Dollar Index DXY proxy DX-Y.NYB",
+      "observation_time": "2026-10-08T09:23:55+08:00",
+      "level": 102.232,
+      "rolling_24h_change_pct": 0.25,
+      "volume": null,
+      "volume_note": "No usable centralized cash-FX volume was available from the quote feed.",
+      "cross_check": "Reuters/CNA reported DXY 102.22, near an 18-month peak; a separate Reuters currency body reported 102.23 after a 0.3% Wednesday gain.",
+      "meaning": "A stronger dollar raises the external funding hurdle and is a headwind to dollar-priced gold and high-duration risk assets.",
+      "sources": [
+        "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=5d&interval=5m&includePrePost=true",
+        "https://www.channelnewsasia.com/business/asia-shares-subdued-bonds-swamped-ai-debt-wave-6441181",
+        "https://www.globalbankingandfinance.com/dollar-edges-back-18-month-high-fomc-minutes/"
+      ]
+    },
+    {
+      "asset": "US Treasuries",
+      "instrument": "10-year nominal Treasury yield",
+      "observation_time": "Reuters Asia-market body published 2026-10-08 around the Asian open",
+      "yield_pct": 5.298,
+      "overnight_high_pct": 5.326,
+      "volume": null,
+      "volume_note": "The Treasury market is decentralized; no authoritative consolidated overnight volume was available in the bounded research window.",
+      "meaning": "A strong 10-year auction pulled yields off 24-year highs, but the level remained valuation-negative for long-duration technology shares.",
+      "sources": [
+        "https://www.channelnewsasia.com/business/asia-shares-subdued-bonds-swamped-ai-debt-wave-6441181"
+      ]
+    },
+    {
+      "asset": "Bitcoin",
+      "instrument": "BTC/USD aggregated spot",
+      "observation_time": "2026-10-08T09:29:20+08:00",
+      "price_usd": 83230,
+      "rolling_24h_change_pct": -2.37,
+      "rolling_24h_volume_usd": 40017999650.23,
+      "meaning": "BTC was lower on substantial turnover. This does not establish ETF redemptions; finalized ETF flows are a separate dated series.",
+      "sources": [
+        "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd,btc&include_24hr_change=true&include_24hr_vol=true&include_last_updated_at=true"
+      ]
+    },
+    {
+      "asset": "Ether",
+      "instrument": "ETH/USD aggregated spot",
+      "observation_time": "2026-10-08T09:29:20+08:00",
+      "price_usd": 2579.03,
+      "rolling_24h_change_pct": -3.98,
+      "rolling_24h_volume_usd": 19694740159.57,
+      "meaning": "ETH underperformed BTC, consistent with risk-off pressure in the crypto complex but not proof of ETF flow direction.",
+      "sources": [
+        "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd,btc&include_24hr_change=true&include_24hr_vol=true&include_last_updated_at=true"
+      ]
+    },
+    {
+      "asset": "ETH/BTC",
+      "instrument": "aggregated cross rate",
+      "observation_time": "2026-10-08T09:29:20+08:00",
+      "ratio": 0.0310253,
+      "rolling_24h_change_pct": -1.49,
+      "volume": null,
+      "volume_note": "A cross-rate has no single standardized consolidated turnover figure; use the separate BTC and ETH spot volumes above.",
+      "meaning": "ETH lost relative ground to BTC, so the overnight crypto move was not broad-based relative strength in Ether.",
+      "sources": [
+        "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd,btc&include_24hr_change=true&include_24hr_vol=true&include_last_updated_at=true"
+      ]
+    }
+  ],
+  "actual_etf_flows_separate": {
+    "crypto_us_spot_etfs": {
+      "latest_finalized_session": {
+        "date": "2026-10-06",
+        "bitcoin_net_flow_usd_m": 118.8,
+        "bitcoin_detail_usd_m": {
+          "IBIT": 122.0,
+          "MSBT": 7.8,
+          "BTC": -11.0,
+          "all_other_reported_funds": 0.0
+        },
+        "ether_net_flow_usd_m": -201.9,
+        "ether_detail_usd_m": {
+          "ETHA": -201.9,
+          "all_other_reported_funds": 0.0
+        },
+        "source": "Farside Investors"
+      },
+      "incomplete_next_session_snapshot": {
+        "date": "2026-10-07",
+        "bitcoin_reported_so_far_usd_m": -277.2,
+        "bitcoin_missing": [
+          "IBIT"
+        ],
+        "ether_reported_so_far_usd_m": -44.8,
+        "ether_missing": [
+          "ETHA",
+          "ETHB"
+        ],
+        "editorial_instruction": "Do not call either October 7 figure a final total. Use October 6 as the latest finalized session unless every missing fund is resolved."
+      },
+      "sources": [
+        "https://farside.co.uk/btc/",
+        "https://farside.co.uk/eth/"
+      ]
+    },
+    "global_physical_gold_etfs": {
+      "source_period": "September 2026",
+      "data_as_of": "2026-09-30",
+      "publication_date": "2026-10-07",
+      "global_net_flow_usd_b": 10.0,
+      "global_holdings_change_tonnes": 67,
+      "ending_global_holdings_tonnes": 4256,
+      "ending_aum_usd_b": 574,
+      "regional_net_flow_usd_b": {
+        "North_America": 4.0,
+        "Europe": 3.6,
+        "Asia": 2.3,
+        "Other": 0.104
+      },
+      "q3_net_flow_usd_b": 31.0,
+      "q3_holdings_change_tonnes": 211,
+      "volume_context_as_of_2026_09_30": {
+        "global_gold_average_daily_volume_usd_b": 423,
+        "month_on_month_change_pct": -2,
+        "gold_etf_average_daily_trading_volume_usd_b": 7,
+        "gold_etf_trading_volume_month_on_month_change_pct": -19
+      },
+      "editorial_instruction": "This is the latest WGC monthly dataset, not an October 7 overnight flow. Do not infer ETF inflow from the October 8 gold price move.",
+      "source": "https://www.gold.org/goldhub/data/global-gold-backed-etf-holdings-and-flows"
+    }
+  },
+  "verified_news_and_taiwan_mapping": [
+    {
+      "priority": 1,
+      "headline": "AI borrowing adds pressure to already-strained sovereign bond markets",
+      "verified_facts": [
+        "Reuters reported Asian shares lower as oil, sovereign debt concerns and reports of large AI-linked financings competed for capital.",
+        "SpaceX was reported to be planning US$30bn of investment-grade debt plus US$10bn of loans for Nvidia chips; Broadcom was reported to be seeking US$50bn.",
+        "The US 10-year yield was 5.298% after reaching 5.326%; DXY was 102.22 and spot gold US$4,105/oz."
+      ],
+      "meaning_for_taiwan": "The spending plans support chip and memory demand, but debt-funded capex and 5%+ discount rates increase financing and valuation risk for Taiwan's AI supply chain.",
+      "action_watch": "Watch Taiwan AI hardware names for a split between order-demand strength and multiple compression; watch US 10-year yields and AI-credit spreads rather than treating capex headlines as unambiguously bullish.",
+      "source": "https://www.channelnewsasia.com/business/asia-shares-subdued-bonds-swamped-ai-debt-wave-6441181"
+    },
+    {
+      "priority": 2,
+      "headline": "Samsung projects record Q3 profit as AI memory shortage persists",
+      "verified_facts": [
+        "Samsung projected Q3 operating profit of 107.4tn won, up 783% year on year and above the 106.1tn won LSEG SmartEstimate.",
+        "Projected revenue was 195tn won, up 127%; Samsung said detailed divisional results are due October 29.",
+        "Reuters linked the result to AI-memory demand outstripping supply growth, a gap expected to persist into 2027."
+      ],
+      "meaning_for_taiwan": "This validates HBM/DRAM and advanced-packaging demand, supportive for Taiwan memory interfaces, testing and packaging suppliers, while Samsung's scale remains competitive pressure.",
+      "action_watch": "Favor evidence of pricing, capacity and packaging bottlenecks over extrapolating the preliminary group result to every Taiwan supplier; watch the October 29 segment breakdown.",
+      "source": "https://www.reuters.com/business/samsung-q3-profit-jumps-783-ai-memory-boom-lifts-chip-earnings-2026-10-07/"
+    },
+    {
+      "priority": 3,
+      "headline": "Micron Taoyuan union authorizes strike; no strike date set",
+      "verified_facts": [
+        "A union at Micron's Taoyuan operations said 1,994 members, 99% of ballots cast, authorized a strike over the bonus/profit-sharing dispute.",
+        "Timing and details of any strike remained under discussion; the union still sought a concrete profit-sharing proposal.",
+        "Micron employs about 15,000 people in Taiwan; Taoyuan and Taichung unions together represent more than 80% of the Taiwan workforce, while Taichung negotiations continued."
+      ],
+      "meaning_for_taiwan": "This is a live labor-continuity risk at an important memory manufacturing hub, but authorization is not an actual walkout or confirmed output loss.",
+      "action_watch": "Watch for a formal strike notice, Taichung union alignment, Micron inventory or customer-allocation changes and government mediation; do not price a production stoppage before one is announced.",
+      "source": "https://kfgo.com/2026/10/07/microns-taoyuan-union-in-taiwan-secures-authorisation-to-strike/"
+    },
+    {
+      "priority": 4,
+      "headline": "Musk limits prospective TSMC role in Terafab",
+      "verified_facts": [
+        "Musk said Tesla and SpaceX would build and run the planned Texas Terafab AI-chip complex.",
+        "He said TSMC might sublease part of the facility but nothing more; Intel CEO Lip-Bu Tan said Intel would remain involved.",
+        "TSMC and Intel had not commented to Reuters on the updated structure."
+      ],
+      "meaning_for_taiwan": "This narrows expectations for TSMC to own or operate Terafab, though a sublease or future manufacturing role remains possible; there is no disclosed contract or economics.",
+      "action_watch": "Treat this as a scope clarification, not a lost order. Watch for signed foundry, technology-transfer, equipment or capacity agreements.",
+      "source": "https://www.reuters.com/business/media-telecom/intel-keep-working-musks-terafab-chipmaking-venture-bloomberg-news-reports-2026-10-07/"
+    },
+    {
+      "priority": 5,
+      "headline": "Taiwan envoy says US ties remain robust, but US$14bn arms package is still held back",
+      "verified_facts": [
+        "Taiwan's Washington envoy Alexander Yui said US policy had not changed and ties remained robust after the Trump-Xi summit.",
+        "Reuters reported President Trump had held back a US$14bn arms-sale package after approving US$11bn in December.",
+        "Yui emphasized timely equipment delivery and cited arrival of the first two new F-16s as progress."
+      ],
+      "meaning_for_taiwan": "Official reassurance supports baseline policy continuity, but the delayed package shows that execution and delivery timing remain the measurable geopolitical variables.",
+      "action_watch": "Watch formal US approvals and delivery schedules, not diplomatic wording alone; map any approval to Taiwan defense electronics, drones, communications and aerospace names only after program detail is disclosed.",
+      "source": "https://www.reuters.com/world/china/taiwans-us-envoy-says-ties-robust-after-trump-xi-summit-2026-10-07/"
+    },
+    {
+      "priority": 6,
+      "headline": "AMD continues to explore Samsung memory and foundry cooperation",
+      "verified_facts": [
+        "AMD CEO Lisa Su said AMD continues to explore memory and foundry opportunities with Samsung and relies heavily on the Korean supply chain.",
+        "She said data-center demand remained strong and urged memory suppliers to build faster.",
+        "The March AMD-Samsung memorandum covered AI-memory supply and discussion of a possible foundry partnership for future AMD products."
+      ],
+      "meaning_for_taiwan": "The demand signal is positive for the AI compute chain, but a future Samsung foundry engagement would add competitive pressure around TSMC; exploration is not a production award.",
+      "action_watch": "Watch for a named process node, product, tape-out, volume or contract before changing foundry-share assumptions.",
+      "source": "http://rmb.reuters.com/rmd/rss/item/tag:reuters.com,2026:newsml_KBN3VN0OB?channel=frL012"
+    }
+  ],
+  "editorial_takeaway": {
+    "flow": "Overnight tape was risk-off: dollar and Treasury yields remained elevated; gold, BTC and ETH fell, with ETH underperforming BTC. Trading activity was heavier, but that is not a fund-flow signal.",
+    "meaning": "Taiwan's AI demand backdrop remains strong, validated by memory earnings and prospective chip purchases, while financing costs, labor risk and foundry competition complicate the bullish read-through.",
+    "action": "Lead with rates and relative price performance; keep finalized ETF flows in a dated sidebar; separate announced financing intentions, preliminary earnings, strike authorization and diplomatic claims from completed contracts or production changes.",
+    "watch": [
+      "US 10-year yield versus the 5.326% overnight high",
+      "DXY near 102.2 and spot gold near two-month lows",
+      "whether October 7 Farside BTC and ETH rows finalize after missing funds report",
+      "formal Micron strike notice or settlement",
+      "Samsung October 29 divisional results",
+      "signed terms for Terafab, AMD-Samsung foundry work or the delayed Taiwan arms package"
+    ]
+  },
+  "explicit_gaps": [
+    "No authoritative consolidated overnight Treasury or cash-FX volume was available.",
+    "Farside's October 7 BTC and ETH rows were incomplete at the cutoff; their displayed totals are provisional and must not be called finalized flows.",
+    "The latest WGC gold ETF flow release is monthly and dated September 30, not an October 7 or October 8 daily observation.",
+    "No verified X-based sentiment or positioning signal was used.",
+    "Some Reuters pages were verified through Reuters-syndicated full bodies because direct Reuters extraction was sparse."
+  ]
+}

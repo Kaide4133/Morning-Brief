@@ -1,0 +1,642 @@
+{
+  "schema": "taiwan_morning_brief_market_evidence.v1",
+  "brief_for": "2026-10-08 Taiwan morning brief",
+  "cutoff": {
+    "requested": "~09:30 Asia/Taipei",
+    "capture_local": "2026-10-08T09:30:15+08:00",
+    "twse_source_time": "2026-10-08T09:30:00+08:00",
+    "taifex_source_time": "2026-10-08T09:30:13+08:00"
+  },
+  "summary": {
+    "trading_calendar": {
+      "today": "2026-10-08",
+      "today_open": true,
+      "previous_open_date": "2026-10-07",
+      "next_date_2026-10-09_open": false,
+      "basis": "TWSE 2026 official holiday schedule has no 10/08 closure; live TWSE MIS quote dated 10/08 proves active session; official 10/07 MI_INDEX has complete market-wide close. 10/09 is listed closed for National Day substitute holiday."
+    },
+    "twse_intraday": {
+      "date": "2026-10-08",
+      "time": "09:30:00 Asia/Taipei",
+      "index": "TAIEX 發行量加權股價指數",
+      "last": 49269.5,
+      "change": -536.87,
+      "change_pct": -1.08,
+      "reference_previous_close": 49806.37,
+      "open": 49783.06,
+      "high": 49783.06,
+      "low": 49189.77,
+      "raw_m": 3276167,
+      "raw_r": 894784,
+      "status": "intraday official MIS snapshot"
+    },
+    "taifex_near_month": {
+      "date": "2026-10-08",
+      "time": "09:30:13 Asia/Taipei",
+      "symbol": "TXFJ6-F",
+      "display_name": "臺指期106",
+      "last": 49464.0,
+      "change": -504.0,
+      "change_pct": -1.01,
+      "reference": 49968.0,
+      "open": 49480.0,
+      "high": 49632.0,
+      "low": 49365.0,
+      "volume_contracts": 9523,
+      "best_bid": 49464.0,
+      "best_ask": 49469.0,
+      "selection": "earliest active TXF expiry and highest near-month volume; TXF-S excluded"
+    },
+    "taifex_foreign_tx_futures": {
+      "latest_complete_date": "2026-10-07",
+      "foreign_trading_net_contracts": 408,
+      "foreign_oi_long_contracts": 13545,
+      "foreign_oi_short_contracts": 92646,
+      "foreign_oi_net_contracts": -79101,
+      "status": "official complete daily row"
+    },
+    "us_indices": [
+      {
+        "name": "SOX",
+        "session_date": "2026-10-07",
+        "close": 13066.15,
+        "change": -151.67,
+        "change_pct": -1.15,
+        "previous_history_close_2026-10-06": 13217.82,
+        "raw_ohlcv_2026-10-07": {
+          "open": 12932.51171875,
+          "high": 13082.109375,
+          "low": 12864.94140625,
+          "close": 13066.1494140625,
+          "volume": 0
+        },
+        "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/%5ESOX?period1=1791158400&period2=1791504000&interval=1d&events=history",
+        "crosscheck_url": "https://www.nasdaq.com/market-activity/index/sox"
+      },
+      {
+        "name": "NASDAQ Composite",
+        "session_date": "2026-10-07",
+        "close": 27538.69,
+        "change": -61.2,
+        "change_pct": -0.22,
+        "previous_history_close_2026-10-06": 27599.79,
+        "raw_ohlcv_2026-10-07": {
+          "open": 27430.53515625,
+          "high": 27547.203125,
+          "low": 27341.30859375,
+          "close": 27538.69140625,
+          "volume": 6457816000
+        },
+        "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/%5EIXIC?period1=1791158400&period2=1791504000&interval=1d&events=history",
+        "crosscheck_url": "https://finance.yahoo.com/quote/%5EIXIC/"
+      },
+      {
+        "name": "S&P 500",
+        "session_date": "2026-10-07",
+        "close": 7801.77,
+        "change": -17.16,
+        "change_pct": -0.22,
+        "previous_history_close_2026-10-06": 7818.93,
+        "raw_ohlcv_2026-10-07": {
+          "open": 7792.97998046875,
+          "high": 7807.02001953125,
+          "low": 7763.33984375,
+          "close": 7801.77001953125,
+          "volume": 2648837000
+        },
+        "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=1791158400&period2=1791504000&interval=1d&events=history",
+        "crosscheck_url": "https://finance.yahoo.com/quote/%5EGSPC/"
+      },
+      {
+        "name": "Dow Jones Industrial Average",
+        "session_date": "2026-10-07",
+        "close": 51179.87,
+        "change": -341.41,
+        "change_pct": -0.66,
+        "previous_history_close_2026-10-06": 51521.28,
+        "raw_ohlcv_2026-10-07": {
+          "open": 51406.44140625,
+          "high": 51406.44140625,
+          "low": 50917.421875,
+          "close": 51179.87109375,
+          "volume": 364125864
+        },
+        "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/%5EDJI?period1=1791158400&period2=1791504000&interval=1d&events=history",
+        "crosscheck_url": "https://finance.yahoo.com/quote/%5EDJI/"
+      },
+      {
+        "name": "CBOE VIX",
+        "session_date": "2026-10-07",
+        "close": 15.08,
+        "change": 0.07,
+        "change_pct": 0.47,
+        "previous_history_close_2026-10-06": 15.01,
+        "raw_ohlcv_2026-10-07": {
+          "open": 15.210000038146973,
+          "high": 16.010000228881836,
+          "low": 14.970000267028809,
+          "close": 15.079999923706055,
+          "volume": 0
+        },
+        "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1791158400&period2=1791504000&interval=1d&events=history",
+        "crosscheck_url": "https://finance.yahoo.com/quote/%5EVIX/"
+      }
+    ],
+    "mag7": [
+      {
+        "symbol": "AAPL",
+        "session_date": "2026-10-07",
+        "close": 336.67,
+        "change": 3.04,
+        "change_pct": 0.91,
+        "previous_close_2026-10-06": 333.63,
+        "regular_market_time_et": "2026-10-07T16:00:01-04:00",
+        "raw_yahoo_daily_2026-10-07": {
+          "open": 337.0150146484375,
+          "high": 338.6700134277344,
+          "low": 332.7900085449219,
+          "close": null,
+          "volume": 33380854
+        },
+        "close_field_used": "meta.regularMarketPrice",
+        "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/AAPL?period1=1791158400&period2=1791504000&interval=1d&events=history"
+      },
+      {
+        "symbol": "MSFT",
+        "session_date": "2026-10-07",
+        "close": 529.76,
+        "change": 0.46,
+        "change_pct": 0.09,
+        "previous_close_2026-10-06": 529.3,
+        "regular_market_time_et": "2026-10-07T16:00:01-04:00",
+        "raw_yahoo_daily_2026-10-07": {
+          "open": 530.7249755859375,
+          "high": 531.72998046875,
+          "low": 524.6900024414062,
+          "close": null,
+          "volume": 16040951
+        },
+        "close_field_used": "meta.regularMarketPrice",
+        "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/MSFT?period1=1791158400&period2=1791504000&interval=1d&events=history"
+      },
+      {
+        "symbol": "AMZN",
+        "session_date": "2026-10-07",
+        "close": 259.92,
+        "change": 3.63,
+        "change_pct": 1.42,
+        "previous_close_2026-10-06": 256.29,
+        "regular_market_time_et": "2026-10-07T16:00:01-04:00",
+        "raw_yahoo_daily_2026-10-07": {
+          "open": 254.07000732421875,
+          "high": 260.1400146484375,
+          "low": 253.1699981689453,
+          "close": null,
+          "volume": 34897703
+        },
+        "close_field_used": "meta.regularMarketPrice",
+        "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/AMZN?period1=1791158400&period2=1791504000&interval=1d&events=history"
+      },
+      {
+        "symbol": "NVDA",
+        "session_date": "2026-10-07",
+        "close": 237.47,
+        "change": -1.77,
+        "change_pct": -0.74,
+        "previous_close_2026-10-06": 239.24,
+        "regular_market_time_et": "2026-10-07T16:00:00-04:00",
+        "raw_yahoo_daily_2026-10-07": {
+          "open": 237.6750030517578,
+          "high": 239.0800018310547,
+          "low": 236.3800048828125,
+          "close": null,
+          "volume": 81027431
+        },
+        "close_field_used": "meta.regularMarketPrice",
+        "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/NVDA?period1=1791158400&period2=1791504000&interval=1d&events=history"
+      },
+      {
+        "symbol": "GOOGL",
+        "session_date": "2026-10-07",
+        "close": 350.5,
+        "change": 2.82,
+        "change_pct": 0.81,
+        "previous_close_2026-10-06": 347.68,
+        "regular_market_time_et": "2026-10-07T16:00:01-04:00",
+        "raw_yahoo_daily_2026-10-07": {
+          "open": 346.6099853515625,
+          "high": 350.79998779296875,
+          "low": 343.0657958984375,
+          "close": null,
+          "volume": 20474140
+        },
+        "close_field_used": "meta.regularMarketPrice",
+        "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/GOOGL?period1=1791158400&period2=1791504000&interval=1d&events=history"
+      },
+      {
+        "symbol": "META",
+        "session_date": "2026-10-07",
+        "close": 721.31,
+        "change": -17.57,
+        "change_pct": -2.38,
+        "previous_close_2026-10-06": 738.88,
+        "regular_market_time_et": "2026-10-07T16:00:01-04:00",
+        "raw_yahoo_daily_2026-10-07": {
+          "open": 737.967529296875,
+          "high": 738.0,
+          "low": 720.1503295898438,
+          "close": null,
+          "volume": 12743601
+        },
+        "close_field_used": "meta.regularMarketPrice",
+        "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/META?period1=1791158400&period2=1791504000&interval=1d&events=history"
+      },
+      {
+        "symbol": "TSLA",
+        "session_date": "2026-10-07",
+        "close": 377.81,
+        "change": -2.87,
+        "change_pct": -0.75,
+        "previous_close_2026-10-06": 380.68,
+        "regular_market_time_et": "2026-10-07T16:00:00-04:00",
+        "raw_yahoo_daily_2026-10-07": {
+          "open": 378.3500061035156,
+          "high": 382.34991455078125,
+          "low": 374.42999267578125,
+          "close": null,
+          "volume": 25496215
+        },
+        "close_field_used": "meta.regularMarketPrice",
+        "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/TSLA?period1=1791158400&period2=1791504000&interval=1d&events=history"
+      }
+    ],
+    "twse_institutional_2026-10-07": [
+      {
+        "unit_name": "自營商(自行買賣)",
+        "buy_ntd": 8798053626,
+        "sell_ntd": 10165473556,
+        "net_ntd": -1367419930,
+        "net_ntd_100m": -13.67
+      },
+      {
+        "unit_name": "自營商(避險)",
+        "buy_ntd": 23287779984,
+        "sell_ntd": 29716816672,
+        "net_ntd": -6429036688,
+        "net_ntd_100m": -64.29
+      },
+      {
+        "unit_name": "投信",
+        "buy_ntd": 21947419403,
+        "sell_ntd": 25270803488,
+        "net_ntd": -3323384085,
+        "net_ntd_100m": -33.23
+      },
+      {
+        "unit_name": "外資及陸資(不含外資自營商)",
+        "buy_ntd": 330798361443,
+        "sell_ntd": 343842247808,
+        "net_ntd": -13043886365,
+        "net_ntd_100m": -130.44
+      },
+      {
+        "unit_name": "外資自營商",
+        "buy_ntd": 0,
+        "sell_ntd": 0,
+        "net_ntd": 0,
+        "net_ntd_100m": 0.0
+      },
+      {
+        "unit_name": "合計",
+        "buy_ntd": 384831614456,
+        "sell_ntd": 408995341524,
+        "net_ntd": -24163727068,
+        "net_ntd_100m": -241.64
+      }
+    ]
+  },
+  "raw_evidence": {
+    "twse_calendar": {
+      "source_url": "https://www.twse.com.tw/holidaySchedule/holidaySchedule?response=json&queryYear=115",
+      "evidence_class": "official/original",
+      "title": "115 年市場開休市日期",
+      "selected_rows": [
+        [
+          "2026-10-09",
+          "國慶日",
+          "國慶日為10月10日適逢星期六，於10月9日（星期五）補假。"
+        ],
+        [
+          "2026-10-10",
+          "國慶日",
+          "依規定放假1日。"
+        ]
+      ],
+      "absence_check": "2026-10-08 is not in the official closure/special-date table"
+    },
+    "twse_intraday": {
+      "source_url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+      "evidence_class": "official/original",
+      "response_status": {
+        "rtcode": "0000",
+        "rtmessage": "OK",
+        "queryTime": {
+          "sysDate": "20261008",
+          "stockInfoItem": 49,
+          "stockInfo": 462,
+          "sessionStr": "UserSession",
+          "sysTime": "09:30:01",
+          "showChart": false,
+          "sessionFromTime": -1,
+          "sessionLatestTime": -1
+        }
+      },
+      "selected_raw_msg": {
+        "@": "t00.tw",
+        "pid": "2.tse.tw|361",
+        "^": "20261008",
+        "key": "tse_t00.tw_20261008",
+        "c": "t00",
+        "#": "2.tse.tw|361",
+        "d": "20261008",
+        "%": "09:30:00",
+        "ch": "t00.tw",
+        "tlong": "1791423000000",
+        "h": "49783.06",
+        "i": "tidx.tw",
+        "it": "t",
+        "l": "49189.77",
+        "m": "3276167",
+        "n": "發行量加權股價指數",
+        "o": "49783.06",
+        "r": "894784",
+        "ex": "tse",
+        "t": "09:30:00",
+        "y": "49806.37",
+        "z": "49269.50"
+      }
+    },
+    "twse_previous_open_close": {
+      "source_url": "https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=20261007&type=ALL&response=json",
+      "evidence_class": "official/original",
+      "stat": "OK",
+      "date": "20261007",
+      "taiex_raw_row": [
+        "發行量加權股價指數",
+        "49,806.37",
+        "<p style ='color:green'>-</p>",
+        "16.18",
+        "-0.03",
+        ""
+      ],
+      "market_total_raw_row": [
+        "總計(1~15)",
+        "986,280,041,197",
+        "10,357,959,027",
+        "4,929,172"
+      ],
+      "breadth_raw_rows": [
+        [
+          "上漲(漲停)",
+          "7,322(117)",
+          "588(12)"
+        ],
+        [
+          "下跌(跌停)",
+          "7,537(74)",
+          "387(4)"
+        ],
+        [
+          "持平",
+          "1,222",
+          "99"
+        ],
+        [
+          "未成交",
+          "17,062",
+          "5"
+        ],
+        [
+          "無比價",
+          "3,498",
+          "3"
+        ]
+      ]
+    },
+    "twse_institutional": {
+      "source_url": "https://www.twse.com.tw/rwd/zh/fund/BFI82U?date=20261007&response=json",
+      "evidence_class": "official/original",
+      "stat": "OK",
+      "date": "20261007",
+      "fields": [
+        "單位名稱",
+        "買進金額",
+        "賣出金額",
+        "買賣差額"
+      ],
+      "raw_rows": [
+        [
+          "自營商(自行買賣)",
+          "8,798,053,626",
+          "10,165,473,556",
+          "-1,367,419,930"
+        ],
+        [
+          "自營商(避險)",
+          "23,287,779,984",
+          "29,716,816,672",
+          "-6,429,036,688"
+        ],
+        [
+          "投信",
+          "21,947,419,403",
+          "25,270,803,488",
+          "-3,323,384,085"
+        ],
+        [
+          "外資及陸資(不含外資自營商)",
+          "330,798,361,443",
+          "343,842,247,808",
+          "-13,043,886,365"
+        ],
+        [
+          "外資自營商",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "合計",
+          "384,831,614,456",
+          "408,995,341,524",
+          "-24,163,727,068"
+        ]
+      ],
+      "unit": "NTD"
+    },
+    "taifex_intraday": {
+      "source_url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+      "method": "POST",
+      "evidence_class": "official/original",
+      "selected_raw_quote": {
+        "SymbolID": "TXFJ6-F",
+        "SpotID": "",
+        "DispCName": "臺指期106",
+        "DispEName": "TX106",
+        "Status": "",
+        "CBidPrice1": "49464.00",
+        "CBidSize1": "33",
+        "CAskPrice1": "49469.00",
+        "CAskSize1": "1",
+        "CTotalVolume": "9523",
+        "COpenPrice": "49480.00",
+        "CHighPrice": "49632.00",
+        "CLowPrice": "49365.00",
+        "CLastPrice": "49464.00",
+        "CRefPrice": "49968.00",
+        "CCeilPrice": "54964.00",
+        "CFloorPrice": "44972.00",
+        "SettlementPrice": "",
+        "OpenInterest": "",
+        "CDate": "20261008",
+        "CTime": "093013",
+        "CTestTime": "084455",
+        "CDiff": "-504.00",
+        "CDiffRate": "-1.01",
+        "CAmpRate": "0.53",
+        "CBestBidPrice": "49464.00",
+        "CBestAskPrice": "49469.00",
+        "CBestBidSize": "33",
+        "CBestAskSize": "1",
+        "CTestPrice": "49556.00",
+        "CTestVolume": "54"
+      }
+    },
+    "taifex_foreign_futures": {
+      "source_url": "https://www.taifex.com.tw/cht/3/futContractsDate?queryDate=2026%2F10%2F07&commodityId=TXF",
+      "evidence_class": "official/original",
+      "date": "2026-10-07",
+      "fields": [
+        "identity",
+        "trade_long_contracts",
+        "trade_long_amount_thousand_ntd",
+        "trade_short_contracts",
+        "trade_short_amount_thousand_ntd",
+        "trade_net_contracts",
+        "trade_net_amount_thousand_ntd",
+        "oi_long_contracts",
+        "oi_long_amount_thousand_ntd",
+        "oi_short_contracts",
+        "oi_short_amount_thousand_ntd",
+        "oi_net_contracts",
+        "oi_net_amount_thousand_ntd"
+      ],
+      "raw_foreign_row": [
+        "外資",
+        "27,005",
+        "270,217,933",
+        "26,597",
+        "266,142,238",
+        "408",
+        "4,075,695",
+        "13,545",
+        "135,388,163",
+        "92,646",
+        "925,985,823",
+        "-79,101",
+        "-790,597,660"
+      ]
+    },
+    "us_market_method": {
+      "primary": "Yahoo Finance chart JSON; permitted fallback",
+      "crosschecks": [
+        "Nasdaq SOX official overview",
+        "Nasdaq Composite quote/search surface",
+        "CNBC combined MAG7 quote page",
+        "MarketWatch META quote"
+      ],
+      "note": "US sessions are completed 2026-10-07 regular closes. Index daily candle close used; MAG7 daily candle close was null at fetch so meta.regularMarketPrice timestamped 16:00 ET was used and cross-checked against CNBC/MarketWatch."
+    },
+    "raw_files": [
+      {
+        "path": "/Users/kaide/.hermes/cache/scratch/mb1008-raw/twse_holidays_115.json",
+        "bytes": 2783
+      },
+      {
+        "path": "/Users/kaide/.hermes/cache/scratch/mb1008-raw/twse_mis_taiex_final.json",
+        "bytes": 694
+      },
+      {
+        "path": "/Users/kaide/.hermes/cache/scratch/mb1008-raw/twse_mi_index_20261007.json",
+        "bytes": 5125121
+      },
+      {
+        "path": "/Users/kaide/.hermes/cache/scratch/mb1008-raw/twse_bfi82u_20261007.json",
+        "bytes": 1588
+      },
+      {
+        "path": "/Users/kaide/.hermes/cache/scratch/mb1008-raw/taifex_mis_quotes_final.json",
+        "bytes": 60622
+      },
+      {
+        "path": "/Users/kaide/.hermes/cache/scratch/mb1008-raw/taifex_futcontracts_20261007.html",
+        "bytes": 319903
+      },
+      {
+        "path": "/Users/kaide/.hermes/cache/scratch/mb1008-raw/yahoo_IDX_SOX.json",
+        "bytes": 1485
+      },
+      {
+        "path": "/Users/kaide/.hermes/cache/scratch/mb1008-raw/yahoo_IDX_IXIC.json",
+        "bytes": 1510
+      },
+      {
+        "path": "/Users/kaide/.hermes/cache/scratch/mb1008-raw/yahoo_IDX_GSPC.json",
+        "bytes": 1500
+      },
+      {
+        "path": "/Users/kaide/.hermes/cache/scratch/mb1008-raw/yahoo_IDX_DJI.json",
+        "bytes": 1496
+      },
+      {
+        "path": "/Users/kaide/.hermes/cache/scratch/mb1008-raw/yahoo_IDX_VIX.json",
+        "bytes": 1502
+      },
+      {
+        "path": "/Users/kaide/.hermes/cache/scratch/mb1008-raw/yahoo_AAPL.json",
+        "bytes": 1490
+      },
+      {
+        "path": "/Users/kaide/.hermes/cache/scratch/mb1008-raw/yahoo_MSFT.json",
+        "bytes": 1504
+      },
+      {
+        "path": "/Users/kaide/.hermes/cache/scratch/mb1008-raw/yahoo_AMZN.json",
+        "bytes": 1505
+      },
+      {
+        "path": "/Users/kaide/.hermes/cache/scratch/mb1008-raw/yahoo_NVDA.json",
+        "bytes": 1518
+      },
+      {
+        "path": "/Users/kaide/.hermes/cache/scratch/mb1008-raw/yahoo_GOOGL.json",
+        "bytes": 1498
+      },
+      {
+        "path": "/Users/kaide/.hermes/cache/scratch/mb1008-raw/yahoo_META.json",
+        "bytes": 1497
+      },
+      {
+        "path": "/Users/kaide/.hermes/cache/scratch/mb1008-raw/yahoo_TSLA.json",
+        "bytes": 1486
+      }
+    ]
+  },
+  "gaps_and_cautions": [
+    "TWSE MIS short keys m and r are preserved raw but not labeled as turnover/volume because the checked official endpoint did not expose a field dictionary; no unsupported unit mapping was promoted.",
+    "Yahoo MAG7 2026-10-07 daily candle close fields were null at retrieval even though regularMarketTime was 16:00 ET; closes use meta.regularMarketPrice and were cross-checked on public quote pages.",
+    "NASDAQ Composite Yahoo historical rows imply -61.10 from rounded closes, while Yahoo/Nasdaq quote surfaces report -61.20; summary preserves the displayed official/quote change -61.20 and the raw historical prior close separately.",
+    "Nasdaq SOX official overview search surface displayed an internally inconsistent net-change value in one view; close 13,066.15 and previous close 13,217.82 imply -151.67, matching Nasdaq market-activity/Yahoo/MarketWatch quote surfaces. Summary uses -151.67.",
+    "No same-day TWSE institutional or foreign futures OI data is expected at 09:30; latest complete date is explicitly 2026-10-07."
+  ]
+}
