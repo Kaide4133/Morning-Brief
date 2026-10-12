@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "water": {
+    "level": 66.9,
+    "previous": 66.5,
+    "delta": 0.4,
+    "previous_trading_date": "2026-10-08"
+  },
+  "rows": 87,
+  "unique_codes": 86,
+  "zone_counts": [
+    10,
+    7,
+    40,
+    30
+  ],
+  "null_etf_price_codes": [
+    "00681R",
+    "009807"
+  ],
+  "worker_audit_override": "Worker recommendation to keep 22.91 / 18.1 as stock prices was rejected after direct screenshot inspection; those values are NAV. Primary screenshot and AX nulls agree.",
+  "flows_usd_million": {
+    "btc_day": 21.1,
+    "eth_day": -56.1
+  },
+  "technical_records": 86,
+  "technical_all_last_dates": "2026-10-12",
+  "technical_limitation": "009820 has less than 180 sessions; morphology confidence reduced by generator",
+  "test_results": {
+    "unittest": 20,
+    "scenario_regression": 7
+  },
+  "mirror_equal": true,
+  "browser_qa": "browser-qa.json",
+  "news_version_policy": "Use parent reopened Reuters body; omit inconsistent child CPI forecasts and Fed hike probabilities."
+}

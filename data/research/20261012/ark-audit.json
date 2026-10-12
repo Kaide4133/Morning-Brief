@@ -1,0 +1,1357 @@
+{
+  "audit_version": "1.0",
+  "requested_date": "2026-10-12",
+  "scope": "Read-only audit of local Ark latest pointer, same-run success/validation, four zones/names/counts, ETF null-price trap, current water, and previous valid trading-day water.",
+  "overall_status": "PASS_WITH_NOTES",
+  "usable_as_morning_brief_ark_input": true,
+  "blockers": [],
+  "output_path": "/Users/kaide/.hermes/cache/scratch/kmb-20261012-ark-audit.json",
+  "source_paths": {
+    "ark_stocks_latest_pointer": "/Users/kaide/Pictures/方舟運算截圖/ark_stocks_latest.json",
+    "intermediate_latest_directory": "/Users/kaide/Pictures/方舟運算截圖/.ark_latest",
+    "ark_stocks_resolved_target": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-12_09-08-05/ark_stocks.json",
+    "success": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-12_09-08-05/success.json",
+    "ark_validation": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-12_09-08-05/ark_validation.json",
+    "ark_stocks_ax": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-12_09-08-05/ark_stocks_ax.json",
+    "trading_day": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-12_09-08-05/trading_day.json",
+    "water_level_history": "/Users/kaide/Documents/Morning-Brief/data/water-level-history.json",
+    "holiday_calendar": "/Users/kaide/Library/Application Support/com.kaide.taiwan-market-day/holidays-2026.json",
+    "previous_date_run_report": "/Users/kaide/Pictures/方舟運算截圖/run_reports/2026-10-09_09-05-02.json"
+  },
+  "sources": {
+    "latest_pointer": {
+      "path": "/Users/kaide/Pictures/方舟運算截圖/ark_stocks_latest.json",
+      "node_type": "symlink",
+      "link_text": ".ark_latest/ark_stocks.json",
+      "intermediate_directory_path": "/Users/kaide/Pictures/方舟運算截圖/.ark_latest",
+      "intermediate_directory_is_symlink": true,
+      "intermediate_directory_link_text": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-12_09-08-05",
+      "resolved_target": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-12_09-08-05/ark_stocks.json",
+      "target_size_bytes": 75261,
+      "target_sha256": "19960f6be83af27fe10ffa8cd5b31e09910f19b671ba2de8545b9b199d398013"
+    },
+    "success": {
+      "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-12_09-08-05/success.json",
+      "size_bytes": 7733,
+      "sha256": "af8b009d3eabdcf54a5107bdb1969d26c3dbf24e2bd02172806591351fdd4772",
+      "ok": true,
+      "status": "success",
+      "stage": "complete",
+      "runId": "2026-10-12_09-08-05",
+      "date": "2026-10-12"
+    },
+    "validation": {
+      "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-12_09-08-05/ark_validation.json",
+      "size_bytes": 999,
+      "sha256": "4b5af8d856f106fe702b22d19f078722aba8617a1df5bd9af0aaefac8b2d9f88",
+      "ok": true
+    },
+    "water_history": {
+      "path": "/Users/kaide/Documents/Morning-Brief/data/water-level-history.json",
+      "size_bytes": 14748,
+      "record_count": 109
+    }
+  },
+  "same_day": {
+    "timezone": "Asia/Taipei",
+    "checks": [
+      {
+        "source": "ark_stocks.json",
+        "field": "generatedAt",
+        "raw": "2026-10-12T01:10:58.687917+00:00",
+        "asia_taipei_date": "2026-10-12",
+        "pass": true
+      },
+      {
+        "source": "success.json",
+        "field": "date",
+        "raw": "2026-10-12",
+        "asia_taipei_date": "2026-10-12",
+        "pass": true
+      },
+      {
+        "source": "success.json",
+        "field": "generatedAt",
+        "raw": "2026-10-12T09:10:58+08:00",
+        "asia_taipei_date": "2026-10-12",
+        "pass": true
+      },
+      {
+        "source": "ark_validation.json",
+        "field": "generatedAt",
+        "raw": "2026-10-12T01:10:58.730637+00:00",
+        "asia_taipei_date": "2026-10-12",
+        "pass": true
+      },
+      {
+        "source": "trading_day.json",
+        "field": "date",
+        "raw": "2026-10-12",
+        "asia_taipei_date": "2026-10-12",
+        "pass": true
+      }
+    ],
+    "all_pass": true,
+    "trading_day": {
+      "path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-12_09-08-05/trading_day.json",
+      "ok": true,
+      "status": "confirmed",
+      "stage": "trading_day_check",
+      "date": "2026-10-12",
+      "reason": "年度行事曆開市；台北市停班與交易所特殊停市查核通過。"
+    }
+  },
+  "trust_gates": {
+    "latest_pointer_is_symlink": true,
+    "latest_pointer_resolves_to_regular_nonempty_file": true,
+    "success_ok_true": true,
+    "success_stage_complete": true,
+    "success_status_success": true,
+    "validation_ok_true": true,
+    "same_run_directory": true,
+    "target_hash_matches_success_manifest": true,
+    "validation_hash_matches_success_manifest": true,
+    "all_required_artifacts_same_day": true,
+    "trading_day_confirmed": true,
+    "zones_counts_codes_names_validate": true,
+    "primary_etf_prices_complete": true,
+    "water_sources_agree": true,
+    "previous_water_resolved_from_history": true
+  },
+  "zones": {
+    "expected_exact_zone_names": [
+      "ETF價值區",
+      "ETF升溫區",
+      "產業價值區",
+      "產業升溫區"
+    ],
+    "actual_zone_names_in_summary": [
+      "ETF價值區",
+      "ETF升溫區",
+      "產業價值區",
+      "產業升溫區"
+    ],
+    "row_count_total": 87,
+    "summary_totalStocks": 87,
+    "success_totalStocks": 87,
+    "unique_code_count": 86,
+    "cross_zone_overlap_count": 1,
+    "cross_zone_overlaps": [
+      {
+        "code": "2492",
+        "occurrences": [
+          {
+            "section": "產業價值區",
+            "rank": 39,
+            "name": "華新科",
+            "price": "416"
+          },
+          {
+            "section": "產業升溫區",
+            "rank": 26,
+            "name": "華新科",
+            "price": "420"
+          }
+        ]
+      }
+    ],
+    "capture_duplicate_records_removed": 28,
+    "summary_duplicateCount": 28,
+    "all_zone_checks_pass": true,
+    "per_zone": {
+      "ETF價值區": {
+        "counts": {
+          "actual_stock_rows": 10,
+          "ark_summary_count": 10,
+          "ark_summary_code_count": 10,
+          "success_summary_count": 10,
+          "validation_ocr_count": 10,
+          "validation_ax_count": 10,
+          "actual_ax_rows": 10
+        },
+        "count_consistent": true,
+        "summary_codes_match_actual_order": true,
+        "ranks_are_1_to_n": true,
+        "codes_unique_within_zone": true,
+        "all_names_nonblank": true,
+        "primary_vs_ax_code_order_match": true,
+        "independent_primary_vs_ax_name_differences": [],
+        "validation": {
+          "ok": true,
+          "missingInAx": [],
+          "missingInOcr": [],
+          "nameDifferences": []
+        },
+        "entries": [
+          {
+            "rank": 1,
+            "code": "00947",
+            "name": "台新臺灣IC設計",
+            "price": "40.16"
+          },
+          {
+            "rank": 2,
+            "code": "00690",
+            "name": "兆豐藍籌30",
+            "price": "82.75"
+          },
+          {
+            "rank": 3,
+            "code": "00927",
+            "name": "群益半導體收益",
+            "price": "40.32"
+          },
+          {
+            "rank": 4,
+            "code": "00913",
+            "name": "兆豐台灣晶圓製造",
+            "price": "52.85"
+          },
+          {
+            "rank": 5,
+            "code": "00888",
+            "name": "永豐台灣ESG",
+            "price": "36.31"
+          },
+          {
+            "rank": 6,
+            "code": "00891",
+            "name": "中信關鍵半導體",
+            "price": "37.88"
+          },
+          {
+            "rank": 7,
+            "code": "00935",
+            "name": "野村臺灣新科技50",
+            "price": "61.4"
+          },
+          {
+            "rank": 8,
+            "code": "00894",
+            "name": "中信小資高價30",
+            "price": "51.25"
+          },
+          {
+            "rank": 9,
+            "code": "00631L",
+            "name": "元大台灣50正2",
+            "price": "40.14"
+          },
+          {
+            "rank": 10,
+            "code": "00981A",
+            "name": "主動統一台股增長",
+            "price": "31.81"
+          }
+        ]
+      },
+      "ETF升溫區": {
+        "counts": {
+          "actual_stock_rows": 7,
+          "ark_summary_count": 7,
+          "ark_summary_code_count": 7,
+          "success_summary_count": 7,
+          "validation_ocr_count": 7,
+          "validation_ax_count": 7,
+          "actual_ax_rows": 7
+        },
+        "count_consistent": true,
+        "summary_codes_match_actual_order": true,
+        "ranks_are_1_to_n": true,
+        "codes_unique_within_zone": true,
+        "all_names_nonblank": true,
+        "primary_vs_ax_code_order_match": true,
+        "independent_primary_vs_ax_name_differences": [],
+        "validation": {
+          "ok": true,
+          "missingInAx": [],
+          "missingInOcr": [],
+          "nameDifferences": []
+        },
+        "entries": [
+          {
+            "rank": 1,
+            "code": "00733",
+            "name": "富邦臺灣中小",
+            "price": "78.6"
+          },
+          {
+            "rank": 2,
+            "code": "009801",
+            "name": "中信美國創新科技",
+            "price": "11.81"
+          },
+          {
+            "rank": 3,
+            "code": "00681R",
+            "name": "元大美債20反1",
+            "price": "22.91"
+          },
+          {
+            "rank": 4,
+            "code": "009807",
+            "name": "台新標普科技精選",
+            "price": "18.1"
+          },
+          {
+            "rank": 5,
+            "code": "00924",
+            "name": "復華S&P500成長",
+            "price": "34.55"
+          },
+          {
+            "rank": 6,
+            "code": "009820",
+            "name": "元大納斯達克精選",
+            "price": "10.7"
+          },
+          {
+            "rank": 7,
+            "code": "00689R",
+            "name": "國泰20年美債反1",
+            "price": "24.01"
+          }
+        ]
+      },
+      "產業價值區": {
+        "counts": {
+          "actual_stock_rows": 40,
+          "ark_summary_count": 40,
+          "ark_summary_code_count": 40,
+          "success_summary_count": 40,
+          "validation_ocr_count": 40,
+          "validation_ax_count": 40,
+          "actual_ax_rows": 40
+        },
+        "count_consistent": true,
+        "summary_codes_match_actual_order": true,
+        "ranks_are_1_to_n": true,
+        "codes_unique_within_zone": true,
+        "all_names_nonblank": true,
+        "primary_vs_ax_code_order_match": true,
+        "independent_primary_vs_ax_name_differences": [],
+        "validation": {
+          "ok": true,
+          "missingInAx": [],
+          "missingInOcr": [],
+          "nameDifferences": []
+        },
+        "entries": [
+          {
+            "rank": 1,
+            "code": "2356",
+            "name": "英業達",
+            "price": "57.6"
+          },
+          {
+            "rank": 2,
+            "code": "2454",
+            "name": "聯發科",
+            "price": "4,545"
+          },
+          {
+            "rank": 3,
+            "code": "2382",
+            "name": "廣達",
+            "price": "321.5"
+          },
+          {
+            "rank": 4,
+            "code": "2303",
+            "name": "聯電",
+            "price": "146.5"
+          },
+          {
+            "rank": 5,
+            "code": "2059",
+            "name": "川湖",
+            "price": "10,470"
+          },
+          {
+            "rank": 6,
+            "code": "2317",
+            "name": "鴻海",
+            "price": "244.5"
+          },
+          {
+            "rank": 7,
+            "code": "2376",
+            "name": "技嘉",
+            "price": "363.5"
+          },
+          {
+            "rank": 8,
+            "code": "2337",
+            "name": "旺宏",
+            "price": "115"
+          },
+          {
+            "rank": 9,
+            "code": "2385",
+            "name": "群光",
+            "price": "104"
+          },
+          {
+            "rank": 10,
+            "code": "2379",
+            "name": "瑞昱",
+            "price": "738"
+          },
+          {
+            "rank": 11,
+            "code": "3017",
+            "name": "奇鋐",
+            "price": "3,360"
+          },
+          {
+            "rank": 12,
+            "code": "2449",
+            "name": "京元電子",
+            "price": "300.5"
+          },
+          {
+            "rank": 13,
+            "code": "2395",
+            "name": "研華",
+            "price": "734"
+          },
+          {
+            "rank": 14,
+            "code": "3231",
+            "name": "緯創",
+            "price": "190"
+          },
+          {
+            "rank": 15,
+            "code": "2308",
+            "name": "台達電",
+            "price": "1,895"
+          },
+          {
+            "rank": 16,
+            "code": "2377",
+            "name": "微星",
+            "price": "155.5"
+          },
+          {
+            "rank": 17,
+            "code": "2360",
+            "name": "致茂",
+            "price": "2,285"
+          },
+          {
+            "rank": 18,
+            "code": "2301",
+            "name": "光寶科",
+            "price": "284"
+          },
+          {
+            "rank": 19,
+            "code": "2344",
+            "name": "華邦電",
+            "price": "173.5"
+          },
+          {
+            "rank": 20,
+            "code": "3037",
+            "name": "欣興",
+            "price": "1,265"
+          },
+          {
+            "rank": 21,
+            "code": "2347",
+            "name": "聯強",
+            "price": "98.8"
+          },
+          {
+            "rank": 22,
+            "code": "2327",
+            "name": "國巨*",
+            "price": "622"
+          },
+          {
+            "rank": 23,
+            "code": "3702",
+            "name": "大聯大",
+            "price": "117.5"
+          },
+          {
+            "rank": 24,
+            "code": "3443",
+            "name": "創意",
+            "price": "8,085"
+          },
+          {
+            "rank": 25,
+            "code": "3653",
+            "name": "健策",
+            "price": "7,060"
+          },
+          {
+            "rank": 26,
+            "code": "2330",
+            "name": "台積電",
+            "price": "2,515"
+          },
+          {
+            "rank": 27,
+            "code": "3706",
+            "name": "神達",
+            "price": "82.3"
+          },
+          {
+            "rank": 28,
+            "code": "3189",
+            "name": "景碩",
+            "price": "1,060"
+          },
+          {
+            "rank": 29,
+            "code": "2408",
+            "name": "南亞科",
+            "price": "523"
+          },
+          {
+            "rank": 30,
+            "code": "2383",
+            "name": "台光電",
+            "price": "5,820"
+          },
+          {
+            "rank": 31,
+            "code": "2313",
+            "name": "華通",
+            "price": "257"
+          },
+          {
+            "rank": 32,
+            "code": "2345",
+            "name": "智邦",
+            "price": "2,045"
+          },
+          {
+            "rank": 33,
+            "code": "2368",
+            "name": "金像電",
+            "price": "1,255"
+          },
+          {
+            "rank": 34,
+            "code": "3533",
+            "name": "嘉澤",
+            "price": "1,855"
+          },
+          {
+            "rank": 35,
+            "code": "3711",
+            "name": "日月光投控",
+            "price": "745"
+          },
+          {
+            "rank": 36,
+            "code": "3044",
+            "name": "健鼎",
+            "price": "584"
+          },
+          {
+            "rank": 37,
+            "code": "4958",
+            "name": "臻鼎-KY",
+            "price": "583"
+          },
+          {
+            "rank": 38,
+            "code": "3661",
+            "name": "世芯-KY",
+            "price": "4,350"
+          },
+          {
+            "rank": 39,
+            "code": "2492",
+            "name": "華新科",
+            "price": "416"
+          },
+          {
+            "rank": 40,
+            "code": "3036",
+            "name": "文曄",
+            "price": "221"
+          }
+        ]
+      },
+      "產業升溫區": {
+        "counts": {
+          "actual_stock_rows": 30,
+          "ark_summary_count": 30,
+          "ark_summary_code_count": 30,
+          "success_summary_count": 30,
+          "validation_ocr_count": 30,
+          "validation_ax_count": 30,
+          "actual_ax_rows": 30
+        },
+        "count_consistent": true,
+        "summary_codes_match_actual_order": true,
+        "ranks_are_1_to_n": true,
+        "codes_unique_within_zone": true,
+        "all_names_nonblank": true,
+        "primary_vs_ax_code_order_match": true,
+        "independent_primary_vs_ax_name_differences": [],
+        "validation": {
+          "ok": true,
+          "missingInAx": [],
+          "missingInOcr": [],
+          "nameDifferences": []
+        },
+        "entries": [
+          {
+            "rank": 1,
+            "code": "6672",
+            "name": "騰輝電子-KY",
+            "price": "568"
+          },
+          {
+            "rank": 2,
+            "code": "6199",
+            "name": "天品",
+            "price": "143"
+          },
+          {
+            "rank": 3,
+            "code": "2466",
+            "name": "冠西電",
+            "price": "215.5"
+          },
+          {
+            "rank": 4,
+            "code": "4174",
+            "name": "浩鼎",
+            "price": "56"
+          },
+          {
+            "rank": 5,
+            "code": "6957",
+            "name": "裕慶-KY",
+            "price": "441"
+          },
+          {
+            "rank": 6,
+            "code": "3597",
+            "name": "映興",
+            "price": "41.3"
+          },
+          {
+            "rank": 7,
+            "code": "6213",
+            "name": "聯茂",
+            "price": "808"
+          },
+          {
+            "rank": 8,
+            "code": "3167",
+            "name": "大量",
+            "price": "1,060"
+          },
+          {
+            "rank": 9,
+            "code": "6278",
+            "name": "台表科",
+            "price": "267.5"
+          },
+          {
+            "rank": 10,
+            "code": "6196",
+            "name": "帆宣",
+            "price": "666"
+          },
+          {
+            "rank": 11,
+            "code": "4556",
+            "name": "旭然",
+            "price": "138"
+          },
+          {
+            "rank": 12,
+            "code": "2340",
+            "name": "台亞",
+            "price": "56.4"
+          },
+          {
+            "rank": 13,
+            "code": "6197",
+            "name": "佳必琪",
+            "price": "382"
+          },
+          {
+            "rank": 14,
+            "code": "5228",
+            "name": "鈺鎧",
+            "price": "62.9"
+          },
+          {
+            "rank": 15,
+            "code": "6691",
+            "name": "洋基工程",
+            "price": "765"
+          },
+          {
+            "rank": 16,
+            "code": "4760",
+            "name": "勤凱",
+            "price": "365.5"
+          },
+          {
+            "rank": 17,
+            "code": "6127",
+            "name": "九豪",
+            "price": "67"
+          },
+          {
+            "rank": 18,
+            "code": "3624",
+            "name": "光頡",
+            "price": "178"
+          },
+          {
+            "rank": 19,
+            "code": "6174",
+            "name": "安碁",
+            "price": "63.3"
+          },
+          {
+            "rank": 20,
+            "code": "3147",
+            "name": "大綜",
+            "price": "312.5"
+          },
+          {
+            "rank": 21,
+            "code": "3564",
+            "name": "其陽",
+            "price": "66.9"
+          },
+          {
+            "rank": 22,
+            "code": "1301",
+            "name": "台塑",
+            "price": "82"
+          },
+          {
+            "rank": 23,
+            "code": "4139",
+            "name": "馬光-KY",
+            "price": "45.2"
+          },
+          {
+            "rank": 24,
+            "code": "3518",
+            "name": "柏騰",
+            "price": "47.5"
+          },
+          {
+            "rank": 25,
+            "code": "1303",
+            "name": "南亞",
+            "price": "311"
+          },
+          {
+            "rank": 26,
+            "code": "2492",
+            "name": "華新科",
+            "price": "420"
+          },
+          {
+            "rank": 27,
+            "code": "6708",
+            "name": "天擎",
+            "price": "70"
+          },
+          {
+            "rank": 28,
+            "code": "3268",
+            "name": "海德威",
+            "price": "24.1"
+          },
+          {
+            "rank": 29,
+            "code": "6152",
+            "name": "百一",
+            "price": "18.9"
+          },
+          {
+            "rank": 30,
+            "code": "3016",
+            "name": "嘉晶",
+            "price": "183.5"
+          }
+        ]
+      }
+    }
+  },
+  "names_audit": {
+    "all_primary_names_nonblank": true,
+    "independent_primary_vs_ax_name_differences": [],
+    "validation_name_differences_by_zone": {
+      "ETF價值區": [],
+      "ETF升溫區": [],
+      "產業價值區": [],
+      "產業升溫區": []
+    },
+    "pass": true
+  },
+  "etf_null_price_trap": {
+    "rule": "Primary ark_stocks.json controls zone/order/screenshot price. AX is secondary for code/name; never overwrite primary price/change with AX null and never coerce null to 0.",
+    "primary_etf_row_count": 17,
+    "primary_non_null_price_count": 17,
+    "primary_null_or_blank_prices": [],
+    "primary_nonpositive_or_nonnumeric_prices": [],
+    "ax_etf_row_count": 17,
+    "ax_null_price_count": 2,
+    "ax_null_price_rows": [
+      {
+        "section": "ETF升溫區",
+        "rank": 3,
+        "code": "00681R",
+        "name": "元大美債20反1",
+        "primary_ark_price": "22.91",
+        "primary_ark_change": "(-%)",
+        "ax_price": null,
+        "ax_change": null,
+        "ax_columns": [
+          "-",
+          "(-%)",
+          "22.91",
+          "1.42%",
+          "美國",
+          "9"
+        ],
+        "safe_action": "retain primary ark_stocks.json price/change; do not overwrite with AX null or coerce null to 0"
+      },
+      {
+        "section": "ETF升溫區",
+        "rank": 4,
+        "code": "009807",
+        "name": "台新標普科技精選",
+        "primary_ark_price": "18.1",
+        "primary_ark_change": "(-%)",
+        "ax_price": null,
+        "ax_change": null,
+        "ax_columns": [
+          "-",
+          "(-%)",
+          "18.1",
+          "1.28%",
+          "美國",
+          "1"
+        ],
+        "safe_action": "retain primary ark_stocks.json price/change; do not overwrite with AX null or coerce null to 0"
+      }
+    ],
+    "nonnull_ax_vs_primary_price_mismatches": [],
+    "safe_primary_price_gate_pass": true
+  },
+  "water": {
+    "current": {
+      "date": "2026-10-12",
+      "value_percent": 66.9,
+      "ark_path": "$.riskControl.value",
+      "ark_raw": "66.9%",
+      "success_path": "$.summary.riskControl",
+      "success_raw": "66.9%",
+      "sources_agree": true
+    },
+    "history": {
+      "path": "/Users/kaide/Documents/Morning-Brief/data/water-level-history.json",
+      "record_count": 109,
+      "dates_sorted_descending": true,
+      "current_date_present": false,
+      "latest_history_date": "2026-10-08"
+    },
+    "previous_valid_trading_day": {
+      "date": "2026-10-08",
+      "water_level_percent": 66.5,
+      "history_record": {
+        "date": "2026-10-08",
+        "water_level": 66.5,
+        "scenario_id": "06",
+        "scenario_label": "06 風險收縮"
+      }
+    },
+    "nontrading_bridge": [
+      {
+        "date": "2026-10-09",
+        "weekday": "Friday",
+        "state": "holiday",
+        "evidence": {
+          "date": "2026-10-09",
+          "name": "國慶日"
+        },
+        "run_report_status": "skipped",
+        "run_report_reason": "國慶日"
+      },
+      {
+        "date": "2026-10-10",
+        "weekday": "Saturday",
+        "state": "weekend"
+      },
+      {
+        "date": "2026-10-11",
+        "weekday": "Sunday",
+        "state": "weekend"
+      }
+    ],
+    "change_percentage_points": 0.4,
+    "direction": "up",
+    "comparison_statement": "66.9% vs 66.5% on 2026-10-08: +0.4 percentage points",
+    "pass": true
+  },
+  "schema_map": {
+    "ark_stocks.json": {
+      "top_level": {
+        "sourceOcr": "string",
+        "sourceAx": "string",
+        "sourceFolder": "string",
+        "generatedAt": "string",
+        "summary": "object",
+        "riskControl": "object",
+        "stocks": "array",
+        "duplicates": "array",
+        "recoveries": "array"
+      },
+      "critical_paths": {
+        "$.generatedAt": "ISO-8601 generation time (UTC in this artifact)",
+        "$.summary.totalStocks": "row total including legitimate cross-zone overlap",
+        "$.summary.sections.<zone>.count": "deduplicated row count per zone",
+        "$.summary.sections.<zone>.codes[]": "ordered codes per zone",
+        "$.riskControl.value": "current Ark water level as percent string",
+        "$.stocks[]": "ordered zone rows; source of truth for section/rank/code/name/screenshot price",
+        "$.duplicates[]": "within-capture duplicate-page removals; not the same as cross-zone overlap",
+        "$.recoveries[]": "parser recovery events"
+      },
+      "stocks_item_observed_schema": {
+        "change": {
+          "types": [
+            "string"
+          ],
+          "present_in": 87,
+          "null_count": 0
+        },
+        "code": {
+          "types": [
+            "string"
+          ],
+          "present_in": 87,
+          "null_count": 0
+        },
+        "columns": {
+          "types": [
+            "array"
+          ],
+          "present_in": 87,
+          "null_count": 0
+        },
+        "name": {
+          "types": [
+            "string"
+          ],
+          "present_in": 87,
+          "null_count": 0
+        },
+        "ocrConfidence": {
+          "types": [
+            "number"
+          ],
+          "present_in": 87,
+          "null_count": 0
+        },
+        "page": {
+          "types": [
+            "integer"
+          ],
+          "present_in": 87,
+          "null_count": 0
+        },
+        "price": {
+          "types": [
+            "string"
+          ],
+          "present_in": 87,
+          "null_count": 0
+        },
+        "rank": {
+          "types": [
+            "integer"
+          ],
+          "present_in": 87,
+          "null_count": 0
+        },
+        "rawLines": {
+          "types": [
+            "array"
+          ],
+          "present_in": 87,
+          "null_count": 0
+        },
+        "section": {
+          "types": [
+            "string"
+          ],
+          "present_in": 87,
+          "null_count": 0
+        },
+        "sourceFile": {
+          "types": [
+            "string"
+          ],
+          "present_in": 87,
+          "null_count": 0
+        }
+      },
+      "zones": [
+        "ETF價值區",
+        "ETF升溫區",
+        "產業價值區",
+        "產業升溫區"
+      ]
+    },
+    "success.json": {
+      "top_level_keys": [
+        "ok",
+        "status",
+        "stage",
+        "reason",
+        "runId",
+        "version",
+        "trigger",
+        "date",
+        "timezone",
+        "startedAt",
+        "finishedAt",
+        "generatedAt",
+        "elapsedSeconds",
+        "elapsedHuman",
+        "tokenUsage",
+        "runDir",
+        "summary",
+        "sha256",
+        "outputs",
+        "timing"
+      ],
+      "critical_paths": {
+        "$.ok": "must be true",
+        "$.status": "must be success",
+        "$.stage": "must be complete",
+        "$.date": "run trading date",
+        "$.runDir": "resolved successful run directory",
+        "$.summary.sections.<zone>": "zone counts",
+        "$.summary.riskControl": "water percent string",
+        "$.sha256.<filename>": "run manifest hashes",
+        "$.outputs.*": "exact output paths"
+      }
+    },
+    "ark_validation.json": {
+      "top_level_keys": [
+        "ok",
+        "generatedAt",
+        "ocrSource",
+        "axSource",
+        "sections"
+      ],
+      "critical_paths": {
+        "$.ok": "overall OCR/AX set-name validation",
+        "$.generatedAt": "validation time",
+        "$.sections.<zone>.{ok,ocrCount,axCount,missingInAx,missingInOcr,nameDifferences}": "per-zone set/name checks; does not certify every price/change field"
+      },
+      "section_item_observed_schema": {
+        "axCount": {
+          "types": [
+            "integer"
+          ],
+          "present_in": 4,
+          "null_count": 0
+        },
+        "missingInAx": {
+          "types": [
+            "array"
+          ],
+          "present_in": 4,
+          "null_count": 0
+        },
+        "missingInOcr": {
+          "types": [
+            "array"
+          ],
+          "present_in": 4,
+          "null_count": 0
+        },
+        "nameDifferences": {
+          "types": [
+            "array"
+          ],
+          "present_in": 4,
+          "null_count": 0
+        },
+        "ocrCount": {
+          "types": [
+            "integer"
+          ],
+          "present_in": 4,
+          "null_count": 0
+        },
+        "ok": {
+          "types": [
+            "boolean"
+          ],
+          "present_in": 4,
+          "null_count": 0
+        }
+      }
+    },
+    "ark_stocks_ax.json": {
+      "top_level_keys": [
+        "sourceAxRows",
+        "sourceFolder",
+        "generatedAt",
+        "summary",
+        "stocks",
+        "duplicates"
+      ],
+      "critical_note": "secondary source for code/name correction; price/change may be null or mispositioned and must not overwrite primary Ark fields blindly",
+      "stocks_item_observed_schema": {
+        "axValues": {
+          "types": [
+            "array"
+          ],
+          "present_in": 87,
+          "null_count": 0
+        },
+        "change": {
+          "types": [
+            "null",
+            "string"
+          ],
+          "present_in": 87,
+          "null_count": 2
+        },
+        "code": {
+          "types": [
+            "string"
+          ],
+          "present_in": 87,
+          "null_count": 0
+        },
+        "columns": {
+          "types": [
+            "array"
+          ],
+          "present_in": 87,
+          "null_count": 0
+        },
+        "name": {
+          "types": [
+            "string"
+          ],
+          "present_in": 87,
+          "null_count": 0
+        },
+        "page": {
+          "types": [
+            "integer"
+          ],
+          "present_in": 87,
+          "null_count": 0
+        },
+        "price": {
+          "types": [
+            "null",
+            "string"
+          ],
+          "present_in": 87,
+          "null_count": 2
+        },
+        "rank": {
+          "types": [
+            "integer"
+          ],
+          "present_in": 87,
+          "null_count": 0
+        },
+        "rawDescription": {
+          "types": [
+            "string"
+          ],
+          "present_in": 87,
+          "null_count": 0
+        },
+        "section": {
+          "types": [
+            "string"
+          ],
+          "present_in": 87,
+          "null_count": 0
+        },
+        "source": {
+          "types": [
+            "string"
+          ],
+          "present_in": 87,
+          "null_count": 0
+        },
+        "sourceFile": {
+          "types": [
+            "string"
+          ],
+          "present_in": 87,
+          "null_count": 0
+        }
+      }
+    },
+    "water-level-history.json": {
+      "top_level": {
+        "records": "array[109]"
+      },
+      "critical_paths": {
+        "$.records[].date": "YYYY-MM-DD",
+        "$.records[].water_level": "numeric percent",
+        "$.records[].scenario_id": "optional scenario ID",
+        "$.records[].scenario_label": "optional scenario label"
+      },
+      "record_union_observed_schema": {
+        "comparison_change": {
+          "types": [
+            "number"
+          ],
+          "present_in": 1,
+          "null_count": 0
+        },
+        "comparison_date": {
+          "types": [
+            "string"
+          ],
+          "present_in": 1,
+          "null_count": 0
+        },
+        "comparison_is_provisional": {
+          "types": [
+            "boolean"
+          ],
+          "present_in": 1,
+          "null_count": 0
+        },
+        "comparison_level": {
+          "types": [
+            "number"
+          ],
+          "present_in": 1,
+          "null_count": 0
+        },
+        "comparison_note": {
+          "types": [
+            "string"
+          ],
+          "present_in": 1,
+          "null_count": 0
+        },
+        "daily_change": {
+          "types": [
+            "null"
+          ],
+          "present_in": 1,
+          "null_count": 1
+        },
+        "date": {
+          "types": [
+            "string"
+          ],
+          "present_in": 109,
+          "null_count": 0
+        },
+        "exception_scope": {
+          "types": [
+            "string"
+          ],
+          "present_in": 1,
+          "null_count": 0
+        },
+        "previous_trading_date": {
+          "types": [
+            "string"
+          ],
+          "present_in": 1,
+          "null_count": 0
+        },
+        "previous_trading_day_level": {
+          "types": [
+            "null"
+          ],
+          "present_in": 1,
+          "null_count": 1
+        },
+        "scenario_id": {
+          "types": [
+            "string"
+          ],
+          "present_in": 109,
+          "null_count": 0
+        },
+        "scenario_label": {
+          "types": [
+            "string"
+          ],
+          "present_in": 92,
+          "null_count": 0
+        },
+        "source": {
+          "types": [
+            "string"
+          ],
+          "present_in": 1,
+          "null_count": 0
+        },
+        "water_level": {
+          "types": [
+            "number"
+          ],
+          "present_in": 109,
+          "null_count": 0
+        }
+      }
+    }
+  },
+  "findings": [
+    {
+      "severity": "pass",
+      "code": "SOURCE_GATES_PASS",
+      "message": "Latest pointer resolves to a non-empty same-day successful run; success/validation gates and manifest hashes pass."
+    },
+    {
+      "severity": "pass",
+      "code": "ZONE_COUNTS_NAMES_PASS",
+      "message": "Four exact zone names, ordered code lists, counts, ranks, and primary-vs-AX names agree."
+    },
+    {
+      "severity": "note",
+      "code": "CROSS_ZONE_OVERLAP",
+      "message": "2492 華新科 appears legitimately in both 產業價值區 and 產業升溫區; 87 rows represent 86 unique codes."
+    },
+    {
+      "severity": "warning",
+      "code": "ETF_AX_NULL_PRICE_TRAP",
+      "message": "AX has null price/change for 00681R and 009807 while primary ark_stocks.json has usable prices 22.91 and 18.1. Retain primary values; do not coerce AX null to zero."
+    },
+    {
+      "severity": "pass",
+      "code": "WATER_COMPARISON",
+      "message": "Current water 66.9% vs previous valid trading day 2026-10-08 66.5% = +0.4 percentage points."
+    },
+    {
+      "severity": "note",
+      "code": "HISTORY_CURRENT_DATE_ABSENT",
+      "message": "water-level-history.json has no 2026-10-12 record yet; it is valid as the prior-day lookup source, not proof that today has been published."
+    }
+  ],
+  "write_scope": {
+    "source_files_modified": false,
+    "repository_changes": false,
+    "only_created_or_replaced_audit_output": true
+  }
+}

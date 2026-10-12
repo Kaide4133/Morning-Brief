@@ -1,0 +1,89 @@
+{
+  "fixes": [
+    {
+      "code": "00681R",
+      "correction": "Source screenshot confirms OCR price is NAV; stock price is missing",
+      "screenshot": "04_ETF升溫區_1.png"
+    },
+    {
+      "code": "009807",
+      "correction": "Source screenshot confirms OCR price is NAV; stock price is missing",
+      "screenshot": "04_ETF升溫區_1.png"
+    },
+    {
+      "code": "2303",
+      "section": "產業價值區",
+      "action": "retain primary screenshot quote, not later AX tick",
+      "primary_price": "146.5",
+      "ax_price": "147"
+    },
+    {
+      "code": "2317",
+      "section": "產業價值區",
+      "action": "retain primary screenshot quote, not later AX tick",
+      "primary_price": "244.5",
+      "ax_price": "245"
+    },
+    {
+      "code": "2344",
+      "section": "產業價值區",
+      "action": "retain primary screenshot quote, not later AX tick",
+      "primary_price": "173.5",
+      "ax_price": "174"
+    },
+    {
+      "code": "2327",
+      "section": "產業價值區",
+      "action": "retain primary screenshot quote, not later AX tick",
+      "primary_price": "622",
+      "ax_price": "623"
+    },
+    {
+      "code": "4958",
+      "section": "產業價值區",
+      "action": "retain primary screenshot quote, not later AX tick",
+      "primary_price": "583",
+      "ax_price": "584"
+    },
+    {
+      "code": "6174",
+      "section": "產業升溫區",
+      "action": "retain primary screenshot quote, not later AX tick",
+      "primary_price": "63.3",
+      "ax_price": "63.2"
+    },
+    {
+      "code": "1301",
+      "section": "產業升溫區",
+      "action": "retain primary screenshot quote, not later AX tick",
+      "primary_price": "82",
+      "ax_price": "82.1"
+    }
+  ],
+  "breadth": {
+    "ETF價值區": {
+      "up": 1,
+      "down": 9,
+      "flat": 0,
+      "missing": 0
+    },
+    "ETF升溫區": {
+      "up": 0,
+      "down": 5,
+      "flat": 0,
+      "missing": 2
+    },
+    "產業價值區": {
+      "up": 12,
+      "down": 26,
+      "flat": 2,
+      "missing": 0
+    },
+    "產業升溫區": {
+      "up": 18,
+      "down": 9,
+      "flat": 3,
+      "missing": 0
+    }
+  }
+}

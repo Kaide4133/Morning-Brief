@@ -1,0 +1,404 @@
+{
+  "report_id": "kmb-20261012-news",
+  "title": "Taiwan-morning overnight cross-asset price, news and actual-flow evidence",
+  "status": "completed_read_only_research",
+  "as_of": {
+    "taipei": "2026-10-12T09:12:00+08:00",
+    "utc": "2026-10-12T01:12:00Z",
+    "day": "Monday",
+    "research_retrieval_completed_at": {
+      "taipei": "2026-10-12T09:15:58+08:00",
+      "utc": "2026-10-12T01:15:58Z"
+    },
+    "cutoff_control": "All quoted prices and article timestamps were filtered to or were published before the 2026-10-12T01:12:00Z cutoff. Traditional-market official closes and ETF creations/redemptions use the latest available completed business date, 2026-10-09, unless otherwise stated."
+  },
+  "scope": {
+    "overnight_weekend_window_taipei": "2026-10-10T00:00:00+08:00 to 2026-10-12T09:12:00+08:00",
+    "assets": [
+      "gold",
+      "US dollar",
+      "US Treasury yields and Treasury futures",
+      "Bitcoin",
+      "Ether",
+      "ETH/BTC"
+    ],
+    "flow_scope": "Source-reported creations/redemptions or holdings changes for physically backed gold ETFs and US spot BTC/ETH ETFs. Price changes are never treated as flows."
+  },
+  "methodology_and_controls": [
+    "Separated price/yield observations, news/catalyst reporting, and actual ETF-flow evidence.",
+    "Used exact source observation dates and times where available; used the last completed one-minute candle ending before the cutoff for Coinbase crypto prices.",
+    "For traditional markets, distinguished the latest official Friday close from Monday Asian-hours futures/index indications.",
+    "For ETF flows, used the latest available trading date (Friday 2026-10-09) for US spot crypto ETFs and the latest World Gold Council monthly dataset (2026-09-30) for gold ETFs; there are no Saturday/Sunday creation-redemption rows.",
+    "No causal claim is made solely from contemporaneous co-movement."
+  ],
+  "executive_findings": [
+    "Monday Asian-hours indications showed gold futures higher, the DXY slightly lower, and 10-year Treasury-note futures slightly higher than their prior closes, while BTC and ETH were both higher over the previous 24 hours.",
+    "The latest official US Treasury curve was still restrictive: 10-year nominal 5.24% and 10-year real 2.91% on 2026-10-09.",
+    "Reuters' Monday Asia market wrap described cautious risk appetite, high bond yields and continued Fed-tightening risk; it also quoted spot gold up 0.3% near USD 4,206/oz and DXY near 102.25.",
+    "Actual ETF flows were mixed and stale relative to weekend crypto trading: on 2026-10-09 US spot BTC ETFs had +USD 21.1m while spot ETH ETFs had -USD 56.1m. For the full 2026-10-05 to 2026-10-09 week, computed from Farside daily rows, BTC ETFs had -USD 678.9m and ETH ETFs -USD 542.2m.",
+    "The latest World Gold Council dataset was monthly, not daily: global physically backed gold ETFs attracted about USD 10bn in September 2026, added 67 tonnes, and reached record holdings of 4,256 tonnes as of 2026-09-30.",
+    "ETH outperformed BTC modestly over the measured 24 hours: ETH/BTC rose about 0.44% to 0.030335. This is relative price performance, not evidence of capital flow into ETH."
+  ],
+  "assets": {
+    "gold": {
+      "price_evidence": [
+        {
+          "instrument": "COMEX gold futures continuous contract proxy (Yahoo Finance GC=F)",
+          "value_usd_per_oz": 4238.5,
+          "source_observation_time": "2026-10-12T01:04:48Z",
+          "source_observation_time_taipei": "2026-10-12T09:04:48+08:00",
+          "previous_close": 4216.3,
+          "change_usd": 22.2,
+          "change_pct_calculated": 0.526528,
+          "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1791738720&period2=1791767521&interval=1m&includePrePost=true&events=div%2Csplits",
+          "note": "Futures contract proxy; not identical to spot gold. Yahoo's last source-stamped observation before the 09:12 Taipei cutoff was 09:04:48."
+        },
+        {
+          "instrument": "spot gold",
+          "value_usd_per_oz": 4206.0,
+          "change_pct_reported": 0.3,
+          "article_market_time": "Monday Asia session, 2026-10-12, before cutoff",
+          "source_url": "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-10-12/",
+          "body_crosscheck_url": "https://www.investing.com/news/stock-market-news/shares-cautious-in-asia-as-earnings-loom-oil-slips-4942949"
+        }
+      ],
+      "news_and_catalysts": [
+        {
+          "date": "2026-10-12",
+          "source": "Reuters Monday Asia market wrap",
+          "reported_factors": [
+            "Cautious Asian risk tone ahead of earnings season.",
+            "US Treasury yields remained near multi-decade highs after the prior week's rise.",
+            "Fed officials had warned of further tightening and markets assigned material probability to rate increases.",
+            "Thin liquidity because Japan was closed and the US had a partial holiday."
+          ],
+          "interpretation": "Gold rose even with the dollar still near a 17-month high. The simultaneous Monday dip in DXY and rise in Treasury-note futures are directionally supportive, but this report does not prove either caused the gold move.",
+          "canonical_url": "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-10-12/"
+        },
+        {
+          "date": "2026-10-09",
+          "source": "Reuters gold-market close report",
+          "reported_factors": [
+            "Softer dollar and easing Treasury yields supported gold early in the latest completed US session.",
+            "Markets were focused on US CPI and the next Federal Reserve decision.",
+            "The dollar later reversed higher, capping gold's advance."
+          ],
+          "market_values": {
+            "spot_gold_close_usd_per_oz": 4194.36,
+            "spot_gold_daily_change_pct": 0.1,
+            "comex_december_settlement_usd_per_oz": 4216.3,
+            "comex_december_daily_change_pct": 0.3
+          },
+          "updated_at": "2026-10-09T19:29:00Z",
+          "updated_at_taipei": "2026-10-10T03:29:00+08:00",
+          "url": "https://www.reuters.com/world/india/gold-rises-softer-dollar-easing-yields-fed-outlook-focus-2026-10-09/"
+        }
+      ],
+      "actual_etf_flow_evidence": {
+        "dataset_date": "2026-09-30",
+        "frequency": "monthly latest available World Gold Council data",
+        "publication_date": "2026-10-07",
+        "global_fund_flow_usd_approx_billion": 10.0,
+        "global_holdings_change_tonnes": 67,
+        "global_holdings_tonnes": 4256,
+        "q3_2026_inflow_usd_approx_billion": 31.0,
+        "aum_usd_billion": 574,
+        "aum_month_over_month_change_pct": -7,
+        "source_url": "https://www.gold.org/goldhub/data/global-gold-backed-etf-holdings-and-flows",
+        "commentary_url": "https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2026/10",
+        "control_note": "This is verified fund-flow/holdings evidence, not inferred from gold's price. It is monthly and must not be described as a 2026-10-09 or weekend flow. WGC explicitly noted that holdings rose despite a lower September gold price, illustrating price/flow divergence."
+      }
+    },
+    "usd": {
+      "price_evidence": [
+        {
+          "instrument": "US Dollar Index (Yahoo Finance DX-Y.NYB)",
+          "value": 102.109,
+          "source_observation_time": "2026-10-12T01:04:50Z",
+          "source_observation_time_taipei": "2026-10-12T09:04:50+08:00",
+          "previous_close": 102.213,
+          "change": -0.104,
+          "change_pct_calculated": -0.101748,
+          "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1791738720&period2=1791767521&interval=1m&includePrePost=true&events=div%2Csplits"
+        },
+        {
+          "instrument": "US Dollar Index as quoted by Reuters",
+          "value": 102.25,
+          "context": "near a 17-month high in Monday Asia trading",
+          "date": "2026-10-12",
+          "source_url": "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-10-12/"
+        }
+      ],
+      "news_and_catalysts": {
+        "reported_support": [
+          "Markets still saw roughly 50-50 odds of a December Fed hike and about a 63% probability of a January move, according to Reuters' Monday wrap.",
+          "Fed officials, including St. Louis Fed President Alberto Musalem, had argued that lowering inflation could require more rate increases.",
+          "The dollar had gained about 0.5% the prior week."
+        ],
+        "reported_near_term_watch": [
+          "US CPI forecast at 3.3% year-on-year for both headline and core.",
+          "US retail sales and producer prices were also due in the week."
+        ],
+        "source_url": "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-10-12/"
+      },
+      "actual_flow_evidence": {
+        "status": "not_established",
+        "reason": "DXY is a price index; there is no single canonical aggregate 'USD ETF flow' corresponding to the index. No flow conclusion is inferred from DXY's move."
+      }
+    },
+    "us_treasury": {
+      "official_yield_evidence": {
+        "data_date": "2026-10-09",
+        "nominal_par_yields_pct": {
+          "2y": 4.8,
+          "5y": 5.02,
+          "7y": 5.13,
+          "10y": 5.24,
+          "20y": 5.65,
+          "30y": 5.6
+        },
+        "one_day_change_basis_points": {
+          "2y": 5,
+          "5y": 3,
+          "7y": 2,
+          "10y": 2,
+          "20y": 1,
+          "30y": 0
+        },
+        "ten_year_real_yield_pct": 2.91,
+        "ten_year_real_yield_one_day_change_basis_points": 4,
+        "nominal_source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve&field_tdr_date_value=2026&page&_format=csv",
+        "real_source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_real_yield_curve&field_tdr_date_value=2026&_format=csv",
+        "note": "Official Treasury par-curve closing values. The prior 2026-10-08 10-year nominal and real yields were 5.22% and 2.87%, respectively."
+      },
+      "monday_futures_indication": {
+        "instrument": "CBOT 10-year Treasury note futures continuous proxy (Yahoo Finance ZN=F)",
+        "price_decimal": 104.671875,
+        "source_observation_time": "2026-10-12T01:04:40Z",
+        "source_observation_time_taipei": "2026-10-12T09:04:40+08:00",
+        "previous_close": 104.59375,
+        "change_decimal_points": 0.078125,
+        "change_pct_calculated": 0.074694,
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ZN%3DF?period1=1791738720&period2=1791767521&interval=1m&includePrePost=true&events=div%2Csplits",
+        "interpretation_control": "Higher note-futures prices normally point to lower yields, but the futures-price move is not converted here into an unverified spot-yield estimate."
+      },
+      "news_and_catalysts": {
+        "reported_background": [
+          "Reuters said 10-year and 30-year Treasury yields had touched 24-year highs the prior week.",
+          "A Reuters poll expected the 10-year yield to finish 2026 around 5.02%, above September's 4.90% forecast, with analysts flagging 5.5% and then 6% as risks if inflation stayed high and growth firm.",
+          "PIMCO CIO Dan Ivascyn said there was a meaningful risk that the 10-year yield could reach 6% within six to twelve months."
+        ],
+        "urls": [
+          "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-10-12/",
+          "https://www.reuters.com/business/lower-us-treasury-yield-view-persists-despite-biggest-quarterly-surge-since-1994-2026-10-07/",
+          "https://www.reuters.com/markets/us/us-10-year-treasury-yield-risks-hitting-6-first-time-since-2000-pimcos-ivascyn-2026-10-09/"
+        ]
+      },
+      "actual_etf_flow_evidence": {
+        "status": "not_established_for_asset_class",
+        "reason": "No fund universe was specified for Treasury ETFs and there is no single canonical aggregate Treasury-ETF flow series equivalent to the Farside spot-crypto tables. Yield changes and futures moves are not labeled as flows."
+      }
+    },
+    "btc": {
+      "price_evidence": {
+        "venue_pair": "Coinbase Exchange BTC-USD",
+        "latest_complete_minute_before_cutoff": {
+          "candle_start_utc": "2026-10-12T01:11:00Z",
+          "candle_start_taipei": "2026-10-12T09:11:00+08:00",
+          "open": 83712.91,
+          "high": 83830.59,
+          "low": 83712.9,
+          "close": 83816.1,
+          "volume_btc": 1.60901936,
+          "source_url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60&start=2026-10-12T01%3A10%3A00Z&end=2026-10-12T01%3A12%3A00Z"
+        },
+        "same_minute_24h_earlier": {
+          "candle_start_utc": "2026-10-11T01:11:00Z",
+          "close": 82892.17,
+          "source_url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60&start=2026-10-11T01%3A10%3A00Z&end=2026-10-11T01%3A12%3A00Z"
+        },
+        "24h_change_usd_calculated": 923.93,
+        "24h_change_pct_calculated": 1.114617
+      },
+      "news_and_catalysts": {
+        "status": "no_specific_high-confidence_weekend_catalyst_established",
+        "comment": "The verified Monday Reuters cross-asset wrap did not attribute the BTC move to a specific fresh headline. The measured price gain is therefore reported without a causal narrative."
+      },
+      "actual_us_spot_etf_flows": {
+        "latest_available_trading_date": "2026-10-09",
+        "daily_total_usd_million": 21.1,
+        "fund_rows_usd_million": {
+          "IBIT": 22.4,
+          "FBTC": -3.6,
+          "BITB": 0.0,
+          "ARKB": 0.0,
+          "BTCO": 0.0,
+          "EZBC": 0.0,
+          "BRRR": 0.0,
+          "HODL": 2.3,
+          "BTCW": 0.0,
+          "GBTC": 0.0,
+          "BTC": 0.0
+        },
+        "week_2026_10_05_to_2026_10_09": {
+          "daily_totals_usd_million": {
+            "2026-10-05": -89.8,
+            "2026-10-06": 118.8,
+            "2026-10-07": -484.9,
+            "2026-10-08": -244.1,
+            "2026-10-09": 21.1
+          },
+          "computed_total_usd_million": -678.9
+        },
+        "source_url": "https://farside.co.uk/btc/",
+        "control_note": "The Friday +USD 21.1m is the latest actual creation/redemption-flow aggregate. There is no weekend row; it does not explain or measure Saturday-Sunday BTC trading."
+      }
+    },
+    "eth": {
+      "price_evidence": {
+        "venue_pair": "Coinbase Exchange ETH-USD",
+        "latest_complete_minute_before_cutoff": {
+          "candle_start_utc": "2026-10-12T01:11:00Z",
+          "candle_start_taipei": "2026-10-12T09:11:00+08:00",
+          "open": 2538.66,
+          "high": 2542.87,
+          "low": 2538.66,
+          "close": 2542.56,
+          "volume_eth": 22.39628652,
+          "source_url": "https://api.exchange.coinbase.com/products/ETH-USD/candles?granularity=60&start=2026-10-12T01%3A10%3A00Z&end=2026-10-12T01%3A12%3A00Z"
+        },
+        "same_minute_24h_earlier": {
+          "candle_start_utc": "2026-10-11T01:11:00Z",
+          "close": 2503.53,
+          "source_url": "https://api.exchange.coinbase.com/products/ETH-USD/candles?granularity=60&start=2026-10-11T01%3A10%3A00Z&end=2026-10-11T01%3A12%3A00Z"
+        },
+        "24h_change_usd_calculated": 39.03,
+        "24h_change_pct_calculated": 1.558999
+      },
+      "news_and_catalysts": {
+        "status": "no_specific_high-confidence_weekend_catalyst_established",
+        "comment": "No verified contemporaneous source in this research set tied the ETH move to a fresh weekend headline. The price move is presented independently from ETF flows."
+      },
+      "actual_us_spot_etf_flows": {
+        "latest_available_trading_date": "2026-10-09",
+        "daily_total_usd_million": -56.1,
+        "fund_rows_usd_million": {
+          "ETHA": -56.1,
+          "FETH": 0.0,
+          "ETHW": 0.0,
+          "CETH": 0.0,
+          "ETHV": 0.0,
+          "QETH": 0.0,
+          "EZET": 0.0,
+          "ETHE": 0.0,
+          "ETH": 0.0
+        },
+        "week_2026_10_05_to_2026_10_09": {
+          "daily_totals_usd_million": {
+            "2026-10-05": -50.8,
+            "2026-10-06": -201.9,
+            "2026-10-07": -160.9,
+            "2026-10-08": -72.5,
+            "2026-10-09": -56.1
+          },
+          "computed_total_usd_million": -542.2
+        },
+        "source_url": "https://farside.co.uk/eth/",
+        "control_note": "ETH rose 1.56% over the measured weekend 24 hours even though the latest available Friday ETF row was a USD 56.1m outflow. These observations have different timestamps and do not establish causation; notably, they also show why price direction cannot be relabeled as flow."
+      }
+    },
+    "eth_btc": {
+      "method": "ETH-USD close divided by BTC-USD close on Coinbase for matched one-minute candles",
+      "current": {
+        "time_utc": "2026-10-12T01:11:00Z",
+        "time_taipei": "2026-10-12T09:11:00+08:00",
+        "ratio": 0.0303349834
+      },
+      "same_minute_24h_earlier": {
+        "time_utc": "2026-10-11T01:11:00Z",
+        "ratio": 0.0302022495
+      },
+      "24h_change_pct_calculated": 0.439483,
+      "interpretation": "ETH modestly outperformed BTC over the matched 24-hour window. This is a relative-price statement only, not evidence of rotation or fund flow."
+    }
+  },
+  "actual_etf_flow_summary": {
+    "latest_us_spot_crypto_date": "2026-10-09",
+    "btc_usd_million": 21.1,
+    "eth_usd_million": -56.1,
+    "combined_btc_eth_usd_million_calculated": -35.0,
+    "week_2026_10_05_to_2026_10_09_usd_million": {
+      "btc": -678.9,
+      "eth": -542.2,
+      "combined_calculated": -1221.1
+    },
+    "latest_gold_dataset_date": "2026-09-30",
+    "gold_monthly_flow_usd_approx_billion": 10.0,
+    "gold_monthly_holdings_change_tonnes": 67,
+    "weekend_data_warning": "US ETF primary-market flow tables do not publish Saturday/Sunday rows. All crypto ETF figures are the latest Friday values, not weekend flows. Gold's latest source is monthly, not daily."
+  },
+  "cross_asset_read": {
+    "observed_pattern": "By roughly 09:05-09:11 Taipei, gold futures were +0.53% from prior close, DXY -0.10%, 10-year note futures +0.07%, BTC +1.11% over 24h and ETH +1.56% over 24h. This is consistent with mild dollar/rate relief during thin Monday trading, but it is not proof of a common causal flow.",
+    "macro_tension": "The immediate Monday indications were a little friendlier to duration and non-dollar assets, but the latest official 10-year nominal yield of 5.24% and real yield of 2.91%, plus live Fed-hike risk, remained a restrictive backdrop.",
+    "flow_divergence": "Gold's latest monthly ETF inflow occurred despite a lower September gold price, and ETH's weekend price gain followed a Friday ETF outflow. Both examples directly reject a price-equals-flow assumption.",
+    "relative_crypto": "ETH/BTC's +0.44% 24-hour change showed modest ETH outperformance, while latest actual US spot ETF flows still favored BTC on Friday (+USD 21.1m versus ETH -USD 56.1m). Because the timestamps differ, this is contrast, not a rotation claim."
+  },
+  "source_inventory": [
+    {
+      "name": "Reuters — Shares cautious in Asia as earnings loom, oil slips",
+      "source_date": "2026-10-12",
+      "canonical_url": "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-10-12/",
+      "syndicated_body_url": "https://www.investing.com/news/stock-market-news/shares-cautious-in-asia-as-earnings-loom-oil-slips-4942949",
+      "timestamp_note": "Syndicated copies displayed publication around 00:44-00:46 UTC (08:44-08:46 Taipei); Reuters canonical metadata was not independently retrievable in this session."
+    },
+    {
+      "name": "Reuters — Gold rises on softer dollar, easing yields; Fed outlook in focus",
+      "source_date": "2026-10-09",
+      "updated_at_utc": "2026-10-09T19:29:00Z",
+      "url": "https://www.reuters.com/world/india/gold-rises-softer-dollar-easing-yields-fed-outlook-focus-2026-10-09/"
+    },
+    {
+      "name": "US Treasury — Daily Treasury Par Yield Curve Rates",
+      "data_date": "2026-10-09",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve&field_tdr_date_value=2026&page&_format=csv"
+    },
+    {
+      "name": "US Treasury — Daily Treasury Par Real Yield Curve Rates",
+      "data_date": "2026-10-09",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_real_yield_curve&field_tdr_date_value=2026&_format=csv"
+    },
+    {
+      "name": "Farside Investors — US spot Bitcoin ETF flow table",
+      "latest_data_date": "2026-10-09",
+      "url": "https://farside.co.uk/btc/"
+    },
+    {
+      "name": "Farside Investors — US spot Ethereum ETF flow table",
+      "latest_data_date": "2026-10-09",
+      "url": "https://farside.co.uk/eth/"
+    },
+    {
+      "name": "World Gold Council — Global gold-backed ETF holdings and flows",
+      "data_date": "2026-09-30",
+      "publication_date": "2026-10-07",
+      "url": "https://www.gold.org/goldhub/data/global-gold-backed-etf-holdings-and-flows"
+    },
+    {
+      "name": "Coinbase Exchange public candles — BTC-USD and ETH-USD",
+      "latest_complete_candle_before_cutoff": "2026-10-12T01:11:00Z",
+      "base_url": "https://api.exchange.coinbase.com/products/{product}/candles"
+    },
+    {
+      "name": "Yahoo Finance chart API — GC=F, DX-Y.NYB and ZN=F",
+      "latest_source_timestamps": "2026-10-12T01:04:40Z to 2026-10-12T01:04:50Z",
+      "base_url": "https://query1.finance.yahoo.com/v8/finance/chart/{symbol}"
+    }
+  ],
+  "limitations": [
+    "The Reuters canonical Monday article body was not fully extractable directly; the article's body and timing were cross-checked through syndicated Reuters copies while retaining the canonical Reuters URL.",
+    "Yahoo's latest stamped traditional-market observations lagged the requested cutoff by about seven minutes; exact source timestamps are recorded rather than pretending they were 09:12 ticks.",
+    "No high-confidence BTC- or ETH-specific breaking-news catalyst was verified inside the weekend window, so none is invented.",
+    "Gold ETF flows are latest monthly WGC figures as of 2026-09-30; they are not weekend or 2026-10-09 flows.",
+    "No canonical aggregate USD-ETF or Treasury-ETF fund-flow series was established; price and yield changes are not used as substitutes."
+  ]
+}

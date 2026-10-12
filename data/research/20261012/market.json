@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0",
+  "report": {
+    "title": "2026-10-12 09:12 Asia/Taipei market verification",
+    "requested_cutoff": "2026-10-12T09:12:00+08:00",
+    "timezone": "Asia/Taipei",
+    "generated_at": "2026-10-12T09:16:41+08:00",
+    "status": "verified",
+    "cutoff_policy": "Use the latest fully elapsed common one-minute bar. At the 09:12:00 cutoff, the conservative synchronized minute is 09:11; 09:12-labelled bars were excluded to avoid look-ahead/partial-bar risk."
+  },
+  "calendar": {
+    "date": "2026-10-12",
+    "twse_status": "open",
+    "previous_twse_open_date": "2026-10-08",
+    "evidence": [
+      {
+        "type": "official_holiday_calendar",
+        "detail": "2026-10-09 is the National Day make-up holiday; 2026-10-10 is National Day. 2026-10-11 is Sunday. 2026-10-12 is not listed as a closure."
+      },
+      {
+        "type": "affirmative_live_exchange_evidence",
+        "detail": "TWSE MIS returned rtcode 0000, exchange date 20261012, and non-empty intraday rows; this directly confirms trading on 2026-10-12."
+      },
+      {
+        "type": "official_previous-session_row",
+        "detail": "TWSE monthly daily-trading report contains 2026/10/08 with TAIEX 49,313.44 and no later row before the 10/09 holiday/weekend."
+      }
+    ],
+    "holiday_rows": {
+      "2026-10-09": [
+        "2026-10-09",
+        "國慶日",
+        "國慶日為10月10日適逢星期六，於10月9日（星期五）補假。"
+      ],
+      "2026-10-10": [
+        "2026-10-10",
+        "國慶日",
+        "依規定放假1日。"
+      ]
+    },
+    "previous_open_official_row": {
+      "fields": [
+        "Date",
+        "Trade Volume",
+        "Trade Value",
+        "Transaction",
+        "TAIEX",
+        "Change"
+      ],
+      "row": [
+        "2026/10/08",
+        "10,437,288,727",
+        "924,509,097,873",
+        "5,075,757",
+        "49,313.44",
+        "-492.93"
+      ]
+    },
+    "live_session_proof": {
+      "twse_rtcode": "0000",
+      "exchange_date": "20261012",
+      "quote_time_at_retrieval": "09:14:00",
+      "chart_first_row": {
+        "c": "48814.52",
+        "s": "51034",
+        "t": "1791766860000",
+        "ts": "090100"
+      },
+      "chart_contains_09_11": true,
+      "note": "The 09:14 quote was fetched after the report cutoff and is used only to prove the named-date session was live, not as the 09:12 report value."
+    }
+  },
+  "taiwan_snapshot": {
+    "synchronized_completed_minute": "2026-10-12T09:11:00+08:00",
+    "twse_taiex": {
+      "symbol": "tse_t00.tw",
+      "name": "發行量加權股價指數",
+      "bar_type": "official one-minute close",
+      "close": 48916.66,
+      "previous_close": 49313.44,
+      "change_points": -396.78,
+      "percent_change": -0.8046,
+      "source_row": {
+        "c": "48916.66",
+        "s": "10296",
+        "t": "1791767460000",
+        "ts": "091100"
+      },
+      "calculation": "48916.66 - 49313.44 = -396.78; (48916.66 / 49313.44 - 1) * 100 = -0.804608...%"
+    },
+    "taifex_taiwan_index_futures": {
+      "symbol_id": "TXFJ6-F",
+      "display_name_zh": "臺指期106",
+      "display_name_en": "TX106",
+      "contract_identity": "2026-10 standard TX front month, selected from the official quote list; spot helper, mini, weekly, and deferred rows excluded.",
+      "bar_type": "official one-minute OHLCV bar close",
+      "close": 49114.0,
+      "reference_price": 49357.0,
+      "change_points": -243.0,
+      "percent_change": -0.4923,
+      "source_row_fields": [
+        "T",
+        "O",
+        "H",
+        "L",
+        "C",
+        "V"
+      ],
+      "source_row": [
+        "091100",
+        "49019.00",
+        "49120.00",
+        "49016.00",
+        "49114.00",
+        "256"
+      ],
+      "calculation": "49114.00 - 49357.00 = -243.00; (49114.00 / 49357.00 - 1) * 100 = -0.492331...%"
+    },
+    "futures_minus_spot_basis": {
+      "points": 197.34,
+      "calculation": "49114.00 - 48916.66 = 197.34",
+      "classification": "derived"
+    }
+  },
+  "us_latest_completed_session": {
+    "trade_date": "2026-10-09",
+    "date_semantics": "Official daily sources expose a trade date; no exact close clock time is asserted.",
+    "sox": {
+      "name": "PHLX Semiconductor Sector Index",
+      "symbol": "SOX",
+      "close": 12572.42,
+      "prior_close_date": "2026-10-08",
+      "prior_close": 12623.71,
+      "change_points": -51.29,
+      "percent_change": -0.4063,
+      "official_historical_row": {
+        "date": "10/09/2026",
+        "close": "12,572.42",
+        "volume": "--",
+        "open": "12,796.00",
+        "high": "12,826.67",
+        "low": "12,507.88"
+      },
+      "official_prior_row": {
+        "date": "10/08/2026",
+        "close": "12,623.71",
+        "volume": "--",
+        "open": "12,842.79",
+        "high": "12,997.48",
+        "low": "12,483.95"
+      },
+      "calculation": "12572.42 - 12623.71 = -51.29; (12572.42 / 12623.71 - 1) * 100 = -0.406299...%",
+      "summary_cross_check": {
+        "retrieved_at": "2026-10-12T09:16:41+08:00",
+        "current_value": "12,572.42",
+        "reported_net_change_percent": "-51.3/-0.41%",
+        "reported_previous_close": "12,623.72",
+        "result": "Current value agrees at 12,572.42. Nasdaq summary reports prior close 12,623.72 while its official historical row reports 12,623.71 (one-cent discrepancy); derived change here consistently uses historical daily rows."
+      }
+    },
+    "vix": {
+      "name": "Cboe Volatility Index",
+      "symbol": "VIX",
+      "close": 14.84,
+      "prior_close_date": "2026-10-08",
+      "prior_close": 15.41,
+      "change_points": -0.57,
+      "percent_change": -3.6989,
+      "official_row": {
+        "DATE": "10/09/2026",
+        "OPEN": "15.340000",
+        "HIGH": "15.340000",
+        "LOW": "14.770000",
+        "CLOSE": "14.840000"
+      },
+      "official_prior_row": {
+        "DATE": "10/08/2026",
+        "OPEN": "15.680000",
+        "HIGH": "16.460000",
+        "LOW": "15.150000",
+        "CLOSE": "15.410000"
+      },
+      "calculation": "14.84 - 15.41 = -0.57; (14.84 / 15.41 - 1) * 100 = -3.698897...%"
+    }
+  },
+  "sources": [
+    {
+      "id": "twse_calendar",
+      "authority": "TWSE",
+      "method": "GET",
+      "url": "https://www.twse.com.tw/holidaySchedule/holidaySchedule?response=json",
+      "retrieved_at": "2026-10-12T09:14:58+08:00",
+      "response_checks": {
+        "stat": "ok",
+        "queryYear": 2026,
+        "total": 27
+      }
+    },
+    {
+      "id": "twse_daily_trading",
+      "authority": "TWSE",
+      "method": "GET",
+      "url": "https://www.twse.com.tw/rwd/en/afterTrading/FMTQIK?date=20261008&response=json",
+      "parameters": {
+        "date": "20261008",
+        "response": "json"
+      },
+      "retrieved_at": "2026-10-12T09:14:58+08:00",
+      "response_checks": {
+        "stat": "OK",
+        "date": "20261008"
+      }
+    },
+    {
+      "id": "twse_mis_quote",
+      "authority": "TWSE MIS",
+      "method": "GET",
+      "url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+      "retrieved_at": "2026-10-12T09:14:58+08:00",
+      "response_checks": {
+        "rtcode": "0000",
+        "exchange_date": "20261012"
+      }
+    },
+    {
+      "id": "twse_mis_one_minute",
+      "authority": "TWSE MIS",
+      "method": "GET",
+      "url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+      "retrieved_at": "2026-10-12T09:14:58+08:00",
+      "response_checks": {
+        "rtcode": "0000",
+        "rows_nonempty": true
+      }
+    },
+    {
+      "id": "taifex_quote_list",
+      "authority": "TAIFEX MIS",
+      "method": "POST",
+      "url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+      "request_body": {
+        "MarketType": "0",
+        "SymbolType": "F",
+        "KindID": "1",
+        "CID": "",
+        "ExpireMonth": ""
+      },
+      "retrieved_at": "2026-10-12T09:14:58+08:00",
+      "response_checks": {
+        "RtCode": "0",
+        "selected_symbol": "TXFJ6-F",
+        "quote_date": "20261012"
+      }
+    },
+    {
+      "id": "taifex_one_minute",
+      "authority": "TAIFEX MIS",
+      "method": "POST",
+      "url": "https://mis.taifex.com.tw/futures/api/getChartData1M",
+      "request_body": {
+        "SymbolID": "TXFJ6-F"
+      },
+      "retrieved_at": "2026-10-12T09:14:58+08:00",
+      "response_checks": {
+        "RtCode": "0",
+        "symbol": "TXFJ6-F",
+        "field_order": [
+          "T",
+          "O",
+          "H",
+          "L",
+          "C",
+          "V"
+        ]
+      }
+    },
+    {
+      "id": "nasdaq_sox_historical",
+      "authority": "Nasdaq official API",
+      "method": "GET",
+      "url": "https://api.nasdaq.com/api/quote/SOX/historical?assetclass=index&fromdate=2026-10-01&todate=2026-10-12&limit=10",
+      "retrieved_at": "2026-10-12T09:14:59+08:00",
+      "response_checks": {
+        "symbol": "SOX",
+        "rCode": 200,
+        "totalRecords": 7
+      }
+    },
+    {
+      "id": "nasdaq_sox_summary",
+      "authority": "Nasdaq official API",
+      "method": "GET",
+      "url": "https://api.nasdaq.com/api/quote/SOX/summary?assetclass=index",
+      "retrieved_at": "2026-10-12T09:16:41+08:00",
+      "response_checks": {
+        "symbol": "SOX",
+        "rCode": 200
+      }
+    },
+    {
+      "id": "cboe_vix_history",
+      "authority": "Cboe official daily CSV",
+      "method": "GET",
+      "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+      "redirect_target": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+      "retrieved_at": "2026-10-12T09:14:59+08:00",
+      "response_checks": {
+        "latest_requested_date_found": true,
+        "https_follow_redirect_status": 200
+      }
+    }
+  ],
+  "method_notes": [
+    "All principal values come from exchange/index-owner endpoints.",
+    "Taiwan spot and futures comparisons use the same 09:11 completed minute and the source-declared TAIFEX field order [T,O,H,L,C,V].",
+    "Returns and basis were independently recomputed with decimal arithmetic; displayed percentages are rounded only at the end.",
+    "Source retrieval occurred after the 09:12 report cutoff, but only historical rows at or before the cutoff were selected."
+  ],
+  "findings_markdown": "## Verified findings\n- **TWSE calendar:** 2026-10-12 was open. The immediately previous open date was **2026-10-08**; 10/09 was the National Day make-up holiday, followed by the weekend.\n- **09:11 completed common minute (09:12 report cutoff):** TAIEX **48,916.66**, down **396.78 (-0.80%)** from 49,313.44; TX106 **49,114**, down **243 (-0.49%)** from 49,357; futures-minus-spot basis **+197.34**.\n- **Latest completed U.S. session (2026-10-09):** SOX **12,572.42** (-51.29, **-0.41%** versus the official 10/08 historical row); VIX **14.84** (-0.57, **-3.70%**).\n- Nasdaq summary independently confirms the SOX close at 12,572.42; its prior-close field differs from the historical table by $0.01, so the daily change above uses the internally consistent historical rows."
+}

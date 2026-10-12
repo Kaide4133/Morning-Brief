@@ -1,0 +1,95 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-10-12",
+  "valid_for_trading_date": "2026-10-12",
+  "data_as_of": "2026-10-12",
+  "stale": false,
+  "issue_no": 102,
+  "scenario": {
+    "id": "04",
+    "slug": "rotation-switching",
+    "label": "輪動換手",
+    "confidence": 1.0,
+    "reason": "水位小幅回升，但台股與費半偏弱、產業升溫樣本較價值樣本活躍，呈現分化換手而非全面擴張；先看價值與承接，不追熱。",
+    "source": "manual_override",
+    "classifier_suggestion": "02"
+  },
+  "water": {
+    "level": 66.9,
+    "previous": 66.5,
+    "change": 0.4,
+    "direction": "rising"
+  },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "defensive_hold_review",
+    "risk_posture": "selective",
+    "water_policy": {
+      "direction": "rising",
+      "change": 0.4,
+      "interpretation": "目前不允許新增曝險；維持防禦檢查，等待水位、價格與情境重新確認。"
+    },
+    "scenario_context": {
+      "id": "04",
+      "label": "輪動換手",
+      "confidence": 1.0
+    },
+    "policy_focus": [
+      "價值區擴至40檔；比較伺服器、半導體與零組件，不按升溫排名追價。",
+      "前日法人賣超915.75億元；本週財報、通膨與能源消息仍會影響價格。",
+      "美股三大指數收高、費半續弱；台股09:11跌0.80%，承接仍待觀察。",
+      "美國大型銀行本週揭開財報季，市場將檢驗企業獲利能否支撐估值。"
+    ],
+    "systemic_risk": "中",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
+  "action_guidance": {
+    "risk_bias": "selective",
+    "allow_add": false,
+    "allow_trim": true,
+    "deploy_mode": "rotate_after_confirmation",
+    "trim": {
+      "allowed": true,
+      "mode": "rotate_trim",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": false,
+      "mode": "rotate_after_confirmation",
+      "conditions": [
+        "wait_for_relative_strength_confirmation"
+      ]
+    },
+    "rebuy": {
+      "allowed": true,
+      "mode": "wait_for_confirmation",
+      "conditions": [
+        "rotation_confirms",
+        "no_new_low"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 1.0,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "輪動換手",
+    "summary": "水位小幅回升，但台股與費半偏弱、產業升溫樣本較價值樣本活躍，呈現分化換手而非全面擴張；先看價值與承接，不追熱。"
+  },
+  "source": {
+    "issue_file": "data/issues/20261012.json",
+    "generated_at": "2026-10-12T09:23:51+08:00"
+  }
+}

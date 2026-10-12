@@ -1,56 +1,57 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-08-26",
-  "valid_for_trading_date": "2026-08-26",
-  "data_as_of": "2026-08-26",
+  "date": "2026-10-12",
+  "valid_for_trading_date": "2026-10-12",
+  "data_as_of": "2026-10-12",
   "stale": false,
-  "issue_no": 73,
+  "issue_no": 102,
   "scenario": {
-    "id": "06",
-    "slug": "risk-contraction",
-    "label": "風險收縮",
-    "confidence": 0.84,
-    "reason": "水位急降 -7.3pt，風險預算收縮",
-    "source": "classifier"
+    "id": "04",
+    "slug": "rotation-switching",
+    "label": "輪動換手",
+    "confidence": 1.0,
+    "reason": "水位小幅回升，但台股與費半偏弱、產業升溫樣本較價值樣本活躍，呈現分化換手而非全面擴張；先看價值與承接，不追熱。",
+    "source": "manual_override",
+    "classifier_suggestion": "02"
   },
   "water": {
-    "level": 77.0,
-    "previous": 84.3,
-    "change": -7.3,
-    "direction": "falling"
+    "level": 66.9,
+    "previous": 66.5,
+    "change": 0.4,
+    "direction": "rising"
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
-    "short_term_bias": "reduce_risk_review",
-    "risk_posture": "risk_off",
+    "short_term_bias": "defensive_hold_review",
+    "risk_posture": "selective",
     "water_policy": {
-      "direction": "falling",
-      "change": -7.3,
-      "interpretation": "水位急降且風險預算收縮，暫停新增曝險；先檢查過熱、非護城河與槓桿風險。"
+      "direction": "rising",
+      "change": 0.4,
+      "interpretation": "目前不允許新增曝險；維持防禦檢查，等待水位、價格與情境重新確認。"
     },
     "scenario_context": {
-      "id": "06",
-      "label": "風險收縮",
-      "confidence": 0.84
+      "id": "04",
+      "label": "輪動換手",
+      "confidence": 1.0
     },
     "policy_focus": [
-      "風險收縮：下一交易日先看 45,169.46（前收）能否守住，44,925.84 為本日低點防線；上方 45,878.39／期貨 46,027 是價格延續門檻。收盤期貨相對現貨正價差約 178.38 點，外資淨空也縮減 1,726 口，代表價格面仍有支撐；但新增風險預算須等水位止跌，不能用價差或強彈抵銷健康度急降。",
-      "水位單日下降 7.3pt 是首要風險；Nvidia 8/26 美股盤後業績的選擇權隱含波動約 ±5.4%、折合約 2,800 億美元市值變動。同日 PCE／GDP 與 8/27–29 Jackson Hole 集中；價格已擴張、事件尚未落地時，追價的盈虧比反而惡化。",
-      "ETF 價值區 7 漲、1 跌、0 平、2 筆無可核股價；ETF 升溫區 4 漲、3 跌；產業價值區 25 漲、6 跌、0 平；產業升溫區 17 漲、10 跌、2 平、1 筆無可核股價。領漲為 世紀*（+9.99%）、台虹（+9.98%）、光鼎（+9.95%）、玉晶光（+9.49%）、大立光（+8.19%）；壓力為 單井（-3.54%）、東典光電（-2.62%）、旺矽（-2.58%）、富邦基因免疫生技（-2.52%）、矽力*-KY（-2",
-      "TWSE／TAIFEX 8/26 官方收盤：現貨上漲 1.47%、近月期貨上漲 2.17%；期貨相對現貨正價差約 178.38 點。"
+      "價值區擴至40檔；比較伺服器、半導體與零組件，不按升溫排名追價。",
+      "前日法人賣超915.75億元；本週財報、通膨與能源消息仍會影響價格。",
+      "美股三大指數收高、費半續弱；台股09:11跌0.80%，承接仍待觀察。",
+      "美國大型銀行本週揭開財報季，市場將檢驗企業獲利能否支撐估值。"
     ],
     "systemic_risk": "中",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
   },
   "action_guidance": {
-    "risk_bias": "risk_off",
+    "risk_bias": "selective",
     "allow_add": false,
     "allow_trim": true,
-    "deploy_mode": "reduce_exposure",
+    "deploy_mode": "rotate_after_confirmation",
     "trim": {
       "allowed": true,
-      "mode": "reduce_exposure",
+      "mode": "rotate_trim",
       "max_overshoot_pct": 0.25,
       "priority": [
         "positive_return_overheated_branch",
@@ -61,17 +62,17 @@
     },
     "deploy": {
       "allowed": false,
-      "mode": "disabled",
+      "mode": "rotate_after_confirmation",
       "conditions": [
-        "risk_off_no_new_exposure"
+        "wait_for_relative_strength_confirmation"
       ]
     },
     "rebuy": {
-      "allowed": false,
-      "mode": "disabled_until_stabilized",
+      "allowed": true,
+      "mode": "wait_for_confirmation",
       "conditions": [
-        "risk_bias_improves",
-        "water_stabilizes"
+        "rotation_confirms",
+        "no_new_low"
       ]
     },
     "trim_priority": [
@@ -80,15 +81,15 @@
       "leveraged_etf_overheat",
       "low_efficiency_small_branch"
     ],
-    "confidence": 0.84,
+    "confidence": 1.0,
     "source": "morning_brief_classifier"
   },
   "editorial": {
-    "state_label": "風險收縮",
-    "summary": "水位急降 -7.3pt，風險預算收縮"
+    "state_label": "輪動換手",
+    "summary": "水位小幅回升，但台股與費半偏弱、產業升溫樣本較價值樣本活躍，呈現分化換手而非全面擴張；先看價值與承接，不追熱。"
   },
   "source": {
-    "issue_file": "data/issues/20260826.json",
-    "generated_at": "2026-08-27T11:27:45+08:00"
+    "issue_file": "data/issues/20261012.json",
+    "generated_at": "2026-10-12T09:23:51+08:00"
   }
 }
