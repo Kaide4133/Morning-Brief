@@ -1,0 +1,95 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-10-13",
+  "valid_for_trading_date": "2026-10-13",
+  "data_as_of": "2026-10-13",
+  "stale": false,
+  "issue_no": 103,
+  "scenario": {
+    "id": "04",
+    "slug": "rotation-switching",
+    "label": "輪動換手",
+    "confidence": 1.0,
+    "reason": "水位續升、價格轉弱，少數升溫股與多數價值股分化；美股道瓊與費半背離，屬壓力中的輪動換手，不把水位改善寫成全面擴張。",
+    "source": "manual_override",
+    "classifier_suggestion": "02"
+  },
+  "water": {
+    "level": 67.4,
+    "previous": 66.9,
+    "change": 0.5,
+    "direction": "rising"
+  },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "defensive_hold_review",
+    "risk_posture": "selective",
+    "water_policy": {
+      "direction": "rising",
+      "change": 0.5,
+      "interpretation": "方舟水位67.4%，較前一交易日10/12的66.9%上升0.5個百分點；市場健康度與可配置空間微增，但不是立即買進指令。價格承接尚未擴散，新增配置仍待確認。"
+    },
+    "scenario_context": {
+      "id": "04",
+      "label": "輪動換手",
+      "confidence": 1.0
+    },
+    "policy_focus": [
+      "先按風控定總額，再按固定價值選位置；不因局部升溫追價或按盈虧排名汰換。",
+      "油價反彈、美元偏強；本週財報與通膨將檢驗AI需求能否抵銷估值壓力。",
+      "費半跌2.67%，台股09:15跌1.27%；價值區多數下跌，承接未擴散。",
+      "沙國機場遇襲後油價反彈，Reuters報導美股能源強、科技弱；供應干擾能否持續仍待確認。"
+    ],
+    "systemic_risk": "中",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
+  "action_guidance": {
+    "risk_bias": "selective",
+    "allow_add": false,
+    "allow_trim": true,
+    "deploy_mode": "rotate_after_confirmation",
+    "trim": {
+      "allowed": true,
+      "mode": "rotate_trim",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": false,
+      "mode": "rotate_after_confirmation",
+      "conditions": [
+        "wait_for_relative_strength_confirmation"
+      ]
+    },
+    "rebuy": {
+      "allowed": true,
+      "mode": "wait_for_confirmation",
+      "conditions": [
+        "rotation_confirms",
+        "no_new_low"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 1.0,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "輪動換手",
+    "summary": "水位續升、價格轉弱，少數升溫股與多數價值股分化；美股道瓊與費半背離，屬壓力中的輪動換手，不把水位改善寫成全面擴張。"
+  },
+  "source": {
+    "issue_file": "data/issues/20261013.json",
+    "generated_at": "2026-10-13T09:22:40+08:00"
+  }
+}

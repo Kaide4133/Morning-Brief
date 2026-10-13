@@ -1,0 +1,419 @@
+{
+  "meta": {
+    "brief_date": "2026-10-13",
+    "window_taipei": "2026-10-12T00:00:00+08:00/2026-10-13T09:10:00+08:00",
+    "cutoff_utc": "2026-10-13T01:10:00Z",
+    "observed_at_taipei": "2026-10-13T09:13:32+08:00",
+    "cutoff_rule": "Only evidence timestamped by 09:10 was used; later retrieval only confirmed static dated rows.",
+    "read_only": true,
+    "published": false,
+    "news_is_signal": false,
+    "moorlock_included": false
+  },
+  "news": [
+    {
+      "rank": 1,
+      "headline_zh": "沙國機場遇襲推升油價，科技股承壓、那指收低",
+      "source_headline": "Nasdaq falls ahead of earnings, economic data while oil rallies",
+      "source_time": {
+        "displayed": "2026-10-12 16:00 ET",
+        "utc": "2026-10-12T20:00:00Z",
+        "taipei": "2026-10-13T04:00:00+08:00",
+        "basis": "Reuters close update shown by Schwab"
+      },
+      "evidence_class": "Reuters attributed; checked syndication body",
+      "urls": [
+        "https://www.investing.com/news/stock-market-news/us-stock-futures-muted-as-oil-stays-above-100-ahead-of-earnings-4943768",
+        "https://www.schwab.wallst.com/schwab/Prospect/research/stocks/news.asp?YYY101_z5K6INmijHnCpVtklYGW7dmQOQ8yTIRsrudpXdHc4Pqmv8FJ3e2GgmUWK62ReqwAqrmrIeemaQcoCW0KXOmnvxskPL/4o6Zq0cdNbSo4WF4=&symbol=MSFT&type=all",
+        "http://rmb.reuters.com/rmd/rss/item/tag:reuters.com,2026:newsml_KBN3VS0WN?channel=frL012"
+      ],
+      "facts": [
+        "Brent was above US$106/bbl and U.S. crude rose more than 2% after deadly strikes on Riyadh's international airport.",
+        "Final Reuters close: Dow 51,850.55 (+0.38%); S&P 500 7,807.24 (-0.06%); Nasdaq 27,245.90 (-0.44%).",
+        "U.S. Treasury cash market was closed for Columbus Day."
+      ],
+      "reader_interpretation_zh": "油價衝高把通膨與利率壓力拉回市場，能源強、科技弱；對台股先視為估值逆風，不把戰事新聞本身當訊號。",
+      "taiwan_mapping_inference": "短線偏空高本益電子；航空與運輸成本承壓；能源與部分原物料相對受惠。",
+      "uncertainty": "後續供給是否受阻、事件持續多久尚未確認。"
+    },
+    {
+      "rank": 2,
+      "headline_zh": "微軟發表 Maia 300，2027 年起推向多 GW 自研 AI 推論部署",
+      "source_headline": "Microsoft to expand Azure Maia system to multi-gigawatt deployments",
+      "source_time": {
+        "displayed": "2026-10-12 09:00 ET (Reuters item); official post dated 2026-10-12",
+        "utc": "2026-10-12T13:00:00Z",
+        "taipei": "2026-10-12T21:00:00+08:00"
+      },
+      "evidence_class": "official/original plus Reuters attributed",
+      "urls": [
+        "https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/",
+        "https://azure.microsoft.com/en-us/blog/deep-dive-into-azure-maia-300-architecture/",
+        "https://tribune.com.pk/story/2634455/microsoft-plans-huge-deployment-of-its-own-ai-chips-with-an-eye-on-saving-costs"
+      ],
+      "facts": [
+        "Microsoft says Maia 300 production deployments begin in 2027 and Maia will scale to multi-gigawatt deployments.",
+        "Official specifications: 96 accelerators/rack, 167 kW rack envelope, expected 40% more tokens/MW than leading GPU-based systems.",
+        "Reuters says main compute chiplets use TSMC 2 nm and other chiplets use 3 nm; potential deployment exceeds one million chips next year."
+      ],
+      "reader_interpretation_zh": "AI 需求從單一 GPU 擴成雲端商自研 ASIC；先進製程、封裝、伺服器、電源與散熱受惠，但 Nvidia 生態同時面臨替代競爭。",
+      "taiwan_mapping_inference": "正向 TSMC 2/3 nm、先進封裝、ODM、電源與散熱；純 GPU 代理鏈不是全面利多。",
+      "uncertainty": "效率數字是公司宣稱；部署規模是前瞻計畫，不是已認列營收。"
+    },
+    {
+      "rank": 3,
+      "headline_zh": "IMF：AI 基建支出讓全球成長維持約 3%，亞洲硬體供應鏈受惠",
+      "source_headline": "IMF says AI investment keeps global growth around 3%, with major Asia benefits",
+      "source_time": {
+        "displayed": "2026-10-12 10:01 IST",
+        "utc": "2026-10-12T04:31:00Z",
+        "taipei": "2026-10-12T12:31:00+08:00",
+        "basis": "authorized Reuters syndication first-published time"
+      },
+      "evidence_class": "Reuters attributed; IMF media/event corroboration",
+      "urls": [
+        "https://www.business-standard.com/amp/world-news/ai-investment-keeps-global-growth-around-3-with-major-asia-benefits-imf-126101200134_1.html",
+        "http://rmb.reuters.com/rmd/rss/item/tag:reuters.com,2026:newsml_KBN3VS073?channel=frL012",
+        "https://mediacenter.imf.org/imf-georgieva-global-growth---ai/a/b2cab36c-779c-4741-a24a-485fb762429b"
+      ],
+      "facts": [
+        "Georgieva said AI infrastructure investment is helping keep global growth around 3% despite an energy supply shock.",
+        "Estimated boost: 0.5-1.0 percentage point for advanced Asian economies; 0.2-0.8 point for emerging Asian economies.",
+        "IMF updated outlook was due Tuesday; quoted 3% was not yet the new forecast release."
+      ],
+      "reader_interpretation_zh": "AI 資本支出仍是成長支柱，對台灣硬體鏈是中期需求背書；但這是總體判讀，不是個股訂單。",
+      "taiwan_mapping_inference": "中期正向半導體、伺服器 ODM、網通、電力與散熱，仍需公司財測確認。",
+      "uncertainty": "演說屬情境判讀；WEO 更新可能改變精確數字。"
+    },
+    {
+      "rank": 4,
+      "headline_zh": "台積電財報前市場預期再創紀錄，CoWoS 與 AI 產能仍緊",
+      "source_headline": "TSMC expected to report sixth straight quarter of record profit thanks to AI boom",
+      "source_time": {
+        "displayed": "2026-10-12 09:19 IST",
+        "utc": "2026-10-12T03:49:00Z",
+        "taipei": "2026-10-12T11:49:00+08:00",
+        "basis": "Reuters syndication time shown by Economic Times"
+      },
+      "event_time_utc": "2026-10-15T06:00:00Z",
+      "evidence_class": "Reuters attributed; analyst preview, not result",
+      "urls": [
+        "http://rmb.reuters.com/rmd/rss/item/tag:reuters.com,2026:newsml_KBN3VS03N?channel=frL012",
+        "https://telecom.economictimes.indiatimes.com/agency/12345678/Reuters",
+        "https://investor.tsmc.com/english/financial-calendar"
+      ],
+      "facts": [
+        "LSEG SmartEstimate from 16 analysts: Q3 net profit NT$746.3bn, about +65% y/y.",
+        "Above NT$706.56bn would be a record; Q3 revenue had already risen 50% y/y to a record.",
+        "Reuters reported continued strong demand for AI chip capacity and CoWoS."
+      ],
+      "reader_interpretation_zh": "關鍵不是『會不會很好』，而是能否高過已墊高的預期並上修指引；短線反應可能由財測而非單季數字決定。",
+      "taiwan_mapping_inference": "台積電與先進封裝中期需求正向；短線屬高預期事件風險。",
+      "uncertainty": "所有獲利數字都是財報前估算，不得寫成實績。"
+    }
+  ],
+  "cross_asset_price_action": {
+    "note": "Yahoo data are source-version snapshots. BTC/ETH 2026-10-12 daily rows were null, so comparison uses last non-null completed UTC day; not labelled an official one-day close.",
+    "usd_dxy": {
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=10d&interval=1d&events=div%2Csplits",
+      "rows": [
+        {
+          "date": "2026-10-09",
+          "close": 102.20999908447266
+        },
+        {
+          "date": "2026-10-12",
+          "open": 102.30000305175781,
+          "high": 102.61000061035156,
+          "low": 102.0999984741211,
+          "close": 102.58000183105469
+        },
+        {
+          "timestamp_utc": "2026-10-13T01:00:56Z",
+          "value": 102.53199768066406,
+          "status": "near-cutoff"
+        }
+      ],
+      "change_10_12_vs_10_09_pct": 0.362,
+      "interpretation_zh": "美元週一延續強勢、接近 18 個月高位，截點前僅小幅回吐。"
+    },
+    "us_treasury": {
+      "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "market_status_2026_10_12": "closed for Columbus Day; no official cash row",
+      "rows": [
+        {
+          "date": "2026-10-08",
+          "2y_pct": 4.75,
+          "5y_pct": 4.99,
+          "10y_pct": 5.22,
+          "30y_pct": 5.6
+        },
+        {
+          "date": "2026-10-09",
+          "2y_pct": 4.8,
+          "5y_pct": 5.02,
+          "10y_pct": 5.24,
+          "30y_pct": 5.6
+        }
+      ],
+      "change_bp": {
+        "2y": 5,
+        "5y": 3,
+        "10y": 2,
+        "30y": 0
+      },
+      "interpretation_zh": "最新官方曲線仍在高檔；週一休市不能把平盤占位值誤當新收盤。"
+    },
+    "gold": {
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=10d&interval=1d&events=div%2Csplits",
+      "rows": [
+        {
+          "date": "2026-10-09",
+          "close": 4216.2998046875
+        },
+        {
+          "timestamp_utc": "2026-10-13T01:00:57Z",
+          "open": 4195.5,
+          "high": 4201.7001953125,
+          "low": 4177.0,
+          "value": 4184.89990234375,
+          "volume": 8769,
+          "status": "near-cutoff"
+        }
+      ],
+      "change_vs_10_09_pct": -0.7447,
+      "interpretation_zh": "價格受強美元與高利率壓抑；價格下跌不等於 ETF 流出。"
+    },
+    "btc": {
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?range=10d&interval=1d&events=div%2Csplits",
+      "rows": [
+        {
+          "date_utc": "2026-10-11",
+          "open": 82912.2265625,
+          "high": 84103.625,
+          "low": 82722.109375,
+          "close": 83679.46875,
+          "volume": 12536449881
+        },
+        {
+          "date_utc": "2026-10-12",
+          "open": null,
+          "high": null,
+          "low": null,
+          "close": null,
+          "volume": null
+        },
+        {
+          "timestamp_utc": "2026-10-13T01:00:00Z",
+          "open": 81754.484375,
+          "high": 81754.484375,
+          "low": 81197.9921875,
+          "value": 81659.2578125,
+          "volume": 28167528448,
+          "status": "near-cutoff"
+        }
+      ],
+      "change_vs_last_non_null_close_pct": -2.4142
+    },
+    "eth": {
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ETH-USD?range=10d&interval=1d&events=div%2Csplits",
+      "rows": [
+        {
+          "date_utc": "2026-10-11",
+          "open": 2504.02783203125,
+          "high": 2551.531494140625,
+          "low": 2495.72021484375,
+          "close": 2534.69921875,
+          "volume": 8283770666
+        },
+        {
+          "date_utc": "2026-10-12",
+          "open": null,
+          "high": null,
+          "low": null,
+          "close": null,
+          "volume": null
+        },
+        {
+          "timestamp_utc": "2026-10-13T01:00:00Z",
+          "open": 2444.14453125,
+          "high": 2444.14453125,
+          "low": 2419.049072265625,
+          "value": 2431.080078125,
+          "volume": 14488000512,
+          "status": "near-cutoff"
+        }
+      ],
+      "change_vs_last_non_null_close_pct": -4.088
+    },
+    "eth_btc": {
+      "derived_from": "matched Yahoo ETH-USD/BTC-USD timestamps",
+      "rows": [
+        {
+          "date_utc": "2026-10-11",
+          "ratio": 0.030290574935682775
+        },
+        {
+          "timestamp_utc": "2026-10-13T01:00:00Z",
+          "ratio": 0.02977102833468151
+        }
+      ],
+      "change_pct": -1.7152,
+      "interpretation_zh": "ETH 跌幅大於 BTC，ETH/BTC 續弱，輪動未轉強。"
+    }
+  },
+  "actual_etf_flows": {
+    "btc_us_spot": {
+      "source_url": "https://farside.co.uk/btc/",
+      "unit": "US$m",
+      "rows": [
+        {
+          "date": "2026-10-05",
+          "total": -89.8
+        },
+        {
+          "date": "2026-10-06",
+          "total": 118.8
+        },
+        {
+          "date": "2026-10-07",
+          "total": -484.9
+        },
+        {
+          "date": "2026-10-08",
+          "total": -244.1
+        },
+        {
+          "date": "2026-10-09",
+          "total": 21.1
+        },
+        {
+          "date": "2026-10-12",
+          "IBIT": null,
+          "FBTC": 0.0,
+          "BITB": 0.0,
+          "ARKB": 0.0,
+          "BTCO": 0.0,
+          "EZBC": 0.0,
+          "BRRR": 0.0,
+          "HODL": null,
+          "BTCW": 0.0,
+          "MSBT": 0.0,
+          "GBTC": 0.0,
+          "BTC": 0.0,
+          "displayed_total": 0.0,
+          "status": "preliminary/incomplete; IBIT and HODL missing—not a confirmed zero-flow day"
+        }
+      ],
+      "sum_10_05_to_10_09": -678.9,
+      "interpretation_zh": "截至 10/9 的完整五日仍明顯淨流出；10/12 的 0 因兩檔缺值，不能當成確認零流量。"
+    },
+    "eth_us_spot": {
+      "source_url": "https://farside.co.uk/eth/",
+      "unit": "US$m",
+      "rows": [
+        {
+          "date": "2026-10-05",
+          "total": -50.8
+        },
+        {
+          "date": "2026-10-06",
+          "total": -201.9
+        },
+        {
+          "date": "2026-10-07",
+          "total": -160.9
+        },
+        {
+          "date": "2026-10-08",
+          "total": -72.5
+        },
+        {
+          "date": "2026-10-09",
+          "total": -56.1
+        },
+        {
+          "date": "2026-10-12",
+          "ETHA": null,
+          "ETHB": null,
+          "FETH": 0.0,
+          "ETHW": 0.0,
+          "TETH": 0.0,
+          "ETHV": null,
+          "QETH": 0.0,
+          "EZET": 0.0,
+          "MSSE": 0.0,
+          "ETHE": 0.0,
+          "ETH": -10.3,
+          "displayed_total": -10.3,
+          "status": "preliminary/incomplete; ETHA, ETHB and ETHV missing"
+        }
+      ],
+      "sum_10_05_to_10_09": -542.2,
+      "interpretation_zh": "ETH ETF 連續五個完整交易日淨流出；10/12 至少再流出 1,030 萬美元且仍缺三檔。"
+    },
+    "gold_global_physical": {
+      "landing_url": "https://www.gold.org/goldhub/data/gold-etfs-holdings-and-flows",
+      "flow_api_url": "https://fsapi.gold.org/api/v11/charts/etfv2/revised/flows-chart2?break-cache=12Oct26",
+      "holdings_api_url": "https://fsapi.gold.org/api/v11/charts/etfv2/revised/holdings-chart2?break-cache=12Oct26",
+      "page_modified": "2026-10-12T08:00:00+01:00",
+      "week_ending": "2026-10-09",
+      "regional_flow_usd": {
+        "North America": -111159717.78,
+        "Europe": 370201947.28,
+        "Asia": 375886191.43,
+        "Other": -7328900.0
+      },
+      "regional_flow_tonnes": {
+        "North America": -0.99330566,
+        "Europe": 2.75542458,
+        "Asia": 2.48035206,
+        "Other": 0.24250041
+      },
+      "computed_global_flow_usd": 627599520.93,
+      "computed_global_flow_tonnes": 4.48497139,
+      "regional_holdings_tonnes": {
+        "North America": 2115.86,
+        "Europe": 1527.24,
+        "Asia": 545.14,
+        "Other": 76.75
+      },
+      "computed_global_holdings_tonnes": 4264.99,
+      "computed_global_aum_usd": 576716520485.41,
+      "wgc_gold_price_usd_oz": 4140.86,
+      "monthly_context": {
+        "as_of": "2026-09-30",
+        "global_flow_usd_approx": 10000000000,
+        "global_flow_tonnes": 67,
+        "global_holdings_tonnes": 4256,
+        "url": "https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2026/10"
+      },
+      "sign_audit": "USD and tonnes flows are both positive globally; Gold Price (rhs) was excluded before summing.",
+      "interpretation_zh": "金價短線下跌，但截至 10/9 當週實體黃金 ETF 仍淨流入約 6.28 億美元／4.48 噸，配置資金與短線價格動能分歧。"
+    }
+  },
+  "reader_synthesis_zh": {
+    "flow": "美元與長端利率高檔；黃金 ETF 實際流入；BTC、ETH ETF 完整五日持續流出，ETH 相對 BTC 更弱。",
+    "meaning": "不是全面 risk-on，而是高利率／強美元壓估值、黃金配置仍在、加密資產缺乏 ETF 需求確認的分化盤。",
+    "taiwan_use": "AI 實體需求與高折現率分開看：中期供應鏈需求有支撐，短線高本益與油價敏感族群保守。",
+    "watch": [
+      "Farside 10/12 缺值補齊",
+      "美債復市後 10Y 是否突破 5.24%",
+      "DXY 是否守 102.5",
+      "ETH/BTC 是否站回 0.0303",
+      "台積電 10/15 指引"
+    ]
+  },
+  "source_health": {
+    "reuters": "Canonical Reuters/RMB endpoints intermittently inaccessible (401/tool gateway); checked Reuters search bodies and authorized syndications. Displayed syndication times are preserved rather than guessed.",
+    "yahoo": "Usable snapshots; BTC/ETH 10/12 daily rows null.",
+    "farside": "Accessible, but latest 10/12 rows incomplete.",
+    "wgc": "Landing page and v11 APIs accessible; Weekly node parsed correctly.",
+    "treasury": "Official XML accessible; latest dated row 10/9 because 10/12 holiday."
+  },
+  "issues": [
+    "Farside 2026-10-12 BTC and ETH rows incomplete by cutoff.",
+    "No official 2026-10-12 Treasury cash close.",
+    "Reuters canonical bodies not consistently retrievable; authorized syndication evidence retained."
+  ]
+}
