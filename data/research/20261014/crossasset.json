@@ -1,0 +1,492 @@
+{
+  "meta": {
+    "brief_date": "2026-10-14",
+    "brief_time_taipei": "09:26",
+    "cutoff_taipei": "2026-10-14T09:26:00+08:00",
+    "cutoff_utc": "2026-10-14T01:26:00Z",
+    "window_taipei": "2026-10-13T09:26:00+08:00/2026-10-14T09:26:00+08:00",
+    "read_only": true,
+    "published": false,
+    "price_is_not_flow": true,
+    "news_is_context_not_signal": true,
+    "completed_at_taipei": "2026-10-14T09:33:30+08:00",
+    "scope": "Internal research pack only; no publishing."
+  },
+  "news": [
+    {
+      "id": "us-close-pre-cpi",
+      "event_time_taipei": "2026-10-14T05:10:00+08:00",
+      "temporal_precision": "minute",
+      "source": "Reuters (Yahoo syndication)",
+      "url": "https://sg.finance.yahoo.com/news/trading-day-earnings-season-debuts-210526490.html",
+      "facts": [
+        "S&P 500收7805.45、日跌0.02%；Nasdaq收27204.38、跌0.15%；Dow收51670.10、跌0.35%；SOX收12208.79、跌0.23%。",
+        "銀行財報分歧、晶片股續弱；市場等待10月14日美國9月CPI。",
+        "Reuters稱美元指數走低、長債殖利率回落，2年期殖利率轉升；黃金在CPI前走低。"
+      ],
+      "taiwan_relevance": "美股晶片續弱與CPI/利率事件風險，直接影響台灣電子權值評價；但指數跌幅是價格，不是基金流向。"
+    },
+    {
+      "id": "taiwan-close-foreign-selling",
+      "event_time_taipei": "2026-10-13T13:30:00+08:00",
+      "temporal_precision": "market_close",
+      "source": "Taipei Times/CNA/TWSE data",
+      "url": "https://www.taipeitimes.com/News/biz/archives/2026/10/14/2003865906",
+      "facts": [
+        "TAIEX跌960.65點或1.95%，收48341.31；成交值約新台幣1.125兆元；台積電跌1.97%。",
+        "三大法人合計賣超新台幣1984.46億元，外資賣超1653.42億元，為史上第三大。",
+        "記憶體股受CXMT技術進展及韓國記憶體股重挫影響。"
+      ],
+      "taiwan_relevance": "這是有明確口徑的台股資金流；不要用TAIEX跌幅替代外資賣超。"
+    },
+    {
+      "id": "kyec-nvidia-prepayment",
+      "event_time_taipei": "2026-10-13T17:31:58+08:00",
+      "temporal_precision": "second",
+      "source": "Economic Daily/CNA, company announcement reported",
+      "url": "https://money.udn.com/money/story/5612/9812229",
+      "facts": [
+        "京元電與輝達簽客戶預付款協議，由輝達預付、京元電及美國子公司AeternZ在美國建置並保留測試產能，未來以服務款抵減。",
+        "京元電7月核准的美國設廠投資上限為14億美元；本次報導未揭露預付款金額。"
+      ],
+      "taiwan_relevance": "對AI後段測試需求與美國在地化屬正向公司基本面驗證；不能把14億美元投資上限誤寫成輝達預付款金額。"
+    },
+    {
+      "id": "imf-taiwan-growth-ai-risk",
+      "event_time_taipei": "2026-10-13",
+      "temporal_precision": "date_only_exact_time_unavailable",
+      "source": "IMF WEO reported by Taipei Times; Reuters for downside scenario",
+      "url": "https://www.taipeitimes.com/News/biz/archives/2026/10/13/2003865895",
+      "secondary_url": "https://www.reuters.com/business/finance/imf-flags-risks-global-economy-ai-market-correction-war-debt-2026-10-13/",
+      "facts": [
+        "IMF將台灣2026年實質GDP成長預估由4月的5.2%上調至10.7%，2027年估4.3%；台灣與南韓合計占全球AI運算硬體淨貿易62%。",
+        "IMF同時警告AI投資若大幅下滑，至2028年全球GDP可能少1.1%，美國少1.8%；高債務與殖利率上升也是風險。"
+      ],
+      "taiwan_relevance": "台灣是AI景氣上修的直接受益者，也因此對AI估值與資本支出反轉更敏感；這是總經情境，不是短線買進訊號。"
+    },
+    {
+      "id": "cxmt-memory-pressure",
+      "event_time_taipei": "2026-10-13T22:04:00+08:00",
+      "temporal_precision": "minute",
+      "source": "Reuters (WTVB syndication)",
+      "url": "https://wtvbam.com/2026/10/13/us-chip-stocks-extend-slide-as-china-memory-report-ai-spending-jitters-hit-sector/",
+      "facts": [
+        "Reuters報導美國晶片股續跌；中國CXMT的高密度DRAM技術進展引發記憶體競爭疑慮。",
+        "市場同時擔心AI支出可持續性，IMF也警告AI投資放緩可能觸發資產修正。"
+      ],
+      "taiwan_relevance": "直接影響台灣記憶體族群風險溢價；對台積電/AI代工則是情緒與估值外溢，不能等同需求已轉弱。"
+    }
+  ],
+  "cross_asset_price": {
+    "dxy": {
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=5d&interval=1m&events=div%2Csplits",
+      "currency": "USD",
+      "exchange_timezone": "America/New_York",
+      "timestamp_utc": "2026-10-14T01:17:33Z",
+      "open": 102.18299865722656,
+      "high": 102.18299865722656,
+      "low": 102.18299865722656,
+      "value": 102.18299865722656,
+      "volume": 0,
+      "previous_close_meta": 102.14,
+      "daily_source_url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=10d&interval=1d&events=div%2Csplits",
+      "comparison_24h": {
+        "base_timestamp_utc": "2026-10-13T01:26:00Z",
+        "base_value": 102.47699737548828,
+        "snapshot_timestamp_utc": "2026-10-14T01:18:55Z",
+        "snapshot_value": 102.17900085449219,
+        "change_pct": -0.2908
+      }
+    },
+    "gold_futures": {
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=5d&interval=1m&events=div%2Csplits",
+      "currency": "USD",
+      "exchange_timezone": "America/New_York",
+      "timestamp_utc": "2026-10-14T01:17:31Z",
+      "open": 4171.2998046875,
+      "high": 4171.2998046875,
+      "low": 4171.2998046875,
+      "value": 4171.2998046875,
+      "volume": 0,
+      "previous_close_meta": 4157.0,
+      "daily_source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=10d&interval=1d&events=div%2Csplits",
+      "comparison_24h": {
+        "base_timestamp_utc": "2026-10-13T01:26:00Z",
+        "base_value": 4181.0,
+        "snapshot_timestamp_utc": "2026-10-14T01:18:55Z",
+        "snapshot_value": 4173.10009765625,
+        "change_pct": -0.1889
+      }
+    },
+    "btc": {
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?range=5d&interval=1m&events=div%2Csplits",
+      "currency": "USD",
+      "exchange_timezone": "UTC",
+      "timestamp_utc": "2026-10-14T01:26:00Z",
+      "open": 83312.65625,
+      "high": 83328.359375,
+      "low": 83293.140625,
+      "value": 83314.0078125,
+      "volume": 0,
+      "previous_close_meta": 82912.23,
+      "daily_source_url": "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?range=10d&interval=1d&events=div%2Csplits",
+      "comparison_24h": {
+        "base_timestamp_utc": "2026-10-13T01:26:00Z",
+        "base_value": 81945.6171875,
+        "snapshot_timestamp_utc": "2026-10-14T01:26:00Z",
+        "snapshot_value": 83314.0078125,
+        "change_pct": 1.6699
+      }
+    },
+    "eth": {
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ETH-USD?range=5d&interval=1m&events=div%2Csplits",
+      "currency": "USD",
+      "exchange_timezone": "UTC",
+      "timestamp_utc": "2026-10-14T01:26:00Z",
+      "open": 2504.800048828125,
+      "high": 2504.89990234375,
+      "low": 2503.760009765625,
+      "value": 2504.4599609375,
+      "volume": 0,
+      "previous_close_meta": 2504.0278,
+      "daily_source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ETH-USD?range=10d&interval=1d&events=div%2Csplits",
+      "comparison_24h": {
+        "base_timestamp_utc": "2026-10-13T01:26:00Z",
+        "base_value": 2443.7900390625,
+        "snapshot_timestamp_utc": "2026-10-14T01:26:00Z",
+        "snapshot_value": 2504.4599609375,
+        "change_pct": 2.4826
+      }
+    },
+    "sp500": {
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=5d&interval=1m&events=div%2Csplits",
+      "currency": "USD",
+      "exchange_timezone": "America/New_York",
+      "timestamp_utc": "2026-10-13T20:00:00Z",
+      "open": 7805.4501953125,
+      "high": 7805.4501953125,
+      "low": 7805.4501953125,
+      "value": 7805.4501953125,
+      "volume": 0,
+      "previous_close_meta": 7818.93,
+      "daily_source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=10d&interval=1d&events=div%2Csplits",
+      "daily_rows": [
+        {
+          "date_utc": "2026-10-08",
+          "open": 7778.4501953125,
+          "high": 7797.7900390625,
+          "low": 7731.259765625,
+          "close": 7765.35986328125,
+          "volume": 6082070000
+        },
+        {
+          "date_utc": "2026-10-09",
+          "open": 7786.35986328125,
+          "high": 7820.56982421875,
+          "low": 7779.33984375,
+          "close": 7811.5400390625,
+          "volume": 4782640000
+        },
+        {
+          "date_utc": "2026-10-12",
+          "open": 7813.0400390625,
+          "high": 7821.669921875,
+          "low": 7796.93994140625,
+          "close": 7807.240234375,
+          "volume": 4148500000
+        },
+        {
+          "date_utc": "2026-10-13",
+          "open": 7795.27001953125,
+          "high": 7814.14990234375,
+          "low": 7786.10986328125,
+          "close": 7805.4501953125,
+          "volume": 2640232000
+        }
+      ],
+      "last_completed_change_pct": -0.0229
+    },
+    "nasdaq": {
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=5d&interval=1m&events=div%2Csplits",
+      "currency": "USD",
+      "exchange_timezone": "America/New_York",
+      "timestamp_utc": "2026-10-13T20:00:00Z",
+      "open": 27204.380859375,
+      "high": 27204.380859375,
+      "low": 27204.380859375,
+      "value": 27204.380859375,
+      "volume": 0,
+      "previous_close_meta": 27599.79,
+      "daily_source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=10d&interval=1d&events=div%2Csplits",
+      "daily_rows": [
+        {
+          "date_utc": "2026-10-08",
+          "open": 27416.029296875,
+          "high": 27491.890625,
+          "low": 27066.759765625,
+          "close": 27193.33984375,
+          "volume": 8820120000
+        },
+        {
+          "date_utc": "2026-10-09",
+          "open": 27342.26953125,
+          "high": 27395.41015625,
+          "low": 27254.029296875,
+          "close": 27366.169921875,
+          "volume": 6845310000
+        },
+        {
+          "date_utc": "2026-10-12",
+          "open": 27352.509765625,
+          "high": 27376.66015625,
+          "low": 27219.419921875,
+          "close": 27245.900390625,
+          "volume": 6285170000
+        },
+        {
+          "date_utc": "2026-10-13",
+          "open": 27138.728515625,
+          "high": 27277.8828125,
+          "low": 27116.080078125,
+          "close": 27204.380859375,
+          "volume": 6273913000
+        }
+      ],
+      "last_completed_change_pct": -0.1524
+    },
+    "dow": {
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?range=5d&interval=1m&events=div%2Csplits",
+      "currency": "USD",
+      "exchange_timezone": "America/New_York",
+      "timestamp_utc": "2026-10-13T20:00:00Z",
+      "open": 51670.1015625,
+      "high": 51670.1015625,
+      "low": 51670.1015625,
+      "value": 51670.1015625,
+      "volume": 0,
+      "previous_close_meta": 51521.28,
+      "daily_source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?range=10d&interval=1d&events=div%2Csplits",
+      "daily_rows": [
+        {
+          "date_utc": "2026-10-08",
+          "open": 51105.0390625,
+          "high": 51245.28125,
+          "low": 50939.0,
+          "close": 51231.640625,
+          "volume": 449590000
+        },
+        {
+          "date_utc": "2026-10-09",
+          "open": 51258.94921875,
+          "high": 51765.109375,
+          "low": 51258.94921875,
+          "close": 51654.94921875,
+          "volume": 339470000
+        },
+        {
+          "date_utc": "2026-10-12",
+          "open": 51765.3515625,
+          "high": 51928.1015625,
+          "low": 51718.6015625,
+          "close": 51850.55078125,
+          "volume": 307460000
+        },
+        {
+          "date_utc": "2026-10-13",
+          "open": 52092.98828125,
+          "high": 52317.3203125,
+          "low": 51587.671875,
+          "close": 51670.1015625,
+          "volume": 395694761
+        }
+      ],
+      "last_completed_change_pct": -0.348
+    },
+    "sox": {
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?range=5d&interval=1m&events=div%2Csplits",
+      "currency": "USD",
+      "exchange_timezone": "America/New_York",
+      "timestamp_utc": "2026-10-13T20:00:00Z",
+      "open": 12208.794921875,
+      "high": 12208.794921875,
+      "low": 12208.794921875,
+      "value": 12208.794921875,
+      "volume": 0,
+      "previous_close_meta": 13217.82,
+      "daily_source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?range=10d&interval=1d&events=div%2Csplits",
+      "daily_rows": [
+        {
+          "date_utc": "2026-10-08",
+          "open": 12842.7900390625,
+          "high": 12997.48046875,
+          "low": 12483.9501953125,
+          "close": 12623.7099609375,
+          "volume": 0
+        },
+        {
+          "date_utc": "2026-10-09",
+          "open": 12796.0,
+          "high": 12826.669921875,
+          "low": 12507.8798828125,
+          "close": 12572.419921875,
+          "volume": 0
+        },
+        {
+          "date_utc": "2026-10-12",
+          "open": 12361.240234375,
+          "high": 12378.3095703125,
+          "low": 12216.4501953125,
+          "close": 12236.7900390625,
+          "volume": 0
+        },
+        {
+          "date_utc": "2026-10-13",
+          "open": 11959.53515625,
+          "high": 12217.208984375,
+          "low": 11861.2783203125,
+          "close": 12208.794921875,
+          "volume": 0
+        }
+      ],
+      "last_completed_change_pct": -0.2288
+    },
+    "eth_btc": {
+      "timestamp_basis": "latest each at/before cutoff; both Yahoo 1m snapshots",
+      "ratio": 0.030060490746932282,
+      "comparison_24h": {
+        "base_timestamp_utc": "2026-10-13T01:26:00Z",
+        "base_ratio": 0.029822095713439526,
+        "snapshot_timestamp_utc": "2026-10-14T01:26:00Z",
+        "snapshot_ratio": 0.030060490746932282,
+        "change_pct": 0.7994
+      }
+    },
+    "us_treasury": {
+      "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "latest": {
+        "date": "2026-10-13",
+        "2y_pct": 4.79,
+        "5y_pct": 5.0,
+        "10y_pct": 5.21,
+        "30y_pct": 5.56
+      },
+      "previous_published": {
+        "date": "2026-10-09",
+        "2y_pct": 4.8,
+        "5y_pct": 5.02,
+        "10y_pct": 5.24,
+        "30y_pct": 5.6
+      },
+      "change_bp_vs_previous_published": {
+        "2y_pct": -1.0,
+        "5y_pct": -2.0,
+        "10y_pct": -3.0,
+        "30y_pct": -4.0
+      },
+      "note": "Official daily par-yield curve; Oct. 12 holiday had no published row, so comparison is 2026-10-13 vs 2026-10-09."
+    }
+  },
+  "actual_etf_flows": {
+    "btc_us_spot": {
+      "source_primary": "https://farside.co.uk/btc/",
+      "source_confirming": "https://x.com/FarsideUK/status/2109852720869834947",
+      "unit": "US$m",
+      "latest_final_date": "2026-10-12",
+      "latest_final_total": -65.4,
+      "funds": {
+        "IBIT": -65.4,
+        "FBTC": 0,
+        "BITB": 0,
+        "ARKB": 0,
+        "BTCO": 0,
+        "EZBC": 0,
+        "BRRR": 0,
+        "HODL": 0,
+        "BTCW": 0,
+        "MSBT": 0,
+        "GBTC": 0,
+        "BTC": 0
+      },
+      "status": "final by Farside post 2026-10-13 03:44 UTC; 2026-10-13 session flows not final by brief cutoff",
+      "prior_week_2026-10-05_to_09": -678.9
+    },
+    "eth_us_spot": {
+      "source_primary": "https://farside.co.uk/eth/",
+      "source_confirming": "https://x.com/FarsideUK/status/2109852651445797284",
+      "unit": "US$m",
+      "latest_final_date": "2026-10-12",
+      "latest_final_total": -85.4,
+      "funds": {
+        "ETHA": -75.1,
+        "ETHB": 0,
+        "FETH": 0,
+        "ETHW": 0,
+        "TETH": 0,
+        "ETHV": 0,
+        "QETH": 0,
+        "EZET": 0,
+        "MSSE": 0,
+        "ETHE": 0,
+        "ETH": -10.3
+      },
+      "status": "final by Farside post 2026-10-13 03:44 UTC; 2026-10-13 session flows not final by brief cutoff",
+      "prior_week_2026-10-05_to_09": -542.2,
+      "outflow_streak_through_10_12_sessions": 10
+    },
+    "gold_global_physical": {
+      "landing_url": "https://www.gold.org/goldhub/data/gold-etfs-holdings-and-flows",
+      "flow_api_url": "https://fsapi.gold.org/api/v11/charts/etfv2/revised/flows-chart2?break-cache=14Oct26c",
+      "frequency": "weekly",
+      "latest": {
+        "usd": {
+          "timestamp_ms": 1791504000000,
+          "week_ending_utc": "2026-10-09",
+          "regions": {
+            "North America": -111159717.78,
+            "Europe": 370201947.28000003,
+            "Asia": 375886191.43,
+            "Other": -7328900
+          },
+          "global_sum": 627599520.9300001
+        },
+        "tonnes": {
+          "timestamp_ms": 1791504000000,
+          "week_ending_utc": "2026-10-09",
+          "regions": {
+            "North America": -0.99330566,
+            "Europe": 2.75542458,
+            "Asia": 2.48035206,
+            "Other": 0.24250041
+          },
+          "global_sum": 4.48497139
+        }
+      },
+      "status": "WGC Weekly series parsed by explicit frequency; Gold Price (rhs) excluded; USD and tonnes signs audited separately.",
+      "api_request_time": "2026-10-14 01:29:25 UTC",
+      "sign_audit": "agree"
+    }
+  },
+  "editorial_findings_zh": [
+    "風險偏好仍分化：美股10月13日收盤S&P 500 -0.02%、Nasdaq -0.15%、SOX -0.23%；不是全面性拋售，但晶片端續弱。台股前一日外資實際賣超新台幣1,653.42億元，這才是可稱為『資金流』的證據。",
+    "美元：DXY代理值截至09:18台北約102.18，24小時-0.29%。這是價格/匯率表現，沒有取得美元基金或期貨部位的同時點流量資料，不能說資金流出美元。",
+    "美債：美國財政部10月13日2年、10年、30年殖利率分別為4.79%、5.21%、5.56%；較前次10月9日分別-1.0、-3.0、-4.0bp。這是殖利率，不是債券基金流量；未取得截至截稿的同口徑美債基金流向。",
+    "黃金：COMEX近月期金代理值截至09:19台北約4173.10美元/盎司，24小時-0.19%。實際ETF流量則是WGC截至10月9日一週全球實物黃金ETF淨流入約6.276億美元、4.485噸；價格小跌與ETF流入並不矛盾，時間與口徑不同。",
+    "BTC：截至09:26約$83,314、24小時+1.67%；最新已定稿美國現貨ETF（10月12日）淨流出$65.4m，前一週（10月5–9日）合計淨流出$678.9m。幣價反彈不能解讀為ETF流入。",
+    "ETH：截至09:26約$2,504、24小時+2.48%；最新已定稿美國現貨ETF（10月12日）淨流出$85.4m，前一週合計淨流出$542.2m，並為第10個交易日連續淨流出。ETH資料不可與BTC合併。",
+    "ETH/BTC：比值24小時由0.02982升至0.03006，+0.80%，表示ETH相對BTC較強；這只是相對價格，不等於ETH ETF吸金。",
+    "台灣編輯主軸：外資大額賣超與全球晶片估值降溫構成短線壓力；IMF上修台灣成長及京元電—輝達預付款協議則支持AI供應鏈基本面。宜寫成『短線去風險、長線需求驗證並存』，不要升格成單一方向交易結論。"
+  ],
+  "source_health": {
+    "hard_cutoff_enforced": true,
+    "news_time_window_checked": "Exact-time items fall within the window. IMF item has date only and is retained with exact-time-unavailable label; precise in-window status cannot be proven.",
+    "market_prices": "Yahoo Finance chart API snapshots clipped at/before cutoff; investable but not official benchmark fixings.",
+    "treasury": "U.S. Treasury official daily yield curve.",
+    "gold_flow": "World Gold Council weekly flow API, explicit Weekly series; USD and tonnes signs agree.",
+    "crypto_flow": "Farside primary tables/X final notices; latest final session only.",
+    "temporal_caveat": "IMF Taiwan item is date-only; its exact publication time and strict inclusion in the 09:26-to-09:26 window are unavailable."
+  },
+  "unavailable": [
+    "2026-10-13 U.S. spot BTC/ETH ETF final flows were not available by 2026-10-14 09:26 Taipei; latest verified final session is 2026-10-12."
+  ],
+  "issues": []
+}

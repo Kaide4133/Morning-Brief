@@ -1,0 +1,22 @@
+{
+  "errors": [],
+  "warnings": [
+    "Official exchange calendar, source prices/news and source-to-zone agreement still require producer verification"
+  ],
+  "zone_counts": {
+    "etf.value": 10,
+    "etf.rising": 7,
+    "stocks.value": 30,
+    "stocks.rising": 30
+  },
+  "overlaps": {
+    "etf": [],
+    "stocks": []
+  },
+  "rendered": "PASS",
+  "mirror_hashes": "PASS",
+  "context": "PASS",
+  "technical_records": 77,
+  "source_order": "PASS",
+  "status": "PASS"
+}

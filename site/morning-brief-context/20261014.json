@@ -1,0 +1,95 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-10-14",
+  "valid_for_trading_date": "2026-10-14",
+  "data_as_of": "2026-10-14",
+  "stale": false,
+  "issue_no": 104,
+  "scenario": {
+    "id": "06",
+    "slug": "risk-contraction",
+    "label": "風險收縮",
+    "confidence": 1.0,
+    "reason": "水位下降1.8個百分點、前一交易日外資大額淨賣超，配置空間收縮；今日早盤反彈與價值股回升是真實修復，但不足視為風控重新放寬。風險收縮描述配置紀律，不表示今日價格全面下跌。",
+    "source": "manual_override",
+    "classifier_suggestion": "05"
+  },
+  "water": {
+    "level": 65.6,
+    "previous": 67.4,
+    "change": -1.8,
+    "direction": "falling"
+  },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "reduce_risk_review",
+    "risk_posture": "risk_off",
+    "water_policy": {
+      "direction": "falling",
+      "change": -1.8,
+      "interpretation": "方舟水位65.6%，較前一交易日10/13的67.4%下降1.8個百分點；市場健康度與可配置空間收縮，反彈不代表風控已重新放寬。"
+    },
+    "scenario_context": {
+      "id": "06",
+      "label": "風險收縮",
+      "confidence": 1.0
+    },
+    "policy_focus": [
+      "先按風控定總額，再依固定價值選位置；不按短期盈虧排名汰換，也不因升溫追價。",
+      "美國CPI將公布，晶片競爭與AI支出疑慮仍在；利率回落能否延續值得追蹤。",
+      "台股09:26漲1.19%，產業價值區24檔上漲；前日外資大額賣超仍須消化。",
+      "京元電10/13公告與輝達簽訂客戶預付款協議，將在美國建置並保留測試產能，預付款以未來服務款抵減。14億美元是先前美國設廠投資上限，不是此次預付款金額。"
+    ],
+    "systemic_risk": "中",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
+  "action_guidance": {
+    "risk_bias": "risk_off",
+    "allow_add": false,
+    "allow_trim": true,
+    "deploy_mode": "reduce_exposure",
+    "trim": {
+      "allowed": true,
+      "mode": "reduce_exposure",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": false,
+      "mode": "disabled",
+      "conditions": [
+        "risk_off_no_new_exposure"
+      ]
+    },
+    "rebuy": {
+      "allowed": false,
+      "mode": "disabled_until_stabilized",
+      "conditions": [
+        "risk_bias_improves",
+        "water_stabilizes"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 1.0,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "風險收縮",
+    "summary": "水位下降1.8個百分點、前一交易日外資大額淨賣超，配置空間收縮；今日早盤反彈與價值股回升是真實修復，但不足視為風控重新放寬。風險收縮描述配置紀律，不表示今日價格全面下跌。"
+  },
+  "source": {
+    "issue_file": "data/issues/20261014.json",
+    "generated_at": "2026-10-14T09:36:44+08:00"
+  }
+}

@@ -1,0 +1,395 @@
+{
+  "schema_version": "1.0",
+  "research_context": {
+    "brief_date": "2026-10-14",
+    "requested_as_of": "2026-10-14T09:26:00+08:00",
+    "timezone": "Asia/Taipei",
+    "generated_at": "2026-10-14T09:31:35+08:00",
+    "mode": "read-only research; no publishing",
+    "snapshot_policy": "Taiwan values are intraday and explicitly timestamped; no wait for close."
+  },
+  "calendar_verification": {
+    "current_day": {
+      "date": "2026-10-14",
+      "weekday": "Wednesday",
+      "twse_open": true,
+      "taifex_regular_session_open": true,
+      "basis": [
+        "Not listed as a 2026 closure in official TWSE holiday schedule",
+        "Official TWSE 09:26 minute exists",
+        "Official TAIFEX regular-session quote exists on 2026-10-14"
+      ]
+    },
+    "immediately_prior_open_date": "2026-10-13",
+    "prior_open_evidence": {
+      "twse_official_close_date": "20261013",
+      "taiex_close": 48341.31,
+      "taiex_change_points": -960.65,
+      "taiex_change_pct": -1.95
+    },
+    "nearby_official_closures": [
+      {
+        "date": "2026-10-09",
+        "reason": "National Day substitute holiday"
+      },
+      {
+        "date": "2026-10-10",
+        "reason": "National Day; Saturday"
+      },
+      {
+        "date": "2026-10-25",
+        "reason": "Taiwan Restoration Day; Sunday"
+      },
+      {
+        "date": "2026-10-26",
+        "reason": "substitute holiday"
+      }
+    ],
+    "twse_calendar_url": "https://www.twse.com.tw/holidaySchedule/holidaySchedule?response=json",
+    "taifex_notice_url": "https://www.taifex.com.tw/enl/eng11/newsDetail?newsType=1&idx=10716"
+  },
+  "taiwan_market": {
+    "twse_taiex_intraday_requested_minute": {
+      "name": "發行量加權股價指數 (TAIEX)",
+      "date": "2026-10-14",
+      "source_quote_time": "09:26:00 Asia/Taipei",
+      "index": 48915.93,
+      "prior_close": 48341.31,
+      "change_points": 574.62,
+      "change_pct_calculated": 1.188672793517594,
+      "change_display": "+574.62",
+      "change_pct_display": "+1.19%",
+      "minute_volume_field_raw": "6426",
+      "epoch_ms_raw": "1791941160000",
+      "source_url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw&fqy=1&delay=0",
+      "source_http_date": "Wed, 14 Oct 2026 01:31:35 GMT",
+      "source_class": "official TWSE MIS intraday minute series",
+      "note": "09:26 one-minute point; not an official close."
+    },
+    "taifex_latest_official_snapshot": {
+      "session": "regular/day session",
+      "contract_symbol": "TXFJ6-F",
+      "contract_name_raw": "臺指期106",
+      "contract_month_interpretation": "2026-10 near-month TX futures",
+      "source_quote_date": "20261014",
+      "source_quote_time": "092829 Asia/Taipei",
+      "last": 48938.0,
+      "reference_price": 48392.0,
+      "change_points": 546.0,
+      "change_pct": 1.13,
+      "open": 48789.0,
+      "high": 48995.0,
+      "low": 48650.0,
+      "cumulative_volume": 9958,
+      "best_bid": 48936.0,
+      "best_ask": 48940.0,
+      "source_url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+      "source_http_date": "Wed, 14 Oct 2026 01:28:29 GMT",
+      "source_class": "official TAIFEX non-delayed quote site API",
+      "cutoff_note": "Earliest captured TAIFEX response was 09:28:29, 2m29s after the requested 09:26 clock; retained with its true timestamp and not backdated."
+    },
+    "twse_institutional_totals_latest_completed": {
+      "date": "2026-10-13",
+      "unit": "NTD",
+      "rows": [
+        {
+          "category": "自營商(自行買賣)",
+          "buy_ntd": 10923022534,
+          "sell_ntd": 20170053714,
+          "net_ntd": -9247031180
+        },
+        {
+          "category": "自營商(避險)",
+          "buy_ntd": 44731422797,
+          "sell_ntd": 92460330955,
+          "net_ntd": -47728908158
+        },
+        {
+          "category": "投信",
+          "buy_ntd": 49050173676,
+          "sell_ntd": 24425028119,
+          "net_ntd": 24625145557
+        },
+        {
+          "category": "外資及陸資(不含外資自營商)",
+          "buy_ntd": 342184505336,
+          "sell_ntd": 507475013421,
+          "net_ntd": -165290508085
+        },
+        {
+          "category": "外資自營商",
+          "buy_ntd": 0,
+          "sell_ntd": 0,
+          "net_ntd": 0
+        },
+        {
+          "category": "合計",
+          "buy_ntd": 446889124343,
+          "sell_ntd": 644530426209,
+          "net_ntd": -197641301866
+        }
+      ],
+      "dealer_total_net_ntd_calculated": -56975939338,
+      "source_title": "115年10月13日 三大法人買賣金額統計表",
+      "source_url": "https://www.twse.com.tw/rwd/zh/fund/BFI82U?date=20261013&response=json",
+      "source_http_date": "Wed, 14 Oct 2026 01:28:30 GMT",
+      "source_class": "official TWSE completed daily table",
+      "scope_note": "TWSE notes: includes regular, odd-lot, after-hours fixed-price and block trades; excludes auction/tender."
+    }
+  },
+  "us_2026_10_13_closes": {
+    "indices_primary_yahoo": [
+      {
+        "symbol": "^SOX",
+        "name": "PHLX Semiconductor Index",
+        "session_date": "2026-10-13",
+        "close_raw": 12208.794921875,
+        "close_display": "12,208.795",
+        "previous_close_raw": 12236.7900390625,
+        "change_raw": -27.9951171875,
+        "change_pct_calculated": -0.2287782751696604,
+        "change_display": "-27.995",
+        "change_pct_display": "-0.23%",
+        "daily_bar_timestamp_raw": 1791898200,
+        "daily_bar_timestamp_utc": "2026-10-13T13:30:00+00:00",
+        "source_version_market_time_epoch": 1791926159,
+        "source_version_market_time_utc": "2026-10-13T21:15:59Z",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?interval=1d&range=5d&events=div%2Csplits",
+        "source": "Yahoo Finance chart API",
+        "calculation": "change = 2026-10-13 close minus 2026-10-12 close; percent = change / 2026-10-12 close"
+      },
+      {
+        "symbol": "^NDX",
+        "name": "Nasdaq-100",
+        "session_date": "2026-10-13",
+        "close_raw": 30569.48046875,
+        "close_display": "30,569.480",
+        "previous_close_raw": 30664.69921875,
+        "change_raw": -95.21875,
+        "change_pct_calculated": -0.31051584533977195,
+        "change_display": "-95.219",
+        "change_pct_display": "-0.31%",
+        "daily_bar_timestamp_raw": 1791898200,
+        "daily_bar_timestamp_utc": "2026-10-13T13:30:00+00:00",
+        "source_version_market_time_epoch": 1791926159,
+        "source_version_market_time_utc": "2026-10-13T21:15:59Z",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ENDX?interval=1d&range=5d&events=div%2Csplits",
+        "source": "Yahoo Finance chart API",
+        "calculation": "change = 2026-10-13 close minus 2026-10-12 close; percent = change / 2026-10-12 close"
+      },
+      {
+        "symbol": "^GSPC",
+        "name": "S&P 500",
+        "session_date": "2026-10-13",
+        "close_raw": 7805.4501953125,
+        "close_display": "7,805.45",
+        "previous_close_raw": 7807.240234375,
+        "change_raw": -1.7900390625,
+        "change_pct_calculated": -0.022927936233068914,
+        "change_display": "-1.79",
+        "change_pct_display": "-0.02%",
+        "daily_bar_timestamp_raw": 1791898200,
+        "daily_bar_timestamp_utc": "2026-10-13T13:30:00+00:00",
+        "source_version_market_time_epoch": 1791923582,
+        "source_version_market_time_utc": "2026-10-13T20:33:02Z",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?interval=1d&range=5d&events=div%2Csplits",
+        "source": "Yahoo Finance chart API",
+        "calculation": "change = 2026-10-13 close minus 2026-10-12 close; percent = change / 2026-10-12 close"
+      },
+      {
+        "symbol": "^DJI",
+        "name": "Dow Jones Industrial Average",
+        "session_date": "2026-10-13",
+        "close_raw": 51670.1015625,
+        "close_display": "51,670.10",
+        "previous_close_raw": 51850.55078125,
+        "change_raw": -180.44921875,
+        "change_pct_calculated": -0.34801794008185033,
+        "change_display": "-180.45",
+        "change_pct_display": "-0.35%",
+        "daily_bar_timestamp_raw": 1791898200,
+        "daily_bar_timestamp_utc": "2026-10-13T13:30:00+00:00",
+        "source_version_market_time_epoch": 1791924115,
+        "source_version_market_time_utc": "2026-10-13T20:41:55Z",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?interval=1d&range=5d&events=div%2Csplits",
+        "source": "Yahoo Finance chart API",
+        "calculation": "change = 2026-10-13 close minus 2026-10-12 close; percent = change / 2026-10-12 close"
+      },
+      {
+        "symbol": "^VIX",
+        "name": "CBOE Volatility Index",
+        "session_date": "2026-10-13",
+        "close_raw": 15.270000457763672,
+        "close_display": "15.27",
+        "previous_close_raw": 15.210000038146973,
+        "change_raw": 0.060000419616699,
+        "change_pct_calculated": 0.3944800753860407,
+        "change_display": "+0.06",
+        "change_pct_display": "+0.39%",
+        "daily_bar_timestamp_raw": 1791874800,
+        "daily_bar_timestamp_utc": "2026-10-13T07:00:00+00:00",
+        "source_version_market_time_epoch": 1791922501,
+        "source_version_market_time_utc": "2026-10-13T20:15:01Z",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?interval=1d&range=5d&events=div%2Csplits",
+        "source": "Yahoo Finance chart API",
+        "calculation": "change = 2026-10-13 close minus 2026-10-12 close; percent = change / 2026-10-12 close"
+      }
+    ],
+    "mag7_primary_cnbc_crosschecked_yahoo": [
+      {
+        "symbol": "AAPL",
+        "session_date": "2026-10-13",
+        "close": 341.27,
+        "change": 0.3,
+        "change_pct": 0.09,
+        "change_display": "+0.30",
+        "change_pct_display": "+0.09%",
+        "previous_close": 340.97,
+        "regular_session_timestamp": "2026-10-13T16:00:00.000-0400",
+        "yahoo_regularMarketPrice_crosscheck": 341.27,
+        "yahoo_regularMarketTime_epoch": 1791921601,
+        "cnbc_source_field": "Last NASDAQ LS, VOL From CTA",
+        "cnbc_provider_field": "CNBC QUOTE CACHE"
+      },
+      {
+        "symbol": "MSFT",
+        "session_date": "2026-10-13",
+        "close": 543.45,
+        "change": 2.3,
+        "change_pct": 0.43,
+        "change_display": "+2.30",
+        "change_pct_display": "+0.43%",
+        "previous_close": 541.15,
+        "regular_session_timestamp": "2026-10-13T16:00:00.000-0400",
+        "yahoo_regularMarketPrice_crosscheck": 543.45,
+        "yahoo_regularMarketTime_epoch": 1791921601,
+        "cnbc_source_field": "Last NASDAQ LS, VOL From CTA",
+        "cnbc_provider_field": "CNBC QUOTE CACHE"
+      },
+      {
+        "symbol": "NVDA",
+        "session_date": "2026-10-13",
+        "close": 228.52,
+        "change": 2.2,
+        "change_pct": 0.97,
+        "change_display": "+2.20",
+        "change_pct_display": "+0.97%",
+        "previous_close": 226.32,
+        "regular_session_timestamp": "2026-10-13T16:00:00.000-0400",
+        "yahoo_regularMarketPrice_crosscheck": 228.52,
+        "yahoo_regularMarketTime_epoch": 1791921600,
+        "cnbc_source_field": "Last NASDAQ LS, VOL From CTA",
+        "cnbc_provider_field": "CNBC QUOTE CACHE"
+      },
+      {
+        "symbol": "AMZN",
+        "session_date": "2026-10-13",
+        "close": 258.58,
+        "change": -0.95,
+        "change_pct": -0.37,
+        "change_display": "-0.95",
+        "change_pct_display": "-0.37%",
+        "previous_close": 259.53,
+        "regular_session_timestamp": "2026-10-13T16:00:00.000-0400",
+        "yahoo_regularMarketPrice_crosscheck": 258.58,
+        "yahoo_regularMarketTime_epoch": 1791921601,
+        "cnbc_source_field": "Last NASDAQ LS, VOL From CTA",
+        "cnbc_provider_field": "CNBC QUOTE CACHE"
+      },
+      {
+        "symbol": "GOOGL",
+        "session_date": "2026-10-13",
+        "close": 353.78,
+        "change": 1.06,
+        "change_pct": 0.3,
+        "change_display": "+1.06",
+        "change_pct_display": "+0.30%",
+        "previous_close": 352.72,
+        "regular_session_timestamp": "2026-10-13T16:00:00.000-0400",
+        "yahoo_regularMarketPrice_crosscheck": 353.78,
+        "yahoo_regularMarketTime_epoch": 1791921601,
+        "cnbc_source_field": "Last NYSE Arca, VOL From CTA",
+        "cnbc_provider_field": "CNBC QUOTE CACHE"
+      },
+      {
+        "symbol": "META",
+        "session_date": "2026-10-13",
+        "close": 762.5,
+        "change": 19.54,
+        "change_pct": 2.63,
+        "change_display": "+19.54",
+        "change_pct_display": "+2.63%",
+        "previous_close": 742.96,
+        "regular_session_timestamp": "2026-10-13T16:00:00.000-0400",
+        "yahoo_regularMarketPrice_crosscheck": 762.5,
+        "yahoo_regularMarketTime_epoch": 1791921601,
+        "cnbc_source_field": "Last NASDAQ LS, VOL From CTA",
+        "cnbc_provider_field": "CNBC QUOTE CACHE"
+      },
+      {
+        "symbol": "TSLA",
+        "session_date": "2026-10-13",
+        "close": 375.23,
+        "change": -2.8,
+        "change_pct": -0.74,
+        "change_display": "-2.80",
+        "change_pct_display": "-0.74%",
+        "previous_close": 378.03,
+        "regular_session_timestamp": "2026-10-13T16:00:00.000-0400",
+        "yahoo_regularMarketPrice_crosscheck": 375.23,
+        "yahoo_regularMarketTime_epoch": 1791921600,
+        "cnbc_source_field": "Last NASDAQ LS, VOL From CTA",
+        "cnbc_provider_field": "CNBC QUOTE CACHE"
+      }
+    ],
+    "cnbc_batch_source_url": "https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol?symbols=.SPX%7C.DJI%7C.IXIC%7C.SOX%7C.VIX%7C.NDX%7CAAPL%7CMSFT%7CNVDA%7CAMZN%7CGOOGL%7CMETA%7CTSLA&requestMethod=quick&noform=1&partnerId=2&fund=1&exthrs=1&output=json",
+    "cnbc_http_date": "Wed, 14 Oct 2026 01:28:59 GMT",
+    "note": "Index close/change percentages use Yahoo daily bars as requested. MAG7 regular-session values use CNBC regular-session fields and are cross-checked against Yahoo regularMarketPrice; after-hours ExtendedMktQuote values are excluded."
+  },
+  "source_inventory": [
+    {
+      "source": "TWSE official holiday schedule",
+      "url": "https://www.twse.com.tw/holidaySchedule/holidaySchedule?response=json"
+    },
+    {
+      "source": "TAIFEX official closure notice",
+      "url": "https://www.taifex.com.tw/enl/eng11/newsDetail?newsType=1&idx=10716"
+    },
+    {
+      "source": "TWSE official intraday chart",
+      "url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw&fqy=1&delay=0"
+    },
+    {
+      "source": "TWSE official 2026-10-13 market close",
+      "url": "https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=20261013&type=ALL&response=json"
+    },
+    {
+      "source": "TWSE official institutional totals",
+      "url": "https://www.twse.com.tw/rwd/zh/fund/BFI82U?date=20261013&response=json"
+    },
+    {
+      "source": "TAIFEX official live quote API",
+      "url": "https://mis.taifex.com.tw/futures/api/getQuoteList"
+    },
+    {
+      "source": "Yahoo Finance chart API",
+      "symbols": [
+        "^SOX",
+        "^NDX",
+        "^GSPC",
+        "^DJI",
+        "^VIX"
+      ]
+    },
+    {
+      "source": "CNBC quote endpoint",
+      "purpose": "MAG7 regular-session close/change; Yahoo cross-check"
+    }
+  ],
+  "integrity_notes": [
+    "All Taiwan live values carry source quote times and are labeled intraday.",
+    "No 2026-10-14 closing value is asserted.",
+    "Large institutional totals are stored as exact NTD integers.",
+    "The TAIFEX quote is later than the user-supplied 09:26 clock and is explicitly flagged rather than backdated."
+  ]
+}

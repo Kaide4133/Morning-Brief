@@ -1,0 +1,1027 @@
+{
+  "artifact_version": "mb.ark.normalized.audit.v1",
+  "date": "2026-10-14",
+  "overall_status": "PASS_WITH_NORMALIZATION",
+  "usable_as_morning_brief_ark_input": true,
+  "candidate_file": "/Users/kaide/.hermes/cache/scratch/kmb1014-ark.json",
+  "candidate_sha256": "c6267724c46189ec79f19c75f20bf1b046ca0ca064ef9e46f8a23968399ba9be",
+  "counts": {
+    "membership_rows": 77,
+    "unique_codes": 77,
+    "zones": {
+      "ETF價值區": 10,
+      "ETF升溫區": 7,
+      "產業價值區": 30,
+      "產業升溫區": 30
+    },
+    "capture_duplicate_records_removed_primary_ocr": 21,
+    "capture_duplicate_records_removed_ax": 19,
+    "within_zone_duplicate_codes": {
+      "ETF價值區": [],
+      "ETF升溫區": [],
+      "產業價值區": [],
+      "產業升溫區": []
+    },
+    "cross_zone_overlap_codes": {
+      "etf": [],
+      "stocks": []
+    },
+    "all_four_zone_intersection_codes": []
+  },
+  "water_comparison": {
+    "current": 65.6,
+    "current_source": "ark_stocks.json $.riskControl.value and success.json $.summary.riskControl",
+    "previous": 67.4,
+    "previous_date": "2026-10-13",
+    "previous_source": "/Users/kaide/Documents/Morning-Brief/data/water-level-history.json",
+    "delta_percentage_points": -1.8,
+    "direction": "down",
+    "previous_record": {
+      "date": "2026-10-13",
+      "water_level": 67.4,
+      "scenario_id": "04",
+      "scenario_label": "04 輪動換手"
+    }
+  },
+  "source_audit": {
+    "latest_pointer": "/Users/kaide/Pictures/方舟運算截圖/ark_stocks_latest.json",
+    "latest_pointer_is_symlink": true,
+    "latest_pointer_link_text": ".ark_latest/ark_stocks.json",
+    "intermediate_latest": "/Users/kaide/Pictures/方舟運算截圖/.ark_latest",
+    "intermediate_latest_is_symlink": true,
+    "intermediate_latest_link_text": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-14_09-05-00",
+    "resolved_target": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-14_09-05-00/ark_stocks.json",
+    "run_dir": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-14_09-05-00",
+    "success_path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-14_09-05-00/success.json",
+    "validation_path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-14_09-05-00/ark_validation.json",
+    "success_sha256": "acc80b08e95dd0e07b1cb3927f3b6b9867a7681bb55ef2a1d7a7bd7b73707418",
+    "success": {
+      "ok": true,
+      "status": "success",
+      "stage": "complete",
+      "runId": "2026-10-14_09-05-00",
+      "date": "2026-10-14",
+      "axMatch": true
+    },
+    "validation": {
+      "ok": true,
+      "generatedAt": "2026-10-14T01:08:42.159602+00:00",
+      "all_sections_ok": true
+    },
+    "trading_day": {
+      "ok": true,
+      "status": "confirmed",
+      "date": "2026-10-14",
+      "reason": "TWSE 115-year holiday schedule lists 2026-10-09 as the October holiday; 2026-10-14 is not a closure date, and TWSE published 115/10/14 trading notices.",
+      "source": "https://www.twse.com.tw/holidaySchedule/holidaySchedule?response=html"
+    },
+    "manifest_hash_checks": {
+      "ark_ocr.json": {
+        "expected": "e9d8b1a08db41827e12d13641b024b1cc5966f3c0c06cf700c0681e44a6eddb7",
+        "actual": "e9d8b1a08db41827e12d13641b024b1cc5966f3c0c06cf700c0681e44a6eddb7",
+        "match": true
+      },
+      "ark_stocks.json": {
+        "expected": "8a944b048f0d4b1ae0e94a0fee28286b85afc8d7898dd0fbd5105a47d3cc1483",
+        "actual": "8a944b048f0d4b1ae0e94a0fee28286b85afc8d7898dd0fbd5105a47d3cc1483",
+        "match": true
+      },
+      "ark_stocks_ax.json": {
+        "expected": "8116ee806dca045f485587fe9f829868ccd0c1eb27d7ed99404aa0e3664a6b46",
+        "actual": "8116ee806dca045f485587fe9f829868ccd0c1eb27d7ed99404aa0e3664a6b46",
+        "match": true
+      },
+      "ark_validation.json": {
+        "expected": "9fc41760bf2ce2bd496e2236ab956a346f676a53cd4d3f748f3268d569d2dd08",
+        "actual": "9fc41760bf2ce2bd496e2236ab956a346f676a53cd4d3f748f3268d569d2dd08",
+        "match": true
+      },
+      "01_風控水位.png": {
+        "expected": "658030ee8b5042659c3afccc5a1d530caebd3df22127c8c8daf3a03714bf7f60",
+        "actual": "658030ee8b5042659c3afccc5a1d530caebd3df22127c8c8daf3a03714bf7f60",
+        "match": true
+      },
+      "02_ETF價值區_1.png": {
+        "expected": "5b838bc81a0b70504fbf7ce1c17e0db66e184ccb8da0473e95d3f3130a11e41f",
+        "actual": "5b838bc81a0b70504fbf7ce1c17e0db66e184ccb8da0473e95d3f3130a11e41f",
+        "match": true
+      },
+      "03_ETF價值區_2.png": {
+        "expected": "0ea6e833aad4b4690b9df5d8cf36d46c173f4ddb7cc7d5f5a5f4dce50ea9ed7c",
+        "actual": "0ea6e833aad4b4690b9df5d8cf36d46c173f4ddb7cc7d5f5a5f4dce50ea9ed7c",
+        "match": true
+      },
+      "04_ETF升溫區_1.png": {
+        "expected": "49cc8ac44d8f15f9b2af7d29a9ffa0c5fa648e1179f030a8d68bd1f7815f84b7",
+        "actual": "49cc8ac44d8f15f9b2af7d29a9ffa0c5fa648e1179f030a8d68bd1f7815f84b7",
+        "match": true
+      },
+      "05_ETF升溫區_2.png": {
+        "expected": "b58315d585a7cb0a25364115bdb82622766a635dfaa45005689fcf54c3050b45",
+        "actual": "b58315d585a7cb0a25364115bdb82622766a635dfaa45005689fcf54c3050b45",
+        "match": true
+      },
+      "06_產業價值區_1.png": {
+        "expected": "812102e813e626c43c8a2204a1412217ed96389e09a08719354bec53ce4e4162",
+        "actual": "812102e813e626c43c8a2204a1412217ed96389e09a08719354bec53ce4e4162",
+        "match": true
+      },
+      "07_產業價值區_2.png": {
+        "expected": "30b4b8d781d02884229ea72fc86df392aba6990652b5aeffb967a6b59d83e1d3",
+        "actual": "30b4b8d781d02884229ea72fc86df392aba6990652b5aeffb967a6b59d83e1d3",
+        "match": true
+      },
+      "08_產業價值區_3.png": {
+        "expected": "892e365877cd2d833eeae71f53fa30cc14fe578c12faacfc33b7e5bcf2f11f26",
+        "actual": "892e365877cd2d833eeae71f53fa30cc14fe578c12faacfc33b7e5bcf2f11f26",
+        "match": true
+      },
+      "09_產業價值區_4.png": {
+        "expected": "5282ad58846f402b71c09a0a202dbdc744813c6aeb94674bc3657f2718506614",
+        "actual": "5282ad58846f402b71c09a0a202dbdc744813c6aeb94674bc3657f2718506614",
+        "match": true
+      },
+      "10_產業價值區_5.png": {
+        "expected": "ce6d12258c8732033490dcabd25af7aa7716974bf1c023b0b22e313e028dc34c",
+        "actual": "ce6d12258c8732033490dcabd25af7aa7716974bf1c023b0b22e313e028dc34c",
+        "match": true
+      },
+      "11_產業價值區_6.png": {
+        "expected": "cdda6014f25db47078a73d992e65e6a619a79deec7c743845a24a50ab913dba2",
+        "actual": "cdda6014f25db47078a73d992e65e6a619a79deec7c743845a24a50ab913dba2",
+        "match": true
+      },
+      "12_產業升溫區_1.png": {
+        "expected": "b56c28a71ce63cadcc4176e6e8cea87f6324a5b3740bf31c93a885935c66e42e",
+        "actual": "b56c28a71ce63cadcc4176e6e8cea87f6324a5b3740bf31c93a885935c66e42e",
+        "match": true
+      },
+      "13_產業升溫區_2.png": {
+        "expected": "e3f6b2fa63a9b00bb89156ab1339e8722a32daad76b6941994df1b423b0d3185",
+        "actual": "e3f6b2fa63a9b00bb89156ab1339e8722a32daad76b6941994df1b423b0d3185",
+        "match": true
+      },
+      "14_產業升溫區_3.png": {
+        "expected": "62684615e1c7c2c581dc462693ed246a9432ab5e45caa192c0080d07a992c619",
+        "actual": "62684615e1c7c2c581dc462693ed246a9432ab5e45caa192c0080d07a992c619",
+        "match": true
+      },
+      "15_產業升溫區_4.png": {
+        "expected": "f9270936d2854dbdc0ac480642998fdfeb3c864833c45c9fa8066bef5be3b885",
+        "actual": "f9270936d2854dbdc0ac480642998fdfeb3c864833c45c9fa8066bef5be3b885",
+        "match": true
+      },
+      "16_產業升溫區_5.png": {
+        "expected": "9f574ecded0f7efc6829f6eaf73fbdb3251b1f26244ed3bfc1997475a74223fe",
+        "actual": "9f574ecded0f7efc6829f6eaf73fbdb3251b1f26244ed3bfc1997475a74223fe",
+        "match": true
+      },
+      "17_產業升溫區_6.png": {
+        "expected": "d1a2673fb65c0d96509a6d49cce48678994d549f8abde84eb17260f777a9491f",
+        "actual": "d1a2673fb65c0d96509a6d49cce48678994d549f8abde84eb17260f777a9491f",
+        "match": true
+      },
+      "capture_manifest.jsonl": {
+        "expected": "b6da9d84a552097f03660daf97eaaddb4e46596f8bb1a4e52960f4cd5bc6a83a",
+        "actual": "b6da9d84a552097f03660daf97eaaddb4e46596f8bb1a4e52960f4cd5bc6a83a",
+        "match": true
+      },
+      "ark_ax_rows.jsonl": {
+        "expected": "fed7ada07cb3d0a1ff0b0c46e297853bf30a2886bf2c58efb1afbb1fc3e6b838",
+        "actual": "fed7ada07cb3d0a1ff0b0c46e297853bf30a2886bf2c58efb1afbb1fc3e6b838",
+        "match": true
+      }
+    },
+    "all_manifest_hashes_match": true,
+    "target_hash_matches_success_manifest": true,
+    "validation_hash_matches_success_manifest": true
+  },
+  "zone_order_validation": {
+    "ETF價值區": {
+      "expected_count": 10,
+      "actual_count": 10,
+      "source_codes": [
+        "00913",
+        "00935",
+        "00927",
+        "00891",
+        "00631L",
+        "0055",
+        "00939",
+        "00918",
+        "00960",
+        "0056"
+      ],
+      "normalized_codes": [
+        "00913",
+        "00935",
+        "00927",
+        "00891",
+        "00631L",
+        "0055",
+        "00939",
+        "00918",
+        "00960",
+        "0056"
+      ],
+      "order_preserved": true
+    },
+    "ETF升溫區": {
+      "expected_count": 7,
+      "actual_count": 7,
+      "source_codes": [
+        "00682U",
+        "00858",
+        "009823",
+        "009814",
+        "00926",
+        "009813",
+        "00683L"
+      ],
+      "normalized_codes": [
+        "00682U",
+        "00858",
+        "009823",
+        "009814",
+        "00926",
+        "009813",
+        "00683L"
+      ],
+      "order_preserved": true
+    },
+    "產業價值區": {
+      "expected_count": 30,
+      "actual_count": 30,
+      "source_codes": [
+        "2059",
+        "2303",
+        "2317",
+        "8299",
+        "2376",
+        "3017",
+        "2308",
+        "2382",
+        "5536",
+        "2344",
+        "2301",
+        "1785",
+        "2395",
+        "2330",
+        "2360",
+        "2467",
+        "2327",
+        "3231",
+        "6285",
+        "2368",
+        "3036",
+        "5434",
+        "2449",
+        "2383",
+        "3661",
+        "2379",
+        "3264",
+        "3044",
+        "2345",
+        "3533"
+      ],
+      "normalized_codes": [
+        "2059",
+        "2303",
+        "2317",
+        "8299",
+        "2376",
+        "3017",
+        "2308",
+        "2382",
+        "5536",
+        "2344",
+        "2301",
+        "1785",
+        "2395",
+        "2330",
+        "2360",
+        "2467",
+        "2327",
+        "3231",
+        "6285",
+        "2368",
+        "3036",
+        "5434",
+        "2449",
+        "2383",
+        "3661",
+        "2379",
+        "3264",
+        "3044",
+        "2345",
+        "3533"
+      ],
+      "order_preserved": true
+    },
+    "產業升溫區": {
+      "expected_count": 30,
+      "actual_count": 30,
+      "source_codes": [
+        "2466",
+        "3597",
+        "6957",
+        "6199",
+        "3564",
+        "3268",
+        "5205",
+        "4760",
+        "1569",
+        "6505",
+        "3311",
+        "1303",
+        "6278",
+        "3265",
+        "5228",
+        "2850",
+        "1326",
+        "6834",
+        "1301",
+        "6213",
+        "4174",
+        "4556",
+        "1710",
+        "6225",
+        "4927",
+        "3008",
+        "6672",
+        "2340",
+        "1563",
+        "6187"
+      ],
+      "normalized_codes": [
+        "2466",
+        "3597",
+        "6957",
+        "6199",
+        "3564",
+        "3268",
+        "5205",
+        "4760",
+        "1569",
+        "6505",
+        "3311",
+        "1303",
+        "6278",
+        "3265",
+        "5228",
+        "2850",
+        "1326",
+        "6834",
+        "1301",
+        "6213",
+        "4174",
+        "4556",
+        "1710",
+        "6225",
+        "4927",
+        "3008",
+        "6672",
+        "2340",
+        "1563",
+        "6187"
+      ],
+      "order_preserved": true
+    }
+  },
+  "etf_nav_trap_audit": {
+    "rule": "A dash under 股價 means missing price; 即時淨值 is not copied into price and no external quote is substituted.",
+    "screenshots_reviewed": [
+      "04_ETF升溫區_1.png"
+    ],
+    "rows_checked": 17,
+    "null_price_rows": [
+      "00682U"
+    ],
+    "result": "PASS_WITH_ONE_MISSING_SOURCE_PRICE",
+    "displayed_fields_evidence": {
+      "00682U": {
+        "price": "—",
+        "change": "—",
+        "nav": "21.2",
+        "premium_discount": "-0.38%"
+      }
+    }
+  },
+  "screenshot_review": [
+    {
+      "file": "02_ETF價值區_1.png",
+      "codes": [
+        "00891",
+        "0055"
+      ],
+      "finding": "00891=37.37, ▲0.14(0.38%), NAV 37.31, premium 0.11%; 0055=50.15, ▼0.6(-1.18%), NAV 50.92, premium -0.33%."
+    },
+    {
+      "file": "04_ETF升溫區_1.png",
+      "codes": [
+        "00682U"
+      ],
+      "finding": "股價 is dash and change is (-%); 21.2 is 即時淨值, premium -0.38%. No market price substituted."
+    },
+    {
+      "file": "11_產業價值區_6.png",
+      "codes": [
+        "3264",
+        "3533"
+      ],
+      "finding": "3264=281.5, ▲13(4.84%); 3533=2,000, ▲140(7.53%)."
+    },
+    {
+      "file": "12_產業升溫區_1.png",
+      "codes": [
+        "3597"
+      ],
+      "finding": "3597=48, ▼0.6(-1.23%)."
+    },
+    {
+      "file": "13_產業升溫區_2.png",
+      "codes": [
+        "1569"
+      ],
+      "finding": "1569=79.4, ▼1.6(-1.98%)."
+    },
+    {
+      "file": "14_產業升溫區_3.png",
+      "codes": [
+        "1303",
+        "3265"
+      ],
+      "finding": "1303=336.5, ▲17.5(5.49%); 3265=258.5, ▼7.5(-2.82%)."
+    },
+    {
+      "file": "15_產業升溫區_4.png",
+      "codes": [
+        "6834"
+      ],
+      "finding": "6834=152.5, ▼7(-4.39%)."
+    },
+    {
+      "file": "17_產業升溫區_6.png",
+      "codes": [
+        "6187"
+      ],
+      "finding": "6187=1,585, ▼15(-0.94%)."
+    }
+  ],
+  "normalization_evidence": {
+    "ocr_arrow_correction_count": 62,
+    "ocr_arrow_corrections": [
+      {
+        "section": "ETF價值區",
+        "code": "00913",
+        "raw": "40.2(0.39%)",
+        "normalized": "▲0.2 (+0.39%)"
+      },
+      {
+        "section": "ETF價值區",
+        "code": "00935",
+        "raw": "40.2(0.33%)",
+        "normalized": "▲0.2 (+0.33%)"
+      },
+      {
+        "section": "ETF價值區",
+        "code": "00927",
+        "raw": "40.17(0.43%)",
+        "normalized": "▲0.17 (+0.43%)"
+      },
+      {
+        "section": "ETF價值區",
+        "code": "00891",
+        "raw": "40.14(0.38%)",
+        "normalized": "▲0.14 (+0.38%)"
+      },
+      {
+        "section": "ETF價值區",
+        "code": "00631L",
+        "raw": "40.32(0.81%)",
+        "normalized": "▲0.32 (+0.81%)"
+      },
+      {
+        "section": "ETF價值區",
+        "code": "0055",
+        "raw": "70.6(-1.18%)",
+        "normalized": "▼0.6 (-1.18%)"
+      },
+      {
+        "section": "ETF價值區",
+        "code": "00939",
+        "raw": "70.12(-0.49%)",
+        "normalized": "▼0.12 (-0.49%)"
+      },
+      {
+        "section": "ETF價值區",
+        "code": "00918",
+        "raw": "40.03(0.09%)",
+        "normalized": "▲0.03 (+0.09%)"
+      },
+      {
+        "section": "ETF價值區",
+        "code": "00960",
+        "raw": "40.28(1.17%)",
+        "normalized": "▲0.28 (+1.17%)"
+      },
+      {
+        "section": "ETF價值區",
+        "code": "0056",
+        "raw": "40.2(0.34%)",
+        "normalized": "▲0.2 (+0.34%)"
+      },
+      {
+        "section": "ETF升溫區",
+        "code": "00858",
+        "raw": "40.07(0.19%)",
+        "normalized": "▲0.07 (+0.19%)"
+      },
+      {
+        "section": "ETF升溫區",
+        "code": "009823",
+        "raw": "40.04(0.37%)",
+        "normalized": "▲0.04 (+0.37%)"
+      },
+      {
+        "section": "ETF升溫區",
+        "code": "009814",
+        "raw": "40.02(0.17%)",
+        "normalized": "▲0.02 (+0.17%)"
+      },
+      {
+        "section": "ETF升溫區",
+        "code": "00926",
+        "raw": "40.11(0.4%)",
+        "normalized": "▲0.11 (+0.4%)"
+      },
+      {
+        "section": "ETF升溫區",
+        "code": "009813",
+        "raw": "40.05(0.43%)",
+        "normalized": "▲0.05 (+0.43%)"
+      },
+      {
+        "section": "ETF升溫區",
+        "code": "00683L",
+        "raw": "7O.11(-0.48%)",
+        "normalized": "▼0.11 (-0.48%)"
+      },
+      {
+        "section": "產業價值區",
+        "code": "2059",
+        "raw": "770(-0.7%)",
+        "normalized": "▼70 (-0.7%)"
+      },
+      {
+        "section": "產業價值區",
+        "code": "2317",
+        "raw": "41.5(0.63%)",
+        "normalized": "▲1.5 (+0.63%)"
+      },
+      {
+        "section": "產業價值區",
+        "code": "2376",
+        "raw": "42.5(0.7%)",
+        "normalized": "▲2.5 (+0.7%)"
+      },
+      {
+        "section": "產業價值區",
+        "code": "3017",
+        "raw": "440(1.22%)",
+        "normalized": "▲40 (+1.22%)"
+      },
+      {
+        "section": "產業價值區",
+        "code": "2382",
+        "raw": "43.5(1.08%)",
+        "normalized": "▲3.5 (+1.08%)"
+      },
+      {
+        "section": "產業價值區",
+        "code": "2344",
+        "raw": "40.5(0.31%)",
+        "normalized": "▲0.5 (+0.31%)"
+      },
+      {
+        "section": "產業價值區",
+        "code": "2301",
+        "raw": "44.5(1.63%)",
+        "normalized": "▲4.5 (+1.63%)"
+      },
+      {
+        "section": "產業價值區",
+        "code": "1785",
+        "raw": "42(2%)",
+        "normalized": "▲2 (+2%)"
+      },
+      {
+        "section": "產業價值區",
+        "code": "2395",
+        "raw": "79(-1.25%)",
+        "normalized": "▼9 (-1.25%)"
+      },
+      {
+        "section": "產業價值區",
+        "code": "2330",
+        "raw": "415(0.6%)",
+        "normalized": "▲15 (+0.6%)"
+      },
+      {
+        "section": "產業價值區",
+        "code": "2360",
+        "raw": "485(3.86%)",
+        "normalized": "▲85 (+3.86%)"
+      },
+      {
+        "section": "產業價值區",
+        "code": "2467",
+        "raw": "46(1.08%)",
+        "normalized": "▲6 (+1.08%)"
+      },
+      {
+        "section": "產業價值區",
+        "code": "2327",
+        "raw": "45(0.83%)",
+        "normalized": "▲5 (+0.83%)"
+      },
+      {
+        "section": "產業價值區",
+        "code": "3231",
+        "raw": "41.5(0.8%)",
+        "normalized": "▲1.5 (+0.8%)"
+      },
+      {
+        "section": "產業價值區",
+        "code": "6285",
+        "raw": "44(1.62%)",
+        "normalized": "▲4 (+1.62%)"
+      },
+      {
+        "section": "產業價值區",
+        "code": "2368",
+        "raw": "420(1.71%)",
+        "normalized": "▲20 (+1.71%)"
+      },
+      {
+        "section": "產業價值區",
+        "code": "3036",
+        "raw": "44.5(2.13%)",
+        "normalized": "▲4.5 (+2.13%)"
+      },
+      {
+        "section": "產業價值區",
+        "code": "2449",
+        "raw": "75(-1.64%)",
+        "normalized": "▼5 (-1.64%)"
+      },
+      {
+        "section": "產業價值區",
+        "code": "2383",
+        "raw": "495(1.71%)",
+        "normalized": "▲95 (+1.71%)"
+      },
+      {
+        "section": "產業價值區",
+        "code": "2379",
+        "raw": "44(0.53%)",
+        "normalized": "▲4 (+0.53%)"
+      },
+      {
+        "section": "產業價值區",
+        "code": "2345",
+        "raw": "450(2.45%)",
+        "normalized": "▲50 (+2.45%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "2466",
+        "raw": "43(1.27%)",
+        "normalized": "▲3 (+1.27%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "3597",
+        "raw": "70.6(-1.23%)",
+        "normalized": "▼0.6 (-1.23%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "6199",
+        "raw": "42.5(1.68%)",
+        "normalized": "▲2.5 (+1.68%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "3564",
+        "raw": "72.1(-2.79%)",
+        "normalized": "▼2.1 (-2.79%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "3268",
+        "raw": "70.35(-1.29%)",
+        "normalized": "▼0.35 (-1.29%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "5205",
+        "raw": "72.55(-6.61%)",
+        "normalized": "▼2.55 (-6.61%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "4760",
+        "raw": "43.5(0.95%)",
+        "normalized": "▲3.5 (+0.95%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "1569",
+        "raw": "71.6(-1.98%)",
+        "normalized": "▼1.6 (-1.98%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "3311",
+        "raw": "40.8(1.41%)",
+        "normalized": "▲0.8 (+1.41%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "1303",
+        "raw": "417.5(5.49%)",
+        "normalized": "▲17.5 (+5.49%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "6278",
+        "raw": "426(9.85%)",
+        "normalized": "▲26 (+9.85%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "3265",
+        "raw": "77.5(-2.82%)",
+        "normalized": "▼7.5 (-2.82%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "5228",
+        "raw": "73.1(-4.86%)",
+        "normalized": "▼3.1 (-4.86%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "2850",
+        "raw": "70.5(-0.3%)",
+        "normalized": "▼0.5 (-0.3%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "1326",
+        "raw": "45.7(7.33%)",
+        "normalized": "▲5.7 (+7.33%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "6834",
+        "raw": "77(-4.39%)",
+        "normalized": "▼7 (-4.39%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "1301",
+        "raw": "44.1(5.07%)",
+        "normalized": "▲4.1 (+5.07%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "4174",
+        "raw": "43.5(6.27%)",
+        "normalized": "▲3.5 (+6.27%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "4556",
+        "raw": "42(1.42%)",
+        "normalized": "▲2 (+1.42%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "1710",
+        "raw": "70.3(-1.54%)",
+        "normalized": "▼0.3 (-1.54%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "6225",
+        "raw": "40.6(0.75%)",
+        "normalized": "▲0.6 (+0.75%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "4927",
+        "raw": "40.6(1.05%)",
+        "normalized": "▲0.6 (+1.05%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "3008",
+        "raw": "780(-1.1%)",
+        "normalized": "▼80 (-1.1%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "2340",
+        "raw": "71.4(-2.61%)",
+        "normalized": "▼1.4 (-2.61%)"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "6187",
+        "raw": "715(-0.94%)",
+        "normalized": "▼15 (-0.94%)"
+      }
+    ],
+    "primary_vs_ax_price_difference_count": 11,
+    "primary_vs_ax_price_differences": [
+      {
+        "section": "ETF價值區",
+        "code": "00891",
+        "source_file": "02_ETF價值區_1.png",
+        "primary_price": "37.37",
+        "primary_change": "40.14(0.38%)",
+        "ax_price": "37.38",
+        "ax_change": "▲0.15(0.4%)",
+        "decision": "retained primary screenshot snapshot price and its matching change"
+      },
+      {
+        "section": "ETF價值區",
+        "code": "0055",
+        "source_file": "02_ETF價值區_1.png",
+        "primary_price": "50.15",
+        "primary_change": "70.6(-1.18%)",
+        "ax_price": "50.2",
+        "ax_change": "▼0.55(-1.08%)",
+        "decision": "retained primary screenshot snapshot price and its matching change"
+      },
+      {
+        "section": "ETF升溫區",
+        "code": "00682U",
+        "source_file": "04_ETF升溫區_1.png",
+        "primary_price": "21.2",
+        "primary_change": "(-%)",
+        "ax_price": null,
+        "ax_change": null,
+        "decision": "ETF source screenshot has missing stock price; NAV retained separately"
+      },
+      {
+        "section": "產業價值區",
+        "code": "3264",
+        "source_file": "11_產業價值區_6.png",
+        "primary_price": "281.5",
+        "primary_change": "▲13(4.84%)",
+        "ax_price": "282",
+        "ax_change": "▲13.5(5.03%)",
+        "decision": "retained primary screenshot snapshot price and its matching change"
+      },
+      {
+        "section": "產業價值區",
+        "code": "3533",
+        "source_file": "11_產業價值區_6.png",
+        "primary_price": "2,000",
+        "primary_change": "▲140(7.53%)",
+        "ax_price": "2,005",
+        "ax_change": "▲145(7.8%)",
+        "decision": "retained primary screenshot snapshot price and its matching change"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "3597",
+        "source_file": "12_產業升溫區_1.png",
+        "primary_price": "48",
+        "primary_change": "70.6(-1.23%)",
+        "ax_price": "46",
+        "ax_change": "▼2.6(-5.35%)",
+        "decision": "retained primary screenshot snapshot price and its matching change"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "1569",
+        "source_file": "13_產業升溫區_2.png",
+        "primary_price": "79.4",
+        "primary_change": "71.6(-1.98%)",
+        "ax_price": "79.5",
+        "ax_change": "▼1.5(-1.85%)",
+        "decision": "retained primary screenshot snapshot price and its matching change"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "1303",
+        "source_file": "14_產業升溫區_3.png",
+        "primary_price": "336.5",
+        "primary_change": "417.5(5.49%)",
+        "ax_price": "336",
+        "ax_change": "▲17(5.33%)",
+        "decision": "retained primary screenshot snapshot price and its matching change"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "3265",
+        "source_file": "14_產業升溫區_3.png",
+        "primary_price": "258.5",
+        "primary_change": "77.5(-2.82%)",
+        "ax_price": "258",
+        "ax_change": "▼8(-3.01%)",
+        "decision": "retained primary screenshot snapshot price and its matching change"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "6834",
+        "source_file": "15_產業升溫區_4.png",
+        "primary_price": "152.5",
+        "primary_change": "77(-4.39%)",
+        "ax_price": "153",
+        "ax_change": "▼6.5(-4.08%)",
+        "decision": "retained primary screenshot snapshot price and its matching change"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "6187",
+        "source_file": "17_產業升溫區_6.png",
+        "primary_price": "1,585",
+        "primary_change": "715(-0.94%)",
+        "ax_price": "1,590",
+        "ax_change": "▼10(-0.63%)",
+        "decision": "retained primary screenshot snapshot price and its matching change"
+      }
+    ],
+    "field_omissions": [
+      {
+        "section": "ETF升溫區",
+        "code": "00682U",
+        "field": "change",
+        "source_value": "(-%)",
+        "serialized_as": "—",
+        "reason": "unresolved in source; safe missing sentinel, not derived"
+      }
+    ],
+    "field_corrections": [
+      {
+        "section": "ETF升溫區",
+        "code": "00682U",
+        "field": "price",
+        "source_ocr_value": "21.2",
+        "normalized_value": "—",
+        "reason": "screenshot/AX confirm 21.2 is NAV, while 股價 is dash"
+      }
+    ],
+    "external_market_price_substitutions": []
+  },
+  "schema_compatibility": {
+    "observed_prior_issue": "/Users/kaide/Documents/Morning-Brief/data/issues/20261013.json",
+    "row_fields_standard": [
+      "code",
+      "name",
+      "price",
+      "industry",
+      "mark",
+      "change"
+    ],
+    "missing_price_extension_fields": [
+      "price_available",
+      "nav",
+      "premium_discount",
+      "meta"
+    ],
+    "top_level_zone_paths": [
+      "etf.value",
+      "etf.rising",
+      "stocks.value",
+      "stocks.rising"
+    ],
+    "overlap_fields_present": true,
+    "literal_ticker_regex": "^[0-9]{4,6}[A-Z]?$"
+  },
+  "validation_results": {
+    "json_parse": true,
+    "candidate_sha256": "c6267724c46189ec79f19c75f20bf1b046ca0ca064ef9e46f8a23968399ba9be",
+    "row_count": 77,
+    "unique_code_count": 77,
+    "source_order_preserved": true,
+    "all_codes_literal_preserved": true,
+    "unresolved_changes": [
+      "00682U"
+    ],
+    "manifest_hashes_match": true
+  },
+  "write_scope": {
+    "repository_changes": [],
+    "source_files_modified": [],
+    "created_or_replaced_only": [
+      "/Users/kaide/.hermes/cache/scratch/kmb1014-ark.json",
+      "/Users/kaide/.hermes/cache/scratch/kmb1014-ark-audit.json"
+    ]
+  }
+}
