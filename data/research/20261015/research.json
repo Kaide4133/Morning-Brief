@@ -1,0 +1,74 @@
+{
+  "brief_date": "2026-10-15",
+  "cutoff": "2026-10-15T09:55:30+08:00",
+  "summary": "水位升至72.2%，價格急跌：先辨識背離，等台積電財報落地",
+  "ark_audit": "ark-audit.json",
+  "market": "market.json",
+  "crossasset": "crossasset.json",
+  "news": [
+    {
+      "headline": "US stocks fall as hot CPI and AI financing worries hit tech",
+      "source": "Reuters",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/trading-day-tech-melt-211749374.html"
+    },
+    {
+      "headline": "Taiwan shares open lower",
+      "source": "CNA / Focus Taiwan",
+      "url": "https://focustaiwan.tw/business/202610150002"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ark local validated source bundle",
+      "url": "local:///Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-15_09-05-04/ark_stocks.json"
+    },
+    {
+      "title": "TWSE official intraday quote",
+      "url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0"
+    },
+    {
+      "title": "TWSE official 2026-10-14 market close",
+      "url": "https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=20261014&type=ALL&response=json"
+    },
+    {
+      "title": "TWSE official institutional totals",
+      "url": "https://www.twse.com.tw/rwd/zh/fund/BFI82U?date=20261014&response=json"
+    },
+    {
+      "title": "TAIFEX official live quote API",
+      "url": "https://mis.taifex.com.tw/futures/api/getQuoteList"
+    },
+    {
+      "title": "TAIFEX official institutional futures OI",
+      "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate"
+    },
+    {
+      "title": "CNBC quote endpoint",
+      "url": "https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol?symbols=.SPX%7C.DJI%7C.IXIC%7C.SOX%7C.VIX%7C.NDX%7CAAPL%7CMSFT%7CNVDA%7CAMZN%7CGOOGL%7CMETA%7CTSLA&requestMethod=quick&noform=1&partnerId=2&fund=1&exthrs=1&output=json"
+    },
+    {
+      "title": "Reuters Trading Day: Tech melt",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/trading-day-tech-melt-211749374.html"
+    },
+    {
+      "title": "Focus Taiwan: Taiwan shares open lower",
+      "url": "https://focustaiwan.tw/business/202610150002"
+    },
+    {
+      "title": "US Treasury daily yield curve",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026"
+    },
+    {
+      "title": "Farside Bitcoin ETF flows",
+      "url": "https://farside.co.uk/btc/"
+    },
+    {
+      "title": "Farside Ethereum ETF flows",
+      "url": "https://farside.co.uk/eth/"
+    },
+    {
+      "title": "World Gold Council ETF flows API",
+      "url": "https://fsapi.gold.org/api/v11/charts/etfv2/revised/flows-chart2?break-cache=15Oct26"
+    }
+  ]
+}

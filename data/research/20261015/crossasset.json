@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "brief_date": "2026-10-15",
+  "cutoff": "2026-10-15T09:55:30+08:00",
+  "prices": {
+    "gold": {
+      "price": 4159.7001953125,
+      "change_pct": -0.2158946333,
+      "as_of": "2026-10-15T09:45:29+08:00"
+    },
+    "btc": {
+      "price": 81654.90625,
+      "change_pct": -1.9601814085,
+      "as_of": "2026-10-15T09:55:30+08:00"
+    },
+    "eth": {
+      "price": 2415.949951171875,
+      "change_pct": -3.5248508743,
+      "as_of": "2026-10-15T09:55:30+08:00"
+    },
+    "dxy": {
+      "price": 102.06199645996094,
+      "change_pct": -0.1008216656,
+      "as_of": "2026-10-15T09:45:30+08:00"
+    }
+  },
+  "crypto_etf_flows": {
+    "date": "2026-10-14",
+    "btc_usd_millions": -150.5,
+    "eth_usd_millions": -19.7,
+    "btc_source": "https://farside.co.uk/btc/",
+    "eth_source": "https://farside.co.uk/eth/"
+  },
+  "gold_etf_weekly": {
+    "as_of": "2026-10-09",
+    "global_usd_millions": 627.59952093,
+    "global_tonnes": 4.48597139,
+    "source": "World Gold Council",
+    "source_url": "https://fsapi.gold.org/api/v11/charts/etfv2/revised/flows-chart2?break-cache=15Oct26"
+  },
+  "interpretation": "Crypto prices and ETF flows both weakened; weekly gold ETF demand remained positive while current gold futures were modestly lower. Dates differ and are labeled separately."
+}

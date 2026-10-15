@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "brief_date": "2026-10-15",
+  "requested_source": "/Users/kaide/Pictures/方舟運算截圖/ark_stocks_latest.json",
+  "resolved_source": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-15_09-05-04/ark_stocks.json",
+  "resolved_directory": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-15_09-05-04",
+  "symlink_verified": true,
+  "run_id": "2026-10-15_09-05-04",
+  "run_date": "2026-10-15",
+  "timezone": "Asia/Taipei",
+  "started_at": "2026-10-15T09:05:04+08:00",
+  "finished_at": "2026-10-15T09:08:24+08:00",
+  "success_ok": true,
+  "validation_ok": true,
+  "section_validation": {
+    "ETF價值區": {
+      "ok": true,
+      "ocrCount": 10,
+      "axCount": 10,
+      "missingInAx": [],
+      "missingInOcr": [],
+      "nameDifferences": []
+    },
+    "ETF升溫區": {
+      "ok": true,
+      "ocrCount": 7,
+      "axCount": 7,
+      "missingInAx": [],
+      "missingInOcr": [],
+      "nameDifferences": []
+    },
+    "產業價值區": {
+      "ok": true,
+      "ocrCount": 30,
+      "axCount": 30,
+      "missingInAx": [],
+      "missingInOcr": [],
+      "nameDifferences": []
+    },
+    "產業升溫區": {
+      "ok": true,
+      "ocrCount": 30,
+      "axCount": 30,
+      "missingInAx": [],
+      "missingInOcr": [],
+      "nameDifferences": []
+    }
+  },
+  "total_stocks": 77,
+  "section_counts": {
+    "ETF價值區": 10,
+    "ETF升溫區": 7,
+    "產業價值區": 30,
+    "產業升溫區": 30
+  },
+  "water_level": 72.2,
+  "source_sha256": "0e4d4dd8d4862ed0ea23ba68e3691f9112a4e95b0dc640c3dc2cad495d05f41d",
+  "validation_sha256": "8fb0278301f8fd2189f06abeb9ba15e50234be151f111054b10c5d3cdafeb16c",
+  "ax_match": true,
+  "policy": "ark_stocks.json is primary; accessibility rows are used only to recover invalid OCR change/region fields."
+}

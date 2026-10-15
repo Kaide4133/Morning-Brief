@@ -1,0 +1,730 @@
+{
+  "schema_version": "kmb.ark.normalized.v1",
+  "date": "2026-10-15",
+  "source": "/Users/kaide/Pictures/方舟運算截圖/ark_stocks_latest.json",
+  "resolved_source": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-15_09-05-04/ark_stocks.json",
+  "generated_at": "2026-10-15T01:08:24.177496+00:00",
+  "water_level": 72.2,
+  "previous_water_level": 65.6,
+  "delta": 6.6,
+  "comparison_date": "2026-10-14",
+  "zone_breadth": {
+    "ETF價值區": {
+      "up": 1,
+      "down": 9,
+      "flat": 0,
+      "missing": 0
+    },
+    "ETF升溫區": {
+      "up": 0,
+      "down": 7,
+      "flat": 0,
+      "missing": 0
+    },
+    "產業價值區": {
+      "up": 0,
+      "down": 30,
+      "flat": 0,
+      "missing": 0
+    },
+    "產業升溫區": {
+      "up": 3,
+      "down": 26,
+      "flat": 1,
+      "missing": 0
+    }
+  },
+  "etf": {
+    "value": [
+      {
+        "code": "00913",
+        "name": "兆豐台灣晶圓製造",
+        "price": "49.3",
+        "industry": "台灣",
+        "mark": "",
+        "change": "▼2.15(-4.18%)"
+      },
+      {
+        "code": "00935",
+        "name": "野村臺灣新科技50",
+        "price": "57.8",
+        "industry": "台灣",
+        "mark": "",
+        "change": "▼2.7(-4.46%)"
+      },
+      {
+        "code": "00891",
+        "name": "中信關鍵半導體",
+        "price": "36.03",
+        "industry": "台灣",
+        "mark": "",
+        "change": "▼1.34(-3.59%)"
+      },
+      {
+        "code": "00927",
+        "name": "群益半導體收益",
+        "price": "38.43",
+        "industry": "台灣",
+        "mark": "",
+        "change": "▼1.4(-3.51%)"
+      },
+      {
+        "code": "00631L",
+        "name": "元大台灣50正2",
+        "price": "37.75",
+        "industry": "台灣",
+        "mark": "",
+        "change": "▼2.01(-5.05%)"
+      },
+      {
+        "code": "00918",
+        "name": "大華優利高填息30",
+        "price": "34.18",
+        "industry": "台灣",
+        "mark": "",
+        "change": "▼0.37(-1.07%)"
+      },
+      {
+        "code": "0056",
+        "name": "元大高股息",
+        "price": "58.5",
+        "industry": "台灣",
+        "mark": "",
+        "change": "▼1.1(-1.85%)"
+      },
+      {
+        "code": "0055",
+        "name": "元大MSCI金融",
+        "price": "51",
+        "industry": "台灣",
+        "mark": "",
+        "change": "▲0.2(0.39%)"
+      },
+      {
+        "code": "00939",
+        "name": "統一台灣高息動能",
+        "price": "24.78",
+        "industry": "台灣",
+        "mark": "",
+        "change": "▼0.04(-0.16%)"
+      },
+      {
+        "code": "00960",
+        "name": "野村全球航運龍頭",
+        "price": "23.79",
+        "industry": "全球",
+        "mark": "",
+        "change": "▼0.39(-1.61%)"
+      }
+    ],
+    "rising": [
+      {
+        "code": "00682U",
+        "name": "期元大美元指數",
+        "price": "20.93",
+        "industry": "美國",
+        "mark": "",
+        "change": "▼0.15(-0.71%)"
+      },
+      {
+        "code": "00926",
+        "name": "凱基全球菁英55",
+        "price": "27.23",
+        "industry": "全球",
+        "mark": "",
+        "change": "▼0.24(-0.87%)"
+      },
+      {
+        "code": "00940",
+        "name": "元大台灣價值高息",
+        "price": "13.37",
+        "industry": "台灣",
+        "mark": "",
+        "change": "▼0.12(-0.89%)"
+      },
+      {
+        "code": "009814",
+        "name": "富邦標普500",
+        "price": "11.55",
+        "industry": "美國",
+        "mark": "",
+        "change": "▼0.16(-1.37%)"
+      },
+      {
+        "code": "009823",
+        "name": "群益S&P500",
+        "price": "10.6",
+        "industry": "美國",
+        "mark": "",
+        "change": "▼0.17(-1.58%)"
+      },
+      {
+        "code": "00858",
+        "name": "永豐美國500大",
+        "price": "36.61",
+        "industry": "美國",
+        "mark": "",
+        "change": "▼0.51(-1.37%)"
+      },
+      {
+        "code": "009813",
+        "name": "貝萊德標普卓越50",
+        "price": "11.65",
+        "industry": "",
+        "mark": "",
+        "change": "▼0.19(-1.6%)"
+      }
+    ],
+    "overlap": 0,
+    "overlap_names": []
+  },
+  "stocks": {
+    "value": [
+      {
+        "code": "2059",
+        "name": "川湖",
+        "price": "9,550",
+        "industry": "",
+        "mark": "",
+        "change": "▼455(-4.55%)"
+      },
+      {
+        "code": "2303",
+        "name": "聯電",
+        "price": "135.5",
+        "industry": "",
+        "mark": "",
+        "change": "▼6.5(-4.58%)"
+      },
+      {
+        "code": "2317",
+        "name": "鴻海",
+        "price": "239.5",
+        "industry": "",
+        "mark": "",
+        "change": "▼3.5(-1.44%)"
+      },
+      {
+        "code": "2376",
+        "name": "技嘉",
+        "price": "348.5",
+        "industry": "",
+        "mark": "",
+        "change": "▼7.5(-2.11%)"
+      },
+      {
+        "code": "8299",
+        "name": "群聯",
+        "price": "1,875",
+        "industry": "",
+        "mark": "",
+        "change": "▼90(-4.58%)"
+      },
+      {
+        "code": "2308",
+        "name": "台達電",
+        "price": "1,675",
+        "industry": "",
+        "mark": "",
+        "change": "▼110(-6.16%)"
+      },
+      {
+        "code": "2382",
+        "name": "廣達",
+        "price": "317.5",
+        "industry": "",
+        "mark": "",
+        "change": "▼5.5(-1.7%)"
+      },
+      {
+        "code": "3017",
+        "name": "奇鋐",
+        "price": "3,195",
+        "industry": "",
+        "mark": "",
+        "change": "▼115(-3.47%)"
+      },
+      {
+        "code": "5536",
+        "name": "聖暉*",
+        "price": "885",
+        "industry": "",
+        "mark": "",
+        "change": "▼23(-2.53%)"
+      },
+      {
+        "code": "2301",
+        "name": "光寶科",
+        "price": "272.5",
+        "industry": "",
+        "mark": "",
+        "change": "▼10.5(-3.71%)"
+      },
+      {
+        "code": "2395",
+        "name": "研華",
+        "price": "703",
+        "industry": "",
+        "mark": "",
+        "change": "▼11(-1.54%)"
+      },
+      {
+        "code": "2344",
+        "name": "華邦電",
+        "price": "157.5",
+        "industry": "",
+        "mark": "",
+        "change": "▼7.5(-4.55%)"
+      },
+      {
+        "code": "2330",
+        "name": "台積電",
+        "price": "2,440",
+        "industry": "",
+        "mark": "",
+        "change": "▼50(-2.01%)"
+      },
+      {
+        "code": "2467",
+        "name": "志聖",
+        "price": "526",
+        "industry": "",
+        "mark": "",
+        "change": "▼21(-3.84%)"
+      },
+      {
+        "code": "1785",
+        "name": "光洋科",
+        "price": "101.5",
+        "industry": "",
+        "mark": "",
+        "change": "▼3(-2.87%)"
+      },
+      {
+        "code": "2360",
+        "name": "致茂",
+        "price": "2,135",
+        "industry": "",
+        "mark": "",
+        "change": "▼115(-5.11%)"
+      },
+      {
+        "code": "3231",
+        "name": "緯創",
+        "price": "179.5",
+        "industry": "",
+        "mark": "",
+        "change": "▼8(-4.28%)"
+      },
+      {
+        "code": "3661",
+        "name": "世芯-KY",
+        "price": "3,705",
+        "industry": "",
+        "mark": "",
+        "change": "▼235(-5.96%)"
+      },
+      {
+        "code": "2449",
+        "name": "京元電子",
+        "price": "277.5",
+        "industry": "",
+        "mark": "",
+        "change": "▼19(-6.41%)"
+      },
+      {
+        "code": "2327",
+        "name": "國巨*",
+        "price": "584",
+        "industry": "",
+        "mark": "",
+        "change": "▼43(-6.86%)"
+      },
+      {
+        "code": "2383",
+        "name": "台光電",
+        "price": "5,130",
+        "industry": "",
+        "mark": "",
+        "change": "▼390(-7.07%)"
+      },
+      {
+        "code": "5434",
+        "name": "崇越",
+        "price": "583",
+        "industry": "",
+        "mark": "",
+        "change": "▼13(-2.18%)"
+      },
+      {
+        "code": "3036",
+        "name": "文曄",
+        "price": "213.5",
+        "industry": "",
+        "mark": "",
+        "change": "▼2.5(-1.16%)"
+      },
+      {
+        "code": "6285",
+        "name": "啟碁",
+        "price": "245.5",
+        "industry": "",
+        "mark": "",
+        "change": "▼7.5(-2.96%)"
+      },
+      {
+        "code": "3533",
+        "name": "嘉澤",
+        "price": "1,850",
+        "industry": "",
+        "mark": "",
+        "change": "▼85(-4.39%)"
+      },
+      {
+        "code": "2345",
+        "name": "智邦",
+        "price": "1,965",
+        "industry": "",
+        "mark": "",
+        "change": "▼80(-3.9%)"
+      },
+      {
+        "code": "2368",
+        "name": "金像電",
+        "price": "1,190",
+        "industry": "",
+        "mark": "",
+        "change": "▼70(-5.56%)"
+      },
+      {
+        "code": "3264",
+        "name": "欣銓",
+        "price": "266.5",
+        "industry": "",
+        "mark": "",
+        "change": "▼11(-3.96%)"
+      },
+      {
+        "code": "2379",
+        "name": "瑞昱",
+        "price": "770",
+        "industry": "",
+        "mark": "",
+        "change": "▼8(-1.03%)"
+      },
+      {
+        "code": "3044",
+        "name": "健鼎",
+        "price": "585",
+        "industry": "",
+        "mark": "",
+        "change": "▼18(-2.99%)"
+      }
+    ],
+    "rising": [
+      {
+        "code": "6957",
+        "name": "裕慶-KY",
+        "price": "466",
+        "industry": "",
+        "mark": "",
+        "change": "▼7(-1.48%)"
+      },
+      {
+        "code": "4174",
+        "name": "浩鼎",
+        "price": "58.5",
+        "industry": "",
+        "mark": "",
+        "change": "▼1.2(-2.01%)"
+      },
+      {
+        "code": "3265",
+        "name": "台星科",
+        "price": "277",
+        "industry": "",
+        "mark": "",
+        "change": "▼15.5(-5.3%)"
+      },
+      {
+        "code": "6225",
+        "name": "天瀚",
+        "price": "93.9",
+        "industry": "",
+        "mark": "",
+        "change": "▲5.7(6.46%)"
+      },
+      {
+        "code": "2850",
+        "name": "新產",
+        "price": "170",
+        "industry": "",
+        "mark": "",
+        "change": "▲2(1.19%)"
+      },
+      {
+        "code": "3597",
+        "name": "映興",
+        "price": "51",
+        "industry": "",
+        "mark": "",
+        "change": "▼2.4(-4.49%)"
+      },
+      {
+        "code": "3564",
+        "name": "其陽",
+        "price": "72.5",
+        "industry": "",
+        "mark": "",
+        "change": "▼1.7(-2.29%)"
+      },
+      {
+        "code": "6278",
+        "name": "台表科",
+        "price": "283.5",
+        "industry": "",
+        "mark": "",
+        "change": "▼7(-2.41%)"
+      },
+      {
+        "code": "4927",
+        "name": "泰鼎-KY",
+        "price": "58.1",
+        "industry": "",
+        "mark": "",
+        "change": "▼1.4(-2.35%)"
+      },
+      {
+        "code": "1569",
+        "name": "濱川",
+        "price": "84.9",
+        "industry": "",
+        "mark": "",
+        "change": "▲1(1.19%)"
+      },
+      {
+        "code": "2851",
+        "name": "中再保",
+        "price": "51.9",
+        "industry": "",
+        "mark": "",
+        "change": "0(0%)"
+      },
+      {
+        "code": "1301",
+        "name": "台塑",
+        "price": "86.2",
+        "industry": "",
+        "mark": "",
+        "change": "▼2.6(-2.92%)"
+      },
+      {
+        "code": "4760",
+        "name": "勤凱",
+        "price": "389",
+        "industry": "",
+        "mark": "",
+        "change": "▼10(-2.51%)"
+      },
+      {
+        "code": "2492",
+        "name": "華新科",
+        "price": "408",
+        "industry": "",
+        "mark": "",
+        "change": "▼18(-4.23%)"
+      },
+      {
+        "code": "1326",
+        "name": "台化",
+        "price": "80.7",
+        "industry": "",
+        "mark": "",
+        "change": "▼4.9(-5.73%)"
+      },
+      {
+        "code": "1303",
+        "name": "南亞",
+        "price": "328.5",
+        "industry": "",
+        "mark": "",
+        "change": "▼20.5(-5.87%)"
+      },
+      {
+        "code": "2816",
+        "name": "旺旺保",
+        "price": "44.2",
+        "industry": "",
+        "mark": "",
+        "change": "▼0.3(-0.67%)"
+      },
+      {
+        "code": "5230",
+        "name": "雷笛克光學",
+        "price": "28.3",
+        "industry": "",
+        "mark": "",
+        "change": "▼2(-6.6%)"
+      },
+      {
+        "code": "6213",
+        "name": "聯茂",
+        "price": "819",
+        "industry": "",
+        "mark": "",
+        "change": "▼37(-4.32%)"
+      },
+      {
+        "code": "6672",
+        "name": "騰輝電子-KY",
+        "price": "567",
+        "industry": "",
+        "mark": "",
+        "change": "▼25(-4.22%)"
+      },
+      {
+        "code": "3631",
+        "name": "晟楠",
+        "price": "47.2",
+        "industry": "",
+        "mark": "",
+        "change": "▼1.8(-3.67%)"
+      },
+      {
+        "code": "1710",
+        "name": "東聯",
+        "price": "19.1",
+        "industry": "",
+        "mark": "",
+        "change": "▼0.9(-4.5%)"
+      },
+      {
+        "code": "6834",
+        "name": "天二科技",
+        "price": "150.5",
+        "industry": "",
+        "mark": "",
+        "change": "▼12(-7.38%)"
+      },
+      {
+        "code": "1714",
+        "name": "和桐",
+        "price": "19.95",
+        "industry": "",
+        "mark": "",
+        "change": "▼0.55(-2.69%)"
+      },
+      {
+        "code": "5228",
+        "name": "鈺鎧",
+        "price": "59.4",
+        "industry": "",
+        "mark": "",
+        "change": "▼2.5(-4.04%)"
+      },
+      {
+        "code": "2855",
+        "name": "統一證",
+        "price": "59.3",
+        "industry": "",
+        "mark": "",
+        "change": "▼0.9(-1.5%)"
+      },
+      {
+        "code": "3268",
+        "name": "海德威",
+        "price": "25.6",
+        "industry": "",
+        "mark": "",
+        "change": "▼0.5(-1.92%)"
+      },
+      {
+        "code": "2466",
+        "name": "冠西電",
+        "price": "192.5",
+        "industry": "",
+        "mark": "",
+        "change": "▼21(-9.84%)"
+      },
+      {
+        "code": "3701",
+        "name": "大眾控",
+        "price": "61.2",
+        "industry": "",
+        "mark": "",
+        "change": "▼2.8(-4.37%)"
+      },
+      {
+        "code": "5205",
+        "name": "中茂",
+        "price": "31.3",
+        "industry": "",
+        "mark": "",
+        "change": "▼3.4(-9.8%)"
+      }
+    ],
+    "overlap": 0,
+    "overlap_names": []
+  },
+  "validation": {
+    "schema_version": "1.0",
+    "brief_date": "2026-10-15",
+    "requested_source": "/Users/kaide/Pictures/方舟運算截圖/ark_stocks_latest.json",
+    "resolved_source": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-15_09-05-04/ark_stocks.json",
+    "resolved_directory": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-15_09-05-04",
+    "symlink_verified": true,
+    "run_id": "2026-10-15_09-05-04",
+    "run_date": "2026-10-15",
+    "timezone": "Asia/Taipei",
+    "started_at": "2026-10-15T09:05:04+08:00",
+    "finished_at": "2026-10-15T09:08:24+08:00",
+    "success_ok": true,
+    "validation_ok": true,
+    "section_validation": {
+      "ETF價值區": {
+        "ok": true,
+        "ocrCount": 10,
+        "axCount": 10,
+        "missingInAx": [],
+        "missingInOcr": [],
+        "nameDifferences": []
+      },
+      "ETF升溫區": {
+        "ok": true,
+        "ocrCount": 7,
+        "axCount": 7,
+        "missingInAx": [],
+        "missingInOcr": [],
+        "nameDifferences": []
+      },
+      "產業價值區": {
+        "ok": true,
+        "ocrCount": 30,
+        "axCount": 30,
+        "missingInAx": [],
+        "missingInOcr": [],
+        "nameDifferences": []
+      },
+      "產業升溫區": {
+        "ok": true,
+        "ocrCount": 30,
+        "axCount": 30,
+        "missingInAx": [],
+        "missingInOcr": [],
+        "nameDifferences": []
+      }
+    },
+    "total_stocks": 77,
+    "section_counts": {
+      "ETF價值區": 10,
+      "ETF升溫區": 7,
+      "產業價值區": 30,
+      "產業升溫區": 30
+    },
+    "water_level": 72.2,
+    "source_sha256": "0e4d4dd8d4862ed0ea23ba68e3691f9112a4e95b0dc640c3dc2cad495d05f41d",
+    "validation_sha256": "8fb0278301f8fd2189f06abeb9ba15e50234be151f111054b10c5d3cdafeb16c",
+    "ax_match": true,
+    "policy": "ark_stocks.json is primary; accessibility rows are used only to recover invalid OCR change/region fields."
+  }
+}
