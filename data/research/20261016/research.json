@@ -1,0 +1,83 @@
+{
+  "brief_date": "2026-10-16",
+  "cutoff": "2026-10-16T10:04:10+08:00",
+  "summary": "水位72.8%續升，反彈有廣度；高檔先看承接",
+  "ark_audit": "ark-audit.json",
+  "market": "market.json",
+  "crossasset": "crossasset.json",
+  "news": [
+    {
+      "headline": "TSMC reports Q3 EPS NT$29.43 and Q4 revenue outlook US$52.3-54.3bn",
+      "source": "TSMC",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/526b65af7305df2dde6b9ece6812b1fdf1e49f9b/3Q26%20EarningsRelease.pdf"
+    },
+    {
+      "headline": "台股早盤漲逾380點",
+      "source": "CNA",
+      "url": "https://www.cna.com.tw/news/afe/202610160029.aspx"
+    },
+    {
+      "headline": "Dow rises more than 500 points as investors rotate away from AI trade",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2026/10/14/stock-market-today-live-updates.html"
+    }
+  ],
+  "sources": [
+    {
+      "title": "TWSE official 2026 market calendar",
+      "url": "https://www.twse.com.tw/holidaySchedule/holidaySchedule?response=html"
+    },
+    {
+      "title": "TWSE official intraday quote",
+      "url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0"
+    },
+    {
+      "title": "TWSE official institutional totals for 2026-10-15",
+      "url": "https://www.twse.com.tw/rwd/zh/fund/BFI82U?date=20261015&response=json"
+    },
+    {
+      "title": "TAIFEX official live quote API",
+      "url": "https://mis.taifex.com.tw/futures/api/getQuoteList"
+    },
+    {
+      "title": "TAIFEX official institutional futures OI",
+      "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate"
+    },
+    {
+      "title": "CNBC exchange quote endpoint",
+      "url": "https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol?symbols=.SPX%7C.DJI%7C.IXIC%7C.SOX%7C.VIX%7C.NDX%7CAAPL%7CMSFT%7CNVDA%7CAMZN%7CGOOGL%7CMETA%7CTSLA%7CTSM&requestMethod=quick&noform=1&partnerId=2&fund=1&exthrs=1&output=json"
+    },
+    {
+      "title": "TSMC 2026 Q3 earnings release",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/526b65af7305df2dde6b9ece6812b1fdf1e49f9b/3Q26%20EarningsRelease.pdf"
+    },
+    {
+      "title": "TSMC 2026 Q3 presentation",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/9f58506f6f114f91cefbf86820cc63297b39b130/3Q26%20Presentation%20%28E%29.pdf"
+    },
+    {
+      "title": "CNA Taiwan shares rebound in early trade",
+      "url": "https://www.cna.com.tw/news/afe/202610160029.aspx"
+    },
+    {
+      "title": "CNBC US market close 2026-10-15",
+      "url": "https://www.cnbc.com/2026/10/14/stock-market-today-live-updates.html"
+    },
+    {
+      "title": "US Treasury daily yield curve",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026"
+    },
+    {
+      "title": "Farside Bitcoin ETF flows",
+      "url": "https://farside.co.uk/btc/"
+    },
+    {
+      "title": "Farside Ethereum ETF flows",
+      "url": "https://farside.co.uk/eth/"
+    },
+    {
+      "title": "World Gold Council ETF flows API",
+      "url": "https://fsapi.gold.org/api/v11/charts/etfv2/revised/flows-chart2?break-cache=16Oct26"
+    }
+  ]
+}

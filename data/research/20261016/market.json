@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0",
+  "research_context": {
+    "brief_date": "2026-10-16",
+    "cutoff": "2026-10-16T10:04:10+08:00",
+    "timezone": "Asia/Taipei",
+    "snapshot_policy": "Taiwan values are official intraday snapshots; US values are 2026-10-15 regular-session closes."
+  },
+  "calendar_verification": {
+    "current_day": {
+      "date": "2026-10-16",
+      "weekday": "Friday",
+      "twse_open": true,
+      "taifex_regular_session_open": true,
+      "evidence": [
+        "Official TWSE 10:04:00 quote exists",
+        "Official TAIFEX 10:04:10 quote exists"
+      ]
+    },
+    "immediately_prior_open_date": "2026-10-15",
+    "official_holiday_url": "https://www.twse.com.tw/holidaySchedule/holidaySchedule?response=html"
+  },
+  "taiwan_market": {
+    "taiex": {
+      "date": "2026-10-16",
+      "time": "10:04:00 Asia/Taipei",
+      "level": 47399.61,
+      "prior_close": 46969.87,
+      "change_points": 429.74,
+      "change_pct": 0.9149269521077974,
+      "source_url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0"
+    },
+    "taifex_near_month": {
+      "date": "2026-10-16",
+      "time": "10:04:10 Asia/Taipei",
+      "symbol": "TXFJ6-F",
+      "last": 47435.0,
+      "reference": 46931.0,
+      "change_points": 504.0,
+      "change_pct": 1.07,
+      "source_url": "https://mis.taifex.com.tw/futures/api/getQuoteList"
+    },
+    "institutional_totals": {
+      "date": "2026-10-15",
+      "rows": [
+        {
+          "category": "自營商(自行買賣)",
+          "buy_ntd": 12994032654,
+          "sell_ntd": 21677431966,
+          "net_ntd": -8683399312
+        },
+        {
+          "category": "自營商(避險)",
+          "buy_ntd": 78540814217,
+          "sell_ntd": 165680799627,
+          "net_ntd": -87139985410
+        },
+        {
+          "category": "投信",
+          "buy_ntd": 51569996986,
+          "sell_ntd": 22286717535,
+          "net_ntd": 29283279451
+        },
+        {
+          "category": "外資及陸資(不含外資自營商)",
+          "buy_ntd": 379111402669,
+          "sell_ntd": 681666886727,
+          "net_ntd": -302555484058
+        },
+        {
+          "category": "外資自營商",
+          "buy_ntd": 0,
+          "sell_ntd": 0,
+          "net_ntd": 0
+        },
+        {
+          "category": "合計",
+          "buy_ntd": 522216246526,
+          "sell_ntd": 891311835855,
+          "net_ntd": -369095589329
+        }
+      ],
+      "foreign_net_ntd": -302555484058,
+      "total_net_ntd": -369095589329,
+      "source_url": "https://www.twse.com.tw/rwd/zh/fund/BFI82U?date=20261015&response=json"
+    },
+    "foreign_futures_oi": {
+      "date": "2026-10-15",
+      "net_contracts": -97582,
+      "previous_date": "2026-10-14",
+      "previous_net_contracts": -86814,
+      "change_contracts": -10768,
+      "source_url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate"
+    }
+  },
+  "us_close": {
+    ".SPX": {
+      "value": "7,744.06",
+      "level": 7744.06,
+      "change_pct": 0.33,
+      "change": 25.12,
+      "data_as_of": "2026-10-15",
+      "source_time": "2026-10-15T16:33:53.000-0400",
+      "source": "CNBC Quote Cache"
+    },
+    ".DJI": {
+      "value": "52,177.69",
+      "level": 52177.69,
+      "change_pct": 1.08,
+      "change": 556.21,
+      "data_as_of": "2026-10-15",
+      "source_time": "2026-10-15T16:34:05.000-0400",
+      "source": "CNBC Quote Cache"
+    },
+    ".IXIC": {
+      "value": "26,713.026",
+      "level": 26713.026,
+      "change_pct": 0.08,
+      "change": 20.158,
+      "data_as_of": "2026-10-15",
+      "source_time": "2026-10-15T17:15:59.000-0400",
+      "source": "CNBC Quote Cache"
+    },
+    ".SOX": {
+      "value": "11,581.215",
+      "level": 11581.215,
+      "change_pct": -0.88,
+      "change": -103.167,
+      "data_as_of": "2026-10-15",
+      "source_time": "2026-10-15T17:15:59.000-0400",
+      "source": "CNBC Quote Cache"
+    },
+    ".VIX": {
+      "value": "16.46",
+      "level": 16.46,
+      "change_pct": -2.43,
+      "change": -0.41,
+      "data_as_of": "2026-10-15",
+      "source_time": "2026-10-15T16:15:01.000-0400",
+      "source": "CNBC Quote Cache"
+    },
+    ".NDX": {
+      "value": "29,935.595",
+      "level": 29935.595,
+      "change_pct": -0.05,
+      "change": -15.221,
+      "data_as_of": "2026-10-15",
+      "source_time": "2026-10-15T17:15:59.000-0400",
+      "source": "CNBC Quote Cache"
+    }
+  },
+  "rates": {
+    "date": "2026-10-15",
+    "two_year": 4.77,
+    "ten_year": 5.1,
+    "thirty_year": 5.43,
+    "previous_date": "2026-10-14",
+    "previous": {
+      "two_year": 4.82,
+      "ten_year": 5.19,
+      "thirty_year": 5.52
+    },
+    "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026"
+  },
+  "source_notes": [
+    "CNBC exchange quote cache values carry explicit 2026-10-15 timestamps.",
+    "Institutional flow and foreign futures OI are completed-day 10/15 data, not 10/16 intraday flow."
+  ]
+}

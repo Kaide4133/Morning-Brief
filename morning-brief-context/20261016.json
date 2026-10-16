@@ -1,0 +1,100 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-10-16",
+  "valid_for_trading_date": "2026-10-16",
+  "data_as_of": "2026-10-16",
+  "stale": false,
+  "issue_no": 106,
+  "scenario": {
+    "id": "03",
+    "slug": "high-level-speed-control",
+    "label": "高位控速",
+    "confidence": 0.76,
+    "reason": "水位 72.8% 仍健康但斜率 +0.6pt 放緩/外部壓力升高，追價需控速",
+    "source": "classifier"
+  },
+  "water": {
+    "level": 72.8,
+    "previous": 72.2,
+    "change": 0.6,
+    "direction": "rising"
+  },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "increase_exposure_allowed",
+    "risk_posture": "balanced_cautious",
+    "water_policy": {
+      "direction": "rising",
+      "change": 0.6,
+      "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
+    },
+    "scenario_context": {
+      "id": "03",
+      "label": "高位控速",
+      "confidence": 0.76
+    },
+    "policy_focus": [
+      "優先觀察能守住早盤低點、量價承接明確的強勢股；高檔急拉與無量反彈先不追。",
+      "10/15外資現貨大賣、臺指期淨空增加；費半仍收低，AI強基本面尚未全面轉成股價強勢。",
+      "四區77筆中，ETF價值區9漲1跌、ETF升溫區4漲1跌2筆無股價、產業價值區23漲5跌2平、產業升溫區15漲10跌3平2筆缺漲跌。",
+      "台積電：第三季EPS 29.43元，第四季營收展望523億至543億美元。"
+    ],
+    "systemic_risk": "中偏高",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
+  "action_guidance": {
+    "risk_bias": "balanced_cautious",
+    "allow_add": true,
+    "allow_trim": true,
+    "deploy_mode": "slow_selective_add",
+    "max_initial_deploy_pct": 0.25,
+    "trim": {
+      "allowed": true,
+      "mode": "selective_trim",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": true,
+      "mode": "slow_selective_add",
+      "max_initial_deploy_pct": 0.25,
+      "conditions": [
+        "conditional_only",
+        "core_or_high_quality_only",
+        "pullback_confirmed",
+        "no_chase"
+      ]
+    },
+    "rebuy": {
+      "allowed": true,
+      "mode": "wait_for_pullback",
+      "conditions": [
+        "sold_name_drawdown_2_to_3_pct",
+        "MA20_support",
+        "murphy_right_side_reconfirmation"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 0.76,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "高位控速",
+    "summary": "水位 72.8% 仍健康但斜率 +0.6pt 放緩/外部壓力升高，追價需控速"
+  },
+  "source": {
+    "issue_file": "data/issues/20261016.json",
+    "generated_at": "2026-10-16T10:14:50+08:00"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-16",
+  "status": "validated",
+  "source_link": "/Users/kaide/Pictures/方舟運算截圖/ark_stocks_latest.json",
+  "resolved_source": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-16_09-05-05/ark_stocks.json",
+  "source_sha256": "d7af7fbe25b0112e9a11c7441b0b5a802e93fd033c33abe04b8e5c0e9e5fe383",
+  "success_sha256": "0716f5379af8e1a6b344b7ca1a5d0de45a7bb435b8e21d11802a1b805fd9fde3",
+  "validation_sha256": "2faf7429b4b0971091aafe3a5e7d8d4732e16a65aa34408dc0a7deba9ce1921f",
+  "ax_sha256": "c0e90da6e43ec2b830f56bd10fd5a48d1510962b2b1f555b14b520c369047700",
+  "success": {
+    "ok": true,
+    "stage": "complete",
+    "date": "2026-10-16",
+    "counts": {
+      "ETF價值區": 10,
+      "ETF升溫區": 7,
+      "產業價值區": 30,
+      "產業升溫區": 30
+    },
+    "waterLevel": "72.8%",
+    "axMatch": true
+  },
+  "validation": {
+    "ok": true,
+    "all_sections_ok": true
+  },
+  "card_corrections": [
+    {
+      "source_codes": [
+        "00849B"
+      ],
+      "published_code": "00849B",
+      "reason": "direct screenshot confirms no market price; NAV 37.96 retained only as NAV"
+    },
+    {
+      "source_codes": [
+        "00856B"
+      ],
+      "published_code": "00856B",
+      "reason": "direct screenshot confirms no market price; NAV 38.08 retained only as NAV"
+    }
+  ],
+  "counts": {
+    "ETF價值區": 10,
+    "ETF升溫區": 7,
+    "產業價值區": 30,
+    "產業升溫區": 30
+  },
+  "total_cards": 77,
+  "overlap": {
+    "etf": [],
+    "stocks": [
+      "2347",
+      "2884"
+    ]
+  },
+  "zone_breadth": {
+    "ETF價值區": {
+      "up": 9,
+      "down": 1,
+      "flat": 0,
+      "missing": 0
+    },
+    "ETF升溫區": {
+      "up": 4,
+      "down": 1,
+      "flat": 0,
+      "missing": 2
+    },
+    "產業價值區": {
+      "up": 23,
+      "down": 5,
+      "flat": 2,
+      "missing": 0
+    },
+    "產業升溫區": {
+      "up": 15,
+      "down": 10,
+      "flat": 3,
+      "missing": 2
+    }
+  }
+}
