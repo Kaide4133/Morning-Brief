@@ -1,54 +1,62 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-10-16",
-  "valid_for_trading_date": "2026-10-16",
-  "data_as_of": "2026-10-16",
+  "date": "2026-10-19",
+  "valid_for_trading_date": "2026-10-19",
+  "data_as_of": "2026-10-19",
   "stale": false,
-  "issue_no": 106,
+  "issue_no": 107,
   "scenario": {
-    "id": "03",
-    "slug": "high-level-speed-control",
-    "label": "高位控速",
-    "confidence": 0.76,
-    "reason": "水位 72.8% 仍健康但斜率 +0.6pt 放緩/外部壓力升高，追價需控速",
-    "source": "classifier"
+    "id": "05",
+    "slug": "orderly-pullback",
+    "label": "有序回檔",
+    "confidence": 1.0,
+    "reason": "水位上升4.6個百分點、配置環境改善，但費半大跌、台股早盤下跌且方舟價值區普跌；本期採有序回檔，先等價格承接，不將上升水位誤判為收縮。",
+    "source": "manual_override",
+    "classifier_suggestion": "05"
   },
   "water": {
-    "level": 72.8,
-    "previous": 72.2,
-    "change": 0.6,
-    "direction": "rising"
+    "level": 77.4,
+    "previous": 72.8,
+    "change": 4.6,
+    "direction": "rising",
+    "previous_trading_date": "2026-10-16",
+    "source_sha256": "076588a6e7469f6fc341ad6a213a8c6e309b69eaba5802e6afa191df162bf136"
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
-    "short_term_bias": "increase_exposure_allowed",
-    "risk_posture": "balanced_cautious",
+    "short_term_bias": "defensive_hold_review",
+    "risk_posture": "defensive",
     "water_policy": {
       "direction": "rising",
-      "change": 0.6,
-      "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
+      "change": 4.6,
+      "interpretation": "水位由72.8%上升至77.4%，增加4.6個百分點，配置環境改善；暫緩新增是因價格承壓與承接未確認，不是水位轉弱。"
     },
     "scenario_context": {
-      "id": "03",
-      "label": "高位控速",
-      "confidence": 0.76
+      "id": "05",
+      "label": "有序回檔",
+      "confidence": 1.0
     },
     "policy_focus": [
-      "優先觀察能守住早盤低點、量價承接明確的強勢股；高檔急拉與無量反彈先不追。",
-      "10/15外資現貨大賣、臺指期淨空增加；費半仍收低，AI強基本面尚未全面轉成股價強勢。",
-      "四區77筆中，ETF價值區9漲1跌、ETF升溫區4漲1跌2筆無股價、產業價值區23漲5跌2平、產業升溫區15漲10跌3平2筆缺漲跌。",
-      "台積電：第三季EPS 29.43元，第四季營收展望523億至543億美元。"
+      "保留彈性，觀察早盤低點能否守住、半導體是否停止擴散下跌。",
+      "費半大跌、VIX跳升；外資現貨仍賣超，期貨僅減空。",
+      "價值區40筆全數下跌，先把早盤賣壓視為尚未解除。",
+      "10/17 Taiwan News引述中央社及日媒：日本同意台積電熊本二廠改採3奈米的計畫，預計2028年12月開始營運；這是中長期產能布局，並非本季新增營收，也不能抵銷當下科技股賣壓。"
     ],
-    "systemic_risk": "中偏高",
+    "systemic_risk": "偏高",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
   },
   "action_guidance": {
-    "risk_bias": "balanced_cautious",
-    "allow_add": true,
+    "risk_bias": "defensive",
+    "allow_add": false,
     "allow_trim": true,
-    "deploy_mode": "slow_selective_add",
-    "max_initial_deploy_pct": 0.25,
+    "deploy_mode": "wait_for_pullback",
+    "rebuy_condition": [
+      "MA20_support",
+      "volume_contract",
+      "murphy_right_side_reconfirmation",
+      "water_stabilizes"
+    ],
     "trim": {
       "allowed": true,
       "mode": "selective_trim",
@@ -61,23 +69,21 @@
       ]
     },
     "deploy": {
-      "allowed": true,
-      "mode": "slow_selective_add",
-      "max_initial_deploy_pct": 0.25,
+      "allowed": false,
+      "mode": "wait_for_pullback",
       "conditions": [
-        "conditional_only",
-        "core_or_high_quality_only",
-        "pullback_confirmed",
-        "no_chase"
+        "water_stabilizes",
+        "support_confirmed"
       ]
     },
     "rebuy": {
       "allowed": true,
       "mode": "wait_for_pullback",
       "conditions": [
-        "sold_name_drawdown_2_to_3_pct",
         "MA20_support",
-        "murphy_right_side_reconfirmation"
+        "volume_contract",
+        "murphy_right_side_reconfirmation",
+        "water_stabilizes"
       ]
     },
     "trim_priority": [
@@ -86,16 +92,15 @@
       "leveraged_etf_overheat",
       "low_efficiency_small_branch"
     ],
-    "confidence": 0.76,
+    "confidence": 1.0,
     "source": "morning_brief_classifier"
   },
   "editorial": {
-    "headline": "反彈有廣度，高檔先看承接",
-    "state_label": "高位控速",
-    "summary": "水位 72.8% 仍健康但斜率 +0.6pt 放緩/外部壓力升高，追價需控速"
+    "state_label": "有序回檔",
+    "summary": "水位上升4.6個百分點、配置環境改善，但費半大跌、台股早盤下跌且方舟價值區普跌；本期採有序回檔，先等價格承接，不將上升水位誤判為收縮。"
   },
   "source": {
-    "issue_file": "data/issues/20261016.json",
-    "generated_at": "2026-10-16T10:14:50+08:00"
+    "issue_file": "data/issues/20261019.json",
+    "generated_at": "2026-10-19T09:37:34+08:00"
   }
 }

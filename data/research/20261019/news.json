@@ -1,0 +1,409 @@
+{
+  "brief": "2026-10-19 morning brief research",
+  "cutoff": "2026-10-19T09:30:00+08:00",
+  "research_started": "2026-10-19T09:26:54+08:00",
+  "timezone": "Asia/Taipei",
+  "status": "complete_with_explicit_data_gaps",
+  "scope": {
+    "news_window": "Weekend/overnight into 2026-10-19 09:30 Taipei; older 2026-10-15 TSMC result retained only as recent context",
+    "price_rule": "Latest verifiable snapshot at or before cutoff; distinguish live/near-live from official close",
+    "evidence_rule": "Facts and inferences are separate; stale tables are not merged with newer dated posts"
+  },
+  "cross_asset": {
+    "summary": "Price-first read: Treasuries and gold were firmer as AI-financing risk weighed on equities; BTC and ETH rose over 24h but ETH/BTC fell, so ETH underperformed BTC. This is cross-asset evidence, not proof of a single causal chain.",
+    "assets": [
+      {
+        "asset": "US Treasuries",
+        "as_of": "2026-10-16 official daily par yield curve; Reuters near-live 2026-10-19 Asia session",
+        "facts": {
+          "official_2y_yield_pct": 4.74,
+          "official_10y_yield_pct": 5.09,
+          "official_30y_yield_pct": 5.43,
+          "daily_change_bp": {
+            "2y": -3,
+            "10y": -1,
+            "30y": 0
+          },
+          "2s10s_spread_bp": 35,
+          "reuters_asia_session_10y_yield_pct": 5.0645,
+          "reuters_change_bp": -3,
+          "reuters_context": "10-year yields extended a safe-haven rally and had just recorded their largest weekly fall in more than eight months."
+        },
+        "interpretation": "Bond prices rose/yields fell, consistent with a defensive bid. The curve remained positively sloped between 2Y and 10Y; long yields above 5% still represent a high discount-rate burden for leveraged AI investment.",
+        "sources": [
+          {
+            "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?field_tdr_date_value=2026&type=daily_treasury_yield_curve&page&_format=csv",
+            "source": "US Treasury",
+            "date": "2026-10-16",
+            "evidence_class": "official/original"
+          },
+          {
+            "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-10-19/",
+            "source": "Reuters",
+            "date": "2026-10-19",
+            "evidence_class": "Reuters search-result body excerpt; canonical page blocked to extractor"
+          }
+        ]
+      },
+      {
+        "asset": "Gold",
+        "as_of": "2026-10-19T09:19:50+08:00",
+        "facts": {
+          "comex_dec_2026_usd_per_oz": 4189.7,
+          "session_change_pct": 0.206,
+          "session_high": 4208.4,
+          "session_low": 4176.0,
+          "reuters_spot_snapshot_usd_per_oz": 4181,
+          "reuters_spot_change_pct": 0.4
+        },
+        "interpretation": "Gold rose alongside falling Treasury yields, a conventional defensive configuration. COMEX futures and Reuters spot are different instruments and should not be presented as one quote.",
+        "sources": [
+          {
+            "url": "https://query1.finance.yahoo.com/v8/finance/chart/GC=F?range=5d&interval=1d",
+            "source": "Yahoo Finance chart endpoint / COMEX Gold Dec-26",
+            "date": "2026-10-19",
+            "evidence_class": "market-data endpoint snapshot"
+          },
+          {
+            "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-10-19/",
+            "source": "Reuters",
+            "date": "2026-10-19",
+            "evidence_class": "Reuters search-result body excerpt"
+          }
+        ]
+      },
+      {
+        "asset": "Bitcoin",
+        "as_of": "2026-10-19T09:29:52+08:00",
+        "facts": {
+          "pair": "BTCUSDT",
+          "last": 82466.17,
+          "change_24h_pct": 1.086,
+          "high_24h": 82543.54,
+          "low_24h": 80684.36
+        },
+        "interpretation": "BTC recovered toward the top of its 24-hour range despite Friday ETF outflows. One weekend price rebound does not reverse the negative weekly ETF-flow signal.",
+        "source": {
+          "url": "https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT",
+          "source": "Binance public ticker API",
+          "date": "2026-10-19",
+          "evidence_class": "exchange endpoint snapshot"
+        }
+      },
+      {
+        "asset": "Ether",
+        "as_of": "2026-10-19T09:29:52+08:00",
+        "facts": {
+          "pair": "ETHUSDT",
+          "last": 2422.28,
+          "change_24h_pct": 0.646,
+          "high_24h": 2430.0,
+          "low_24h": 2329.0
+        },
+        "interpretation": "ETH rose in USD terms but lagged BTC, matching the weaker relative-price and heavier weekly ETH ETF-outflow picture.",
+        "source": {
+          "url": "https://api.binance.com/api/v3/ticker/24hr?symbol=ETHUSDT",
+          "source": "Binance public ticker API",
+          "date": "2026-10-19",
+          "evidence_class": "exchange endpoint snapshot"
+        }
+      },
+      {
+        "asset": "ETH/BTC",
+        "as_of": "2026-10-19T09:29:51+08:00",
+        "facts": {
+          "pair": "ETHBTC",
+          "last": 0.02938,
+          "change_24h_pct": -0.407,
+          "high_24h": 0.02962,
+          "low_24h": 0.02884
+        },
+        "interpretation": "ETH relative weakness persisted even while both BTC and ETH rose against USDT; this is the cleaner cross-crypto risk signal than the two USD moves alone.",
+        "source": {
+          "url": "https://api.binance.com/api/v3/ticker/24hr?symbol=ETHBTC",
+          "source": "Binance public ticker API",
+          "date": "2026-10-19",
+          "evidence_class": "exchange endpoint snapshot"
+        }
+      }
+    ]
+  },
+  "etf_flows": {
+    "crypto": {
+      "latest_final_session": "2026-10-16 US session",
+      "btc": {
+        "daily_net_flow_usd_m": -82.4,
+        "funds_usd_m": {
+          "IBIT": -71.8,
+          "FBTC": -10.6,
+          "all_other_reported_funds": 0.0
+        },
+        "week_2026_10_12_to_16_daily_usd_m": [
+          -65.4,
+          175.7,
+          -261.4,
+          5.1,
+          -82.4
+        ],
+        "week_net_flow_usd_m": -228.4,
+        "weekly_total_status": "arithmetic from dated Farside rows"
+      },
+      "eth": {
+        "daily_net_flow_usd_m": -69.7,
+        "funds_usd_m": {
+          "ETHA": -69.7,
+          "all_other_reported_funds": 0.0
+        },
+        "week_2026_10_12_to_16_daily_usd_m": [
+          -85.4,
+          24.8,
+          -129.5,
+          -60.3,
+          -69.7
+        ],
+        "week_net_flow_usd_m": -320.1,
+        "weekly_total_status": "arithmetic from dated Farside rows"
+      },
+      "facts_vs_inference": {
+        "fact": "Both complexes had outflows on Friday and over the five-session week; ETH ETF weekly outflow exceeded BTC ETF weekly outflow by US$91.7m.",
+        "inference": "This supports a weaker institutional demand backdrop for ETH relative to BTC, but creations/redemptions do not prove immediate coin sales or explain price causality."
+      },
+      "sources": [
+        {
+          "url": "https://x.com/FarsideUK/status/2111302660989043046",
+          "source": "Farside Investors direct post",
+          "published": "2026-10-17",
+          "data_session": "2026-10-16",
+          "evidence_class": "producer/original"
+        },
+        {
+          "url": "https://x.com/FarsideUK/status/2111302590126321882",
+          "source": "Farside Investors direct post",
+          "published": "2026-10-17",
+          "data_session": "2026-10-16",
+          "evidence_class": "producer/original"
+        },
+        {
+          "url": "https://farside.co.uk/btc/",
+          "source": "Farside Investors landing table",
+          "checked": "2026-10-19",
+          "warning": "Extractor exposed a stale table ending 2026-10-09; not used for latest row."
+        },
+        {
+          "url": "https://farside.co.uk/eth/",
+          "source": "Farside Investors landing table",
+          "checked": "2026-10-19",
+          "warning": "Extractor exposed a stale table ending 2026-09-18; not used for latest row."
+        }
+      ]
+    },
+    "gold": {
+      "latest_verified_week_end": "2026-10-09",
+      "wgc_as_of_date": "2026-10-09",
+      "weekly_fund_flow_usd": {
+        "North America": -111159717.78,
+        "Europe": 370201947.28,
+        "Asia": 375886191.43,
+        "Other": -7328900.0,
+        "Global_total": 627599520.93
+      },
+      "weekly_demand_tonnes": {
+        "North America": -0.99330566,
+        "Europe": 2.75542458,
+        "Asia": 2.48035206,
+        "Other": 0.24250041,
+        "Global_total": 4.48497139
+      },
+      "sign_audit": "Parent correction: Global totals positive in both USD and tonnes, but Other is USD negative / tonnes positive. Report USD aggregate only with medium confidence and explicit date; do not claim regional sign agreement.",
+      "interpretation": "The latest official WGC weekly data available at cutoff showed a net global inflow, led by Europe and Asia, despite a North American outflow. It is one week stale relative to the 2026-10-16 market close and must not be presented as last week's flow.",
+      "sources": [
+        {
+          "url": "https://fsapi.gold.org/api/v11/charts/etfv2/revised/flows-chart2?break-cache=12Oct26",
+          "source": "World Gold Council chart API",
+          "date": "2026-10-09",
+          "evidence_class": "producer/original API"
+        },
+        {
+          "url": "https://www.gold.org/goldhub/data/gold-etfs-holdings-and-flows",
+          "source": "World Gold Council landing page",
+          "updated": "2026-10-12",
+          "evidence_class": "producer/original"
+        },
+        {
+          "url": "https://www.gold.org/download/file/21255/WMM_13_Oct_2026_Pricing_fiscal_risk.pdf",
+          "source": "World Gold Council Weekly Markets Monitor",
+          "published": "2026-10-13",
+          "evidence_class": "producer/original"
+        }
+      ]
+    }
+  },
+  "news": [
+    {
+      "rank": 1,
+      "region": "US/global markets",
+      "headline": "AI-financing concern kept Asian equities under pressure while lower oil supported bonds and US futures",
+      "source_date": "2026-10-19",
+      "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-10-19/",
+      "facts": [
+        "Reuters reported Japan's Nikkei down 2.0% and South Korea down 1.6% in early Monday trade.",
+        "Five AI hyperscalers are expected by Goldman Sachs to raise combined capex to about US$1.2tn next year.",
+        "The US 10-year yield was down about 3bp to 5.0645%, while spot gold was up 0.4% at US$4,181/oz."
+      ],
+      "taiwan_mapping_inference": "Negative immediate sentiment for high-duration AI server, foundry, packaging and component names; lower yields are a partial offset. The effect is valuation/financing-driven, not evidence of an end-demand collapse.",
+      "uncertainty": "Canonical Reuters page was blocked to extraction; body facts above are limited to the checked search-result excerpt. Exact Reuters publication time was not exposed."
+    },
+    {
+      "rank": 2,
+      "region": "US markets",
+      "headline": "Wall Street sold off Friday as AI infrastructure debt and oil risks hit technology",
+      "source_date": "2026-10-16",
+      "url": "https://www.staradvertiser.com/2026/10/16/breaking-news/wall-street-ends-down-sharply-as-ai-stocks-oil-prices-weigh/",
+      "facts": [
+        "Reuters syndication: S&P 500 -1.09% to 7,659.44, Nasdaq -2.15% to 26,140.03, Dow -0.34% to 52,002.41.",
+        "CoreWeave fell 12%; the PHLX chip index fell 3.8% for an eighth straight decline.",
+        "For the week, S&P 500 lost about 1.95% and Nasdaq 4.48%; oil rose more than 3% Friday on Middle East supply concern."
+      ],
+      "taiwan_mapping_inference": "Bearish opening impulse for Taiwan semiconductors/AI supply chain, particularly richly valued server, power, cooling, optical and PCB names. Energy and utilities relative strength abroad is not a direct bullish Taiwan read-through.",
+      "uncertainty": "Authorized Reuters syndication checked; article date exposed but exact publication time was not."
+    },
+    {
+      "rank": 3,
+      "region": "US policy/energy",
+      "headline": "Trump to use up to 60 days to review Russia sanctions after waiver",
+      "source_date": "2026-10-18",
+      "url": "https://www.reuters.com/world/us/rubio-says-trump-take-up-60-days-weigh-russia-sanctions-2026-10-18/",
+      "facts": [
+        "Secretary of State Marco Rubio said Trump would use up to 60 days to assess the economic impact of Russia-related sanctions and tariffs waived a day earlier.",
+        "The waived Graham Act measures had been due to take effect the following week.",
+        "Rubio also defended a Russia-US diesel arrangement; Trump said initial supply would exceed 300,000 metric tons, followed by November shipments."
+      ],
+      "taiwan_mapping_inference": "Potentially disinflationary if diesel supply actually rises, which would help bonds and rate-sensitive technology valuations. Execution and legal/political durability remain uncertain.",
+      "uncertainty": "Reuters canonical page was blocked to extraction; claims are constrained to checked Reuters search excerpts. Waiver is not a permanent repeal and shipment execution was not independently verified."
+    },
+    {
+      "rank": 4,
+      "region": "Taiwan/semiconductors",
+      "headline": "Japan approved TSMC's revised 3nm Kumamoto fab plan",
+      "source_date": "2026-10-17",
+      "url": "https://www.taiwannews.com.tw/news/6460077",
+      "facts": [
+        "Japan's METI approved a revised second-fab plan for 3nm production, described as the first 3nm plant in Japan.",
+        "Reported first-stage capacity is 6,000 wafers/month versus 48,000 under the former 6nm/12nm plan.",
+        "Operations are scheduled for December 2028; final production depends on subsidy scale."
+      ],
+      "taiwan_mapping_inference": "Structurally positive for TSMC demand visibility and geographic diversification, but possible long-run capex/cost dilution and domestic ecosystem migration should be monitored. Near-term Taiwan capacity is not displaced by a 2028 start.",
+      "uncertainty": "Checked Taiwan News/CNA report attributed to METI and Japanese media; direct METI release was not retrieved in the bounded window."
+    },
+    {
+      "rank": 5,
+      "region": "Taiwan/trade policy",
+      "headline": "Taiwan plans tighter AI-chip and server export controls to China",
+      "source_date": "2026-10-16 (interview given 2026-10-12)",
+      "url": "https://uk.finance.yahoo.com/news/taiwan-curb-ai-chip-exports-054957385.html",
+      "facts": [
+        "Bloomberg syndication said Economic Affairs Minister Kung Ming-hsin plans to add AI servers and cutting-edge semiconductors to controlled items.",
+        "Once effective, unauthorized restricted shipments to China could become criminal offenses under the Foreign Trade Act.",
+        "Kung did not give an implementation date."
+      ],
+      "taiwan_mapping_inference": "Compliance and China-channel risk rise for chip distribution, server ODM and component suppliers; domestic advanced-node demand is not necessarily reduced. Enforcement details and product thresholds matter more than the headline.",
+      "uncertainty": "This is a plan, not an effective rule. No implementation date or final official control list was verified. Yahoo/Bloomberg body extraction was rate-limited, so facts rely on checked search excerpts."
+    },
+    {
+      "rank": 6,
+      "region": "Taiwan/weather/operations",
+      "headline": "Typhoon Champi could trigger warnings later this week",
+      "source_date": "2026-10-18 20:42 Taipei",
+      "url": "https://focustaiwan.tw/society/202610180011",
+      "facts": [
+        "CWA said a sea warning could come Wednesday night or Thursday morning and a land warning Thursday night or Friday.",
+        "As of Sunday 14:00, Champi was 2,470 km east-southeast of Eluanbi, moving west-northwest at 20 km/h with 191 km/h sustained winds and a 200 km storm radius.",
+        "Greatest potential impact was forecast for Friday/Saturday, with heavy rain possible in central, northern and eastern Taiwan."
+      ],
+      "taiwan_mapping_inference": "Immediate market impact is limited Monday, but logistics, power continuity, construction and fab staffing plans should be monitored from Wednesday. Weather risk is operational, not yet a verified production disruption.",
+      "uncertainty": "Track models were divergent at cutoff; no landfall was confirmed."
+    },
+    {
+      "rank": 7,
+      "region": "Taiwan/company context",
+      "headline": "TSMC posted record Q3 profit but stayed prudent on 2027",
+      "source_date": "2026-10-15; included as recent context, not overnight",
+      "url": "http://rmb.reuters.com/rmd/rss/item/tag:reuters.com,2026:newsml_KBN3VU30X?channel=frL012",
+      "facts": [
+        "Q3 net profit rose 69% year-on-year to NT$763.1bn, beating the NT$746.3bn LSEG SmartEstimate.",
+        "TSMC raised 2026 revenue-growth expectation to about 44% and guided Q4 revenue to US$52.3bn-US$54.3bn.",
+        "It kept 2026 capex at US$60bn-US$64bn and said AI demand was extremely robust while expressing caution on 2027 macro uncertainty."
+      ],
+      "taiwan_mapping_inference": "Fundamental demand remains strong, but the market is now testing valuation and financing assumptions across the AI chain; strong TSMC execution does not immunize suppliers from multiple compression.",
+      "uncertainty": "Earlier than the weekend window; retained only to frame Monday's Taiwan reaction."
+    }
+  ],
+  "unavailable_current_data": [
+    {
+      "dataset": "WGC gold ETF flows for week ending 2026-10-16",
+      "status": "unavailable at cutoff",
+      "reason": "WGC landing page and API were updated 2026-10-12 with as-of date 2026-10-09. The producer says weekly data update on the following Monday, but a 2026-10-16 row had not appeared by 09:30 Taipei.",
+      "do_not_infer": "Do not substitute GLD-only flows, a third-party US basket, or price moves for the missing global WGC weekly total."
+    },
+    {
+      "dataset": "Farside landing-page current rows",
+      "status": "stale variants",
+      "reason": "The BTC page extraction ended 2026-10-09 and ETH page extraction ended 2026-09-18. Latest 2026-10-16 rows were instead verified from Farside's direct dated posts.",
+      "do_not_infer": "Do not merge cumulative totals from stale landing tables with current daily posts."
+    },
+    {
+      "dataset": "Exact Reuters publication timestamps for some weekend stories",
+      "status": "unavailable",
+      "reason": "Canonical Reuters pages returned HTTP errors to extraction; search excerpts exposed dates but not exact timestamps.",
+      "do_not_infer": "Keep date-only labels; do not manufacture a UTC or Taipei time."
+    },
+    {
+      "dataset": "Official Taiwan AI export-control text/effective date",
+      "status": "not yet verified and reportedly not yet effective",
+      "reason": "Ministerial interview described planned controls but no final implementation date or product schedule was retrieved.",
+      "do_not_infer": "Do not write that Taiwan has already banned AI-chip exports to China."
+    }
+  ],
+  "reader_suggestions": [
+    {
+      "priority": 1,
+      "suggestion": "Lead the brief with the cross-asset split: bonds and gold firmer, AI equities weaker, BTC/ETH bouncing but ETH/BTC lower. Call it defensive rotation plus crypto relative weakness, not a uniform risk-off move."
+    },
+    {
+      "priority": 2,
+      "suggestion": "For Taiwan's open, watch whether TSMC/AI supply-chain selling confirms the US semiconductor impulse or whether lower yields produce an intraday stabilization. Separate strong TSMC fundamentals from sector multiple compression."
+    },
+    {
+      "priority": 3,
+      "suggestion": "Use the Friday Farside figures as dated flow evidence: BTC -US$82.4m, ETH -US$69.7m; add weekly totals only as arithmetic. Emphasize ETH's larger weekly outflow and falling ETH/BTC without claiming causality."
+    },
+    {
+      "priority": 4,
+      "suggestion": "Label WGC gold ETF data as through 2026-10-09: +US$627.6m and +4.485t globally. State that the week ending Oct. 16 was not available at the 09:30 cutoff."
+    },
+    {
+      "priority": 5,
+      "suggestion": "Keep Champi as an operational watch item: no Monday disruption claim; reassess track, warnings, power/logistics and fab staffing from Tuesday night onward."
+    },
+    {
+      "priority": 6,
+      "suggestion": "Key validation levels for subsequent updates: US 10Y around 5.05%, gold around US$4,180-4,200, BTC US$80,000/82,500 and ETH/BTC near 0.029. These are monitoring references, not trade instructions."
+    }
+  ],
+  "research_notes": {
+    "verified_at_or_before_cutoff": true,
+    "read_only": true,
+    "repo_modified": false,
+    "published": false,
+    "direct_x_boundary": "Only Farside producer posts were used from X. No Trump/Musk direct-post claim was required or asserted.",
+    "temporary_support_files": [
+      "/Users/kaide/.hermes/cache/scratch/wgc-0.json",
+      "/Users/kaide/.hermes/cache/scratch/wgc-1.json",
+      "/Users/kaide/.hermes/cache/scratch/wgc-2.json"
+    ]
+  },
+  "parent_rejected_claims": [
+    "Weekly crypto totals not independently verified from complete daily fund rows; omitted from issue.",
+    "Search-excerpt-only policy details excluded from issue."
+  ]
+}

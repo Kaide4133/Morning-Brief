@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "status": "confirmed",
+  "stage": "trading_day_check",
+  "reason": "年度行事曆開市；台北市停班與交易所特殊停市查核通過。",
+  "runId": "2026-10-19_09-05-04",
+  "version": "20260929T092021-104a93f4c509",
+  "trigger": "launchagent-entry",
+  "date": "2026-10-19",
+  "timezone": "Asia/Taipei",
+  "startedAt": "2026-10-19T09:05:04+08:00",
+  "finishedAt": "2026-10-19T09:05:05+08:00",
+  "generatedAt": "2026-10-19T09:05:05+08:00",
+  "elapsedSeconds": 0,
+  "elapsedHuman": "0m 0s",
+  "tokenUsage": {
+    "tokens": 0,
+    "note": "Local automation; no LLM API used by this job."
+  },
+  "source": "local-market-dgpa-html",
+  "localStatusFile": "/Users/kaide/Library/Application Support/com.kaide.taiwan-market-day/market-status.json",
+  "manual": false,
+  "checkedAt": "2026-10-19T01:05:05.054Z",
+  "validUntil": "2026-10-19T01:08:04.729Z"
+}

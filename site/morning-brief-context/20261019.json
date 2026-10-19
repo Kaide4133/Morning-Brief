@@ -1,0 +1,106 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-10-19",
+  "valid_for_trading_date": "2026-10-19",
+  "data_as_of": "2026-10-19",
+  "stale": false,
+  "issue_no": 107,
+  "scenario": {
+    "id": "05",
+    "slug": "orderly-pullback",
+    "label": "有序回檔",
+    "confidence": 1.0,
+    "reason": "水位上升4.6個百分點、配置環境改善，但費半大跌、台股早盤下跌且方舟價值區普跌；本期採有序回檔，先等價格承接，不將上升水位誤判為收縮。",
+    "source": "manual_override",
+    "classifier_suggestion": "05"
+  },
+  "water": {
+    "level": 77.4,
+    "previous": 72.8,
+    "change": 4.6,
+    "direction": "rising",
+    "previous_trading_date": "2026-10-16",
+    "source_sha256": "076588a6e7469f6fc341ad6a213a8c6e309b69eaba5802e6afa191df162bf136"
+  },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "defensive_hold_review",
+    "risk_posture": "defensive",
+    "water_policy": {
+      "direction": "rising",
+      "change": 4.6,
+      "interpretation": "水位由72.8%上升至77.4%，增加4.6個百分點，配置環境改善；暫緩新增是因價格承壓與承接未確認，不是水位轉弱。"
+    },
+    "scenario_context": {
+      "id": "05",
+      "label": "有序回檔",
+      "confidence": 1.0
+    },
+    "policy_focus": [
+      "保留彈性，觀察早盤低點能否守住、半導體是否停止擴散下跌。",
+      "費半大跌、VIX跳升；外資現貨仍賣超，期貨僅減空。",
+      "價值區40筆全數下跌，先把早盤賣壓視為尚未解除。",
+      "10/17 Taiwan News引述中央社及日媒：日本同意台積電熊本二廠改採3奈米的計畫，預計2028年12月開始營運；這是中長期產能布局，並非本季新增營收，也不能抵銷當下科技股賣壓。"
+    ],
+    "systemic_risk": "偏高",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
+  "action_guidance": {
+    "risk_bias": "defensive",
+    "allow_add": false,
+    "allow_trim": true,
+    "deploy_mode": "wait_for_pullback",
+    "rebuy_condition": [
+      "MA20_support",
+      "volume_contract",
+      "murphy_right_side_reconfirmation",
+      "water_stabilizes"
+    ],
+    "trim": {
+      "allowed": true,
+      "mode": "selective_trim",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": false,
+      "mode": "wait_for_pullback",
+      "conditions": [
+        "water_stabilizes",
+        "support_confirmed"
+      ]
+    },
+    "rebuy": {
+      "allowed": true,
+      "mode": "wait_for_pullback",
+      "conditions": [
+        "MA20_support",
+        "volume_contract",
+        "murphy_right_side_reconfirmation",
+        "water_stabilizes"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 1.0,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "有序回檔",
+    "summary": "水位上升4.6個百分點、配置環境改善，但費半大跌、台股早盤下跌且方舟價值區普跌；本期採有序回檔，先等價格承接，不將上升水位誤判為收縮。"
+  },
+  "source": {
+    "issue_file": "data/issues/20261019.json",
+    "generated_at": "2026-10-19T09:37:34+08:00"
+  }
+}
