@@ -1216,44 +1216,6 @@ a:hover { text-decoration: underline; }
   box-shadow: 4px 4px 0 var(--ink);
 }
 
-/* Opt-in dark reader theme for current simplified briefs. */
-body.theme-dark {
-  --paper: #090d12;
-  --paper-warm: #111823;
-  --paper-dark: #182231;
-  --ink: #f4f0e6;
-  --ink-soft: #c8d0db;
-  --ink-mute: #8e9baa;
-  --blood: #ff4f70;
-  --blood-deep: #ff8aa0;
-  --blood-soft: rgba(255, 79, 112, 0.12);
-  --rule: rgba(244, 240, 230, 0.16);
-  color-scheme: dark;
-  background: var(--paper);
-}
-
-body.theme-dark::before {
-  opacity: 0.08;
-  mix-blend-mode: screen;
-}
-
-body.theme-dark::after {
-  background:
-    radial-gradient(ellipse at top left, rgba(255, 79, 112, 0.08) 0%, transparent 48%),
-    radial-gradient(ellipse at bottom right, rgba(84, 133, 255, 0.06) 0%, transparent 52%);
-}
-
-body.theme-dark .masthead { background: rgba(9, 13, 18, 0.94); }
-body.theme-dark .hero-panel,
-body.theme-dark .capital-flow-quick { background: rgba(17, 24, 35, 0.92); }
-body.theme-dark .hero-panel::before { color: rgba(255, 79, 112, 0.07); }
-body.theme-dark .deep-dive > summary { background: rgba(17, 24, 35, 0.96); }
-body.theme-dark .content-card { background: rgba(17, 24, 35, 0.88); }
-body.theme-dark .cover-sprite-label {
-  background: rgba(9, 13, 18, 0.78);
-  color: var(--ink);
-}
-
 @media (max-width: 768px) {
   html, body { max-width: 100%; overflow-x: hidden; }
   .masthead-inner {
