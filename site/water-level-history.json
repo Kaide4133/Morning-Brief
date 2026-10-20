@@ -1,6 +1,17 @@
 {
   "records": [
     {
+      "date": "2026-10-20",
+      "water_level": 76.9,
+      "scenario_id": "04",
+      "scenario_label": "04 輪動換手",
+      "previous_trading_date": "2026-10-19",
+      "previous_water_level": 77.4,
+      "delta": -0.5,
+      "direction": "falling",
+      "source_sha256": "9c6c757801e7e9f87a84ed3ef81741077bc556edc87d9443b88edc4df8a7dd8e"
+    },
+    {
       "date": "2026-10-19",
       "water_level": 77.4,
       "scenario_id": "05",

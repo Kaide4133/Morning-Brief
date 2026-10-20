@@ -1,0 +1,50 @@
+{
+  "as_of": "2026-10-20T13:26:35+08:00",
+  "twse_mis": {
+    "index": 46234.29,
+    "previous_close": 46822.08,
+    "change": -587.79,
+    "change_pct": -1.26,
+    "open": 46712.57,
+    "high": 46967.91,
+    "low": 46163.03
+  },
+  "ark_screen_snapshot": {
+    "as_of": "2026-10-20T11:16:00+08:00",
+    "taiex_change": -39.35,
+    "futures_change_points": 20
+  },
+  "us_close_20261019": {
+    "dow": {
+      "level": 51966.03,
+      "pct": -0.07
+    },
+    "sp500": {
+      "level": 7690.73,
+      "pct": 0.41
+    },
+    "nasdaq": {
+      "level": 26430.89,
+      "pct": 1.11
+    },
+    "sox": {
+      "level": 11316.34,
+      "pct": 1.61
+    },
+    "vix": {
+      "level": 18.44,
+      "pct": -7.75
+    }
+  },
+  "treasury_20261019": {
+    "2y": 4.77,
+    "10y": 5.15,
+    "30y": 5.48
+  },
+  "tw_institutions_20261019": {
+    "foreign_net_twd": -76742735769,
+    "investment_trust_net_twd": 24141627951,
+    "total_net_twd": -88864191574,
+    "foreign_txf_open_interest_net": -91145
+  }
+}
