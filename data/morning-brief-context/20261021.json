@@ -1,0 +1,99 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-10-21",
+  "valid_for_trading_date": "2026-10-21",
+  "data_as_of": "2026-10-21",
+  "stale": false,
+  "issue_no": 109,
+  "scenario": {
+    "id": "01",
+    "slug": "trend-expansion",
+    "label": "趨勢擴張",
+    "confidence": 1.0,
+    "reason": "水位由76.9%回升至77.4%，四區樣本廣度全面偏強，台股10/21早盤指數與臺指期同步上漲；但美股科技與費半未同步，仍需成交與權值續航確認。",
+    "source": "manual_override",
+    "classifier_suggestion": "01"
+  },
+  "water": {
+    "level": 77.4,
+    "previous": 76.9,
+    "change": 0.5,
+    "direction": "rising"
+  },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "increase_exposure_allowed",
+    "risk_posture": "constructive",
+    "water_policy": {
+      "direction": "rising",
+      "change": 0.5,
+      "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
+    },
+    "scenario_context": {
+      "id": "01",
+      "label": "趨勢擴張",
+      "confidence": 1.0
+    },
+    "policy_focus": [
+      "健康方向可維持風險預算，但不追開盤急漲，等回測承接與量能續航。",
+      "美股Nasdaq、費半與Mag 7多數仍弱，油價和台幣貶值也可能限制估值擴張。",
+      "ETF價值區10漲0跌、產業價值區29漲0跌1平；官方加權與近月臺指期同漲約1.9%。",
+      "美國財政部10/20：2年期4.79%、10年期5.12%、30年期5.42%。"
+    ],
+    "systemic_risk": "中",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
+  "action_guidance": {
+    "risk_bias": "constructive",
+    "allow_add": true,
+    "allow_trim": true,
+    "deploy_mode": "selective_add",
+    "max_initial_deploy_pct": 0.4,
+    "trim": {
+      "allowed": true,
+      "mode": "selective_trim",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": true,
+      "mode": "selective_add",
+      "max_initial_deploy_pct": 0.4,
+      "conditions": [
+        "core_or_high_quality_only",
+        "no_chase",
+        "position_size_limited"
+      ]
+    },
+    "rebuy": {
+      "allowed": true,
+      "mode": "wait_for_pullback",
+      "conditions": [
+        "MA20_support",
+        "murphy_right_side_reconfirmation"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 1.0,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "趨勢擴張",
+    "summary": "水位由76.9%回升至77.4%，四區樣本廣度全面偏強，台股10/21早盤指數與臺指期同步上漲；但美股科技與費半未同步，仍需成交與權值續航確認。"
+  },
+  "source": {
+    "issue_file": "data/issues/20261021.json",
+    "generated_at": "2026-10-21T09:41:06+08:00"
+  }
+}

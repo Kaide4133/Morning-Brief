@@ -1,0 +1,119 @@
+{
+  "as_of": "2026-10-21T09:36:28+08:00",
+  "official_trading_day": {
+    "date": "2026-10-21",
+    "status": "open",
+    "evidence": "TWSE MIS returned live 20261021 quotes; TWSE 2026 holiday list does not list 10/21 as closure."
+  },
+  "twse_mis": {
+    "index": 47196.12,
+    "previous_close": 46292.93,
+    "change": 903.19,
+    "change_pct": 1.95,
+    "open": 46454.33,
+    "high": 47196.12,
+    "low": 46454.33,
+    "quote_time": "2026-10-21T09:36:00+08:00"
+  },
+  "taifex_live": {
+    "contract": "TXFJ6-F",
+    "label": "臺指期106",
+    "last": 47211.0,
+    "reference": 46341.0,
+    "change": 870.0,
+    "change_pct": 1.88,
+    "open": 47240.0,
+    "high": 47288.0,
+    "low": 46962.0,
+    "volume": 7421,
+    "quote_time": "2026-10-21T09:36:28+08:00"
+  },
+  "us_close_20261020": {
+    "dow": {
+      "level": 52495.88,
+      "pct": 1.02
+    },
+    "sp500": {
+      "level": 7712.57,
+      "pct": 0.28
+    },
+    "nasdaq": {
+      "level": 26424.82,
+      "pct": -0.02
+    },
+    "sox": {
+      "level": 11283.81,
+      "pct": -0.29
+    },
+    "ndx": {
+      "level": 29490.28,
+      "pct": -0.13
+    },
+    "vix": {
+      "level": 17.31,
+      "pct": -6.13
+    }
+  },
+  "treasury_20261020": {
+    "2y": 4.79,
+    "10y": 5.12,
+    "30y": 5.42,
+    "change_bp_vs_20261019": {
+      "2y": 2,
+      "10y": -3,
+      "30y": -6
+    }
+  },
+  "tw_institutions_20261020": {
+    "foreign_net_twd": -79539692396,
+    "investment_trust_net_twd": 18758508430,
+    "total_net_twd": -96360488198,
+    "foreign_txf_open_interest_net": -89748,
+    "foreign_txf_change_vs_20261019": 1397
+  },
+  "cross_assets": {
+    "dxy": {
+      "value": 101.8,
+      "pct": 0.07,
+      "as_of": "2026-10-21 09:21 Asia/Taipei",
+      "source": "Yahoo chart snapshot"
+    },
+    "gold_futures": {
+      "value": 4129.3,
+      "pct": -0.32,
+      "as_of": "2026-10-21 09:26 Asia/Taipei",
+      "source": "WorldMonitor/Yahoo market snapshot"
+    },
+    "btc": {
+      "value": 82829,
+      "pct": 1.76,
+      "as_of": "2026-10-21 09:26 Asia/Taipei",
+      "source": "WorldMonitor"
+    },
+    "eth": {
+      "value": 2446.54,
+      "pct": 2.53,
+      "as_of": "2026-10-21 09:26 Asia/Taipei",
+      "source": "WorldMonitor"
+    },
+    "usdtwd": {
+      "value": 32.663,
+      "pct": 0.56,
+      "as_of": "2026-10-21 09:21 Asia/Taipei",
+      "source": "Yahoo chart snapshot"
+    },
+    "oil": {
+      "wti": 98.58,
+      "brent": 109.64,
+      "pct": 0.78,
+      "as_of": "2026-10-21T00:22:00Z",
+      "source": "Reuters"
+    }
+  },
+  "crypto_flows_latest_complete": {
+    "date": "2026-10-19",
+    "btc_spot_etf_usd_m": 526.7,
+    "eth_spot_etf_usd_m": -103.3,
+    "note": "Farside data as reported after the 10/19 U.S. session; 10/20 complete flows were not available at 09:36 Asia/Taipei."
+  }
+}

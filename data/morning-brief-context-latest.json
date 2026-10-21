@@ -1,57 +1,58 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-10-20",
-  "valid_for_trading_date": "2026-10-20",
-  "data_as_of": "2026-10-20",
+  "date": "2026-10-21",
+  "valid_for_trading_date": "2026-10-21",
+  "data_as_of": "2026-10-21",
   "stale": false,
-  "issue_no": 108,
+  "issue_no": 109,
   "scenario": {
-    "id": "04",
-    "slug": "rotation-switching",
-    "label": "輪動換手",
+    "id": "01",
+    "slug": "trend-expansion",
+    "label": "趨勢擴張",
     "confidence": 1.0,
-    "reason": "方舟水位僅下降0.5個百分點，美股科技反彈、方舟產業價值區多數上漲，但台股權值與亞洲市場承壓；本期採輪動換手，不將局部強勢擴大為全面轉強。",
+    "reason": "水位由76.9%回升至77.4%，四區樣本廣度全面偏強，台股10/21早盤指數與臺指期同步上漲；但美股科技與費半未同步，仍需成交與權值續航確認。",
     "source": "manual_override",
-    "classifier_suggestion": "03"
+    "classifier_suggestion": "01"
   },
   "water": {
-    "level": 76.9,
-    "previous": 77.4,
-    "change": -0.5,
-    "direction": "falling"
+    "level": 77.4,
+    "previous": 76.9,
+    "change": 0.5,
+    "direction": "rising"
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
-    "short_term_bias": "defensive_hold_review",
-    "risk_posture": "selective",
+    "short_term_bias": "increase_exposure_allowed",
+    "risk_posture": "constructive",
     "water_policy": {
-      "direction": "falling",
-      "change": -0.5,
-      "interpretation": "目前不允許新增曝險；維持防禦檢查，等待水位、價格與情境重新確認。"
+      "direction": "rising",
+      "change": 0.5,
+      "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
     },
     "scenario_context": {
-      "id": "04",
-      "label": "輪動換手",
+      "id": "01",
+      "label": "趨勢擴張",
       "confidence": 1.0
     },
     "policy_focus": [
-      "不追急漲，優先看價值區強勢股回測是否有承接。",
-      "外資前一日現貨仍大賣，亞洲AI鏈同步走弱，反彈可能只是一日修復。",
-      "產業價值區23漲6跌1平，但13:26加權跌1.26%，強弱集中且不同步。",
-      "美國財政部10/19：2年期4.77%、10年期5.15%、30年期5.48%，長端較10/16上升。"
+      "健康方向可維持風險預算，但不追開盤急漲，等回測承接與量能續航。",
+      "美股Nasdaq、費半與Mag 7多數仍弱，油價和台幣貶值也可能限制估值擴張。",
+      "ETF價值區10漲0跌、產業價值區29漲0跌1平；官方加權與近月臺指期同漲約1.9%。",
+      "美國財政部10/20：2年期4.79%、10年期5.12%、30年期5.42%。"
     ],
-    "systemic_risk": "中高",
+    "systemic_risk": "中",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
   },
   "action_guidance": {
-    "risk_bias": "selective",
-    "allow_add": false,
+    "risk_bias": "constructive",
+    "allow_add": true,
     "allow_trim": true,
-    "deploy_mode": "rotate_after_confirmation",
+    "deploy_mode": "selective_add",
+    "max_initial_deploy_pct": 0.4,
     "trim": {
       "allowed": true,
-      "mode": "rotate_trim",
+      "mode": "selective_trim",
       "max_overshoot_pct": 0.25,
       "priority": [
         "positive_return_overheated_branch",
@@ -61,18 +62,21 @@
       ]
     },
     "deploy": {
-      "allowed": false,
-      "mode": "rotate_after_confirmation",
+      "allowed": true,
+      "mode": "selective_add",
+      "max_initial_deploy_pct": 0.4,
       "conditions": [
-        "wait_for_relative_strength_confirmation"
+        "core_or_high_quality_only",
+        "no_chase",
+        "position_size_limited"
       ]
     },
     "rebuy": {
       "allowed": true,
-      "mode": "wait_for_confirmation",
+      "mode": "wait_for_pullback",
       "conditions": [
-        "rotation_confirms",
-        "no_new_low"
+        "MA20_support",
+        "murphy_right_side_reconfirmation"
       ]
     },
     "trim_priority": [
@@ -85,11 +89,11 @@
     "source": "morning_brief_classifier"
   },
   "editorial": {
-    "state_label": "輪動換手",
-    "summary": "方舟水位僅下降0.5個百分點，美股科技反彈、方舟產業價值區多數上漲，但台股權值與亞洲市場承壓；本期採輪動換手，不將局部強勢擴大為全面轉強。"
+    "state_label": "趨勢擴張",
+    "summary": "水位由76.9%回升至77.4%，四區樣本廣度全面偏強，台股10/21早盤指數與臺指期同步上漲；但美股科技與費半未同步，仍需成交與權值續航確認。"
   },
   "source": {
-    "issue_file": "data/issues/20261020.json",
-    "generated_at": "2026-10-20T13:36:19+08:00"
+    "issue_file": "data/issues/20261021.json",
+    "generated_at": "2026-10-21T09:41:06+08:00"
   }
 }
