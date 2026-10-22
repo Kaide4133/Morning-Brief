@@ -10,34 +10,19 @@
       "date": "2026-10-21",
       "water_level": 77.4,
       "scenario_id": "01",
-      "scenario_label": "01 趨勢擴張",
-      "previous_trading_date": "2026-10-20",
-      "previous_water_level": 76.9,
-      "delta": 0.5,
-      "direction": "rising",
-      "source_sha256": "bf25236365876ee2d9b7727fa2a55bd233dbb71509497576443c9e9c9a6b0c96"
+      "scenario_label": "01 趨勢擴張"
     },
     {
       "date": "2026-10-20",
       "water_level": 76.9,
       "scenario_id": "04",
-      "scenario_label": "04 輪動換手",
-      "previous_trading_date": "2026-10-19",
-      "previous_water_level": 77.4,
-      "delta": -0.5,
-      "direction": "falling",
-      "source_sha256": "9c6c757801e7e9f87a84ed3ef81741077bc556edc87d9443b88edc4df8a7dd8e"
+      "scenario_label": "04 輪動換手"
     },
     {
       "date": "2026-10-19",
       "water_level": 77.4,
       "scenario_id": "05",
-      "scenario_label": "05 有序回檔",
-      "previous_trading_date": "2026-10-16",
-      "previous_water_level": 72.8,
-      "delta": 4.6,
-      "direction": "rising",
-      "source_sha256": "076588a6e7469f6fc341ad6a213a8c6e309b69eaba5802e6afa191df162bf136"
+      "scenario_label": "05 有序回檔"
     },
     {
       "date": "2026-10-16",
@@ -127,16 +112,7 @@
       "date": "2026-09-23",
       "water_level": 66.7,
       "scenario_id": "04",
-      "scenario_label": "04 輪動換手",
-      "comparison_date": "2026-09-21",
-      "comparison_level": 67.7,
-      "comparison_is_provisional": true,
-      "previous_trading_date": "2026-09-22",
-      "previous_trading_day_level": null,
-      "daily_change": null,
-      "comparison_change": -1.0,
-      "comparison_note": "9/22水位資料缺漏，暫以9/21的67.7%作比較基準；今日66.7%，較該基準下降1.0個百分點，非相較昨日的實測變化。",
-      "exception_scope": "2026-09-23"
+      "scenario_label": "04 輪動換手"
     },
     {
       "date": "2026-09-21",
