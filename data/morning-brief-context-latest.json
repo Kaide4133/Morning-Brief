@@ -1,55 +1,55 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-10-21",
-  "valid_for_trading_date": "2026-10-21",
-  "data_as_of": "2026-10-21",
+  "date": "2026-10-22",
+  "valid_for_trading_date": "2026-10-22",
+  "data_as_of": "2026-10-22",
   "stale": false,
-  "issue_no": 109,
+  "issue_no": 110,
   "scenario": {
-    "id": "01",
-    "slug": "trend-expansion",
-    "label": "趨勢擴張",
+    "id": "03",
+    "slug": "high-level-speed-control",
+    "label": "高位控速",
     "confidence": 1.0,
-    "reason": "水位由76.9%回升至77.4%，四區樣本廣度全面偏強，台股10/21早盤指數與臺指期同步上漲；但美股科技與費半未同步，仍需成交與權值續航確認。",
+    "reason": "水位由77.4%小升至77.6%，10/22台股早盤一度上漲後於10:40翻黑；產業升溫區16漲13跌1平、漲跌分化，符合高水位下放慢追價的高位控速。",
     "source": "manual_override",
-    "classifier_suggestion": "01"
+    "classifier_suggestion": "03"
   },
   "water": {
-    "level": 77.4,
-    "previous": 76.9,
-    "change": 0.5,
+    "level": 77.6,
+    "previous": 77.4,
+    "change": 0.2,
     "direction": "rising"
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
     "short_term_bias": "increase_exposure_allowed",
-    "risk_posture": "constructive",
+    "risk_posture": "balanced_cautious",
     "water_policy": {
       "direction": "rising",
-      "change": 0.5,
+      "change": 0.2,
       "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
     },
     "scenario_context": {
-      "id": "01",
-      "label": "趨勢擴張",
+      "id": "03",
+      "label": "高位控速",
       "confidence": 1.0
     },
     "policy_focus": [
-      "健康方向可維持風險預算，但不追開盤急漲，等回測承接與量能續航。",
-      "美股Nasdaq、費半與Mag 7多數仍弱，油價和台幣貶值也可能限制估值擴張。",
-      "ETF價值區10漲0跌、產業價值區29漲0跌1平；官方加權與近月臺指期同漲約1.9%。",
-      "美國財政部10/20：2年期4.79%、10年期5.12%、30年期5.42%。"
+      "保留核心曝險，新增部位降速；只做回測守住且量價重新轉強的標的。",
+      "高水位遇盤中翻黑與升溫區漲跌分化，若權值無法收復平盤，追價容易被反向波動修理。",
+      "ETF價值區9漲1跌，但產業升溫區16漲13跌1平；台股10:40回到平盤下。",
+      "美國財政部10/21：2年期4.81%、10年期5.13%、30年期5.42%；較10/20分別+2、+1、0個基點。"
     ],
     "systemic_risk": "中",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
   },
   "action_guidance": {
-    "risk_bias": "constructive",
+    "risk_bias": "balanced_cautious",
     "allow_add": true,
     "allow_trim": true,
-    "deploy_mode": "selective_add",
-    "max_initial_deploy_pct": 0.4,
+    "deploy_mode": "slow_selective_add",
+    "max_initial_deploy_pct": 0.25,
     "trim": {
       "allowed": true,
       "mode": "selective_trim",
@@ -63,18 +63,20 @@
     },
     "deploy": {
       "allowed": true,
-      "mode": "selective_add",
-      "max_initial_deploy_pct": 0.4,
+      "mode": "slow_selective_add",
+      "max_initial_deploy_pct": 0.25,
       "conditions": [
+        "conditional_only",
         "core_or_high_quality_only",
-        "no_chase",
-        "position_size_limited"
+        "pullback_confirmed",
+        "no_chase"
       ]
     },
     "rebuy": {
       "allowed": true,
       "mode": "wait_for_pullback",
       "conditions": [
+        "sold_name_drawdown_2_to_3_pct",
         "MA20_support",
         "murphy_right_side_reconfirmation"
       ]
@@ -89,11 +91,11 @@
     "source": "morning_brief_classifier"
   },
   "editorial": {
-    "state_label": "趨勢擴張",
-    "summary": "水位由76.9%回升至77.4%，四區樣本廣度全面偏強，台股10/21早盤指數與臺指期同步上漲；但美股科技與費半未同步，仍需成交與權值續航確認。"
+    "state_label": "高位控速",
+    "summary": "水位由77.4%小升至77.6%，10/22台股早盤一度上漲後於10:40翻黑；產業升溫區16漲13跌1平、漲跌分化，符合高水位下放慢追價的高位控速。"
   },
   "source": {
-    "issue_file": "data/issues/20261021.json",
-    "generated_at": "2026-10-21T09:41:06+08:00"
+    "issue_file": "data/issues/20261022.json",
+    "generated_at": "2026-10-22T10:58:19+08:00"
   }
 }
