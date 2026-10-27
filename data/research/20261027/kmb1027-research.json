@@ -1,0 +1,1033 @@
+{
+  "brief_date": "2026-10-27",
+  "timezone": "Asia/Taipei",
+  "research_started_at": "2026-10-27T09:44:30+08:00",
+  "cutoff_at": "2026-10-27T09:49:28.354079+08:00",
+  "publication_authorized": false,
+  "scope": "Independent source research only; no repo files or Ark JSON modified",
+  "window": {
+    "news_start": "2026-10-26T00:00:00+08:00",
+    "end": "2026-10-27T09:49:28.354079+08:00",
+    "older_data_exception": "Official flow/rate/calendar reference observations kept with explicit as_of; not represented as fresh daily news"
+  },
+  "market_session": {
+    "us_close": "2026-10-26T16:00:00-04:00",
+    "taipei_equivalent": "2026-10-27T04:00:00+08:00"
+  },
+  "source_health": {
+    "Reuters": "canonical global-markets URL blocked; checked authorized syndications",
+    "Farside": "current /btc/ and /eth/ tables valid through Oct23; Oct26 incomplete; all-history URLs stale and rejected",
+    "WGC": "weekly JSON obtained from public endpoint referenced by official page; last weekly observation Oct23; monthly September narrative not used as current weekly evidence",
+    "SOX": "conflicting source versions; precise close not publication-ready",
+    "Coinbase": "TLS certificate failure; no quote obtained; switched to Kraken public API",
+    "Fed": "extractor returned 2027 subsection; direct official HTML confirms 2026 Oct27-28"
+  },
+  "sources": [
+    {
+      "id": "cnbc_close",
+      "url": "https://www.cnbc.com/2026/10/25/stock-market-today-live-updates.html",
+      "title": "Stocks close higher as excitement over Anthropic IPO filing propels tech sector",
+      "evidence_class": "credible media / checked close report",
+      "source_timestamp": "2026-10-26",
+      "timestamp_note": "URL starts Oct25 because liveblog began Sunday; exact update timestamp not exposed in extraction",
+      "checked_body": true
+    },
+    {
+      "id": "treasury",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=202610",
+      "title": "Daily Treasury Par Yield Curve Rates",
+      "evidence_class": "official/original",
+      "source_timestamp": "2026-10-26",
+      "timestamp_note": "observation date, not retrieval date",
+      "checked_body": true
+    },
+    {
+      "id": "fx",
+      "url": "https://www.heraldonline.com/news/nation-world/national/article317776952.html",
+      "title": "Euro slips ahead of central bank meetings, real tumbles",
+      "evidence_class": "Reuters authorized syndication",
+      "source_timestamp": "2026-10-26 16:50",
+      "timestamp_note": "publisher displayed local time; likely EDT but timezone not explicitly exposed; do not claim UTC conversion",
+      "checked_body": true
+    },
+    {
+      "id": "gold_settle",
+      "url": "https://www.eoption.com/market-review-october-26-2026/",
+      "title": "Market Review October 26 2026",
+      "evidence_class": "broker-distributed Hammerstone market recap",
+      "source_timestamp": "2026-10-26",
+      "timestamp_note": "futures settlement, not spot; broker index table inconsistent with CNBC so rejected those index figures",
+      "checked_body": true
+    },
+    {
+      "id": "reuters_recap",
+      "url": "https://ca.finance.yahoo.com/news/trading-day-ai-light-brazil-210327869.html",
+      "title": "Trading Day: AI light, Brazil flight",
+      "evidence_class": "Reuters authorized syndication",
+      "source_timestamp": "2026-10-26",
+      "timestamp_note": "exact timestamp not exposed by body extraction",
+      "checked_body": true
+    },
+    {
+      "id": "meta",
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/default.aspx",
+      "title": "Meta launches offerings and financing plan",
+      "evidence_class": "official/original",
+      "source_timestamp": "2026-10-26",
+      "timestamp_note": "",
+      "checked_body": true
+    },
+    {
+      "id": "apollo",
+      "url": "https://www.apollo.com/insights-news/pressreleases/2026/10/spacex-secures--40-billion-in-the-largest-gpu-financing-ever",
+      "title": "SpaceX Secures $40 Billion in the Largest GPU Financing Ever",
+      "evidence_class": "official/original",
+      "source_timestamp": "2026-10-26",
+      "timestamp_note": "",
+      "checked_body": true
+    },
+    {
+      "id": "fed",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "title": "2026 FOMC calendar",
+      "evidence_class": "official/original",
+      "source_timestamp": "2026 calendar",
+      "timestamp_note": "2026 subsection verified from direct HTML; Oct27-28 meeting",
+      "checked_body": true
+    },
+    {
+      "id": "wgc",
+      "url": "https://fsapi.gold.org/api/v11/charts/etfv2/revised/flows-chart2?break-cache=26Oct26",
+      "title": "Gold ETF flows by region, Weekly",
+      "evidence_class": "official/original",
+      "source_timestamp": "2026-10-23",
+      "timestamp_note": "weekly observation endpoint; system request_time 2026-10-26 12:28:58, timezone unspecified",
+      "checked_body": true
+    },
+    {
+      "id": "kraken",
+      "url": "https://api.kraken.com/0/public/Ticker?pair=XBTUSD,ETHUSD",
+      "title": "Public ticker BTCUSD and ETHUSD",
+      "evidence_class": "official exchange/original",
+      "source_timestamp": "2026-10-27T01:46:53.746497+00:00",
+      "timestamp_note": "API does not attach trade timestamp; retrieval timestamp only; c[0] last traded price",
+      "checked_body": true
+    }
+  ],
+  "prices": [
+    {
+      "asset": "S&P 500",
+      "value": 7676.77,
+      "unit": "index points",
+      "source_id": "cnbc_close",
+      "as_of": "2026-10-26 US close",
+      "observation_kind": "reported final close",
+      "change_pct": 0.7,
+      "notes": ""
+    },
+    {
+      "asset": "Dow Jones",
+      "value": 52361.58,
+      "unit": "index points",
+      "source_id": "cnbc_close",
+      "as_of": "2026-10-26 US close",
+      "observation_kind": "reported final close",
+      "change_pct": 0.28,
+      "notes": ""
+    },
+    {
+      "asset": "Nasdaq Composite",
+      "value": 26169.38,
+      "unit": "index points",
+      "source_id": "cnbc_close",
+      "as_of": "2026-10-26 US close",
+      "observation_kind": "reported final close",
+      "change_pct": 0.82,
+      "notes": ""
+    },
+    {
+      "asset": "UST 2Y",
+      "value": 4.68,
+      "unit": "yield percent",
+      "source_id": "treasury",
+      "as_of": "2026-10-26",
+      "observation_kind": "official daily par yield",
+      "change_pct": null,
+      "notes": "not last-traded bond yield; not fund flows"
+    },
+    {
+      "asset": "UST 10Y",
+      "value": 5.0,
+      "unit": "yield percent",
+      "source_id": "treasury",
+      "as_of": "2026-10-26",
+      "observation_kind": "official daily par yield",
+      "change_pct": null,
+      "notes": "not last-traded bond yield; not fund flows"
+    },
+    {
+      "asset": "UST 30Y",
+      "value": 5.31,
+      "unit": "yield percent",
+      "source_id": "treasury",
+      "as_of": "2026-10-26",
+      "observation_kind": "official daily par yield",
+      "change_pct": null,
+      "notes": "not last-traded bond yield; not fund flows"
+    },
+    {
+      "asset": "DXY",
+      "value": 102.0,
+      "unit": "index",
+      "source_id": "fx",
+      "as_of": "2026-10-26 source-version snapshot",
+      "observation_kind": "Reuters market snapshot",
+      "change_pct": 0.31,
+      "notes": "Not an official exchange close; source versions differ, do not mix with earlier +0.34% snapshot"
+    },
+    {
+      "asset": "USDJPY",
+      "value": 157.46,
+      "unit": "JPY per USD",
+      "source_id": "fx",
+      "as_of": "2026-10-26 source-version snapshot",
+      "observation_kind": "Reuters market snapshot",
+      "change_pct": null,
+      "notes": "yen down 0.43%; not USD return"
+    },
+    {
+      "asset": "EURUSD",
+      "value": 1.1179,
+      "unit": "USD per EUR",
+      "source_id": "fx",
+      "as_of": "2026-10-26 source-version snapshot",
+      "observation_kind": "Reuters market snapshot",
+      "change_pct": -0.21,
+      "notes": ""
+    },
+    {
+      "asset": "Gold December futures",
+      "value": 4038.4,
+      "unit": "USD/troy oz",
+      "source_id": "gold_settle",
+      "as_of": "2026-10-26 settlement",
+      "observation_kind": "COMEX December futures settlement",
+      "change_pct": 0.76,
+      "notes": "+$30.50; not spot gold"
+    },
+    {
+      "asset": "Brent futures",
+      "value": 115.81,
+      "unit": "USD/barrel",
+      "source_id": "gold_settle",
+      "as_of": "2026-10-26 settlement",
+      "observation_kind": "futures settlement",
+      "change_pct": -0.78,
+      "notes": ""
+    },
+    {
+      "asset": "WTI futures",
+      "value": 101.76,
+      "unit": "USD/barrel",
+      "source_id": "gold_settle",
+      "as_of": "2026-10-26 settlement",
+      "observation_kind": "futures settlement",
+      "change_pct": -1.46,
+      "notes": "CNBC says 101.57/-1.7%; Reuters global snippet and Hammerstone agree 101.76; prefer omit exact WTI if unresolved"
+    },
+    {
+      "asset": "BTC",
+      "value": 80174.1,
+      "unit": "USD",
+      "source_id": "kraken",
+      "as_of": "2026-10-27T01:46:53.746497+00:00",
+      "observation_kind": "venue spot last trade / retrieval snapshot",
+      "change_pct": null,
+      "notes": "single venue; not global close or 24h return; current UTC day incomplete"
+    },
+    {
+      "asset": "ETH",
+      "value": 2326.59,
+      "unit": "USD",
+      "source_id": "kraken",
+      "as_of": "2026-10-27T01:46:53.746497+00:00",
+      "observation_kind": "venue spot last trade / retrieval snapshot",
+      "change_pct": null,
+      "notes": "single venue; not global close or 24h return; current UTC day incomplete"
+    }
+  ],
+  "flows": {
+    "crypto": {
+      "BTC": {
+        "source": "https://farside.co.uk/btc/",
+        "evidence_class": "direct flow compiler / actual net subscriptions-redemptions",
+        "as_of_last_complete": "2026-10-23",
+        "rows": [
+          {
+            "date": "08 Oct 2026",
+            "fund_values_usd_m": [
+              -5.5,
+              -197.1,
+              -17.7,
+              -20.3,
+              0.0,
+              4.7,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -8.2,
+              0.0
+            ],
+            "reported_total_usd_m": -244.1,
+            "complete": true,
+            "fund_sum_usd_m": -244.1,
+            "reconciles": true
+          },
+          {
+            "date": "09 Oct 2026",
+            "fund_values_usd_m": [
+              22.4,
+              -3.6,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              2.3,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reported_total_usd_m": 21.1,
+            "complete": true,
+            "fund_sum_usd_m": 21.1,
+            "reconciles": true
+          },
+          {
+            "date": "12 Oct 2026",
+            "fund_values_usd_m": [
+              -65.4,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reported_total_usd_m": -65.4,
+            "complete": true,
+            "fund_sum_usd_m": -65.4,
+            "reconciles": true
+          },
+          {
+            "date": "13 Oct 2026",
+            "fund_values_usd_m": [
+              65.9,
+              103.1,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              6.7,
+              0.0,
+              0.0
+            ],
+            "reported_total_usd_m": 175.7,
+            "complete": true,
+            "fund_sum_usd_m": 175.7,
+            "reconciles": true
+          },
+          {
+            "date": "14 Oct 2026",
+            "fund_values_usd_m": [
+              -110.9,
+              -152.7,
+              2.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reported_total_usd_m": -261.4,
+            "complete": true,
+            "fund_sum_usd_m": -261.4,
+            "reconciles": true
+          },
+          {
+            "date": "15 Oct 2026",
+            "fund_values_usd_m": [
+              16.8,
+              0.0,
+              0.0,
+              0.0,
+              -4.1,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -7.6
+            ],
+            "reported_total_usd_m": 5.1,
+            "complete": true,
+            "fund_sum_usd_m": 5.1,
+            "reconciles": true
+          },
+          {
+            "date": "16 Oct 2026",
+            "fund_values_usd_m": [
+              -71.8,
+              -10.6,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reported_total_usd_m": -82.4,
+            "complete": true,
+            "fund_sum_usd_m": -82.4,
+            "reconciles": true
+          },
+          {
+            "date": "19 Oct 2026",
+            "fund_values_usd_m": [
+              665.2,
+              -83.6,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -54.9,
+              0.0
+            ],
+            "reported_total_usd_m": 526.7,
+            "complete": true,
+            "fund_sum_usd_m": 526.7,
+            "reconciles": true
+          },
+          {
+            "date": "20 Oct 2026",
+            "fund_values_usd_m": [
+              29.9,
+              3.6,
+              -10.3,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reported_total_usd_m": 23.2,
+            "complete": true,
+            "fund_sum_usd_m": 23.2,
+            "reconciles": true
+          },
+          {
+            "date": "21 Oct 2026",
+            "fund_values_usd_m": [
+              235.0,
+              212.7,
+              19.2,
+              9.8,
+              0.0,
+              7.3,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              32.6,
+              8.2
+            ],
+            "reported_total_usd_m": 524.8,
+            "complete": true,
+            "fund_sum_usd_m": 524.8,
+            "reconciles": true
+          },
+          {
+            "date": "22 Oct 2026",
+            "fund_values_usd_m": [
+              -254.1,
+              -217.5,
+              -27.4,
+              -109.4,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              2.3,
+              -29.5,
+              0.0
+            ],
+            "reported_total_usd_m": -635.6,
+            "complete": true,
+            "fund_sum_usd_m": -635.6,
+            "reconciles": true
+          },
+          {
+            "date": "23 Oct 2026",
+            "fund_values_usd_m": [
+              -110.3,
+              -31.8,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              4.2,
+              0.0,
+              0.0
+            ],
+            "reported_total_usd_m": -137.9,
+            "complete": true,
+            "fund_sum_usd_m": -137.9,
+            "reconciles": true
+          },
+          {
+            "date": "26 Oct 2026",
+            "fund_values_usd_m": [
+              null,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              null,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reported_total_usd_m": 0.0,
+            "complete": false,
+            "fund_sum_usd_m": 0.0,
+            "reconciles": true
+          }
+        ],
+        "one_day_usd_m": -137.9,
+        "three_day_usd_m": -248.7,
+        "five_day_usd_m": 301.2,
+        "three_day_positive_days": 1,
+        "five_day_positive_days": 3,
+        "oct26_status": "INCOMPLETE: dash means not reported, not zero; do not use displayed total as final",
+        "all_complete_rows_reconcile": true
+      },
+      "ETH": {
+        "source": "https://farside.co.uk/eth/",
+        "evidence_class": "direct flow compiler / actual net subscriptions-redemptions",
+        "as_of_last_complete": "2026-10-23",
+        "rows": [
+          {
+            "date": "08 Oct 2026",
+            "fund_values_usd_m": [
+              -71.1,
+              0.0,
+              5.5,
+              0.0,
+              -1.2,
+              -0.9,
+              0.0,
+              0.0,
+              1.3,
+              -6.1,
+              0.0
+            ],
+            "reported_total_usd_m": -72.5,
+            "complete": true,
+            "fund_sum_usd_m": -72.5,
+            "reconciles": true
+          },
+          {
+            "date": "09 Oct 2026",
+            "fund_values_usd_m": [
+              -56.1,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reported_total_usd_m": -56.1,
+            "complete": true,
+            "fund_sum_usd_m": -56.1,
+            "reconciles": true
+          },
+          {
+            "date": "12 Oct 2026",
+            "fund_values_usd_m": [
+              -75.1,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -10.3
+            ],
+            "reported_total_usd_m": -85.4,
+            "complete": true,
+            "fund_sum_usd_m": -85.4,
+            "reconciles": true
+          },
+          {
+            "date": "13 Oct 2026",
+            "fund_values_usd_m": [
+              0.0,
+              0.0,
+              8.1,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              16.7
+            ],
+            "reported_total_usd_m": 24.8,
+            "complete": true,
+            "fund_sum_usd_m": 24.8,
+            "reconciles": true
+          },
+          {
+            "date": "14 Oct 2026",
+            "fund_values_usd_m": [
+              -109.8,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -0.9,
+              0.0,
+              0.0,
+              -18.8
+            ],
+            "reported_total_usd_m": -129.5,
+            "complete": true,
+            "fund_sum_usd_m": -129.5,
+            "reconciles": true
+          },
+          {
+            "date": "15 Oct 2026",
+            "fund_values_usd_m": [
+              -44.4,
+              0.0,
+              2.4,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -18.3,
+              0.0
+            ],
+            "reported_total_usd_m": -60.3,
+            "complete": true,
+            "fund_sum_usd_m": -60.3,
+            "reconciles": true
+          },
+          {
+            "date": "16 Oct 2026",
+            "fund_values_usd_m": [
+              -69.7,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reported_total_usd_m": -69.7,
+            "complete": true,
+            "fund_sum_usd_m": -69.7,
+            "reconciles": true
+          },
+          {
+            "date": "19 Oct 2026",
+            "fund_values_usd_m": [
+              -95.4,
+              0.0,
+              -6.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.9,
+              0.0
+            ],
+            "reported_total_usd_m": -103.3,
+            "complete": true,
+            "fund_sum_usd_m": -103.3,
+            "reconciles": true
+          },
+          {
+            "date": "20 Oct 2026",
+            "fund_values_usd_m": [
+              -33.0,
+              0.0,
+              3.6,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              3.3
+            ],
+            "reported_total_usd_m": -26.1,
+            "complete": true,
+            "fund_sum_usd_m": -26.1,
+            "reconciles": true
+          },
+          {
+            "date": "21 Oct 2026",
+            "fund_values_usd_m": [
+              -29.3,
+              0.0,
+              13.0,
+              0.9,
+              0.0,
+              0.0,
+              0.0,
+              0.9,
+              1.3,
+              0.0,
+              28.1
+            ],
+            "reported_total_usd_m": 14.9,
+            "complete": true,
+            "fund_sum_usd_m": 14.9,
+            "reconciles": true
+          },
+          {
+            "date": "22 Oct 2026",
+            "fund_values_usd_m": [
+              -75.5,
+              -17.2,
+              2.4,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -9.6,
+              -10.7
+            ],
+            "reported_total_usd_m": -110.6,
+            "complete": true,
+            "fund_sum_usd_m": -110.6,
+            "reconciles": true
+          },
+          {
+            "date": "23 Oct 2026",
+            "fund_values_usd_m": [
+              0.0,
+              0.0,
+              3.6,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.8,
+              0.0,
+              0.0
+            ],
+            "reported_total_usd_m": 4.4,
+            "complete": true,
+            "fund_sum_usd_m": 4.4,
+            "reconciles": true
+          },
+          {
+            "date": "26 Oct 2026",
+            "fund_values_usd_m": [
+              null,
+              null,
+              16.1,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reported_total_usd_m": 16.1,
+            "complete": false,
+            "fund_sum_usd_m": 16.1,
+            "reconciles": true
+          }
+        ],
+        "one_day_usd_m": 4.4,
+        "three_day_usd_m": -91.3,
+        "five_day_usd_m": -220.7,
+        "three_day_positive_days": 2,
+        "five_day_positive_days": 2,
+        "oct26_status": "INCOMPLETE: dash means not reported, not zero; do not use displayed total as final",
+        "all_complete_rows_reconcile": true
+      }
+    },
+    "gold": {
+      "as_of": "2026-10-23",
+      "frequency": "weekly",
+      "source": "https://fsapi.gold.org/api/v11/charts/etfv2/revised/flows-chart2?break-cache=26Oct26",
+      "retrieved_at": "2026-10-27T01:46:54.186396+00:00",
+      "values": {
+        "usd": {
+          "regions": {
+            "North America": -1691401004.2,
+            "Europe": 455213045.76,
+            "Asia": 21351291.75,
+            "Other": 7484900
+          },
+          "total": -1207351766.69
+        },
+        "tonnes": {
+          "regions": {
+            "North America": -13.09578019,
+            "Europe": 4.33378151,
+            "Asia": 0.21735631,
+            "Other": 0.44601201
+          },
+          "total": -8.09863036
+        }
+      },
+      "usd_tonnes_sign_agree": true,
+      "interpretation": "Latest week net outflow; gold price rebound does not establish fund inflows"
+    },
+    "USD_cash": {
+      "value": null,
+      "status": "unavailable",
+      "reason": "No checked same-window money-market-fund/actual cash-flow dataset; DXY price is not capital flow"
+    },
+    "treasury_duration": {
+      "value": null,
+      "status": "unavailable",
+      "reason": "Official yields verified, not net fund subscriptions; no checked duration ETF flow"
+    },
+    "equity_risk": {
+      "value": null,
+      "status": "unavailable",
+      "reason": "Index gains verified but no market-wide ETF/mutual-fund subscription series checked"
+    }
+  },
+  "news": [
+    {
+      "id": "ai_rebound",
+      "title": "美股由AI與晶片帶頭反彈，但融資需求同步放大",
+      "date": "2026-10-26",
+      "source_ids": [
+        "cnbc_close"
+      ],
+      "verified_facts": [
+        "S&P500 +0.70%, Nasdaq +0.82%, Dow +0.28%",
+        "CNBC: Nvidia +2.4%, Micron +3%, Broadcom +2.3%, AMD +2.8%; SOXX nearly +3%"
+      ],
+      "taiwan_mapping_inference": "晶圓代工、先進封裝、AI伺服器、散熱與高速網通短線情緒改善；不代表台股已完成轉強。",
+      "uncertainty": "One-session rebound; exact SOX close unresolved; do not write definitive trend reversal or foreign buying"
+    },
+    {
+      "id": "anthropic",
+      "title": "Anthropic公開IPO申請，AI成長與資金成本同時受檢驗",
+      "date": "2026-10-26",
+      "source_ids": [
+        "cnbc_close",
+        "reuters_recap"
+      ],
+      "verified_facts": [
+        "CNBC/Reuters report public IPO filing and intended Nasdaq ticker ANT",
+        "CNBC reports first-half revenue USD16.29bn"
+      ],
+      "taiwan_mapping_inference": "AI算力供應鏈情緒正面，但上市募資不等於已取得供應鏈訂單。",
+      "uncertainty": "S-1 original not recovered; all company financials must remain attributed to CNBC or omit; valuation and completed listing not verified"
+    },
+    {
+      "id": "meta_raise",
+      "title": "Meta啟動約350億美元承銷發行，另規畫600億美元ATM",
+      "date": "2026-10-26",
+      "source_ids": [
+        "meta"
+      ],
+      "verified_facts": [
+        "Official release: approximately USD35bn offerings = USD22.5bn Class A plus USD12.5bn depositary preferred shares",
+        "Planned future approximately USD60bn ATM after Class C trading commences",
+        "Meta expects no initial proceeds from Class A forward sale"
+      ],
+      "taiwan_mapping_inference": "AI基建中期需求支撐與資本稀釋／融資壓力並存；對伺服器、電力、散熱需求是條件式正面。",
+      "uncertainty": "Do not say USD95bn cash already raised or orders recognized; press-release extraction ends midway through ATM section"
+    },
+    {
+      "id": "spacex_lease",
+      "title": "SpaceX與Apollo達成約400億美元GPU融資租賃承諾",
+      "date": "2026-10-26",
+      "source_ids": [
+        "apollo"
+      ],
+      "verified_facts": [
+        "Binding commitment for approximately USD40bn master finance lease for GPUs and related equipment",
+        "Supports next-generation Nvidia Vera Rubin chips",
+        "Closing subject to conditions, expected before end-2026; lease schedules on delivery in first half 2027"
+      ],
+      "taiwan_mapping_inference": "對AI運算／伺服器／先進封裝中期需求是支持線索；不直接點名台廠訂單或營收。",
+      "uncertainty": "Some secondary headlines say closed; official release says commitment and conditional future close. Use official version."
+    },
+    {
+      "id": "brazil",
+      "title": "巴西選後股匯重挫，風險並非全面退場",
+      "date": "2026-10-26",
+      "source_ids": [
+        "reuters_recap",
+        "fx"
+      ],
+      "verified_facts": [
+        "Reuters recap: Brazil stocks about -14%, real about -8.5% following Lula election win",
+        "Reuters says opposition refuses concession"
+      ],
+      "taiwan_mapping_inference": "台股直接產業映射有限；留意新興市場風險偏好、美元與商品曝險。",
+      "uncertainty": "Rounded session recap figures; not independently exchange/election-commission checked; attribute to Reuters, avoid extending into contagion certainty"
+    },
+    {
+      "id": "energy",
+      "title": "油價回落但仍高，通膨與利率壓力尚未解除",
+      "date": "2026-10-26",
+      "source_ids": [
+        "gold_settle",
+        "reuters_recap"
+      ],
+      "verified_facts": [
+        "Brent settled USD115.81, -0.78%",
+        "Reuters reports ongoing attacks on Saudi energy infrastructure; exact original claim not independently confirmed"
+      ],
+      "taiwan_mapping_inference": "能源進口成本與航運保險是台股風險；油價一日回跌不等於供應衝擊解除。",
+      "uncertainty": "Use attack description as Reuters-attributed; avoid asserting independent confirmation"
+    }
+  ],
+  "editorial": {
+    "suggested_lead": "AI帶頭修復美股，融資與高利率考驗未退",
+    "suggested_subhead": "晶片反彈改善短線情緒，但不等於資金全面回流；聯準會與科技財報仍是本週驗證關卡。",
+    "capital_flow_reader": {
+      "money_where": "價格面是美股科技與黃金反彈，美元偏強；可核流量則顯示上週黃金ETF淨流出，BTC近三日轉負、ETH近五日仍流出。",
+      "meaning": "較像局部修復，不足以確認全球大資金重新追逐風險。10/26加密ETF尚未完整申報。",
+      "taiwan_use": "AI供應鏈先看價格承接與量能，不把海外反彈或募資承諾當成台股買盤與已認列訂單。",
+      "next_only": [
+        "本週FOMC與巨型科技財報",
+        "美債10年期5%附近壓力是否緩和",
+        "BTC/ETH ETF補齊10/26申報後是否延續",
+        "台股AI族群能否守住反彈並擴散"
+      ]
+    },
+    "flow_verdict": "mixed / unconfirmed risk rotation; no global-flow causality established",
+    "do_not_write": [
+      "資金大舉流入黃金／比特幣（沒有同頻流量支持）",
+      "Meta已募得950億美元",
+      "SpaceX400億美元交易已完成",
+      "半導體已反轉多頭",
+      "將Farside未申報的破折號當成零",
+      "用SOXX報酬代替SOX指數報酬"
+    ],
+    "ranked_risks": [
+      "AI建置融資成本與稀釋",
+      "油價仍高與長端殖利率壓力",
+      "巴西選後市場震盪",
+      "日內反彈誤當趨勢或淨流入"
+    ],
+    "direct_x_boundary": "No same-day direct Trump/Musk original status verified; do not label media-attributed remarks as directly checked X signal."
+  },
+  "unavailable_fields": [
+    {
+      "field": "SOX_exact_oct26_close",
+      "status": "conflicting",
+      "details": "Nasdaq indexed snippet 11133.25/+3.28%; direct official HTML 11083.47/net301.99/0.00% internally inconsistent; Yahoo variants conflict. Omit exact close pending reconciliation; CNBC SOXX nearly+3% supports semiconductor rebound only."
+    },
+    {
+      "field": "Gold_spot_current",
+      "status": "unavailable",
+      "details": "Use dated December futures settlement instead; spot values available only snippets not checked current body"
+    },
+    {
+      "field": "Crypto_24h_return_completed_daily_ohlcv_ETHBTC_dominance",
+      "status": "unavailable",
+      "details": "Kraken spot quote obtained; completed daily volume breakout, relative strength and broad venue derivatives not checked. No Flow Confirmed label."
+    },
+    {
+      "field": "Oct26_BTC_ETH_ETF_final",
+      "status": "incomplete",
+      "details": "BTC missing IBIT/BTCW; ETH missing ETHA/ETHB; reported subtotals 0.0/16.1 not final."
+    },
+    {
+      "field": "primary_exchange_SPX_DJI_Nasdaq_close",
+      "status": "unavailable",
+      "details": "Close figures body checked at CNBC; not independently official exchange verified."
+    },
+    {
+      "field": "exact_UTC_news_timestamps",
+      "status": "partial",
+      "details": "Some sources date-only or publisher local time without explicit zone; do not invent conversions."
+    }
+  ],
+  "raw_evidence_files": [
+    "/Users/kaide/.hermes/cache/scratch/kmb1027-source-responses.json",
+    "/Users/kaide/.hermes/cache/scratch/kmb1027-direct.json",
+    "/Users/kaide/.hermes/cache/web/www.cnbc.com-23d4550224.md",
+    "/Users/kaide/.hermes/cache/web/www.eoption.com-e94045ad3b.md"
+  ],
+  "validation": {
+    "json_valid": true,
+    "all_complete_farside_rows_sum_checked": true,
+    "no_publication_performed": true,
+    "no_repo_modified": true
+  }
+}

@@ -1,25 +1,28 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-10-22",
-  "valid_for_trading_date": "2026-10-22",
-  "data_as_of": "2026-10-22",
+  "date": "2026-10-27",
+  "valid_for_trading_date": "2026-10-27",
+  "data_as_of": "2026-10-27",
   "stale": false,
-  "issue_no": 110,
+  "issue_no": 111,
   "scenario": {
     "id": "03",
     "slug": "high-level-speed-control",
     "label": "高位控速",
     "confidence": 1.0,
-    "reason": "水位由77.4%小升至77.6%，10/22台股早盤一度上漲後於10:40翻黑；產業升溫區16漲13跌1平、漲跌分化，符合高水位下放慢追價的高位控速。",
+    "reason": "水位79.7%較10/22上升2.1個百分點，但前一交易日大跌846.34點與外資大額賣超尚待消化，早盤回升未證明趨勢反轉；採03高位控速，非把高水位當高風險。",
     "source": "manual_override",
-    "classifier_suggestion": "03"
+    "classifier_suggestion": "01"
   },
   "water": {
-    "level": 77.6,
-    "previous": 77.4,
-    "change": 0.2,
-    "direction": "rising"
+    "level": 79.7,
+    "previous": 77.6,
+    "change": 2.1,
+    "direction": "rising",
+    "comparison_date": "2026-10-22",
+    "previous_trading_date": "2026-10-22",
+    "comparison_is_provisional": false
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
@@ -27,8 +30,8 @@
     "risk_posture": "balanced_cautious",
     "water_policy": {
       "direction": "rising",
-      "change": 0.2,
-      "interpretation": "水位上升，允許依個股訊號小額佈局；仍禁止追價。"
+      "change": 2.1,
+      "interpretation": "方舟水位79.7%，較前一交易日10/22的77.6%上升2.1個百分點，配置環境改善；上升不是立即追價指令。"
     },
     "scenario_context": {
       "id": "03",
@@ -36,10 +39,10 @@
       "confidence": 1.0
     },
     "policy_focus": [
-      "保留核心曝險，新增部位降速；只做回測守住且量價重新轉強的標的。",
-      "高水位遇盤中翻黑與升溫區漲跌分化，若權值無法收復平盤，追價容易被反向波動修理。",
-      "ETF價值區9漲1跌，但產業升溫區16漲13跌1平；台股10:40回到平盤下。",
-      "美國財政部10/21：2年期4.81%、10年期5.13%、30年期5.42%；較10/20分別+2、+1、0個基點。"
+      "保留核心與現金，候選以價值區為主；新增部位分批、等回測承接，不追第一段。",
+      "前一日現貨大額賣超、期貨淨空與本週聯準會事件仍在；跌回前收則降低新增速度。",
+      "台股早盤上漲但離開日高；方舟產業價值區19漲6跌5平、升溫區17漲11跌2平。",
+      "10/26美國公債2年期4.68%、10年期5.00%、30年期5.31%；較10/23分別下降1、持平、下降2個基點。"
     ],
     "systemic_risk": "中",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
@@ -92,10 +95,10 @@
   },
   "editorial": {
     "state_label": "高位控速",
-    "summary": "水位由77.4%小升至77.6%，10/22台股早盤一度上漲後於10:40翻黑；產業升溫區16漲13跌1平、漲跌分化，符合高水位下放慢追價的高位控速。"
+    "summary": "水位79.7%較10/22上升2.1個百分點，但前一交易日大跌846.34點與外資大額賣超尚待消化，早盤回升未證明趨勢反轉；採03高位控速，非把高水位當高風險。"
   },
   "source": {
-    "issue_file": "data/issues/20261022.json",
-    "generated_at": "2026-10-22T10:58:19+08:00"
+    "issue_file": "data/issues/20261027.json",
+    "generated_at": "2026-10-27T09:53:48+08:00"
   }
 }
