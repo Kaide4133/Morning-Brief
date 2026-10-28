@@ -1,0 +1,21 @@
+{
+  "brief": "Kelvin Morning Brief 2026-10-28",
+  "cutoff_taipei": "2026-10-28T09:24:16+08:00",
+  "cutoff_utc": "2026-10-28T01:24:16Z",
+  "window": "Overnight US session through cutoff; earlier official event material included explicitly as background",
+  "news": [
+    {"title":"美股科技與AI晶片領漲，油價下跌", "source":"CNBC", "source_updated":"2026-10-27T16:22:00-04:00", "url":"https://www.cnbc.com/amp/2026/10/26/stock-market-today-live-updates.html", "facts":"10/27 美股收盤 Nasdaq +1.18%，S&P 500 +0.60%，Dow +0.03%；Broadcom +4%、AMD +5%、Micron 近+3%。WTI期貨結算99.90美元、跌1.83%；Brent 113.88美元、跌1.67%。", "taiwan_mapping_inference":"短線有利晶圓代工、先進封裝、AI伺服器與高速網通情緒，非個別公司訂單證明。", "uncertainty":"Fed與大型雲端業者財報尚待市場消化；美股漲幅不保證台股走勢。"},
+    {"title":"Broadcom／Anthropic算力融資結構", "source":"Broadcom investor relations", "source_published":"2026-10-26，時間未載", "url":"https://investors.broadcom.com/news-releases/news-release-details/bank-america-blackstone-citi-and-morgan-stanley-announce", "facts":"630億美元交易透過SPV以已承諾融資購買Broadcom XPU及網路方案後租賃予Anthropic；預期2027年起交付；Broadcom提供相當於第一順位融資部分的殘值支持。", "taiwan_mapping_inference":"中期關注客製晶片代工封裝、網通及供電供應鏈，實際受惠須看公司公告。", "uncertainty":"此為10/26背景而非10/27新公告；融資交易不等於已認列營收，也非已交貨。"}
+  ],
+  "cross_asset": [
+    {"instrument":"美元指數 DXY", "value":102.29, "change_pct":0.27, "source":"Reuters via Fidelity", "source_version":"2026-10-27 15:46 EDT", "url":"https://www.fidelity.com/news/article/international/202610271546RTRSNEWSCOMBINED_L6N46D1GK_1", "note":"新聞所載盤中快照，非同步收盤價。美元兌日圓157.90。"},
+    {"instrument":"黃金現貨 XAU/USD", "value":3995.89, "unit":"USD/oz", "change_pct":-0.5, "observation_utc":"2026-10-27T09:29:00Z", "source":"Reuters via Fidelity", "source_version":"2026-10-27 05:48 EDT", "url":"https://www.fidelity.com/news/article/international/202610270548RTRSNEWSCOMBINED_L2N46D08N_1", "note":"早盤舊快照，不能當收盤或截止時價格。另有較晚報導指反彈但本包未核對報導正文，不將其視為已驗證現貨數值。"},
+    {"instrument":"US Treasury 10Y", "status":"unverified_latest", "note":"Reuters global market搜尋結果顯示10年期4.999%，但晚版正文未能開啟，時間及價格未完整核驗；不作已核實最新報價。", "discovery_url":"https://www.fidelity.com/news/article/international/202610271803RTRSNEWSCOMBINED_L6N46D1H1_1"},
+    {"instrument":"BTC/USD and ETH/USD", "status":"verified_older_snapshot", "source":"FutureAITechX / CoinLore", "url":"https://futureaitechx.com/crypto/daily-market-update-october-27-2026", "observation_utc":"2026-10-27T01:07:00Z", "btc_usd":80229.32, "btc_24h_pct":0.04, "eth_usd":2326.09, "eth_24h_pct":-0.14, "note":"兩者為同一來源、同一窗口的舊價；非10/28早晨即時價。BTC該窗口略強；來源所報24小時漲跌並非本研究由前值獨立驗算。"},
+    {"instrument":"ETH/BTC", "value":0.02908534, "unit":"BTC per ETH", "source":"CoinGecko", "url":"https://www.coingecko.com/en/coins/ethereum/btc", "source_time":"未提供精確報價時間", "source_reported_24h_pct":1.0, "source_reported_7d_pct":-4.2, "note":"動態頁快照時間不確定，不能與其他非同步報價視為同時；顯示短期反彈但近7日相對BTC較弱。其他CoinGecko截取版本存在快取不一致，謹慎使用。"}
+  ],
+  "etf_flows": {"source":"Pluang, secondary source", "url":"https://pluang.com/en/news-feed/bitcoin-etf-menarik-110-juta-dolar-saat-etf-ether-mengalami-penurunan-88-juta", "trade_date":"2026-10-26", "btc_net_usd_millions":110.3, "eth_net_usd_millions":-88.58, "source_snapshot":"2026-10-27 11:21 WIB or earlier", "note":"二手報導實際申贖淨流量而非價格或成交量；Farside 10/26最新逐基金行未成功取得核對，數字暫列次級來源。10/27流量不可得，不能假設為零或以前日冒充。"},
+  "fed": {"source":"Federal Reserve official calendars", "urls":["https://www.federalreserve.gov/newsevents/2026-october.htm","https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"], "meeting_us_dates":"2026-10-27/28", "decision_taipei":"2026-10-29T02:00:00+08:00", "press_conference_taipei":"2026-10-29T02:30:00+08:00", "next_meeting_us_dates":"2026-12-08/09", "note":"官網10月行事曆：10/28美東14:00會議決議、14:30記者會；截稿時尚未公布，預期不是決議。10月會議無經濟預測星號，12月會議有。"},
+  "principal_verification": {"trump":"未於截稿範圍內核實可引用的新直接發言；不以舊聞充當新訊。", "musk":"未於截稿範圍內核實可引用的新直接發言或X原帖；不推論不存在。", "caution":"Reuters索引的morally binding AI document對應2026-09-29舊聞，不能視為10/27新事件。"},
+  "limitations": ["Reuters晚版全球市場稿正文與Farside完整最新日表讀取受阻；不能將搜索摘要視為已核正文。", "價格、新聞版本各有時間，非共時；報價並非保證即時。", "只產生本機scratch證據檔，未發佈、未更改repo。"]
+}

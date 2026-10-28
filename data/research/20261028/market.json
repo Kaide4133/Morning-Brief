@@ -1,0 +1,587 @@
+{
+  "brief_cutoff": "2026-10-28T09:25:00+08:00",
+  "compiled_at": "2026-10-28T09:25:15.761144+08:00",
+  "trade_day": {
+    "date": "2026-10-28",
+    "is_trading_day": true,
+    "basis": "Official 2026 calendar lists October 26 holiday but not October 28; official intraday index dated October 28 confirms live trading.",
+    "url": "https://www.twse.com.tw/holidaySchedule/holidaySchedule?response=json"
+  },
+  "taiex": {
+    "url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+    "quote_timestamp_taipei": "20261028T09:24:00+08:00",
+    "value": 46850.51,
+    "previous_close": 46096.23,
+    "change_points": 754.28,
+    "change_pct": 1.6363,
+    "high": "46949.98",
+    "low": "46402.79",
+    "open": "46402.79",
+    "raw": {
+      "msgArray": [
+        {
+          "@": "t00.tw",
+          "pid": "2.tse.tw|289",
+          "key": "tse_t00.tw_20261028",
+          "^": "20261028",
+          "c": "t00",
+          "#": "2.tse.tw|289",
+          "d": "20261028",
+          "%": "09:24:00",
+          "ch": "t00.tw",
+          "tlong": "1793150640000",
+          "h": "46949.98",
+          "i": "tidx.tw",
+          "it": "t",
+          "l": "46402.79",
+          "m": "2483026",
+          "n": "發行量加權股價指數",
+          "o": "46402.79",
+          "r": "575829",
+          "ex": "tse",
+          "t": "09:24:00",
+          "y": "46096.23",
+          "z": "46850.51"
+        }
+      ],
+      "referer": "",
+      "userDelay": 5000,
+      "rtcode": "0000",
+      "queryTime": {
+        "sysDate": "20261028",
+        "stockInfoItem": 18,
+        "stockInfo": 18230,
+        "sessionStr": "UserSession",
+        "sysTime": "09:24:02",
+        "showChart": false,
+        "sessionFromTime": -1,
+        "sessionLatestTime": -1
+      },
+      "rtmessage": "OK",
+      "exKey": "if_tse_t00.tw_zh-tw.null",
+      "cachedAlive": 59480
+    },
+    "note": "Latest obtained snapshot at cutoff; exchange server cache returned 09:24 quote."
+  },
+  "twse_institutional_flows": {
+    "url": "https://www.twse.com.tw/rwd/zh/fund/BFI82U?date=20261027&response=json",
+    "date": "2026-10-27",
+    "raw": {
+      "stat": "OK",
+      "date": "20261027",
+      "title": "115年10月27日 三大法人買賣金額統計表",
+      "fields": [
+        "單位名稱",
+        "買進金額",
+        "賣出金額",
+        "買賣差額"
+      ],
+      "data": [
+        [
+          "自營商(自行買賣)",
+          "9,007,716,092",
+          "8,239,495,006",
+          "768,221,086"
+        ],
+        [
+          "自營商(避險)",
+          "35,473,740,121",
+          "48,640,735,317",
+          "-13,166,995,196"
+        ],
+        [
+          "投信",
+          "38,392,407,004",
+          "14,787,900,746",
+          "23,604,506,258"
+        ],
+        [
+          "外資及陸資(不含外資自營商)",
+          "514,123,007,104",
+          "522,161,880,243",
+          "-8,038,873,139"
+        ],
+        [
+          "外資自營商",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "合計",
+          "596,996,870,321",
+          "593,830,011,312",
+          "3,166,859,009"
+        ]
+      ],
+      "params": {
+        "date": "20261027",
+        "response": "json",
+        "controller": "fund",
+        "action": "BFI82U",
+        "lang": "zh",
+        "type": "day",
+        "monthDate": null,
+        "weekDate": null,
+        "dayDate": "20261027"
+      },
+      "notes": [
+        "自營商表示證券自營商專戶。",
+        "投信表示本國投資信託基金。",
+        "外資及陸資表示依「華僑及外國人投資證券管理辦法」及「大陸地區投資人來臺從事證券投資及期貨交易管理辦法」辦理登記等投資人。",
+        "因外資自營商買賣金額已計入自營商買賣金額，故不納入三大法人買賣金額之合計數計算。",
+        "本統計資訊含一般、零股、盤後定價、鉅額，不含拍賣、標購。",
+        "本資訊以當日原始成交情形統計，不以證券商申報錯帳、更正帳號等調整後資料統計。",
+        "外幣成交值係以本公司當日下午3時30分公告匯率換算後加入成交金額。<br>公告匯率請參考本公司首頁>產品與服務>交易系統>雙幣ETF專區>代號對應及每日公告匯率。"
+      ],
+      "hints": "單位：元"
+    },
+    "scope": "Includes block, odd lot, after-hours fixed price and foreign currency converted; excludes auctions/tenders. Not comparable to early regular-market-only press reports."
+  },
+  "taifex_foreign": {
+    "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+    "date": "2026-10-27",
+    "records": [
+      {
+        "Date": "20261027",
+        "ContractCode": "臺股期貨",
+        "Item": "外資及陸資",
+        "TradingVolume(Long)": "59401",
+        "TradingValue(Long)(Thousands)": "549799197",
+        "TradingVolume(Short)": "58180",
+        "TradingValue(Short)(Thousands)": "538461878",
+        "TradingVolume(Net)": "1221",
+        "TradingValue(Net)(Thousands)": "11337319",
+        "OpenInterest(Long)": "9755",
+        "ContractValueofOpenInterest(Long)(Thousands)": "89954904",
+        "OpenInterest(Short)": "95798",
+        "ContractValueofOpenInterest(Short)(Thousands)": "883449991",
+        "OpenInterest(Net)": "-86043",
+        "ContractValueofOpenInterest(Net)(Thousands)": "-793495087"
+      }
+    ],
+    "scope": "TX all contract months, open interest net long minus short"
+  },
+  "taifex_near": {
+    "url": "https://openapi.taifex.com.tw/v1/DailyMarketReportFut",
+    "date": "2026-10-27",
+    "record": [
+      {
+        "Date": "20261027",
+        "Contract": "TX",
+        "ContractMonth(Week)": "202611",
+        "Open": "46505",
+        "High": "46846",
+        "Low": "46050",
+        "Last": "46081",
+        "Change": "-153",
+        "%": "-0.33%",
+        "Volume": "61110",
+        "SettlementPrice": "46106",
+        "OpenInterest": "116866",
+        "BestBid": "46081",
+        "BestAsk": "46082",
+        "HistoricalHigh": "50440",
+        "HistoricalLow": "44435",
+        "TradingHalt": "",
+        "TradingSession": "一般",
+        "Volume(ExecutionsAmongSpreadOrderAndSingleOrderOnly)": ""
+      }
+    ],
+    "overnight": {
+      "last": 46880,
+      "change_from_settlement": 774,
+      "quote_timestamp_taipei": "2026-10-28T04:59:58+08:00",
+      "published_taipei": "2026-10-28T07:51:00+08:00",
+      "source_url": "https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=e8e67fd0-f9ac-44e4-b3e3-0e667e1fc39d",
+      "scope": "11月近月夜盤 final trade, not 09:25 intraday"
+    },
+    "current_intraday": "unavailable: no timestamped near-month 09:25 quote verified"
+  },
+  "us": {
+    "^GSPC": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=5d&interval=1d",
+      "market_time": "2026-10-27T16:48:15-04:00",
+      "market_price": 7722.6,
+      "rows": [
+        [
+          "2026-10-21T09:30:00-04:00",
+          7757.169921875
+        ],
+        [
+          "2026-10-22T09:30:00-04:00",
+          7663.43017578125
+        ],
+        [
+          "2026-10-23T09:30:00-04:00",
+          7623.68017578125
+        ],
+        [
+          "2026-10-26T09:30:00-04:00",
+          7676.77001953125
+        ],
+        [
+          "2026-10-27T09:30:00-04:00",
+          7722.60009765625
+        ]
+      ],
+      "close_20261027": 7722.6,
+      "previous_close_20261026": 7676.77001953125,
+      "change_pct_20261027": 0.597,
+      "note": "Daily candle timestamp indicates session open, not close; market_time is vendor metadata time, may occur after close. If 10/27 candle missing, regularMarketPrice provides dated close."
+    },
+    "^DJI": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?range=5d&interval=1d",
+      "market_time": "2026-10-27T16:48:23-04:00",
+      "market_price": 52377.57,
+      "rows": [
+        [
+          "2026-10-21T09:30:00-04:00",
+          52856.08984375
+        ],
+        [
+          "2026-10-22T09:30:00-04:00",
+          52867.98046875
+        ],
+        [
+          "2026-10-23T09:30:00-04:00",
+          52215.16015625
+        ],
+        [
+          "2026-10-26T09:30:00-04:00",
+          52361.578125
+        ],
+        [
+          "2026-10-27T09:30:00-04:00",
+          52377.5703125
+        ]
+      ],
+      "close_20261027": 52377.57,
+      "previous_close_20261026": 52361.578125,
+      "change_pct_20261027": 0.0305,
+      "note": "Daily candle timestamp indicates session open, not close; market_time is vendor metadata time, may occur after close. If 10/27 candle missing, regularMarketPrice provides dated close."
+    },
+    "^IXIC": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=5d&interval=1d",
+      "market_time": "2026-10-27T17:15:59-04:00",
+      "market_price": 26477.81,
+      "rows": [
+        [
+          "2026-10-21T09:30:00-04:00",
+          26702.859375
+        ],
+        [
+          "2026-10-22T09:30:00-04:00",
+          26008.859375
+        ],
+        [
+          "2026-10-23T09:30:00-04:00",
+          25955.33984375
+        ],
+        [
+          "2026-10-26T09:30:00-04:00",
+          26169.380859375
+        ],
+        [
+          "2026-10-27T09:30:00-04:00",
+          26477.810546875
+        ]
+      ],
+      "close_20261027": 26477.81,
+      "previous_close_20261026": 26169.380859375,
+      "change_pct_20261027": 1.1786,
+      "note": "Daily candle timestamp indicates session open, not close; market_time is vendor metadata time, may occur after close. If 10/27 candle missing, regularMarketPrice provides dated close."
+    },
+    "^NDX": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ENDX?range=5d&interval=1d",
+      "market_time": "2026-10-27T17:15:59-04:00",
+      "market_price": 29651.441,
+      "rows": [
+        [
+          "2026-10-21T09:30:00-04:00",
+          29822.51953125
+        ],
+        [
+          "2026-10-22T09:30:00-04:00",
+          28958.689453125
+        ],
+        [
+          "2026-10-23T09:30:00-04:00",
+          28957.529296875
+        ],
+        [
+          "2026-10-26T09:30:00-04:00",
+          29273.400390625
+        ],
+        [
+          "2026-10-27T09:30:00-04:00",
+          29651.44140625
+        ]
+      ],
+      "close_20261027": 29651.441,
+      "previous_close_20261026": 29273.400390625,
+      "change_pct_20261027": 1.2914,
+      "note": "Daily candle timestamp indicates session open, not close; market_time is vendor metadata time, may occur after close. If 10/27 candle missing, regularMarketPrice provides dated close."
+    },
+    "^SOX": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?range=5d&interval=1d",
+      "market_time": "2026-10-27T17:15:59-04:00",
+      "market_price": 11482.505,
+      "rows": [
+        [
+          "2026-10-21T09:30:00-04:00",
+          11505.5595703125
+        ],
+        [
+          "2026-10-22T09:30:00-04:00",
+          10731.98046875
+        ],
+        [
+          "2026-10-23T09:30:00-04:00",
+          10779.4599609375
+        ],
+        [
+          "2026-10-26T09:30:00-04:00",
+          11083.4697265625
+        ],
+        [
+          "2026-10-27T09:30:00-04:00",
+          11482.5048828125
+        ]
+      ],
+      "close_20261027": 11482.505,
+      "previous_close_20261026": 11083.4697265625,
+      "change_pct_20261027": 3.6003,
+      "note": "Daily candle timestamp indicates session open, not close; market_time is vendor metadata time, may occur after close. If 10/27 candle missing, regularMarketPrice provides dated close."
+    },
+    "^VIX": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?range=5d&interval=1d",
+      "market_time": "2026-10-27T16:15:01-04:00",
+      "market_price": 17.52,
+      "rows": [
+        [
+          "2026-10-21T03:00:00-04:00",
+          16.68000030517578
+        ],
+        [
+          "2026-10-22T03:00:00-04:00",
+          19.030000686645508
+        ],
+        [
+          "2026-10-23T03:00:00-04:00",
+          19.450000762939453
+        ],
+        [
+          "2026-10-26T03:00:00-04:00",
+          18.389999389648438
+        ],
+        [
+          "2026-10-27T03:00:00-04:00",
+          17.520000457763672
+        ]
+      ],
+      "close_20261027": 17.52,
+      "previous_close_20261026": 18.389999389648438,
+      "change_pct_20261027": -4.7308,
+      "note": "Daily candle timestamp indicates session open, not close; market_time is vendor metadata time, may occur after close. If 10/27 candle missing, regularMarketPrice provides dated close."
+    },
+    "AAPL": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?range=5d&interval=1d",
+      "market_time": "2026-10-27T16:00:01-04:00",
+      "market_price": 347.1,
+      "rows": [
+        [
+          "2026-10-21T09:30:00-04:00",
+          343.989990234375
+        ],
+        [
+          "2026-10-22T09:30:00-04:00",
+          348.2200012207031
+        ],
+        [
+          "2026-10-23T09:30:00-04:00",
+          347.7300109863281
+        ],
+        [
+          "2026-10-26T09:30:00-04:00",
+          343.9100036621094
+        ]
+      ],
+      "close_20261027": 347.1,
+      "previous_close_20261026": 343.9100036621094,
+      "change_pct_20261027": 0.9276,
+      "note": "Daily candle timestamp indicates session open, not close; market_time is vendor metadata time, may occur after close. If 10/27 candle missing, regularMarketPrice provides dated close."
+    },
+    "MSFT": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?range=5d&interval=1d",
+      "market_time": "2026-10-27T16:00:01-04:00",
+      "market_price": 531.33,
+      "rows": [
+        [
+          "2026-10-21T09:30:00-04:00",
+          532.9500122070312
+        ],
+        [
+          "2026-10-22T09:30:00-04:00",
+          521.0800170898438
+        ],
+        [
+          "2026-10-23T09:30:00-04:00",
+          524.510009765625
+        ],
+        [
+          "2026-10-26T09:30:00-04:00",
+          532.5999755859375
+        ]
+      ],
+      "close_20261027": 531.33,
+      "previous_close_20261026": 532.5999755859375,
+      "change_pct_20261027": -0.2384,
+      "note": "Daily candle timestamp indicates session open, not close; market_time is vendor metadata time, may occur after close. If 10/27 candle missing, regularMarketPrice provides dated close."
+    },
+    "NVDA": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?range=5d&interval=1d",
+      "market_time": "2026-10-27T16:00:01-04:00",
+      "market_price": 217.94,
+      "rows": [
+        [
+          "2026-10-21T09:30:00-04:00",
+          221.97000122070312
+        ],
+        [
+          "2026-10-22T09:30:00-04:00",
+          212.2100067138672
+        ],
+        [
+          "2026-10-23T09:30:00-04:00",
+          210.9600067138672
+        ],
+        [
+          "2026-10-26T09:30:00-04:00",
+          216.0
+        ]
+      ],
+      "close_20261027": 217.94,
+      "previous_close_20261026": 216.0,
+      "change_pct_20261027": 0.8981,
+      "note": "Daily candle timestamp indicates session open, not close; market_time is vendor metadata time, may occur after close. If 10/27 candle missing, regularMarketPrice provides dated close."
+    },
+    "AMZN": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMZN?range=5d&interval=1d",
+      "market_time": "2026-10-27T16:00:01-04:00",
+      "market_price": 253.1,
+      "rows": [
+        [
+          "2026-10-21T09:30:00-04:00",
+          262.3699951171875
+        ],
+        [
+          "2026-10-22T09:30:00-04:00",
+          250.3800048828125
+        ],
+        [
+          "2026-10-23T09:30:00-04:00",
+          248.0
+        ],
+        [
+          "2026-10-26T09:30:00-04:00",
+          249.08999633789062
+        ]
+      ],
+      "close_20261027": 253.1,
+      "previous_close_20261026": 249.08999633789062,
+      "change_pct_20261027": 1.6099,
+      "note": "Daily candle timestamp indicates session open, not close; market_time is vendor metadata time, may occur after close. If 10/27 candle missing, regularMarketPrice provides dated close."
+    },
+    "GOOGL": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?range=5d&interval=1d",
+      "market_time": "2026-10-27T16:00:01-04:00",
+      "market_price": 320.58,
+      "rows": [
+        [
+          "2026-10-21T09:30:00-04:00",
+          334.760009765625
+        ],
+        [
+          "2026-10-22T09:30:00-04:00",
+          324.2200012207031
+        ],
+        [
+          "2026-10-23T09:30:00-04:00",
+          320.2099914550781
+        ],
+        [
+          "2026-10-26T09:30:00-04:00",
+          316.79998779296875
+        ]
+      ],
+      "close_20261027": 320.58,
+      "previous_close_20261026": 316.79998779296875,
+      "change_pct_20261027": 1.1932,
+      "note": "Daily candle timestamp indicates session open, not close; market_time is vendor metadata time, may occur after close. If 10/27 candle missing, regularMarketPrice provides dated close."
+    },
+    "META": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/META?range=5d&interval=1d",
+      "market_time": "2026-10-27T16:00:01-04:00",
+      "market_price": 620.19,
+      "rows": [
+        [
+          "2026-10-21T09:30:00-04:00",
+          697.52001953125
+        ],
+        [
+          "2026-10-22T09:30:00-04:00",
+          648.8499755859375
+        ],
+        [
+          "2026-10-23T09:30:00-04:00",
+          642.6199951171875
+        ],
+        [
+          "2026-10-26T09:30:00-04:00",
+          630.5599975585938
+        ]
+      ],
+      "close_20261027": 620.19,
+      "previous_close_20261026": 630.5599975585938,
+      "change_pct_20261027": -1.6446,
+      "note": "Daily candle timestamp indicates session open, not close; market_time is vendor metadata time, may occur after close. If 10/27 candle missing, regularMarketPrice provides dated close."
+    },
+    "TSLA": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/TSLA?range=5d&interval=1d",
+      "market_time": "2026-10-27T16:00:00-04:00",
+      "market_price": 407.46,
+      "rows": [
+        [
+          "2026-10-21T09:30:00-04:00",
+          386.4700012207031
+        ],
+        [
+          "2026-10-22T09:30:00-04:00",
+          374.5799865722656
+        ],
+        [
+          "2026-10-23T09:30:00-04:00",
+          372.2200012207031
+        ],
+        [
+          "2026-10-26T09:30:00-04:00",
+          391.6199951171875
+        ]
+      ],
+      "close_20261027": 407.46,
+      "previous_close_20261026": 391.6199951171875,
+      "change_pct_20261027": 4.0447,
+      "note": "Daily candle timestamp indicates session open, not close; market_time is vendor metadata time, may occur after close. If 10/27 candle missing, regularMarketPrice provides dated close."
+    },
+    "TX=F": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/TX%3DF?range=5d&interval=1d",
+      "error": "HTTP Error 404: Not Found"
+    }
+  },
+  "sox_caveat": {
+    "conflict": "Nasdaq index overview shows 11482.51 but net change 401.94 and prior close 11482.51 inconsistent; Nasdaq history search snapshot shows 11473.05 / 11083.47. Yahoo 11482.505 previous 11083.4697 gives +3.6003%; treat as vendor close with official discrepancy, not independently verified official close.",
+    "url": "https://indexes.nasdaq.com/Index/Overview/SOX"
+  },
+  "publication": "none"
+}

@@ -1,0 +1,349 @@
+{
+  "retrieved_at_utc": "2026-10-28T01:27:19.630157+00:00",
+  "scope": "2026-10-28 Taiwan morning; live crypto snapshot not NY close",
+  "treasury": {
+    "status": "official XML query returned No results found; Oct 27 and Oct 26 Treasury XML unverified",
+    "attempted_urls": [
+      "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_par_yield_curve&field_tdr_date_value=2026",
+      "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_par_yield_curve&field_tdr_date_value=202610"
+    ],
+    "raw_response": "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?> <feed><title>No results found.</title></feed>",
+    "official_fed_h15_fallback": {
+      "url": "https://www.federalreserve.gov/releases/h15/default.htm",
+      "release_date": "2026-10-27",
+      "last_observation_date": "2026-10-26",
+      "raw_selected_rows": [
+        [
+          "2-year",
+          "4.79",
+          "4.81",
+          "4.65",
+          "4.69",
+          "4.68"
+        ],
+        [
+          "10-year",
+          "5.12",
+          "5.13",
+          "4.96",
+          "5.00",
+          "5.00"
+        ],
+        [
+          "30-year",
+          "5.42",
+          "5.42",
+          "5.29",
+          "5.33",
+          "5.31"
+        ],
+        [
+          "10-year",
+          "2.77",
+          "2.76",
+          "2.64",
+          "2.66",
+          "2.66"
+        ],
+        [
+          "30-year",
+          "3.16",
+          "3.15",
+          "3.05",
+          "3.08",
+          "3.07"
+        ]
+      ],
+      "note": "H.15 lags one business day; rows include nominal and inflation-indexed where present; no Oct 27 observation."
+    }
+  },
+  "farside": {
+    "btc": {
+      "url": "https://farside.co.uk/btc/?cb=1793150780",
+      "status": "HTTP 403 Cloudflare; browser also security verification; no dated row verified"
+    },
+    "eth": {
+      "url": "https://farside.co.uk/eth/?cb=1793150780",
+      "status": "HTTP 403 Cloudflare; browser also security verification; no dated row verified"
+    }
+  },
+  "wgc": {
+    "page_url": "https://www.gold.org/goldhub/data/gold-etfs-holdings-and-flows",
+    "api_url": "https://fsapi.gold.org/api/v11/charts/etfv2/revised/flows-chart2?break-cache=26Oct26",
+    "system": {
+      "request_time": "2026-10-26 12:28:58",
+      "APIserverHostname": "fsapi.gold.org",
+      "protocol": "https",
+      "uri": "https://fsapi.gold.org/api/v11/charts/etfv2/revised/flows-chart2?break-cache=26Oct26",
+      "route": "fsapi.gold.org",
+      "cached": false,
+      "q": false,
+      "params": {},
+      "user": null,
+      "response_size": 243939,
+      "time_start": "2026-10-26 12:28:58",
+      "time_stop": "2026-10-26 12:28:59",
+      "mem_start": 3884824,
+      "time": "0.435 secs",
+      "mem_stop": 7874360,
+      "mem_used": "3896.03 KB",
+      "size": "238.31 KB"
+    },
+    "as_of_date": "2026-10-23",
+    "frequency": "Weekly",
+    "latest_raw_series": {
+      "usd": {
+        "North America": [
+          1792713600000,
+          -1691401004.2
+        ],
+        "Europe": [
+          1792713600000,
+          455213045.76
+        ],
+        "Asia": [
+          1792713600000,
+          21351291.75
+        ],
+        "Other": [
+          1792713600000,
+          7484900
+        ],
+        "Gold Price (rhs)": [
+          1792713600000,
+          4092.25
+        ]
+      },
+      "tonnes": {
+        "North America": [
+          1792713600000,
+          -13.09578019
+        ],
+        "Europe": [
+          1792713600000,
+          4.33378151
+        ],
+        "Asia": [
+          1792713600000,
+          0.21735631
+        ],
+        "Other": [
+          1792713600000,
+          0.44601201
+        ],
+        "Gold Price (rhs)": [
+          1792713600000,
+          4092.25
+        ]
+      }
+    },
+    "regional_sum_excluding_gold_price": {
+      "usd": "-1207351766.69",
+      "tonnes": "-8.09863036"
+    },
+    "units": {
+      "usd": "USD",
+      "tonnes": "tonnes"
+    },
+    "note": "USD investment flows and tonnage demand are distinct measures; regional totals calculated separately."
+  },
+  "kraken": {
+    "ticker_url": "https://api.kraken.com/0/public/Ticker?pair=XBTUSD,ETHUSD",
+    "ticker_raw": {
+      "error": [],
+      "result": {
+        "XETHZUSD": {
+          "a": [
+            "2346.91000",
+            "4",
+            "4.000"
+          ],
+          "b": [
+            "2346.90000",
+            "2",
+            "2.000"
+          ],
+          "c": [
+            "2346.98000",
+            "0.01900000"
+          ],
+          "v": [
+            "690.18096260",
+            "13715.36062766"
+          ],
+          "p": [
+            "2344.50081",
+            "2332.89944"
+          ],
+          "t": [
+            1859,
+            37610
+          ],
+          "l": [
+            "2338.06000",
+            "2294.34000"
+          ],
+          "h": [
+            "2348.80000",
+            "2361.69000"
+          ],
+          "o": "2347.12000"
+        },
+        "XXBTZUSD": {
+          "a": [
+            "80721.60000",
+            "4",
+            "4.000"
+          ],
+          "b": [
+            "80721.50000",
+            "1",
+            "1.000"
+          ],
+          "c": [
+            "80721.50000",
+            "0.00004867"
+          ],
+          "v": [
+            "137.83175694",
+            "2217.47300681"
+          ],
+          "p": [
+            "80658.86919",
+            "80312.23161"
+          ],
+          "t": [
+            5255,
+            105781
+          ],
+          "l": [
+            "80500.10000",
+            "79378.50000"
+          ],
+          "h": [
+            "80800.90000",
+            "81199.70000"
+          ],
+          "o": "80800.90000"
+        }
+      }
+    },
+    "ticker_note": "Both pairs returned in same API response; last traded prices, not exchange-timestamped simultaneous trades; retrieved around 01:26 UTC.",
+    "ohlc_urls": {
+      "btc": "https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval=1440",
+      "eth": "https://api.kraken.com/0/public/OHLC?pair=ETHUSD&interval=1440"
+    },
+    "ohlc_last_four_raw": {
+      "btc": {
+        "XXBTZUSD": [
+          [
+            1792886400,
+            "80772.0",
+            "80919.2",
+            "79750.0",
+            "80048.5",
+            "80397.3",
+            "894.49656422",
+            73351
+          ],
+          [
+            1792972800,
+            "80048.7",
+            "80701.7",
+            "79265.0",
+            "80001.9",
+            "79954.9",
+            "2534.84112910",
+            153067
+          ],
+          [
+            1793059200,
+            "80001.8",
+            "81199.7",
+            "79378.5",
+            "80800.9",
+            "80279.0",
+            "2191.14730023",
+            108281
+          ],
+          [
+            1793145600,
+            "80800.9",
+            "80800.9",
+            "80500.1",
+            "80721.6",
+            "80658.8",
+            "137.83369678",
+            5257
+          ]
+        ],
+        "last": 1793059200
+      },
+      "eth": {
+        "XETHZUSD": [
+          [
+            1792886400,
+            "2355.67",
+            "2368.33",
+            "2307.72",
+            "2326.50",
+            "2338.12",
+            "11086.47249957",
+            30279
+          ],
+          [
+            1792972800,
+            "2326.62",
+            "2340.93",
+            "2290.71",
+            "2320.45",
+            "2316.41",
+            "19496.02597645",
+            49745
+          ],
+          [
+            1793059200,
+            "2320.46",
+            "2361.69",
+            "2294.34",
+            "2347.34",
+            "2332.07",
+            "13331.96672704",
+            37370
+          ],
+          [
+            1793145600,
+            "2347.12",
+            "2348.80",
+            "2338.06",
+            "2346.98",
+            "2344.50",
+            "690.18096260",
+            1859
+          ]
+        ],
+        "last": 1793059200
+      }
+    },
+    "ohlc_schema": [
+      "UTC interval start unix seconds",
+      "open",
+      "high",
+      "low",
+      "close",
+      "vwap",
+      "volume",
+      "trade count"
+    ],
+    "ohlc_note": "Last row is in-progress UTC day, not final. Separate API requests; full raw responses saved beside this pack."
+  },
+  "raw_files": {
+    "treasury": "/Users/kaide/.hermes/cache/scratch/kmb_treasury.raw",
+    "wgc": "/Users/kaide/.hermes/cache/scratch/kmb_wgc.raw",
+    "wgc_flow": "/Users/kaide/.hermes/cache/scratch/kmb_wgc_flow.raw",
+    "fed_h15": "/Users/kaide/.hermes/cache/scratch/kmb_fed_h15.raw",
+    "kraken_ticker": "/Users/kaide/.hermes/cache/scratch/kmb_kraken_ticker.raw",
+    "kraken_btc_ohlc": "/Users/kaide/.hermes/cache/scratch/kmb_kraken_btc_ohlc.raw",
+    "kraken_eth_ohlc": "/Users/kaide/.hermes/cache/scratch/kmb_kraken_eth_ohlc.raw"
+  }
+}
