@@ -1,28 +1,25 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-10-28",
-  "valid_for_trading_date": "2026-10-28",
-  "data_as_of": "2026-10-28",
+  "date": "2026-10-29",
+  "valid_for_trading_date": "2026-10-29",
+  "data_as_of": "2026-10-29",
   "stale": false,
-  "issue_no": 112,
+  "issue_no": 113,
   "scenario": {
     "id": "03",
     "slug": "high-level-speed-control",
     "label": "高位控速",
     "confidence": 1.0,
-    "reason": "台股早盤大漲、科技延續反彈，但水位79.4%較昨日下降0.3個百分點，且聯準會決議尚待公布；採高位控速以防追價，不將高水位解釋成高風險。",
+    "reason": "方舟水位79.0%，較10/28的79.4%下降0.4個百分點，配置節奏宜審慎。",
     "source": "manual_override",
     "classifier_suggestion": "03"
   },
   "water": {
-    "level": 79.4,
-    "previous": 79.7,
-    "change": -0.3,
-    "direction": "falling",
-    "comparison_date": "2026-10-27",
-    "previous_trading_date": "2026-10-27",
-    "comparison_is_provisional": false
+    "level": 79.0,
+    "previous": 79.4,
+    "change": -0.4,
+    "direction": "falling"
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
@@ -30,8 +27,8 @@
     "risk_posture": "balanced_cautious",
     "water_policy": {
       "direction": "falling",
-      "change": -0.3,
-      "interpretation": "水位較10/27下降0.3個百分點；配置環境略為轉弱，維持控速、不追急漲。"
+      "change": -0.4,
+      "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
     },
     "scenario_context": {
       "id": "03",
@@ -39,10 +36,10 @@
       "confidence": 1.0
     },
     "policy_focus": [
-      "價值區作研究候選，等回測承接再分批；既有部位依風控配置，不追急漲。",
-      "明晨聯準會決議、美元偏強；早盤漲幅若失去承接，保留新增資金。",
-      "產業價值區23漲4跌，強於升溫區；這是方舟樣本，不是全市場廣度。",
-      "聯準會決議於台北時間10/29 02:00公布、02:30記者會；截稿尚未公布，不把市場預期當成既定決策。"
+      "價值名單作研究候選，等待價格承接確認；水位下降時保留配置彈性。",
+      "法人數據為昨日收盤統計；勿推定今日延續。",
+      "早盤電子權值承壓；名單僅為方舟樣本。",
+      "聯準會10/28維持利率目標區間3.75%至4%；通膨仍高，後續政策取決於資料。"
     ],
     "systemic_risk": "中",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
@@ -95,10 +92,10 @@
   },
   "editorial": {
     "state_label": "高位控速",
-    "summary": "台股早盤大漲、科技延續反彈，但水位79.4%較昨日下降0.3個百分點，且聯準會決議尚待公布；採高位控速以防追價，不將高水位解釋成高風險。"
+    "summary": "方舟水位79.0%，較10/28的79.4%下降0.4個百分點，配置節奏宜審慎。"
   },
   "source": {
-    "issue_file": "data/issues/20261028.json",
-    "generated_at": "2026-10-28T09:28:14+08:00"
+    "issue_file": "data/issues/20261029.json",
+    "generated_at": "2026-10-29T10:00:04+08:00"
   }
 }

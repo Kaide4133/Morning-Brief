@@ -1,0 +1,996 @@
+{
+  "schema_version": "morning_brief.issue.v2",
+  "issue_no": 113,
+  "date": "2026-10-29",
+  "day": "THURSDAY",
+  "data_as_of": "2026-10-29",
+  "brief_label": "早盤版",
+  "draft_cutoff": "2026-10-29T09:51:00+08:00",
+  "session_label": "10/29早盤版｜方舟09:50–09:51盤中快照",
+  "source_ark": "方舟盤中快照",
+  "ark": {
+    "water_level": 79.0,
+    "holding_allocation_suggestion": "79.0%",
+    "prev": 79.4,
+    "previous_water_level": 79.4,
+    "delta": -0.4,
+    "change": -0.4,
+    "direction": "下降",
+    "as_of": "2026-10-29",
+    "source_time": "09:50–09:51",
+    "comparison_date": "2026-10-28",
+    "previous_trading_date": "2026-10-28",
+    "comparison_is_provisional": false,
+    "note": "方舟水位79.0%，較10/28的79.4%下降0.4個百分點，配置節奏宜審慎。",
+    "interpretation": "方舟水位79.0%，較10/28的79.4%下降0.4個百分點，配置節奏宜審慎。"
+  },
+  "water": {
+    "current": 79.0,
+    "previous": 79.4,
+    "delta": -0.4,
+    "direction": "下降",
+    "as_of": "2026-10-29",
+    "previous_date": "2026-10-28",
+    "note": "方舟水位79.0%，較10/28的79.4%下降0.4個百分點，配置節奏宜審慎。"
+  },
+  "zone_breadth": {},
+  "etf": {
+    "value": [
+      {
+        "code": "00875",
+        "name": "國泰網路資安",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 1,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "00939",
+        "name": "統一台灣高息動能",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 2,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "0055",
+        "name": "元大MSCI金融",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 3,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "00918",
+        "name": "大華優利高填息30",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 4,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "00960",
+        "name": "野村全球航運龍頭",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 5,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "0056",
+        "name": "元大高股息",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 6,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "00878",
+        "name": "國泰永續高股息",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 7,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "00631L",
+        "name": "元大台灣50正2",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 8,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "00919",
+        "name": "群益台灣精選高息",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 9,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "00938",
+        "name": "凱基優選30",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 10,
+        "meta": "盤中名單"
+      }
+    ],
+    "rising": [
+      {
+        "code": "00642U",
+        "name": "期元大S&P石油",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 1,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "00754B",
+        "name": "群益AAA-AA公司債",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 2,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "00844B",
+        "name": "台新15年IG金融債",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 3,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "00758B",
+        "name": "復華能源債",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 4,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "00841B",
+        "name": "凱基AAA-AA公司債",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 5,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "00715L",
+        "name": "期街口布蘭特正2",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 6,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "00853B",
+        "name": "統一美債10年Aa-A",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 7,
+        "meta": "盤中名單"
+      }
+    ],
+    "overlap": [],
+    "overlap_names": {}
+  },
+  "stocks": {
+    "value": [
+      {
+        "code": "6670",
+        "name": "復盛應用",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 1,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "1513",
+        "name": "中興電",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 2,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "3023",
+        "name": "信邦",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 3,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "2645",
+        "name": "長榮航太",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 4,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "6285",
+        "name": "啟碁",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 5,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "6414",
+        "name": "樺漢",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 6,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "2301",
+        "name": "光寶科",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 7,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "3706",
+        "name": "神達",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 8,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "6139",
+        "name": "亞翔",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 9,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "2404",
+        "name": "漢唐",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 10,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "2330",
+        "name": "台積電",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 11,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "2454",
+        "name": "聯發科",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 12,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "4958",
+        "name": "臻鼎-KY",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 13,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "3044",
+        "name": "健鼎",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 14,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "6239",
+        "name": "力成",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 15,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "6669",
+        "name": "緯穎",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 16,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "2376",
+        "name": "技嘉",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 17,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "2449",
+        "name": "京元電子",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 18,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "5289",
+        "name": "宜鼎",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 19,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "5269",
+        "name": "祥碩",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 20,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "3711",
+        "name": "日月光投控",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 21,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "2357",
+        "name": "華碩",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 22,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "3293",
+        "name": "鈊象",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 23,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "2382",
+        "name": "廣達",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 24,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "2379",
+        "name": "瑞昱",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 25,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "8069",
+        "name": "元太",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 26,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "3231",
+        "name": "緯創",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 27,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "3036",
+        "name": "文曄",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 28,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "3005",
+        "name": "神基",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 29,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "2317",
+        "name": "鴻海",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 30,
+        "meta": "盤中名單"
+      }
+    ],
+    "rising": [
+      {
+        "code": "2466",
+        "name": "冠西電",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 1,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "6751",
+        "name": "智聯服務",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 2,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "8099",
+        "name": "大世科",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 3,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "1569",
+        "name": "濱川",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 4,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "4526",
+        "name": "東台",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 5,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "4960",
+        "name": "誠美材",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 6,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "6199",
+        "name": "天品",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 7,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "4577",
+        "name": "達航科技",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 8,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "6756",
+        "name": "威鋒電子",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 9,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "3354",
+        "name": "律勝",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 10,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "6870",
+        "name": "騰雲",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 11,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "4563",
+        "name": "百德",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 12,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "6418",
+        "name": "詠昇",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 13,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "2892",
+        "name": "第一金",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 14,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "3034",
+        "name": "聯詠",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 15,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "4720",
+        "name": "德淵",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 16,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "2801",
+        "name": "彰銀",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 17,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "4566",
+        "name": "時碩工業",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 18,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "6240",
+        "name": "松崗",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 19,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "6245",
+        "name": "立端",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 20,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "6782",
+        "name": "視陽",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 21,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "3406",
+        "name": "玉晶光",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 22,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "2033",
+        "name": "佳大",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 23,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "2027",
+        "name": "大成鋼",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 24,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "5209",
+        "name": "新鼎",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 25,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "2468",
+        "name": "華經",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 26,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "2886",
+        "name": "兆豐金",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 27,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "2377",
+        "name": "微星",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 28,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "4188",
+        "name": "安克",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 29,
+        "meta": "盤中名單"
+      },
+      {
+        "code": "6277",
+        "name": "宏正",
+        "price": "—",
+        "change": "—",
+        "price_available": false,
+        "rank": 30,
+        "meta": "盤中名單"
+      }
+    ],
+    "overlap": [],
+    "overlap_names": {}
+  },
+  "ark_source_validation": {
+    "date": "2026-10-29",
+    "source": "使用者提供的方舟截圖",
+    "snapshot_time": "09:50–09:51",
+    "coverage_note": "產業價值前兩張無重疊，無法排除滑動漏列。"
+  },
+  "title": "台股大漲後早盤回落，水位微降、追價宜緩",
+  "eyebrow": "TECH REBOUND × EVENT DISCIPLINE",
+  "scenario_id": "03",
+  "lock_scenario": true,
+  "scenario_reason": "方舟水位79.0%，較10/28的79.4%下降0.4個百分點，配置節奏宜審慎。",
+  "hero": {
+    "headline": "台股大漲後早盤回落，水位微降、追價宜緩",
+    "subhead": "方舟水位79.0%，較10/28的79.4%下降0.4個百分點，配置節奏宜審慎。 10/28台股收47,035.58點，上漲939.35點；10/29早盤一度跌至46,826.68點。",
+    "reader_subhead": "昨日台股上漲後早盤回落，水位微降；前一日法人買超不代表今日續買。"
+  },
+  "strategy": {
+    "thesis": "昨日上漲後早盤回落，水位微降。",
+    "tape": "早盤電子權值承壓；名單僅為方舟樣本。",
+    "playbook": "價值名單作研究候選，等待價格承接確認；水位下降時保留配置彈性。",
+    "risk": "法人數據為昨日收盤統計；勿推定今日延續。",
+    "reader": {
+      "thesis": "昨日上漲後早盤回落，水位微降。",
+      "tape": "早盤電子權值承壓；名單僅為方舟樣本。",
+      "playbook": "價值名單作研究候選，等待價格承接確認；水位下降時保留配置彈性。",
+      "risk": "法人數據為昨日收盤統計；勿推定今日延續。"
+    }
+  },
+  "market": {
+    "systemic_risk": "中",
+    "tw_index": {
+      "value": "46,826.68",
+      "change_pct": null,
+      "line": "10/29早盤低點，非收盤與09:51即時報價。",
+      "data_as_of": "2026-10-29"
+    },
+    "nasdaq": {
+      "value": "26,549.85",
+      "level": 26549.85,
+      "change_pct": 0.27,
+      "data_as_of": "2026-10-28"
+    },
+    "sp500": {
+      "value": "7,743.98",
+      "level": 7743.98,
+      "change_pct": 0.28,
+      "data_as_of": "2026-10-28"
+    },
+    "dow": {
+      "value": "52,475.10",
+      "level": 52475.1,
+      "change_pct": 0.19,
+      "data_as_of": "2026-10-28"
+    },
+    "sox": {
+      "value": "—",
+      "change_pct": null,
+      "note": "資料未納入。"
+    },
+    "vix": {
+      "value": "—",
+      "change_pct": null,
+      "note": "資料未納入。"
+    },
+    "futures": {
+      "value": "—",
+      "change_pct": null,
+      "note": "資料未納入。"
+    },
+    "foreign_oi": {
+      "value": "—",
+      "change_pct": null,
+      "note": "資料未納入。"
+    }
+  },
+  "mag7": [],
+  "market_summary": {
+    "twse": "10/28台股收47,035.58點，上漲939.35點；10/29早盤一度跌至46,826.68點。",
+    "taifex": "期貨最新部位未納入。",
+    "us": "10/28美股收盤：標普500上漲0.28%、Nasdaq上漲0.27%、道瓊上漲0.19%。",
+    "rates": "聯準會10/28維持利率目標區間3.75%至4%；通膨仍高，後續政策取決於資料。"
+  },
+  "temperature": {
+    "label": "回落觀察",
+    "vix_note": "10/28美股收盤：標普500上漲0.28%、Nasdaq上漲0.27%、道瓊上漲0.19%。",
+    "signal_headline": "反彈後回落，水位微降",
+    "signal_note": "方舟水位79.0%，較10/28的79.4%下降0.4個百分點，配置節奏宜審慎。"
+  },
+  "analysis": {
+    "us_close": "10/28美股收盤：標普500上漲0.28%、Nasdaq上漲0.27%、道瓊上漲0.19%。",
+    "tx_night": "期貨最新部位未納入。",
+    "axes": {
+      "thesis": "方舟水位79.0%，較10/28的79.4%下降0.4個百分點，配置節奏宜審慎。",
+      "policy": "聯準會10/28維持利率目標區間3.75%至4%；通膨仍高，後續政策取決於資料。",
+      "risk": "10/28證交所統計：外資及陸資買超159.57億元、投信買超143.20億元、三大法人合計買超324.42億元；不代表10/29買賣。"
+    }
+  },
+  "home": {
+    "water_note": "方舟水位79.0%，較10/28的79.4%下降0.4個百分點，配置節奏宜審慎。",
+    "thesis_blurb": "昨日上漲後早盤回落，水位微降；法人買超為昨日資料。",
+    "risk_tagline": "先看承接，不追價。",
+    "recent_summary": "10/29：水位79.0%，較前日下降0.4個百分點。"
+  },
+  "editorial": {
+    "pull_quote": "前日法人買超與今日早盤回落可以同時成立。",
+    "body": "方舟水位79.0%，較10/28的79.4%下降0.4個百分點，配置節奏宜審慎。\n\n10/28台股收47,035.58點，上漲939.35點；10/29早盤一度跌至46,826.68點。\n\n10/28證交所統計：外資及陸資買超159.57億元、投信買超143.20億元、三大法人合計買超324.42億元；不代表10/29買賣。\n\n10/28美股收盤：標普500上漲0.28%、Nasdaq上漲0.27%、道瓊上漲0.19%。\n\n聯準會10/28維持利率目標區間3.75%至4%；通膨仍高，後續政策取決於資料。\n\n方舟名單為09:50–09:51盤中快照，僅呈現可見標的；產業價值區可能存在畫面間漏列。\n\n價值名單作研究候選，等待價格承接確認；水位下降時保留配置彈性。\n\n跨資產ETF最新申贖資料未核實；價格變化不等於資金流向。"
+  },
+  "intelligence": {
+    "trump": [
+      {
+        "time": "10/29",
+        "content": "未納入可獨立核實的直接社群訊號。"
+      }
+    ],
+    "musk": "未納入可獨立核實的直接社群訊號。",
+    "policy": [
+      "聯準會10/28維持利率目標區間3.75%至4%；通膨仍高，後續政策取決於資料。"
+    ]
+  },
+  "validation": {
+    "strengthened": [
+      "10/28美股收盤：標普500上漲0.28%、Nasdaq上漲0.27%、道瓊上漲0.19%。",
+      "10/28證交所統計：外資及陸資買超159.57億元、投信買超143.20億元、三大法人合計買超324.42億元；不代表10/29買賣。"
+    ],
+    "pressure": [
+      "方舟水位79.0%，較10/28的79.4%下降0.4個百分點，配置節奏宜審慎。",
+      "10/28台股收47,035.58點，上漲939.35點；10/29早盤一度跌至46,826.68點。"
+    ],
+    "long_term": [
+      "名單不是買賣建議。"
+    ]
+  },
+  "appendix": {
+    "after_hours": "10/29早盤版；法人與美股為10/28資料。",
+    "execution": "價值名單作研究候選，等待價格承接確認；水位下降時保留配置彈性。",
+    "map_bullets": [
+      "方舟水位79.0%，較10/28的79.4%下降0.4個百分點，配置節奏宜審慎。",
+      "10/28台股收47,035.58點，上漲939.35點；10/29早盤一度跌至46,826.68點。",
+      "10/28證交所統計：外資及陸資買超159.57億元、投信買超143.20億元、三大法人合計買超324.42億元；不代表10/29買賣。",
+      "10/28美股收盤：標普500上漲0.28%、Nasdaq上漲0.27%、道瓊上漲0.19%。",
+      "聯準會10/28維持利率目標區間3.75%至4%；通膨仍高，後續政策取決於資料。"
+    ]
+  },
+  "xurl_signal_layer": {
+    "status": "no_material_signal",
+    "signals_count": 0,
+    "included_in_revision": true,
+    "signals": [],
+    "note": "未納入未核實社群訊號。"
+  },
+  "conclusion": "今日一句話：<em>反彈後留意承接，水位微降時放慢節奏。</em>",
+  "disclaimer": "Kelvin Morning Brief｜2026/10/29早盤版。方舟名單與水位為盤中快照，僅供研究，不構成投資建議。",
+  "research_sources": [
+    {
+      "title": "中央社台股10/28收盤",
+      "url": "https://www.cna.com.tw/news/afe/202610280139.aspx"
+    },
+    {
+      "title": "中央社10/29早盤",
+      "url": "https://www.cna.com.tw/news/afe/202610290035.aspx"
+    },
+    {
+      "title": "證交所10/28法人統計",
+      "url": "https://www.twse.com.tw/rwd/zh/fund/BFI82U?date=20261028&response=json"
+    },
+    {
+      "title": "CNBC美股收盤與聯準會",
+      "url": "https://www.cnbc.com/2026/10/27/stock-market-today-live-updates.html"
+    }
+  ],
+  "research_verification": {
+    "previous_trading_date": "2026-10-28",
+    "source": "使用者方舟截圖及上述市場來源"
+  },
+  "capital_flow": {
+    "headline": "前日法人買超，今日資金流待確認",
+    "stance": "unconfirmed",
+    "summary": "10/28證交所統計：外資及陸資買超159.57億元、投信買超143.20億元、三大法人合計買超324.42億元；不代表10/29買賣。",
+    "as_of": "台股法人10/28；方舟10/29 09:50–09:51",
+    "caveat": "價格不是資金流；跨資產最新基金申贖未核實。",
+    "assets": [
+      {
+        "asset": "黃金",
+        "role": "避險資產",
+        "evidence": "本期未核實最新同頻基金申贖。",
+        "flow_signal": "最新流量尚待確認。",
+        "confidence": "低",
+        "watch": "等待可核實的申贖與價格資料。",
+        "tone": "neutral"
+      },
+      {
+        "asset": "Bitcoin / BTC",
+        "role": "高波動資產",
+        "evidence": "本期未核實最新同頻基金申贖。",
+        "flow_signal": "最新流量尚待確認。",
+        "confidence": "低",
+        "watch": "等待可核實的申贖與價格資料。",
+        "tone": "neutral"
+      },
+      {
+        "asset": "Ethereum / ETH",
+        "role": "高波動資產",
+        "evidence": "本期未核實最新同頻基金申贖。",
+        "flow_signal": "最新流量尚待確認。",
+        "confidence": "低",
+        "watch": "等待可核實的申贖與價格資料。",
+        "tone": "neutral"
+      },
+      {
+        "asset": "美元",
+        "role": "流動性基準",
+        "evidence": "本期未核實最新同頻基金申贖。",
+        "flow_signal": "最新流量尚待確認。",
+        "confidence": "低",
+        "watch": "等待可核實的申贖與價格資料。",
+        "tone": "neutral"
+      },
+      {
+        "asset": "美國公債",
+        "role": "久期風險",
+        "evidence": "本期未核實最新同頻基金申贖。",
+        "flow_signal": "最新流量尚待確認。",
+        "confidence": "低",
+        "watch": "等待可核實的申贖與價格資料。",
+        "tone": "neutral"
+      },
+      {
+        "asset": "台股",
+        "role": "股票",
+        "evidence": "10/28證交所統計：外資及陸資買超159.57億元、投信買超143.20億元、三大法人合計買超324.42億元；不代表10/29買賣。",
+        "flow_signal": "10/28法人買超，不代表10/29。",
+        "confidence": "中",
+        "watch": "等待可核實的申贖與價格資料。",
+        "tone": "neutral"
+      }
+    ],
+    "interpretation": [
+      "10/28證交所統計：外資及陸資買超159.57億元、投信買超143.20億元、三大法人合計買超324.42億元；不代表10/29買賣。"
+    ],
+    "confirmation": [
+      "確認今日法人與跨資產申贖資料。"
+    ],
+    "reader": {
+      "headline": "前日法人買超，今日仍待確認",
+      "flow": "10/28證交所統計：外資及陸資買超159.57億元、投信買超143.20億元、三大法人合計買超324.42億元；不代表10/29買賣。",
+      "meaning": "昨日買超不代表今日買盤；漲跌也不等於資金流。",
+      "action": "價值名單作研究候選，等待價格承接確認；水位下降時保留配置彈性。",
+      "watch": "留意台股承接與後續基金申贖。"
+    }
+  }
+}

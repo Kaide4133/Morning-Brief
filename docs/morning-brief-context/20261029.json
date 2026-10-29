@@ -1,0 +1,101 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-10-29",
+  "valid_for_trading_date": "2026-10-29",
+  "data_as_of": "2026-10-29",
+  "stale": false,
+  "issue_no": 113,
+  "scenario": {
+    "id": "03",
+    "slug": "high-level-speed-control",
+    "label": "高位控速",
+    "confidence": 1.0,
+    "reason": "方舟水位79.0%，較10/28的79.4%下降0.4個百分點，配置節奏宜審慎。",
+    "source": "manual_override",
+    "classifier_suggestion": "03"
+  },
+  "water": {
+    "level": 79.0,
+    "previous": 79.4,
+    "change": -0.4,
+    "direction": "falling"
+  },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "cautious_review",
+    "risk_posture": "balanced_cautious",
+    "water_policy": {
+      "direction": "falling",
+      "change": -0.4,
+      "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
+    },
+    "scenario_context": {
+      "id": "03",
+      "label": "高位控速",
+      "confidence": 1.0
+    },
+    "policy_focus": [
+      "價值名單作研究候選，等待價格承接確認；水位下降時保留配置彈性。",
+      "法人數據為昨日收盤統計；勿推定今日延續。",
+      "早盤電子權值承壓；名單僅為方舟樣本。",
+      "聯準會10/28維持利率目標區間3.75%至4%；通膨仍高，後續政策取決於資料。"
+    ],
+    "systemic_risk": "中",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
+  "action_guidance": {
+    "risk_bias": "balanced_cautious",
+    "allow_add": true,
+    "allow_trim": true,
+    "deploy_mode": "slow_selective_add",
+    "max_initial_deploy_pct": 0.25,
+    "trim": {
+      "allowed": true,
+      "mode": "selective_trim",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": true,
+      "mode": "slow_selective_add",
+      "max_initial_deploy_pct": 0.25,
+      "conditions": [
+        "conditional_only",
+        "core_or_high_quality_only",
+        "pullback_confirmed",
+        "no_chase"
+      ]
+    },
+    "rebuy": {
+      "allowed": true,
+      "mode": "wait_for_pullback",
+      "conditions": [
+        "sold_name_drawdown_2_to_3_pct",
+        "MA20_support",
+        "murphy_right_side_reconfirmation"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 1.0,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "高位控速",
+    "summary": "方舟水位79.0%，較10/28的79.4%下降0.4個百分點，配置節奏宜審慎。"
+  },
+  "source": {
+    "issue_file": "data/issues/20261029.json",
+    "generated_at": "2026-10-29T10:00:04+08:00"
+  }
+}
