@@ -4,56 +4,25 @@
       "date": "2026-10-30",
       "water_level": 82.4,
       "scenario_id": "06",
-      "scenario_label": "06 風險收縮",
-      "source_file": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-30_09-05-04/ark_stocks.json",
-      "source_sha256": "1e4df3c70ab013ac56d05d0800d0c1409f043a313861e275d86bd309df2d5dea",
-      "comparison_date": "2026-10-29",
-      "previous_trading_date": "2026-10-29",
-      "comparison_is_provisional": false,
-      "previous_water_level": 79.0,
-      "comparison_level": 79.0,
-      "change": 3.4
+      "scenario_label": "06 風險收縮"
     },
     {
       "date": "2026-10-29",
       "water_level": 79.0,
       "scenario_id": "03",
-      "scenario_label": "03 高位控速",
-      "previous_trading_date": "2026-10-28",
-      "comparison_date": "2026-10-28",
-      "previous_water_level": 79.4,
-      "comparison_level": 79.4,
-      "change": -0.4,
-      "comparison_is_provisional": false,
-      "source": "方舟盤中截圖 09:50–09:51"
+      "scenario_label": "03 高位控速"
     },
     {
       "date": "2026-10-28",
       "water_level": 79.4,
       "scenario_id": "03",
-      "scenario_label": "03 高位控速",
-      "source_file": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-28_09-05-05/ark_stocks.json",
-      "source_sha256": "20716f2a5481b2e129fb1708ad840c3bedf8b7369331be6a476fae97a20e00d3",
-      "comparison_date": "2026-10-27",
-      "previous_trading_date": "2026-10-27",
-      "comparison_is_provisional": false,
-      "previous_water_level": 79.7,
-      "change": -0.3,
-      "comparison_level": 79.7
+      "scenario_label": "03 高位控速"
     },
     {
       "date": "2026-10-27",
       "water_level": 79.7,
       "scenario_id": "03",
-      "scenario_label": "03 高位控速",
-      "source_file": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-27_09-05-05/ark_stocks.json",
-      "source_sha256": "3716f29471990ccdcd07d833d36a14de70ff690b0c2ee58971e7cd7d5cd20d3e",
-      "comparison_date": "2026-10-22",
-      "previous_trading_date": "2026-10-22",
-      "comparison_is_provisional": false,
-      "previous_water_level": 77.6,
-      "change": 2.1,
-      "comparison_level": 77.6
+      "scenario_label": "03 高位控速"
     },
     {
       "date": "2026-10-22",
@@ -65,34 +34,19 @@
       "date": "2026-10-21",
       "water_level": 77.4,
       "scenario_id": "01",
-      "scenario_label": "01 趨勢擴張",
-      "previous_trading_date": "2026-10-20",
-      "previous_water_level": 76.9,
-      "delta": 0.5,
-      "direction": "rising",
-      "source_sha256": "bf25236365876ee2d9b7727fa2a55bd233dbb71509497576443c9e9c9a6b0c96"
+      "scenario_label": "01 趨勢擴張"
     },
     {
       "date": "2026-10-20",
       "water_level": 76.9,
       "scenario_id": "04",
-      "scenario_label": "04 輪動換手",
-      "previous_trading_date": "2026-10-19",
-      "previous_water_level": 77.4,
-      "delta": -0.5,
-      "direction": "falling",
-      "source_sha256": "9c6c757801e7e9f87a84ed3ef81741077bc556edc87d9443b88edc4df8a7dd8e"
+      "scenario_label": "04 輪動換手"
     },
     {
       "date": "2026-10-19",
       "water_level": 77.4,
       "scenario_id": "05",
-      "scenario_label": "05 有序回檔",
-      "previous_trading_date": "2026-10-16",
-      "previous_water_level": 72.8,
-      "delta": 4.6,
-      "direction": "rising",
-      "source_sha256": "076588a6e7469f6fc341ad6a213a8c6e309b69eaba5802e6afa191df162bf136"
+      "scenario_label": "05 有序回檔"
     },
     {
       "date": "2026-10-16",
@@ -182,16 +136,7 @@
       "date": "2026-09-23",
       "water_level": 66.7,
       "scenario_id": "04",
-      "scenario_label": "04 輪動換手",
-      "comparison_date": "2026-09-21",
-      "comparison_level": 67.7,
-      "comparison_is_provisional": true,
-      "previous_trading_date": "2026-09-22",
-      "previous_trading_day_level": null,
-      "daily_change": null,
-      "comparison_change": -1.0,
-      "comparison_note": "9/22水位資料缺漏，暫以9/21的67.7%作比較基準；今日66.7%，較該基準下降1.0個百分點，非相較昨日的實測變化。",
-      "exception_scope": "2026-09-23"
+      "scenario_label": "04 輪動換手"
     },
     {
       "date": "2026-09-21",
