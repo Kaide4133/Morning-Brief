@@ -1,58 +1,57 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-10-29",
-  "valid_for_trading_date": "2026-10-29",
-  "data_as_of": "2026-10-29",
+  "date": "2026-10-30",
+  "valid_for_trading_date": "2026-10-30",
+  "data_as_of": "2026-10-30",
   "stale": false,
-  "issue_no": 113,
+  "issue_no": 114,
   "scenario": {
-    "id": "03",
-    "slug": "high-level-speed-control",
-    "label": "高位控速",
+    "id": "06",
+    "slug": "risk-contraction",
+    "label": "風險收縮",
     "confidence": 1.0,
-    "reason": "方舟水位79.0%，較10/28的79.4%下降0.4個百分點，配置節奏宜審慎。",
+    "reason": "水位回升代表配置環境改善，但昨日法人明顯賣超、今日早盤指數跌逾3%，價格風險優先；先保留彈性，等待賣壓與承接變化。",
     "source": "manual_override",
-    "classifier_suggestion": "03"
+    "classifier_suggestion": "06"
   },
   "water": {
-    "level": 79.0,
-    "previous": 79.4,
-    "change": -0.4,
-    "direction": "falling"
+    "level": 82.4,
+    "previous": 79.0,
+    "change": 3.4,
+    "direction": "rising"
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
-    "short_term_bias": "cautious_review",
-    "risk_posture": "balanced_cautious",
+    "short_term_bias": "reduce_risk_review",
+    "risk_posture": "risk_off",
     "water_policy": {
-      "direction": "falling",
-      "change": -0.4,
-      "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
+      "direction": "rising",
+      "change": 3.4,
+      "interpretation": "方舟水位82.4%，較10/29的79.0%上升3.4個百分點，配置環境改善；但早盤急跌，水位上升不等於立即買進。"
     },
     "scenario_context": {
-      "id": "03",
-      "label": "高位控速",
+      "id": "06",
+      "label": "風險收縮",
       "confidence": 1.0
     },
     "policy_focus": [
-      "價值名單作研究候選，等待價格承接確認；水位下降時保留配置彈性。",
-      "法人數據為昨日收盤統計；勿推定今日延續。",
-      "早盤電子權值承壓；名單僅為方舟樣本。",
-      "聯準會10/28維持利率目標區間3.75%至4%；通膨仍高，後續政策取決於資料。"
+      "價值區先作研究候選，不因名單入選或水位上升直接追買；分開看價值與進場時機。",
+      "昨日法人與期貨餘額不等於今日流向；急跌時保留資金與調節彈性。",
+      "09:12加權跌3.31%；昨日外資賣超688.15億元，今日賣壓仍看盤中承接。",
+      "既有政策背景：Fed於10/28美東14:00維持3.75%–4%，並非10/29新決議；兩名反對委員主張升息。"
     ],
-    "systemic_risk": "中",
+    "systemic_risk": "高",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
   },
   "action_guidance": {
-    "risk_bias": "balanced_cautious",
-    "allow_add": true,
+    "risk_bias": "risk_off",
+    "allow_add": false,
     "allow_trim": true,
-    "deploy_mode": "slow_selective_add",
-    "max_initial_deploy_pct": 0.25,
+    "deploy_mode": "reduce_exposure",
     "trim": {
       "allowed": true,
-      "mode": "selective_trim",
+      "mode": "reduce_exposure",
       "max_overshoot_pct": 0.25,
       "priority": [
         "positive_return_overheated_branch",
@@ -62,23 +61,18 @@
       ]
     },
     "deploy": {
-      "allowed": true,
-      "mode": "slow_selective_add",
-      "max_initial_deploy_pct": 0.25,
+      "allowed": false,
+      "mode": "disabled",
       "conditions": [
-        "conditional_only",
-        "core_or_high_quality_only",
-        "pullback_confirmed",
-        "no_chase"
+        "risk_off_no_new_exposure"
       ]
     },
     "rebuy": {
-      "allowed": true,
-      "mode": "wait_for_pullback",
+      "allowed": false,
+      "mode": "disabled_until_stabilized",
       "conditions": [
-        "sold_name_drawdown_2_to_3_pct",
-        "MA20_support",
-        "murphy_right_side_reconfirmation"
+        "risk_bias_improves",
+        "water_stabilizes"
       ]
     },
     "trim_priority": [
@@ -91,11 +85,11 @@
     "source": "morning_brief_classifier"
   },
   "editorial": {
-    "state_label": "高位控速",
-    "summary": "方舟水位79.0%，較10/28的79.4%下降0.4個百分點，配置節奏宜審慎。"
+    "state_label": "風險收縮",
+    "summary": "水位回升代表配置環境改善，但昨日法人明顯賣超、今日早盤指數跌逾3%，價格風險優先；先保留彈性，等待賣壓與承接變化。"
   },
   "source": {
-    "issue_file": "data/issues/20261029.json",
-    "generated_at": "2026-10-29T10:00:04+08:00"
+    "issue_file": "data/issues/20261030.json",
+    "generated_at": "2026-10-30T09:24:35+08:00"
   }
 }

@@ -1,0 +1,95 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-10-30",
+  "valid_for_trading_date": "2026-10-30",
+  "data_as_of": "2026-10-30",
+  "stale": false,
+  "issue_no": 114,
+  "scenario": {
+    "id": "06",
+    "slug": "risk-contraction",
+    "label": "風險收縮",
+    "confidence": 1.0,
+    "reason": "水位回升代表配置環境改善，但昨日法人明顯賣超、今日早盤指數跌逾3%，價格風險優先；先保留彈性，等待賣壓與承接變化。",
+    "source": "manual_override",
+    "classifier_suggestion": "06"
+  },
+  "water": {
+    "level": 82.4,
+    "previous": 79.0,
+    "change": 3.4,
+    "direction": "rising"
+  },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "reduce_risk_review",
+    "risk_posture": "risk_off",
+    "water_policy": {
+      "direction": "rising",
+      "change": 3.4,
+      "interpretation": "方舟水位82.4%，較10/29的79.0%上升3.4個百分點，配置環境改善；但早盤急跌，水位上升不等於立即買進。"
+    },
+    "scenario_context": {
+      "id": "06",
+      "label": "風險收縮",
+      "confidence": 1.0
+    },
+    "policy_focus": [
+      "價值區先作研究候選，不因名單入選或水位上升直接追買；分開看價值與進場時機。",
+      "昨日法人與期貨餘額不等於今日流向；急跌時保留資金與調節彈性。",
+      "09:12加權跌3.31%；昨日外資賣超688.15億元，今日賣壓仍看盤中承接。",
+      "既有政策背景：Fed於10/28美東14:00維持3.75%–4%，並非10/29新決議；兩名反對委員主張升息。"
+    ],
+    "systemic_risk": "高",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
+  "action_guidance": {
+    "risk_bias": "risk_off",
+    "allow_add": false,
+    "allow_trim": true,
+    "deploy_mode": "reduce_exposure",
+    "trim": {
+      "allowed": true,
+      "mode": "reduce_exposure",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": false,
+      "mode": "disabled",
+      "conditions": [
+        "risk_off_no_new_exposure"
+      ]
+    },
+    "rebuy": {
+      "allowed": false,
+      "mode": "disabled_until_stabilized",
+      "conditions": [
+        "risk_bias_improves",
+        "water_stabilizes"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 1.0,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "風險收縮",
+    "summary": "水位回升代表配置環境改善，但昨日法人明顯賣超、今日早盤指數跌逾3%，價格風險優先；先保留彈性，等待賣壓與承接變化。"
+  },
+  "source": {
+    "issue_file": "data/issues/20261030.json",
+    "generated_at": "2026-10-30T09:24:35+08:00"
+  }
+}
