@@ -125,7 +125,7 @@
             </svg>
             <div class="wl-percent">{{ ark.water_level }}<span>%</span></div>
           </div>
-          <p style="margin-top:20px;color:var(--ink-soft)">{{ ark.note | safe }}</p>
+          <p class="water-change" style="margin-top:20px;color:var(--ink-soft)">{% if ark.delta is defined and ark.delta is not none %}<span aria-hidden="true">{% if ark.delta > 0 %}↗{% elif ark.delta < 0 %}↘{% else %}→{% endif %}</span> {% if ark.delta > 0 %}上升{% elif ark.delta < 0 %}下降{% else %}持平{% endif %}{% if ark.delta != 0 %}{{ "%g"|format(ark.delta|abs) }}個百分點{% endif %}{% else %}—{% endif %}</p>
         </div>
         <div class="countdown-panel">
           <div class="countdown-label">更新倒數 · Next Update</div>
