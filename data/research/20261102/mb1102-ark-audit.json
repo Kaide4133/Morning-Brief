@@ -1,0 +1,596 @@
+{
+  "run_id": "2026-11-02_09-05-05",
+  "source": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-02_09-05-05/ark_stocks.json",
+  "latest_resolves_to_source": true,
+  "success": {
+    "ok": true,
+    "stage": "complete",
+    "status": "success"
+  },
+  "validation": {
+    "ok": true,
+    "generatedAt": "2026-11-02T01:08:40.898671+00:00",
+    "ocrSource": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-02_09-05-05/ark_stocks.json",
+    "axSource": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-02_09-05-05/ark_stocks_ax.json",
+    "sections": {
+      "ETF價值區": {
+        "ok": true,
+        "ocrCount": 10,
+        "axCount": 10,
+        "missingInAx": [],
+        "missingInOcr": [],
+        "nameDifferences": []
+      },
+      "ETF升溫區": {
+        "ok": true,
+        "ocrCount": 7,
+        "axCount": 7,
+        "missingInAx": [],
+        "missingInOcr": [],
+        "nameDifferences": []
+      },
+      "產業價值區": {
+        "ok": true,
+        "ocrCount": 30,
+        "axCount": 30,
+        "missingInAx": [],
+        "missingInOcr": [],
+        "nameDifferences": []
+      },
+      "產業升溫區": {
+        "ok": true,
+        "ocrCount": 30,
+        "axCount": 30,
+        "missingInAx": [],
+        "missingInOcr": [],
+        "nameDifferences": []
+      }
+    }
+  },
+  "sha256_checks": {
+    "ark_ocr.json": true,
+    "ark_stocks.json": true,
+    "ark_stocks_ax.json": true,
+    "ark_validation.json": true,
+    "ark_indicators.json": true,
+    "00_運算五指標.png": true,
+    "01_風控水位.png": true,
+    "02_ETF價值區_1.png": true,
+    "03_ETF價值區_2.png": true,
+    "04_ETF升溫區_1.png": true,
+    "05_ETF升溫區_2.png": true,
+    "06_產業價值區_1.png": true,
+    "07_產業價值區_2.png": true,
+    "08_產業價值區_3.png": true,
+    "09_產業價值區_4.png": true,
+    "10_產業價值區_5.png": true,
+    "11_產業價值區_6.png": true,
+    "12_產業升溫區_1.png": true,
+    "13_產業升溫區_2.png": true,
+    "14_產業升溫區_3.png": true,
+    "15_產業升溫區_4.png": true,
+    "16_產業升溫區_5.png": true,
+    "17_產業升溫區_6.png": true,
+    "capture_manifest.jsonl": true,
+    "ark_ax_rows.jsonl": true
+  },
+  "source_sha256": "3fe65b4f7135bfce62a2a578e5d83ce3e80e29705f0d564d9155298d53447f11",
+  "counts": {
+    "ETF價值區": 10,
+    "ETF升溫區": 7,
+    "產業價值區": 30,
+    "產業升溫區": 30
+  },
+  "total": 77,
+  "overlap": {
+    "etf": [],
+    "stocks": [
+      "2379"
+    ]
+  },
+  "water": {
+    "current": 83.7,
+    "current_evidence": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-02_09-05-05/01_風控水位.png",
+    "previous": 82.4,
+    "previous_date": "2026-10-30",
+    "previous_evidence": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-10-30_09-05-04/01_風控水位.png",
+    "delta_percentage_points": 1.3
+  },
+  "etf_missing_prices": [
+    "00707R",
+    "00758B",
+    "00750B",
+    "00982B",
+    "00884B",
+    "00759B",
+    "00778B"
+  ],
+  "ax_price_disagreements": [
+    {
+      "section": "ETF價值區",
+      "code": "0056",
+      "ocr_price": "55.55",
+      "ocr_change": "▼O.3(-0.54%)",
+      "ax_price": "55.6",
+      "ax_change": "▼0.25(-0.45%)"
+    },
+    {
+      "section": "ETF價值區",
+      "code": "00919",
+      "ocr_price": "32.47",
+      "ocr_change": "70.12(-0.37%)",
+      "ax_price": "32.48",
+      "ax_change": "▼0.11(-0.34%)"
+    },
+    {
+      "section": "產業價值區",
+      "code": "2330",
+      "ocr_price": "2,335",
+      "ocr_change": "735(-1.48%)",
+      "ax_price": "2,330",
+      "ax_change": "▼40(-1.69%)"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "2892",
+      "ocr_price": "44.35",
+      "ocr_change": "70.25(-0.56%)",
+      "ax_price": "44.25",
+      "ax_change": "▼0.35(-0.78%)"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "6697",
+      "ocr_price": "57.5",
+      "ocr_change": "43.2(5.89%)",
+      "ax_price": "57.8",
+      "ax_change": "▲3.5(6.45%)"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "1101",
+      "ocr_price": "28.2",
+      "ocr_change": "70.15(-0.53%)",
+      "ax_price": "28.15",
+      "ax_change": "▼0.2(-0.71%)"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "4566",
+      "ocr_price": "86",
+      "ocr_change": "70.4(-0.46%)",
+      "ax_price": "85.8",
+      "ax_change": "▼0.6(-0.69%)"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "1569",
+      "ocr_price": "89.6",
+      "ocr_change": "72.6(-2.82%)",
+      "ax_price": "89.7",
+      "ax_change": "▼2.5(-2.71%)"
+    }
+  ],
+  "ocr_change_corrections": [
+    {
+      "section": "ETF價值區",
+      "code": "0055",
+      "from": "70.5(-0.95%)",
+      "to": "▼0.5(-0.95%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "ETF價值區",
+      "code": "00875",
+      "from": "71.1(-1.74%)",
+      "to": "▼1.1(-1.74%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "ETF價值區",
+      "code": "00960",
+      "from": "7O.11(-0.47%)",
+      "to": "▼0.11(-0.47%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "ETF價值區",
+      "code": "00918",
+      "from": "70.08(-0.23%)",
+      "to": "▼0.08(-0.23%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "ETF價值區",
+      "code": "00701",
+      "from": "70.05(-0.12%)",
+      "to": "▼0.05(-0.12%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "ETF價值區",
+      "code": "0056",
+      "from": "▼O.3(-0.54%)",
+      "to": "▼0.3(-0.54%)",
+      "evidence": "OCR percentage and price implied move; AX differs"
+    },
+    {
+      "section": "ETF價值區",
+      "code": "00878",
+      "from": "70.04(-0.11%)",
+      "to": "▼0.04(-0.11%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "ETF價值區",
+      "code": "00919",
+      "from": "70.12(-0.37%)",
+      "to": "▼0.12(-0.37%)",
+      "evidence": "OCR percentage and price implied move; AX differs"
+    },
+    {
+      "section": "ETF價值區",
+      "code": "00731",
+      "from": "70.4(-0.39%)",
+      "to": "▼0.4(-0.39%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "3023",
+      "from": "43(1.2%)",
+      "to": "▲3(1.2%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "6670",
+      "from": "71(-0.38%)",
+      "to": "▼1(-0.38%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "4958",
+      "from": "78.5(-1.75%)",
+      "to": "▼8.5(-1.75%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "2645",
+      "from": "71(-0.6%)",
+      "to": "▼1(-0.6%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "1513",
+      "from": "41.5(0.98%)",
+      "to": "▲1.5(0.98%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "6414",
+      "from": "70.5(-0.13%)",
+      "to": "▼0.5(-0.13%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "2330",
+      "from": "735(-1.48%)",
+      "to": "▼35(-1.48%)",
+      "evidence": "OCR percentage and price implied move; AX differs"
+    },
+    {
+      "section": "產業價值區",
+      "code": "6669",
+      "from": "720(-1.1%)",
+      "to": "▼20(-1.1%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "3706",
+      "from": "40.3(0.39%)",
+      "to": "▲0.3(0.39%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "2449",
+      "from": "71(-0.39%)",
+      "to": "▼1(-0.39%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "2376",
+      "from": "40.5(0.15%)",
+      "to": "▲0.5(0.15%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "2301",
+      "from": "41(0.42%)",
+      "to": "▲1(0.42%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "6239",
+      "from": "71.5(-0.59%)",
+      "to": "▼1.5(-0.59%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "6139",
+      "from": "414(2.2%)",
+      "to": "▲14(2.2%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "2404",
+      "from": "410(0.93%)",
+      "to": "▲10(0.93%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "8069",
+      "from": "40.5(0.34%)",
+      "to": "▲0.5(0.34%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "5289",
+      "from": "725(-2.23%)",
+      "to": "▼25(-2.23%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "3711",
+      "from": "715(-2.25%)",
+      "to": "▼15(-2.25%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "5269",
+      "from": "75(-0.34%)",
+      "to": "▼5(-0.34%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "3231",
+      "from": "70.5(-0.27%)",
+      "to": "▼0.5(-0.27%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "3036",
+      "from": "70.5(-0.24%)",
+      "to": "▼0.5(-0.24%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "2317",
+      "from": "41.5(0.61%)",
+      "to": "▲1.5(0.61%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業價值區",
+      "code": "3293",
+      "from": "77(-0.86%)",
+      "to": "▼7(-0.86%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "8099",
+      "from": "46(5.38%)",
+      "to": "▲6(5.38%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "4526",
+      "from": "70.7(-1.25%)",
+      "to": "▼0.7(-1.25%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "2801",
+      "from": "70.15(-0.49%)",
+      "to": "▼0.15(-0.49%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "4568",
+      "from": "44(7.72%)",
+      "to": "▲4(7.72%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "6870",
+      "from": "414.5(3.77%)",
+      "to": "▲14.5(3.77%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "2412",
+      "from": "71(-0.63%)",
+      "to": "▼1(-0.63%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "2892",
+      "from": "70.25(-0.56%)",
+      "to": "▼0.25(-0.56%)",
+      "evidence": "OCR percentage and price implied move; AX differs"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "6697",
+      "from": "43.2(5.89%)",
+      "to": "▲3.2(5.89%)",
+      "evidence": "OCR percentage and price implied move; AX differs"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "3691",
+      "from": "44(2.84%)",
+      "to": "▲4(2.84%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "5880",
+      "from": "40.05(0.17%)",
+      "to": "▲0.05(0.17%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "3332",
+      "from": "70.8(-1%)",
+      "to": "▼0.8(-1%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "1742",
+      "from": "70.1(-0.46%)",
+      "to": "▼0.1(-0.46%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "2379",
+      "from": "413(1.62%)",
+      "to": "▲13(1.62%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "8455",
+      "from": "40.95(3.27%)",
+      "to": "▲0.95(3.27%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "6751",
+      "from": "42.2(2.85%)",
+      "to": "▲2.2(2.85%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "6240",
+      "from": "70.55(-1.53%)",
+      "to": "▼0.55(-1.53%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "3045",
+      "from": "40.5(0.37%)",
+      "to": "▲0.5(0.37%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "2033",
+      "from": "41.3(1.88%)",
+      "to": "▲1.3(1.88%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "4577",
+      "from": "74(-3.14%)",
+      "to": "▼4(-3.14%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "8089",
+      "from": "70.95(-3.3%)",
+      "to": "▼0.95(-3.3%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "1101",
+      "from": "70.15(-0.53%)",
+      "to": "▼0.15(-0.53%)",
+      "evidence": "OCR percentage and price implied move; AX differs"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "2352",
+      "from": "71.75(-5.18%)",
+      "to": "▼1.75(-5.18%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "2880",
+      "from": "40.1(0.2%)",
+      "to": "▲0.1(0.2%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "4566",
+      "from": "70.4(-0.46%)",
+      "to": "▼0.4(-0.46%)",
+      "evidence": "OCR percentage and price implied move; AX differs"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "1569",
+      "from": "72.6(-2.82%)",
+      "to": "▼2.6(-2.82%)",
+      "evidence": "OCR percentage and price implied move; AX differs"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "2535",
+      "from": "7O.7(-0.75%)",
+      "to": "▼0.7(-0.75%)",
+      "evidence": "matching AX price/change"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "3354",
+      "from": "72.15(-4.2%)",
+      "to": "▼2.15(-4.2%)",
+      "evidence": "matching AX price/change"
+    }
+  ],
+  "change_arithmetic_anomalies": [],
+  "notes": [
+    "ETF rising primary JSON price actually indicative NAV, screenshot confirms missing stock price; never populate from AX.",
+    "AX values may be adjacent or temporally shifted; never bulk-swap price/change; source snapshot retained.",
+    "validation checks code and names, not individual prices.",
+    "Normalized meta uses basic schema; source fields retained for downstream review."
+  ]
+}
