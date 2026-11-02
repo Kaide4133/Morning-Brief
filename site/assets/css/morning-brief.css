@@ -468,16 +468,10 @@ a:hover { text-decoration: underline; }
   align-items: start;
 }
 
-.water-level-head {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--ink-mute);
-}
-
 .wl-ring { position: relative; width: min(100%, 320px); aspect-ratio: 1; display: grid; place-items: center; margin: 0 0 12px; }
 .wl-splash { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.wl-center { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 68%; text-align: center; }
+.water-change { margin: 8px 0 0; color: var(--ink-soft); font-size: 13px; line-height: 1.35; white-space: nowrap; }
 .wl-percent {
   font-family: var(--mono);
   font-weight: 800;
