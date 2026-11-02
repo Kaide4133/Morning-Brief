@@ -11,11 +11,14 @@ import build_brief as builder
 class IndicatorsTest(unittest.TestCase):
     def setUp(self):
         self.store = load_store(Path(__file__).resolve().parents[1] / 'data/indicator-snapshots.json')
-        self.snapshot = self.store['snapshots'][0]
+        self.snapshot = next(s for s in self.store['snapshots'] if s['date'] == '2026-11-02' and s['revision'] == 1)
+        self.store = {'schema_version': 1, 'snapshots': [self.snapshot], 'publication_events': []}
 
     def test_actual_source_and_pending_publication(self):
         self.assertEqual([x['value'] for x in self.snapshot['indicators']], [28, 63, 15, 46, 14])
-        exported = builder.indicator_export([{'date': '2026-11-02', 'water_level': 83.7, 'taiex_close': None}, {'date':'2026-10-30','water_level':82.4,'taiex_close':1}])
+        from unittest.mock import patch
+        with patch.object(builder, 'load_store', return_value=self.store):
+            exported = builder.indicator_export([{'date': '2026-11-02', 'water_level': 83.7, 'taiex_close': None}, {'date':'2026-10-30','water_level':82.4,'taiex_close':1}])
         self.assertIsNone(exported['snapshots'][0]['available_at'])
         self.assertTrue(all(x is None for x in exported['rows'][0]['indicators'].values()))
 
