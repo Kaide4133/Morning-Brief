@@ -54,6 +54,9 @@
   const $ = id => document.getElementById(id);
   const data = JSON.parse($('water-comparison-data').textContent);
   const allRows = data.rows;
+  const indicatorNode = $('indicator-data');
+  const indicatorRows = indicatorNode ? JSON.parse(indicatorNode.textContent) : [];
+  const indicatorsByDate = new Map(indicatorRows.map(row => [row.date, row.indicators]));
   const svg = $('water-chart');
   const NS = 'http://www.w3.org/2000/svg';
   let rows = [], range = '90', selected = 0, geometry;
@@ -73,6 +76,11 @@
     selected = Math.max(0, Math.min(rows.length - 1, index));
     const row = rows[selected];
     $('selected-date').textContent = row.date;
+    const panel = $('indicator-selected');
+    if (panel) {
+      const vals = indicatorsByDate.get(row.date) || {};
+      panel.textContent = row.date + ' ｜ ' + ['全球散戶', '外資情緒', '位階增溫', '社交反指', '量能爆衝'].map(name => name + '：' + (number(vals[name]) ? vals[name] : '—')).join(' · ');
+    }
     $('selected-water').textContent = '水位 ' + (number(row.water_level) ? fmt(row.water_level, 1) + '%' : '無紀錄');
     const c = candle(row);
     $('selected-market').textContent = '加權 ' + (number(row.taiex_close) ? fmt(row.taiex_close) + ' 點' + (c ? '' : ' · K 線資料不足') : statusLabel(row.market_status));
@@ -108,6 +116,7 @@
     const waterY = value => bottom - value / 100 * (bottom - top);
     const marketY = value => bottom - (value - low) / (high - low) * (bottom - top);
     geometry = {x, waterY, marketY, left, right, top, bottom, width};
+    drawIndicators();
     for (let n = 0; n <= 4; n++) {
       const y = bottom - n / 4 * (bottom - top);
       add('line', {x1:left, x2:right, y1:y, y2:y, class:'grid'});
@@ -154,6 +163,31 @@
     svg.dataset.candleCount = marketCount;
     svg.dataset.rowCount = rows.length;
     svg.dataset.range = range;
+  }
+  function drawIndicators() {
+    const container = $('indicator-charts');
+    if (!container || !geometry) return;
+    container.replaceChildren();
+    for (const name of ['全球散戶', '外資情緒', '位階增溫', '社交反指', '量能爆衝']) {
+      const wrap = document.createElement('div'); wrap.className = 'indicator-chart';
+      const title = document.createElement('strong'); title.textContent = name + ' · 0–100'; wrap.appendChild(title);
+      const chart = document.createElementNS(NS, 'svg');
+      chart.setAttribute('viewBox', `0 0 ${geometry.width} 72`);
+      chart.setAttribute('role', 'img'); chart.setAttribute('aria-label', name + '，與上方圖表同日期，缺值不補');
+      const series = rows.map(row => ({date: row.date, value: indicatorsByDate.get(row.date)?.[name] ?? null}));
+      const y = value => 64 - value * 0.56;
+      add('line', {x1:geometry.left, x2:geometry.right, y1:64, y2:64, stroke:'#c6c6c6'}, null, chart);
+      add('path', {d:segments(series, 'value', geometry.x, y), fill:'none', stroke:'#566b78', 'stroke-width':2}, null, chart);
+      for (const item of series) if (number(item.value)) {
+        const dot = add('circle', {cx:geometry.x(item), cy:y(item.value), r:4, fill:'#566b78'}, null, chart);
+        add('title', {}, `${item.date} ${name} ${item.value}（估算標記見資料匯出）`, dot);
+        dot.setAttribute('tabindex', '0');
+        const choose = () => updateSelected(rows.findIndex(row => row.date === item.date));
+        dot.addEventListener('click', choose);
+        dot.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); choose(); } });
+      }
+      wrap.appendChild(chart); container.appendChild(wrap);
+    }
   }
   document.querySelectorAll('[data-range]').forEach(button => button.addEventListener('click', () => {
     range = button.dataset.range; rows = []; selected = 0;

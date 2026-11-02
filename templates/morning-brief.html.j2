@@ -123,6 +123,13 @@
           <div class="countdown-time" id="holdingCountdown" aria-live="polite">30<span class="blink">:</span>00</div>
         </div>
       </div>
+{% if indicator_display is defined %}
+      <div class="five-indicators" aria-label="方舟五指標">
+        <h3>方舟五指標</h3><p>約略估算 · 截圖時間 {{ indicator_display.captured_at }}{% if not indicator_display.previous_date %} · 前一交易日資料未有紀錄{% endif %}</p>
+        {% for item in indicator_display.rows %}<div class="indicator-row"><span>{{ item.name }}</span><div class="indicator-track" role="meter" aria-label="{{ item.name }}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ item.value }}"><i style="width:{{ item.value }}%"></i></div><b>{% if item.approximate %}約 {% endif %}{{ item.value }}</b><small>{% if item.difference is not none %}較 {{ indicator_display.previous_date }} {{ '%+g'|format(item.difference) }}{% else %}—{% endif %}</small></div>{% endfor %}
+        <a href="water-level.html#indicator-history">查看歷史比較 ↗</a>
+      </div>
+{% endif %}
     </div>
   </section>
 

@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@500;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/water-level.css?v=2">
   <script id="water-comparison-data" type="application/json">{{ comparison | tojson }}</script>
+  <script id="indicator-data" type="application/json">{{ indicator_data.rows | tojson }}</script>
   <script defer src="assets/js/water-level.js?v=2"></script>
 </head>
 <body>
@@ -41,6 +42,14 @@
     <p class="chart-note" id="coverage-note"></p>
     <p class="chart-note">兩軸單位不同，水位線與 K 線交會不代表買賣訊號。水位上升＝市場健康度／可部署空間增加；下降＝轉弱、宜審慎。這不是投資績效曲線。</p>
     <noscript><p class="chart-note">請啟用 JavaScript 查看互動線圖；下方仍可展開完整逐日明細。</p></noscript>
+  </section>
+  <section class="chart-panel" id="indicator-history" aria-labelledby="ind-heading">
+    <h2 id="ind-heading">方舟五指標歷史</h2>
+    <p class="chart-note">與上方水位及加權指數使用同一日期與期間；截圖估算，缺值不補、不推定方向意義。資料公開前不可用於回測。</p>
+    <p class="chart-note">CSV 是各日最新修訂版；模擬當時可知資訊，請用 JSON 的修訂與公開時間篩選。未標公開時間的紀錄不可視為當時已發布。</p>
+    <div id="indicator-selected" class="chart-note" aria-live="polite"></div>
+    <div id="indicator-charts" aria-label="五指標歷史圖"></div>
+    <p><a href="indicator-history.csv" download>下載 CSV</a> · <a href="indicator-history.json" download>下載 JSON（含紀錄與公開時間）</a></p>
   </section>
   <details class="archive"><summary><span>逐日明細</span><small>{{ records | length }} 筆水位紀錄</small></summary>
     <div class="table-wrap" tabindex="0" role="region" aria-label="逐日水位與加權指數明細">

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "snapshots": [
+    {
+      "date": "2026-11-02",
+      "revision": 1,
+      "captured_at": "2026-11-02T01:06:07Z",
+      "source_sha256": "8a49e035d320281fa499e4eab63a486ec7fce941a7c9531ea986d540d3b0fe5f",
+      "source_json_sha256": "750198ffc31840363d5aca11716f14c4be7e306c1ded6dea7052d73c6e326208",
+      "estimation_method_version": "ark-screenshot-angle-estimate-v1",
+      "indicators": [
+        {
+          "name": "全球散戶",
+          "value": 28,
+          "approximate": true
+        },
+        {
+          "name": "外資情緒",
+          "value": 63,
+          "approximate": true
+        },
+        {
+          "name": "位階增溫",
+          "value": 15,
+          "approximate": true
+        },
+        {
+          "name": "社交反指",
+          "value": 46,
+          "approximate": true
+        },
+        {
+          "name": "量能爆衝",
+          "value": 14,
+          "approximate": true
+        }
+      ]
+    }
+  ],
+  "publication_events": []
+}

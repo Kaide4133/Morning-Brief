@@ -5,15 +5,19 @@ from __future__ import annotations
 
 import argparse
 import copy
+import csv
+import io
 import json
 import re
 import shutil
 import sys
 from datetime import datetime
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from water_market import build_water_comparison
+from indicators import NAMES, load_store, latest_by_date, timestamp
 
 from scenario_classifier import (
     build_action_guidance,
@@ -175,7 +179,7 @@ def build_verdict_from_scenario(data: dict, scenario: dict, action_guidance: dic
     return {
         "level": label,
         "level_en": slug,
-        "reason": f"方舟水位 {wl}%（{direction}）；新版八情境判定為「{scenario['name']}」。{reason} 執行風險姿態：{risk_bias_label}。",
+        "reason": f"方舟水位 {wl}%（{direction}）；今日情境判讀為「{scenario['name']}」。{reason} 執行風險姿態：{risk_bias_label}。",
     }
 
 def normalize_zone_overlap(section: dict | None) -> None:
@@ -264,6 +268,20 @@ def enrich_issue(data: dict) -> dict:
     regenerated pages, index cards, and water-level history.
     """
     data = copy.deepcopy(data)
+    snapshots = latest_by_date(load_store(ROOT / 'data' / 'indicator-snapshots.json'))
+    observation = snapshots.get(data['date'])
+    if data['date'] >= '2026-11-02' and observation is None:
+        raise ValueError('Five-indicator snapshot required for this issue date; import its explicitly dated source before building.')
+    if observation:
+        ark = data.get('ark', {})
+        previous_date = ark.get('previous_trading_date') if ark.get('comparison_is_provisional') is False else None
+        previous = snapshots.get(previous_date)
+        previous_values = {v['name']: v['value'] for v in previous['indicators']} if previous and previous['estimation_method_version'] == observation['estimation_method_version'] else {}
+        data['indicator_display'] = {
+            'captured_at': datetime.fromisoformat(observation['captured_at'].replace('Z', '+00:00')).astimezone(ZoneInfo('Asia/Taipei')).strftime('%Y/%m/%d %H:%M:%S 台北時間'),
+            'rows': [{**v, 'difference': round(v['value'] - previous_values[v['name']], 2) if v['name'] in previous_values else None} for v in observation['indicators']],
+            'previous_date': previous_date if previous else None,
+        }
     normalize_zone_overlap(data.get("etf"))
     normalize_zone_overlap(data.get("stocks"))
     normalize_zone_cards(data.get("etf"))
@@ -331,6 +349,8 @@ def sync_water_level(data: dict) -> None:
 
     store = load_json(WATER_HISTORY) if WATER_HISTORY.exists() else {"records": []}
     records = store.get("records", [])
+    old = next((r for r in records if r['date'] == data['date']), {})
+    entry = {**old, **entry}
     records = [r for r in records if r["date"] != data["date"]]
     records.append(entry)
     records.sort(key=lambda r: r["date"], reverse=True)
@@ -649,6 +669,12 @@ def render_water_level(issues: list[dict], refresh_market: bool = True) -> str:
     env = build_env()
     records = load_water_records()
     comparison = build_water_comparison(records, ROOT, refresh=refresh_market)
+    indicator_data = indicator_export(comparison['rows'])
+    comparison_dates = {row['date'] for row in comparison['rows']}
+    for row in indicator_data['rows']:
+        if row['date'] not in comparison_dates:
+            comparison['rows'].append({'date': row['date'], 'water_level': None, 'taiex_open': None, 'taiex_high': None, 'taiex_low': None, 'taiex_close': None, 'market_status': 'missing'})
+    comparison['rows'].sort(key=lambda row: row['date'])
     refresh_error = comparison.pop("refresh_error", None)
     if refresh_error:
         print(f"Water chart source warning: {refresh_error}", file=sys.stderr)
@@ -664,6 +690,7 @@ def render_water_level(issues: list[dict], refresh_market: bool = True) -> str:
     return tpl.render(
         records=records,
         comparison=comparison,
+        indicator_data=indicator_data,
         latest={
             "water_level": records[0]["water_level"] if records else "—",
             "date_display": records[0]["date_display"] if records else "—",
@@ -671,6 +698,20 @@ def render_water_level(issues: list[dict], refresh_market: bool = True) -> str:
         },
         latest_brief_url=latest_ctx["filename"] if latest_ctx else "index.html",
     )
+
+
+def indicator_export(comparison_rows):
+    store = load_store(ROOT / 'data' / 'indicator-snapshots.json')
+    snapshots = latest_by_date(store)
+    market = {r['date']: r for r in comparison_rows}
+    rows = []
+    for date in sorted(set(market) | set(snapshots)):
+        source = snapshots.get(date)
+        values = {v['name']: v['value'] for v in source['indicators']} if source else {}
+        rows.append({'date': date, 'water_level': market.get(date, {}).get('water_level'), 'taiex_close': market.get(date, {}).get('taiex_close'), 'indicators': {n: values.get(n) for n in NAMES}})
+    events = {(e['date'], e['revision']): e['available_at'] for e in store['publication_events']}
+    published = [{**s, 'available_at': events.get((s['date'], s['revision'])), 'first_publication': min((e['available_at'] for e in store['publication_events'] if e['date'] == s['date']), key=timestamp, default=None)} for s in store['snapshots']]
+    return {'schema_version': 1, 'rows': rows, 'snapshots': published, 'publication_events': store['publication_events']}
 
 
 def list_issue_files() -> list[Path]:
@@ -681,6 +722,19 @@ def list_issue_files() -> list[Path]:
 
 def load_all_issues() -> list[dict]:
     return [load_json(p) for p in list_issue_files()]
+
+
+def should_update_latest_context(issue_date: str) -> bool:
+    """Backfills must not move latest backwards; corrupt state fails closed."""
+    datetime.strptime(issue_date, "%Y-%m-%d")
+    if not CONTEXT_LATEST.exists():
+        return True
+    current = load_json(CONTEXT_LATEST)
+    current_date = current.get("date") if isinstance(current, dict) else None
+    if not isinstance(current_date, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", current_date):
+        raise ValueError(f"Invalid latest context date in {CONTEXT_LATEST}")
+    datetime.strptime(current_date, "%Y-%m-%d")
+    return issue_date >= current_date
 
 
 def export_morning_context(
@@ -699,9 +753,11 @@ def export_morning_context(
     )
     if write:
         date_slug = datetime.strptime(data["date"], "%Y-%m-%d").strftime("%Y%m%d")
-        save_json(CONTEXT_LATEST, context)
+        update_latest = should_update_latest_context(data["date"])
+        if update_latest:
+            save_json(CONTEXT_LATEST, context)
+            print(f"Wrote {CONTEXT_LATEST}")
         save_json(CONTEXT_DIR / f"{date_slug}.json", context)
-        print(f"Wrote {CONTEXT_LATEST}")
         print(f"Wrote {CONTEXT_DIR / f'{date_slug}.json'}")
     return context
 
@@ -719,8 +775,8 @@ def build_one(json_path: Path, write: bool = True) -> Path:
     normalize_zone_cards(data.get("stocks"))
     scenario_map = load_json(SCENARIO_MAP)
     effective, _classified, _override = resolve_scenario_for_build(data, scenario_map)
-    sync_water_level(data)
-    export_morning_context(data, json_path, effective, write=write)
+    # Construct context and validate the entire rendered issue before any writes.
+    export_morning_context(data, json_path, effective, write=False)
     ctx = enrich_issue(data)
     html = render_brief(ctx)
     validate_no_legacy_scenario_terms(html, output_name=ctx["filename"])
@@ -728,6 +784,9 @@ def build_one(json_path: Path, write: bool = True) -> Path:
     validate_reader_simplicity(data, html)
     out = SITE / ctx["filename"]
     if write:
+        should_update_latest_context(data["date"])
+        sync_water_level(data)
+        export_morning_context(data, json_path, effective, write=True)
         SITE.mkdir(parents=True, exist_ok=True)
         out.write_text(html, encoding="utf-8")
         print(f"Wrote {out}")
@@ -753,11 +812,22 @@ def build_water_level_page(write: bool = True) -> Path:
     validate_no_legacy_scenario_terms(html, output_name="water-level.html")
     out = SITE / "water-level.html"
     if write:
+        comparison = build_water_comparison(load_water_records(), ROOT, refresh=False)
+        exported = indicator_export(comparison['rows'])
+        csv_file = io.StringIO(newline='')
+        writer = csv.writer(csv_file)
+        writer.writerow(['date', 'water_level', 'taiex_close', *NAMES, 'revision', 'captured_at', 'available_at', 'first_publication', 'source_sha256', 'estimation_method_version', 'approximate_flags'])
+        latest = latest_by_date({'snapshots': exported['snapshots']})
+        for row in exported['rows']:
+            snap = latest.get(row['date'], {})
+            writer.writerow([row['date'], row['water_level'], row['taiex_close'], *(row['indicators'][n] for n in NAMES), snap.get('revision'), snap.get('captured_at'), snap.get('available_at'), snap.get('first_publication'), snap.get('source_sha256'), snap.get('estimation_method_version'), json.dumps({v['name']: v['approximate'] for v in snap.get('indicators', [])}, ensure_ascii=False) if snap else None])
         # Keep this utility page and its assets consistent on every daily build.
         for destination in (ROOT, SITE, ROOT / "site"):
             destination.mkdir(parents=True, exist_ok=True)
             target = destination / "water-level.html"
             target.write_text(html, encoding="utf-8")
+            (destination / 'indicator-history.json').write_text(json.dumps(exported, ensure_ascii=False, indent=2, allow_nan=False) + '\n', encoding='utf-8')
+            (destination / 'indicator-history.csv').write_text(csv_file.getvalue(), encoding='utf-8')
             for asset in ("css/water-level.css", "js/water-level.js"):
                 source = ROOT / "assets" / asset
                 dest = destination / "assets" / asset

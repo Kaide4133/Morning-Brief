@@ -550,7 +550,7 @@ def build_leader_policy(data: dict, water: dict, action_guidance: dict, scenario
     if risk_bias == "risk_off":
         short_term_bias = "reduce_risk_review"
         posture = "risk_off"
-        default_policy = "水位急降且風險預算收縮，暫停新增曝險；先檢查過熱、非護城河與槓桿風險。"
+        default_policy = "目前情境要求風險收縮，暫停新增曝險；先檢查過熱、非護城河與槓桿風險。"
     elif risk_bias == "event_wait":
         short_term_bias = "event_wait"
         posture = "event_wait"
@@ -600,7 +600,7 @@ def build_leader_policy(data: dict, water: dict, action_guidance: dict, scenario
         "water_policy": {
             "direction": direction,
             "change": change,
-            "interpretation": default_policy,
+            "interpretation": (data.get("ark") or {}).get("interpretation") or default_policy,
         },
         "scenario_context": {
             "id": scenario_out.get("id"),
@@ -649,6 +649,9 @@ def build_morning_context(
         "change": delta,
         "direction": _water_direction(delta),
     }
+    for key in ("previous_trading_date", "comparison_date", "comparison_is_provisional"):
+        if key in (data.get("ark") or {}):
+            water_out[key] = data["ark"][key]
     leader_policy = build_leader_policy(data, water_out, enriched_guidance, scenario_out)
 
     return {

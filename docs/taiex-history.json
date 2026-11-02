@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source_name": "Taiwan Stock Exchange (TWSE) MI_5MINS_HIST",
-  "retrieved_at": "2026-11-02T10:01:30+08:00",
+  "retrieved_at": "2026-11-02T17:02:34+08:00",
   "months": {
     "2026-05": {
       "status": "complete",
@@ -49,6 +49,17 @@
       "row_count": 19,
       "fallback_after": [
         "https://www.twse.com.tw/rwd/zh/indicesReport/MI_5MINS_HIST?date=20261001&response=json: Expecting value: line 1 column 1 (char 0)"
+      ]
+    },
+    "2026-11": {
+      "status": "partial",
+      "coverage_end": "2026-11-02",
+      "request_url": "https://www.twse.com.tw/indicesReport/MI_5MINS_HIST?response=json&date=20261101",
+      "retrieved_at": "2026-11-02T17:02:34+08:00",
+      "row_count": 1,
+      "fallback_after": [
+        "https://openapi.twse.com.tw/v1/indicesReport/MI_5MINS_HIST: TWSE row outside requested month: 2026-10-01",
+        "https://www.twse.com.tw/rwd/zh/indicesReport/MI_5MINS_HIST?date=20261101&response=json: Expecting value: line 1 column 1 (char 0)"
       ]
     }
   },
@@ -783,136 +794,143 @@
     },
     {
       "date": "2026-10-01",
+      "close": 48353.49,
       "open": 47961.98,
       "high": 48353.49,
-      "low": 47893.42,
-      "close": 48353.49
+      "low": 47893.42
     },
     {
       "date": "2026-10-02",
+      "close": 48475.74,
       "open": 48390.65,
       "high": 48491.62,
-      "low": 48205.81,
-      "close": 48475.74
+      "low": 48205.81
     },
     {
       "date": "2026-10-05",
+      "close": 49712.04,
       "open": 48574.95,
       "high": 49770.66,
-      "low": 48574.95,
-      "close": 49712.04
+      "low": 48574.95
     },
     {
       "date": "2026-10-06",
+      "close": 49822.55,
       "open": 49736.37,
       "high": 49968.92,
-      "low": 49479.69,
-      "close": 49822.55
+      "low": 49479.69
     },
     {
       "date": "2026-10-07",
+      "close": 49806.37,
       "open": 49857.32,
       "high": 49966.89,
-      "low": 49567.52,
-      "close": 49806.37
+      "low": 49567.52
     },
     {
       "date": "2026-10-08",
+      "close": 49313.44,
       "open": 49783.06,
       "high": 49783.06,
-      "low": 49189.77,
-      "close": 49313.44
+      "low": 49189.77
     },
     {
       "date": "2026-10-12",
+      "close": 49301.96,
       "open": 49272.08,
       "high": 49412.9,
-      "low": 48768.82,
-      "close": 49301.96
+      "low": 48768.82
     },
     {
       "date": "2026-10-13",
+      "close": 48341.31,
       "open": 49126.27,
       "high": 49126.27,
-      "low": 48066.36,
-      "close": 48341.31
+      "low": 48066.36
     },
     {
       "date": "2026-10-14",
+      "close": 48625.83,
       "open": 48382.64,
       "high": 49059.12,
-      "low": 48382.64,
-      "close": 48625.83
+      "low": 48382.64
     },
     {
       "date": "2026-10-15",
+      "close": 46969.87,
       "open": 48382.75,
       "high": 48382.75,
-      "low": 46795.38,
-      "close": 46969.87
+      "low": 46795.38
     },
     {
       "date": "2026-10-16",
+      "close": 47111.26,
       "open": 46995.03,
       "high": 47520.6,
-      "low": 46995.03,
-      "close": 47111.26
+      "low": 46995.03
     },
     {
       "date": "2026-10-19",
+      "close": 46822.08,
       "open": 46844.64,
       "high": 46844.64,
-      "low": 46170.0,
-      "close": 46822.08
+      "low": 46170.0
     },
     {
       "date": "2026-10-20",
+      "close": 46292.93,
       "open": 46712.57,
       "high": 46967.91,
-      "low": 46163.03,
-      "close": 46292.93
+      "low": 46163.03
     },
     {
       "date": "2026-10-21",
+      "close": 46887.77,
       "open": 46454.33,
       "high": 47254.93,
-      "low": 46454.33,
-      "close": 46887.77
+      "low": 46454.33
     },
     {
       "date": "2026-10-22",
+      "close": 46041.43,
       "open": 46942.75,
       "high": 47332.18,
-      "low": 46041.43,
-      "close": 46041.43
+      "low": 46041.43
     },
     {
       "date": "2026-10-27",
+      "close": 46096.23,
       "open": 46211.2,
       "high": 46585.45,
-      "low": 45676.67,
-      "close": 46096.23
+      "low": 45676.67
     },
     {
       "date": "2026-10-28",
+      "close": 47035.58,
       "open": 46402.79,
       "high": 47060.46,
-      "low": 46402.79,
-      "close": 47035.58
+      "low": 46402.79
     },
     {
       "date": "2026-10-29",
+      "close": 46368.33,
       "open": 47014.87,
       "high": 47015.45,
-      "low": 46055.07,
-      "close": 46368.33
+      "low": 46055.07
     },
     {
       "date": "2026-10-30",
+      "close": 45211.83,
       "open": 46139.79,
       "high": 46139.79,
-      "low": 44726.26,
-      "close": 45211.83
+      "low": 44726.26
+    },
+    {
+      "date": "2026-11-02",
+      "open": 45034.53,
+      "high": 45156.17,
+      "low": 44399.1,
+      "close": 44920.14
     }
   ]
 }

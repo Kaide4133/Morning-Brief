@@ -1265,3 +1265,5 @@ a:hover { text-decoration: underline; }
   .capital-flow-line:last-child { border-bottom: 0; }
   .deep-dive > summary { padding: 18px 20px; align-items: flex-start; }
 }
+
+.five-indicators{margin-top:24px;padding:20px;border:1px solid #c6c6c6;background:#f7f7f5}.five-indicators h3{margin:0}.five-indicators p{font-size:.8rem;color:#62666a;margin:5px 0 14px}.indicator-row{display:grid;grid-template-columns:5em minmax(40px,1fr) 4em minmax(2em,auto);align-items:center;gap:10px;margin:9px 0;font-size:.88rem}.indicator-track{height:6px;background:#ddd}.indicator-track i{display:block;height:100%;background:#64727a}.indicator-row b,.indicator-row small{white-space:nowrap}.five-indicators a{font-size:.8rem}@media(max-width:480px){.indicator-row{grid-template-columns:4.5em minmax(30px,1fr) 3.5em auto;gap:5px;font-size:.76rem}}
