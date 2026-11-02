@@ -476,13 +476,17 @@ a:hover { text-decoration: underline; }
   color: var(--ink-mute);
 }
 
+.wl-ring { position: relative; width: min(100%, 320px); aspect-ratio: 1; display: grid; place-items: center; margin: 0 0 12px; }
+.wl-splash { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .wl-percent {
   font-family: var(--mono);
   font-weight: 800;
   font-size: clamp(56px, 8vw, 88px);
   line-height: 1;
   color: var(--blood);
-  margin: 8px 0 16px;
+  position: relative;
+  margin: 0;
+  font-size: clamp(40px, 7vw, 64px);
 }
 
 .wl-percent span { font-size: 0.45em; }
@@ -1266,4 +1270,9 @@ a:hover { text-decoration: underline; }
   .deep-dive > summary { padding: 18px 20px; align-items: flex-start; }
 }
 
-.five-indicators{margin-top:24px;padding:20px;border:1px solid #c6c6c6;background:#f7f7f5}.five-indicators h3{margin:0}.five-indicators p{font-size:.8rem;color:#62666a;margin:5px 0 14px}.indicator-row{display:grid;grid-template-columns:5em minmax(40px,1fr) 4em minmax(2em,auto);align-items:center;gap:10px;margin:9px 0;font-size:.88rem}.indicator-track{height:6px;background:#ddd}.indicator-track i{display:block;height:100%;background:#64727a}.indicator-row b,.indicator-row small{white-space:nowrap}.five-indicators a{font-size:.8rem}@media(max-width:480px){.indicator-row{grid-template-columns:4.5em minmax(30px,1fr) 3.5em auto;gap:5px;font-size:.76rem}}
+.five-indicators { margin-top: 24px; padding: 20px 24px; background: #211916; border: 1px solid #4a3931; color: var(--paper); }
+.indicator-row { display: grid; grid-template-columns: 5em minmax(40px, 1fr) 3em; align-items: center; gap: 14px; margin: 12px 0; font-size: .88rem; }
+.indicator-track { height: 7px; background: #51423b; overflow: hidden; }
+.indicator-track i { display: block; height: 100%; background: #c95a66; }
+.indicator-row b { text-align: right; font-family: var(--mono); color: var(--paper); }
+@media (max-width: 480px) { .five-indicators { padding: 16px; } .indicator-row { grid-template-columns: 4.5em minmax(30px, 1fr) 2.5em; gap: 8px; font-size: .76rem; } }

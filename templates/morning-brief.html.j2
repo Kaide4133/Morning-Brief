@@ -111,7 +111,20 @@
       <div class="dashboard-grid">
         <div>
           <div class="water-level-head">方舟建議持股水位</div>
-          <div class="wl-percent">{{ ark.water_level }}<span>%</span></div>
+          <div class="wl-ring">
+            <svg class="wl-splash" viewBox="0 0 320 320" aria-hidden="true" focusable="false">
+              <defs><linearGradient id="splash-blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dbfaff" stop-opacity=".85"/><stop offset=".38" stop-color="#53cde7" stop-opacity=".75"/><stop offset=".72" stop-color="#087ca9" stop-opacity=".8"/><stop offset="1" stop-color="#b4f4ff" stop-opacity=".9"/></linearGradient></defs>
+              <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M62 177 C48 127 76 76 127 59 C170 43 229 60 254 101 C280 143 269 200 235 237 C200 274 137 278 91 250 C72 238 60 222 55 207" stroke="url(#splash-blue)" stroke-width="17" opacity=".6"/>
+                <path d="M55 183 C45 136 69 87 105 69 M124 58 C164 39 218 51 248 87 M267 117 C282 159 266 209 239 235 M223 248 C185 274 133 274 99 253 M81 239 C62 224 54 209 51 193" stroke="#138cb8" stroke-width="4" opacity=".75"/>
+                <path d="M68 162 C69 116 88 87 124 73 C167 54 220 72 242 105 M252 132 C265 171 250 215 216 239 C186 261 133 262 103 241 M92 234 C75 217 70 200 69 184" stroke="#d4faff" stroke-width="5" opacity=".8"/>
+                <path d="M79 116 Q90 89 114 78 M208 71 Q241 84 253 113 M250 189 Q239 226 208 242 M144 260 Q112 257 91 239" stroke="#6dddf1" stroke-width="9" opacity=".5"/>
+                <path d="M49 152 Q36 134 44 120 M69 103 Q62 80 77 70 M103 66 Q105 47 119 36 M223 66 Q241 47 247 40 M257 96 Q280 91 288 77 M272 172 Q291 177 298 192 M250 224 Q266 243 261 256 M186 268 Q186 286 172 294 M97 251 Q83 267 70 267 M52 207 Q32 212 25 205" stroke="#36afd0" stroke-width="3" opacity=".7"/>
+              </g>
+              <g fill="#55cbe6" opacity=".7"><circle cx="41" cy="107" r="3"/><circle cx="74" cy="59" r="3.5"/><circle cx="121" cy="29" r="2"/><circle cx="251" cy="31" r="3"/><circle cx="295" cy="71" r="3"/><circle cx="302" cy="199" r="2.5"/><circle cx="263" cy="264" r="3"/><circle cx="165" cy="299" r="2"/><circle cx="61" cy="269" r="3"/><circle cx="20" cy="202" r="2"/><circle cx="36" cy="220" r="1.5"/><circle cx="283" cy="111" r="2"/></g>
+            </svg>
+            <div class="wl-percent">{{ ark.water_level }}<span>%</span></div>
+          </div>
           <div class="wl-bar" role="meter" aria-valuenow="{{ ark.water_level }}" aria-valuemin="0" aria-valuemax="100">
             <div class="wl-fill" style="inset: 0 {{ ark.water_inset_right }}% 0 0"></div>
           </div>
@@ -125,9 +138,7 @@
       </div>
 {% if indicator_display is defined %}
       <div class="five-indicators" aria-label="方舟五指標">
-        <h3>方舟五指標</h3><p>約略估算 · 截圖時間 {{ indicator_display.captured_at }}{% if not indicator_display.previous_date %} · 前一交易日資料未有紀錄{% endif %}</p>
-        {% for item in indicator_display.rows %}<div class="indicator-row"><span>{{ item.name }}</span><div class="indicator-track" role="meter" aria-label="{{ item.name }}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ item.value }}"><i style="width:{{ item.value }}%"></i></div><b>{% if item.approximate %}約 {% endif %}{{ item.value }}</b><small>{% if item.difference is not none %}較 {{ indicator_display.previous_date }} {{ '%+g'|format(item.difference) }}{% else %}—{% endif %}</small></div>{% endfor %}
-        <a href="water-level.html#indicator-history">查看歷史比較 ↗</a>
+        {% for item in indicator_display.rows %}<div class="indicator-row"><span>{{ item.name }}</span><div class="indicator-track" role="meter" aria-label="{{ item.name }}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ item.value }}"><i style="width:{{ item.value }}%"></i></div><b>{{ item.value }}</b></div>{% endfor %}
       </div>
 {% endif %}
     </div>

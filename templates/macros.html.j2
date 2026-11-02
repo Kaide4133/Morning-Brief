@@ -15,8 +15,8 @@
 {% macro section_head(section_id, num_label, title, tag, icon_key) -%}
 <div class="section-head">
   <div class="section-num-block">
-    {{ icons[icon_key] | safe }}
-    <div class="section-num"><small>{{ num_label }}</small>{{ section_id }}</div>
+    {% if icon_key != "I" %}{{ icons[icon_key] | safe }}
+    {% endif %}<div class="section-num"><small>{{ num_label }}</small>{{ section_id }}</div>
   </div>
   <h2 class="section-title">{{ title }}</h2>
   <span class="section-tag">{{ tag }}</span>
