@@ -1,0 +1,187 @@
+{
+  "cutoff": "2026-11-03T10:30:00+08:00",
+  "scope": "Taiwan morning overnight; cutoff fixed, no post-cutoff claims; older flow dates explicitly marked",
+  "price_snapshots": [
+    {
+      "asset": "US equities",
+      "session": "2026-11-02 regular close ET",
+      "SP500": {
+        "close": 7541.4,
+        "pct": -0.51
+      },
+      "Nasdaq": {
+        "close": 25164.32,
+        "pct": -1.07
+      },
+      "Dow": {
+        "close": 51983.98,
+        "pct": 0.41
+      },
+      "source": "https://www.cnbc.com/2026/11/01/stock-market-today-live-updates.html",
+      "interpretation": "tech underperformed old-economy stocks; do not infer actual capital flow from prices"
+    },
+    {
+      "asset": "BTC, ETH, DXY",
+      "source_updated": "2026-11-02T14:24:00-05:00",
+      "BTC_USD": 76645.42,
+      "BTC_change_pct": -1.5,
+      "ETH_USD": 2236.5,
+      "ETH_change_pct": -1.14,
+      "ETH_BTC_calculated": 0.02917982574823127,
+      "DXY": 101.76,
+      "DXY_change_pct": -0.22,
+      "source": "https://www.kansas.com/news/business/article317877174.html",
+      "warning": "same Reuters article snapshot, ratio computed from rounded contemporaneous component quotes; not exchange pair close, percentage comparison does not prove sustained relative strength"
+    },
+    {
+      "asset": "gold",
+      "asof": "2026-11-02T09:11:00-05:00",
+      "spot_USD_oz": 3942.57,
+      "change_pct": 1.74,
+      "source": "https://www.fidelity.com/news/article/international/202611020931RTRSNEWSCOMBINED_L2N46J0H3_1",
+      "evidence": "Reuters indexed body, extract blocked; earlier intraday snapshot not close"
+    },
+    {
+      "asset": "US Treasury",
+      "asof": "Reuters Nov 2 17:30 EST update; Taipei Nov 3 06:30",
+      "ten_year_yield_pct": 4.9145,
+      "thirty_year_yield_pct": 5.2868,
+      "source": "https://www.sacbee.com/news/nation-world/national/article317893416.html",
+      "evidence": "Reuters indexed excerpt; intraday indicative not official close"
+    },
+    {
+      "asset": "oil",
+      "session": "Nov 2 2026 settlement",
+      "brent_USD": 104.77,
+      "brent_pct": -7.63,
+      "WTI_USD": 96.46,
+      "WTI_pct": -7.36,
+      "source": "https://www.cnbc.com/2026/11/01/stock-market-today-live-updates.html"
+    }
+  ],
+  "flows": [
+    {
+      "asset": "BTC spot ETF US",
+      "session": "2026-10-30",
+      "total_USD_m": -643.2,
+      "source": "https://bitcoinalmanack.com/etfs/bitcoin-etf-flow-tracker/",
+      "secondary": "https://www.cryptotimes.io/2026/11/02/traders-are-selling-bitcoin-and-ethereum-ahead-of-us-midterms/",
+      "fund_values_USD_m": {
+        "IBIT": -233.7,
+        "FBTC": -201.0,
+        "BITB": -25.7,
+        "ARKB": -129.5,
+        "BTCO": 0,
+        "EZBC": 0,
+        "BRRR": 0,
+        "HODL": 0,
+        "BTCW": 0,
+        "MSBT": 0,
+        "GBTC": -53.3,
+        "BTC": 0
+      },
+      "sum_USD_m": -643.2,
+      "completeness": "12 tracked funds sum matches total, tracker search snapshot Nov 2 19:30 EST says final; extracted page version stale Oct 20, direct Farside Cloudflare blocked, confidence medium; indexed result only for full final row",
+      "not_Nov2_flow": true,
+      "other_vendor_disagreement": "Spectre total -643.3m, rounded ARKB discrepancy, do not combine vendors"
+    },
+    {
+      "asset": "ETH spot ETF US",
+      "session": "2026-10-30",
+      "total_USD_m": -155.7,
+      "source": "https://www.cryptotimes.io/2026/11/02/traders-are-selling-bitcoin-and-ethereum-ahead-of-us-midterms/",
+      "other_vendor_total_USD_m": -155.8,
+      "other_vendor_url": "https://spectreai.io/bitcoin-etf-flows",
+      "partial_spectre_shown_funds_sum_USD_m": -155.0,
+      "completeness": "secondary reported total only; displayed five nonzero funds sum -155.0m, missing 0.8m vs Spectre total; direct Farside stale or blocked, cannot validate full row; indicative not validated final"
+    },
+    {
+      "asset": "BTC/ETH spot ETF US",
+      "session": "2026-11-02",
+      "total_USD_m": null,
+      "completeness": "No validated completed fund-level rows found by cutoff; pending not zero. Lookonchain Nov 2 holdings estimates not interchangeable with end-of-day creations/redemptions."
+    },
+    {
+      "asset": "gold ETF",
+      "session": "week through 2026-10-30",
+      "source": "https://www.gold.org/goldhub/gold-focus/2026/11/weekly-markets-monitor-leveraged-repricers",
+      "source_pdf": "https://www.gold.org/download/file/21327/WMM_2_Nov_2026_Leveraged_Repricers.pdf",
+      "completeness": "WGC commentary says US ETF flows benign; no verified numeric aggregate; WGC PDF indexed text says North American and European inflows, but avoid quantified total without validated chart rows."
+    },
+    {
+      "asset": "Binance customer net withdrawals",
+      "window_UTC": "2026-11-01 06:00–15:30 UTC",
+      "net_USD_bn": -3.64,
+      "source": "https://www.gmanetwork.com/news/money/companies/1007959/binance-sees-spike-in-withdrawals-as-exchange-returns-online-after-6-3-billion-heist/story/",
+      "attribution": "Binance per Reuters; exchange user net withdrawal not ETF or market-wide investor flows; DefiLlama alternative differed, disputed by Binance"
+    }
+  ],
+  "news": [
+    {
+      "headline": "Apple fiscal Q4 earnings",
+      "published_date": "2026-11-02",
+      "time_ET": "16:30 ET per Business Wire syndication",
+      "sources": [
+        "https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/",
+        "https://www.newsobserver.com/news/business/article317890224.html",
+        "https://www.earningswhispers.com/epsdetails/AAPL/202609"
+      ],
+      "facts": "Revenue $114.5bn +12% YoY, diluted EPS $2.10 including $0.05 tariff refund, gross margin 47.9% including about 1pp tariff refunds. Reuters: iPhone $57.58bn, estimates $56.54bn.",
+      "taiwan_inference": "iPhone supply chain and electronics assemblers sentiment; company-level orders and margins unverified; results not same as new orders."
+    },
+    {
+      "headline": "Marvell-Lumentum definitive agreement",
+      "published_date": "2026-11-02",
+      "time": "exact announcement timestamp not checked",
+      "sources": [
+        "https://investor.marvell.com/sec-filings/all-sec-filings/content/0001193125-26-442714/d81187dex991.htm",
+        "https://www.cnbc.com/2026/11/01/stock-market-today-live-updates.html"
+      ],
+      "facts": "$115bn implied enterprise value, all stock, 4.5 Marvell shares per Lumentum share; expected H1 2028 subject to approvals; Nov 2 Marvell nearly -13%, Lumentum -18%.",
+      "taiwan_inference": "AI optics, high-speed networking and PCB/CCL sentiment and competitive structure; proposed not closed, not proof of Taiwan orders or revenue."
+    },
+    {
+      "headline": "Taiwan October PMI slowed but remained expansionary",
+      "published_date": "2026-11-02",
+      "source": "https://morningstar.com/news/dow-jones/20261102336/asias-factory-activity-buoyed-by-ai-demand-but-cracks-emerge",
+      "facts": "54.9 versus 56.7 in September; Dow Jones reports slower new order growth, AI components remained strong and supplier delays lengthened.",
+      "taiwan_inference": "exporters and manufacturing supply chains face input/freight pressure; PMI >50 remains growth not contraction.",
+      "source_version_timestamp": "Nov 2 06:10 source timezone not confirmed"
+    },
+    {
+      "headline": "Binance withdrawals and recovery",
+      "published_date": "2026-11-02",
+      "source": "https://www.gmanetwork.com/news/money/companies/1007959/binance-sees-spike-in-withdrawals-as-exchange-returns-online-after-6-3-billion-heist/story/",
+      "facts": "Reuters reports company claim 95% of $6.3bn stolen assets covered; withdrawals phased; $3.64bn net Nov 1 in 9.5 hours.",
+      "taiwan_inference": "crypto-linked risk sentiment and related exchange/cybersecurity exposures; no direct listed company order/revenue conclusion."
+    },
+    {
+      "headline": "Oil decline on diplomatic hopes",
+      "source": "https://www.cnbc.com/2026/11/01/stock-market-today-live-updates.html",
+      "published_date": "2026-11-02",
+      "facts": "Brent and WTI settlement down 7.63% and 7.36%; diplomatic hopes, not peace agreement.",
+      "taiwan_inference": "potential fuel-cost relief to airlines and shipping; petrochemical inventory risks; actual effects depend hedges and contracts."
+    }
+  ],
+  "social_verification": {
+    "status": "unavailable, not no-posts",
+    "x_search": "spending-limit block",
+    "direct_browser": "elonmusk and realDonaldTrump profiles HTTP 403; no material original status or timestamp directly verified",
+    "policy": "Do not fabricate direct statements or claim no posts; Reuters attribution stays attributed."
+  },
+  "limitations": [
+    "search results and web extract can show different cached versions; preserve provenance and timestamp",
+    "All news release dates verified; exact publication times not uniformly available",
+    "No gold numeric weekly aggregate verified",
+    "No Nov 2 final BTC or ETH ETF complete flow validated",
+    "Never infer inflow from price increase"
+  ],
+  "created_at": "2026-11-03T10:32:13.012160+08:00",
+  "parent_verification": {
+    "Farside": "cache-busted primary BTC/ETH tables reopened; 10/30 sums verified; 11/2 missing IBIT/HODL and ETHA/ETHB/ETHV => incomplete, no aggregate claim",
+    "Apple": "official release and CNBC guidance body reopened; includes weaker margin outlook",
+    "Marvell": "official 8-K exhibit reopened",
+    "gold": "WGC full dated commentary reopened; no unsupported numerical global flow",
+    "WorldMonitor": "news discovery queried; no unverified additional claims promoted"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-11-03",
+  "valid_for_trading_date": "2026-11-03",
+  "data_as_of": "2026-11-03",
+  "stale": false,
+  "issue_no": 116,
+  "scenario": {
+    "id": "06",
+    "slug": "risk-contraction",
+    "label": "風險收縮",
+    "confidence": 1.0,
+    "reason": "水位上升改善配置環境，但昨日外資賣超、隔夜費半續跌與今日早盤逾1%跌幅，支持保留資金彈性；不是水位轉差。",
+    "source": "manual_override",
+    "classifier_suggestion": "06"
+  },
+  "water": {
+    "level": 84.9,
+    "previous": 83.7,
+    "change": 1.2,
+    "direction": "rising",
+    "previous_trading_date": "2026-11-02",
+    "comparison_date": "2026-11-02",
+    "comparison_is_provisional": false
+  },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "reduce_risk_review",
+    "risk_posture": "risk_off",
+    "water_policy": {
+      "direction": "rising",
+      "change": 1.2,
+      "interpretation": "方舟水位84.9%，較前一交易日11/2的83.7%上升1.2個百分點；配置環境改善，但價格與賣壓尚未同步轉強。"
+    },
+    "scenario_context": {
+      "id": "06",
+      "label": "風險收縮",
+      "confidence": 1.0
+    },
+    "policy_focus": [
+      "資金有限先控持有總額，再用價值區整理候選；不因跌深或單一題材急追。",
+      "昨日賣超不等於今日流向；看早盤低點能否守住、反彈能否延續。",
+      "10:30加權跌1.07%；昨日外資賣超735.21億元，費半跌3.37%。",
+      "Apple公布季度營收1,145億美元、年增12%；但CNBC轉述下季毛利率展望45%–46%，低於市場預期，盤後股價跌約3%。蘋果供應鏈需求與成本壓力須分開看，不能只讀營收成長。"
+    ],
+    "systemic_risk": "高",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
+  "action_guidance": {
+    "risk_bias": "risk_off",
+    "allow_add": false,
+    "allow_trim": true,
+    "deploy_mode": "reduce_exposure",
+    "trim": {
+      "allowed": true,
+      "mode": "reduce_exposure",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": false,
+      "mode": "disabled",
+      "conditions": [
+        "risk_off_no_new_exposure"
+      ]
+    },
+    "rebuy": {
+      "allowed": false,
+      "mode": "disabled_until_stabilized",
+      "conditions": [
+        "risk_bias_improves",
+        "water_stabilizes"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 1.0,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "風險收縮",
+    "summary": "水位上升改善配置環境，但昨日外資賣超、隔夜費半續跌與今日早盤逾1%跌幅，支持保留資金彈性；不是水位轉差。"
+  },
+  "source": {
+    "issue_file": "data/issues/20261103.json",
+    "generated_at": "2026-11-03T10:36:11+08:00"
+  }
+}

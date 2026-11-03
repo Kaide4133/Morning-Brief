@@ -1,6 +1,19 @@
 {
   "records": [
     {
+      "date": "2026-11-03",
+      "water_level": 84.9,
+      "scenario_id": "06",
+      "scenario_label": "06 風險收縮",
+      "previous_trading_date": "2026-11-02",
+      "comparison_date": "2026-11-02",
+      "previous_water_level": 83.7,
+      "change": 1.2,
+      "direction": "上升",
+      "source": "ark_stocks_latest.json",
+      "source_sha256": "d24b14cf934e827e23332150268e5a786e9c17b7600b40a8b3bf1adc95d4b52b"
+    },
+    {
       "date": "2026-11-02",
       "water_level": 83.7,
       "scenario_id": "06",
