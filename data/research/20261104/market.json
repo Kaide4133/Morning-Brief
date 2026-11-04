@@ -1,0 +1,130 @@
+{
+  "retrieved_at": "2026-11-04T09:58:05.203539+08:00",
+  "timezone": "Asia/Taipei",
+  "calendar": {
+    "2026-11-03": "open, verified TWSE daily dated row",
+    "2026-11-04": "open, verified live TWSE date and minute rows",
+    "url": "https://www.twse.com.tw/en/trading/holiday.html",
+    "taifex_calendar_url": "https://www.taifex.com.tw/file/taifex/eng/eng11/TAIFEX%20Holiday%20Schedule%202026.pdf"
+  },
+  "taiwan_morning": {
+    "trade_date": "2026-11-04",
+    "minute": "09:57:00",
+    "minute_type": "fully elapsed minute close, not instantaneous quote",
+    "twse": {
+      "close": 43196.27,
+      "reference_2026_11_03": 43307.54,
+      "url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+      "change": -111.27,
+      "change_percent": -0.2569
+    },
+    "taifex": {
+      "symbol": "TXFK6-F",
+      "display": "臺指期116 / TX116 (2026-11)",
+      "close": 43312.0,
+      "reference_price": 43353.0,
+      "url": "https://mis.taifex.com.tw/futures/api/getChartData1M",
+      "request_body": {
+        "SymbolID": "TXFK6-F"
+      },
+      "contract_list_url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+      "contract_list_request_body": {
+        "MarketType": "0",
+        "SymbolType": "F",
+        "KindID": "1",
+        "CID": "",
+        "ExpireMonth": ""
+      },
+      "change": -41.0,
+      "change_percent": -0.0946
+    },
+    "basis_futures_minus_spot": 115.73
+  },
+  "twse_daily": {
+    "url": "https://www.twse.com.tw/exchangeReport/FMTQIK?response=json&date=20261103",
+    "source_fields": [
+      "日期",
+      "成交股數",
+      "成交金額",
+      "成交筆數",
+      "發行量加權股價指數",
+      "漲跌點數"
+    ],
+    "source_rows": [
+      [
+        "115/11/02",
+        "10,422,514,115",
+        "799,687,507,911",
+        "4,104,242",
+        "44,920.14",
+        "-291.69"
+      ],
+      [
+        "115/11/03",
+        "15,218,510,001",
+        "1,002,035,660,990",
+        "7,682,883",
+        "43,307.54",
+        "-1,612.60"
+      ]
+    ],
+    "note": "FMTQIK turnover includes odd lots, after-hours fixed-price and block trades; not regular-session-only turnover"
+  },
+  "us_close": [
+    {
+      "symbol": "^SOX",
+      "date": "2026-11-03",
+      "close": 10600.4,
+      "previous_date": "2026-11-02",
+      "previous_close": 10328.33,
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?range=5d&interval=1d",
+      "change": 272.07,
+      "change_percent": 2.6342
+    },
+    {
+      "symbol": "^GSPC",
+      "date": "2026-11-03",
+      "close": 7568.92,
+      "previous_date": "2026-11-02",
+      "previous_close": 7541.4,
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=5d&interval=1d",
+      "change": 27.52,
+      "change_percent": 0.3649
+    },
+    {
+      "symbol": "^NDX",
+      "date": "2026-11-03",
+      "close": 28180.26,
+      "previous_date": "2026-11-02",
+      "previous_close": 27989.82,
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ENDX?range=5d&interval=1d",
+      "change": 190.44,
+      "change_percent": 0.6804
+    },
+    {
+      "symbol": "^DJI",
+      "date": "2026-11-03",
+      "close": 51786.72,
+      "previous_date": "2026-11-02",
+      "previous_close": 51983.98,
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?range=5d&interval=1d",
+      "change": -197.26,
+      "change_percent": -0.3795
+    },
+    {
+      "symbol": "^VIX",
+      "date": "2026-11-03",
+      "close": 20.83,
+      "previous_date": "2026-11-02",
+      "previous_close": 21.15,
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?range=5d&interval=1d",
+      "change": -0.32,
+      "change_percent": -1.513
+    }
+  ],
+  "caveats": [
+    "Nasdaq SOX historical and Cboe SPX/VIX historical endpoints lag at 2026-11-02; 2026-11-03 values use Yahoo daily chart fallback.",
+    "US daily chart timestamps are session anchors, not exact close timestamps.",
+    "TWSE and TAIFEX 09:57 bars are minute closes, not identical-time ticks."
+  ]
+}

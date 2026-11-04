@@ -1,0 +1,1099 @@
+{
+  "date": "2026-11-04",
+  "source_folder": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-04_09-05-04",
+  "run_id": "2026-11-04_09-05-04",
+  "run_started_at": "2026-11-04T09:05:04+08:00",
+  "run_finished_at": "2026-11-04T09:09:03+08:00",
+  "success": true,
+  "validation": {
+    "ok": true,
+    "generatedAt": "2026-11-04T01:09:03.421903+00:00",
+    "ocrSource": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-04_09-05-04/ark_stocks.json",
+    "axSource": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-04_09-05-04/ark_stocks_ax.json",
+    "sections": {
+      "ETF價值區": {
+        "ok": true,
+        "ocrCount": 10,
+        "axCount": 10,
+        "missingInAx": [],
+        "missingInOcr": [],
+        "nameDifferences": []
+      },
+      "ETF升溫區": {
+        "ok": true,
+        "ocrCount": 7,
+        "axCount": 7,
+        "missingInAx": [],
+        "missingInOcr": [],
+        "nameDifferences": []
+      },
+      "產業價值區": {
+        "ok": true,
+        "ocrCount": 30,
+        "axCount": 30,
+        "missingInAx": [],
+        "missingInOcr": [],
+        "nameDifferences": []
+      },
+      "產業升溫區": {
+        "ok": true,
+        "ocrCount": 30,
+        "axCount": 30,
+        "missingInAx": [],
+        "missingInOcr": [],
+        "nameDifferences": []
+      }
+    }
+  },
+  "validation_caveat": "Validation compares membership and names, not numeric fields. AX may represent a later live tick than screenshot; numeric ordering must not be treated as universally verified.",
+  "counts": {
+    "ETF價值區": 10,
+    "ETF升溫區": 7,
+    "產業價值區": 30,
+    "產業升溫區": 30
+  },
+  "water": {
+    "value_percent": 85.8,
+    "source_image": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-04_09-05-04/01_風控水位.png",
+    "screenshot_visually_verified": true,
+    "previous_trading_day": null,
+    "previous_water_percent": null,
+    "change_pp": null,
+    "note": "Do not infer previous day; market worker checks official trading calendar."
+  },
+  "indicators": {
+    "capturedAt": "2026-11-04T01:06:08Z",
+    "indicators": [
+      {
+        "angleDegrees": 37.1,
+        "approximate": true,
+        "name": "全球散戶",
+        "pivot": {
+          "x": 47,
+          "y": 431
+        },
+        "status": "estimated",
+        "value": 21
+      },
+      {
+        "angleDegrees": 133.8,
+        "approximate": true,
+        "name": "外資情緒",
+        "pivot": {
+          "x": 160,
+          "y": 431
+        },
+        "status": "estimated",
+        "value": 74
+      },
+      {
+        "angleDegrees": 24,
+        "approximate": true,
+        "name": "位階增溫",
+        "pivot": {
+          "x": 272,
+          "y": 430
+        },
+        "status": "estimated",
+        "value": 13
+      },
+      {
+        "angleDegrees": 49.3,
+        "approximate": true,
+        "name": "社交反指",
+        "pivot": {
+          "x": 384,
+          "y": 431
+        },
+        "status": "estimated",
+        "value": 27
+      },
+      {
+        "angleDegrees": 17.5,
+        "approximate": true,
+        "name": "量能爆衝",
+        "pivot": {
+          "x": 497,
+          "y": 431
+        },
+        "status": "estimated",
+        "value": 10
+      }
+    ],
+    "scale": {
+      "left": 0,
+      "right": 100,
+      "top": 50
+    },
+    "schemaVersion": 1,
+    "sourceImage": "00_運算五指標.png"
+  },
+  "indicators_note": "Values are approximate pointer-angle estimates, not official exact numeric scores. Estimator version not present in source; verify before import.",
+  "zones": {
+    "ETF價值區": [
+      {
+        "rank": 1,
+        "code": "00897",
+        "name": "富邦基因免疫生技",
+        "price": "14.34",
+        "change": "▲0.1(0.7%)",
+        "sourceFile": "02_ETF價值區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "indicative_nav": "14.58",
+        "premium_discount": "-2.19%",
+        "nav_provenance": "AX, headers image verified; values not individually audited"
+      },
+      {
+        "rank": 2,
+        "code": "00939",
+        "name": "統一台灣高息動能",
+        "price": "24.31",
+        "change": "▼0.01(-0.04%)",
+        "sourceFile": "02_ETF價值區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "indicative_nav": "24.32",
+        "premium_discount": "0.04%",
+        "nav_provenance": "AX, headers image verified; values not individually audited"
+      },
+      {
+        "rank": 3,
+        "code": "0055",
+        "name": "元大MSCI金融",
+        "price": "50.55",
+        "change": "▼0.1(-0.2%)",
+        "sourceFile": "02_ETF價值區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "indicative_nav": "50.63",
+        "premium_discount": "-0.06%",
+        "nav_provenance": "AX, headers image verified; values not individually audited"
+      },
+      {
+        "rank": 4,
+        "code": "00960",
+        "name": "野村全球航運龍頭",
+        "price": "22.94",
+        "change": "▲0.01(0.04%)",
+        "sourceFile": "02_ETF價值區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "indicative_nav": "22.96",
+        "premium_discount": "0.22%",
+        "nav_provenance": "AX, headers image verified; values not individually audited"
+      },
+      {
+        "rank": 5,
+        "code": "00875",
+        "name": "國泰網路資安",
+        "price": "60",
+        "change": "0(0%)",
+        "sourceFile": "02_ETF價值區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "indicative_nav": "59.75",
+        "premium_discount": "0.42%",
+        "nav_provenance": "AX, headers image verified; values not individually audited"
+      },
+      {
+        "rank": 6,
+        "code": "00918",
+        "name": "大華優利高填息30",
+        "price": "33.51",
+        "change": "▲0.03(0.09%)",
+        "sourceFile": "02_ETF價值區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "indicative_nav": "33.48",
+        "premium_discount": "0.21%",
+        "nav_provenance": "AX, headers image verified; values not individually audited"
+      },
+      {
+        "rank": 7,
+        "code": "00701",
+        "name": "國泰股利精選30",
+        "price": null,
+        "change": null,
+        "sourceFile": "03_ETF價值區_2.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "indicative_nav": "42.4",
+        "premium_discount": "-0.87%",
+        "nav_provenance": "AX, headers image verified; values not individually audited"
+      },
+      {
+        "rank": 8,
+        "code": "00878",
+        "name": "國泰永續高股息",
+        "price": "33.86",
+        "change": "▼0.01(-0.03%)",
+        "sourceFile": "03_ETF價值區_2.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "indicative_nav": "33.85",
+        "premium_discount": "0.32%",
+        "nav_provenance": "AX, headers image verified; values not individually audited"
+      },
+      {
+        "rank": 9,
+        "code": "00919",
+        "name": "群益台灣精選高息",
+        "price": "31.65",
+        "change": "▼0.07(-0.22%)",
+        "sourceFile": "03_ETF價值區_2.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "indicative_nav": "31.71",
+        "premium_discount": "0.06%",
+        "nav_provenance": "AX, headers image verified; values not individually audited"
+      },
+      {
+        "rank": 10,
+        "code": "00898",
+        "name": "國泰基因免疫革命",
+        "price": null,
+        "change": null,
+        "sourceFile": "03_ETF價值區_2.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "indicative_nav": "11.54",
+        "premium_discount": "-1.99%",
+        "nav_provenance": "AX, headers image verified; values not individually audited"
+      }
+    ],
+    "ETF升溫區": [
+      {
+        "rank": 1,
+        "code": "00845B",
+        "name": "富邦新興投等債",
+        "price": null,
+        "change": null,
+        "sourceFile": "04_ETF升溫區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "indicative_nav": "33",
+        "premium_discount": "0.14%",
+        "nav_provenance": "AX, headers image verified; values not individually audited"
+      },
+      {
+        "rank": 2,
+        "code": "00749B",
+        "name": "凱基新興債10+",
+        "price": null,
+        "change": null,
+        "sourceFile": "04_ETF升溫區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "indicative_nav": "30.74",
+        "premium_discount": "-0.03%",
+        "nav_provenance": "AX, headers image verified; values not individually audited"
+      },
+      {
+        "rank": 3,
+        "code": "00694B",
+        "name": "富邦美債1-3",
+        "price": null,
+        "change": null,
+        "sourceFile": "04_ETF升溫區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "indicative_nav": "42.86",
+        "premium_discount": "-0.3%",
+        "nav_provenance": "AX, headers image verified; values not individually audited"
+      },
+      {
+        "rank": 4,
+        "code": "00860B",
+        "name": "群益1-5Y投資級債",
+        "price": null,
+        "change": null,
+        "sourceFile": "04_ETF升溫區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "indicative_nav": "39.14",
+        "premium_discount": "-0.14%",
+        "nav_provenance": "AX, headers image verified; values not individually audited"
+      },
+      {
+        "rank": 5,
+        "code": "00884B",
+        "name": "中信低碳新興債",
+        "price": null,
+        "change": null,
+        "sourceFile": "04_ETF升溫區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "indicative_nav": "28.62",
+        "premium_discount": "0.06%",
+        "nav_provenance": "AX, headers image verified; values not individually audited"
+      },
+      {
+        "rank": 6,
+        "code": "00695B",
+        "name": "富邦美債7-10",
+        "price": null,
+        "change": null,
+        "sourceFile": "04_ETF升溫區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "indicative_nav": "35.3",
+        "premium_discount": "-0.29%",
+        "nav_provenance": "AX, headers image verified; values not individually audited"
+      },
+      {
+        "rank": 7,
+        "code": "00702",
+        "name": "國泰標普低波高息",
+        "price": "25",
+        "change": "▼0.2(-0.79%)",
+        "sourceFile": "05_ETF升溫區_2.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "indicative_nav": "25.72",
+        "premium_discount": "-2.8%",
+        "nav_provenance": "AX, headers image verified; values not individually audited"
+      }
+    ],
+    "產業價值區": [
+      {
+        "rank": 1,
+        "code": "3023",
+        "name": "信邦",
+        "price": "239.5",
+        "change": "▲2(0.84%)",
+        "sourceFile": "06_產業價值區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "1.19",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 2,
+        "code": "1513",
+        "name": "中興電",
+        "price": "148",
+        "change": "0(0%)",
+        "sourceFile": "06_產業價值區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-3.42",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 3,
+        "code": "6285",
+        "name": "啟碁",
+        "price": "204",
+        "change": "▲0.5(0.25%)",
+        "sourceFile": "06_產業價值區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "2.39",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 4,
+        "code": "4958",
+        "name": "臻鼎-KY",
+        "price": "441.5",
+        "change": "▼1.5(-0.34%)",
+        "sourceFile": "06_產業價值區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "27.54",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 5,
+        "code": "2645",
+        "name": "長榮航太",
+        "price": "157",
+        "change": "▲0.5(0.32%)",
+        "sourceFile": "06_產業價值區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-7.78",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 6,
+        "code": "6414",
+        "name": "樺漢",
+        "price": "356.5",
+        "change": "▼0.5(-0.14%)",
+        "sourceFile": "06_產業價值區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "14.65",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 7,
+        "code": "6670",
+        "name": "復盛應用",
+        "price": "258",
+        "change": "0(0%)",
+        "sourceFile": "06_產業價值區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-12.02",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 8,
+        "code": "3706",
+        "name": "神達",
+        "price": "74.5",
+        "change": "▲0.5(0.68%)",
+        "sourceFile": "07_產業價值區_2.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "39.5",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 9,
+        "code": "2404",
+        "name": "漢唐",
+        "price": "1,010",
+        "change": "▲10(1%)",
+        "sourceFile": "07_產業價值區_2.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-13.03",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 10,
+        "code": "3044",
+        "name": "健鼎",
+        "price": "486.5",
+        "change": "▼2(-0.41%)",
+        "sourceFile": "07_產業價值區_2.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "4.14",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 11,
+        "code": "6669",
+        "name": "緯穎",
+        "price": "1,790",
+        "change": "▲20(1.13%)",
+        "sourceFile": "07_產業價值區_2.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "19.62",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 12,
+        "code": "2376",
+        "name": "技嘉",
+        "price": "328",
+        "change": "▲1(0.31%)",
+        "sourceFile": "08_產業價值區_3.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "33.12",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 13,
+        "code": "2454",
+        "name": "聯發科",
+        "price": "3,725",
+        "change": "▲50(1.36%)",
+        "sourceFile": "08_產業價值區_3.png",
+        "price_change_provenance": "screenshot verified; AX captured different live tick",
+        "monthly_revenue_change_pct": "-13.69",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 14,
+        "code": "2301",
+        "name": "光寶科",
+        "price": "230.5",
+        "change": "▲2.5(1.1%)",
+        "sourceFile": "08_產業價值區_3.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-3.8",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 15,
+        "code": "2357",
+        "name": "華碩",
+        "price": "888",
+        "change": "▼1(-0.11%)",
+        "sourceFile": "08_產業價值區_3.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "2.41",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 16,
+        "code": "5269",
+        "name": "祥碩",
+        "price": "1,330",
+        "change": "▲10(0.76%)",
+        "sourceFile": "08_產業價值區_3.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "12.76",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 17,
+        "code": "2330",
+        "name": "台積電",
+        "price": "2,300",
+        "change": "▲5(0.22%)",
+        "sourceFile": "09_產業價值區_4.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-0.57",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 18,
+        "code": "6239",
+        "name": "力成",
+        "price": "242.5",
+        "change": "▲3(1.25%)",
+        "sourceFile": "09_產業價值區_4.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-0.6",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 19,
+        "code": "5289",
+        "name": "宜鼎",
+        "price": "1,035",
+        "change": "▲15(1.47%)",
+        "sourceFile": "09_產業價值區_4.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "0.38",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 20,
+        "code": "3231",
+        "name": "緯創",
+        "price": "177.5",
+        "change": "▲1(0.57%)",
+        "sourceFile": "09_產業價值區_4.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-17.23",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 21,
+        "code": "2382",
+        "name": "廣達",
+        "price": "311",
+        "change": "▼0.5(-0.16%)",
+        "sourceFile": "09_產業價值區_4.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-23.27",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 22,
+        "code": "8069",
+        "name": "元太",
+        "price": "144",
+        "change": "▲0.5(0.35%)",
+        "sourceFile": "10_產業價值區_5.png",
+        "price_change_provenance": "screenshot verified; AX captured different live tick",
+        "monthly_revenue_change_pct": "4.85",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 23,
+        "code": "2449",
+        "name": "京元電子",
+        "price": "254",
+        "change": "▲0.5(0.2%)",
+        "sourceFile": "10_產業價值區_5.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-0.21",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 24,
+        "code": "3036",
+        "name": "文曄",
+        "price": "203",
+        "change": "▲1.5(0.74%)",
+        "sourceFile": "10_產業價值區_5.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "8.85",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 25,
+        "code": "6139",
+        "name": "亞翔",
+        "price": "625",
+        "change": "▲17(2.8%)",
+        "sourceFile": "10_產業價值區_5.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-2.92",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 26,
+        "code": "3711",
+        "name": "日月光投控",
+        "price": "636",
+        "change": "▲20(3.25%)",
+        "sourceFile": "10_產業價值區_5.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "7.15",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 27,
+        "code": "2379",
+        "name": "瑞昱",
+        "price": "752",
+        "change": "▼4(-0.53%)",
+        "sourceFile": "11_產業價值區_6.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-0.65",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 28,
+        "code": "3005",
+        "name": "神基",
+        "price": "123",
+        "change": "▲1(0.82%)",
+        "sourceFile": "11_產業價值區_6.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "2.22",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 29,
+        "code": "3293",
+        "name": "鈊象",
+        "price": "784",
+        "change": "▲7(0.9%)",
+        "sourceFile": "11_產業價值區_6.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-0.83",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 30,
+        "code": "2317",
+        "name": "鴻海",
+        "price": "244.5",
+        "change": "▼1(-0.41%)",
+        "sourceFile": "11_產業價值區_6.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "25.7",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      }
+    ],
+    "產業升溫區": [
+      {
+        "rank": 1,
+        "code": "8099",
+        "name": "大世科",
+        "price": "145.5",
+        "change": "▲11(8.18%)",
+        "sourceFile": "12_產業升溫區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-1.09",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 2,
+        "code": "6199",
+        "name": "天品",
+        "price": "165.5",
+        "change": "▲1(0.61%)",
+        "sourceFile": "12_產業升溫區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "3.36",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 3,
+        "code": "8272",
+        "name": "全景軟體",
+        "price": "87.5",
+        "change": "▼6.9(-7.31%)",
+        "sourceFile": "12_產業升溫區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "78.42",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 4,
+        "code": "5013",
+        "name": "強新",
+        "price": "70.8",
+        "change": "▲4.2(6.31%)",
+        "sourceFile": "12_產業升溫區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-0.26",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 5,
+        "code": "2465",
+        "name": "麗臺",
+        "price": "123",
+        "change": "▲9(7.89%)",
+        "sourceFile": "12_產業升溫區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-9.91",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 6,
+        "code": "5209",
+        "name": "新鼎",
+        "price": "212.5",
+        "change": "▲8.5(4.17%)",
+        "sourceFile": "12_產業升溫區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "8.03",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 7,
+        "code": "2923",
+        "name": "鼎固-KY",
+        "price": "29.25",
+        "change": "▼0.25(-0.85%)",
+        "sourceFile": "12_產業升溫區_1.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-25.68",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 8,
+        "code": "6870",
+        "name": "騰雲",
+        "price": "427",
+        "change": "▲14(3.39%)",
+        "sourceFile": "13_產業升溫區_2.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "8.41",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 9,
+        "code": "6697",
+        "name": "東捷資訊",
+        "price": "63.3",
+        "change": "▲5.7(9.9%)",
+        "sourceFile": "13_產業升溫區_2.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "6.77",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 10,
+        "code": "1456",
+        "name": "怡華",
+        "price": "15.6",
+        "change": "▲0.1(0.65%)",
+        "sourceFile": "13_產業升溫區_2.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-99.2",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 11,
+        "code": "4526",
+        "name": "東台",
+        "price": "56.3",
+        "change": "▲1.4(2.55%)",
+        "sourceFile": "13_產業升溫區_2.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "66.52",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 12,
+        "code": "1416",
+        "name": "廣豐",
+        "price": "13.7",
+        "change": "▲0.1(0.74%)",
+        "sourceFile": "14_產業升溫區_3.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "13.73",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 13,
+        "code": "2516",
+        "name": "新建",
+        "price": "16",
+        "change": "0(0%)",
+        "sourceFile": "14_產業升溫區_3.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-23.54",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 14,
+        "code": "3691",
+        "name": "碩禾",
+        "price": "134.5",
+        "change": "▲0.5(0.37%)",
+        "sourceFile": "14_產業升溫區_3.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-4.7",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 15,
+        "code": "2412",
+        "name": "中華電",
+        "price": "159.5",
+        "change": "▲0.5(0.31%)",
+        "sourceFile": "14_產業升溫區_3.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "4.67",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 16,
+        "code": "2466",
+        "name": "冠西電",
+        "price": "342.5",
+        "change": "▲0.5(0.15%)",
+        "sourceFile": "14_產業升溫區_3.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-48.41",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 17,
+        "code": "1232",
+        "name": "大統益",
+        "price": "167",
+        "change": "▲1.5(0.91%)",
+        "sourceFile": "15_產業升溫區_4.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-0.35",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 18,
+        "code": "8455",
+        "name": "大拓-KY",
+        "price": "28.95",
+        "change": "0(0%)",
+        "sourceFile": "15_產業升溫區_4.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "32.83",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 19,
+        "code": "2491",
+        "name": "吉祥全",
+        "price": "41.95",
+        "change": "▲0.9(2.19%)",
+        "sourceFile": "15_產業升溫區_4.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "3.22",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 20,
+        "code": "4568",
+        "name": "科際精密",
+        "price": "53.3",
+        "change": "▲2(3.9%)",
+        "sourceFile": "15_產業升溫區_4.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "26.66",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 21,
+        "code": "2849",
+        "name": "安泰銀",
+        "price": "15.85",
+        "change": "▼0.05(-0.31%)",
+        "sourceFile": "15_產業升溫區_4.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-0.8",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 22,
+        "code": "6233",
+        "name": "旺玖",
+        "price": "31.6",
+        "change": "▼0.1(-0.32%)",
+        "sourceFile": "16_產業升溫區_5.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "2.28",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 23,
+        "code": "4741",
+        "name": "泓瀚",
+        "price": "53.7",
+        "change": "▲1.5(2.87%)",
+        "sourceFile": "16_產業升溫區_5.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "19.86",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 24,
+        "code": "6240",
+        "name": "松崗",
+        "price": "32.5",
+        "change": "▼3(-8.45%)",
+        "sourceFile": "16_產業升溫區_5.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-3.27",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 25,
+        "code": "5880",
+        "name": "合庫金",
+        "price": "28.45",
+        "change": "0(0%)",
+        "sourceFile": "16_產業升溫區_5.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-13.22",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 26,
+        "code": "6751",
+        "name": "智聯服務",
+        "price": "74.5",
+        "change": "▼2(-2.61%)",
+        "sourceFile": "16_產業升溫區_5.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "87.36",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 27,
+        "code": "6655",
+        "name": "科定",
+        "price": null,
+        "change": null,
+        "sourceFile": "17_產業升溫區_6.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "0.32",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 28,
+        "code": "4577",
+        "name": "達航科技",
+        "price": "114.5",
+        "change": "▼5.5(-4.58%)",
+        "sourceFile": "17_產業升溫區_6.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "36.58",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 29,
+        "code": "2801",
+        "name": "彰銀",
+        "price": "29.5",
+        "change": "▼0.2(-0.67%)",
+        "sourceFile": "17_產業升溫區_6.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "-10.07",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      },
+      {
+        "rank": 30,
+        "code": "6214",
+        "name": "精誠",
+        "price": "188",
+        "change": "▼14(-6.93%)",
+        "sourceFile": "17_產業升溫區_6.png",
+        "price_change_provenance": "AX (not individually image verified)",
+        "monthly_revenue_change_pct": "41.9",
+        "revenue_field_provenance": "AX positional candidate, not individually screenshot verified"
+      }
+    ]
+  },
+  "price_discrepancies": [
+    {
+      "code": "00701",
+      "ocr_price": "42.4",
+      "ax_price": null,
+      "normalized_price": null,
+      "reason": "missing price; OCR promoted another column"
+    },
+    {
+      "code": "00898",
+      "ocr_price": "11.54",
+      "ax_price": null,
+      "normalized_price": null,
+      "reason": "missing price; OCR promoted another column"
+    },
+    {
+      "code": "00845B",
+      "ocr_price": "33",
+      "ax_price": null,
+      "normalized_price": null,
+      "reason": "missing price; OCR promoted another column"
+    },
+    {
+      "code": "00749B",
+      "ocr_price": "30.74",
+      "ax_price": null,
+      "normalized_price": null,
+      "reason": "missing price; OCR promoted another column"
+    },
+    {
+      "code": "00694B",
+      "ocr_price": "42.86",
+      "ax_price": null,
+      "normalized_price": null,
+      "reason": "missing price; OCR promoted another column"
+    },
+    {
+      "code": "00860B",
+      "ocr_price": "39.14",
+      "ax_price": null,
+      "normalized_price": null,
+      "reason": "missing price; OCR promoted another column"
+    },
+    {
+      "code": "00884B",
+      "ocr_price": "28.62",
+      "ax_price": null,
+      "normalized_price": null,
+      "reason": "missing price; OCR promoted another column"
+    },
+    {
+      "code": "00695B",
+      "ocr_price": "35.3",
+      "ax_price": null,
+      "normalized_price": null,
+      "reason": "missing price; OCR promoted another column"
+    },
+    {
+      "code": "2454",
+      "ocr_price": "3,725",
+      "ax_price": "3,730",
+      "normalized_price": "3,725",
+      "reason": "screenshot tick"
+    },
+    {
+      "code": "8069",
+      "ocr_price": "144",
+      "ax_price": "144.5",
+      "normalized_price": "144",
+      "reason": "screenshot tick"
+    },
+    {
+      "code": "6655",
+      "ocr_price": "0.32",
+      "ax_price": null,
+      "normalized_price": null,
+      "reason": "missing price; OCR promoted another column"
+    }
+  ],
+  "audit_notes": [
+    "00701,00898 and six ETF heating bond rows: missing price; following numeric value is indicative NAV.",
+    "6655 price missing; 0.32 is monthly revenue change percentage, not price.",
+    "Screenshots are captured over minutes; live price changes can produce discrepancies even between overlapping pages.",
+    "Numeric data not exhaustively individually image audited; AX additional metrics beyond explicit fields are intentionally omitted."
+  ],
+  "sha256_verified_against_success": {
+    "ark_stocks.json": "7e584e77ac53d8e9d75a8cf3a5378d67d2058d7305f3a40e552f8e9950523b3c",
+    "ark_stocks_ax.json": "f081923f7b1d7a93efcfca1d5c80ac71433ae4f011875d0fcb4cc56630f2d551",
+    "ark_validation.json": "c129ea4d9be4c02f36fc8bdc5100c5789ea91ab200d8912bade772dd430e07b7",
+    "ark_indicators.json": "4c83a367dae6e3dbbab0dc4eadab75dbf37a84febc42316a3c15d7f26669cc2e",
+    "00_運算五指標.png": "ed6bb9d97f683d46309c86809036d06ed2c0b29a266849af9d37fe0a83faad66",
+    "01_風控水位.png": "a4e8487ce7fdba1947cbc505a279449bb9da2a25717d9647365a984448ba1451"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-11-04",
+  "valid_for_trading_date": "2026-11-04",
+  "data_as_of": "2026-11-04",
+  "stale": false,
+  "issue_no": 117,
+  "scenario": {
+    "id": "06",
+    "slug": "risk-contraction",
+    "label": "風險收縮",
+    "confidence": 1.0,
+    "reason": "水位上升、隔夜費半反彈是改善訊號，但昨日台股重挫與外資大賣後，早盤仍未翻紅；維持保守資金安排，不把水位升高解讀為風險升高。",
+    "source": "manual_override",
+    "classifier_suggestion": "03"
+  },
+  "water": {
+    "level": 85.8,
+    "previous": 84.9,
+    "change": 0.9,
+    "direction": "rising",
+    "previous_trading_date": "2026-11-03",
+    "comparison_date": "2026-11-03",
+    "comparison_is_provisional": false
+  },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "reduce_risk_review",
+    "risk_posture": "risk_off",
+    "water_policy": {
+      "direction": "rising",
+      "change": 0.9,
+      "interpretation": "方舟水位85.8%，較前一交易日11/3的84.9%上升0.9個百分點；配置環境改善，但不等於價格已止跌。"
+    },
+    "scenario_context": {
+      "id": "06",
+      "label": "風險收縮",
+      "confidence": 1.0
+    },
+    "policy_focus": [
+      "資金有限先控持有總額，再由價值區挑研究候選；等待反彈延續，不追單一消息。",
+      "昨日外資大賣仍需消化；只看早盤低點、反彈延續與半導體能否帶動廣度。",
+      "09:57加權跌0.26%；昨日外資賣超1,073.07億元，隔夜費半反彈2.63%。",
+      "第三季營收133.77億美元、年增45%；資料中心營收約85億美元、年增97%；第四季營收展望170億美元上下3%，屬公司預測，不是已實現營收。 這是公司展望，不是台灣供應鏈已落袋的訂單。"
+    ],
+    "systemic_risk": "高",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
+  "action_guidance": {
+    "risk_bias": "risk_off",
+    "allow_add": false,
+    "allow_trim": true,
+    "deploy_mode": "reduce_exposure",
+    "trim": {
+      "allowed": true,
+      "mode": "reduce_exposure",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": false,
+      "mode": "disabled",
+      "conditions": [
+        "risk_off_no_new_exposure"
+      ]
+    },
+    "rebuy": {
+      "allowed": false,
+      "mode": "disabled_until_stabilized",
+      "conditions": [
+        "risk_bias_improves",
+        "water_stabilizes"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 1.0,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "風險收縮",
+    "summary": "水位上升、隔夜費半反彈是改善訊號，但昨日台股重挫與外資大賣後，早盤仍未翻紅；維持保守資金安排，不把水位升高解讀為風險升高。"
+  },
+  "source": {
+    "issue_file": "data/issues/20261104.json",
+    "generated_at": "2026-11-04T10:00:46+08:00"
+  }
+}

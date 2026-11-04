@@ -1,27 +1,27 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-11-03",
-  "valid_for_trading_date": "2026-11-03",
-  "data_as_of": "2026-11-03",
+  "date": "2026-11-04",
+  "valid_for_trading_date": "2026-11-04",
+  "data_as_of": "2026-11-04",
   "stale": false,
-  "issue_no": 116,
+  "issue_no": 117,
   "scenario": {
     "id": "06",
     "slug": "risk-contraction",
     "label": "風險收縮",
     "confidence": 1.0,
-    "reason": "水位上升改善配置環境，但昨日外資賣超、隔夜費半續跌與今日早盤逾1%跌幅，支持保留資金彈性；不是水位轉差。",
+    "reason": "水位上升、隔夜費半反彈是改善訊號，但昨日台股重挫與外資大賣後，早盤仍未翻紅；維持保守資金安排，不把水位升高解讀為風險升高。",
     "source": "manual_override",
-    "classifier_suggestion": "06"
+    "classifier_suggestion": "03"
   },
   "water": {
-    "level": 84.9,
-    "previous": 83.7,
-    "change": 1.2,
+    "level": 85.8,
+    "previous": 84.9,
+    "change": 0.9,
     "direction": "rising",
-    "previous_trading_date": "2026-11-02",
-    "comparison_date": "2026-11-02",
+    "previous_trading_date": "2026-11-03",
+    "comparison_date": "2026-11-03",
     "comparison_is_provisional": false
   },
   "leader_policy": {
@@ -30,8 +30,8 @@
     "risk_posture": "risk_off",
     "water_policy": {
       "direction": "rising",
-      "change": 1.2,
-      "interpretation": "方舟水位84.9%，較前一交易日11/2的83.7%上升1.2個百分點；配置環境改善，但價格與賣壓尚未同步轉強。"
+      "change": 0.9,
+      "interpretation": "方舟水位85.8%，較前一交易日11/3的84.9%上升0.9個百分點；配置環境改善，但不等於價格已止跌。"
     },
     "scenario_context": {
       "id": "06",
@@ -39,10 +39,10 @@
       "confidence": 1.0
     },
     "policy_focus": [
-      "資金有限先控持有總額，再用價值區整理候選；不因跌深或單一題材急追。",
-      "昨日賣超不等於今日流向；看早盤低點能否守住、反彈能否延續。",
-      "10:30加權跌1.07%；昨日外資賣超735.21億元，費半跌3.37%。",
-      "Apple公布季度營收1,145億美元、年增12%；但CNBC轉述下季毛利率展望45%–46%，低於市場預期，盤後股價跌約3%。蘋果供應鏈需求與成本壓力須分開看，不能只讀營收成長。"
+      "資金有限先控持有總額，再由價值區挑研究候選；等待反彈延續，不追單一消息。",
+      "昨日外資大賣仍需消化；只看早盤低點、反彈延續與半導體能否帶動廣度。",
+      "09:57加權跌0.26%；昨日外資賣超1,073.07億元，隔夜費半反彈2.63%。",
+      "第三季營收133.77億美元、年增45%；資料中心營收約85億美元、年增97%；第四季營收展望170億美元上下3%，屬公司預測，不是已實現營收。 這是公司展望，不是台灣供應鏈已落袋的訂單。"
     ],
     "systemic_risk": "高",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
@@ -89,10 +89,10 @@
   },
   "editorial": {
     "state_label": "風險收縮",
-    "summary": "水位上升改善配置環境，但昨日外資賣超、隔夜費半續跌與今日早盤逾1%跌幅，支持保留資金彈性；不是水位轉差。"
+    "summary": "水位上升、隔夜費半反彈是改善訊號，但昨日台股重挫與外資大賣後，早盤仍未翻紅；維持保守資金安排，不把水位升高解讀為風險升高。"
   },
   "source": {
-    "issue_file": "data/issues/20261103.json",
-    "generated_at": "2026-11-03T10:36:11+08:00"
+    "issue_file": "data/issues/20261104.json",
+    "generated_at": "2026-11-04T10:00:46+08:00"
   }
 }

@@ -1,0 +1,71 @@
+{
+  "date": "2026-11-04",
+  "cutoff_taiwan": "2026-11-04T09:57:00+08:00",
+  "scope": "台灣早盤：美國11月3日交易、隔夜事件與截至早盤可得資金流；只供研究，未發布",
+  "reader_summary": "美股科技反彈與AMD強勁展望改善半導體情緒，但美債殖利率走升、選舉及中東消息仍可能使行情震盪。黃金與加密貨幣價格變化不等於資金流；可核對的美國現貨BTC及ETH ETF完整資料仍是11月2日淨流出，11月3日尚未完整。",
+  "news": [
+    {
+      "title": "AMD資料中心營收倍增，第四季展望強勁",
+      "published_date": "2026-11-03 美國時間，公告未提供精確發布時間",
+      "source": "AMD 8-K新聞稿",
+      "url": "https://ir.amd.com/financial-information/sec-filings/content/0000002488-26-000188/q32026991.htm",
+      "facts": "第三季營收133.77億美元、年增45%；資料中心營收約85億美元、年增97%；第四季營收展望170億美元上下3%，屬公司預測，不是已實現營收。",
+      "taiwan_inference": "AI晶片、先進封裝及伺服器供應鏈情緒可能受益；不代表特定台廠已新增訂單或收入。"
+    },
+    {
+      "title": "美國職缺數較上月增加，但BLS定性為變化不大",
+      "published_at": "2026-11-03T10:00:00-05:00",
+      "published_at_taiwan": "2026-11-03T23:00:00+08:00",
+      "source": "美國勞工統計局",
+      "url": "https://www.bls.gov/news.release/archives/jolts_11032026.htm",
+      "facts": "9月職缺初估752.3萬，8月修正後719.0萬；BLS稱月變化不大。9月僱用540.2萬。",
+      "taiwan_inference": "勞動需求未顯明顯崩落，利率路徑仍須觀察；不能單憑數據推論Fed決策。"
+    },
+    {
+      "title": "美國期中選舉與中東局勢",
+      "published_date": "2026-11-03，Reuters轉述FT；精確版本時間待核",
+      "source": "Reuters轉述金融時報，非直接採訪原文",
+      "url": "https://www.reuters.com/world/us-has-no-immediate-plan-strike-iran-trump-tells-ft-2026-11-03/",
+      "facts": "Reuters報導川普向FT表示美國目前沒有立即攻擊伊朗的計畫；不等於已達成停火或戰事結束。美國國會期中選舉投票後的結果與政策影響截至截稿未在此核實。",
+      "taiwan_inference": "油價、殖利率和風險偏好可能隨後續訊息波動。",
+      "verification": "WorldMonitor用於發掘；Reuters正文無法直接開啟，此項屬搜尋索引中的Reuters報導，須二次核實後使用。"
+    }
+  ],
+  "assets": {
+    "usd": {
+      "price": "11月3日美國盤中美元指數約101.81、當時持平；非收盤價。",
+      "source": "Reuters／Fidelity，同步文章正文擷取失敗，僅搜尋索引發現；精確發布時間待核",
+      "url": "https://www.fidelity.com/news/article/international/202611031206RTRSNEWSCOMBINED_L6N46K0UX_1",
+      "flows": "無經核實的隔夜美元跨境淨流入／流出資料；匯價本身不能證明資金流。"
+    },
+    "treasury": {
+      "price": "Reuters晚盤報導11月3日10年期殖利率4.948%，升5.4基點；2年期4.614%，升3.1基點；30年期5.321%，升5.2基點。這是報導時點市場報價，不是財政部固定期限官方收盤值。",
+      "source": "Reuters／Fidelity；搜尋索引提供正文摘錄，動態頁擷取失敗，須進一步核驗文章版本",
+      "url": "https://www.fidelity.com/news/article/default/202611031538RTRSNEWSCOMBINED_L6N46K0ZH_1",
+      "flows": "殖利率上升代表債價承壓，不代表已核實的美債ETF淨流出或外資賣超；11月3日實際淨流量未核實。"
+    },
+    "gold": {
+      "price": "11月3日19:06 UTC即台灣11月4日03:06，現貨黃金每盎司3,927.18美元、跌0.5%；12月期金結算3,940.40美元、跌0.7%。兩者為不同市場及時間。",
+      "price_source": "Reuters／Kitco全文",
+      "price_url": "https://www.kitco.com/news/off-the-wire/2026-11-03/gold-edges-lower-again-dollar-yields-strengthen-us-midterms-focus",
+      "flows": "世界黃金協會11月3日發布的第三季報告：全球實體黃金ETF第三季增加211噸、吸引310億美元，季末持有4,256噸；這是截至9月底的季度歷史流量，不能當作11月3日單日流量。當日黃金ETF實際流量未核實。",
+      "flow_url": "https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-q3-2026/investment"
+    },
+    "crypto": {
+      "price": "Yahoo轉載文章2026-11-03 22:30 UTC發布，即台灣11月4日06:30：BTC 77,828.21美元、ETH 2,293.77美元；文章稱美國11月3日傍晚行情，非早盤即時報價，兩數據取自同篇快照。",
+      "price_url": "https://finance.yahoo.com/markets/crypto/articles/crypto-market-today-nov-3-223002928.html",
+      "eth_btc": "依同篇快照計算2293.77/77828.21=0.029472 BTC/ETH；不具持續時間的比較不能證明相對趨勢或資金輪動。",
+      "etf_flows_complete_usd_millions": {"trade_date": "2026-11-02", "btc": -398.6, "eth": -139.7, "total": -538.3, "note": "Farside數據，為美國現貨ETF淨申購／贖回，非整體加密市場資金淨流。BTC: IBIT -405.3、FBTC +6.7；ETH: ETHA -138.3、ETHB -4.6、MSSE +3.2。"},
+      "etf_flows_nov3_preliminary_usd_millions": {"btc": -20.6, "eth": -10.9, "status": "不完整、暫值，不可稱最終淨流量；BTC表IBIT等、ETH表ETHA等仍為破折號，缺值不是零，後續可能改變。"},
+      "btc_flow_url": "https://farside.co.uk/btc/",
+      "eth_flow_url": "https://farside.co.uk/eth/"
+    }
+  },
+  "limitations": [
+    "WorldMonitor新聞與行情只作發掘；其ETF區塊為estFlow估計值，非實際申贖，未拿來冒充資金流。",
+    "WorldMonitor黃金專用工具需Pro，無法使用；改用世界黃金協會原始報告。",
+    "財政部官方殖利率查詢頁本次參數無效，無可驗證的11月3日官方CMT列；故保留Reuters市場報價並明示其證據限制。",
+    "美債、美元與黃金價格不證明資產間資金轉移；ETF數據亦不揭示每位投資人身分或動機。",
+    "新聞及報價採各自時間戳，非同步全市場快照。"
+  ]
+}
