@@ -158,7 +158,78 @@
       "跨資產觀察工具：黃金GLD／IAU、美債IEF／TLT、BTC的IBIT、ETH的ETHA；均未升為交易指令。"
     ]
   },
-  "mag7": [],
+  "mag7": [
+    {
+      "name": "Apple",
+      "ticker": "AAPL｜11/3正常盤收盤",
+      "tier": "lagging",
+      "tier_label": "相對落後",
+      "price": "331.90",
+      "change_pct": -1.9,
+      "change_abs": "-6.42",
+      "signal": "科技股反彈時仍下跌1.90%，蘋果鏈未同步轉強；台股組裝與零組件不能直接套用半導體反彈邏輯。"
+    },
+    {
+      "name": "Microsoft",
+      "ticker": "MSFT｜11/3正常盤收盤",
+      "tier": "leading",
+      "tier_label": "反彈較強",
+      "price": "520.99",
+      "change_pct": 2.74,
+      "change_abs": "+13.87",
+      "signal": "上漲2.74%、強於那斯達克100，雲端權值承接改善；觀察伺服器族群是否跟進，但單日上漲不是資本支出增加的證據。"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA｜11/3正常盤收盤",
+      "tier": "leading",
+      "tier_label": "半導體反彈",
+      "price": "206.69",
+      "change_pct": 2.29,
+      "change_abs": "+4.63",
+      "signal": "上漲2.29%，與費半反彈方向一致、幅度略低於費半2.63%；台股AI晶片與先進封裝先看承接延續，不把反彈當趨勢已反轉。"
+    },
+    {
+      "name": "Amazon",
+      "ticker": "AMZN｜11/3正常盤收盤",
+      "tier": "leading",
+      "tier_label": "反彈較強",
+      "price": "250.69",
+      "change_pct": 2.06,
+      "change_abs": "+5.06",
+      "signal": "上漲2.06%、強於那斯達克100；雲端與消費業務同在股價中，不能只憑上漲推論AWS新增訂單，台股供應鏈仍須各自確認。"
+    },
+    {
+      "name": "Alphabet",
+      "ticker": "GOOGL｜11/3正常盤收盤",
+      "tier": "neutral",
+      "tier_label": "溫和回升",
+      "price": "280.03",
+      "change_pct": 0.37,
+      "change_abs": "+1.04",
+      "signal": "上漲0.37%，反彈幅度低於那斯達克100的0.68%；大型科技並非齊步加速，雲端與AI題材仍要分辨個別強弱。"
+    },
+    {
+      "name": "Meta",
+      "ticker": "META｜11/3正常盤收盤",
+      "tier": "leading",
+      "tier_label": "反彈較強",
+      "price": "621.03",
+      "change_pct": 2.36,
+      "change_abs": "+14.30",
+      "signal": "上漲2.36%、強於那斯達克100，權值承接回升；可觀察資料中心相關族群，但股價本身不能證明新增建置或採購。"
+    },
+    {
+      "name": "Tesla",
+      "ticker": "TSLA｜11/3正常盤收盤",
+      "tier": "lagging",
+      "tier_label": "相對落後",
+      "price": "398.50",
+      "change_pct": -1.32,
+      "change_abs": "-5.32",
+      "signal": "下跌1.32%，未跟上科技反彈；電動車與相關零組件不能直接沿用AI半導體的偏多情緒，先觀察自身止跌與承接。"
+    }
+  ],
   "xurl_signal_layer": {
     "status": "unavailable",
     "signals_count": 0,
@@ -2609,6 +2680,34 @@
     {
       "title": "十年期殖利率指標",
       "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=1mo&interval=1d"
+    },
+    {
+      "title": "AAPL 11/3正常盤收盤",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?range=1mo&interval=1d"
+    },
+    {
+      "title": "MSFT 11/3正常盤收盤",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?range=1mo&interval=1d"
+    },
+    {
+      "title": "NVDA 11/3正常盤收盤",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?range=1mo&interval=1d"
+    },
+    {
+      "title": "AMZN 11/3正常盤收盤",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMZN?range=1mo&interval=1d"
+    },
+    {
+      "title": "GOOGL 11/3正常盤收盤",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?range=1mo&interval=1d"
+    },
+    {
+      "title": "META 11/3正常盤收盤",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/META?range=1mo&interval=1d"
+    },
+    {
+      "title": "TSLA 11/3正常盤收盤",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/TSLA?range=1mo&interval=1d"
     }
   ],
   "ark_source_validation": {
