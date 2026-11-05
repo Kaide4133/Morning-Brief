@@ -177,6 +177,10 @@
       const series = rows.map(row => ({date: row.date, value: indicatorsByDate.get(row.date)?.[name] ?? null}));
       const y = value => 64 - value * 0.56;
       add('line', {x1:geometry.left, x2:geometry.right, y1:64, y2:64, stroke:'#c6c6c6'}, null, chart);
+      for (const level of [30, 70]) {
+        add('line', {class:'indicator-reference', 'data-level':level, x1:geometry.left, x2:geometry.right, y1:y(level), y2:y(level), stroke:'#999', 'stroke-width':1, 'stroke-dasharray':'4 4'}, null, chart);
+        add('text', {x:geometry.left - 6, y:y(level) + 3, 'text-anchor':'end', fill:'#666', 'font-size':10}, String(level), chart);
+      }
       add('path', {d:segments(series, 'value', geometry.x, y), fill:'none', stroke:'#566b78', 'stroke-width':2}, null, chart);
       for (const item of series) if (number(item.value)) {
         const dot = add('circle', {cx:geometry.x(item), cy:y(item.value), r:4, fill:'#566b78'}, null, chart);
