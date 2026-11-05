@@ -1,0 +1,258 @@
+{
+  "status": "research_complete_with_noted_gaps",
+  "window": {
+    "start": "2026-11-04T00:00:00-05:00",
+    "cutoff": "2026-11-05T10:35:00+08:00",
+    "research_as_of": "2026-11-05T10:34:30+08:00",
+    "timezone": "Asia/Taipei",
+    "note": "最新同步加密貨幣分鐘棒為10:33；非10:35精準報價。"
+  },
+  "news": [
+    {
+      "headline": "美國10月ADP民間就業增加8.6萬",
+      "source": "ADP官方新聞稿",
+      "url": "https://mediacenter.adp.com/2026-11-04-ADP-National-Employment-Report-Private-Sector-Employment-Increased-by-86,000-Jobs-in-October",
+      "published_local": "2026-11-04 ET（原文僅見日期）",
+      "evidence_class": "official/original, body checked",
+      "facts": "ADP統計10月民間就業增加8.6萬；9月由9萬下修為8.6萬。私人部門基本薪資年增3.2%；專業及商業服務就業減2.7萬。",
+      "meaning": "ADP非美國政府非農就業報告；不得因單一數字預斷聯準會決策。",
+      "watch": "等待週五政府非農數據。"
+    },
+    {
+      "headline": "民主黨取得美國國會兩院；美股大漲但半導體與資料中心走弱",
+      "source": "Reuters via News & Observer",
+      "url": "https://www.newsobserver.com/news/nation-world/national/article317924396.html",
+      "published_local": "2026-11-04 10:58 ET original; source search shows updated 16:50 ET",
+      "evidence_class": "Reuters syndicated, article body checked",
+      "facts": "路透報導民主黨拿下參眾兩院；11/4收盤標普7,688.62、+1.6%，那指綜合25,736.51、+1.4%，道瓊53,356.12、+3.0%；費半跌3.1%，微軟漲6.7%、亞馬遜漲6.1%，Hut 8跌23%、IREN跌11%。",
+      "meaning": "市場對政策變動減少及油價下跌的樂觀與AI基建監管疑慮並存；這是路透引述市場看法，不是已通過的新監管。",
+      "taiwan_inference": "台灣晶圓代工、AI伺服器、散熱電源及網通短線情緒可能分化；美國業者跌勢不等於台廠訂單已取消。",
+      "watch": "看費半是否止跌、AI資本支出及資料中心許可是否實際變更。"
+    },
+    {
+      "headline": "市場同時推升美股、美債及黃金，美元與油價走弱",
+      "source": "Reuters Breakingviews/Trading Day commentary via Yahoo",
+      "url": "https://finance.yahoo.com/markets/articles/trading-day-oil-tanks-stocks-220426496.html",
+      "published_local": "2026-11-04T17:07:00-05:00",
+      "published_taipei": "2026-11-05T06:07:00+08:00",
+      "evidence_class": "Reuters commentary syndicated, body checked",
+      "facts": "文中指出美元觸9/30以來低位；美債殖利率全曲線下滑3至7個基點，油價Brent與WTI各跌約8%；黃金漲約3.5%，比特幣漲約3%且高於8萬美元。",
+      "meaning": "這是同一交易日跨資產價格表現而非跨市場資金流量證據；政治僵局、油價與利率傳導均屬市場解讀。",
+      "taiwan_inference": "油價跌有利進口成本及通膨壓力，但美元與台幣未必同步；對台股需以匯率、電子及運輸類股實際表現確認。",
+      "watch": "後續油價、殖利率及美國非農就業。"
+    },
+    {
+      "headline": "金價受美元走弱支持",
+      "source": "Reuters via AOL",
+      "url": "https://www.aol.co.uk/articles/gold-firms-softer-oil-prices-005407000.html",
+      "published_taipei": "2026-11-05T03:13:00+08:00",
+      "evidence_class": "Reuters syndicated, body checked",
+      "facts": "11/4 19:04 UTC現貨黃金4,059.95美元/盎司，上漲3.4%；12月黃金期貨結算4,073美元、漲3.4%；FedWatch當時定價12月升息機率約83%。",
+      "meaning": "這是分別有時間戳的金價和當時市場定價，不是央行決策或實際ETF資金流。",
+      "watch": "美國非農數據及聯準會政策路徑。"
+    },
+    {
+      "headline": "馬斯克業務面臨選後資料中心審查風險",
+      "source": "Reuters via The Olympian",
+      "url": "https://www.theolympian.com/news/nation-world/world/article317924424.html",
+      "published_local": "2026-11-04 08:22 ET original",
+      "evidence_class": "Reuters syndicated, body checked",
+      "facts": "路透稱德州新當選州長曾呼籲暫停新資料中心專案直到加強社區保護；分析師預期民主黨提高監督，是否形成法令尚待觀察。",
+      "meaning": "政治主張和監管風險，不代表全面禁建或既有訂單撤銷。",
+      "taiwan_inference": "若許可時間拉長，伺服器、電源、散熱與網通交貨時程可能受影響；這是條件式推論。"
+    }
+  ],
+  "cross_assets": [
+    {
+      "asset": "BTC-USD",
+      "value": 80490.1796875,
+      "unit": "USD",
+      "data_as_of": "2026-11-05T10:33:00+08:00",
+      "reference_value_24h": 76607.5703125,
+      "reference_time": "2026-11-04T10:33:00+08:00",
+      "change_24h_pct_derived": 5.068179762341951,
+      "source": "Yahoo Finance chart API 1-minute close",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?range=3d&interval=1m"
+    },
+    {
+      "asset": "ETH-USD",
+      "value": 2422.530029296875,
+      "unit": "USD",
+      "data_as_of": "2026-11-05T10:33:00+08:00",
+      "reference_value_24h": 2253.610107421875,
+      "reference_time": "2026-11-04T10:33:00+08:00",
+      "change_24h_pct_derived": 7.495525571113282,
+      "source": "Yahoo Finance chart API 1-minute close",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETH-USD?range=3d&interval=1m"
+    },
+    {
+      "asset": "ETH-BTC",
+      "value": 0.030114000663161278,
+      "unit": "BTC per ETH",
+      "data_as_of": "2026-11-05T10:33:00+08:00",
+      "reference_value_24h": 0.029405999928712845,
+      "reference_time": "2026-11-04T10:33:00+08:00",
+      "change_24h_pct_derived": 2.4076744071441114,
+      "source": "Yahoo Finance chart API 1-minute close",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETH-BTC?range=3d&interval=1m",
+      "meaning": "ETH相對BTC走強不代表資金由BTC轉入ETH。"
+    },
+    {
+      "asset": "BTC-USD",
+      "value": 80597.2890625,
+      "unit": "USD",
+      "data_as_of": "2026-11-05T10:29:00+08:00",
+      "reference_value_24h": 76667.65625,
+      "reference_time": "2026-11-04T10:29:00+08:00",
+      "change_24h_pct_derived": 5.125541857815685,
+      "source": "Yahoo Finance chart API 1-minute close",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?range=3d&interval=1m",
+      "note": "已完成1分鐘K棒收價，非官方收盤或交易所即時成交。"
+    },
+    {
+      "asset": "ETH-USD",
+      "value": 2428.110107421875,
+      "unit": "USD",
+      "data_as_of": "2026-11-05T10:29:00+08:00",
+      "reference_value_24h": 2254.840087890625,
+      "reference_time": "2026-11-04T10:29:00+08:00",
+      "change_24h_pct_derived": 7.684359545573893,
+      "source": "Yahoo Finance chart API 1-minute close",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETH-USD?range=3d&interval=1m"
+    },
+    {
+      "asset": "ETH-BTC",
+      "value": 0.030122000724077225,
+      "unit": "BTC per ETH",
+      "data_as_of": "2026-11-05T10:29:00+08:00",
+      "reference_value_24h": 0.02942200005054474,
+      "reference_time": "2026-11-04T10:29:00+08:00",
+      "change_24h_pct_derived": 2.3791743332538084,
+      "source": "Yahoo Finance chart API 1-minute close",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETH-BTC?range=3d&interval=1m",
+      "meaning": "同期ETH相對BTC走強；這是價格相對表現，不代表資金由BTC流向ETH。"
+    },
+    {
+      "asset": "GC=F",
+      "value": 4134.5,
+      "unit": "USD/oz",
+      "data_as_of": "2026-11-05T10:20:00+08:00",
+      "source": "Yahoo Finance chart API",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=2d&interval=1m",
+      "note": "延遲或間歇報價；期貨而非現貨，並非10:29同步價。"
+    },
+    {
+      "asset": "DXY DX-Y.NYB",
+      "value": 101.31199645996094,
+      "data_as_of": "2026-11-05T10:19:00+08:00",
+      "source": "Yahoo Finance chart API",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=2d&interval=1m",
+      "note": "可能延遲，並非10:29同步價。"
+    },
+    {
+      "asset": "US 10Y yield ^TNX",
+      "value": 4.894000053405762,
+      "unit": "percent",
+      "data_as_of": "2026-11-04T14:59:00-05:00",
+      "source": "Yahoo Finance chart API",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=2d&interval=1m",
+      "note": "美國11/4 14:59 ET最後可得分鐘，非次日10:29實時殖利率，亦非官方收盤。"
+    }
+  ],
+  "etf_flows": [
+    {
+      "asset": "US spot BTC ETF",
+      "session": "2026-11-03",
+      "net_flow_usd_millions": -115.6,
+      "status": "完整已公布資料",
+      "source": "Farside Investors",
+      "url": "https://farside.co.uk/btc/",
+      "note": "11/3實際基金淨申贖估計，非11/4資金流。"
+    },
+    {
+      "asset": "US spot ETH ETF",
+      "session": "2026-11-03",
+      "net_flow_usd_millions": -85.3,
+      "status": "完整已公布資料",
+      "source": "Farside Investors",
+      "url": "https://farside.co.uk/eth/",
+      "note": "11/3實際基金淨申贖估計，非11/4資金流。"
+    },
+    {
+      "asset": "US spot BTC ETF",
+      "session": "2026-11-04",
+      "reported_so_far_usd_millions": 275.8,
+      "status": "未完整，不能視為當日總淨流入",
+      "missing_funds": [
+        "IBIT",
+        "HODL"
+      ],
+      "source": "Farside Investors",
+      "url": "https://farside.co.uk/btc/",
+      "note": "當時已回報基金加總275.8百萬美元，但IBIT及HODL為橫線非零；全市場最終方向未知。"
+    },
+    {
+      "asset": "US spot ETH ETF",
+      "session": "2026-11-04",
+      "reported_so_far_usd_millions": 23.4,
+      "status": "未完整，不能視為當日總淨流入",
+      "missing_funds": [
+        "ETHA",
+        "ETHB",
+        "FETH",
+        "ETHV",
+        "QETH"
+      ],
+      "source": "Farside Investors",
+      "url": "https://farside.co.uk/eth/",
+      "note": "已回報基金加總23.4百萬美元，多基金尚未回報；全市場最終方向未知。"
+    }
+  ],
+  "principal_signals": [
+    {
+      "principal": "Elon Musk",
+      "type": "Reuters attribution, not directly verified original post",
+      "quote": "Data centers in space looking pretty appealing right now",
+      "source": "Reuters via The Olympian",
+      "url": "https://www.theolympian.com/news/nation-world/world/article317924424.html",
+      "meaning": "路透轉述其X發言；未核實原始貼文時間或原文頁，不應當作直接核實、更不代表部署或營收。"
+    },
+    {
+      "principal": "Donald Trump",
+      "type": "Reuters attributed remarks, not directly verified original",
+      "source": "Reuters via Charlotte Observer",
+      "url": "https://www.charlotteobserver.com/news/nation-world/world/article317928565.html",
+      "published_local": "2026-11-04 13:36 ET original; update 15:19 ET",
+      "facts": "路透報導川普承認伊朗戰爭影響選情，但仍稱戰事值得且會持續；對油價的政治風險不應解讀為戰事即將結束。",
+      "note": "路透記者報導其對記者發言；未直接核實錄影或白宮逐字稿。"
+    }
+  ],
+  "editorial_suggestions": [
+    "標題：美股大漲、費半逆跌；選後資金偏好分化。",
+    "錢往哪裡：美股、美債與黃金價格走強、美元走弱；這是報價方向，不是全市場資金流量。加密ETF僅11/3完整流出，11/4數據未齊。",
+    "代表什麼：市場押注政策不確定性降低、油價與殖利率回落；AI基建監管顧慮仍在，不能稱為新法已落地。",
+    "對台灣：半導體與AI伺服器供應鏈短線情緒承壓，台廠訂單有無延遲仍須公司確認；油價下跌可緩解進口成本壓力。",
+    "接下來看：費半及台股承接、完整BTC/ETH ETF申贖、油價與美債殖利率、美國非農。",
+    "加密：10:33 ETH/BTC 24小時上漲約2.41%，ETH相對BTC強；不推論兩者間有資金轉移。"
+  ],
+  "limitations": [
+    "研究於10:34左右最後取樣；最新共時加密貨幣分鐘棒為10:33，並非10:35報價。",
+    "11/4現貨BTC及ETH ETF流量仍有多基金未報，部分總計不得當成完整日淨流入。",
+    "直接社群原文未核實；WorldMonitor X feed需要Pro，已以WorldMonitor新聞及路透報導做發現與交叉檢索。",
+    "各資產時間不同，除BTC、ETH、ETH/BTC同為10:29分鐘K之外不可假稱同步。",
+    "金價與美元指數是Yahoo期貨/指數資料，可能延遲；美債取樣為11/4盤中而非最新。"
+  ],
+  "parent_recheck": {
+    "btc_complete_column_sum": -115.6,
+    "eth_complete_column_sum": -85.3,
+    "eth_nov4_partial_updated": 42.6,
+    "eth_nov4_missing": [
+      "ETHA",
+      "ETHB",
+      "ETHV"
+    ],
+    "note": "Parent reopened Farside; latest partial replaced worker earlier version, final direction remains unknown.",
+    "gold_flow_as_of": "2026-09-30",
+    "gold_flow_url": "https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-q3-2026/investment"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-11-05",
+  "valid_for_trading_date": "2026-11-05",
+  "data_as_of": "2026-11-05",
+  "stale": false,
+  "issue_no": 118,
+  "scenario": {
+    "id": "06",
+    "slug": "risk-contraction",
+    "label": "風險收縮",
+    "confidence": 1.0,
+    "reason": "昨日外資大賣、隔夜費半逆跌與台股早盤續弱，同時水位由85.8%降至82.3%；採風險收縮，先控配置總額。高水位仍代表較佳空間，但下降是環境轉弱訊號。",
+    "source": "manual_override",
+    "classifier_suggestion": "06"
+  },
+  "water": {
+    "level": 82.3,
+    "previous": 85.8,
+    "change": -3.5,
+    "direction": "falling",
+    "previous_trading_date": "2026-11-04",
+    "comparison_date": "2026-11-04",
+    "comparison_is_provisional": false
+  },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "reduce_risk_review",
+    "risk_posture": "risk_off",
+    "water_policy": {
+      "direction": "falling",
+      "change": -3.5,
+      "interpretation": "方舟水位82.3%，較前一交易日11/4的85.8%下降3.5個百分點；配置環境轉弱，宜收斂持有總額，而非因水位仍高就忽略降幅。"
+    },
+    "scenario_context": {
+      "id": "06",
+      "label": "風險收縮",
+      "confidence": 1.0
+    },
+    "policy_focus": [
+      "先依風控決定持有總額，再由固定價值判斷選位置；不追反彈、不因單日盈虧換股。",
+      "觀察早盤低點、半導體承接及賣壓是否收斂；美國大盤上漲不代表台股風險解除。",
+      "10:30加權跌1.48%；昨日外資賣超1,499.00億元，隔夜費半跌3.13%。",
+      "路透報導民主黨取得美國國會兩院，市場對政策僵局與油價下跌的樂觀，和資料中心建設放緩的疑慮並存；目前是市場預期，不是新禁令或台廠訂單取消。"
+    ],
+    "systemic_risk": "高",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
+  "action_guidance": {
+    "risk_bias": "risk_off",
+    "allow_add": false,
+    "allow_trim": true,
+    "deploy_mode": "reduce_exposure",
+    "trim": {
+      "allowed": true,
+      "mode": "reduce_exposure",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": false,
+      "mode": "disabled",
+      "conditions": [
+        "risk_off_no_new_exposure"
+      ]
+    },
+    "rebuy": {
+      "allowed": false,
+      "mode": "disabled_until_stabilized",
+      "conditions": [
+        "risk_bias_improves",
+        "water_stabilizes"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 1.0,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "風險收縮",
+    "summary": "昨日外資大賣、隔夜費半逆跌與台股早盤續弱，同時水位由85.8%降至82.3%；採風險收縮，先控配置總額。高水位仍代表較佳空間，但下降是環境轉弱訊號。"
+  },
+  "source": {
+    "issue_file": "data/issues/20261105.json",
+    "generated_at": "2026-11-05T10:38:33+08:00"
+  }
+}

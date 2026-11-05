@@ -1,0 +1,1728 @@
+{
+  "schema_version": "morning_brief.issue.v2",
+  "issue_no": 118,
+  "date": "2026-11-05",
+  "day": "THURSDAY",
+  "data_as_of": "2026-11-05",
+  "brief_label": "早盤版",
+  "session_label": "11/5早盤版｜方舟09:05–09:08快照｜台股10:30快照",
+  "source_ark": "方舟盤中快照",
+  "ark": {
+    "water_level": 82.3,
+    "holding_allocation_suggestion": "82.3%",
+    "prev": 85.8,
+    "previous_water_level": 85.8,
+    "delta": -3.5,
+    "change": -3.5,
+    "direction": "下降",
+    "as_of": "2026-11-05",
+    "source_time": "09:05–09:08",
+    "comparison_date": "2026-11-04",
+    "previous_trading_date": "2026-11-04",
+    "comparison_is_provisional": false,
+    "note": "方舟水位82.3%，較前一交易日11/4的85.8%下降3.5個百分點；配置環境轉弱，宜收斂持有總額，而非因水位仍高就忽略降幅。",
+    "interpretation": "方舟水位82.3%，較前一交易日11/4的85.8%下降3.5個百分點；配置環境轉弱，宜收斂持有總額，而非因水位仍高就忽略降幅。"
+  },
+  "water": {
+    "current": 82.3,
+    "previous": 85.8,
+    "delta": -3.5,
+    "direction": "下降",
+    "as_of": "2026-11-05",
+    "previous_date": "2026-11-04",
+    "note": "方舟水位82.3%，較前一交易日11/4的85.8%下降3.5個百分點；配置環境轉弱，宜收斂持有總額，而非因水位仍高就忽略降幅。"
+  },
+  "hero": {
+    "headline": "外資大賣後台股續跌，水位轉降、費半拖累承接",
+    "subhead": "方舟水位82.3%，較前一交易日11/4的85.8%下降3.5個百分點；配置環境轉弱，宜收斂持有總額，而非因水位仍高就忽略降幅。",
+    "reader_subhead": "昨日外資大賣尚待消化，隔夜美國大盤走強卻未帶動費半；台股早盤續弱，水位轉降先守配置紀律。"
+  },
+  "strategy": {
+    "thesis": "美股普漲未帶動半導體；台股續跌、水位轉降，先收斂配置，再看價值。",
+    "tape": "10:30加權跌1.48%；昨日外資賣超1,499.00億元，隔夜費半跌3.13%。",
+    "playbook": "先依風控決定持有總額，再由固定價值判斷選位置；不追反彈、不因單日盈虧換股。",
+    "risk": "觀察早盤低點、半導體承接及賣壓是否收斂；美國大盤上漲不代表台股風險解除。",
+    "reader": {
+      "thesis": "美股普漲未帶動半導體；台股續跌、水位轉降，先收斂配置，再看價值。",
+      "tape": "10:30加權跌1.48%；昨日外資賣超1,499.00億元，隔夜費半跌3.13%。",
+      "playbook": "先依風控決定持有總額，再由固定價值判斷選位置；不追反彈、不因單日盈虧換股。",
+      "risk": "觀察早盤低點、半導體承接及賣壓是否收斂；美國大盤上漲不代表台股風險解除。"
+    }
+  },
+  "market": {
+    "tw_index": {
+      "value": "42,313.65",
+      "change": -635.26,
+      "change_pct": -1.48,
+      "previous_close": 42948.91,
+      "data_as_of": "2026-11-05T10:30:00+08:00",
+      "source_url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+      "raw": {
+        "@": "t00.tw",
+        "pid": "2.tse.tw|1081",
+        "key": "tse_t00.tw_20261105",
+        "^": "20261105",
+        "c": "t00",
+        "#": "2.tse.tw|1081",
+        "d": "20261105",
+        "%": "10:30:00",
+        "ch": "t00.tw",
+        "tlong": "1793845800000",
+        "h": "42873.81",
+        "i": "tidx.tw",
+        "it": "t",
+        "l": "41866.10",
+        "m": "7375129",
+        "n": "發行量加權股價指數",
+        "o": "42666.13",
+        "r": "1668230",
+        "ex": "tse",
+        "t": "10:30:00",
+        "y": "42948.91",
+        "z": "42313.65"
+      },
+      "status": "official intraday, not close",
+      "line": "11/5 10:30加權42,313.65點，下跌635.26點（-1.48%）；盤中快照，非收盤。"
+    },
+    "futures": {
+      "value": "42,492",
+      "change": -711.0,
+      "change_pct": -1.65,
+      "reference_price": 43203.0,
+      "contract": "TX116",
+      "data_as_of": "retrieval 2026-11-05T10:31:06+08:00; endpoint has no quote timestamp",
+      "source_url": "https://www.taifex.com.tw/cht/quotesApi/getQuotes?objId=2",
+      "raw": {
+        "contract": "TX116",
+        "price": "42,492",
+        "ttlvol": "46,126",
+        "contractName": "臺股期貨",
+        "updown": "-711"
+      },
+      "status": "official intraday quote, not close; contract suffix 116 interpreted as Nov 2026 subject to confirmation",
+      "line": "11/5約10:31擷取臺股期貨TX116報價42,492點，下跌711點（-1.65%）；端點未附報價時間，不與現貨視為同秒行情。"
+    },
+    "foreign_oi": {
+      "value": "-93,647",
+      "net": -93647,
+      "data_as_of": "2026-11-04",
+      "note": "11/4外資臺股期貨全月份未平倉多11,103口、空104,750口，淨空93,647口；部位餘額非新增空單。",
+      "source_url": "https://www.taifex.com.tw/cht/3/futContractsDate?queryDate=2026/11/04&commodityId=TXF"
+    },
+    "systemic_risk": "高",
+    "sox": {
+      "value": "10,268.65",
+      "change_pct": -3.13,
+      "previous_close": 10600.4,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 10268.654296875,
+      "raw_previous_close": 10600.400390625,
+      "session_timestamp": 1793802600
+    },
+    "sp500": {
+      "value": "7,688.62",
+      "change_pct": 1.58,
+      "previous_close": 7568.92,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 7688.6201171875,
+      "raw_previous_close": 7568.919921875,
+      "session_timestamp": 1793802600
+    },
+    "nasdaq100": {
+      "value": "28,437.17",
+      "change_pct": 0.91,
+      "previous_close": 28180.26,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ENDX?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 28437.166015625,
+      "raw_previous_close": 28180.259765625,
+      "session_timestamp": 1793802600
+    },
+    "dow": {
+      "value": "53,356.12",
+      "change_pct": 3.03,
+      "previous_close": 51786.72,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 53356.12109375,
+      "raw_previous_close": 51786.71875,
+      "session_timestamp": 1793802600
+    },
+    "vix": {
+      "value": "16.61",
+      "change_pct": -20.26,
+      "previous_close": 20.83,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 16.610000610351562,
+      "raw_previous_close": 20.829999923706055,
+      "session_timestamp": 1793802600
+    }
+  },
+  "home": {
+    "water_note": "方舟水位82.3%，較前一交易日11/4的85.8%下降3.5個百分點；配置環境轉弱，宜收斂持有總額，而非因水位仍高就忽略降幅。",
+    "thesis_blurb": "美股普漲未帶動半導體；台股續跌、水位轉降，先收斂配置，再看價值。",
+    "risk_tagline": "配置環境轉弱，先控總額再看價值。",
+    "recent_summary": "11/5：水位82.3%、下降3.5個百分點；台股續跌，海外大盤與半導體分化。"
+  },
+  "editorial": {
+    "pull_quote": "美國大盤的反彈，還不是台灣半導體的轉機。",
+    "body": "方舟水位82.3%，較前一交易日11/4的85.8%下降3.5個百分點；配置環境轉弱，宜收斂持有總額，而非因水位仍高就忽略降幅。 11/5 10:30加權42,313.65點，下跌635.26點（-1.48%）；盤中快照，非收盤。 11/4外資及陸資賣超1,499.00億元；這是昨日實際流向，不能當成今日盤中賣超。\n\n路透報導民主黨取得美國國會兩院，市場對政策僵局與油價下跌的樂觀，和資料中心建設放緩的疑慮並存；目前是市場預期，不是新禁令或台廠訂單取消。\n\nADP公布10月民間就業增加8.6萬，9月修正為8.6萬；這不是政府非農報告，也不足以單獨判斷聯準會下一步。\n\n價值區和升溫區沒有交集；ETF升溫多為債券，不能直接當成股票風險偏好回升。資金有限，先機械化控制持有總額，再依固定價值標準分配。"
+  },
+  "validation": {
+    "strengthened": [
+      "美國大盤反彈、VIX回落，但改善集中於部分資產，不等於台股風險解除。",
+      "價值名單保留研究位置；金融、高息與生技表現可比較，但不是市場資金流向的完整樣本。"
+    ],
+    "pressure": [
+      "方舟水位82.3%，較前一交易日11/4的85.8%下降3.5個百分點；配置環境轉弱，宜收斂持有總額，而非因水位仍高就忽略降幅。",
+      "11/4外資及陸資賣超1,499.00億元；這是昨日實際流向，不能當成今日盤中賣超。",
+      "11/4外資臺股期貨全月份未平倉多11,103口、空104,750口，淨空93,647口；部位餘額非新增空單。",
+      "11/5 10:30加權42,313.65點，下跌635.26點（-1.48%）；盤中快照，非收盤。"
+    ],
+    "long_term": [
+      "路透報導民主黨取得美國國會兩院，市場對政策僵局與油價下跌的樂觀，和資料中心建設放緩的疑慮並存；目前是市場預期，不是新禁令或台廠訂單取消。",
+      "ADP公布10月民間就業增加8.6萬，9月修正為8.6萬；這不是政府非農報告，也不足以單獨判斷聯準會下一步。"
+    ]
+  },
+  "intelligence": {
+    "trump": [
+      {
+        "time": "11/4路透報導",
+        "content": "川普承認伊朗戰爭影響選情，但仍表示戰事值得並會持續；油價下跌不能當成戰事已結束。此為路透轉述，不是本期直接核實的原始發言。"
+      }
+    ],
+    "musk": "路透轉述馬斯克談及太空資料中心的吸引力；這是發言與政策風險背景，不是新的部署、訂單或收入。未直接核實原始貼文，不添加直接社群交易訊號。",
+    "policy": [
+      "路透報導民主黨取得美國國會兩院，市場對政策僵局與油價下跌的樂觀，和資料中心建設放緩的疑慮並存；目前是市場預期，不是新禁令或台廠訂單取消。",
+      "ADP公布10月民間就業增加8.6萬，9月修正為8.6萬；這不是政府非農報告，也不足以單獨判斷聯準會下一步。"
+    ]
+  },
+  "analysis": {
+    "us_close": "11/4美股收盤：標普7,688.62（+1.58%）、那斯達克100為28,437.17（+0.91%）、道瓊53,356.12（+3.03%）；費半10,268.65（-3.13%），VIX為16.61（-20.26%）。",
+    "tx_night": "11/5約10:31擷取臺股期貨TX116報價42,492點，下跌711點（-1.65%）；端點未附報價時間，不與現貨視為同秒行情。 本期採日盤快照，不以夜盤代替當前行情。",
+    "axes": {
+      "thesis": "美股普漲未帶動半導體；台股續跌、水位轉降，先收斂配置，再看價值。",
+      "policy": "路透報導民主黨取得美國國會兩院，市場對政策僵局與油價下跌的樂觀，和資料中心建設放緩的疑慮並存；目前是市場預期，不是新禁令或台廠訂單取消。",
+      "risk": "11/4外資及陸資賣超1,499.00億元；這是昨日實際流向，不能當成今日盤中賣超。 11/4外資臺股期貨全月份未平倉多11,103口、空104,750口，淨空93,647口；部位餘額非新增空單。"
+    }
+  },
+  "temperature": {
+    "vix_note": "11/4 VIX收16.61、下跌20.26%；美國波動預期回落，但費半及台股仍承壓。",
+    "signal_headline": "水位轉降，台股仍需防禦",
+    "signal_note": "方舟水位82.3%，較前一交易日11/4的85.8%下降3.5個百分點；配置環境轉弱，宜收斂持有總額，而非因水位仍高就忽略降幅。"
+  },
+  "appendix": {
+    "after_hours": "11/5早盤版；方舟09:05–09:08，台股10:30；期貨約10:31擷取、端點未附報價時間。法人與美股收盤為11/4，完整加密ETF為11/3。",
+    "execution": "先依風控決定持有總額，再由固定價值判斷選位置；不追反彈、不因單日盈虧換股。",
+    "map_bullets": [
+      "11/5 10:30加權42,313.65點，下跌635.26點（-1.48%）；盤中快照，非收盤。",
+      "11/5約10:31擷取臺股期貨TX116報價42,492點，下跌711點（-1.65%）；端點未附報價時間，不與現貨視為同秒行情。",
+      "11/4外資及陸資賣超1,499.00億元；這是昨日實際流向，不能當成今日盤中賣超。",
+      "美國平台股走強、晶片承壓：晶圓代工、封裝、伺服器與電源散熱須分別確認，不把政策預期當訂單取消。",
+      "跨資產研究工具：黃金GLD／IAU、美債IEF／TLT、BTC的IBIT、ETH的ETHA；各自價格與流量確認前不升為交易指令。"
+    ]
+  },
+  "mag7": [
+    {
+      "name": "Apple",
+      "ticker": "AAPL｜11/4正常盤收盤",
+      "tier": "leading",
+      "tier_label": "明顯反彈",
+      "price": "349.51",
+      "change_pct": 5.31,
+      "change_abs": "+17.61",
+      "signal": "蘋果反彈強於那斯達克100，消費科技承接改善；台股組裝及零組件仍須看自身價格，不能當作新增訂單證據。",
+      "data_as_of": "2026-11-04"
+    },
+    {
+      "name": "Microsoft",
+      "ticker": "MSFT｜11/4正常盤收盤",
+      "tier": "leading",
+      "tier_label": "權值領漲",
+      "price": "555.80",
+      "change_pct": 6.68,
+      "change_abs": "+34.81",
+      "signal": "雲端權值明顯領漲，但費半逆跌；平台股走強不能直接推論伺服器供應鏈同步受惠，建設節奏仍須看公司指引。",
+      "data_as_of": "2026-11-04"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA｜11/4正常盤收盤",
+      "tier": "lagging",
+      "tier_label": "晶片承壓",
+      "price": "200.13",
+      "change_pct": -3.17,
+      "change_abs": "-6.56",
+      "signal": "與費半同步下跌，AI晶片沒有跟上美國大盤反彈；台灣半導體及先進封裝先看承接，不把其他權值上漲當作自身買點。",
+      "data_as_of": "2026-11-04"
+    },
+    {
+      "name": "Amazon",
+      "ticker": "AMZN｜11/4正常盤收盤",
+      "tier": "leading",
+      "tier_label": "權值領漲",
+      "price": "266.03",
+      "change_pct": 6.12,
+      "change_abs": "+15.34",
+      "signal": "反彈強於那斯達克100，但雲端與零售同在股價中；不能單由漲幅推論AWS採購擴張或台廠訂單增加。",
+      "data_as_of": "2026-11-04"
+    },
+    {
+      "name": "Alphabet",
+      "ticker": "GOOGL｜11/4正常盤收盤",
+      "tier": "leading",
+      "tier_label": "相對強勢",
+      "price": "288.93",
+      "change_pct": 3.18,
+      "change_abs": "+8.90",
+      "signal": "上漲幅度高於那斯達克100，平台與晶片表現分歧；留意AI應用及雲端需求，不把價格上漲等同資本支出增加。",
+      "data_as_of": "2026-11-04"
+    },
+    {
+      "name": "Meta",
+      "ticker": "META｜11/4正常盤收盤",
+      "tier": "leading",
+      "tier_label": "溫和回升",
+      "price": "630.00",
+      "change_pct": 1.44,
+      "change_abs": "+8.97",
+      "signal": "股價回升，幅度低於雲端領漲股；資料中心建設若放緩對成本及供應鏈可能有不同影響，須分開判斷。",
+      "data_as_of": "2026-11-04"
+    },
+    {
+      "name": "Tesla",
+      "ticker": "TSLA｜11/4正常盤收盤",
+      "tier": "lagging",
+      "tier_label": "相對弱勢",
+      "price": "385.19",
+      "change_pct": -3.34,
+      "change_abs": "-13.31",
+      "signal": "未跟上美國大盤反彈；電動車與相關零組件不能沿用雲端權值偏多情緒，先看自己的承接與政策影響。",
+      "data_as_of": "2026-11-04"
+    }
+  ],
+  "xurl_signal_layer": {
+    "status": "unavailable",
+    "signals_count": 0,
+    "included_in_revision": true,
+    "signals": [],
+    "note": "人物內容為路透轉述，未核實同日原始社群貼文。"
+  },
+  "disclaimer": "Kelvin Morning Brief｜2026/11/5早盤版。方舟名單與水位為盤中快照，僅供研究，不構成投資建議。",
+  "draft_cutoff": "2026-11-05T10:35:00+08:00",
+  "title": "外資大賣後台股續跌，水位轉降、費半拖累承接",
+  "eyebrow": "DIVERGING MARKETS × CAPITAL DISCIPLINE",
+  "scenario_id": "06",
+  "lock_scenario": true,
+  "scenario_reason": "昨日外資大賣、隔夜費半逆跌與台股早盤續弱，同時水位由85.8%降至82.3%；採風險收縮，先控配置總額。高水位仍代表較佳空間，但下降是環境轉弱訊號。",
+  "market_summary": {
+    "twse": "11/5 10:30加權42,313.65點，下跌635.26點（-1.48%）；盤中快照，非收盤。",
+    "taifex": "11/5約10:31擷取臺股期貨TX116報價42,492點，下跌711點（-1.65%）；端點未附報價時間，不與現貨視為同秒行情。 11/4外資臺股期貨全月份未平倉多11,103口、空104,750口，淨空93,647口；部位餘額非新增空單。",
+    "us": "11/4美股收盤：標普7,688.62（+1.58%）、那斯達克100為28,437.17（+0.91%）、道瓊53,356.12（+3.03%）；費半10,268.65（-3.13%），VIX為16.61（-20.26%）。"
+  },
+  "conclusion": "今日一句話：<em>水位轉降先控總額，別把美股反彈當成台股風險解除。</em>",
+  "etf": {
+    "overlap": [],
+    "value": [
+      {
+        "code": "00897",
+        "name": "富邦基因免疫生技",
+        "price": "15.03",
+        "change": "▲0.47(3.23%)",
+        "meta": "15.03 / ▲0.47(3.23%)",
+        "stamp": "value",
+        "source_file": "02_ETF價值區_1.png",
+        "source_rank": 1,
+        "nav": "15.17",
+        "premium_discount": "-0.99%"
+      },
+      {
+        "code": "00960",
+        "name": "野村全球航運龍頭",
+        "price": "22.18",
+        "change": "▼0.78(-3.4%)",
+        "meta": "22.18 / ▼0.78(-3.4%)",
+        "stamp": "value",
+        "source_file": "02_ETF價值區_1.png",
+        "source_rank": 2,
+        "nav": "22.31",
+        "premium_discount": "-0.58%"
+      },
+      {
+        "code": "00939",
+        "name": "統一台灣高息動能",
+        "price": "24.55",
+        "change": "▲0.48(1.99%)",
+        "meta": "24.55 / ▲0.48(1.99%)",
+        "stamp": "value",
+        "source_file": "02_ETF價值區_1.png",
+        "source_rank": 3,
+        "nav": "24.51",
+        "premium_discount": "0.12%"
+      },
+      {
+        "code": "0055",
+        "name": "元大MSCI金融",
+        "price": "51.2",
+        "change": "▲1.1(2.2%)",
+        "meta": "51.2 / ▲1.1(2.2%)",
+        "stamp": "value",
+        "source_file": "02_ETF價值區_1.png",
+        "source_rank": 4,
+        "nav": "51.28",
+        "premium_discount": "-0.06%"
+      },
+      {
+        "code": "00875",
+        "name": "國泰網路資安",
+        "price": null,
+        "change": null,
+        "meta": "股價 —｜即時淨值 60.31｜折溢價 -1.01%",
+        "stamp": "value",
+        "source_file": "02_ETF價值區_1.png",
+        "source_rank": 5,
+        "nav": "60.31",
+        "premium_discount": "-1.01%"
+      },
+      {
+        "code": "00701",
+        "name": "國泰股利精選30",
+        "price": "42.84",
+        "change": "▲0.79(1.88%)",
+        "meta": "42.84 / ▲0.79(1.88%)",
+        "stamp": "value",
+        "source_file": "02_ETF價值區_1.png",
+        "source_rank": 6,
+        "nav": "43.04",
+        "premium_discount": "-0.44%"
+      },
+      {
+        "code": "00918",
+        "name": "大華優利高填息30",
+        "price": "33.58",
+        "change": "▲0.42(1.27%)",
+        "meta": "33.58 / ▲0.42(1.27%)",
+        "stamp": "value",
+        "source_file": "03_ETF價值區_2.png",
+        "source_rank": 7,
+        "nav": "33.54",
+        "premium_discount": "0.3%"
+      },
+      {
+        "code": "00898",
+        "name": "國泰基因免疫革命",
+        "price": "11.9",
+        "change": "▲0.38(3.3%)",
+        "meta": "11.9 / ▲0.38(3.3%)",
+        "stamp": "value",
+        "source_file": "03_ETF價值區_2.png",
+        "source_rank": 8,
+        "nav": "11.94",
+        "premium_discount": "-1.34%"
+      },
+      {
+        "code": "00878",
+        "name": "國泰永續高股息",
+        "price": "33.77",
+        "change": "▲0.16(0.48%)",
+        "meta": "33.77 / ▲0.16(0.48%)",
+        "stamp": "value",
+        "source_file": "03_ETF價值區_2.png",
+        "source_rank": 9,
+        "nav": "33.66",
+        "premium_discount": "0.45%"
+      },
+      {
+        "code": "00919",
+        "name": "群益台灣精選高息",
+        "price": "31.75",
+        "change": "▲0.49(1.57%)",
+        "meta": "31.75 / ▲0.49(1.57%)",
+        "stamp": "value",
+        "source_file": "03_ETF價值區_2.png",
+        "source_rank": 10,
+        "nav": "31.72",
+        "premium_discount": "0.19%"
+      }
+    ],
+    "rising": [
+      {
+        "code": "00845B",
+        "name": "富邦新興投等債",
+        "price": null,
+        "change": null,
+        "meta": "股價 —｜即時淨值 33.22｜折溢價 -0.37%",
+        "stamp": "rising",
+        "source_file": "04_ETF升溫區_1.png",
+        "source_rank": 1,
+        "nav": "33.22",
+        "premium_discount": "-0.37%"
+      },
+      {
+        "code": "00860B",
+        "name": "群益1-5Y投資級債",
+        "price": null,
+        "change": null,
+        "meta": "股價 —｜即時淨值 39.31｜折溢價 -0.26%",
+        "stamp": "rising",
+        "source_file": "04_ETF升溫區_1.png",
+        "source_rank": 2,
+        "nav": "39.31",
+        "premium_discount": "-0.26%"
+      },
+      {
+        "code": "00687C",
+        "name": "國泰20年美債+櫃U",
+        "price": null,
+        "change": null,
+        "meta": "股價 —｜即時淨值 9.15｜折溢價 -0.69%",
+        "stamp": "rising",
+        "source_file": "04_ETF升溫區_1.png",
+        "source_rank": 3,
+        "nav": "9.15",
+        "premium_discount": "-0.69%"
+      },
+      {
+        "code": "00846B",
+        "name": "富邦歐洲銀行債",
+        "price": null,
+        "change": null,
+        "meta": "股價 —｜即時淨值 35.98｜折溢價 -1.05%",
+        "stamp": "rising",
+        "source_file": "04_ETF升溫區_1.png",
+        "source_rank": 4,
+        "nav": "35.98",
+        "premium_discount": "-1.05%"
+      },
+      {
+        "code": "00775B",
+        "name": "台新投等債15+",
+        "price": null,
+        "change": null,
+        "meta": "股價 —｜即時淨值 32.14｜折溢價 -0.83%",
+        "stamp": "rising",
+        "source_file": "04_ETF升溫區_1.png",
+        "source_rank": 5,
+        "nav": "32.14",
+        "premium_discount": "-0.83%"
+      },
+      {
+        "code": "00856B",
+        "name": "永豐1-3年美公債",
+        "price": "38.68",
+        "change": "0(0%)",
+        "meta": "38.68 / 0(0%)",
+        "stamp": "rising",
+        "source_file": "04_ETF升溫區_1.png",
+        "source_rank": 6,
+        "nav": "38.89",
+        "premium_discount": "-0.54%"
+      },
+      {
+        "code": "00702",
+        "name": "國泰標普低波高息",
+        "price": "25.65",
+        "change": "▲0.04(0.16%)",
+        "meta": "25.65 / ▲0.04(0.16%)",
+        "stamp": "rising",
+        "source_file": "05_ETF升溫區_2.png",
+        "source_rank": 7,
+        "nav": "26.44",
+        "premium_discount": "-2.99%"
+      }
+    ]
+  },
+  "stocks": {
+    "overlap": [],
+    "value": [
+      {
+        "code": "4958",
+        "name": "臻鼎-KY",
+        "price": "413.5",
+        "change": "▼19.5(-4.5%)",
+        "meta": "413.5 / ▼19.5(-4.5%)",
+        "stamp": "value",
+        "source_file": "06_產業價值區_1.png",
+        "source_rank": 1
+      },
+      {
+        "code": "3023",
+        "name": "信邦",
+        "price": "246",
+        "change": "▼1.5(-0.61%)",
+        "meta": "246 / ▼1.5(-0.61%)",
+        "stamp": "value",
+        "source_file": "06_產業價值區_1.png",
+        "source_rank": 2
+      },
+      {
+        "code": "3044",
+        "name": "健鼎",
+        "price": "456",
+        "change": "▼28(-5.79%)",
+        "meta": "456 / ▼28(-5.79%)",
+        "stamp": "value",
+        "source_file": "06_產業價值區_1.png",
+        "source_rank": 3
+      },
+      {
+        "code": "6285",
+        "name": "啟碁",
+        "price": "192",
+        "change": "▼9(-4.48%)",
+        "meta": "192 / ▼9(-4.48%)",
+        "stamp": "value",
+        "source_file": "06_產業價值區_1.png",
+        "source_rank": 4
+      },
+      {
+        "code": "6414",
+        "name": "樺漢",
+        "price": "344.5",
+        "change": "▼4(-1.15%)",
+        "meta": "344.5 / ▼4(-1.15%)",
+        "stamp": "value",
+        "source_file": "06_產業價值區_1.png",
+        "source_rank": 5
+      },
+      {
+        "code": "3706",
+        "name": "神達",
+        "price": "72.6",
+        "change": "▼0.1(-0.14%)",
+        "meta": "72.6 / ▼0.1(-0.14%)",
+        "stamp": "value",
+        "source_file": "06_產業價值區_1.png",
+        "source_rank": 6
+      },
+      {
+        "code": "2301",
+        "name": "光寶科",
+        "price": "215.5",
+        "change": "▼10.5(-4.65%)",
+        "meta": "215.5 / ▼10.5(-4.65%)",
+        "stamp": "value",
+        "source_file": "06_產業價值區_1.png",
+        "source_rank": 7
+      },
+      {
+        "code": "2330",
+        "name": "台積電",
+        "price": "2,270",
+        "change": "▲10(0.44%)",
+        "meta": "2,270 / ▲10(0.44%)",
+        "stamp": "value",
+        "source_file": "07_產業價值區_2.png",
+        "source_rank": 8
+      },
+      {
+        "code": "1513",
+        "name": "中興電",
+        "price": "148",
+        "change": "▲1.5(1.02%)",
+        "meta": "148 / ▲1.5(1.02%)",
+        "stamp": "value",
+        "source_file": "07_產業價值區_2.png",
+        "source_rank": 9
+      },
+      {
+        "code": "2376",
+        "name": "技嘉",
+        "price": "323",
+        "change": "▼1.5(-0.46%)",
+        "meta": "323 / ▼1.5(-0.46%)",
+        "stamp": "value",
+        "source_file": "07_產業價值區_2.png",
+        "source_rank": 10
+      },
+      {
+        "code": "2357",
+        "name": "華碩",
+        "price": "871",
+        "change": "▼6(-0.68%)",
+        "meta": "871 / ▼6(-0.68%)",
+        "stamp": "value",
+        "source_file": "07_產業價值區_2.png",
+        "source_rank": 11
+      },
+      {
+        "code": "2404",
+        "name": "漢唐",
+        "price": "1,000",
+        "change": "▲5(0.5%)",
+        "meta": "1,000 / ▲5(0.5%)",
+        "stamp": "value",
+        "source_file": "08_產業價值區_3.png",
+        "source_rank": 12
+      },
+      {
+        "code": "2645",
+        "name": "長榮航太",
+        "price": "158.5",
+        "change": "▲1.5(0.96%)",
+        "meta": "158.5 / ▲1.5(0.96%)",
+        "stamp": "value",
+        "source_file": "08_產業價值區_3.png",
+        "source_rank": 13
+      },
+      {
+        "code": "6669",
+        "name": "緯穎",
+        "price": "1,720",
+        "change": "▼65(-3.64%)",
+        "meta": "1,720 / ▼65(-3.64%)",
+        "stamp": "value",
+        "source_file": "08_產業價值區_3.png",
+        "source_rank": 14
+      },
+      {
+        "code": "2382",
+        "name": "廣達",
+        "price": "301",
+        "change": "▼1.5(-0.5%)",
+        "meta": "301 / ▼1.5(-0.5%)",
+        "stamp": "value",
+        "source_file": "08_產業價值區_3.png",
+        "source_rank": 15
+      },
+      {
+        "code": "5289",
+        "name": "宜鼎",
+        "price": "965",
+        "change": "▼45(-4.46%)",
+        "meta": "965 / ▼45(-4.46%)",
+        "stamp": "value",
+        "source_file": "08_產業價值區_3.png",
+        "source_rank": 16
+      },
+      {
+        "code": "5269",
+        "name": "祥碩",
+        "price": "1,275",
+        "change": "▼50(-3.77%)",
+        "meta": "1,275 / ▼50(-3.77%)",
+        "stamp": "value",
+        "source_file": "09_產業價值區_4.png",
+        "source_rank": 17
+      },
+      {
+        "code": "2449",
+        "name": "京元電子",
+        "price": "238",
+        "change": "▼10.5(-4.23%)",
+        "meta": "238 / ▼10.5(-4.23%)",
+        "stamp": "value",
+        "source_file": "09_產業價值區_4.png",
+        "source_rank": 18
+      },
+      {
+        "code": "6239",
+        "name": "力成",
+        "price": "229.5",
+        "change": "▼11(-4.57%)",
+        "meta": "229.5 / ▼11(-4.57%)",
+        "stamp": "value",
+        "source_file": "09_產業價值區_4.png",
+        "source_rank": 19
+      },
+      {
+        "code": "3711",
+        "name": "日月光投控",
+        "price": "591",
+        "change": "▼36(-5.74%)",
+        "meta": "591 / ▼36(-5.74%)",
+        "stamp": "value",
+        "source_file": "09_產業價值區_4.png",
+        "source_rank": 20
+      },
+      {
+        "code": "6139",
+        "name": "亞翔",
+        "price": "593",
+        "change": "▼16(-2.63%)",
+        "meta": "593 / ▼16(-2.63%)",
+        "stamp": "value",
+        "source_file": "09_產業價值區_4.png",
+        "source_rank": 21
+      },
+      {
+        "code": "3231",
+        "name": "緯創",
+        "price": "171.5",
+        "change": "▼4.5(-2.56%)",
+        "meta": "171.5 / ▼4.5(-2.56%)",
+        "stamp": "value",
+        "source_file": "10_產業價值區_5.png",
+        "source_rank": 22
+      },
+      {
+        "code": "6670",
+        "name": "復盛應用",
+        "price": "259.5",
+        "change": "▲2.5(0.97%)",
+        "meta": "259.5 / ▲2.5(0.97%)",
+        "stamp": "value",
+        "source_file": "10_產業價值區_5.png",
+        "source_rank": 23
+      },
+      {
+        "code": "2454",
+        "name": "聯發科",
+        "price": "3,645",
+        "change": "▼70(-1.88%)",
+        "meta": "3,645 / ▼70(-1.88%)",
+        "stamp": "value",
+        "source_file": "10_產業價值區_5.png",
+        "source_rank": 24
+      },
+      {
+        "code": "8069",
+        "name": "元太",
+        "price": "145.5",
+        "change": "▲1(0.69%)",
+        "meta": "145.5 / ▲1(0.69%)",
+        "stamp": "value",
+        "source_file": "10_產業價值區_5.png",
+        "source_rank": 25
+      },
+      {
+        "code": "2379",
+        "name": "瑞昱",
+        "price": "726",
+        "change": "▼22(-2.94%)",
+        "meta": "726 / ▼22(-2.94%)",
+        "stamp": "value",
+        "source_file": "10_產業價值區_5.png",
+        "source_rank": 26
+      },
+      {
+        "code": "3036",
+        "name": "文曄",
+        "price": "200.5",
+        "change": "▼4(-1.96%)",
+        "meta": "200.5 / ▼4(-1.96%)",
+        "stamp": "value",
+        "source_file": "11_產業價值區_6.png",
+        "source_rank": 27
+      },
+      {
+        "code": "2317",
+        "name": "鴻海",
+        "price": "239",
+        "change": "▼1(-0.42%)",
+        "meta": "239 / ▼1(-0.42%)",
+        "stamp": "value",
+        "source_file": "11_產業價值區_6.png",
+        "source_rank": 28
+      },
+      {
+        "code": "3293",
+        "name": "鈊象",
+        "price": "780",
+        "change": "▲2(0.26%)",
+        "meta": "780 / ▲2(0.26%)",
+        "stamp": "value",
+        "source_file": "11_產業價值區_6.png",
+        "source_rank": 29
+      },
+      {
+        "code": "3005",
+        "name": "神基",
+        "price": "121.5",
+        "change": "▼0.5(-0.41%)",
+        "meta": "121.5 / ▼0.5(-0.41%)",
+        "stamp": "value",
+        "source_file": "11_產業價值區_6.png",
+        "source_rank": 30
+      }
+    ],
+    "rising": [
+      {
+        "code": "8099",
+        "name": "大世科",
+        "price": "150",
+        "change": "▲6.5(4.53%)",
+        "meta": "150 / ▲6.5(4.53%)",
+        "stamp": "rising",
+        "source_file": "12_產業升溫區_1.png",
+        "source_rank": 1
+      },
+      {
+        "code": "6199",
+        "name": "天品",
+        "price": "166",
+        "change": "▲0.5(0.3%)",
+        "meta": "166 / ▲0.5(0.3%)",
+        "stamp": "rising",
+        "source_file": "12_產業升溫區_1.png",
+        "source_rank": 2
+      },
+      {
+        "code": "8272",
+        "name": "全景軟體",
+        "price": "97.5",
+        "change": "▼5.5(-5.34%)",
+        "meta": "97.5 / ▼5.5(-5.34%)",
+        "stamp": "rising",
+        "source_file": "12_產業升溫區_1.png",
+        "source_rank": 3
+      },
+      {
+        "code": "3691",
+        "name": "碩禾",
+        "price": "161",
+        "change": "▲14(9.52%)",
+        "meta": "161 / ▲14(9.52%)",
+        "stamp": "rising",
+        "source_file": "12_產業升溫區_1.png",
+        "source_rank": 4
+      },
+      {
+        "code": "4526",
+        "name": "東台",
+        "price": "57.5",
+        "change": "▼2.8(-4.64%)",
+        "meta": "57.5 / ▼2.8(-4.64%)",
+        "stamp": "rising",
+        "source_file": "12_產業升溫區_1.png",
+        "source_rank": 5
+      },
+      {
+        "code": "6870",
+        "name": "騰雲",
+        "price": "435",
+        "change": "▲2(0.46%)",
+        "meta": "435 / ▲2(0.46%)",
+        "stamp": "rising",
+        "source_file": "12_產業升溫區_1.png",
+        "source_rank": 6
+      },
+      {
+        "code": "2412",
+        "name": "中華電",
+        "price": "165",
+        "change": "▲3.5(2.17%)",
+        "meta": "165 / ▲3.5(2.17%)",
+        "stamp": "rising",
+        "source_file": "12_產業升溫區_1.png",
+        "source_rank": 7
+      },
+      {
+        "code": "2923",
+        "name": "鼎固-KY",
+        "price": "32.9",
+        "change": "▲1.05(3.3%)",
+        "meta": "32.9 / ▲1.05(3.3%)",
+        "stamp": "rising",
+        "source_file": "13_產業升溫區_2.png",
+        "source_rank": 8
+      },
+      {
+        "code": "6697",
+        "name": "東捷資訊",
+        "price": "67.4",
+        "change": "▲4.1(6.48%)",
+        "meta": "67.4 / ▲4.1(6.48%)",
+        "stamp": "rising",
+        "source_file": "13_產業升溫區_2.png",
+        "source_rank": 9
+      },
+      {
+        "code": "910322",
+        "name": "康師傅-DR",
+        "price": null,
+        "change": null,
+        "meta": "股價 —｜漲跌資料 —",
+        "stamp": "rising",
+        "source_file": "13_產業升溫區_2.png",
+        "source_rank": 10
+      },
+      {
+        "code": "3321",
+        "name": "同泰",
+        "price": "22",
+        "change": "▼0.2(-0.9%)",
+        "meta": "22 / ▼0.2(-0.9%)",
+        "stamp": "rising",
+        "source_file": "13_產業升溫區_2.png",
+        "source_rank": 11
+      },
+      {
+        "code": "2465",
+        "name": "麗臺",
+        "price": "121",
+        "change": "▼4(-3.2%)",
+        "meta": "121 / ▼4(-3.2%)",
+        "stamp": "rising",
+        "source_file": "14_產業升溫區_3.png",
+        "source_rank": 12
+      },
+      {
+        "code": "2033",
+        "name": "佳大",
+        "price": "78.4",
+        "change": "▲1.3(1.69%)",
+        "meta": "78.4 / ▲1.3(1.69%)",
+        "stamp": "rising",
+        "source_file": "14_產業升溫區_3.png",
+        "source_rank": 13
+      },
+      {
+        "code": "3045",
+        "name": "台灣大",
+        "price": "136",
+        "change": "▲1(0.74%)",
+        "meta": "136 / ▲1(0.74%)",
+        "stamp": "rising",
+        "source_file": "14_產業升溫區_3.png",
+        "source_rank": 14
+      },
+      {
+        "code": "1416",
+        "name": "廣豐",
+        "price": "15.05",
+        "change": "▲0.9(6.36%)",
+        "meta": "15.05 / ▲0.9(6.36%)",
+        "stamp": "rising",
+        "source_file": "14_產業升溫區_3.png",
+        "source_rank": 15
+      },
+      {
+        "code": "1232",
+        "name": "大統益",
+        "price": "166.5",
+        "change": "0(0%)",
+        "meta": "166.5 / 0(0%)",
+        "stamp": "rising",
+        "source_file": "14_產業升溫區_3.png",
+        "source_rank": 16
+      },
+      {
+        "code": "2607",
+        "name": "榮運",
+        "price": "58.8",
+        "change": "▲0.4(0.68%)",
+        "meta": "58.8 / ▲0.4(0.68%)",
+        "stamp": "rising",
+        "source_file": "15_產業升溫區_4.png",
+        "source_rank": 17
+      },
+      {
+        "code": "2849",
+        "name": "安泰銀",
+        "price": "16.1",
+        "change": "▲0.1(0.63%)",
+        "meta": "16.1 / ▲0.1(0.63%)",
+        "stamp": "rising",
+        "source_file": "15_產業升溫區_4.png",
+        "source_rank": 18
+      },
+      {
+        "code": "8432",
+        "name": "東生華",
+        "price": "61.2",
+        "change": "▲0.6(0.99%)",
+        "meta": "61.2 / ▲0.6(0.99%)",
+        "stamp": "rising",
+        "source_file": "15_產業升溫區_4.png",
+        "source_rank": 19
+      },
+      {
+        "code": "6140",
+        "name": "訊達",
+        "price": "24.6",
+        "change": "▼0.15(-0.61%)",
+        "meta": "24.6 / ▼0.15(-0.61%)",
+        "stamp": "rising",
+        "source_file": "15_產業升溫區_4.png",
+        "source_rank": 20
+      },
+      {
+        "code": "4741",
+        "name": "泓瀚",
+        "price": "55.7",
+        "change": "▼1.7(-2.96%)",
+        "meta": "55.7 / ▼1.7(-2.96%)",
+        "stamp": "rising",
+        "source_file": "15_產業升溫區_4.png",
+        "source_rank": 21
+      },
+      {
+        "code": "2516",
+        "name": "新建",
+        "price": "16.1",
+        "change": "▲0.25(1.58%)",
+        "meta": "16.1 / ▲0.25(1.58%)",
+        "stamp": "rising",
+        "source_file": "16_產業升溫區_5.png",
+        "source_rank": 22
+      },
+      {
+        "code": "1456",
+        "name": "怡華",
+        "price": "15.45",
+        "change": "▼0.05(-0.32%)",
+        "meta": "15.45 / ▼0.05(-0.32%)",
+        "stamp": "rising",
+        "source_file": "16_產業升溫區_5.png",
+        "source_rank": 23
+      },
+      {
+        "code": "6609",
+        "name": "瀧澤科",
+        "price": "46.4",
+        "change": "▼1.8(-3.73%)",
+        "meta": "46.4 / ▼1.8(-3.73%)",
+        "stamp": "rising",
+        "source_file": "16_產業升溫區_5.png",
+        "source_rank": 24
+      },
+      {
+        "code": "9933",
+        "name": "中鼎",
+        "price": "47.25",
+        "change": "▼0.7(-1.46%)",
+        "meta": "47.25 / ▼0.7(-1.46%)",
+        "stamp": "rising",
+        "source_file": "16_產業升溫區_5.png",
+        "source_rank": 25
+      },
+      {
+        "code": "4568",
+        "name": "科際精密",
+        "price": "53.1",
+        "change": "▼2.8(-5.01%)",
+        "meta": "53.1 / ▼2.8(-5.01%)",
+        "stamp": "rising",
+        "source_file": "16_產業升溫區_5.png",
+        "source_rank": 26
+      },
+      {
+        "code": "5013",
+        "name": "強新",
+        "price": "69.1",
+        "change": "▲6.2(9.86%)",
+        "meta": "69.1 / ▲6.2(9.86%)",
+        "stamp": "rising",
+        "source_file": "17_產業升溫區_6.png",
+        "source_rank": 27
+      },
+      {
+        "code": "4533",
+        "name": "協易機",
+        "price": "30.7",
+        "change": "▼0.5(-1.6%)",
+        "meta": "30.7 / ▼0.5(-1.6%)",
+        "stamp": "rising",
+        "source_file": "17_產業升溫區_6.png",
+        "source_rank": 28
+      },
+      {
+        "code": "5209",
+        "name": "新鼎",
+        "price": "205",
+        "change": "▼7(-3.3%)",
+        "meta": "205 / ▼7(-3.3%)",
+        "stamp": "rising",
+        "source_file": "17_產業升溫區_6.png",
+        "source_rank": 29
+      },
+      {
+        "code": "2466",
+        "name": "冠西電",
+        "price": "324.5",
+        "change": "▼6(-1.82%)",
+        "meta": "324.5 / ▼6(-1.82%)",
+        "stamp": "rising",
+        "source_file": "17_產業升溫區_6.png",
+        "source_rank": 30
+      }
+    ]
+  },
+  "capital_flow": {
+    "headline": "美股與金債走強，半導體沒有一起回來",
+    "stance": "市場分化／台股防禦",
+    "summary": "這是分化，不是全面回流。11/4加密ETF尚未報齊，不能用價格反彈證明大錢已轉向。",
+    "assets": [
+      {
+        "asset": "黃金",
+        "role": "儲值與防禦",
+        "evidence": "11/5 10:20黃金期貨快照4,134.50美元；非現貨、非結算。WGC 11/3發布第三季黃金ETF增加211噸、流入310億美元。",
+        "flow_signal": "第三季實際ETF流量為較早背景；不能據隔夜金價走強推論同日淨申購。",
+        "confidence": "中：價格與流量日期須分開",
+        "watch": "金價延續性與後續ETF持有量",
+        "tone": "caution"
+      },
+      {
+        "asset": "BTC / Bitcoin",
+        "role": "高波動加密資產",
+        "evidence": "11/5 10:33為80,490.18美元，較24小時前+5.07%；11/3現貨ETF淨流量-115.6百萬美元。",
+        "flow_signal": "價格修復；11/4完整基金申贖尚未齊，暫不判定總流向。",
+        "confidence": "中：價格與流量日期須分開",
+        "watch": "價格能否延續、完整ETF申贖及ETH/BTC相對表現",
+        "tone": "caution"
+      },
+      {
+        "asset": "ETH",
+        "role": "高波動加密資產",
+        "evidence": "11/5 10:33為2,422.53美元，較24小時前+7.50%；11/3現貨ETF淨流量-85.3百萬美元。同期ETH/BTC約0.030114，24小時上升2.41%。",
+        "flow_signal": "價格修復；11/4完整基金申贖尚未齊，暫不判定總流向。",
+        "confidence": "中：價格與流量日期須分開",
+        "watch": "價格能否延續、完整ETF申贖及ETH/BTC相對表現",
+        "tone": "caution"
+      },
+      {
+        "asset": "美元／現金",
+        "role": "流動性",
+        "evidence": "11/5 10:19美元指數快照101.312；路透11/4收盤報導美元走弱。",
+        "flow_signal": "匯價不是美元跨境淨流量；未核實同日淨流入。",
+        "confidence": "中：價格與流量日期須分開",
+        "watch": "美元與台幣是否同步，避免把匯價當資金流",
+        "tone": "caution"
+      },
+      {
+        "asset": "美債存續期間",
+        "role": "利率與防禦",
+        "evidence": "11/4美東14:59十年期殖利率指標4.894%；是Yahoo分鐘報價，非財政部CMT定盤。路透確認長端殖利率走低。",
+        "flow_signal": "債價走強不代表已核實基金淨申購。",
+        "confidence": "中：價格與流量日期須分開",
+        "watch": "長端殖利率、通膨與後續就業數據",
+        "tone": "caution"
+      },
+      {
+        "asset": "股票風險",
+        "role": "獲利與估值",
+        "evidence": "11/4美股收盤：標普7,688.62（+1.58%）、那斯達克100為28,437.17（+0.91%）、道瓊53,356.12（+3.03%）；費半10,268.65（-3.13%），VIX為16.61（-20.26%）。 11/4外資及陸資賣超1,499.00億元；這是昨日實際流向，不能當成今日盤中賣超。",
+        "flow_signal": "美國大盤上漲、費半下跌，與台股前一日外資賣超並存，不能稱全面回流。",
+        "confidence": "中：價格與流量日期須分開",
+        "watch": "費半與台股承接、價格廣度及後續法人流向",
+        "tone": "caution"
+      }
+    ],
+    "interpretation": [
+      "11/4美股、黃金與美債價格走強，美元走弱；完整可核對的11/3 BTC及ETH ETF仍分別流出1.156億、0.853億美元。",
+      "這是分化，不是全面回流。11/4加密ETF尚未報齊，不能用價格反彈證明大錢已轉向。"
+    ],
+    "confirmation": [
+      "只看半導體承接、台股早盤低點、完整BTC／ETH申贖，以及美元與長端殖利率。"
+    ],
+    "caveat": "價格不是流量。11/4 BTC、ETH申贖未完整；黃金流量是第三季背景。各資產快照不同時，不作同步價格或資金轉移證明。",
+    "as_of": "台股11/5 10:30；美股11/4；加密11/5 10:33；完整加密ETF11/3；黃金ETF第三季",
+    "reader": {
+      "headline": "美股與金債走強，半導體沒有一起回來",
+      "flow": "11/4美股、黃金與美債價格走強，美元走弱；完整可核對的11/3 BTC及ETH ETF仍分別流出1.156億、0.853億美元。",
+      "meaning": "這是分化，不是全面回流。11/4加密ETF尚未報齊，不能用價格反彈證明大錢已轉向。",
+      "action": "台股先縮配置空間，再研究價值區；金融、高息與生技的相對表現值得比較，但不是直接換股指令。",
+      "watch": "只看半導體承接、台股早盤低點、完整BTC／ETH申贖，以及美元與長端殖利率。"
+    },
+    "research_pack": {
+      "status": "research_complete_with_noted_gaps",
+      "window": {
+        "start": "2026-11-04T00:00:00-05:00",
+        "cutoff": "2026-11-05T10:35:00+08:00",
+        "research_as_of": "2026-11-05T10:34:30+08:00",
+        "timezone": "Asia/Taipei",
+        "note": "最新同步加密貨幣分鐘棒為10:33；非10:35精準報價。"
+      },
+      "news": [
+        {
+          "headline": "美國10月ADP民間就業增加8.6萬",
+          "source": "ADP官方新聞稿",
+          "url": "https://mediacenter.adp.com/2026-11-04-ADP-National-Employment-Report-Private-Sector-Employment-Increased-by-86,000-Jobs-in-October",
+          "published_local": "2026-11-04 ET（原文僅見日期）",
+          "evidence_class": "official/original, body checked",
+          "facts": "ADP統計10月民間就業增加8.6萬；9月由9萬下修為8.6萬。私人部門基本薪資年增3.2%；專業及商業服務就業減2.7萬。",
+          "meaning": "ADP非美國政府非農就業報告；不得因單一數字預斷聯準會決策。",
+          "watch": "等待週五政府非農數據。"
+        },
+        {
+          "headline": "民主黨取得美國國會兩院；美股大漲但半導體與資料中心走弱",
+          "source": "Reuters via News & Observer",
+          "url": "https://www.newsobserver.com/news/nation-world/national/article317924396.html",
+          "published_local": "2026-11-04 10:58 ET original; source search shows updated 16:50 ET",
+          "evidence_class": "Reuters syndicated, article body checked",
+          "facts": "路透報導民主黨拿下參眾兩院；11/4收盤標普7,688.62、+1.6%，那指綜合25,736.51、+1.4%，道瓊53,356.12、+3.0%；費半跌3.1%，微軟漲6.7%、亞馬遜漲6.1%，Hut 8跌23%、IREN跌11%。",
+          "meaning": "市場對政策變動減少及油價下跌的樂觀與AI基建監管疑慮並存；這是路透引述市場看法，不是已通過的新監管。",
+          "taiwan_inference": "台灣晶圓代工、AI伺服器、散熱電源及網通短線情緒可能分化；美國業者跌勢不等於台廠訂單已取消。",
+          "watch": "看費半是否止跌、AI資本支出及資料中心許可是否實際變更。"
+        },
+        {
+          "headline": "市場同時推升美股、美債及黃金，美元與油價走弱",
+          "source": "Reuters Breakingviews/Trading Day commentary via Yahoo",
+          "url": "https://finance.yahoo.com/markets/articles/trading-day-oil-tanks-stocks-220426496.html",
+          "published_local": "2026-11-04T17:07:00-05:00",
+          "published_taipei": "2026-11-05T06:07:00+08:00",
+          "evidence_class": "Reuters commentary syndicated, body checked",
+          "facts": "文中指出美元觸9/30以來低位；美債殖利率全曲線下滑3至7個基點，油價Brent與WTI各跌約8%；黃金漲約3.5%，比特幣漲約3%且高於8萬美元。",
+          "meaning": "這是同一交易日跨資產價格表現而非跨市場資金流量證據；政治僵局、油價與利率傳導均屬市場解讀。",
+          "taiwan_inference": "油價跌有利進口成本及通膨壓力，但美元與台幣未必同步；對台股需以匯率、電子及運輸類股實際表現確認。",
+          "watch": "後續油價、殖利率及美國非農就業。"
+        },
+        {
+          "headline": "金價受美元走弱支持",
+          "source": "Reuters via AOL",
+          "url": "https://www.aol.co.uk/articles/gold-firms-softer-oil-prices-005407000.html",
+          "published_taipei": "2026-11-05T03:13:00+08:00",
+          "evidence_class": "Reuters syndicated, body checked",
+          "facts": "11/4 19:04 UTC現貨黃金4,059.95美元/盎司，上漲3.4%；12月黃金期貨結算4,073美元、漲3.4%；FedWatch當時定價12月升息機率約83%。",
+          "meaning": "這是分別有時間戳的金價和當時市場定價，不是央行決策或實際ETF資金流。",
+          "watch": "美國非農數據及聯準會政策路徑。"
+        },
+        {
+          "headline": "馬斯克業務面臨選後資料中心審查風險",
+          "source": "Reuters via The Olympian",
+          "url": "https://www.theolympian.com/news/nation-world/world/article317924424.html",
+          "published_local": "2026-11-04 08:22 ET original",
+          "evidence_class": "Reuters syndicated, body checked",
+          "facts": "路透稱德州新當選州長曾呼籲暫停新資料中心專案直到加強社區保護；分析師預期民主黨提高監督，是否形成法令尚待觀察。",
+          "meaning": "政治主張和監管風險，不代表全面禁建或既有訂單撤銷。",
+          "taiwan_inference": "若許可時間拉長，伺服器、電源、散熱與網通交貨時程可能受影響；這是條件式推論。"
+        }
+      ],
+      "cross_assets": [
+        {
+          "asset": "BTC-USD",
+          "value": 80490.1796875,
+          "unit": "USD",
+          "data_as_of": "2026-11-05T10:33:00+08:00",
+          "reference_value_24h": 76607.5703125,
+          "reference_time": "2026-11-04T10:33:00+08:00",
+          "change_24h_pct_derived": 5.068179762341951,
+          "source": "Yahoo Finance chart API 1-minute close",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?range=3d&interval=1m"
+        },
+        {
+          "asset": "ETH-USD",
+          "value": 2422.530029296875,
+          "unit": "USD",
+          "data_as_of": "2026-11-05T10:33:00+08:00",
+          "reference_value_24h": 2253.610107421875,
+          "reference_time": "2026-11-04T10:33:00+08:00",
+          "change_24h_pct_derived": 7.495525571113282,
+          "source": "Yahoo Finance chart API 1-minute close",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETH-USD?range=3d&interval=1m"
+        },
+        {
+          "asset": "ETH-BTC",
+          "value": 0.030114000663161278,
+          "unit": "BTC per ETH",
+          "data_as_of": "2026-11-05T10:33:00+08:00",
+          "reference_value_24h": 0.029405999928712845,
+          "reference_time": "2026-11-04T10:33:00+08:00",
+          "change_24h_pct_derived": 2.4076744071441114,
+          "source": "Yahoo Finance chart API 1-minute close",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETH-BTC?range=3d&interval=1m",
+          "meaning": "ETH相對BTC走強不代表資金由BTC轉入ETH。"
+        },
+        {
+          "asset": "BTC-USD",
+          "value": 80597.2890625,
+          "unit": "USD",
+          "data_as_of": "2026-11-05T10:29:00+08:00",
+          "reference_value_24h": 76667.65625,
+          "reference_time": "2026-11-04T10:29:00+08:00",
+          "change_24h_pct_derived": 5.125541857815685,
+          "source": "Yahoo Finance chart API 1-minute close",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?range=3d&interval=1m",
+          "note": "已完成1分鐘K棒收價，非官方收盤或交易所即時成交。"
+        },
+        {
+          "asset": "ETH-USD",
+          "value": 2428.110107421875,
+          "unit": "USD",
+          "data_as_of": "2026-11-05T10:29:00+08:00",
+          "reference_value_24h": 2254.840087890625,
+          "reference_time": "2026-11-04T10:29:00+08:00",
+          "change_24h_pct_derived": 7.684359545573893,
+          "source": "Yahoo Finance chart API 1-minute close",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETH-USD?range=3d&interval=1m"
+        },
+        {
+          "asset": "ETH-BTC",
+          "value": 0.030122000724077225,
+          "unit": "BTC per ETH",
+          "data_as_of": "2026-11-05T10:29:00+08:00",
+          "reference_value_24h": 0.02942200005054474,
+          "reference_time": "2026-11-04T10:29:00+08:00",
+          "change_24h_pct_derived": 2.3791743332538084,
+          "source": "Yahoo Finance chart API 1-minute close",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETH-BTC?range=3d&interval=1m",
+          "meaning": "同期ETH相對BTC走強；這是價格相對表現，不代表資金由BTC流向ETH。"
+        },
+        {
+          "asset": "GC=F",
+          "value": 4134.5,
+          "unit": "USD/oz",
+          "data_as_of": "2026-11-05T10:20:00+08:00",
+          "source": "Yahoo Finance chart API",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=2d&interval=1m",
+          "note": "延遲或間歇報價；期貨而非現貨，並非10:29同步價。"
+        },
+        {
+          "asset": "DXY DX-Y.NYB",
+          "value": 101.31199645996094,
+          "data_as_of": "2026-11-05T10:19:00+08:00",
+          "source": "Yahoo Finance chart API",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=2d&interval=1m",
+          "note": "可能延遲，並非10:29同步價。"
+        },
+        {
+          "asset": "US 10Y yield ^TNX",
+          "value": 4.894000053405762,
+          "unit": "percent",
+          "data_as_of": "2026-11-04T14:59:00-05:00",
+          "source": "Yahoo Finance chart API",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=2d&interval=1m",
+          "note": "美國11/4 14:59 ET最後可得分鐘，非次日10:29實時殖利率，亦非官方收盤。"
+        }
+      ],
+      "etf_flows": [
+        {
+          "asset": "US spot BTC ETF",
+          "session": "2026-11-03",
+          "net_flow_usd_millions": -115.6,
+          "status": "完整已公布資料",
+          "source": "Farside Investors",
+          "url": "https://farside.co.uk/btc/",
+          "note": "11/3實際基金淨申贖估計，非11/4資金流。"
+        },
+        {
+          "asset": "US spot ETH ETF",
+          "session": "2026-11-03",
+          "net_flow_usd_millions": -85.3,
+          "status": "完整已公布資料",
+          "source": "Farside Investors",
+          "url": "https://farside.co.uk/eth/",
+          "note": "11/3實際基金淨申贖估計，非11/4資金流。"
+        },
+        {
+          "asset": "US spot BTC ETF",
+          "session": "2026-11-04",
+          "reported_so_far_usd_millions": 275.8,
+          "status": "未完整，不能視為當日總淨流入",
+          "missing_funds": [
+            "IBIT",
+            "HODL"
+          ],
+          "source": "Farside Investors",
+          "url": "https://farside.co.uk/btc/",
+          "note": "當時已回報基金加總275.8百萬美元，但IBIT及HODL為橫線非零；全市場最終方向未知。"
+        },
+        {
+          "asset": "US spot ETH ETF",
+          "session": "2026-11-04",
+          "reported_so_far_usd_millions": 23.4,
+          "status": "未完整，不能視為當日總淨流入",
+          "missing_funds": [
+            "ETHA",
+            "ETHB",
+            "FETH",
+            "ETHV",
+            "QETH"
+          ],
+          "source": "Farside Investors",
+          "url": "https://farside.co.uk/eth/",
+          "note": "已回報基金加總23.4百萬美元，多基金尚未回報；全市場最終方向未知。"
+        }
+      ],
+      "principal_signals": [
+        {
+          "principal": "Elon Musk",
+          "type": "Reuters attribution, not directly verified original post",
+          "quote": "Data centers in space looking pretty appealing right now",
+          "source": "Reuters via The Olympian",
+          "url": "https://www.theolympian.com/news/nation-world/world/article317924424.html",
+          "meaning": "路透轉述其X發言；未核實原始貼文時間或原文頁，不應當作直接核實、更不代表部署或營收。"
+        },
+        {
+          "principal": "Donald Trump",
+          "type": "Reuters attributed remarks, not directly verified original",
+          "source": "Reuters via Charlotte Observer",
+          "url": "https://www.charlotteobserver.com/news/nation-world/world/article317928565.html",
+          "published_local": "2026-11-04 13:36 ET original; update 15:19 ET",
+          "facts": "路透報導川普承認伊朗戰爭影響選情，但仍稱戰事值得且會持續；對油價的政治風險不應解讀為戰事即將結束。",
+          "note": "路透記者報導其對記者發言；未直接核實錄影或白宮逐字稿。"
+        }
+      ],
+      "editorial_suggestions": [
+        "標題：美股大漲、費半逆跌；選後資金偏好分化。",
+        "錢往哪裡：美股、美債與黃金價格走強、美元走弱；這是報價方向，不是全市場資金流量。加密ETF僅11/3完整流出，11/4數據未齊。",
+        "代表什麼：市場押注政策不確定性降低、油價與殖利率回落；AI基建監管顧慮仍在，不能稱為新法已落地。",
+        "對台灣：半導體與AI伺服器供應鏈短線情緒承壓，台廠訂單有無延遲仍須公司確認；油價下跌可緩解進口成本壓力。",
+        "接下來看：費半及台股承接、完整BTC/ETH ETF申贖、油價與美債殖利率、美國非農。",
+        "加密：10:33 ETH/BTC 24小時上漲約2.41%，ETH相對BTC強；不推論兩者間有資金轉移。"
+      ],
+      "limitations": [
+        "研究於10:34左右最後取樣；最新共時加密貨幣分鐘棒為10:33，並非10:35報價。",
+        "11/4現貨BTC及ETH ETF流量仍有多基金未報，部分總計不得當成完整日淨流入。",
+        "直接社群原文未核實；WorldMonitor X feed需要Pro，已以WorldMonitor新聞及路透報導做發現與交叉檢索。",
+        "各資產時間不同，除BTC、ETH、ETH/BTC同為10:29分鐘K之外不可假稱同步。",
+        "金價與美元指數是Yahoo期貨/指數資料，可能延遲；美債取樣為11/4盤中而非最新。"
+      ],
+      "parent_recheck": {
+        "btc_complete_column_sum": -115.6,
+        "eth_complete_column_sum": -85.3,
+        "eth_nov4_partial_updated": 42.6,
+        "eth_nov4_missing": [
+          "ETHA",
+          "ETHB",
+          "ETHV"
+        ],
+        "note": "Parent reopened Farside; latest partial replaced worker earlier version, final direction remains unknown.",
+        "gold_flow_as_of": "2026-09-30",
+        "gold_flow_url": "https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-q3-2026/investment"
+      }
+    }
+  },
+  "ark_source_validation": {
+    "source": "/Users/kaide/Pictures/方舟運算截圖/ark_stocks_latest.json",
+    "source_folder": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-05_09-05-05",
+    "run_started": "2026-11-05T09:05:05+08:00",
+    "run_finished": "2026-11-05T09:08:14+08:00",
+    "success": true,
+    "stage": "complete",
+    "validation_ok": true,
+    "hashes_all_match": true,
+    "hash_count": 25,
+    "counts": {
+      "ETF價值區": 10,
+      "ETF升溫區": 7,
+      "產業價值區": 30,
+      "產業升溫區": 30
+    },
+    "total_rows": 77,
+    "unique_codes": 77,
+    "overlap": {
+      "etf": [],
+      "stocks": []
+    },
+    "source_duplicateCount": 25,
+    "source_duplicateCount_note": "Source extraction duplicates, not cross-zone overlap.",
+    "missing_etf_prices": [
+      "00875",
+      "00845B",
+      "00860B",
+      "00687C",
+      "00846B",
+      "00775B"
+    ],
+    "ax_price_disagreements": [
+      {
+        "section": "ETF價值區",
+        "code": "00878",
+        "ocr_price": "33.77",
+        "ax_price": "33.78",
+        "reason": "snapshot price takes precedence"
+      },
+      {
+        "section": "ETF價值區",
+        "code": "00919",
+        "ocr_price": "31.75",
+        "ax_price": "31.76",
+        "reason": "snapshot price takes precedence"
+      },
+      {
+        "section": "產業價值區",
+        "code": "2330",
+        "ocr_price": "2,270",
+        "ax_price": "2,275",
+        "reason": "snapshot price takes precedence"
+      },
+      {
+        "section": "產業價值區",
+        "code": "6669",
+        "ocr_price": "1,720",
+        "ax_price": "1,730",
+        "reason": "snapshot price takes precedence"
+      },
+      {
+        "section": "產業價值區",
+        "code": "2449",
+        "ocr_price": "238",
+        "ax_price": "238.5",
+        "reason": "snapshot price takes precedence"
+      },
+      {
+        "section": "產業價值區",
+        "code": "3293",
+        "ocr_price": "780",
+        "ax_price": "779",
+        "reason": "snapshot price takes precedence"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "6697",
+        "ocr_price": "67.4",
+        "ax_price": "67.3",
+        "reason": "snapshot price takes precedence"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "1416",
+        "ocr_price": "15.05",
+        "ax_price": "15.1",
+        "reason": "snapshot price takes precedence"
+      }
+    ],
+    "caveats": [
+      "AX and screenshots are captured at different instants; price and change use screenshot OCR, AX change only when matching screenshot price.",
+      "ETF missing price rows: numeric OCR price is NAV; screenshot and AX confirm.",
+      "Source literal codes 00687C and 910322 visually confirmed in screenshots; preserve as-is.",
+      "Validation ok confirms code-set alignment, not price accuracy.",
+      "ETF NAV/premium may reflect different instant from screenshot price; do not recompute."
+    ],
+    "unresolved_changes": []
+  },
+  "research_sources": [
+    {
+      "title": "美國10月ADP民間就業增加8.6萬",
+      "url": "https://mediacenter.adp.com/2026-11-04-ADP-National-Employment-Report-Private-Sector-Employment-Increased-by-86,000-Jobs-in-October"
+    },
+    {
+      "title": "民主黨取得美國國會兩院；美股大漲但半導體與資料中心走弱",
+      "url": "https://www.newsobserver.com/news/nation-world/national/article317924396.html"
+    },
+    {
+      "title": "市場同時推升美股、美債及黃金，美元與油價走弱",
+      "url": "https://finance.yahoo.com/markets/articles/trading-day-oil-tanks-stocks-220426496.html"
+    },
+    {
+      "title": "金價受美元走弱支持",
+      "url": "https://www.aol.co.uk/articles/gold-firms-softer-oil-prices-005407000.html"
+    },
+    {
+      "title": "Elon Musk",
+      "url": "https://www.theolympian.com/news/nation-world/world/article317924424.html"
+    },
+    {
+      "title": "Donald Trump",
+      "url": "https://www.charlotteobserver.com/news/nation-world/world/article317928565.html"
+    },
+    {
+      "title": "BTC-USD",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?range=3d&interval=1m"
+    },
+    {
+      "title": "ETH-USD",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETH-USD?range=3d&interval=1m"
+    },
+    {
+      "title": "ETH-BTC",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETH-BTC?range=3d&interval=1m"
+    },
+    {
+      "title": "GC=F",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=2d&interval=1m"
+    },
+    {
+      "title": "DXY DX-Y.NYB",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=2d&interval=1m"
+    },
+    {
+      "title": "US 10Y yield ^TNX",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=2d&interval=1m"
+    },
+    {
+      "title": "US spot BTC ETF",
+      "url": "https://farside.co.uk/btc/"
+    },
+    {
+      "title": "US spot ETH ETF",
+      "url": "https://farside.co.uk/eth/"
+    },
+    {
+      "title": "行情與法人來源",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?range=10d&interval=1d"
+    },
+    {
+      "title": "行情與法人來源",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=10d&interval=1d"
+    },
+    {
+      "title": "行情與法人來源",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ENDX?range=10d&interval=1d"
+    },
+    {
+      "title": "行情與法人來源",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=10d&interval=1d"
+    },
+    {
+      "title": "行情與法人來源",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?range=10d&interval=1d"
+    },
+    {
+      "title": "行情與法人來源",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?range=10d&interval=1d"
+    },
+    {
+      "title": "行情與法人來源",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?range=10d&interval=1d"
+    },
+    {
+      "title": "行情與法人來源",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?range=10d&interval=1d"
+    },
+    {
+      "title": "行情與法人來源",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?range=10d&interval=1d"
+    },
+    {
+      "title": "行情與法人來源",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMZN?range=10d&interval=1d"
+    },
+    {
+      "title": "行情與法人來源",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?range=10d&interval=1d"
+    },
+    {
+      "title": "行情與法人來源",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/META?range=10d&interval=1d"
+    },
+    {
+      "title": "行情與法人來源",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/TSLA?range=10d&interval=1d"
+    },
+    {
+      "title": "行情與法人來源",
+      "url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0"
+    },
+    {
+      "title": "行情與法人來源",
+      "url": "https://www.taifex.com.tw/cht/quotesApi/getQuotes?objId=2"
+    },
+    {
+      "title": "行情與法人來源",
+      "url": "https://www.taifex.com.tw/cht/3/futContractsDate?queryDate=2026/11/04&commodityId=TXF"
+    },
+    {
+      "title": "TWSE法人11/4",
+      "url": "https://www.twse.com.tw/rwd/zh/fund/BFI82U?date=20261104&response=json"
+    },
+    {
+      "title": "TWSE交易日曆",
+      "url": "https://www.twse.com.tw/holidaySchedule/holidaySchedule?response=json&queryYear=115"
+    },
+    {
+      "title": "WGC第三季黃金ETF（歷史背景）",
+      "url": "https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-q3-2026/investment"
+    }
+  ]
+}

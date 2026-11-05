@@ -1,0 +1,446 @@
+{
+  "retrieved_at": "2026-11-05T10:31:06+08:00",
+  "timezone": "Asia/Taipei",
+  "calendar": {
+    "source_url": "https://www.twse.com.tw/holidaySchedule/holidaySchedule?response=json&queryYear=115",
+    "year": 2026,
+    "november_exceptions": [],
+    "interpretation": "11/4 and 11/5 weekdays not listed as exceptions; actual 11/4 closing data and 11/5 official intraday confirm trading; 11/4 preceding session."
+  },
+  "market": {
+    "tw_index": {
+      "value": "42,313.65",
+      "change": -635.26,
+      "change_pct": -1.48,
+      "previous_close": 42948.91,
+      "data_as_of": "2026-11-05T10:30:00+08:00",
+      "source_url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+      "raw": {
+        "@": "t00.tw",
+        "pid": "2.tse.tw|1081",
+        "key": "tse_t00.tw_20261105",
+        "^": "20261105",
+        "c": "t00",
+        "#": "2.tse.tw|1081",
+        "d": "20261105",
+        "%": "10:30:00",
+        "ch": "t00.tw",
+        "tlong": "1793845800000",
+        "h": "42873.81",
+        "i": "tidx.tw",
+        "it": "t",
+        "l": "41866.10",
+        "m": "7375129",
+        "n": "發行量加權股價指數",
+        "o": "42666.13",
+        "r": "1668230",
+        "ex": "tse",
+        "t": "10:30:00",
+        "y": "42948.91",
+        "z": "42313.65"
+      },
+      "status": "official intraday, not close",
+      "line": "11/5 10:30加權42,313.65點，下跌635.26點（-1.48%）；盤中快照，非收盤。"
+    },
+    "futures": {
+      "value": "42,492",
+      "change": -711.0,
+      "change_pct": -1.65,
+      "reference_price": 43203.0,
+      "contract": "TX116",
+      "data_as_of": "retrieval 2026-11-05T10:31:06+08:00; endpoint has no quote timestamp",
+      "source_url": "https://www.taifex.com.tw/cht/quotesApi/getQuotes?objId=2",
+      "raw": {
+        "contract": "TX116",
+        "price": "42,492",
+        "ttlvol": "46,126",
+        "contractName": "臺股期貨",
+        "updown": "-711"
+      },
+      "status": "official intraday quote, not close; contract suffix 116 interpreted as Nov 2026 subject to confirmation",
+      "line": "11/5約10:31擷取臺股期貨TX116報價42,492點，下跌711點（-1.65%）；端點未附報價時間，不與現貨視為同秒行情。"
+    },
+    "foreign_oi": {
+      "value": "-93,647",
+      "net": -93647,
+      "data_as_of": "2026-11-04",
+      "note": "11/4外資臺股期貨全月份未平倉多11,103口、空104,750口，淨空93,647口；部位餘額非新增空單。",
+      "source_url": "https://www.taifex.com.tw/cht/3/futContractsDate?queryDate=2026/11/04&commodityId=TXF"
+    },
+    "systemic_risk": "高",
+    "sox": {
+      "value": "10,268.65",
+      "change_pct": -3.13,
+      "previous_close": 10600.4,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 10268.654296875,
+      "raw_previous_close": 10600.400390625,
+      "session_timestamp": 1793802600
+    },
+    "sp500": {
+      "value": "7,688.62",
+      "change_pct": 1.58,
+      "previous_close": 7568.92,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 7688.6201171875,
+      "raw_previous_close": 7568.919921875,
+      "session_timestamp": 1793802600
+    },
+    "nasdaq100": {
+      "value": "28,437.17",
+      "change_pct": 0.91,
+      "previous_close": 28180.26,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ENDX?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 28437.166015625,
+      "raw_previous_close": 28180.259765625,
+      "session_timestamp": 1793802600
+    },
+    "dow": {
+      "value": "53,356.12",
+      "change_pct": 3.03,
+      "previous_close": 51786.72,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 53356.12109375,
+      "raw_previous_close": 51786.71875,
+      "session_timestamp": 1793802600
+    },
+    "vix": {
+      "value": "16.61",
+      "change_pct": -20.26,
+      "previous_close": 20.83,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 16.610000610351562,
+      "raw_previous_close": 20.829999923706055,
+      "session_timestamp": 1793802600
+    }
+  },
+  "institutional": {
+    "data_as_of": "2026-11-04",
+    "twse": {
+      "source_url": "https://www.twse.com.tw/rwd/zh/fund/BFI82U?date=20261104&response=json",
+      "raw": {
+        "stat": "OK",
+        "date": "20261104",
+        "title": "115年11月04日 三大法人買賣金額統計表",
+        "fields": [
+          "單位名稱",
+          "買進金額",
+          "賣出金額",
+          "買賣差額"
+        ],
+        "data": [
+          [
+            "自營商(自行買賣)",
+            "14,941,922,398",
+            "15,695,195,478",
+            "-753,273,080"
+          ],
+          [
+            "自營商(避險)",
+            "63,395,872,517",
+            "100,161,569,938",
+            "-36,765,697,421"
+          ],
+          [
+            "投信",
+            "37,010,569,606",
+            "9,752,110,763",
+            "27,258,458,843"
+          ],
+          [
+            "外資及陸資(不含外資自營商)",
+            "455,072,375,440",
+            "604,972,209,516",
+            "-149,899,834,076"
+          ],
+          [
+            "外資自營商",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "合計",
+            "570,420,739,961",
+            "730,581,085,695",
+            "-160,160,345,734"
+          ]
+        ],
+        "params": {
+          "date": "20261104",
+          "response": "json",
+          "controller": "fund",
+          "action": "BFI82U",
+          "lang": "zh",
+          "type": "day",
+          "monthDate": null,
+          "weekDate": null,
+          "dayDate": "20261104"
+        },
+        "notes": [
+          "自營商表示證券自營商專戶。",
+          "投信表示本國投資信託基金。",
+          "外資及陸資表示依「華僑及外國人投資證券管理辦法」及「大陸地區投資人來臺從事證券投資及期貨交易管理辦法」辦理登記等投資人。",
+          "因外資自營商買賣金額已計入自營商買賣金額，故不納入三大法人買賣金額之合計數計算。",
+          "本統計資訊含一般、零股、盤後定價、鉅額，不含拍賣、標購。",
+          "本資訊以當日原始成交情形統計，不以證券商申報錯帳、更正帳號等調整後資料統計。",
+          "外幣成交值係以本公司當日下午3時30分公告匯率換算後加入成交金額。<br>公告匯率請參考本公司首頁>產品與服務>交易系統>雙幣ETF專區>代號對應及每日公告匯率。"
+        ],
+        "hints": "單位：元"
+      },
+      "normalized": {
+        "自營商(自行買賣)": {
+          "buy_ntd": 14941922398,
+          "sell_ntd": 15695195478,
+          "net_ntd": -753273080,
+          "net_ntd_100m": -7.53
+        },
+        "自營商(避險)": {
+          "buy_ntd": 63395872517,
+          "sell_ntd": 100161569938,
+          "net_ntd": -36765697421,
+          "net_ntd_100m": -367.66
+        },
+        "投信": {
+          "buy_ntd": 37010569606,
+          "sell_ntd": 9752110763,
+          "net_ntd": 27258458843,
+          "net_ntd_100m": 272.58
+        },
+        "外資及陸資(不含外資自營商)": {
+          "buy_ntd": 455072375440,
+          "sell_ntd": 604972209516,
+          "net_ntd": -149899834076,
+          "net_ntd_100m": -1499.0
+        },
+        "外資自營商": {
+          "buy_ntd": 0,
+          "sell_ntd": 0,
+          "net_ntd": 0,
+          "net_ntd_100m": 0.0
+        },
+        "合計": {
+          "buy_ntd": 570420739961,
+          "sell_ntd": 730581085695,
+          "net_ntd": -160160345734,
+          "net_ntd_100m": -1601.6
+        }
+      }
+    },
+    "taifex_foreign_oi": {
+      "source_url": "https://www.taifex.com.tw/cht/3/futContractsDate?queryDate=2026/11/04&commodityId=TXF",
+      "product": "臺股期貨 全月份",
+      "long_contracts": 11103,
+      "short_contracts": 104750,
+      "net_contracts": -93647,
+      "note": "未平倉餘額, not daily new shorts; raw source saved mb-oi.txt"
+    }
+  },
+  "us": {
+    "^SOX": {
+      "value": 10268.65,
+      "change_pct": -3.13,
+      "previous_close": 10600.4,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 10268.654296875,
+      "raw_previous_close": 10600.400390625,
+      "session_timestamp": 1793802600
+    },
+    "^GSPC": {
+      "value": 7688.62,
+      "change_pct": 1.58,
+      "previous_close": 7568.92,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 7688.6201171875,
+      "raw_previous_close": 7568.919921875,
+      "session_timestamp": 1793802600
+    },
+    "^NDX": {
+      "value": 28437.17,
+      "change_pct": 0.91,
+      "previous_close": 28180.26,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ENDX?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 28437.166015625,
+      "raw_previous_close": 28180.259765625,
+      "session_timestamp": 1793802600
+    },
+    "^IXIC": {
+      "value": 25736.51,
+      "change_pct": 1.44,
+      "previous_close": 25372.01,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 25736.513671875,
+      "raw_previous_close": 25372.009765625,
+      "session_timestamp": 1793802600
+    },
+    "^DJI": {
+      "value": 53356.12,
+      "change_pct": 3.03,
+      "previous_close": 51786.72,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 53356.12109375,
+      "raw_previous_close": 51786.71875,
+      "session_timestamp": 1793802600
+    },
+    "^VIX": {
+      "value": 16.61,
+      "change_pct": -20.26,
+      "previous_close": 20.83,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 16.610000610351562,
+      "raw_previous_close": 20.829999923706055,
+      "session_timestamp": 1793802600
+    }
+  },
+  "mag7": {
+    "AAPL": {
+      "value": 349.51,
+      "change_pct": 5.31,
+      "previous_close": 331.9,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 349.510009765625,
+      "raw_previous_close": 331.8999938964844,
+      "session_timestamp": 1793802600
+    },
+    "MSFT": {
+      "value": 555.8,
+      "change_pct": 6.68,
+      "previous_close": 520.99,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 555.7999877929688,
+      "raw_previous_close": 520.989990234375,
+      "session_timestamp": 1793802600
+    },
+    "NVDA": {
+      "value": 200.13,
+      "change_pct": -3.17,
+      "previous_close": 206.69,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 200.1300048828125,
+      "raw_previous_close": 206.69000244140625,
+      "session_timestamp": 1793802600
+    },
+    "AMZN": {
+      "value": 266.03,
+      "change_pct": 6.12,
+      "previous_close": 250.69,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AMZN?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 266.0299987792969,
+      "raw_previous_close": 250.69000244140625,
+      "session_timestamp": 1793802600
+    },
+    "GOOGL": {
+      "value": 288.93,
+      "change_pct": 3.18,
+      "previous_close": 280.03,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 288.92999267578125,
+      "raw_previous_close": 280.0299987792969,
+      "session_timestamp": 1793802600
+    },
+    "META": {
+      "value": 630.0,
+      "change_pct": 1.44,
+      "previous_close": 621.03,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/META?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 630.0,
+      "raw_previous_close": 621.030029296875,
+      "session_timestamp": 1793802600
+    },
+    "TSLA": {
+      "value": 385.19,
+      "change_pct": -3.34,
+      "previous_close": 398.5,
+      "data_as_of": "2026-11-04",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/TSLA?range=10d&interval=1d",
+      "source": "Yahoo Finance daily historical chart; not official exchange",
+      "currency": "USD",
+      "session": "US regular daily close",
+      "raw_close": 385.19000244140625,
+      "raw_previous_close": 398.5,
+      "session_timestamp": 1793802600
+    }
+  },
+  "retrieved_at_us": "2026-11-05T10:31:19+08:00",
+  "us_index_schema_keys": {
+    "sox": "^SOX",
+    "sp500": "^GSPC",
+    "nasdaq100": "^NDX",
+    "nasdaq": "^IXIC",
+    "dow": "^DJI",
+    "vix": "^VIX"
+  },
+  "limitations": [
+    "TAIFEX homepage product endpoint does not expose quote timestamp; collection time is not quote time. TX116 month has not been independently decoded.",
+    "US data are Yahoo historical chart secondary source, not official index provider/exchange data.",
+    "Official Taiwanese intraday values are not closing prices."
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "source": "/Users/kaide/Pictures/方舟運算截圖/ark_stocks_latest.json",
+  "source_folder": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-05_09-05-05",
+  "run_started": "2026-11-05T09:05:05+08:00",
+  "run_finished": "2026-11-05T09:08:14+08:00",
+  "success": true,
+  "stage": "complete",
+  "validation_ok": true,
+  "hashes_all_match": true,
+  "hash_count": 25,
+  "counts": {
+    "ETF價值區": 10,
+    "ETF升溫區": 7,
+    "產業價值區": 30,
+    "產業升溫區": 30
+  },
+  "total_rows": 77,
+  "unique_codes": 77,
+  "overlap": {
+    "etf": [],
+    "stocks": []
+  },
+  "source_duplicateCount": 25,
+  "source_duplicateCount_note": "Source extraction duplicates, not cross-zone overlap.",
+  "missing_etf_prices": [
+    "00875",
+    "00845B",
+    "00860B",
+    "00687C",
+    "00846B",
+    "00775B"
+  ],
+  "ax_price_disagreements": [
+    {
+      "section": "ETF價值區",
+      "code": "00878",
+      "ocr_price": "33.77",
+      "ax_price": "33.78",
+      "reason": "snapshot price takes precedence"
+    },
+    {
+      "section": "ETF價值區",
+      "code": "00919",
+      "ocr_price": "31.75",
+      "ax_price": "31.76",
+      "reason": "snapshot price takes precedence"
+    },
+    {
+      "section": "產業價值區",
+      "code": "2330",
+      "ocr_price": "2,270",
+      "ax_price": "2,275",
+      "reason": "snapshot price takes precedence"
+    },
+    {
+      "section": "產業價值區",
+      "code": "6669",
+      "ocr_price": "1,720",
+      "ax_price": "1,730",
+      "reason": "snapshot price takes precedence"
+    },
+    {
+      "section": "產業價值區",
+      "code": "2449",
+      "ocr_price": "238",
+      "ax_price": "238.5",
+      "reason": "snapshot price takes precedence"
+    },
+    {
+      "section": "產業價值區",
+      "code": "3293",
+      "ocr_price": "780",
+      "ax_price": "779",
+      "reason": "snapshot price takes precedence"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "6697",
+      "ocr_price": "67.4",
+      "ax_price": "67.3",
+      "reason": "snapshot price takes precedence"
+    },
+    {
+      "section": "產業升溫區",
+      "code": "1416",
+      "ocr_price": "15.05",
+      "ax_price": "15.1",
+      "reason": "snapshot price takes precedence"
+    }
+  ],
+  "caveats": [
+    "AX and screenshots are captured at different instants; price and change use screenshot OCR, AX change only when matching screenshot price.",
+    "ETF missing price rows: numeric OCR price is NAV; screenshot and AX confirm.",
+    "Source literal codes 00687C and 910322 visually confirmed in screenshots; preserve as-is.",
+    "Validation ok confirms code-set alignment, not price accuracy.",
+    "ETF NAV/premium may reflect different instant from screenshot price; do not recompute."
+  ],
+  "unresolved_changes": []
+}
