@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source_name": "Taiwan Stock Exchange (TWSE) MI_5MINS_HIST",
-  "retrieved_at": "2026-11-06T09:45:45+08:00",
+  "retrieved_at": "2026-11-06T09:48:26+08:00",
   "months": {
     "2026-05": {
       "status": "complete",
@@ -55,7 +55,7 @@
       "status": "partial",
       "coverage_end": "2026-11-05",
       "request_url": "https://openapi.twse.com.tw/v1/indicesReport/MI_5MINS_HIST",
-      "retrieved_at": "2026-11-06T09:45:45+08:00",
+      "retrieved_at": "2026-11-06T09:48:26+08:00",
       "row_count": 4
     }
   },
