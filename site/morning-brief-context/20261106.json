@@ -1,0 +1,98 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-11-06",
+  "valid_for_trading_date": "2026-11-06",
+  "data_as_of": "2026-11-06",
+  "stale": false,
+  "issue_no": 119,
+  "scenario": {
+    "id": "06",
+    "slug": "risk-contraction",
+    "label": "風險收縮",
+    "confidence": 1.0,
+    "reason": "水位上升3.9個百分點是正面空間訊號；但費半重挫12.25%、台股早盤跌7.68%，且前日外資續賣，因此價格與事件風險仍採06風險收縮，不將水位回升直接翻成買進。",
+    "source": "manual_override",
+    "classifier_suggestion": "06"
+  },
+  "water": {
+    "level": 86.2,
+    "previous": 82.3,
+    "change": 3.9,
+    "direction": "rising",
+    "previous_trading_date": "2026-11-05",
+    "comparison_date": "2026-11-05",
+    "comparison_is_provisional": false
+  },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "reduce_risk_review",
+    "risk_posture": "risk_off",
+    "water_policy": {
+      "direction": "rising",
+      "change": 3.9,
+      "interpretation": "方舟水位86.2%，較前一交易日11/5的82.3%上升3.9個百分點，配置環境改善；但水位不是立即買進指令，仍須面對急跌與承接不足。"
+    },
+    "scenario_context": {
+      "id": "06",
+      "label": "風險收縮",
+      "confidence": 1.0
+    },
+    "policy_focus": [
+      "先按風控決定可持有總額，再依固定價值標準選位置；保留現金，不因跌深或水位回升立刻加碼。",
+      "今晚11/6 21:30（台灣時間）公布美國10月非農就業；數據前不追價、不重押，先看市場能否止住急跌。",
+      "09:38台股跌7.68%；隔夜費半跌12.25%，昨日外資賣超仍待消化。",
+      "路透將半導體急跌與高通業績不如預期、以及市場擔憂選後AI基建投資放緩連結；這是市場解讀，不是台廠訂單已取消或新禁令已生效。"
+    ],
+    "systemic_risk": "高",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
+  "action_guidance": {
+    "risk_bias": "risk_off",
+    "allow_add": false,
+    "allow_trim": true,
+    "deploy_mode": "reduce_exposure",
+    "trim": {
+      "allowed": true,
+      "mode": "reduce_exposure",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": false,
+      "mode": "disabled",
+      "conditions": [
+        "risk_off_no_new_exposure"
+      ]
+    },
+    "rebuy": {
+      "allowed": false,
+      "mode": "disabled_until_stabilized",
+      "conditions": [
+        "risk_bias_improves",
+        "water_stabilizes"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 1.0,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "風險收縮",
+    "summary": "水位上升3.9個百分點是正面空間訊號；但費半重挫12.25%、台股早盤跌7.68%，且前日外資續賣，因此價格與事件風險仍採06風險收縮，不將水位回升直接翻成買進。"
+  },
+  "source": {
+    "issue_file": "data/issues/20261106.json",
+    "generated_at": "2026-11-06T09:45:45+08:00"
+  }
+}

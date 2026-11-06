@@ -1,27 +1,27 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-11-05",
-  "valid_for_trading_date": "2026-11-05",
-  "data_as_of": "2026-11-05",
+  "date": "2026-11-06",
+  "valid_for_trading_date": "2026-11-06",
+  "data_as_of": "2026-11-06",
   "stale": false,
-  "issue_no": 118,
+  "issue_no": 119,
   "scenario": {
     "id": "06",
     "slug": "risk-contraction",
     "label": "風險收縮",
     "confidence": 1.0,
-    "reason": "昨日外資大賣、隔夜費半逆跌與台股早盤續弱，同時水位由85.8%降至82.3%；採風險收縮，先控配置總額。高水位仍代表較佳空間，但下降是環境轉弱訊號。",
+    "reason": "水位上升3.9個百分點是正面空間訊號；但費半重挫12.25%、台股早盤跌7.68%，且前日外資續賣，因此價格與事件風險仍採06風險收縮，不將水位回升直接翻成買進。",
     "source": "manual_override",
     "classifier_suggestion": "06"
   },
   "water": {
-    "level": 82.3,
-    "previous": 85.8,
-    "change": -3.5,
-    "direction": "falling",
-    "previous_trading_date": "2026-11-04",
-    "comparison_date": "2026-11-04",
+    "level": 86.2,
+    "previous": 82.3,
+    "change": 3.9,
+    "direction": "rising",
+    "previous_trading_date": "2026-11-05",
+    "comparison_date": "2026-11-05",
     "comparison_is_provisional": false
   },
   "leader_policy": {
@@ -29,9 +29,9 @@
     "short_term_bias": "reduce_risk_review",
     "risk_posture": "risk_off",
     "water_policy": {
-      "direction": "falling",
-      "change": -3.5,
-      "interpretation": "方舟水位82.3%，較前一交易日11/4的85.8%下降3.5個百分點；配置環境轉弱，宜收斂持有總額，而非因水位仍高就忽略降幅。"
+      "direction": "rising",
+      "change": 3.9,
+      "interpretation": "方舟水位86.2%，較前一交易日11/5的82.3%上升3.9個百分點，配置環境改善；但水位不是立即買進指令，仍須面對急跌與承接不足。"
     },
     "scenario_context": {
       "id": "06",
@@ -39,10 +39,10 @@
       "confidence": 1.0
     },
     "policy_focus": [
-      "先依風控決定持有總額，再由固定價值判斷選位置；不追反彈、不因單日盈虧換股。",
-      "觀察早盤低點、半導體承接及賣壓是否收斂；美國大盤上漲不代表台股風險解除。",
-      "10:30加權跌1.48%；昨日外資賣超1,499.00億元，隔夜費半跌3.13%。",
-      "路透報導民主黨取得美國國會兩院，市場對政策僵局與油價下跌的樂觀，和資料中心建設放緩的疑慮並存；目前是市場預期，不是新禁令或台廠訂單取消。"
+      "先按風控決定可持有總額，再依固定價值標準選位置；保留現金，不因跌深或水位回升立刻加碼。",
+      "今晚11/6 21:30（台灣時間）公布美國10月非農就業；數據前不追價、不重押，先看市場能否止住急跌。",
+      "09:38台股跌7.68%；隔夜費半跌12.25%，昨日外資賣超仍待消化。",
+      "路透將半導體急跌與高通業績不如預期、以及市場擔憂選後AI基建投資放緩連結；這是市場解讀，不是台廠訂單已取消或新禁令已生效。"
     ],
     "systemic_risk": "高",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
@@ -89,10 +89,10 @@
   },
   "editorial": {
     "state_label": "風險收縮",
-    "summary": "昨日外資大賣、隔夜費半逆跌與台股早盤續弱，同時水位由85.8%降至82.3%；採風險收縮，先控配置總額。高水位仍代表較佳空間，但下降是環境轉弱訊號。"
+    "summary": "水位上升3.9個百分點是正面空間訊號；但費半重挫12.25%、台股早盤跌7.68%，且前日外資續賣，因此價格與事件風險仍採06風險收縮，不將水位回升直接翻成買進。"
   },
   "source": {
-    "issue_file": "data/issues/20261105.json",
-    "generated_at": "2026-11-05T10:44:29+08:00"
+    "issue_file": "data/issues/20261106.json",
+    "generated_at": "2026-11-06T09:45:45+08:00"
   }
 }
