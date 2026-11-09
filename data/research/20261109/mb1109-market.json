@@ -1,0 +1,474 @@
+{
+  "requested_date": "2026-11-09",
+  "cutoff": "2026-11-09T10:00:00+08:00",
+  "retrieved_at": "2026-11-09T10:05:34.619051+08:00",
+  "timezone": "Asia/Taipei",
+  "market_status": {
+    "open_today": true,
+    "calendar_title": "115 年市場開休市日期",
+    "calendar_url": "https://www.twse.com.tw/holidaySchedule/holidaySchedule?response=json&queryYear=2026",
+    "evidence": "2026 calendar has no Nov9 holiday; TWSE rtcode 0000, trade date 20261109 and live intraday bars affirm actual trading.",
+    "quote_date": "20261109",
+    "quote_time": "10:02:00",
+    "quote_url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+    "first_bar": {
+      "c": "40609.21",
+      "s": "53725",
+      "t": "1794186060000",
+      "ts": "090100"
+    },
+    "previous_open_date": "2026-11-06",
+    "previous_close": "39,701.64",
+    "previous_day_official_row": [
+      "115/11/06",
+      "19,339,729,647",
+      "1,321,071,858,650",
+      "8,402,054",
+      "39,701.64",
+      "-1,873.08"
+    ],
+    "previous_day_source_url": "https://www.twse.com.tw/exchangeReport/FMTQIK?response=json&date=20261109"
+  },
+  "taiwan_intraday": {
+    "twse": {
+      "value": "41861.84",
+      "previous_close_or_reference": "39701.64",
+      "change": "2160.20",
+      "change_percent": "5.44",
+      "instrument": "TWSE weighted index",
+      "date": "2026-11-09",
+      "time": "10:00:00",
+      "quote_type": "completed one-minute close",
+      "source_url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+      "source_row": {
+        "c": "41861.84",
+        "s": "2752",
+        "t": "1794189600000",
+        "ts": "100000"
+      }
+    },
+    "taifex": {
+      "value": "41804.00",
+      "previous_close_or_reference": "39652.00",
+      "change": "2152.00",
+      "change_percent": "5.43",
+      "instrument": "TAIFEX Taiwan Index Futures",
+      "contract_month": "2026-11",
+      "symbol": "TXFK6-F",
+      "display_name": "臺指期116",
+      "date": "2026-11-09",
+      "time": "10:00:00",
+      "quote_type": "completed one-minute close",
+      "source_url": "https://mis.taifex.com.tw/futures/api/getChartData1M",
+      "request_method": "POST",
+      "request_body": {
+        "SymbolID": "TXFK6-F"
+      },
+      "source_fields": [
+        "T",
+        "O",
+        "H",
+        "L",
+        "C",
+        "V"
+      ],
+      "source_row": [
+        "100000",
+        "41735.00",
+        "41823.00",
+        "41730.00",
+        "41804.00",
+        "654"
+      ]
+    },
+    "basis": {
+      "value": "-57.84",
+      "formula": "futures minus spot at same 10:00 minute",
+      "derived": true
+    },
+    "asynchronous_latest_quotes": {
+      "twse": {
+        "value": "41858.90",
+        "date": "20261109",
+        "time": "10:02:00",
+        "source_url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0"
+      },
+      "taifex": {
+        "value": "41801.00",
+        "date": "20261109",
+        "time": "100346",
+        "source_url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+        "request_method": "POST",
+        "request_body": {
+          "MarketType": "0",
+          "SymbolType": "F",
+          "KindID": "1",
+          "CID": "",
+          "ExpireMonth": ""
+        }
+      }
+    }
+  },
+  "institutional": {
+    "latest_complete_date": "20261106",
+    "contract": "臺股期貨",
+    "scope": "all contract months, not front month only",
+    "unit": "contracts",
+    "source_url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+    "net_definition": "long minus short; usual foreign futures net positioning means open-interest net, not daily trading net",
+    "rows": [
+      {
+        "institution": "自營商",
+        "daily_trading_net": -875,
+        "open_interest_net": 1680,
+        "raw": {
+          "Date": "20261106",
+          "ContractCode": "臺股期貨",
+          "Item": "自營商",
+          "TradingVolume(Long)": "18917",
+          "TradingValue(Long)(Thousands)": "149374772",
+          "TradingVolume(Short)": "19792",
+          "TradingValue(Short)(Thousands)": "157168943",
+          "TradingVolume(Net)": "-875",
+          "TradingValue(Net)(Thousands)": "-7794172",
+          "OpenInterest(Long)": "6022",
+          "ContractValueofOpenInterest(Long)(Thousands)": "47794882",
+          "OpenInterest(Short)": "4342",
+          "ContractValueofOpenInterest(Short)(Thousands)": "34459560",
+          "OpenInterest(Net)": "1680",
+          "ContractValueofOpenInterest(Net)(Thousands)": "13335322"
+        }
+      },
+      {
+        "institution": "投信",
+        "daily_trading_net": 154,
+        "open_interest_net": 90437,
+        "raw": {
+          "Date": "20261106",
+          "ContractCode": "臺股期貨",
+          "Item": "投信",
+          "TradingVolume(Long)": "1275",
+          "TradingValue(Long)(Thousands)": "10114658",
+          "TradingVolume(Short)": "1121",
+          "TradingValue(Short)(Thousands)": "8849055",
+          "TradingVolume(Net)": "154",
+          "TradingValue(Net)(Thousands)": "1265604",
+          "OpenInterest(Long)": "94158",
+          "ContractValueofOpenInterest(Long)(Thousands)": "746710603",
+          "OpenInterest(Short)": "3721",
+          "ContractValueofOpenInterest(Short)(Thousands)": "29509018",
+          "OpenInterest(Net)": "90437",
+          "ContractValueofOpenInterest(Net)(Thousands)": "717201585"
+        }
+      },
+      {
+        "institution": "外資及陸資",
+        "daily_trading_net": -4310,
+        "open_interest_net": -99930,
+        "raw": {
+          "Date": "20261106",
+          "ContractCode": "臺股期貨",
+          "Item": "外資及陸資",
+          "TradingVolume(Long)": "140566",
+          "TradingValue(Long)(Thousands)": "1119359194",
+          "TradingVolume(Short)": "144876",
+          "TradingValue(Short)(Thousands)": "1151864854",
+          "TradingVolume(Net)": "-4310",
+          "TradingValue(Net)(Thousands)": "-32505660",
+          "OpenInterest(Long)": "15873",
+          "ContractValueofOpenInterest(Long)(Thousands)": "125892365",
+          "OpenInterest(Short)": "115803",
+          "ContractValueofOpenInterest(Short)(Thousands)": "918450985",
+          "OpenInterest(Net)": "-99930",
+          "ContractValueofOpenInterest(Net)(Thousands)": "-792558620"
+        }
+      }
+    ]
+  },
+  "us_indices": [
+    {
+      "value": "9390.25",
+      "previous_close_or_reference": "9011.14",
+      "change": "379.11",
+      "change_percent": "4.21",
+      "instrument": "PHLX Semiconductor SOX",
+      "symbol": "SOX",
+      "date": "2026-11-06",
+      "previous_date": "2026-11-05",
+      "source_url": "https://api.nasdaq.com/api/quote/SOX/historical?assetclass=index&fromdate=2026-11-05&todate=2026-11-06&limit=10",
+      "crosscheck_url": "https://api.nasdaq.com/api/quote/SOX/summary?assetclass=index",
+      "source_class": "official Nasdaq"
+    },
+    {
+      "value": "24579.42",
+      "previous_close_or_reference": "24315.00",
+      "change": "264.42",
+      "change_percent": "1.09",
+      "instrument": "Nasdaq Composite",
+      "symbol": "COMP",
+      "date": "2026-11-06",
+      "previous_date": "2026-11-05",
+      "source_url": "https://api.nasdaq.com/api/quote/COMP/historical?assetclass=index&fromdate=2026-11-05&todate=2026-11-06&limit=10",
+      "crosscheck_url": "https://api.nasdaq.com/api/quote/COMP/summary?assetclass=index",
+      "source_class": "official Nasdaq"
+    },
+    {
+      "value": "7376.860000",
+      "previous_close_or_reference": "7353.730000",
+      "change": "23.13",
+      "change_percent": "0.31",
+      "instrument": "S&P 500",
+      "symbol": "SPX",
+      "date": "2026-11-06",
+      "previous_date": "2026-11-05",
+      "source_url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SPX_History.csv",
+      "source_class": "official Cboe"
+    },
+    {
+      "value": "25.640000",
+      "previous_close_or_reference": "28.180000",
+      "change": "-2.54",
+      "change_percent": "-9.01",
+      "instrument": "Cboe VIX",
+      "symbol": "VIX",
+      "date": "2026-11-06",
+      "previous_date": "2026-11-05",
+      "source_url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+      "source_class": "official Cboe"
+    },
+    {
+      "value": "51285.73",
+      "previous_close_or_reference": "51523.06",
+      "change": "-237.33",
+      "change_percent": "-0.46",
+      "instrument": "Dow Jones Industrial Average",
+      "symbol": "^DJI",
+      "date": "2026-11-06",
+      "previous_date": "2026-11-05",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?range=5d&interval=1d",
+      "source_class": "Yahoo Finance secondary distributor",
+      "raw_close": 51285.73046875,
+      "raw_previous_close": 51523.05859375
+    }
+  ],
+  "mag7": [
+    {
+      "value": "342.37",
+      "previous_close_or_reference": "344.17",
+      "change": "-1.80",
+      "change_percent": "-0.52",
+      "symbol": "AAPL",
+      "date": "2026-11-06",
+      "previous_date": "2026-11-05",
+      "source_url": "https://api.nasdaq.com/api/quote/AAPL/historical?assetclass=stocks&fromdate=2026-11-05&todate=2026-11-06&limit=10",
+      "source_class": "official Nasdaq",
+      "raw_evidence": "/Users/kaide/.hermes/cache/scratch/mb1109-evidence/mag7_AAPL.txt",
+      "source_rows": [
+        {
+          "date": "11/06/2026",
+          "close": "$342.37",
+          "volume": "44,703,810",
+          "open": "$338.73",
+          "high": "$345.79",
+          "low": "$338.30"
+        },
+        {
+          "date": "11/05/2026",
+          "close": "$344.17",
+          "volume": "75,678,950",
+          "open": "$353.89",
+          "high": "$355.38",
+          "low": "$342.06"
+        }
+      ]
+    },
+    {
+      "value": "530.61",
+      "previous_close_or_reference": "535.93",
+      "change": "-5.32",
+      "change_percent": "-0.99",
+      "symbol": "MSFT",
+      "date": "2026-11-06",
+      "previous_date": "2026-11-05",
+      "source_url": "https://api.nasdaq.com/api/quote/MSFT/historical?assetclass=stocks&fromdate=2026-11-05&todate=2026-11-06&limit=10",
+      "source_class": "official Nasdaq",
+      "raw_evidence": "/Users/kaide/.hermes/cache/scratch/mb1109-evidence/mag7_MSFT.txt",
+      "source_rows": [
+        {
+          "date": "11/06/2026",
+          "close": "$530.61",
+          "volume": "26,956,420",
+          "open": "$525.69",
+          "high": "$538.33",
+          "low": "$524.47"
+        },
+        {
+          "date": "11/05/2026",
+          "close": "$535.93",
+          "volume": "42,507,930",
+          "open": "$554.935",
+          "high": "$557.62",
+          "low": "$532.675"
+        }
+      ]
+    },
+    {
+      "value": "186.64",
+      "previous_close_or_reference": "181.60",
+      "change": "5.04",
+      "change_percent": "2.78",
+      "symbol": "NVDA",
+      "date": "2026-11-06",
+      "previous_date": "2026-11-05",
+      "source_url": "https://api.nasdaq.com/api/quote/NVDA/historical?assetclass=stocks&fromdate=2026-11-05&todate=2026-11-06&limit=10",
+      "source_class": "official Nasdaq",
+      "raw_evidence": "/Users/kaide/.hermes/cache/scratch/mb1109-evidence/mag7_NVDA.txt",
+      "source_rows": [
+        {
+          "date": "11/06/2026",
+          "close": "$186.64",
+          "volume": "180,212,300",
+          "open": "$191.10",
+          "high": "$194.895",
+          "low": "$185.22"
+        },
+        {
+          "date": "11/05/2026",
+          "close": "$181.60",
+          "volume": "306,127,800",
+          "open": "$196.07",
+          "high": "$196.25",
+          "low": "$181.462"
+        }
+      ]
+    },
+    {
+      "value": "259.30",
+      "previous_close_or_reference": "260.21",
+      "change": "-0.91",
+      "change_percent": "-0.35",
+      "symbol": "AMZN",
+      "date": "2026-11-06",
+      "previous_date": "2026-11-05",
+      "source_url": "https://api.nasdaq.com/api/quote/AMZN/historical?assetclass=stocks&fromdate=2026-11-05&todate=2026-11-06&limit=10",
+      "source_class": "official Nasdaq",
+      "raw_evidence": "/Users/kaide/.hermes/cache/scratch/mb1109-evidence/mag7_AMZN.txt",
+      "source_rows": [
+        {
+          "date": "11/06/2026",
+          "close": "$259.30",
+          "volume": "42,571,530",
+          "open": "$259.81",
+          "high": "$264.182",
+          "low": "$258.53"
+        },
+        {
+          "date": "11/05/2026",
+          "close": "$260.21",
+          "volume": "85,796,850",
+          "open": "$271.43",
+          "high": "$273.23",
+          "low": "$252.27"
+        }
+      ]
+    },
+    {
+      "value": "284.78",
+      "previous_close_or_reference": "282.57",
+      "change": "2.21",
+      "change_percent": "0.78",
+      "symbol": "GOOGL",
+      "date": "2026-11-06",
+      "previous_date": "2026-11-05",
+      "source_url": "https://api.nasdaq.com/api/quote/GOOGL/historical?assetclass=stocks&fromdate=2026-11-05&todate=2026-11-06&limit=10",
+      "source_class": "official Nasdaq",
+      "raw_evidence": "/Users/kaide/.hermes/cache/scratch/mb1109-evidence/mag7_GOOGL.txt",
+      "source_rows": [
+        {
+          "date": "11/06/2026",
+          "close": "$284.78",
+          "volume": "36,345,940",
+          "open": "$284.90",
+          "high": "$290.49",
+          "low": "$284.59"
+        },
+        {
+          "date": "11/05/2026",
+          "close": "$282.57",
+          "volume": "53,412,840",
+          "open": "$293.97",
+          "high": "$295.60",
+          "low": "$277.07"
+        }
+      ]
+    },
+    {
+      "value": "610.15",
+      "previous_close_or_reference": "605.08",
+      "change": "5.07",
+      "change_percent": "0.84",
+      "symbol": "META",
+      "date": "2026-11-06",
+      "previous_date": "2026-11-05",
+      "source_url": "https://api.nasdaq.com/api/quote/META/historical?assetclass=stocks&fromdate=2026-11-05&todate=2026-11-06&limit=10",
+      "source_class": "official Nasdaq",
+      "raw_evidence": "/Users/kaide/.hermes/cache/scratch/mb1109-evidence/mag7_META.txt",
+      "source_rows": [
+        {
+          "date": "11/06/2026",
+          "close": "$610.15",
+          "volume": "15,705,470",
+          "open": "$607.33",
+          "high": "$625.60",
+          "low": "$606.66"
+        },
+        {
+          "date": "11/05/2026",
+          "close": "$605.08",
+          "volume": "28,676,200",
+          "open": "$632.30",
+          "high": "$634.99",
+          "low": "$583.80"
+        }
+      ]
+    },
+    {
+      "value": "358.22",
+      "previous_close_or_reference": "343.69",
+      "change": "14.53",
+      "change_percent": "4.23",
+      "symbol": "TSLA",
+      "date": "2026-11-06",
+      "previous_date": "2026-11-05",
+      "source_url": "https://api.nasdaq.com/api/quote/TSLA/historical?assetclass=stocks&fromdate=2026-11-05&todate=2026-11-06&limit=10",
+      "source_class": "official Nasdaq",
+      "raw_evidence": "/Users/kaide/.hermes/cache/scratch/mb1109-evidence/mag7_TSLA.txt",
+      "source_rows": [
+        {
+          "date": "11/06/2026",
+          "close": "$358.22",
+          "volume": "36,730,430",
+          "open": "$348.92",
+          "high": "$363.8398",
+          "low": "$347.60"
+        },
+        {
+          "date": "11/05/2026",
+          "close": "$343.69",
+          "volume": "79,675,510",
+          "open": "$374.12",
+          "high": "$374.30",
+          "low": "$338.15"
+        }
+      ]
+    }
+  ],
+  "raw_evidence_directory": "/Users/kaide/.hermes/cache/scratch/mb1109-evidence",
+  "limitations": [
+    "10:00 values are fully elapsed synchronized minute closes, not daily closes or latest ticks. Asynchronous latest quotes have separate source times.",
+    "10:04 tail was still forming and excluded.",
+    "US daily source dates do not establish exact closing clock times.",
+    "Nasdaq DJI and INDU returned Symbol not exists; Dow uses explicitly identified Yahoo secondary evidence. Stooq returned JS verification wall."
+  ],
+  "calculation_method": "change=value-reference; percent=(value/reference-1)*100; net=long-short. Decimal arithmetic; round displayed changes to two decimals."
+}

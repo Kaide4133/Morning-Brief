@@ -1,0 +1,107 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-11-09",
+  "valid_for_trading_date": "2026-11-09",
+  "data_as_of": "2026-11-09",
+  "stale": false,
+  "issue_no": 120,
+  "scenario": {
+    "id": "07",
+    "slug": "low-level-repair",
+    "label": "低位修復",
+    "confidence": 1.0,
+    "reason": "前一交易日台股急跌後，11/9早盤反彈5.44%，費半前一美股交易日回升4.21%，屬急跌後低位修復；方舟水位下降1.1個百分點、外資期貨淨空與CPI風險仍在，並非趨勢擴張。",
+    "source": "manual_override",
+    "classifier_suggestion": "05"
+  },
+  "water": {
+    "level": 85.1,
+    "previous": 86.2,
+    "change": -1.1,
+    "direction": "falling",
+    "previous_trading_date": "2026-11-06",
+    "comparison_date": "2026-11-06",
+    "comparison_is_provisional": false
+  },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "cautious_review",
+    "risk_posture": "constructive_but_cautious",
+    "water_policy": {
+      "direction": "falling",
+      "change": -1.1,
+      "interpretation": "方舟水位85.1%，較前一交易日11/6的86.2%下降1.1個百分點；水位仍高但配置環境邊際收斂，不等於立即買進或行情反轉。"
+    },
+    "scenario_context": {
+      "id": "07",
+      "label": "低位修復",
+      "confidence": 1.0
+    },
+    "policy_focus": [
+      "先由風控決定可持有總額，再按固定價值標準選位置；不因早盤大漲臨時提高部位。",
+      "明晚11/10 21:30（台灣時間）美國CPI公布前，不追價、不重押；先看反彈能否站穩。",
+      "10:00台股漲5.44%；費半前日反彈4.21%，道瓊仍跌，美股並非全面回升。",
+      "11/13 21:30（台灣時間）公布美國PPI；本週先看通膨與利率反應，不能僅因科技股反彈就解除控速。"
+    ],
+    "systemic_risk": "中高",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
+  "action_guidance": {
+    "risk_bias": "constructive_but_cautious",
+    "allow_add": true,
+    "allow_trim": true,
+    "deploy_mode": "small_probe",
+    "max_initial_deploy_pct": 0.2,
+    "required_confirmation": [
+      "murphy_right_side_reconfirmation",
+      "MA20_reclaim",
+      "no_new_low"
+    ],
+    "trim": {
+      "allowed": true,
+      "mode": "cleanup_weak_only",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": true,
+      "mode": "small_probe",
+      "max_initial_deploy_pct": 0.2,
+      "conditions": [
+        "murphy_right_side_reconfirmation",
+        "MA20_reclaim",
+        "no_new_low"
+      ]
+    },
+    "rebuy": {
+      "allowed": true,
+      "mode": "small_probe",
+      "conditions": [
+        "no_new_low",
+        "support_reclaim"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 1.0,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "低位修復",
+    "summary": "前一交易日台股急跌後，11/9早盤反彈5.44%，費半前一美股交易日回升4.21%，屬急跌後低位修復；方舟水位下降1.1個百分點、外資期貨淨空與CPI風險仍在，並非趨勢擴張。"
+  },
+  "source": {
+    "issue_file": "data/issues/20261109.json",
+    "generated_at": "2026-11-09T10:11:08+08:00"
+  }
+}

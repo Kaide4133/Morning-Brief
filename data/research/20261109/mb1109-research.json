@@ -1,0 +1,547 @@
+{
+  "brief_date": "2026-11-09",
+  "research_as_of": "2026-11-09T10:07:11.935068+08:00",
+  "observation_boundary": "各資料保留各自as_of；非共同即時同步快照。BTC/ETH另用共同已完成分鐘。",
+  "scope": "read-only research; no repository modification or publication",
+  "reader_language": "zh-TW",
+  "prohibited_signals_excluded": true,
+  "official_imminent_events": [
+    {
+      "event": "美國10月CPI、實質薪資",
+      "status": "pending",
+      "as_of": "2026-11-09T10:07:11.935068+08:00",
+      "event_time_et": "2026-11-10T08:30:00-05:00",
+      "event_time_taipei": "2026-11-10T21:30:00+08:00",
+      "url": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+      "evidence_class": "official_calendar",
+      "reader": "明晚21:30公布美國CPI，先不追價、不重押。"
+    },
+    {
+      "event": "Veterans Day美元固定收益市場建議休市",
+      "status": "pending",
+      "as_of": "2026-11-09T10:07:11.935068+08:00",
+      "event_date": "2026-11-11",
+      "url": "https://www.sifma.org/news/press-releases/sifma-fixed-income-market-close-recommendation-in-the-u-s-the-u-k-and-japan-for-the-u-s-veterans-day-holiday-2026",
+      "evidence_class": "industry_official_recommendation",
+      "caveat": "SIFMA建議並非強制；不可擴大說成所有美股休市。"
+    },
+    {
+      "event": "美國10月PPI",
+      "status": "pending",
+      "as_of": "2026-11-09T10:07:11.935068+08:00",
+      "event_time_et": "2026-11-13T08:30:00-05:00",
+      "event_time_taipei": "2026-11-13T21:30:00+08:00",
+      "url": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+      "evidence_class": "official_calendar"
+    },
+    {
+      "event": "下次FOMC",
+      "status": "pending_but_not_this_week",
+      "as_of": "2026-11-09T10:07:11.935068+08:00",
+      "meeting_dates_us": [
+        "2026-12-08",
+        "2026-12-09"
+      ],
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "evidence_class": "official_raw_html_year_section_checked",
+      "caveat": "抽取器只呈現2027日期；已讀原始HTML的2026段，不能誤用12/7–8。"
+    }
+  ],
+  "completed_macro_context": {
+    "event": "美國10月就業報告",
+    "as_of": "2026-11-06T08:30:00-05:00",
+    "url": "https://www.bls.gov/news.release/empsit.nr0.htm",
+    "evidence_class": "official_release",
+    "nonfarm_payroll_change": 165000,
+    "unemployment_pct": 4.1,
+    "hourly_earnings_mom_pct": 0.4,
+    "hourly_earnings_yoy_pct": 3.1,
+    "caveat": "已公布，不列待發事件；不以新聞的升息機率冒充官方政策。"
+  },
+  "prices": [
+    {
+      "symbol": "^GSPC",
+      "asset": "S&P 500",
+      "value": 7376.85986328125,
+      "as_of": "2026-11-06",
+      "reference_value": 7353.72998046875,
+      "reference_date": "2026-11-05",
+      "change_pct_derived": 0.31453266402128116,
+      "change_bps_derived": null,
+      "session": "latest completed US daily session; daily anchor is not close clock",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/^GSPC?range=5d&interval=1d",
+      "evidence_class": "price_only_not_flow",
+      "confidence": "medium_secondary_feed",
+      "volume": 5701900000
+    },
+    {
+      "symbol": "^IXIC",
+      "asset": "Nasdaq Composite",
+      "value": 24579.4296875,
+      "as_of": "2026-11-06",
+      "reference_value": 24315.0,
+      "reference_date": "2026-11-05",
+      "change_pct_derived": 1.087516707793543,
+      "change_bps_derived": null,
+      "session": "latest completed US daily session; daily anchor is not close clock",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/^IXIC?range=5d&interval=1d",
+      "evidence_class": "price_only_not_flow",
+      "confidence": "medium_secondary_feed",
+      "volume": 10621670000
+    },
+    {
+      "symbol": "^DJI",
+      "asset": "Dow Jones",
+      "value": 51285.73046875,
+      "as_of": "2026-11-06",
+      "reference_value": 51523.05859375,
+      "reference_date": "2026-11-05",
+      "change_pct_derived": -0.4606250705558638,
+      "change_bps_derived": null,
+      "session": "latest completed US daily session; daily anchor is not close clock",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/^DJI?range=5d&interval=1d",
+      "evidence_class": "price_only_not_flow",
+      "confidence": "medium_secondary_feed",
+      "volume": 523300000
+    },
+    {
+      "symbol": "^TNX",
+      "asset": "US10Y yield",
+      "value": 4.859000205993652,
+      "as_of": "2026-11-06",
+      "reference_value": 4.836999893188477,
+      "reference_date": "2026-11-05",
+      "change_pct_derived": 0.45483384930721443,
+      "change_bps_derived": 2.200031280517578,
+      "session": "latest completed US daily session; daily anchor is not close clock",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/^TNX?range=5d&interval=1d",
+      "evidence_class": "price_only_not_flow",
+      "confidence": "medium_secondary_feed",
+      "volume": 0
+    },
+    {
+      "symbol": "DX-Y.NYB",
+      "asset": "Dollar index",
+      "value": 102.1520004272461,
+      "as_of": "2026-11-09T09:54:39+08:00",
+      "reference_value": 102.30000305175781,
+      "reference_date": "2026-11-06",
+      "change_pct_derived": -0.14467509295853034,
+      "change_bps_derived": null,
+      "session": "delayed/live Monday Asia snapshot, not settlement",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=5d&interval=1d",
+      "evidence_class": "price_only_not_flow",
+      "confidence": "medium_secondary_feed",
+      "volume": 0
+    },
+    {
+      "symbol": "GC=F",
+      "asset": "Gold futures Yahoo continuous front-contract proxy",
+      "value": 4132.5,
+      "as_of": "2026-11-09T09:54:36+08:00",
+      "reference_value": 4074.89990234375,
+      "reference_date": "2026-11-06",
+      "change_pct_derived": 1.4135340508148506,
+      "change_bps_derived": null,
+      "session": "delayed/live Monday Asia snapshot, not settlement",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/GC=F?range=5d&interval=1d",
+      "evidence_class": "price_only_not_flow",
+      "confidence": "medium_secondary_feed",
+      "volume": 23140
+    }
+  ],
+  "crypto_prices": [
+    {
+      "asset": "BTC",
+      "value_usd": 75134.5078125,
+      "as_of": "2026-11-09T10:04:00+08:00",
+      "bar": "completed_1m_close; timestamp labels start of minute",
+      "reference_usd": 75611.9765625,
+      "reference_as_of": "2026-11-08T10:04:00+08:00",
+      "change_24h_pct_derived": -0.6314723826923501,
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?range=2d&interval=1m",
+      "confidence": "medium_secondary_feed",
+      "volume_caveat": "Yahoo分鐘量為供應商統計，不等於交易所逐筆成交或淨流量。"
+    },
+    {
+      "asset": "ETH",
+      "value_usd": 2141.429931640625,
+      "as_of": "2026-11-09T10:04:00+08:00",
+      "bar": "completed_1m_close; timestamp labels start of minute",
+      "reference_usd": 2230.090087890625,
+      "reference_as_of": "2026-11-08T10:04:00+08:00",
+      "change_24h_pct_derived": -3.9756311519173186,
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETH-USD?range=2d&interval=1m",
+      "confidence": "medium_secondary_feed",
+      "volume_caveat": "Yahoo分鐘量為供應商統計，不等於交易所逐筆成交或淨流量。"
+    }
+  ],
+  "eth_btc": {
+    "value": 0.028501283817345496,
+    "as_of": "2026-11-09T10:04:00+08:00",
+    "reference_24h": 0.029493873712549464,
+    "reference_as_of": "2026-11-08T10:04:00+08:00",
+    "change_24h_pct_derived": -3.365410406506308,
+    "formula": "ETH-USD common completed minute close / BTC-USD same minute close",
+    "urls": [
+      "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?range=2d&interval=1m",
+      "https://query1.finance.yahoo.com/v8/finance/chart/ETH-USD?range=2d&interval=1m"
+    ],
+    "interpretation": "ETH相對BTC走弱；不是資金自ETH直接流入BTC的證明。"
+  },
+  "crypto_independent_crosscheck": {
+    "provider": "CoinGecko",
+    "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd&include_24hr_change=true&include_24hr_vol=true&include_last_updated_at=true",
+    "rows": [
+      {
+        "asset": "bitcoin",
+        "value_usd": 75124,
+        "as_of": "2026-11-09T10:04:36+08:00",
+        "provider_24h_change_pct": -0.6879735040485573,
+        "provider_rolling_24h_volume_usd": 18858743354.26508
+      },
+      {
+        "asset": "ethereum",
+        "value_usd": 2140.21,
+        "as_of": "2026-11-09T10:04:49+08:00",
+        "provider_24h_change_pct": -4.052532471386616,
+        "provider_rolling_24h_volume_usd": 9333713344.491894
+      }
+    ],
+    "caveat": "跨資產更新秒數不同，僅交叉檢查，非主表同步值；未取得前日同時刻rolling volume，不能宣稱放量。"
+  },
+  "actual_flows": [
+    {
+      "asset": "BTC",
+      "evidence_class": "actual_fund_flow",
+      "provider": "Farside Investors",
+      "as_of": "2026-11-06",
+      "period": "2026-11-02/2026-11-06",
+      "url": "https://farside.co.uk/bitcoin-etf-flow-all-data/",
+      "rows": [
+        {
+          "date": "02 Nov 2026",
+          "funds_usd_million": {
+            "IBIT": -405.3,
+            "FBTC": 6.7,
+            "BITB": 0.0,
+            "ARKB": 0.0,
+            "BTCO": 0.0,
+            "EZBC": 0.0,
+            "BRRR": 0.0,
+            "HODL": 0.0,
+            "BTCW": 0.0,
+            "MSBT": 0.0,
+            "GBTC": 0.0,
+            "BTC": 0.0
+          },
+          "total_usd_million": -398.6,
+          "column_sum_verified": true
+        },
+        {
+          "date": "03 Nov 2026",
+          "funds_usd_million": {
+            "IBIT": -95.0,
+            "FBTC": 6.8,
+            "BITB": 21.9,
+            "ARKB": 0.0,
+            "BTCO": 0.0,
+            "EZBC": 0.0,
+            "BRRR": 0.0,
+            "HODL": 0.0,
+            "BTCW": 0.0,
+            "MSBT": 3.3,
+            "GBTC": 0.0,
+            "BTC": -52.6
+          },
+          "total_usd_million": -115.6,
+          "column_sum_verified": true
+        },
+        {
+          "date": "04 Nov 2026",
+          "funds_usd_million": {
+            "IBIT": -201.2,
+            "FBTC": 236.7,
+            "BITB": 15.2,
+            "ARKB": 19.9,
+            "BTCO": 4.0,
+            "EZBC": 0.0,
+            "BRRR": 0.0,
+            "HODL": 0.0,
+            "BTCW": 0.0,
+            "MSBT": 0.0,
+            "GBTC": 0.0,
+            "BTC": 0.0
+          },
+          "total_usd_million": 74.6,
+          "column_sum_verified": true
+        },
+        {
+          "date": "05 Nov 2026",
+          "funds_usd_million": {
+            "IBIT": -105.0,
+            "FBTC": -199.9,
+            "BITB": 0.0,
+            "ARKB": -18.9,
+            "BTCO": 0.0,
+            "EZBC": -32.9,
+            "BRRR": 0.0,
+            "HODL": -23.6,
+            "BTCW": 0.0,
+            "MSBT": 0.0,
+            "GBTC": -49.9,
+            "BTC": 0.0
+          },
+          "total_usd_million": -430.2,
+          "column_sum_verified": true
+        },
+        {
+          "date": "06 Nov 2026",
+          "funds_usd_million": {
+            "IBIT": -403.0,
+            "FBTC": 42.8,
+            "BITB": -20.5,
+            "ARKB": -20.1,
+            "BTCO": 0.0,
+            "EZBC": 0.0,
+            "BRRR": 0.0,
+            "HODL": 0.0,
+            "BTCW": 0.0,
+            "MSBT": 0.0,
+            "GBTC": -11.1,
+            "BTC": 0.0
+          },
+          "total_usd_million": -411.9,
+          "column_sum_verified": true
+        }
+      ],
+      "weekly_usd_million": -1281.7,
+      "confidence": "high_for_provider_table_not_whole_crypto_market",
+      "caveat": "只代表美國現貨ETF申贖，不等於全市場或鏈上淨流。11/9美股交易日尚未開始；不得把11/6資料稱為今日流量。原短表重抓省略表格，改以全歷史頁核對，與首次短表相符。"
+    },
+    {
+      "asset": "ETH",
+      "evidence_class": "actual_fund_flow",
+      "provider": "Farside Investors",
+      "as_of": "2026-11-06",
+      "period": "2026-11-02/2026-11-06",
+      "url": "https://farside.co.uk/ethereum-etf-flow-all-data/",
+      "rows": [
+        {
+          "date": "02 Nov 2026",
+          "funds_usd_million": {
+            "ETHA": -138.3,
+            "ETHB": -4.6,
+            "FETH": 0.0,
+            "ETHW": 0.0,
+            "TETH": 0.0,
+            "ETHV": 0.0,
+            "QETH": 0.0,
+            "EZET": 0.0,
+            "MSSE": 3.2,
+            "ETHE": 0.0,
+            "ETH": 0.0
+          },
+          "total_usd_million": -139.7,
+          "column_sum_verified": true
+        },
+        {
+          "date": "03 Nov 2026",
+          "funds_usd_million": {
+            "ETHA": -74.4,
+            "ETHB": 0.0,
+            "FETH": 0.0,
+            "ETHW": 0.0,
+            "TETH": 0.0,
+            "ETHV": 0.0,
+            "QETH": 0.0,
+            "EZET": 0.0,
+            "MSSE": 0.0,
+            "ETHE": 0.0,
+            "ETH": -10.9
+          },
+          "total_usd_million": -85.3,
+          "column_sum_verified": true
+        },
+        {
+          "date": "04 Nov 2026",
+          "funds_usd_million": {
+            "ETHA": 32.8,
+            "ETHB": -22.4,
+            "FETH": 19.2,
+            "ETHW": 0.0,
+            "TETH": 0.1,
+            "ETHV": 0.0,
+            "QETH": 0.0,
+            "EZET": 0.0,
+            "MSSE": 0.0,
+            "ETHE": 9.7,
+            "ETH": 13.6
+          },
+          "total_usd_million": 53.0,
+          "column_sum_verified": true
+        },
+        {
+          "date": "05 Nov 2026",
+          "funds_usd_million": {
+            "ETHA": -75.2,
+            "ETHB": -22.0,
+            "FETH": -2.2,
+            "ETHW": 0.0,
+            "TETH": 0.0,
+            "ETHV": 0.0,
+            "QETH": 0.0,
+            "EZET": 0.0,
+            "MSSE": 0.0,
+            "ETHE": -0.5,
+            "ETH": 0.0
+          },
+          "total_usd_million": -99.9,
+          "column_sum_verified": true
+        },
+        {
+          "date": "06 Nov 2026",
+          "funds_usd_million": {
+            "ETHA": -90.8,
+            "ETHB": 1.1,
+            "FETH": -1.7,
+            "ETHW": 0.0,
+            "TETH": 0.0,
+            "ETHV": 0.0,
+            "QETH": 0.0,
+            "EZET": 0.0,
+            "MSSE": 0.0,
+            "ETHE": 0.0,
+            "ETH": -1.9
+          },
+          "total_usd_million": -93.3,
+          "column_sum_verified": true
+        }
+      ],
+      "weekly_usd_million": -365.2,
+      "confidence": "high_for_provider_table_not_whole_crypto_market",
+      "caveat": "只代表美國現貨ETF申贖，不等於全市場或鏈上淨流。11/9美股交易日尚未開始；不得把11/6資料稱為今日流量。原短表重抓省略表格，改以全歷史頁核對，與首次短表相符。"
+    },
+    {
+      "asset": "gold",
+      "evidence_class": "actual_fund_flow_and_holdings",
+      "provider": "World Gold Council",
+      "as_of": "2026-10-31",
+      "published_at": "2026-11-05",
+      "period": "October 2026",
+      "url": "https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2026/11",
+      "flow_usd_billion": 2.7,
+      "holdings_change_tonnes": 19,
+      "holdings_tonnes": 4275,
+      "aum_usd_billion": 542,
+      "aum_mom_pct": -6,
+      "regional_flow_usd_billion": {
+        "North America": -0.512,
+        "Europe": 1.8,
+        "Asia": 1.3,
+        "Other": 0.062
+      },
+      "confidence": "high_monthly_only",
+      "caveat": "月頻非11/6或11/9流量；區域數字四捨五入不強求精確相加。AUM下滑並非贖回，金價下跌可抵銷淨申購。週頻表需登入，未取得11/6週流量。"
+    }
+  ],
+  "news_context": [
+    {
+      "headline": "美股急跌後科技股反彈，但三大指數全週仍跌",
+      "as_of": "2026-11-06T17:39:00-05:00",
+      "url": "https://finance.yahoo.com/markets/world-indices/articles/asia-stocks-drop-ai-rout-235808955.html",
+      "resolved_url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-higher-chip-stocks-attempt-143326672.html",
+      "source": "Reuters via Yahoo",
+      "evidence_class": "checked_article_body",
+      "facts": "S&P +0.31%、Nasdaq +1.1%、Dow -0.46%；10年債殖利率約4.86%；美元對主要貨幣升值。",
+      "interpretation": "AI監管與建設速度不確定性仍在；台灣半導體/伺服器反彈可看，但非資金全面回流證明。",
+      "caveat": "較早地方轉載仍是盤中版本，未採用；報導NVDA約3%與Yahoo ticker卡3.91%不同，未選其個股精確報酬。"
+    },
+    {
+      "headline": "週一亞盤黃金小升，非農後利率壓力仍在",
+      "as_of": "2026-11-09T00:16:00Z",
+      "published_at": "2026-11-09T06:31:00+05:30",
+      "url": "https://economictimes.indiatimes.com/markets/commodities/news/gold-edges-up-as-softer-crude-tempers-inflation-concerns/printarticle/135667365.cms",
+      "source": "Reuters via Economic Times",
+      "evidence_class": "checked_article_body",
+      "facts": {
+        "spot_gold_usd_oz": 4073.59,
+        "spot_change_pct": 0.2,
+        "december_gold_future_usd_oz": 4082.3
+      },
+      "caveat": "早於09:54台北Yahoo期金4132.5，不是同時間同商品；新聞79%升息機率為轉述、未直接驗證CME，讀者文案不放。"
+    },
+    {
+      "headline": "加密貨幣週日晚間走弱，市場憂監管",
+      "as_of": "2026-11-08T22:26:00Z",
+      "timestamp_basis": "搜尋結果Yahoo顯示11/9 03:26 GMT+5；URL秒碼不作出版時間證明",
+      "url": "https://finance.yahoo.com/markets/crypto/articles/cryptocurrencies-slide-two-month-lows-222647574.html",
+      "source": "Reuters via Yahoo",
+      "evidence_class": "checked_article_body; exact_timestamp_not_body_confirmed",
+      "facts": "文內BTC曾至73708美元、ETH約2223美元；報導將波動歸因監管擔憂與先前交易所事件。",
+      "caveat": "這是新聞中的較早價格，不是10:04快照；交易所失竊與監管變化未另查官方原件，不升格為已核官方事實。"
+    },
+    {
+      "headline": "川普稱若伊朗談判持續進展，再攻擊可能性低",
+      "as_of": "2026-11-08T20:55:00Z",
+      "url": "https://www.dw.com/en/iran-trump-says-strikes-unlikely-if-peace-talks-keep-moving/a-79894190",
+      "source": "WorldMonitor discovery → checked DW headline/partial body; Reuters gold body separately attributes Sunday comment",
+      "evidence_class": "attributed_policy_context_not_direct_X",
+      "caveat": "未核原始發文/逐字稿；僅可寫媒體引述，不能稱直接X訊號，也不證明避險資金移動。"
+    }
+  ],
+  "worldmonitor": {
+    "market_cached_at": "2026-11-09T01:58:50.169Z",
+    "news_cached_at": "2026-11-09T02:00:11.050Z",
+    "url": "https://worldmonitor.app/",
+    "finding": "市場摘要能找到股金幣快照；ETF區含estFlow、volumeRatio與direction，屬推估，非ETF真實申購贖回，不採作實際流量。新聞適合作發現線索與政策脈絡，不產生交易權重。",
+    "raw_market_archive": "/Users/kaide/.hermes/cache/spillover/call_7f5bb340845946db8906e2e3f6f0ea95.txt"
+  },
+  "unavailable_current_observations": [
+    {
+      "field": "US Treasury official latest yield curve",
+      "status": "unavailable",
+      "reason": "官方HTML及XML兩種URL回404；以Yahoo ^TNX加Reuters約4.86%交叉核對，明確非官方曲線。"
+    },
+    {
+      "field": "美元現金/貨幣市場基金申購贖回",
+      "status": "not_verified",
+      "reason": "本輪未取得具日期ICI等實際流量；DXY價格不能證明美元現金流入。"
+    },
+    {
+      "field": "美債duration與美股實際基金流量",
+      "status": "not_verified",
+      "reason": "未取得同期間申贖/持倉資料；殖利率及股價只是價格訊號。"
+    },
+    {
+      "field": "Gold weekly flow ending Nov6",
+      "status": "unavailable",
+      "reason": "WGC週頻表需登入；本輪僅核10月官方月報，不延伸成11月買盤。"
+    },
+    {
+      "field": "Crypto OI/funding/basis/stablecoin/exchange netflow",
+      "status": "not_verified",
+      "reason": "未取到可同步且有定義的當期資料；不填估值。"
+    },
+    {
+      "field": "Crypto 24h volume acceleration",
+      "status": "not_verified",
+      "reason": "有當前rolling volume，無前日同時刻對照；Yahoo日線11/8空值不能拿11/7當24h。"
+    }
+  ],
+  "capital_flow_reader": {
+    "headline": "黃金有中期買盤，加密ETF仍流出；美股反彈不等於全面回流",
+    "flow": "10月黃金ETF淨流入；上週BTC、ETH現貨ETF都淨流出，ETH相對BTC更弱。",
+    "meaning": "資產走勢分歧，尚不足判定大資金全面轉向風險資產。",
+    "action": "台股反彈先看能否站穩，不因海外一天反彈追價。",
+    "watch": "明晚21:30美國CPI；再看美元、10年債殖利率與下一個ETF交易日申贖。"
+  },
+  "confidence_and_falsification": {
+    "gold": "月頻實際流入可信；若後續週流量轉出，不能續稱當前吸金。",
+    "BTC": "上週實際ETF流出可信；若後續連續淨流入且價格持穩，負面判斷需更新。",
+    "ETH": "價弱與ETF流出同向；ETH/BTC修復並有申贖反轉才提高評價。",
+    "USD": "只有價格，不下淨流入結論。",
+    "duration": "只有殖利率，不下淨申購結論。",
+    "equity": "反彈是事實，資金回流未證實。"
+  }
+}

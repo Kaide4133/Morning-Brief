@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source_name": "Taiwan Stock Exchange (TWSE) MI_5MINS_HIST",
-  "retrieved_at": "2026-11-06T09:48:26+08:00",
+  "retrieved_at": "2026-11-09T10:11:08+08:00",
   "months": {
     "2026-05": {
       "status": "complete",
@@ -53,10 +53,10 @@
     },
     "2026-11": {
       "status": "partial",
-      "coverage_end": "2026-11-05",
+      "coverage_end": "2026-11-06",
       "request_url": "https://openapi.twse.com.tw/v1/indicesReport/MI_5MINS_HIST",
-      "retrieved_at": "2026-11-06T09:48:26+08:00",
-      "row_count": 4
+      "retrieved_at": "2026-11-09T10:11:08+08:00",
+      "row_count": 5
     }
   },
   "rows": [
@@ -948,6 +948,13 @@
       "high": 42873.81,
       "low": 41513.57,
       "close": 41574.72
+    },
+    {
+      "date": "2026-11-06",
+      "open": 38915.76,
+      "high": 40435.83,
+      "low": 37837.05,
+      "close": 39701.64
     }
   ]
 }
