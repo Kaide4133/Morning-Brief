@@ -1,0 +1,1118 @@
+{
+  "date": "2026-11-10",
+  "status": "source_integrity_pass_normalized_payload_ready_calendar_gate_pending",
+  "source_validation": {
+    "date": "2026-11-10",
+    "ok": true,
+    "source_path": "/Users/kaide/Pictures/方舟運算截圖/ark_stocks_latest.json",
+    "resolved_path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-10_09-05-04/ark_stocks.json",
+    "sha256": "77d872ff7a559a6d48500c7b358eae29e90992722c754f7dd99070d761dd6f9c",
+    "capture_started_at": "2026-11-10T09:05:04+08:00",
+    "capture_finished_at": "2026-11-10T09:08:43+08:00",
+    "checks": {
+      "expected_run": true,
+      "success_complete": true,
+      "validation_ok": true,
+      "pointer_target_hash": true,
+      "all_manifest_hashes": true,
+      "date": true,
+      "ETF價值區": true,
+      "ETF升溫區": true,
+      "產業價值區": true,
+      "產業升溫區": true,
+      "schema_core": true,
+      "water": true,
+      "five_indicators": true,
+      "normalized_counts": true,
+      "normalization_all_77": true
+    },
+    "counts": {
+      "ETF價值區": 10,
+      "ETF升溫區": 7,
+      "產業價值區": 30,
+      "產業升溫區": 30
+    },
+    "price_policy": "Preserve first-selected sourceFile screenshot price; do not replace with later AX/continuation-page prices. Null missing prices; ETF NAV separately. AX arrows only on exact source price/amount/percent match.",
+    "missing_price_codes": [
+      "00731",
+      "00856B",
+      "00867B",
+      "00986B",
+      "1203",
+      "1456",
+      "2321",
+      "6212"
+    ],
+    "screenshot_verified_files": [
+      "00_運算五指標.png",
+      "01_風控水位.png",
+      "02_ETF價值區_1.png",
+      "03_ETF價值區_2.png",
+      "04_ETF升溫區_1.png",
+      "08_產業價值區_3.png",
+      "10_產業價值區_5.png",
+      "12_產業升溫區_1.png",
+      "14_產業升溫區_3.png",
+      "16_產業升溫區_5.png"
+    ],
+    "later_ax_mismatches": [
+      {
+        "code": "0055",
+        "source_price": "50.7",
+        "ax_price": "50.75",
+        "source_file": "02_ETF價值區_1.png"
+      },
+      {
+        "code": "00918",
+        "source_price": "33.04",
+        "ax_price": "33.03",
+        "source_file": "02_ETF價值區_1.png"
+      },
+      {
+        "code": "00919",
+        "source_price": "31.29",
+        "ax_price": "31.3",
+        "source_file": "03_ETF價值區_2.png"
+      },
+      {
+        "code": "00731",
+        "source_price": "98.18",
+        "ax_price": null,
+        "source_file": "03_ETF價值區_2.png"
+      },
+      {
+        "code": "00856B",
+        "source_price": "38.88",
+        "ax_price": null,
+        "source_file": "04_ETF升溫區_1.png"
+      },
+      {
+        "code": "00986B",
+        "source_price": "9.88",
+        "ax_price": null,
+        "source_file": "04_ETF升溫區_1.png"
+      },
+      {
+        "code": "00867B",
+        "source_price": "30.22",
+        "ax_price": null,
+        "source_file": "04_ETF升溫區_1.png"
+      },
+      {
+        "code": "6239",
+        "source_price": "233.5",
+        "ax_price": "233",
+        "source_file": "08_產業價值區_3.png"
+      },
+      {
+        "code": "2330",
+        "source_price": "2,265",
+        "ax_price": "2,270",
+        "source_file": "10_產業價值區_5.png"
+      },
+      {
+        "code": "6212",
+        "source_price": "84.07",
+        "ax_price": null,
+        "source_file": "12_產業升溫區_1.png"
+      },
+      {
+        "code": "1203",
+        "source_price": "-1.95",
+        "ax_price": null,
+        "source_file": "12_產業升溫區_1.png"
+      },
+      {
+        "code": "6446",
+        "source_price": "1,350",
+        "ax_price": "1,345",
+        "source_file": "14_產業升溫區_3.png"
+      },
+      {
+        "code": "1456",
+        "source_price": "-99.2",
+        "ax_price": null,
+        "source_file": "16_產業升溫區_5.png"
+      },
+      {
+        "code": "2321",
+        "source_price": "20.46",
+        "ax_price": null,
+        "source_file": "16_產業升溫區_5.png"
+      }
+    ],
+    "change_math_verified_rows": 69,
+    "names_validation": "All code/name sets independently agree with AX; no official canonical-name registry lookup performed.",
+    "calendar_verification": "separate; not established by this audit",
+    "raw_source_requires_normalization": true
+  },
+  "symlink_chain": [
+    {
+      "path": "/Users/kaide/Pictures/方舟運算截圖/ark_stocks_latest.json",
+      "target": ".ark_latest/ark_stocks.json"
+    },
+    {
+      "path": "/Users/kaide/Pictures/方舟運算截圖/.ark_latest",
+      "target": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-10_09-05-04"
+    }
+  ],
+  "manifest_hash_checks": {
+    "ark_ocr.json": true,
+    "ark_stocks.json": true,
+    "ark_stocks_ax.json": true,
+    "ark_validation.json": true,
+    "ark_indicators.json": true,
+    "00_運算五指標.png": true,
+    "01_風控水位.png": true,
+    "02_ETF價值區_1.png": true,
+    "03_ETF價值區_2.png": true,
+    "04_ETF升溫區_1.png": true,
+    "05_ETF升溫區_2.png": true,
+    "06_產業價值區_1.png": true,
+    "07_產業價值區_2.png": true,
+    "08_產業價值區_3.png": true,
+    "09_產業價值區_4.png": true,
+    "10_產業價值區_5.png": true,
+    "11_產業價值區_6.png": true,
+    "12_產業升溫區_1.png": true,
+    "13_產業升溫區_2.png": true,
+    "14_產業升溫區_3.png": true,
+    "15_產業升溫區_4.png": true,
+    "16_產業升溫區_5.png": true,
+    "17_產業升溫區_6.png": true,
+    "capture_manifest.jsonl": true,
+    "ark_ax_rows.jsonl": true
+  },
+  "zones": {
+    "ETF價值區": {
+      "count": 10,
+      "members": [
+        {
+          "code": "00897",
+          "name": "富邦基因免疫生技"
+        },
+        {
+          "code": "0055",
+          "name": "元大MSCI金融"
+        },
+        {
+          "code": "00939",
+          "name": "統一台灣高息動能"
+        },
+        {
+          "code": "00701",
+          "name": "國泰股利精選30"
+        },
+        {
+          "code": "00898",
+          "name": "國泰基因免疫革命"
+        },
+        {
+          "code": "00918",
+          "name": "大華優利高填息30"
+        },
+        {
+          "code": "00875",
+          "name": "國泰網路資安"
+        },
+        {
+          "code": "00919",
+          "name": "群益台灣精選高息"
+        },
+        {
+          "code": "00938",
+          "name": "凱基優選30"
+        },
+        {
+          "code": "00731",
+          "name": "復華富時高息低波"
+        }
+      ]
+    },
+    "ETF升溫區": {
+      "count": 7,
+      "members": [
+        {
+          "code": "00856B",
+          "name": "永豐1-3年美公債"
+        },
+        {
+          "code": "00986B",
+          "name": "FT金融債10+"
+        },
+        {
+          "code": "00652",
+          "name": "富邦印度"
+        },
+        {
+          "code": "00867B",
+          "name": "台新A-BBB電信債"
+        },
+        {
+          "code": "00694B",
+          "name": "富邦美債1-3"
+        },
+        {
+          "code": "00845B",
+          "name": "富邦新興投等債"
+        },
+        {
+          "code": "00846B",
+          "name": "富邦歐洲銀行債"
+        }
+      ]
+    },
+    "產業價值區": {
+      "count": 30,
+      "members": [
+        {
+          "code": "2449",
+          "name": "京元電子"
+        },
+        {
+          "code": "6285",
+          "name": "啟碁"
+        },
+        {
+          "code": "4958",
+          "name": "臻鼎-KY"
+        },
+        {
+          "code": "5289",
+          "name": "宜鼎"
+        },
+        {
+          "code": "2404",
+          "name": "漢唐"
+        },
+        {
+          "code": "3036",
+          "name": "文曄"
+        },
+        {
+          "code": "5269",
+          "name": "祥碩"
+        },
+        {
+          "code": "6414",
+          "name": "樺漢"
+        },
+        {
+          "code": "3044",
+          "name": "健鼎"
+        },
+        {
+          "code": "2301",
+          "name": "光寶科"
+        },
+        {
+          "code": "3711",
+          "name": "日月光投控"
+        },
+        {
+          "code": "6669",
+          "name": "緯穎"
+        },
+        {
+          "code": "6239",
+          "name": "力成"
+        },
+        {
+          "code": "2376",
+          "name": "技嘉"
+        },
+        {
+          "code": "3005",
+          "name": "神基"
+        },
+        {
+          "code": "3231",
+          "name": "緯創"
+        },
+        {
+          "code": "3706",
+          "name": "神達"
+        },
+        {
+          "code": "2357",
+          "name": "華碩"
+        },
+        {
+          "code": "2382",
+          "name": "廣達"
+        },
+        {
+          "code": "2356",
+          "name": "英業達"
+        },
+        {
+          "code": "1513",
+          "name": "中興電"
+        },
+        {
+          "code": "6139",
+          "name": "亞翔"
+        },
+        {
+          "code": "3293",
+          "name": "鈊象"
+        },
+        {
+          "code": "2379",
+          "name": "瑞昱"
+        },
+        {
+          "code": "2330",
+          "name": "台積電"
+        },
+        {
+          "code": "2645",
+          "name": "長榮航太"
+        },
+        {
+          "code": "2454",
+          "name": "聯發科"
+        },
+        {
+          "code": "8069",
+          "name": "元太"
+        },
+        {
+          "code": "3023",
+          "name": "信邦"
+        },
+        {
+          "code": "2317",
+          "name": "鴻海"
+        }
+      ]
+    },
+    "產業升溫區": {
+      "count": 30,
+      "members": [
+        {
+          "code": "6212",
+          "name": "理銘"
+        },
+        {
+          "code": "1416",
+          "name": "廣豐"
+        },
+        {
+          "code": "8455",
+          "name": "大拓-KY"
+        },
+        {
+          "code": "1203",
+          "name": "味王"
+        },
+        {
+          "code": "8099",
+          "name": "大世科"
+        },
+        {
+          "code": "6708",
+          "name": "天擎"
+        },
+        {
+          "code": "5202",
+          "name": "力新"
+        },
+        {
+          "code": "910322",
+          "name": "康師傅-DR"
+        },
+        {
+          "code": "2465",
+          "name": "麗臺"
+        },
+        {
+          "code": "3287",
+          "name": "廣寰科"
+        },
+        {
+          "code": "4741",
+          "name": "泓瀚"
+        },
+        {
+          "code": "8432",
+          "name": "東生華"
+        },
+        {
+          "code": "6446",
+          "name": "藥華藥"
+        },
+        {
+          "code": "2468",
+          "name": "華經"
+        },
+        {
+          "code": "5013",
+          "name": "強新"
+        },
+        {
+          "code": "2891",
+          "name": "中信金"
+        },
+        {
+          "code": "2610",
+          "name": "華航"
+        },
+        {
+          "code": "2008",
+          "name": "高興昌"
+        },
+        {
+          "code": "6199",
+          "name": "天品"
+        },
+        {
+          "code": "4155",
+          "name": "訊映"
+        },
+        {
+          "code": "5904",
+          "name": "寶雅*"
+        },
+        {
+          "code": "1456",
+          "name": "怡華"
+        },
+        {
+          "code": "2880",
+          "name": "華南金"
+        },
+        {
+          "code": "2321",
+          "name": "東訊"
+        },
+        {
+          "code": "3691",
+          "name": "碩禾"
+        },
+        {
+          "code": "4526",
+          "name": "東台"
+        },
+        {
+          "code": "8272",
+          "name": "全景軟體"
+        },
+        {
+          "code": "8905",
+          "name": "裕國"
+        },
+        {
+          "code": "2516",
+          "name": "新建"
+        },
+        {
+          "code": "4430",
+          "name": "耀億"
+        }
+      ]
+    }
+  },
+  "overlaps": {
+    "etf": [],
+    "stocks": []
+  },
+  "water": {
+    "value": 80.4,
+    "screenshot_verified": true,
+    "previous_record": {
+      "date": "2026-11-09",
+      "water_level": 85.1,
+      "scenario_id": "07",
+      "scenario_label": "07 低位修復"
+    },
+    "delta_percentage_points": -4.7,
+    "direction": "下降",
+    "comparison_is_provisional": true,
+    "note": "2026-11-09 is latest prior history record; immediate prior open trading-day status requires separate calendar verification."
+  },
+  "five_indicators": {
+    "values": {
+      "全球散戶": 34,
+      "外資情緒": 71,
+      "位階增溫": 34,
+      "社交反指": 40,
+      "量能爆衝": 22
+    },
+    "approximate": true,
+    "status": "estimated",
+    "captured_at": "2026-11-10T01:05:49Z",
+    "visual_gauges_compatible": true,
+    "note": "Gauge-derived estimates, not exact printed numerical readings."
+  },
+  "schema": {
+    "top_level_keys": [
+      "sourceOcr",
+      "sourceAx",
+      "sourceFolder",
+      "generatedAt",
+      "summary",
+      "riskControl",
+      "stocks",
+      "duplicates",
+      "recoveries"
+    ],
+    "row_keys": [
+      "section",
+      "page",
+      "sourceFile",
+      "name",
+      "code",
+      "price",
+      "change",
+      "columns",
+      "rawLines",
+      "ocrConfidence",
+      "rank"
+    ],
+    "errors": [],
+    "source_shape": "stocks array with section labels; not issue etf/stocks zone schema",
+    "paging_duplicate_count": 26,
+    "summary_duplicate_count": 26,
+    "industry_field_present": false
+  },
+  "normalization": [
+    {
+      "code": "00897",
+      "source_price": "14.97",
+      "price": "14.97",
+      "source_change": "40.29(1.98%)",
+      "change": "▲0.29(1.98%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "0055",
+      "source_price": "50.7",
+      "price": "50.7",
+      "source_change": "40.35(0.7%)",
+      "change": "▲0.35(0.7%)",
+      "provenance": "source_screenshot_verified"
+    },
+    {
+      "code": "00939",
+      "source_price": "24.02",
+      "price": "24.02",
+      "source_change": "40.24(1.01%)",
+      "change": "▲0.24(1.01%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "00898",
+      "source_price": "11.43",
+      "price": "11.43",
+      "source_change": "40.09(0.79%)",
+      "change": "▲0.09(0.79%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "00918",
+      "source_price": "33.04",
+      "price": "33.04",
+      "source_change": "40.58(1.79%)",
+      "change": "▲0.58(1.79%)",
+      "provenance": "source_screenshot_verified"
+    },
+    {
+      "code": "00875",
+      "source_price": "58",
+      "price": "58",
+      "source_change": "41.4(2.47%)",
+      "change": "▲1.4(2.47%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "00919",
+      "source_price": "31.29",
+      "price": "31.29",
+      "source_change": "40.31(1%)",
+      "change": "▲0.31(1%)",
+      "provenance": "source_screenshot_verified"
+    },
+    {
+      "code": "00938",
+      "source_price": "26.2",
+      "price": "26.2",
+      "source_change": "40.2(0.77%)",
+      "change": "▲0.2(0.77%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "00731",
+      "source_price": "98.18",
+      "price": null,
+      "source_change": "(-%)",
+      "change": null,
+      "provenance": "screenshot_missing_price"
+    },
+    {
+      "code": "00856B",
+      "source_price": "38.88",
+      "price": null,
+      "source_change": "(-%)",
+      "change": null,
+      "provenance": "screenshot_missing_price"
+    },
+    {
+      "code": "00986B",
+      "source_price": "9.88",
+      "price": null,
+      "source_change": "(-%)",
+      "change": null,
+      "provenance": "screenshot_missing_price"
+    },
+    {
+      "code": "00867B",
+      "source_price": "30.22",
+      "price": null,
+      "source_change": "(-%)",
+      "change": null,
+      "provenance": "screenshot_missing_price"
+    },
+    {
+      "code": "00694B",
+      "source_price": "42.98",
+      "price": "42.98",
+      "source_change": "0(0％)",
+      "change": "0(0%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "00845B",
+      "source_price": "33.14",
+      "price": "33.14",
+      "source_change": "70.21(-0.63%)",
+      "change": "▼0.21(-0.63%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "00846B",
+      "source_price": "35.63",
+      "price": "35.63",
+      "source_change": "7O.18(-0.5%)",
+      "change": "▼0.18(-0.5%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "6285",
+      "source_price": "189",
+      "price": "189",
+      "source_change": "48.5(4.71%)",
+      "change": "▲8.5(4.71%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "5289",
+      "source_price": "940",
+      "price": "940",
+      "source_change": "415(1.62%)",
+      "change": "▲15(1.62%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "2404",
+      "source_price": "958",
+      "price": "958",
+      "source_change": "428(3.01%)",
+      "change": "▲28(3.01%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "3036",
+      "source_price": "192",
+      "price": "192",
+      "source_change": "410.5(5.79%)",
+      "change": "▲10.5(5.79%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "5269",
+      "source_price": "1,215",
+      "price": "1,215",
+      "source_change": "735(-2.8%)",
+      "change": "▼35(-2.8%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "6414",
+      "source_price": "342.5",
+      "price": "342.5",
+      "source_change": "47.5(2.24%)",
+      "change": "▲7.5(2.24%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "3044",
+      "source_price": "469.5",
+      "price": "469.5",
+      "source_change": "426(5.86%)",
+      "change": "▲26(5.86%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "3711",
+      "source_price": "600",
+      "price": "600",
+      "source_change": "439(6.95%)",
+      "change": "▲39(6.95%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "6239",
+      "source_price": "233.5",
+      "price": "233.5",
+      "source_change": "410(4.47%)",
+      "change": "▲10(4.47%)",
+      "provenance": "source_screenshot_verified"
+    },
+    {
+      "code": "2376",
+      "source_price": "310.5",
+      "price": "310.5",
+      "source_change": "41(0.32%)",
+      "change": "▲1(0.32%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "3005",
+      "source_price": "112",
+      "price": "112",
+      "source_change": "74.5(-3.86%)",
+      "change": "▼4.5(-3.86%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "3231",
+      "source_price": "171",
+      "price": "171",
+      "source_change": "42.5(1.48%)",
+      "change": "▲2.5(1.48%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "3706",
+      "source_price": "72.2",
+      "price": "72.2",
+      "source_change": "40.5(0.7%)",
+      "change": "▲0.5(0.7%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "2356",
+      "source_price": "56.8",
+      "price": "56.8",
+      "source_change": "41.2(2.16%)",
+      "change": "▲1.2(2.16%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "1513",
+      "source_price": "146",
+      "price": "146",
+      "source_change": "41(0.69%)",
+      "change": "▲1(0.69%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "6139",
+      "source_price": "609",
+      "price": "609",
+      "source_change": "421(3.57%)",
+      "change": "▲21(3.57%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "3293",
+      "source_price": "755",
+      "price": "755",
+      "source_change": "48(1.07%)",
+      "change": "▲8(1.07%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "2379",
+      "source_price": "748",
+      "price": "748",
+      "source_change": "45(0.67%)",
+      "change": "▲5(0.67%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "2330",
+      "source_price": "2,265",
+      "price": "2,265",
+      "source_change": "430(1.34%)",
+      "change": "▲30(1.34%)",
+      "provenance": "source_screenshot_verified"
+    },
+    {
+      "code": "2645",
+      "source_price": "158",
+      "price": "158",
+      "source_change": "43(1.94%)",
+      "change": "▲3(1.94%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "8069",
+      "source_price": "147.5",
+      "price": "147.5",
+      "source_change": "43.5(2.43%)",
+      "change": "▲3.5(2.43%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "2317",
+      "source_price": "245.5",
+      "price": "245.5",
+      "source_change": "46.5(2.72%)",
+      "change": "▲6.5(2.72%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "6212",
+      "source_price": "84.07",
+      "price": null,
+      "source_change": "(-%)",
+      "change": null,
+      "provenance": "screenshot_missing_price"
+    },
+    {
+      "code": "1416",
+      "source_price": "19",
+      "price": "19",
+      "source_change": "41.05(5.85%)",
+      "change": "▲1.05(5.85%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "8455",
+      "source_price": "30.15",
+      "price": "30.15",
+      "source_change": "72.3(-7.09%)",
+      "change": "▼2.3(-7.09%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "1203",
+      "source_price": "-1.95",
+      "price": null,
+      "source_change": "(-%)",
+      "change": null,
+      "provenance": "screenshot_missing_price"
+    },
+    {
+      "code": "8099",
+      "source_price": "143.5",
+      "price": "143.5",
+      "source_change": "43(2.14%)",
+      "change": "▲3(2.14%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "6708",
+      "source_price": "82.5",
+      "price": "82.5",
+      "source_change": "47.5(10%)",
+      "change": "▲7.5(10%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "5202",
+      "source_price": "21.15",
+      "price": "21.15",
+      "source_change": "41.05(5.22%)",
+      "change": "▲1.05(5.22%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "910322",
+      "source_price": "28.05",
+      "price": "28.05",
+      "source_change": "40.6(2.19%)",
+      "change": "▲0.6(2.19%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "2465",
+      "source_price": "136",
+      "price": "136",
+      "source_change": "412(9.68%)",
+      "change": "▲12(9.68%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "3287",
+      "source_price": "88.6",
+      "price": "88.6",
+      "source_change": "48(9.93%)",
+      "change": "▲8(9.93%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "8432",
+      "source_price": "61.6",
+      "price": "61.6",
+      "source_change": "40.2(0.33%)",
+      "change": "▲0.2(0.33%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "6446",
+      "source_price": "1,350",
+      "price": "1,350",
+      "source_change": "720(-1.46%)",
+      "change": "▼20(-1.46%)",
+      "provenance": "source_screenshot_verified"
+    },
+    {
+      "code": "2468",
+      "source_price": "68",
+      "price": "68",
+      "source_change": "44.7(7.42%)",
+      "change": "▲4.7(7.42%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "5013",
+      "source_price": "71.6",
+      "price": "71.6",
+      "source_change": "43.4(4.99%)",
+      "change": "▲3.4(4.99%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "2891",
+      "source_price": "75",
+      "price": "75",
+      "source_change": "70.9(-1.19%)",
+      "change": "▼0.9(-1.19%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "2610",
+      "source_price": "22.5",
+      "price": "22.5",
+      "source_change": "40.75(3.45%)",
+      "change": "▲0.75(3.45%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "2008",
+      "source_price": "30.55",
+      "price": "30.55",
+      "source_change": "70.55(-1.77%)",
+      "change": "▼0.55(-1.77%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "6199",
+      "source_price": "165.5",
+      "price": "165.5",
+      "source_change": "40.5(0.3%)",
+      "change": "▲0.5(0.3%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "4155",
+      "source_price": "18",
+      "price": "18",
+      "source_change": "70.5(-2.7%)",
+      "change": "▼0.5(-2.7%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "5904",
+      "source_price": "76.1",
+      "price": "76.1",
+      "source_change": "40.9(1.2%)",
+      "change": "▲0.9(1.2%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "1456",
+      "source_price": "-99.2",
+      "price": null,
+      "source_change": "(-%)",
+      "change": null,
+      "provenance": "screenshot_missing_price"
+    },
+    {
+      "code": "2880",
+      "source_price": "49.75",
+      "price": "49.75",
+      "source_change": "40.15(0.3%)",
+      "change": "▲0.15(0.3%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "2321",
+      "source_price": "20.46",
+      "price": null,
+      "source_change": "(-%)",
+      "change": null,
+      "provenance": "screenshot_missing_price"
+    },
+    {
+      "code": "3691",
+      "source_price": "158",
+      "price": "158",
+      "source_change": "49.5(6.4%)",
+      "change": "▲9.5(6.4%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "4526",
+      "source_price": "59.6",
+      "price": "59.6",
+      "source_change": "45.4(9.96%)",
+      "change": "▲5.4(9.96%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "8272",
+      "source_price": "84.1",
+      "price": "84.1",
+      "source_change": "72.9(-3.33%)",
+      "change": "▼2.9(-3.33%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "8905",
+      "source_price": "36.2",
+      "price": "36.2",
+      "source_change": "40.4(1.12%)",
+      "change": "▲0.4(1.12%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "2516",
+      "source_price": "16.05",
+      "price": "16.05",
+      "source_change": "7O.4(-2.43%)",
+      "change": "▼0.4(-2.43%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    },
+    {
+      "code": "4430",
+      "source_price": "21",
+      "price": "21",
+      "source_change": "70.5(-2.33%)",
+      "change": "▼0.5(-2.33%)",
+      "provenance": "ax_arrow_matches_source_price_amount_percent"
+    }
+  ],
+  "warnings": [
+    "Raw OCR contains four ETF NAV-as-price and four industry revenue-as-price traps; normalized output has null price/change for all eight.",
+    "Six non-null screenshot prices differ from later AX; keep sourceFile values.",
+    "AX validation verifies names/membership, not all prices/changes.",
+    "Historical comparison remains conditional on independent exchange calendar verification."
+  ],
+  "outputs": {
+    "zones": "/Users/kaide/.hermes/cache/scratch/kmb1110-zones.json"
+  }
+}

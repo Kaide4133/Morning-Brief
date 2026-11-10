@@ -1,0 +1,104 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-11-10",
+  "valid_for_trading_date": "2026-11-10",
+  "data_as_of": "2026-11-10",
+  "stale": false,
+  "issue_no": 121,
+  "scenario": {
+    "id": "03",
+    "slug": "high-level-speed-control",
+    "label": "高位控速",
+    "confidence": 1.0,
+    "reason": "台股承接11/9反彈、今早續漲，費半與美股多數指數同步修復；但方舟水位由85.1降至80.4，昨日外資現貨賣超與期貨淨空仍在，今晚CPI未落地，採高位控速而非全面擴張。",
+    "source": "manual_override",
+    "classifier_suggestion": "06"
+  },
+  "water": {
+    "level": 80.4,
+    "previous": 85.1,
+    "change": -4.7,
+    "direction": "falling",
+    "previous_trading_date": "2026-11-09",
+    "comparison_date": "2026-11-09",
+    "comparison_is_provisional": false
+  },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "cautious_review",
+    "risk_posture": "balanced_cautious",
+    "water_policy": {
+      "direction": "falling",
+      "change": -4.7,
+      "interpretation": "方舟水位80.4%，較前一交易日11/9的85.1%下降4.7個百分點；配置環境轉弱，水位仍高不代表可以忽略下降方向。"
+    },
+    "scenario_context": {
+      "id": "03",
+      "label": "高位控速",
+      "confidence": 1.0
+    },
+    "policy_focus": [
+      "先由風控決定可持有總額，再依固定價值標準配置；反彈不臨時加碼，需調節時不以短期盈虧排名決定去留。",
+      "今晚11/10 21:30（台灣時間）美國CPI公布前，不追價、不重押；再看長債殖利率反應。",
+      "台股早盤漲3.05%，費半前夜漲6.85%；輝達逆勢跌4.27%，強弱仍分化。",
+      "11/11 02:00（台灣時間）美國10年債標售；06:00 CoreWeave財報電話會議，觀察利率與AI融資壓力。"
+    ],
+    "systemic_risk": "中高",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
+  "action_guidance": {
+    "risk_bias": "balanced_cautious",
+    "allow_add": true,
+    "allow_trim": true,
+    "deploy_mode": "slow_selective_add",
+    "max_initial_deploy_pct": 0.25,
+    "trim": {
+      "allowed": true,
+      "mode": "selective_trim",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": true,
+      "mode": "slow_selective_add",
+      "max_initial_deploy_pct": 0.25,
+      "conditions": [
+        "conditional_only",
+        "core_or_high_quality_only",
+        "pullback_confirmed",
+        "no_chase"
+      ]
+    },
+    "rebuy": {
+      "allowed": true,
+      "mode": "wait_for_pullback",
+      "conditions": [
+        "sold_name_drawdown_2_to_3_pct",
+        "MA20_support",
+        "murphy_right_side_reconfirmation"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 1.0,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "高位控速",
+    "summary": "台股承接11/9反彈、今早續漲，費半與美股多數指數同步修復；但方舟水位由85.1降至80.4，昨日外資現貨賣超與期貨淨空仍在，今晚CPI未落地，採高位控速而非全面擴張。"
+  },
+  "source": {
+    "issue_file": "data/issues/20261110.json",
+    "generated_at": "2026-11-10T09:32:22+08:00"
+  }
+}

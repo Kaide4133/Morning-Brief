@@ -1,0 +1,492 @@
+{
+  "brief_date": "2026-11-10",
+  "timezone": "Asia/Taipei",
+  "generated_at": "2026-11-10T09:28:17.546020+08:00",
+  "research_started_at": "2026-11-10T09:20:57+08:00",
+  "cutoff": "2026-11-10T09:28:17.546020+08:00",
+  "scope": "Read-only research; scratch evidence writes only. No repo changes or publication.",
+  "schema_reference": "/Users/kaide/Documents/Morning-Brief/data/issues/20261109.json",
+  "calendar": {
+    "date": "2026-11-10",
+    "weekday": "Tuesday",
+    "scheduled_open": true,
+    "year_verified": 2026,
+    "title": "115 年市場開休市日期",
+    "official_url": "https://www.twse.com.tw/rwd/zh/holidaySchedule/holidaySchedule?date=20260101&response=json",
+    "retrieved_at": "2026-11-10T09:21:13.738636+08:00",
+    "live_open_confirmed": true,
+    "note": "2026 official calendar contains no November closure; current dated TWSE and TAIFEX quotes independently confirm trading. Latest completed open day is 2026-11-09."
+  },
+  "market": {
+    "tw_index": {
+      "value": 42933.85,
+      "previous_close": 41661.7,
+      "change": 1272.15,
+      "change_pct": 3.05,
+      "data_as_of": "2026-11-10T09:23:30+08:00",
+      "open": 42130.33,
+      "high": 42939.04,
+      "low": 42130.33,
+      "source_url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+      "retrieved_at": "2026-11-10T09:23:45.684084+08:00",
+      "status": "official_intraday_snapshot_not_close",
+      "source_delay_ms": 15000
+    },
+    "futures": {
+      "value": 42793.0,
+      "previous_close": 41478.0,
+      "change": 1315.0,
+      "change_pct": 3.17,
+      "data_as_of": "2026-11-10T09:23:00+08:00",
+      "source_url": "https://mis.taifex.com.tw/futures/api/getChartData1M",
+      "source_method": "POST (read-only quote query)",
+      "source_request": {
+        "SymbolID": "TXFK6-F"
+      },
+      "contract": "TXFK6-F",
+      "contract_month": "2026-11",
+      "source_name": "臺指期116",
+      "retrieved_at": "2026-11-10T09:23:33.715967+08:00",
+      "status": "official_completed_1m_bar_close",
+      "bar_end_time": "09:23:00",
+      "note": "Uses completed 09:23 bar, not partially formed 09:24 bar; bar timestamps are right-edge labels. Do not compute basis against TWSE 09:23:30 snapshot."
+    },
+    "same_source_completed_minute": {
+      "bar_end": "2026-11-10T09:23:00+08:00",
+      "taifex_spot_index": 42912.98,
+      "taifex_futures": 42793.0,
+      "basis": -119.98,
+      "source_url": "https://mis.taifex.com.tw/futures/api/getChartData1M",
+      "spot_request": {
+        "SymbolID": "TXF-S"
+      },
+      "futures_request": {
+        "SymbolID": "TXFK6-F"
+      },
+      "note": "Both from TAIFEX right-edge 1-minute chart, not interchangeable with TWSE latest-tick snapshot."
+    },
+    "foreign_oi": {
+      "value": "-101771",
+      "net": -101771,
+      "data_as_of": "2026-11-09",
+      "source_url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate"
+    },
+    "sp500": {
+      "value": 7549.94,
+      "previous_close": 7376.86,
+      "change": 173.08,
+      "change_pct": 2.35,
+      "data_as_of": "2026-11-09",
+      "source_url": "https://finance.yahoo.com/quote/%5EGSPC/",
+      "chart_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=5d&interval=1d",
+      "retrieved_at": "2026-11-10T09:23:46.445715+08:00",
+      "source_excerpt": " ^GSPC S&P 500 7,549.94 + 2.35% Summary News Chart Conversations Historical Data Seasonality Options Components SNP - Delayed Quote • USD S&P 500 (^GSPC) 7,549.94 +173.08 (+2.35%) At close: November 9 at 5:12:50 PM EST Top Stocks This Month Chart Range Bar 1D 5D 0.11% 1",
+      "source_quote_time": "2026-11-09T17:12:50-05:00",
+      "status": "verified_dated_secondary_close"
+    },
+    "dow": {
+      "value": 52389.75,
+      "previous_close": 51285.73,
+      "change": 1104.02,
+      "change_pct": 2.15,
+      "data_as_of": "2026-11-09",
+      "source_url": "https://finance.yahoo.com/quote/%5EDJI/",
+      "chart_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?range=5d&interval=1d",
+      "retrieved_at": "2026-11-10T09:23:45.816657+08:00",
+      "source_excerpt": " + 2.15% Summary News Chart Conversations Historical Data Seasonality Options Components DJI - Delayed Quote • USD Dow Jones Industrial Average (^DJI) 52,389.75 +1,104.02 (+2.15%) At close: November 9 at 5:12:54 PM EST Get Latest Stock Picks Chart Range Bar 1D 5D 0.78% ",
+      "source_quote_time": "2026-11-09T17:12:54-05:00",
+      "status": "verified_dated_secondary_close"
+    },
+    "nasdaq": {
+      "value": 25253.14,
+      "previous_close": 24579.42,
+      "change": 673.72,
+      "change_pct": 2.74,
+      "data_as_of": "2026-11-09",
+      "source_url": "https://finance.yahoo.com/quote/%5EIXIC/",
+      "chart_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=5d&interval=1d",
+      "retrieved_at": "2026-11-10T09:23:45.984138+08:00",
+      "source_excerpt": "53.14 + 2.74% Summary News Chart Conversations Historical Data Seasonality Options Components Nasdaq GIDS - Delayed Quote • USD NASDAQ Composite (^IXIC) 25,253.14 +673.74 (+2.74%) At close: November 9 at 5:15:59 PM EST Top Stocks This Month Chart Range Bar 1D 5D 0.35% 1",
+      "source_quote_time": "2026-11-09T17:15:59-05:00",
+      "status": "verified_official_closed_quote_api_with_secondary_conflict",
+      "official_source_url": "https://api.nasdaq.com/api/quote/COMP/info?assetclass=index",
+      "official_retrieved_at": "2026-11-10T09:28:01.291783+08:00",
+      "official_data": {
+        "symbol": "COMP",
+        "companyName": "NASDAQ Composite Index",
+        "stockType": "",
+        "exchange": "Index",
+        "isNasdaqListed": false,
+        "isNasdaq100": false,
+        "isHeld": false,
+        "primaryData": {
+          "lastSalePrice": "25,253.14",
+          "netChange": "+673.72",
+          "percentageChange": "+2.74%",
+          "deltaIndicator": "up",
+          "lastTradeTimestamp": "Nov 9, 2026",
+          "isRealTime": false,
+          "bidPrice": "",
+          "askPrice": "",
+          "bidSize": "",
+          "askSize": "",
+          "volume": "",
+          "currency": null
+        },
+        "secondaryData": null,
+        "marketStatus": "Closed",
+        "assetClass": "INDEX",
+        "keyStats": {
+          "previousclose": {
+            "label": "Previous Close:",
+            "value": "24,579.42"
+          },
+          "dayrange": {
+            "label": "Day Range:",
+            "value": "24,762.57 - 25,354.30"
+          }
+        },
+        "notifications": null
+      }
+    },
+    "vix": {
+      "value": 19.92,
+      "previous_close": 25.64,
+      "change": -5.72,
+      "change_pct": -22.31,
+      "data_as_of": "2026-11-09",
+      "source_url": "https://finance.yahoo.com/quote/%5EVIX/",
+      "chart_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?range=5d&interval=1d",
+      "retrieved_at": "2026-11-10T09:22:23.647129+08:00",
+      "source_excerpt": "olatility Index 19.92 -22.31% Summary News Chart Conversations Historical Data Seasonality Options Components Cboe Indices • USD CBOE Volatility Index (^VIX) 19.92 -5.72 (-22.31%) At close: November 9 at 3:15:01 PM CST Top Stocks This Month Chart Range Bar 1D 5D -5.82% ",
+      "source_quote_time": "2026-11-09T15:15:01-06:00",
+      "status": "verified_dated_secondary_close"
+    },
+    "sox": {
+      "value": 10033.93,
+      "previous_close": 9390.25,
+      "change": 643.68,
+      "change_pct": 6.85,
+      "data_as_of": "2026-11-09",
+      "source_url": "https://finance.yahoo.com/quote/%5ESOX/",
+      "chart_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?range=5d&interval=1d",
+      "retrieved_at": "2026-11-10T09:23:46.421517+08:00",
+      "source_excerpt": "3.93 + 6.85% Summary News Chart Conversations Historical Data Seasonality Options Components Nasdaq GIDS - Delayed Quote • USD PHLX Semiconductor (^SOX) 10,033.93 +643.68 (+6.85%) At close: November 9 at 5:15:59 PM EST See Zacks’ 7 Strong Picks Now Chart Range Bar 1D 5D",
+      "source_quote_time": "2026-11-09T17:15:59-05:00",
+      "status": "verified_official_closed_quote_api_with_html_conflict",
+      "official_source_url": "https://api.nasdaq.com/api/quote/SOX/info?assetclass=index",
+      "official_retrieved_at": "2026-11-10T09:26:49.751832+08:00",
+      "official_data": {
+        "symbol": "SOX",
+        "companyName": "PHLX Semiconductor Sector",
+        "stockType": "",
+        "exchange": "Index",
+        "isNasdaqListed": false,
+        "isNasdaq100": false,
+        "isHeld": false,
+        "primaryData": {
+          "lastSalePrice": "10,033.93",
+          "netChange": "+643.68",
+          "percentageChange": "+6.85%",
+          "deltaIndicator": "up",
+          "lastTradeTimestamp": "Nov 9, 2026",
+          "isRealTime": false,
+          "bidPrice": "",
+          "askPrice": "",
+          "bidSize": "",
+          "askSize": "",
+          "volume": "",
+          "currency": null
+        },
+        "secondaryData": null,
+        "marketStatus": "Closed",
+        "assetClass": "INDEX",
+        "keyStats": {
+          "previousclose": {
+            "label": "Previous Close:",
+            "value": "9,390.25"
+          },
+          "dayrange": {
+            "label": "Day Range:",
+            "value": "9,467.26 - 10,116.64"
+          }
+        },
+        "notifications": null
+      }
+    }
+  },
+  "mag7": [
+    {
+      "name": "Apple Inc.",
+      "ticker": "AAPL",
+      "price": "350.69",
+      "change_abs": "+8.32",
+      "change_pct": 2.43,
+      "previous_close": 342.37,
+      "data_as_of": "2026-11-09",
+      "session": "regular_session_close_not_afterhours",
+      "source_note": "https://finance.yahoo.com/quote/AAPL/",
+      "source_url": "https://finance.yahoo.com/quote/AAPL/",
+      "source_time": "2026-11-09 4:00:01 PM EST",
+      "retrieved_at": "2026-11-10T09:22:24.368297+08:00",
+      "source_excerpt": "art Conversations Statistics Historical Data Profile Financials Analysis Seasonality Options Holders NasdaqGS - BOATS Real Time Price • USD Apple Inc. (AAPL) 350.69 +8.32 (+2.43%) At close: November 9 at 4:00:01 PM EST 350.79 +0.10 (+0.03%) Overnight: 8:20:52 PM EST This price re",
+      "note": "Yahoo daily chart last close is null; verified explicit dated At close HTML and regularMarketPrice. fulldayPrice is not used because it includes extended session."
+    },
+    {
+      "name": "Microsoft Corporation",
+      "ticker": "MSFT",
+      "price": "545.18",
+      "change_abs": "+14.57",
+      "change_pct": 2.75,
+      "previous_close": 530.61,
+      "data_as_of": "2026-11-09",
+      "session": "regular_session_close_not_afterhours",
+      "source_note": "https://finance.yahoo.com/quote/MSFT/",
+      "source_url": "https://finance.yahoo.com/quote/MSFT/",
+      "source_time": "2026-11-09 4:00:01 PM EST",
+      "retrieved_at": "2026-11-10T09:22:23.912389+08:00",
+      "source_excerpt": "tions Statistics Historical Data Profile Financials Analysis Seasonality Options Holders NasdaqGS - BOATS Real Time Price • USD Microsoft Corporation (MSFT) 545.18 +14.57 (+2.75%) At close: November 9 at 4:00:01 PM EST 544.89 -0.29 (-0.05%) Overnight: 8:21:51 PM EST This price re",
+      "note": "Yahoo daily chart last close is null; verified explicit dated At close HTML and regularMarketPrice. fulldayPrice is not used because it includes extended session."
+    },
+    {
+      "name": "NVIDIA Corporation",
+      "ticker": "NVDA",
+      "price": "178.67",
+      "change_abs": "-7.97",
+      "change_pct": -4.27,
+      "previous_close": 186.64,
+      "data_as_of": "2026-11-09",
+      "session": "regular_session_close_not_afterhours",
+      "source_note": "https://finance.yahoo.com/quote/NVDA/",
+      "source_url": "https://finance.yahoo.com/quote/NVDA/",
+      "source_time": "2026-11-09 4:00:00 PM EST",
+      "retrieved_at": "2026-11-10T09:22:23.489905+08:00",
+      "source_excerpt": "ersations Statistics Historical Data Profile Financials Analysis Seasonality Options Holders NasdaqGS - BOATS Real Time Price • USD NVIDIA Corporation (NVDA) 178.67 -7.97 (-4.27%) At close: November 9 at 4:00:00 PM EST 180.44 +1.77 (+0.99%) Overnight: 8:21:59 PM EST This price re",
+      "note": "Yahoo daily chart last close is null; verified explicit dated At close HTML and regularMarketPrice. fulldayPrice is not used because it includes extended session."
+    },
+    {
+      "name": "Amazon.com, Inc.",
+      "ticker": "AMZN",
+      "price": "266.93",
+      "change_abs": "+7.63",
+      "change_pct": 2.94,
+      "previous_close": 259.3,
+      "data_as_of": "2026-11-09",
+      "session": "regular_session_close_not_afterhours",
+      "source_note": "https://finance.yahoo.com/quote/AMZN/",
+      "source_url": "https://finance.yahoo.com/quote/AMZN/",
+      "source_time": "2026-11-09 4:00:01 PM EST",
+      "retrieved_at": "2026-11-10T09:22:23.635141+08:00",
+      "source_excerpt": "nversations Statistics Historical Data Profile Financials Analysis Seasonality Options Holders NasdaqGS - BOATS Real Time Price • USD Amazon.com, Inc. (AMZN) 266.93 +7.63 (+2.94%) At close: November 9 at 4:00:01 PM EST 267.73 +0.80 (+0.30%) Overnight: 8:20:57 PM EST This price re",
+      "note": "Yahoo daily chart last close is null; verified explicit dated At close HTML and regularMarketPrice. fulldayPrice is not used because it includes extended session."
+    },
+    {
+      "name": "Alphabet Inc.",
+      "ticker": "GOOGL",
+      "price": "288.15",
+      "change_abs": "+3.37",
+      "change_pct": 1.18,
+      "previous_close": 284.78,
+      "data_as_of": "2026-11-09",
+      "session": "regular_session_close_not_afterhours",
+      "source_note": "https://finance.yahoo.com/quote/GOOGL/",
+      "source_url": "https://finance.yahoo.com/quote/GOOGL/",
+      "source_time": "2026-11-09 4:00:01 PM EST",
+      "retrieved_at": "2026-11-10T09:22:23.920672+08:00",
+      "source_excerpt": "Conversations Statistics Historical Data Profile Financials Analysis Seasonality Options Holders NasdaqGS - BOATS Real Time Price • USD Alphabet Inc. (GOOGL) 288.15 +3.37 (+1.18%) At close: November 9 at 4:00:01 PM EST 290.53 +2.38 (+0.83%) Overnight: 8:21:53 PM EST This price re",
+      "note": "Yahoo daily chart last close is null; verified explicit dated At close HTML and regularMarketPrice. fulldayPrice is not used because it includes extended session."
+    },
+    {
+      "name": "Meta Platforms, Inc.",
+      "ticker": "META",
+      "price": "641.37",
+      "change_abs": "+31.22",
+      "change_pct": 5.12,
+      "previous_close": 610.15,
+      "data_as_of": "2026-11-09",
+      "session": "regular_session_close_not_afterhours",
+      "source_note": "https://finance.yahoo.com/quote/META/",
+      "source_url": "https://finance.yahoo.com/quote/META/",
+      "source_time": "2026-11-09 4:00:01 PM EST",
+      "retrieved_at": "2026-11-10T09:22:23.575754+08:00",
+      "source_excerpt": "ations Statistics Historical Data Profile Financials Analysis Seasonality Options Holders NasdaqGS - BOATS Real Time Price • USD Meta Platforms, Inc. (META) 641.37 +31.22 (+5.12%) At close: November 9 at 4:00:01 PM EST 643.00 +1.63 (+0.25%) Overnight: 8:20:59 PM EST This price re",
+      "note": "Yahoo daily chart last close is null; verified explicit dated At close HTML and regularMarketPrice. fulldayPrice is not used because it includes extended session."
+    },
+    {
+      "name": "Tesla, Inc.",
+      "ticker": "TSLA",
+      "price": "378.05",
+      "change_abs": "+19.83",
+      "change_pct": 5.54,
+      "previous_close": 358.22,
+      "data_as_of": "2026-11-09",
+      "session": "regular_session_close_not_afterhours",
+      "source_note": "https://finance.yahoo.com/quote/TSLA/",
+      "source_url": "https://finance.yahoo.com/quote/TSLA/",
+      "source_time": "2026-11-09 4:00:00 PM EST",
+      "retrieved_at": "2026-11-10T09:22:24.139939+08:00",
+      "source_excerpt": "t Conversations Statistics Historical Data Profile Financials Analysis Seasonality Options Holders NasdaqGS - BOATS Real Time Price • USD Tesla, Inc. (TSLA) 378.05 +19.83 (+5.54%) At close: November 9 at 4:00:00 PM EST 377.99 -0.06 (-0.02%) Overnight: 8:21:04 PM EST This price re",
+      "note": "Yahoo daily chart last close is null; verified explicit dated At close HTML and regularMarketPrice. fulldayPrice is not used because it includes extended session."
+    }
+  ],
+  "institutional": {
+    "twse": {
+      "data_as_of": "2026-11-09",
+      "source_url": "https://www.twse.com.tw/rwd/zh/fund/BFI82U?date=20261109&response=json",
+      "retrieved_at": "2026-11-10T09:21:13.737749+08:00",
+      "unit": "TWD",
+      "rows": [
+        {
+          "name": "自營商(自行買賣)",
+          "buy_twd": 8395003465,
+          "sell_twd": 14776662961,
+          "net_twd": -6381659496,
+          "net_yi_twd": -63.81659496
+        },
+        {
+          "name": "自營商(避險)",
+          "buy_twd": 32009444478,
+          "sell_twd": 56846352910,
+          "net_twd": -24836908432,
+          "net_yi_twd": -248.36908432
+        },
+        {
+          "name": "投信",
+          "buy_twd": 36851996721,
+          "sell_twd": 5540152642,
+          "net_twd": 31311844079,
+          "net_yi_twd": 313.11844079
+        },
+        {
+          "name": "外資及陸資(不含外資自營商)",
+          "buy_twd": 320592417368,
+          "sell_twd": 410648789279,
+          "net_twd": -90056371911,
+          "net_yi_twd": -900.56371911
+        },
+        {
+          "name": "外資自營商",
+          "buy_twd": 0,
+          "sell_twd": 0,
+          "net_twd": 0,
+          "net_yi_twd": 0.0
+        },
+        {
+          "name": "合計",
+          "buy_twd": 397848862032,
+          "sell_twd": 487811957792,
+          "net_twd": -89963095760,
+          "net_yi_twd": -899.6309576
+        }
+      ],
+      "note": "Latest completed trading-day data, not Nov10 flows; total includes dealer proprietary and hedge books; foreign dealer excluded from double-counting."
+    },
+    "taifex": {
+      "data_as_of": "20261109",
+      "source_url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+      "retrieved_at": "2026-11-10T09:22:23.162283+08:00",
+      "all_tx_institutional_rows": [
+        {
+          "Date": "20261109",
+          "ContractCode": "臺股期貨",
+          "Item": "自營商",
+          "TradingVolume(Long)": "7672",
+          "TradingValue(Long)(Thousands)": "63177062",
+          "TradingVolume(Short)": "8368",
+          "TradingValue(Short)(Thousands)": "68810344",
+          "TradingVolume(Net)": "-696",
+          "TradingValue(Net)(Thousands)": "-5633282",
+          "OpenInterest(Long)": "5813",
+          "ContractValueofOpenInterest(Long)(Thousands)": "48262119",
+          "OpenInterest(Short)": "4787",
+          "ContractValueofOpenInterest(Short)(Thousands)": "39734436",
+          "OpenInterest(Net)": "1026",
+          "ContractValueofOpenInterest(Net)(Thousands)": "8527683"
+        },
+        {
+          "Date": "20261109",
+          "ContractCode": "臺股期貨",
+          "Item": "投信",
+          "TradingVolume(Long)": "5134",
+          "TradingValue(Long)(Thousands)": "42689694",
+          "TradingVolume(Short)": "20",
+          "TradingValue(Short)(Thousands)": "167583",
+          "TradingVolume(Net)": "5114",
+          "TradingValue(Net)(Thousands)": "42522111",
+          "OpenInterest(Long)": "98979",
+          "ContractValueofOpenInterest(Long)(Thousands)": "821090192",
+          "OpenInterest(Short)": "3428",
+          "ContractValueofOpenInterest(Short)(Thousands)": "28437317",
+          "OpenInterest(Net)": "95551",
+          "ContractValueofOpenInterest(Net)(Thousands)": "792652875"
+        },
+        {
+          "Date": "20261109",
+          "ContractCode": "臺股期貨",
+          "Item": "外資及陸資",
+          "TradingVolume(Long)": "99731",
+          "TradingValue(Long)(Thousands)": "817396208",
+          "TradingVolume(Short)": "102516",
+          "TradingValue(Short)(Thousands)": "840660318",
+          "TradingVolume(Net)": "-2785",
+          "TradingValue(Net)(Thousands)": "-23264109",
+          "OpenInterest(Long)": "11571",
+          "ContractValueofOpenInterest(Long)(Thousands)": "96008625",
+          "OpenInterest(Short)": "113342",
+          "ContractValueofOpenInterest(Short)(Thousands)": "940345367",
+          "OpenInterest(Net)": "-101771",
+          "ContractValueofOpenInterest(Net)(Thousands)": "-844336742"
+        }
+      ],
+      "foreign_net_oi": -101771,
+      "note": "All-expiry TX futures net OI position balance, not newly opened short contracts and not today cash selling."
+    }
+  },
+  "unavailable": [
+    {
+      "field": "2026-11-10 institutional final cash flows / futures OI",
+      "reason": "Session ongoing at morning cutoff; use completed Nov9 only."
+    },
+    {
+      "field": "official Nov9 Cboe VIX/SPX CSV close rows",
+      "reason": "Official CSV downloads currently end Nov6; dated Yahoo Nov9 closes used, not stale CSV values."
+    },
+    {
+      "field": "Nasdaq Nov9 historical rows",
+      "reason": "Historical API has not populated Nov9; SOX official closed info/summary API verifies latest date and arithmetic."
+    },
+    {
+      "field": "TWSE/TAIFEX perfectly synchronized tick basis",
+      "reason": "Snapshot clocks differ; do not subtract TWSE 09:23:30 and futures09:23. Separate same-source completed-minute basis supplied."
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "SOX overview HTML change/previous close",
+      "url": "https://indexes.nasdaqomx.com/Index/Overview/SOX",
+      "bad_fields": {
+        "net_change": 646.57,
+        "change_pct": 0,
+        "previous_close": 10033.93
+      },
+      "resolution": "Reject internally inconsistent overview change fields. Nasdaq official quote info and summary APIs are closed Nov9, confirm 10033.93, +643.68, +6.85%, previous 9390.25; Yahoo dated close agrees. Historical Nasdaq table has not advanced beyond Nov6."
+    },
+    {
+      "field": "NASDAQ Composite change and prior close",
+      "secondary_yahoo_change": 673.74,
+      "secondary_yahoo_daily_bar_previous": 24579.43,
+      "resolution": "Official Nasdaq closed COMP info Nov9: 25253.14, +673.72, +2.74%, previous 24579.42. Use official figures; preserve secondary conflict."
+    }
+  ],
+  "raw_evidence_files": [
+    "/Users/kaide/.hermes/cache/scratch/kmb1110-checks-raw.json",
+    "/Users/kaide/.hermes/cache/scratch/kmb1110-comp-info-raw.json",
+    "/Users/kaide/.hermes/cache/scratch/kmb1110-extra-raw.json",
+    "/Users/kaide/.hermes/cache/scratch/kmb1110-finalchecks-raw.json",
+    "/Users/kaide/.hermes/cache/scratch/kmb1110-markets-raw.json",
+    "/Users/kaide/.hermes/cache/scratch/kmb1110-nasdaq-raw.json",
+    "/Users/kaide/.hermes/cache/scratch/kmb1110-sox-recheck-raw.json",
+    "/Users/kaide/.hermes/cache/scratch/kmb1110-taifex-chart-raw.json",
+    "/Users/kaide/.hermes/cache/scratch/kmb1110-us-raw.json"
+  ]
+}

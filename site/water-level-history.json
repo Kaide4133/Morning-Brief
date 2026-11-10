@@ -1,6 +1,19 @@
 {
   "records": [
     {
+      "date": "2026-11-10",
+      "water_level": 80.4,
+      "scenario_id": "03",
+      "scenario_label": "03 高位控速",
+      "previous_trading_date": "2026-11-09",
+      "previous_water_level": 85.1,
+      "change": -4.7,
+      "direction": "下降",
+      "comparison_date": "2026-11-09",
+      "comparison_is_provisional": false,
+      "source_sha256": "77d872ff7a559a6d48500c7b358eae29e90992722c754f7dd99070d761dd6f9c"
+    },
+    {
       "date": "2026-11-09",
       "water_level": 85.1,
       "scenario_id": "07",
