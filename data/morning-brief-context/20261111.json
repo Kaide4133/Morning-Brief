@@ -1,0 +1,104 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-11-11",
+  "valid_for_trading_date": "2026-11-11",
+  "data_as_of": "2026-11-11",
+  "stale": false,
+  "issue_no": 122,
+  "scenario": {
+    "id": "03",
+    "slug": "high-level-speed-control",
+    "label": "高位控速",
+    "confidence": 1.0,
+    "reason": "台股延續前一日反彈、台積電營收提供基本面支撐；但水位76.8較80.4下降3.6個百分點，美國通膨與緊縮風險、輝達弱勢仍構成壓力。配置環境尚未低迷，但方向轉弱，採高位控速，不把指數反彈翻成全面擴張。",
+    "source": "manual_override",
+    "classifier_suggestion": "06"
+  },
+  "water": {
+    "level": 76.8,
+    "previous": 80.4,
+    "change": -3.6,
+    "direction": "falling",
+    "previous_trading_date": "2026-11-10",
+    "comparison_date": "2026-11-10",
+    "comparison_is_provisional": false
+  },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "cautious_review",
+    "risk_posture": "balanced_cautious",
+    "water_policy": {
+      "direction": "falling",
+      "change": -3.6,
+      "interpretation": "方舟水位76.8%，較前一交易日11/10的80.4%下降3.6個百分點；配置環境轉弱，早盤上漲不等於風控空間增加。"
+    },
+    "scenario_context": {
+      "id": "03",
+      "label": "高位控速",
+      "confidence": 1.0
+    },
+    "policy_focus": [
+      "先由風控決定可持有總額，再依固定價值標準配置；不因盤中上漲追價，也不以短期盈虧排名決定去留。",
+      "11/13台灣時間05:30看Cisco展望、21:30看美國PPI；數據前不追價、不重押。",
+      "加權10:00漲0.86%；前夜費半跌0.35%、輝達跌5.47%，內外走勢分化。",
+      "Fed理事Waller在11/10官方演說表示仍需進一步緊縮；這是個人政策觀點，不是FOMC已作成升息決議。"
+    ],
+    "systemic_risk": "中高",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
+  "action_guidance": {
+    "risk_bias": "balanced_cautious",
+    "allow_add": true,
+    "allow_trim": true,
+    "deploy_mode": "slow_selective_add",
+    "max_initial_deploy_pct": 0.25,
+    "trim": {
+      "allowed": true,
+      "mode": "selective_trim",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": true,
+      "mode": "slow_selective_add",
+      "max_initial_deploy_pct": 0.25,
+      "conditions": [
+        "conditional_only",
+        "core_or_high_quality_only",
+        "pullback_confirmed",
+        "no_chase"
+      ]
+    },
+    "rebuy": {
+      "allowed": true,
+      "mode": "wait_for_pullback",
+      "conditions": [
+        "sold_name_drawdown_2_to_3_pct",
+        "MA20_support",
+        "murphy_right_side_reconfirmation"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 1.0,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "高位控速",
+    "summary": "台股延續前一日反彈、台積電營收提供基本面支撐；但水位76.8較80.4下降3.6個百分點，美國通膨與緊縮風險、輝達弱勢仍構成壓力。配置環境尚未低迷，但方向轉弱，採高位控速，不把指數反彈翻成全面擴張。"
+  },
+  "source": {
+    "issue_file": "data/issues/20261111.json",
+    "generated_at": "2026-11-11T10:17:54+08:00"
+  }
+}
