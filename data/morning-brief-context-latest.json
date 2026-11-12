@@ -1,58 +1,63 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-11-11",
-  "valid_for_trading_date": "2026-11-11",
-  "data_as_of": "2026-11-11",
+  "date": "2026-11-12",
+  "valid_for_trading_date": "2026-11-12",
+  "data_as_of": "2026-11-12",
   "stale": false,
-  "issue_no": 122,
+  "issue_no": 123,
   "scenario": {
-    "id": "03",
-    "slug": "high-level-speed-control",
-    "label": "高位控速",
+    "id": "05",
+    "slug": "orderly-pullback",
+    "label": "有序回檔",
     "confidence": 1.0,
-    "reason": "台股延續前一日反彈、台積電營收提供基本面支撐；但水位76.8較80.4下降3.6個百分點，美國通膨與緊縮風險、輝達弱勢仍構成壓力。配置環境尚未低迷，但方向轉弱，採高位控速，不把指數反彈翻成全面擴張。",
+    "reason": "水位72.4%較76.8%下降4.4pt，進入回檔區間。外資期貨未平倉淨空103,473口；美債殖利率10Y 4.98%、Fed官員鷹派；黃金跌破4,000美元。但台灣加權指數10:12回升至44,439點、+0.41%，AI股反彈提供短線情緒支撐。健康修正、等待承接訊號確認前不追價。",
     "source": "manual_override",
     "classifier_suggestion": "06"
   },
   "water": {
-    "level": 76.8,
-    "previous": 80.4,
-    "change": -3.6,
+    "level": 72.4,
+    "previous": 76.8,
+    "change": -4.4,
     "direction": "falling",
-    "previous_trading_date": "2026-11-10",
-    "comparison_date": "2026-11-10",
+    "previous_trading_date": "2026-11-11",
+    "comparison_date": "2026-11-11",
     "comparison_is_provisional": false
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
-    "short_term_bias": "cautious_review",
-    "risk_posture": "balanced_cautious",
+    "short_term_bias": "defensive_hold_review",
+    "risk_posture": "defensive",
     "water_policy": {
       "direction": "falling",
-      "change": -3.6,
-      "interpretation": "方舟水位76.8%，較前一交易日11/10的80.4%下降3.6個百分點；配置環境轉弱，早盤上漲不等於風控空間增加。"
+      "change": -4.4,
+      "interpretation": "方舟水位72.4%，較前一交易日11/11的76.8%下降4.4個百分點；配置環境進一步轉弱，早盤上漲不等於風控空間增加。"
     },
     "scenario_context": {
-      "id": "03",
-      "label": "高位控速",
+      "id": "05",
+      "label": "有序回檔",
       "confidence": 1.0
     },
     "policy_focus": [
-      "先由風控決定可持有總額，再依固定價值標準配置；不因盤中上漲追價，也不以短期盈虧排名決定去留。",
-      "11/13台灣時間05:30看Cisco展望、21:30看美國PPI；數據前不追價、不重押。",
-      "加權10:00漲0.86%；前夜費半跌0.35%、輝達跌5.47%，內外走勢分化。",
-      "Fed理事Waller在11/10官方演說表示仍需進一步緊縮；這是個人政策觀點，不是FOMC已作成升息決議。"
+      "回測期間汰弱留強，不追高，等明確承接訊號。",
+      "水位跌破70可能進入防禦區間；美债殖利率再升或Fed意外鷹派將放大跌幅。",
+      "台股反彈但水位續降，量能不能有效放大，短期以換手為主。",
+      "<strong>CoreWeave財報：</strong>上調2026營收至130-133億美元，資本支出370-390億美元，Q4利息費用預估10.5-11.5億美元。AI伺服器需求持續，但融資成本上升。"
     ],
     "systemic_risk": "中高",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
   },
   "action_guidance": {
-    "risk_bias": "balanced_cautious",
-    "allow_add": true,
+    "risk_bias": "defensive",
+    "allow_add": false,
     "allow_trim": true,
-    "deploy_mode": "slow_selective_add",
-    "max_initial_deploy_pct": 0.25,
+    "deploy_mode": "wait_for_pullback",
+    "rebuy_condition": [
+      "MA20_support",
+      "volume_contract",
+      "murphy_right_side_reconfirmation",
+      "water_stabilizes"
+    ],
     "trim": {
       "allowed": true,
       "mode": "selective_trim",
@@ -65,23 +70,21 @@
       ]
     },
     "deploy": {
-      "allowed": true,
-      "mode": "slow_selective_add",
-      "max_initial_deploy_pct": 0.25,
+      "allowed": false,
+      "mode": "wait_for_pullback",
       "conditions": [
-        "conditional_only",
-        "core_or_high_quality_only",
-        "pullback_confirmed",
-        "no_chase"
+        "water_stabilizes",
+        "support_confirmed"
       ]
     },
     "rebuy": {
       "allowed": true,
       "mode": "wait_for_pullback",
       "conditions": [
-        "sold_name_drawdown_2_to_3_pct",
         "MA20_support",
-        "murphy_right_side_reconfirmation"
+        "volume_contract",
+        "murphy_right_side_reconfirmation",
+        "water_stabilizes"
       ]
     },
     "trim_priority": [
@@ -94,11 +97,11 @@
     "source": "morning_brief_classifier"
   },
   "editorial": {
-    "state_label": "高位控速",
-    "summary": "台股延續前一日反彈、台積電營收提供基本面支撐；但水位76.8較80.4下降3.6個百分點，美國通膨與緊縮風險、輝達弱勢仍構成壓力。配置環境尚未低迷，但方向轉弱，採高位控速，不把指數反彈翻成全面擴張。"
+    "state_label": "有序回檔",
+    "summary": "水位72.4%較76.8%下降4.4pt，進入回檔區間。外資期貨未平倉淨空103,473口；美債殖利率10Y 4.98%、Fed官員鷹派；黃金跌破4,000美元。但台灣加權指數10:12回升至44,439點、+0.41%，AI股反彈提供短線情緒支撐。健康修正、等待承接訊號確認前不追價。"
   },
   "source": {
-    "issue_file": "data/issues/20261111.json",
-    "generated_at": "2026-11-11T10:17:54+08:00"
+    "issue_file": "data/issues/20261112.json",
+    "generated_at": "2026-11-12T10:30:13+08:00"
   }
 }
