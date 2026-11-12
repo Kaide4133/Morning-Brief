@@ -37,88 +37,105 @@
   },
   "scenario_id": "05",
   "lock_scenario": true,
-  "scenario_reason": "水位72.4%較76.8%下降4.4pt，進入回檔區間。外資期貨未平倉淨空103,473口；美債殖利率10Y 4.98%、Fed官員鷹派；黃金跌破4,000美元。但台灣加權指數10:12回升至44,439點、+0.41%，AI股反彈提供短線情緒支撐。健康修正、等待承接訊號確認前不追價。",
+  "scenario_reason": "水位72.4%較前一開市日76.8%下降4.4pt，採05有序回檔作控速框架，不宣稱修正已健康完成。11/11外資台指期未平倉淨額-104,271口，當日交易淨額-779口，兩者不可混用。11/12 10:12現貨+0.41%、近月期貨+0.82%；反彈尚不等於配置空間回升。",
   "hero": {
     "headline": "AI股反彈難掩水位續降，回測換手先控速",
-    "subhead": "操作感受：外資期未平倉淨空破10萬口、利率壓力未退；台灣指數反彈不追價，資金面轉弱訊號優先於情緒反彈。",
-    "reader_subhead": "水位續降、回測換手。AI股反彈不追價，利率與資金面轉弱訊號優先。"
+    "subhead": "美股11/11反彈、台股早盤回升，但水位續降；外資期貨空單與現貨買超須分開看。",
+    "reader_subhead": "美股反彈、台股早盤回升，但水位續降；單日上漲不等於配置空間增加。"
   },
   "strategy": {
-    "thesis": "AI算力需求驗證 vs 利率高檔與資金收縮",
-    "tape": "台股反彈但水位續降，量能不能有效放大，短期以換手為主。",
-    "playbook": "回測期間汰弱留強，不追高，等明確承接訊號。",
-    "risk": "水位跌破70可能進入防禦區間；美债殖利率再升或Fed意外鷹派將放大跌幅。",
+    "thesis": "AI需求展望改善與利率估值壓力並存。",
+    "tape": "台股10:12上漲0.41%，但方舟水位下降；未以單一快照判定量能趨勢。",
+    "playbook": "先依風控決定總額，再按價值標準配置；不因反彈追價。",
+    "risk": "留意水位方向、期現貨籌碼及已核實事件；不另設未經驗證的水位門檻。",
     "reader": {
-      "thesis": "AI需求仍在，但利率壓力未退。",
-      "tape": "指數反彈不追價，等承接訊號。",
-      "playbook": "回測換手，汰弱留強不追高。",
-      "risk": "水位若跌破70，需進入防禦姿態。"
+      "thesis": "AI需求展望改善，利率壓力仍在。",
+      "tape": "指數回升，水位仍降。",
+      "playbook": "先控總額，再按價值配置，不追價。",
+      "risk": "留意水位方向、期現貨籌碼與事件結果。"
     }
   },
   "home": {
     "water_note": "方舟水位72.4%，較前一交易日下降4.4pt。",
     "thesis_blurb": "AI算力需求驗證與利率高檔的拉鋸期，回測換手不追價。",
-    "risk_tagline": "水位續降、外資淨空未減，回測期間謹慎控速。",
-    "recent_summary": "水位72.4%，較前日76.8%下降4.4pt；外資期未平倉淨空103,473口；美債10Y殖利率4.98%；台股10:12回升+0.41%但不追價。"
+    "risk_tagline": "水位續降；期貨空單與現貨法人買超分開看。",
+    "recent_summary": "水位72.4%，較76.8%下降4.4pt；11/11外資台指期淨空104,271口；11/12 10:12台股+0.41%；美股11/11正常交易、費半+5.66%。"
   },
   "capital_flow": {
-    "headline": "美元偏強、黃金跌破4,000；比特幣微升；美債殖利率走高。",
-    "stance": "資金分散，部分轉向加密與美元避險；傳統避險資產（黃金）遭逢洗盤。",
-    "summary": "美元指數DXY觸及2025年4月來高，黃金跌破4,000美元。比特幣微幅上漲至73,785美元，但加密ETF 11日尚未出齊。美債10Y殖利率4.98%，Fed官員傾向12月升息。",
-    "caveat": "資料截至11/11晚間及11/12盤中快照；加密ETF 11日部分資料未出。",
-    "as_of": "2026-11-11晚間至11/12 10:12",
+    "headline": "美元偏強、黃金回跌；BTC與ETH微升，ETF當日未齊。",
+    "stance": "跨資產價格分化，沒有充分證據判定資金去向。",
+    "summary": "AI股反彈不等於利率壓力解除：CoreWeave財報帶動科技與半導體情緒修復，但美元偏強、黃金跌破4,000美元，美債11日休市，不能把10日殖利率當成11日新收盤。加密ETF11日尚缺BlackRock資料，暫列淨流出不能當全日定稿。",
+    "caveat": "價格不是申贖。11/11 ETF缺值不等於零；部分淨額可被未報基金抵銷，不是最終流出下限。",
+    "as_of": "金/美元11/11報導快照；美債11/10官方；加密11/12約10:12；ETF11/10完整、11/11部分。",
     "assets": [
       {
         "asset": "黃金",
-        "role": "避險/抗通膨",
-        "evidence": "Kitco現貨報價3,983美元/盎司（11/11尾盤），跌約1.21%；Reuters交叉確認跌破4,000美元關口。",
-        "flow_signal": "短期洗盤，非資金長期撤出。",
-        "confidence": "中高（單一信源快照，非官方收盤）",
-        "watch": "黃金能否守住3,950美元支撐；若跌破需觀察是否引發槓桿平倉。",
-        "tone": "短期偏空"
+        "role": "傳統儲備與抗通膨資產",
+        "evidence": "Kitco 11/11尾盤現貨3,983.20美元/盎司、-1.21%；非官方統一收盤，該報導標示AI輔助、編輯覆核。Reuters交叉確認跌破4,000。",
+        "flow_signal": "未取得同頻黃金ETF申贖，不能判定資金撤出或洗盤。",
+        "confidence": "中：日期及定義有界限",
+        "watch": "追蹤黃金ETF實際持倉與申贖，不設定未核實價位。",
+        "tone": "觀察"
       },
       {
-        "asset": "比特幣",
+        "asset": "Bitcoin",
         "role": "高波動非主權稀缺資產",
-        "evidence": "CoinGecko報價73,785美元，24h微升0.57%；11月10日Farside完整日列淨流出9,500萬美元，11日暫列淨流出3,010萬美元（IBIT未報）。",
-        "flow_signal": "價格偏穩但ETF持續流出，需等待IBIT資料確認。",
-        "confidence": "中（部分資料未齊）",
-        "watch": "BTC能否守住72,000美元；ETH/BTC比值若持續走弱需觀察資金輪動。",
-        "tone": "中性偏強"
+        "evidence": "CoinGecko 11/12 10:12:47 BTC 73,785美元、24h +0.57%；Farside 11/10完整淨額-95.0百萬美元，11/11部分-30.1百萬、缺IBIT。",
+        "flow_signal": "11/11未定稿，不能稱持續流出或資金回流。",
+        "confidence": "中：日期及定義有界限",
+        "watch": "等IBIT補報並核對完整基金總額。",
+        "tone": "觀察"
       },
       {
-        "asset": "美元指數",
-        "role": "融資成本與避險指標",
-        "evidence": "DXY 102.9（11/11盤中報導），約上升0.7%，達2025年4月高點；日圓逼近160。",
-        "flow_signal": "美元偏強壓迫非美資產與外資風險偏好。",
-        "confidence": "中",
-        "watch": "DXY若持續走高可能壓縮台股外資風險承受度。",
-        "tone": "偏強"
+        "asset": "Ethereum",
+        "role": "高波動加密風險資產，非自動等同債務替代品",
+        "evidence": "CoinGecko 11/12 10:12:40 ETH 2,056.03美元、24h +0.33%；ETH/BTC以USD交叉推算約0.02787。Farside 11/10完整-1.3百萬美元，11/11部分-9.7百萬、缺ETHA/ETHB。",
+        "flow_signal": "部分淨申贖不代表全日總額；未取得K線、OI/funding等完整觸發證據。",
+        "confidence": "中：日期及定義有界限",
+        "watch": "等ETHA、ETHB補報；價格與ETF分開驗證。",
+        "tone": "觀察"
+      },
+      {
+        "asset": "美元",
+        "role": "美元融資與匯率觀察",
+        "evidence": "11/11報導快照DXY約102.9、約+0.7%；不是官方收盤。",
+        "flow_signal": "僅可說美元偏強，不能證明避險資金流入美元現金。",
+        "confidence": "中：日期及定義有界限",
+        "watch": "追蹤後續美元及利率，不推定資金流。",
+        "tone": "觀察"
       },
       {
         "asset": "美國公債",
-        "role": "利率與估值錨",
-        "evidence": "財部定息殖利率：2Y 4.73%（前值4.56%）、10Y 4.98%（前值4.88%）、30Y 5.35%（前值5.26%）；11日Veterans Day現券休市。",
-        "flow_signal": "殖利率攀升持續壓制久期科技股估值。",
-        "confidence": "高",
-        "watch": "10Y若破5%可能觸發更大規模估值修正。",
-        "tone": "偏空"
+        "role": "久期與估值參考",
+        "evidence": "財政部11/10固定到期殖利率2Y 4.73%、10Y 4.98%、30Y 5.35%；11/11現券休市。",
+        "flow_signal": "殖利率不是基金申贖或直接資金流量。",
+        "confidence": "中：日期及定義有界限",
+        "watch": "等待下一個有交易日官方資料，不混用日期。",
+        "tone": "觀察"
+      },
+      {
+        "asset": "股票風險",
+        "role": "權益資產價格與法人買賣超",
+        "evidence": "11/11美股四指數反彈；台灣三大法人現貨合計買超240.75892995億元，但外資賣超7.66443336億元。",
+        "flow_signal": "台灣現貨法人買賣超為實際交易證據，不能外推全球股票資金流。",
+        "confidence": "中：日期及定義有界限",
+        "watch": "分開觀察外資現貨、期貨未平倉與台股量價。",
+        "tone": "觀察"
       }
     ],
     "interpretation": [
-      "黃金下跌、美元上升、比特幣價格偏穩，是典型的避險資金分散。AI股（CoreWeave財報）的短線反彈與Fed鷹派、利率走高可以同時成立。",
-      "資金目前沒有明確的「risk-on」信號；加密ETF持續流出需留意，但比特幣價格未大跌表示仍有買盤承接。"
+      "美元上升、黃金下跌、加密微升是價格分化，不能命名為避險資金分散。",
+      "ETF 11/11缺BlackRock基金；只能列已報部分，不能確認全日方向。"
     ],
     "confirmation": [
-      "黃金回穩3,950以上且ETF流入；美債殖利率趨平。",
-      "加密ETF（特別IBIT）確認回補後比特幣走升，方確認加密資金回流。"
+      "等待BTC與ETH完整基金申贖表；價格、流量與部位證據分開核對。"
     ],
     "reader": {
-      "headline": "美元偏強、黃金回跌；加密微升但ETF持續流出。",
-      "flow": "資金分散：美元與加密各據一隅；黃金遭遇洗盤。",
-      "meaning": "避險資金未集中；利率高檔與Fed鷹派持續壓抑風險資產。",
-      "action": "不將AI股反彈視為全面risk-on；資金面仍偏保守。",
-      "watch": "黃金守住3,950美元；美債10Y不突破5%；加密ETF IBIT確認回補。"
+      "headline": "美元偏強、黃金回跌；BTC與ETH微升。",
+      "flow": "BTC ETF 11/10淨流出9,500萬美元、ETH淨流出130萬；11/11缺報，方向未定。",
+      "meaning": "價格分化不等於資金轉向美元或加密。美債殖利率仍是11/10資料。",
+      "action": "AI反彈不等於全面擴張，配置先服從水位與價值標準。",
+      "watch": "等IBIT、ETHA與ETHB補報；BTC 73,785、ETH 2,056.03美元，ETH/BTC計算值約0.02787（11/12約10:12）。"
     }
   },
   "research_sources": [
@@ -133,10 +150,6 @@
     {
       "title": "CoreWeave Q3 2026 Earnings",
       "url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx"
-    },
-    {
-      "title": "Fed Waller Speech",
-      "url": "https://www.federalreserve.gov/newsevents/speech/waller20261110a.htm"
     },
     {
       "title": "Reuters H200 Export Control",
@@ -169,6 +182,30 @@
     {
       "title": "ISIN TWSE 00992B",
       "url": "https://isin.twse.com.tw/isin/class_main.jsp?owncode=00992B&stockname=&isincode=&market=&issuetype=&industry_code=&Page=1&chklike=Y"
+    },
+    {
+      "title": "鴻海FY26 Q3法說",
+      "url": "https://www.foxconn.com/en-us/investor-relations/investor-relations-activities/event-calendar"
+    },
+    {
+      "title": "美國每週初領失業救濟金",
+      "url": "https://oui.doleta.gov/unemploy/claims_arch.asp"
+    },
+    {
+      "title": "Fed Barr演說：Artificial Intelligence and Inequality",
+      "url": "https://www.federalreserve.gov/newsevents/2026-november.htm"
+    },
+    {
+      "title": "美國30年期公債標售",
+      "url": "https://home.treasury.gov/system/files/221/TentativeAuctionScheduleQ42026.pdf"
+    },
+    {
+      "title": "美國10月PPI",
+      "url": "https://www.bls.gov/schedule/2026/11_sched.htm"
+    },
+    {
+      "title": "10月27–28日FOMC會議紀要",
+      "url": "https://www.federalreserve.gov/newsevents/2026-november.htm"
     }
   ],
   "market_summary": {
@@ -179,9 +216,7 @@
       "change_pct": "+0.41%",
       "data_as_of": "2026-11-12T10:12:00+08:00",
       "high": "44,525.24",
-      "low": "43,878.52",
-      "volume": "2345億",
-      "turnover": "612.8億"
+      "low": "43,878.52"
     },
     "taifex": {
       "value": "44,497.00",
@@ -190,127 +225,144 @@
       "data_as_of": "2026-11-12T10:12:00+08:00",
       "contract": "臺指期116（11月）",
       "volume": "137口",
-      "basis_points": "+57.57"
+      "basis_points": "+57.57",
+      "volume_note": "137口為10:12單分鐘量，非全場累計成交量"
     },
     "us": {
-      "sp500": "7,520.93（11/10收盤，-0.38%）",
-      "nasdaq": "25,065.88（11/10收盤，-0.74%）",
-      "dow": "52,231.89（11/10收盤，-0.30%）",
-      "sox": "1,535.41（11/10收盤，+2.1%，Yahoo交叉）",
-      "vix": "17.49（11/10收盤，-9.9%）",
-      "note": "11/10為美國最後交易日；11日為Veterans Day休市"
+      "sp500": "7,619.38（11/11，+1.31%）",
+      "nasdaq": "25,466.19（11/11，+1.60%）",
+      "dow": "52,486.49（11/11，+0.49%）",
+      "sox": "10,564.11（11/11，+5.66%）",
+      "vix": "17.49（11/11，-10.12%）",
+      "note": "11/11美股正常交易；Veterans Day休市的是美國公債現券市場。VIX採Yahoo日線，Cboe歷史表尚未更新。"
     }
   },
   "mag7": [
     {
       "name": "Apple",
       "ticker": "AAPL",
-      "price": "253.56",
-      "change_pct": -0.53,
-      "change_abs": -1.35,
-      "tier": "weak",
-      "tier_label": "NEUTRAL",
-      "signal": "週線中繼盤整中；11/10收盤-0.53%，短線偏空。"
+      "price": "355.63",
+      "change_pct": 2.04,
+      "change_abs": 7.12,
+      "tier": "strong",
+      "tier_label": "UP",
+      "signal": "11/11 Nasdaq收市狀態最後成交價，日變動+2.04%；非獨立核實的收盤競價價，不據此判定週線型態。",
+      "trade_date": "2026-11-11",
+      "value_type": "Nasdaq closed-market primaryData last sale, dated Nov11; not yet available in historical daily file"
     },
     {
       "name": "Microsoft",
       "ticker": "MSFT",
-      "price": "521.13",
-      "change_pct": -0.48,
-      "change_abs": -2.5,
+      "price": "521.125",
+      "change_pct": -2.26,
+      "change_abs": -12.035,
       "tier": "weak",
-      "tier_label": "NEUTRAL",
-      "signal": "11/10收盤-0.48%，維持高檔但量縮；等12月利率明確。"
+      "tier_label": "DOWN",
+      "signal": "11/11 Nasdaq收市狀態最後成交價，日變動-2.26%；非獨立核實的收盤競價價，不據此判定週線型態。",
+      "trade_date": "2026-11-11",
+      "value_type": "Nasdaq closed-market primaryData last sale, dated Nov11; not yet available in historical daily file"
     },
     {
       "name": "NVIDIA",
       "ticker": "NVDA",
-      "price": "176.25",
-      "change_pct": 1.85,
-      "change_abs": 3.2,
+      "price": "173.73",
+      "change_pct": 2.87,
+      "change_abs": 4.84,
       "tier": "strong",
-      "tier_label": "BULLISH",
-      "signal": "CoreWeave財報帶動AI半導體情緒；SOX +2.1%；NVDA短線偏強，但需觀察是否追價。"
+      "tier_label": "UP",
+      "signal": "11/11 Nasdaq收市狀態最後成交價，日變動+2.87%；非獨立核實的收盤競價價，不據此判定週線型態。",
+      "trade_date": "2026-11-11",
+      "value_type": "Nasdaq closed-market primaryData last sale, dated Nov11; not yet available in historical daily file"
     },
     {
       "name": "Amazon",
       "ticker": "AMZN",
-      "price": "225.89",
-      "change_pct": -0.35,
-      "change_abs": -0.79,
+      "price": "266.17",
+      "change_pct": -1.74,
+      "change_abs": -4.7,
       "tier": "weak",
-      "tier_label": "NEUTRAL",
-      "signal": "11/10收盤-0.35%，電商基礎需求穩定但短線偏盤。"
+      "tier_label": "DOWN",
+      "signal": "11/11 Nasdaq收市狀態最後成交價，日變動-1.74%；非獨立核實的收盤競價價，不據此判定週線型態。",
+      "trade_date": "2026-11-11",
+      "value_type": "Nasdaq closed-market primaryData last sale, dated Nov11; not yet available in historical daily file"
     },
     {
       "name": "Alphabet",
       "ticker": "GOOGL",
-      "price": "204.12",
-      "change_pct": -0.67,
-      "change_abs": -1.37,
-      "tier": "weak",
-      "tier_label": "BEARISH",
-      "signal": "11/10收盤-0.67%，AI投入龐大但短期盈利不確定；H200出口管制風險關注。"
+      "price": "293.45",
+      "change_pct": 2.11,
+      "change_abs": 6.07,
+      "tier": "strong",
+      "tier_label": "UP",
+      "signal": "11/11 Nasdaq收市狀態最後成交價，日變動+2.11%；非獨立核實的收盤競價價，不據此判定週線型態。",
+      "trade_date": "2026-11-11",
+      "value_type": "Nasdaq closed-market primaryData last sale, dated Nov11; not yet available in historical daily file"
     },
     {
       "name": "Meta",
       "ticker": "META",
-      "price": "634.50",
-      "change_pct": 0.28,
-      "change_abs": 1.77,
-      "tier": "strong",
-      "tier_label": "BULLISH",
-      "signal": "11/10收盤+0.28%，AI投資轉正、用戶增長穩；Meta短線偏強。"
+      "price": "628.77",
+      "change_pct": -1.97,
+      "change_abs": -12.62,
+      "tier": "weak",
+      "tier_label": "DOWN",
+      "signal": "11/11 Nasdaq收市狀態最後成交價，日變動-1.97%；非獨立核實的收盤競價價，不據此判定週線型態。",
+      "trade_date": "2026-11-11",
+      "value_type": "Nasdaq closed-market primaryData last sale, dated Nov11; not yet available in historical daily file"
     },
     {
       "name": "Tesla",
       "ticker": "TSLA",
-      "price": "390.82",
-      "change_pct": 1.25,
-      "change_abs": 4.83,
+      "price": "390.8163",
+      "change_pct": 2.91,
+      "change_abs": 11.0363,
       "tier": "strong",
-      "tier_label": "BULLISH",
-      "signal": "11/10收盤+1.25%，Tesla短線偏強但波動大，需觀察量能確認。"
+      "tier_label": "UP",
+      "signal": "11/11 Nasdaq收市狀態最後成交價，日變動+2.91%；非獨立核實的收盤競價價，不據此判定週線型態。 Yahoo報390.84，與此值有精度差異，未視為已解決。",
+      "trade_date": "2026-11-11",
+      "value_type": "Nasdaq closed-market primaryData last sale, dated Nov11; not yet available in historical daily file"
     }
   ],
   "analysis": {
-    "us_close": "美國11/10收盤：S&P 500 -0.38%、納指 -0.74%、費半 +2.1%。VIX大幅降至17.49。11日為Veterans Day休市。",
-    "tx_night": "臺指期116近月11/12 10:12升至44,497點、+361點（+0.82%），與現貨44,439點。",
+    "us_close": "美國11/11股票正常交易：S&P 500 7,619.38（+1.31%）、Dow 52,486.49（+0.49%）、Nasdaq 25,466.19（+1.60%）、SOX 10,564.11（+5.66%）；VIX 17.49（-10.12%，Yahoo日線）。美債現券因Veterans Day休市，不是美股休市。",
+    "tx_night": "11/12 10:12盤中：加權44,439.43（+0.41%）；臺指期116近月44,497.00（+0.82%），同分鐘價差+57.57點。這是早盤快照，不是夜盤收盤。",
     "axes": {
-      "thesis": "AI算力需求驗證（CoreWeave財報）與Fed鷹派、利率高檔形成拉鋸。",
-      "policy": "Waller傾向12月升息25基點，對條件式情境提50基點。",
-      "risk": "H200出口管制漏洞報導；美債10Y 4.98%若再升壓迫科技股估值。"
+      "thesis": "CoreWeave 11/10財報提供AI需求展望，11/11美股反彈；不直接推成台廠新增訂單。",
+      "policy": "11/12今晚21:30初領失業救濟金、23:00 Barr談AI與不平等；未預設演說會釋出利率訊號。",
+      "risk": "財政部最新已核實殖利率是11/10：2年4.73%、10年4.98%、30年5.35%；不可冒充11/11新收盤。"
     }
   },
   "validation": {
     "strengthened": [
-      "CoreWeave財報上調營收與資本支出指引，AI需求仍在"
+      "CoreWeave 11/10公告上調2026營收指引至130–133億美元、資本支出370–390億美元；屬指引而非已實現收入。",
+      "11/11 SOX +5.66%，11/12 10:12台股+0.41%；僅為價格表現。"
     ],
     "pressure": [
-      "外資期未平倉淨空103,473口未減；美債殖利率走高壓制久期"
+      "方舟水位72.4%，較前一開市日76.8%下降4.4pt。",
+      "11/11外資現貨賣超7.66443336億元；投信買超185.85463465億元、自營商合計買超62.56872866億元，三大法人合計買超240.75892995億元。",
+      "外資台指期未平倉淨空104,271口；當日交易淨額-779口，不可當作未平倉變動。"
     ],
     "long_term": [
-      "全球利率高檔週期可能延長；AI投資轉向盈利驗證階段"
+      "AI投入、融資成本與實際交付需持續驗證；未來獲利目標不等於目前GAAP已獲利。"
     ]
   },
   "intelligence": {
     "trump": [
       {
-        "time": "11/11",
-        "content": "市場關注11/14期中選舉投票結果。<em>市場可能反應：若結果符合預期，風險資產短線支撐；若出現意外，可能引發波動。</em>"
+        "time": "本期觀察窗",
+        "content": "本期未核實Trump當日原始貼文，不以未證實的選舉日程或社群表態建立交易結論。"
       }
     ],
-    "musk": "Tesla 11/10收盤+1.25%；Starlink持續擴張中。Musk太空任務無重大新訊號。",
+    "musk": "Tesla 11/11 Nasdaq最後成交價390.8163美元，日變動+2.91%；本期未核實Musk、SpaceX或Starlink當日原始公告，不延伸推論。",
     "policy": [
-      "<strong>CoreWeave財報：</strong>上調2026營收至130-133億美元，資本支出370-390億美元，Q4利息費用預估10.5-11.5億美元。AI伺服器需求持續，但融資成本上升。",
-      "<strong>H200出口管制：</strong>Reuters報導西北工業大學10月透過中國境內供應商購得H200；可能增添出口合規風險。",
-      "<strong>Fed Waller：</strong>傾向12月升息25基點；對條件式核心CPI情境提出考慮50基點升息。"
+      "CoreWeave 11/10公告上調全年營收指引至130–133億美元、資本支出指引370–390億美元；Q4利息費用預估10.5–11.5億美元。這是前一日已公布的公司背景，非11/11新財報。",
+      "11/12鴻海15:00法說尚未舉行；初領失業救濟金21:30、Barr演說23:00均屬預定事件，不預寫結果。"
     ]
   },
   "temperature": {
-    "vix_note": "VIX 17.49（11/10收盤），較前值大幅下降約10%，反映風險偏好短暫回升。但VIX低不代表沒有風險；外資淨空部位仍在。",
-    "signal_headline": "AI情緒偏多但資金面轉弱",
-    "signal_note": "VIX下降與AI股反彈形成短線情緒正面；但黃金跌破4,000、美元偏強、美債殖利率走高，資金面訊號偏空。"
+    "vix_note": "VIX 11/11日線17.49、-10.12%，採Yahoo資料；Cboe歷史表僅更新至11/10。波動率下降不代表風險消失。",
+    "signal_headline": "美股反彈與配置水位下降並存",
+    "signal_note": "美元偏強、黃金回跌只是價格證據；未取得完整跨資產申贖與部位資料，不能推成資金轉向美元或加密。"
   },
   "indicators": {
     "captured_at": "2026-11-12T01:05:29Z",
@@ -345,24 +397,23 @@
     "approximate_flag": true
   },
   "appendix": {
-    "after_hours": "明日（11/13）台灣時間05:30看Cisco財報、21:30看美國PPI。數據前不追價、不重押，以觀察為主。",
-    "execution": "回測期間不追價，等明確承接訊號；外資淨空部位未減前，任何反彈以換手為主。",
+    "after_hours": "11/12台灣15:00鴻海法說、21:30美國初領失業救濟金、23:00 Barr談AI與不平等；11/12美國30年債標售為官方暫定日期，未填未核實時間。11/13 21:30美國10月PPI；事件前不追價、不重押，不預寫結果。",
+    "execution": "以水位決定配置總額，再按價值標準篩選；反彈不追價。期貨部位、現貨交易與跨資產價格分開看，未齊ETF資料不作定稿依據。",
     "map_bullets": [
-      "水位72.4%（前值76.8%）：下降4.4pt，回檔區間。",
-      "外資期未平倉淨空103,473口：未減。",
-      "VIX 17.49：大幅下降但不可忽視外資淨空。",
-      "10Y殖利率4.98%：利率高檔持續。",
-      "Cisco財報（11/13 05:30）：觀察AI硬體需求指引。",
-      "美國PPI（11/13 21:30）：通膨與Fed政策參考。"
+      "水位72.4%，前一開市日76.8%，下降4.4pt。",
+      "11/11美股正常交易；只有美債現券休市。",
+      "外資11/11台指期未平倉淨額-104,271口，交易淨額-779口。",
+      "美債2Y/10Y/30Y為11/10官方4.73%/4.98%/5.35%。",
+      "11/13 21:30 PPI；10/27–28 FOMC紀要11/19台灣03:00公布。"
     ]
   },
-  "conclusion": "今日一句話：<em>回測換手不追價，AI反彈等承接；利率與資金面轉弱訊號優先。</em>",
+  "conclusion": "今日一句話：<em>美股反彈、台股回升，水位仍降；先控配置，不把價格上漲當成資金流入。</em>",
   "xurl_signal_layer": {
     "status": "no_material_signal",
     "signals_count": 0,
     "included_in_revision": false,
     "signals": [],
-    "note": "11/12早盤無可直接核實的X原生訊號。CoreWeave財報、Fed Waller、H200出口管制等皆為新聞/官方公告來源。"
+    "note": "本期未核實同日X原始貼文，不以新聞轉述充當直接訊號。"
   },
   "disclaimer": "Kelvin Morning Brief｜2026/11/12早盤版。方舟名單與水位為盤中快照，僅供研究，不構成投資建議。",
   "market": {
@@ -386,68 +437,71 @@
       "change_pct": 0.82
     },
     "foreign_oi": {
-      "value": "-103,473",
-      "net": -103473,
-      "data_as_of": "2026-11-10",
-      "note": "11/10外資及陸資臺股期貨全月份未平倉淨空103,473口；部位餘額非新增。"
+      "value": "-104,271",
+      "net": -104271,
+      "data_as_of": "2026-11-11",
+      "daily_trading_net": -779,
+      "note": "11/11外資及陸資臺股期貨全月份未平倉淨額-104,271口；當日交易淨額-779口，非新增空單104,271口。"
     },
     "sp500": {
       "symbol": "^GSPC",
-      "trade_date": "2026-11-10",
-      "value": "7,520.93",
-      "previous_close": "7549.94",
-      "change": -29.01,
-      "change_pct": -0.38,
-      "data_as_of": "2026-11-10"
+      "trade_date": "2026-11-11",
+      "value": "7,619.38",
+      "previous_close": "7520.930000",
+      "change": 98.45,
+      "change_pct": 1.31,
+      "data_as_of": "2026-11-11",
+      "source_note": "Cboe official SPX history; Yahoo cross-check."
     },
     "dow": {
       "symbol": "^DJI",
-      "trade_date": "2026-11-10",
-      "value": "52,231.89",
-      "previous_close": "52389.75",
-      "change": -157.86,
-      "change_pct": -0.3,
-      "data_as_of": "2026-11-10"
+      "trade_date": "2026-11-11",
+      "value": "52,486.49",
+      "previous_close": "52231.89",
+      "change": 254.6,
+      "change_pct": 0.49,
+      "data_as_of": "2026-11-11",
+      "source_note": "Yahoo completed daily row; rounded to standard index quote precision before derived arithmetic."
     },
     "nasdaq": {
       "symbol": "^IXIC",
-      "trade_date": "2026-11-10",
-      "value": "25,065.88",
-      "previous_close": "25253.14",
-      "change": -187.26,
-      "change_pct": -0.74,
-      "data_as_of": "2026-11-10"
-    },
-    "nasdaq100": {
-      "symbol": "^NDX",
-      "trade_date": "2026-11-10",
-      "value": "22,100.00",
-      "previous_close": "22235.00",
-      "change": -135.0,
-      "change_pct": -0.61,
-      "data_as_of": "2026-11-10"
+      "trade_date": "2026-11-11",
+      "value": "25,466.19",
+      "previous_close": "25065.87",
+      "change": 400.32,
+      "change_pct": 1.6,
+      "data_as_of": "2026-11-11",
+      "source_note": "Nasdaq summary current value cross-checked against dated Yahoo Nov11 row; Nasdaq historical lags Nov10. Nasdaq summary previous close is 25065.88 versus historical/Yahoo 25065.87; using dated Nov10 historical 25065.87 for arithmetic yields +400.32; source headline reports +400.31. Preserve 0.01 discrepancy."
     },
     "sox": {
       "symbol": "^SOX",
-      "trade_date": "2026-11-10",
-      "value": "1,535.41",
-      "previous_close": "1506.50",
-      "change": 28.91,
-      "change_pct": 1.92,
-      "data_as_of": "2026-11-10",
-      "source": "Yahoo Finance daily chart"
+      "trade_date": "2026-11-11",
+      "value": "10,564.11",
+      "previous_close": "9998.33",
+      "change": 565.78,
+      "change_pct": 5.66,
+      "data_as_of": "2026-11-11",
+      "source_note": "Nasdaq summary current value cross-checked against dated Yahoo Nov11 row; Nasdaq historical lags Nov10."
     },
     "vix": {
       "symbol": "^VIX",
-      "trade_date": "2026-11-10",
+      "trade_date": "2026-11-11",
       "value": "17.49",
       "previous_close": "19.46",
       "change": -1.97,
       "change_pct": -10.12,
-      "data_as_of": "2026-11-10",
-      "source": "Yahoo Finance daily chart"
+      "data_as_of": "2026-11-11",
+      "source_note": "Yahoo completed daily row; rounded to standard index quote precision before derived arithmetic."
     },
-    "systemic_risk": "中高"
+    "systemic_risk": "中高",
+    "institutional_cash": {
+      "trade_date": "2026-11-11",
+      "unit": "TWD",
+      "foreign": -766443336,
+      "investment_trust": 18585463465,
+      "dealers": 6256872866,
+      "total": 24075892995
+    }
   },
   "ark_source_validation": {
     "source_path": "/Users/kaide/Pictures/方舟運算截圖/ark_stocks_latest.json",
@@ -475,8 +529,658 @@
       "5904 寶雅* preserved exactly as screenshot/AX; asterisk is not stripped.",
       "910322 康師傅-DR is a valid six-digit DR code; missing source price is preserved."
     ],
-    "ocr_ax_price_differences": [],
-    "price_policy": "Primary screenshot/JSON prices retained on live OCR/AX drift; never bulk replaced by AX."
+    "ocr_ax_price_differences": [
+      {
+        "section": "ETF價值區",
+        "code": "00918",
+        "name": "大華優利高填息30",
+        "ocr_price": "33.01",
+        "ax_price": "33",
+        "kind": "numeric_snapshot_difference",
+        "sourceFile": "02_ETF價值區_1.png",
+        "ocr_columns": [
+          {
+            "x": 252.0,
+            "y": 776.0,
+            "text": "70.11(-0.33%)"
+          },
+          {
+            "x": 295.0,
+            "y": 744.0,
+            "text": "33.01"
+          },
+          {
+            "x": 418.0,
+            "y": 742.0,
+            "text": "33.12"
+          },
+          {
+            "x": 430.0,
+            "y": 774.0,
+            "text": "0%"
+          }
+        ],
+        "ax_columns": [
+          "33",
+          "▼0.12(-0.36%)",
+          "33.12",
+          "0%",
+          "台灣",
+          "3"
+        ],
+        "ax_description": "大華優利高填息30, 00918, 33, ▼0.12(-0.36%), 33.12, 0%, 台灣, 3"
+      },
+      {
+        "section": "ETF價值區",
+        "code": "00898",
+        "name": "國泰基因免疫革命",
+        "ocr_price": "11.32",
+        "ax_price": null,
+        "kind": "missing_price_replaced_by_nonprice_column",
+        "sourceFile": "03_ETF價值區_2.png",
+        "ocr_columns": [
+          {
+            "x": 302.0,
+            "y": 638.0,
+            "text": "(-%)"
+          },
+          {
+            "x": 412.0,
+            "y": 637.0,
+            "text": "0.27%"
+          },
+          {
+            "x": 420.0,
+            "y": 605.0,
+            "text": "11.32"
+          }
+        ],
+        "ax_columns": [
+          "-",
+          "(-%)",
+          "11.32",
+          "0.27%",
+          "全球",
+          "5"
+        ],
+        "ax_description": "國泰基因免疫革命, 00898, -, (-%), 11.32, 0.27%, 全球, 5"
+      },
+      {
+        "section": "ETF價值區",
+        "code": "00938",
+        "name": "凱基優選30",
+        "ocr_price": "26.6",
+        "ax_price": null,
+        "kind": "missing_price_replaced_by_nonprice_column",
+        "sourceFile": "03_ETF價值區_2.png",
+        "ocr_columns": [
+          {
+            "x": 302.0,
+            "y": 746.0,
+            "text": "(-%)"
+          },
+          {
+            "x": 411.0,
+            "y": 745.0,
+            "text": "0.49%"
+          },
+          {
+            "x": 423.0,
+            "y": 712.0,
+            "text": "26.6"
+          }
+        ],
+        "ax_columns": [
+          "-",
+          "(-%)",
+          "26.6",
+          "0.49%",
+          "台灣",
+          "2"
+        ],
+        "ax_description": "凱基優選30, 00938, -, (-%), 26.6, 0.49%, 台灣, 2"
+      },
+      {
+        "section": "ETF升溫區",
+        "code": "00986B",
+        "name": "FT金融債10+",
+        "ocr_price": "9.77",
+        "ax_price": null,
+        "kind": "missing_price_replaced_by_nonprice_column",
+        "sourceFile": "04_ETF升溫區_1.png",
+        "ocr_columns": [
+          {
+            "x": 302.0,
+            "y": 452.0,
+            "text": "(-%)"
+          },
+          {
+            "x": 405.0,
+            "y": 451.0,
+            "text": "-0.44%"
+          },
+          {
+            "x": 425.0,
+            "y": 418.0,
+            "text": "9.77"
+          }
+        ],
+        "ax_columns": [
+          "-",
+          "(-%)",
+          "9.77",
+          "-0.44%",
+          "美國",
+          "1"
+        ],
+        "ax_description": "FT金融債10+, 00986B, -, (-%), 9.77, -0.44%, 美國, 1"
+      },
+      {
+        "section": "ETF升溫區",
+        "code": "00856B",
+        "name": "永豐1-3年美公債",
+        "ocr_price": "38.83",
+        "ax_price": null,
+        "kind": "missing_price_replaced_by_nonprice_column",
+        "sourceFile": "04_ETF升溫區_1.png",
+        "ocr_columns": [
+          {
+            "x": 302.0,
+            "y": 668.0,
+            "text": "(-%)"
+          },
+          {
+            "x": 405.0,
+            "y": 665.0,
+            "text": "-0.26%"
+          },
+          {
+            "x": 416.0,
+            "y": 635.0,
+            "text": "38.83"
+          }
+        ],
+        "ax_columns": [
+          "-",
+          "(-%)",
+          "38.83",
+          "-0.26%",
+          "美國",
+          "7"
+        ],
+        "ax_description": "永豐1-3年美公債, 00856B, -, (-%), 38.83, -0.26%, 美國, 7"
+      },
+      {
+        "section": "ETF升溫區",
+        "code": "00992B",
+        "name": "街口優息非投債",
+        "ocr_price": "10.18",
+        "ax_price": null,
+        "kind": "missing_price_replaced_by_nonprice_column",
+        "sourceFile": "04_ETF升溫區_1.png",
+        "ocr_columns": [
+          {
+            "x": 302.0,
+            "y": 776.0,
+            "text": "(-%)"
+          },
+          {
+            "x": 406.0,
+            "y": 773.0,
+            "text": "-0.06%"
+          },
+          {
+            "x": 419.0,
+            "y": 742.5,
+            "text": "10.18"
+          }
+        ],
+        "ax_columns": [
+          "-",
+          "(-%)",
+          "10.18",
+          "-0.06%",
+          "全球",
+          "0"
+        ],
+        "ax_description": "街口優息非投債, 00992B, -, (-%), 10.18, -0.06%, 全球, 0"
+      },
+      {
+        "section": "產業價值區",
+        "code": "2356",
+        "name": "英業達",
+        "ocr_price": "49.65",
+        "ax_price": "49.6",
+        "kind": "numeric_snapshot_difference",
+        "sourceFile": "06_產業價值區_1.png",
+        "ocr_columns": [
+          {
+            "x": 226.0,
+            "y": 453.0,
+            "text": "71.55(-3.03%)"
+          },
+          {
+            "x": 268.0,
+            "y": 420.0,
+            "text": "49.65"
+          },
+          {
+            "x": 386.0,
+            "y": 434.0,
+            "text": "-18.93"
+          },
+          {
+            "x": 515.0,
+            "y": 434.0,
+            "text": "46.0"
+          }
+        ],
+        "ax_columns": [
+          "49.6",
+          "▼1.6(-3.13%)",
+          "-18.93",
+          "46.02",
+          "43.08",
+          "4.17",
+          "1.61",
+          "0.94",
+          "84.74",
+          "108.26",
+          "66.21",
+          "-101.35",
+          "286.78",
+          "26年",
+          "伺服器組裝代工"
+        ],
+        "ax_description": "英業達, 2356, 49.6, ▼1.6(-3.13%), -18.93, 46.02, 43.08, 4.17, 1.61, 0.94, 84.74, 108.26, 66.21, -101.35, 286.78, 26年, 伺服器組裝代工"
+      },
+      {
+        "section": "產業價值區",
+        "code": "3711",
+        "name": "日月光投控",
+        "ocr_price": "615",
+        "ax_price": "614",
+        "kind": "numeric_snapshot_difference",
+        "sourceFile": "08_產業價值區_3.png",
+        "ocr_columns": [
+          {
+            "x": 240.0,
+            "y": 685.0,
+            "text": "72(-0.32%)"
+          },
+          {
+            "x": 281.0,
+            "y": 652.0,
+            "text": "615"
+          },
+          {
+            "x": 401.0,
+            "y": 666.0,
+            "text": "0.55"
+          },
+          {
+            "x": 518.0,
+            "y": 666.0,
+            "text": "47.1"
+          }
+        ],
+        "ax_columns": [
+          "614",
+          "▼3(-0.49%)",
+          "0.55",
+          "47.13",
+          "32.18",
+          "22.1",
+          "13.57",
+          "11.42",
+          "63.53",
+          "115.6",
+          "80.62",
+          "7.33",
+          "433.37",
+          "9年",
+          "IC封裝測試"
+        ],
+        "ax_description": "日月光投控, 3711, 614, ▼3(-0.49%), 0.55, 47.13, 32.18, 22.1, 13.57, 11.42, 63.53, 115.6, 80.62, 7.33, 433.37, 9年, IC封裝測試"
+      },
+      {
+        "section": "產業價值區",
+        "code": "4958",
+        "name": "臻鼎-KY",
+        "ocr_price": "455",
+        "ax_price": "454.5",
+        "kind": "numeric_snapshot_difference",
+        "sourceFile": "08_產業價值區_3.png",
+        "ocr_columns": [
+          {
+            "x": 248.0,
+            "y": 900.0,
+            "text": "76(-1.3%)"
+          },
+          {
+            "x": 279.0,
+            "y": 867.0,
+            "text": "455"
+          },
+          {
+            "x": 403.0,
+            "y": 880.0,
+            "text": "3.18"
+          },
+          {
+            "x": 515.0,
+            "y": 881.0,
+            "text": "39.9"
+          }
+        ],
+        "ax_columns": [
+          "454.5",
+          "▼6.5(-1.41%)",
+          "3.18",
+          "39.99",
+          "24.75",
+          "27.72",
+          "13.49",
+          "10.7",
+          "43.29",
+          "170.24",
+          "132.88",
+          "-232.81",
+          "67.09",
+          "15年",
+          "軟板"
+        ],
+        "ax_description": "臻鼎-KY, 4958, 454.5, ▼6.5(-1.41%), 3.18, 39.99, 24.75, 27.72, 13.49, 10.7, 43.29, 170.24, 132.88, -232.81, 67.09, 15年, 軟板"
+      },
+      {
+        "section": "產業價值區",
+        "code": "2454",
+        "name": "聯發科",
+        "ocr_price": "4,030",
+        "ax_price": "4,020",
+        "kind": "numeric_snapshot_difference",
+        "sourceFile": "11_產業價值區_6.png",
+        "ocr_columns": [
+          {
+            "x": 256.1,
+            "y": 745.3,
+            "text": "440(1%)"
+          },
+          {
+            "x": 267.0,
+            "y": 717.0,
+            "text": "4,030"
+          },
+          {
+            "x": 393.0,
+            "y": 729.0,
+            "text": "-0.67"
+          },
+          {
+            "x": 524.0,
+            "y": 727.0,
+            "text": "5.7"
+          }
+        ],
+        "ax_columns": [
+          "4,020",
+          "▲30(0.75%)",
+          "-0.67",
+          "5.77",
+          "5.35",
+          "46.2",
+          "15.03",
+          "16.17",
+          "45.06",
+          "123.94",
+          "88.4",
+          "-237.35",
+          "-68.02",
+          "27年",
+          "IC設計"
+        ],
+        "ax_description": "聯發科, 2454, 4,020, ▲30(0.75%), -0.67, 5.77, 5.35, 46.2, 15.03, 16.17, 45.06, 123.94, 88.4, -237.35, -68.02, 27年, IC設計"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "8099",
+        "name": "大世科",
+        "ocr_price": "156.5",
+        "ax_price": "157",
+        "kind": "numeric_snapshot_difference",
+        "sourceFile": "12_產業升溫區_1.png",
+        "ocr_columns": [
+          {
+            "x": 245.0,
+            "y": 668.0,
+            "text": "46(3.99%)"
+          },
+          {
+            "x": 270.0,
+            "y": 635.0,
+            "text": "156.5"
+          },
+          {
+            "x": 386.0,
+            "y": 650.0,
+            "text": "-16.36"
+          },
+          {
+            "x": 519.0,
+            "y": 648.0,
+            "text": "87.0"
+          }
+        ],
+        "ax_columns": [
+          "157",
+          "▲6.5(4.32%)",
+          "-16.36",
+          "87.01",
+          "29.67",
+          "22.59",
+          "7.48",
+          "5.82",
+          "56.68",
+          "166.19",
+          "112.35",
+          "-494.38",
+          "-1,408.35",
+          "24年",
+          "系統整合"
+        ],
+        "ax_description": "大世科, 8099, 157, ▲6.5(4.32%), -16.36, 87.01, 29.67, 22.59, 7.48, 5.82, 56.68, 166.19, 112.35, -494.38, -1,408.35, 24年, 系統整合"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "6148",
+        "name": "驊宏資",
+        "ocr_price": "53.8",
+        "ax_price": "54.1",
+        "kind": "numeric_snapshot_difference",
+        "sourceFile": "13_產業升溫區_2.png",
+        "ocr_columns": [
+          {
+            "x": 238.0,
+            "y": 676.0,
+            "text": "40.7(1.32%)"
+          },
+          {
+            "x": 276.0,
+            "y": 644.0,
+            "text": "53.8"
+          },
+          {
+            "x": 388.0,
+            "y": 657.0,
+            "text": "107.59"
+          }
+        ],
+        "ax_columns": [
+          "54.1",
+          "▲1(1.88%)",
+          "107.59",
+          "145.1",
+          "-17.15",
+          "25.84",
+          "3.85",
+          "3.77",
+          "53.25",
+          "178.5",
+          "146.04",
+          "-64.7",
+          "-75.58",
+          "8年",
+          "系統整合"
+        ],
+        "ax_description": "驊宏資, 6148, 54.1, ▲1(1.88%), 107.59, 145.1, -17.15, 25.84, 3.85, 3.77, 53.25, 178.5, 146.04, -64.7, -75.58, 8年, 系統整合"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "1802",
+        "name": "台玻",
+        "ocr_price": "80",
+        "ax_price": "80.1",
+        "kind": "numeric_snapshot_difference",
+        "sourceFile": "15_產業升溫區_4.png",
+        "ocr_columns": [
+          {
+            "x": 242.0,
+            "y": 694.0,
+            "text": "43.3(4.3%)"
+          },
+          {
+            "x": 286.0,
+            "y": 660.0,
+            "text": "80"
+          },
+          {
+            "x": 394.0,
+            "y": 674.0,
+            "text": "12.04"
+          },
+          {
+            "x": 515.0,
+            "y": 675.0,
+            "text": "56.4"
+          }
+        ],
+        "ax_columns": [
+          "80.1",
+          "▲3.4(4.43%)",
+          "12.04",
+          "56.49",
+          "22.62",
+          "31.6",
+          "23.94",
+          "19.91",
+          "41.86",
+          "134.5",
+          "89.16",
+          "39.06",
+          "12.84",
+          "2年",
+          "玻璃"
+        ],
+        "ax_description": "台玻, 1802, 80.1, ▲3.4(4.43%), 12.04, 56.49, 22.62, 31.6, 23.94, 19.91, 41.86, 134.5, 89.16, 39.06, 12.84, 2年, 玻璃"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "3703",
+        "name": "欣陸",
+        "ocr_price": "23.4",
+        "ax_price": "23.35",
+        "kind": "numeric_snapshot_difference",
+        "sourceFile": "15_產業升溫區_4.png",
+        "ocr_columns": [
+          {
+            "x": 225.0,
+            "y": 801.0,
+            "text": "70.45(-1.89%)"
+          },
+          {
+            "x": 276.0,
+            "y": 769.0,
+            "text": "23.4"
+          },
+          {
+            "x": 386.0,
+            "y": 783.0,
+            "text": "-33.39"
+          },
+          {
+            "x": 515.0,
+            "y": 783.0,
+            "text": "49.5"
+          }
+        ],
+        "ax_columns": [
+          "23.35",
+          "▼0.5(-2.1%)",
+          "-33.39",
+          "49.59",
+          "7.13",
+          "20.37",
+          "13.72",
+          "11.58",
+          "70.8",
+          "127.51",
+          "38.35",
+          "-39.04",
+          "-543.76",
+          "11年",
+          "營造工程"
+        ],
+        "ax_description": "欣陸, 3703, 23.35, ▼0.5(-2.1%), -33.39, 49.59, 7.13, 20.37, 13.72, 11.58, 70.8, 127.51, 38.35, -39.04, -543.76, 11年, 營造工程"
+      },
+      {
+        "section": "產業升溫區",
+        "code": "8455",
+        "name": "大拓-KY",
+        "ocr_price": "-10.64",
+        "ax_price": null,
+        "kind": "missing_price_replaced_by_nonprice_column",
+        "sourceFile": "16_產業升溫區_5.png",
+        "ocr_columns": [
+          {
+            "x": 278.0,
+            "y": 594.0,
+            "text": "(-%)"
+          },
+          {
+            "x": 387.0,
+            "y": 575.0,
+            "text": "-10.64"
+          },
+          {
+            "x": 516.0,
+            "y": 575.0,
+            "text": "18.4"
+          }
+        ],
+        "ax_columns": [
+          "-",
+          "(-%)",
+          "-10.64",
+          "18.46",
+          "11.68",
+          "13.77",
+          "2.63",
+          "1.45",
+          "57.5",
+          "106.01",
+          "96",
+          "-8.6",
+          "-8.74",
+          "1年",
+          "機械"
+        ],
+        "ax_description": "大拓-KY, 8455, -, (-%), -10.64, 18.46, 11.68, 13.77, 2.63, 1.45, 57.5, 106.01, 96, -8.6, -8.74, 1年, 機械"
+      }
+    ],
+    "price_policy": "Only etf/stocks containers, value/rising/overlap arrays, code/name/price/change/meta/stamp/source_file/source_rank and ETF nav/premium_discount. Original identities/order/ranks preserved from OCR stocks. Price/change/NAV/premium use same-run captured AX, never later market lookup. AX null means JSON null, rendered dash in meta. Numeric OCR/AX differences remain documented above; AX is selected consistently, not asserted simultaneous with screenshot.",
+    "raw_price_audit_pass": false,
+    "normalized_price_policy_applied": true,
+    "validation_scope": "Capture hashes/counts/code-name agreement pass; original price-field audit failed. Audited same-run AX normalization applied; not synchronized exchange quotes."
   },
   "etf": {
     "value": [
@@ -1294,22 +1998,2194 @@
         "meta": "68.7 / ▲0.1(0.15%)"
       }
     ],
-    "overlap": [],
-    "overlap_names": {}
+    "overlap": []
   },
   "production_audit": {
     "raw_ark_sha256": "c6986fc01997b0001d426718cf74fbce8d04cad090c567c9d2bc10c094778389",
-    "3044_policy": "3044 新易盛 ▲46(9.82%) preserved as source; no recalculation.",
+    "3044_policy": "3044 健鼎 572 ▲52(10%) preserved literally from same-run screenshot and AX; no 新易盛 identity substitution.",
     "counts": {
       "total_cards": 77,
       "etf_value": 10,
       "etf_rising": 7,
       "stock_value": 30,
       "stock_rising": 30
-    }
+    },
+    "market_gaps": [
+      "Nasdaq historical files for SOX/COMP and all Mag7 only contain Nov10, despite Nov11 requested; newest current index values use summary plus dated Yahoo cross-check; Mag7 uses dated closed-market Nasdaq info primaryData.",
+      "Cboe VIX history latest row is Nov10 (19.46); Nov11 VIX 17.49 uses Yahoo completed daily row, not yet official Cboe historical confirmation.",
+      "Yahoo Mag7 daily Nov11 closes are null. Six Nasdaq last-sale values equal dated Yahoo regularMarketPrice; TSLA disagrees: Nasdaq 390.8163 vs Yahoo 390.84 (difference 0.0237). Preserve both; do not pretend precision discrepancy resolved or call Nasdaq last sale a validated official auction close.",
+      "Nasdaq Composite prior close discrepancy: Nasdaq historical and Yahoo daily 25065.87 vs Nasdaq summary 25065.88. Nov11 25466.19 gives +400.32 against 25065.87, while Nasdaq source headline change is +400.31.",
+      "Taiwan minute feeds fetched after the cutoff were filtered back to 10:12. TWSE tail 10:13 is excluded. Minute-label convention is source-declared, not evidence of exact tick-level synchronization.",
+      "MSFT Nasdaq closed-market last sale is 521.125 and TSLA 390.8163; preserve precision rather than silently force cents; official final auction-close field is not independently available in lagging historical file."
+    ],
+    "price_audit_original_pass": false,
+    "correction": "Replaced false holiday/index/Mag7/OI data; removed unsupported election/Cisco/threshold/flow/technical claims; dated Treasury and incomplete ETF correctly.",
+    "evidence_files_read": 46
   },
   "editorial": {
-    "pull_quote": "「水位下降不等於行情結束，但也不該把指數反彈翻成全面擴張。」",
-    "body": "方舟水位從76.8%降至72.4%，下降4.4個百分點，配置空間縮小。外資期貨淨空部位持續破10萬口，美債殖利率與Fed官員鷹派聲浪並存。不過，台灣加權指數在CoreWeave財報帶動下回升至44,439點，AI半導體情緒偏正面。然而，資金面轉向美元與加密資產，黃金跌破4,000美元顯示避險資金分散。在回測期間，以換手為主，不追價、不重押，等明確承接訊號。"
-  }
+    "pull_quote": "「反彈與水位下降可以同時成立；先控配置，不把價格當資金流。」",
+    "body": "方舟水位由76.8%降至72.4%，配置空間縮小。美股11/11正常交易、費半上漲5.66%，台股11/12 10:12上漲0.41%；反彈不代表風控空間增加。11/11台灣法人現貨合計買超，但外資仍賣超，期貨未平倉淨空104,271口，不能混為全面資金收縮。美元與加密上漲也不是資金流入證據。先控總額，再按價值配置，不追價。"
+  },
+  "verified_research": {
+    "market": {
+      "requested_date": "2026-11-12",
+      "requested_cutoff": "2026-11-12T10:12:00+08:00",
+      "generated_at": "2026-11-12T10:14:54.492798+08:00",
+      "scope": "Read-only external research; only scratch artifacts written. No publication or repository changes.",
+      "methodology": {
+        "returns": "(value/reference - 1)*100, Decimal; source precision preserved",
+        "taiwan_snapshot": "Latest completed shared source minute at or before 10:12 Taipei; later quote ranges not silently applied to cutoff.",
+        "us_daily_dates": "Session date only; no invented closing clock timestamp. Daily chart timestamps are session anchors.",
+        "alphabet_share_class": "GOOGL Class A"
+      },
+      "gaps": [
+        "Nasdaq historical files for SOX/COMP and all Mag7 only contain Nov10, despite Nov11 requested; newest current index values use summary plus dated Yahoo cross-check; Mag7 uses dated closed-market Nasdaq info primaryData.",
+        "Cboe VIX history latest row is Nov10 (19.46); Nov11 VIX 17.49 uses Yahoo completed daily row, not yet official Cboe historical confirmation.",
+        "Yahoo Mag7 daily Nov11 closes are null. Six Nasdaq last-sale values equal dated Yahoo regularMarketPrice; TSLA disagrees: Nasdaq 390.8163 vs Yahoo 390.84 (difference 0.0237). Preserve both; do not pretend precision discrepancy resolved or call Nasdaq last sale a validated official auction close.",
+        "Nasdaq Composite prior close discrepancy: Nasdaq historical and Yahoo daily 25065.87 vs Nasdaq summary 25065.88. Nov11 25466.19 gives +400.32 against 25065.87, while Nasdaq source headline change is +400.31.",
+        "Taiwan minute feeds fetched after the cutoff were filtered back to 10:12. TWSE tail 10:13 is excluded. Minute-label convention is source-declared, not evidence of exact tick-level synchronization.",
+        "MSFT Nasdaq closed-market last sale is 521.125 and TSLA 390.8163; preserve precision rather than silently force cents; official final auction-close field is not independently available in lagging historical file."
+      ],
+      "taiwan": {
+        "trade_date": "2026-11-12",
+        "timezone": "Asia/Taipei",
+        "cutoff_minute": "10:12:00",
+        "twse": {
+          "value": "44439.43",
+          "reference": "44257.15",
+          "change": "182.28",
+          "change_pct": "0.411866",
+          "display_change_pct": "0.41",
+          "instrument": "TAIEX",
+          "data_time": "2026-11-12T10:12:00+08:00",
+          "value_type": "source minute close",
+          "source_row": {
+            "c": "44439.43",
+            "s": "2345",
+            "t": "1794449520000",
+            "ts": "101200"
+          },
+          "quote_witness": {
+            "@": "t00.tw",
+            "pid": "2.tse.tw|865",
+            "key": "tse_t00.tw_20261112",
+            "^": "20261112",
+            "c": "t00",
+            "#": "2.tse.tw|865",
+            "d": "20261112",
+            "%": "10:12:00",
+            "ch": "t00.tw",
+            "tlong": "1794449520000",
+            "h": "44525.24",
+            "i": "tidx.tw",
+            "it": "t",
+            "l": "43878.52",
+            "m": "6128044",
+            "n": "發行量加權股價指數",
+            "o": "44180.46",
+            "r": "1422053",
+            "ex": "tse",
+            "t": "10:12:00",
+            "y": "44257.15",
+            "z": "44439.43"
+          },
+          "sources": [
+            {
+              "url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+              "method": "GET",
+              "request_body": null,
+              "retrieved_at": "2026-11-12T02:12:55.427503+00:00",
+              "http_status": 200,
+              "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/twse_minute.json"
+            },
+            {
+              "url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0",
+              "method": "GET",
+              "request_body": null,
+              "retrieved_at": "2026-11-12T02:12:55.427278+00:00",
+              "http_status": 200,
+              "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/twse_quote.json"
+            }
+          ]
+        },
+        "taifex": {
+          "value": "44497.00",
+          "reference": "44136.00",
+          "change": "361.00",
+          "change_pct": "0.817926",
+          "display_change_pct": "0.82",
+          "instrument": "TAIEX futures standard near month",
+          "symbol": "TXFK6-F",
+          "display_name": "臺指期116",
+          "contract_month": "2026-11",
+          "contract_identity_source": "Official quote list/display month; TXF-S excluded",
+          "data_time": "2026-11-12T10:12:00+08:00",
+          "value_type": "source minute close",
+          "source_row": {
+            "T": "101200",
+            "O": "44506.00",
+            "H": "44527.00",
+            "L": "44488.00",
+            "C": "44497.00",
+            "V": "137"
+          },
+          "field_order": [
+            "T",
+            "O",
+            "H",
+            "L",
+            "C",
+            "V"
+          ],
+          "sources": [
+            {
+              "url": "https://mis.taifex.com.tw/futures/api/getChartData1M",
+              "method": "POST",
+              "request_body": {
+                "SymbolID": "TXFK6-F"
+              },
+              "retrieved_at": "2026-11-12T02:13:21.274470+00:00",
+              "http_status": 200,
+              "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/taifex_minute.json"
+            },
+            {
+              "url": "https://mis.taifex.com.tw/futures/api/getQuoteList",
+              "method": "POST",
+              "request_body": {
+                "MarketType": "0",
+                "SymbolType": "F",
+                "KindID": "1",
+                "CID": "",
+                "ExpireMonth": ""
+              },
+              "retrieved_at": "2026-11-12T02:12:55.427597+00:00",
+              "http_status": 200,
+              "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/taifex_quote.json"
+            }
+          ]
+        },
+        "basis": {
+          "value": "57.57",
+          "unit": "index points",
+          "derived": true,
+          "formula": "futures minute close minus TAIEX minute close"
+        },
+        "excluded_twse_forming_tail": {
+          "c": "44390.30",
+          "s": "4022",
+          "t": "1794449580000",
+          "ts": "101300"
+        }
+      },
+      "previous_trading_day_institutional": {
+        "date": "2026-11-11",
+        "twse_cash": {
+          "unit": "TWD",
+          "rows": [
+            {
+              "institution": "自營商(自行買賣)",
+              "buy_twd": 11326267435,
+              "sell_twd": 8525452180,
+              "net_twd": 2800815255,
+              "net_yi_twd": "28.00815255"
+            },
+            {
+              "institution": "自營商(避險)",
+              "buy_twd": 31401162442,
+              "sell_twd": 27945104831,
+              "net_twd": 3456057611,
+              "net_yi_twd": "34.56057611"
+            },
+            {
+              "institution": "投信",
+              "buy_twd": 36192203547,
+              "sell_twd": 17606740082,
+              "net_twd": 18585463465,
+              "net_yi_twd": "185.85463465"
+            },
+            {
+              "institution": "外資及陸資(不含外資自營商)",
+              "buy_twd": 339713407087,
+              "sell_twd": 340479850423,
+              "net_twd": -766443336,
+              "net_yi_twd": "-7.66443336"
+            },
+            {
+              "institution": "外資自營商",
+              "buy_twd": 0,
+              "sell_twd": 0,
+              "net_twd": 0,
+              "net_yi_twd": "0"
+            },
+            {
+              "institution": "合計",
+              "buy_twd": 418633040511,
+              "sell_twd": 394557147516,
+              "net_twd": 24075892995,
+              "net_yi_twd": "240.75892995"
+            }
+          ],
+          "source": {
+            "url": "https://www.twse.com.tw/fund/BFI82U?response=json&dayDate=20261111&type=day",
+            "method": "GET",
+            "request_body": null,
+            "retrieved_at": "2026-11-12T02:12:55.427696+00:00",
+            "http_status": 200,
+            "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/twse_inst.json"
+          }
+        },
+        "taifex_futures": {
+          "product": "臺股期貨",
+          "maximum_complete_source_date": "20261111",
+          "rows": [
+            {
+              "institution": "自營商",
+              "unit": "contracts",
+              "source_fields": {
+                "TradingVolume(Long)": 6716,
+                "TradingVolume(Short)": 6808,
+                "TradingVolume(Net)": -92,
+                "OpenInterest(Long)": 4728,
+                "OpenInterest(Short)": 4695,
+                "OpenInterest(Net)": 33
+              }
+            },
+            {
+              "institution": "投信",
+              "unit": "contracts",
+              "source_fields": {
+                "TradingVolume(Long)": 4978,
+                "TradingVolume(Short)": 1627,
+                "TradingVolume(Net)": 3351,
+                "OpenInterest(Long)": 104791,
+                "OpenInterest(Short)": 2921,
+                "OpenInterest(Net)": 101870
+              }
+            },
+            {
+              "institution": "外資及陸資",
+              "unit": "contracts",
+              "source_fields": {
+                "TradingVolume(Long)": 80899,
+                "TradingVolume(Short)": 81678,
+                "TradingVolume(Net)": -779,
+                "OpenInterest(Long)": 8086,
+                "OpenInterest(Short)": 112357,
+                "OpenInterest(Net)": -104271
+              }
+            }
+          ],
+          "source": {
+            "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+            "method": "GET",
+            "request_body": null,
+            "retrieved_at": "2026-11-12T02:12:55.427649+00:00",
+            "http_status": 200,
+            "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/taifex_inst.json"
+          },
+          "warning": "Daily trading net and open-interest net are distinct; foreign net short commonly refers to OpenInterest(Net)."
+        }
+      },
+      "us": {
+        "session_date": "2026-11-11",
+        "indices": [
+          {
+            "instrument": "SPX",
+            "trade_date": "2026-11-11",
+            "timezone": "America/New_York",
+            "value": "7619.380000",
+            "reference": "7520.930000",
+            "change": "98.450000",
+            "change_pct": "1.309014",
+            "display_change_pct": "1.31",
+            "sources": [
+              {
+                "url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SPX_History.csv",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:12:55.427798+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/cboe_spx.json"
+              },
+              {
+                "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=5d&interval=1d&events=history",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:13:21.274725+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/yahoo_index_GSPC.json"
+              }
+            ],
+            "note": "Cboe official SPX history; Yahoo cross-check."
+          },
+          {
+            "instrument": "DJIA",
+            "trade_date": "2026-11-11",
+            "timezone": "America/New_York",
+            "value": "52486.49",
+            "reference": "52231.89",
+            "change": "254.60",
+            "change_pct": "0.487442",
+            "display_change_pct": "0.49",
+            "sources": [
+              {
+                "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?range=5d&interval=1d&events=history",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:13:21.274841+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/yahoo_index_DJI.json"
+              }
+            ],
+            "note": "Yahoo completed daily row; rounded to standard index quote precision before derived arithmetic."
+          },
+          {
+            "instrument": "Nasdaq Composite",
+            "trade_date": "2026-11-11",
+            "timezone": "America/New_York",
+            "value": "25466.19",
+            "reference": "25065.87",
+            "change": "400.32",
+            "change_pct": "1.597072",
+            "display_change_pct": "1.60",
+            "sources": [
+              {
+                "url": "https://api.nasdaq.com/api/quote/COMP/summary?assetclass=index",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:13:21.277046+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/nasdaq_summary_COMP.json"
+              },
+              {
+                "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=5d&interval=1d&events=history",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:13:21.274930+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/yahoo_index_IXIC.json"
+              }
+            ],
+            "note": "Nasdaq summary current value cross-checked against dated Yahoo Nov11 row; Nasdaq historical lags Nov10. Nasdaq summary previous close is 25065.88 versus historical/Yahoo 25065.87; using dated Nov10 historical 25065.87 for arithmetic yields +400.32; source headline reports +400.31. Preserve 0.01 discrepancy."
+          },
+          {
+            "instrument": "SOX",
+            "trade_date": "2026-11-11",
+            "timezone": "America/New_York",
+            "value": "10564.11",
+            "reference": "9998.33",
+            "change": "565.78",
+            "change_pct": "5.658745",
+            "display_change_pct": "5.66",
+            "sources": [
+              {
+                "url": "https://api.nasdaq.com/api/quote/SOX/summary?assetclass=index",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:13:21.276917+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/nasdaq_summary_SOX.json"
+              },
+              {
+                "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?range=5d&interval=1d&events=history",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:13:21.275506+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/yahoo_index_SOX.json"
+              }
+            ],
+            "note": "Nasdaq summary current value cross-checked against dated Yahoo Nov11 row; Nasdaq historical lags Nov10."
+          },
+          {
+            "instrument": "VIX",
+            "trade_date": "2026-11-11",
+            "timezone": "America/New_York",
+            "value": "17.49",
+            "reference": "19.46",
+            "change": "-1.97",
+            "change_pct": "-10.123330",
+            "display_change_pct": "-10.12",
+            "sources": [
+              {
+                "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?range=5d&interval=1d&events=history",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:13:21.275582+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/yahoo_index_VIX.json"
+              }
+            ],
+            "note": "Yahoo completed daily row; rounded to standard index quote precision before derived arithmetic."
+          }
+        ],
+        "magnificent_seven": [
+          {
+            "symbol": "AAPL",
+            "company": "Apple Inc. Common Stock",
+            "trade_date": "2026-11-11",
+            "timezone": "America/New_York",
+            "currency": "USD",
+            "value": "355.63",
+            "reference": "348.51",
+            "change": "7.12",
+            "change_pct": "2.042983",
+            "display_change_pct": "2.04",
+            "value_type": "Nasdaq closed-market primaryData last sale, dated Nov11; not yet available in historical daily file",
+            "source_reported_change": "+7.12",
+            "source_reported_change_pct": "+2.04%",
+            "source_reported_timestamp": "Nov 11, 2026",
+            "source_market_status": "Closed",
+            "yahoo_meta_crosscheck": {
+              "regularMarketPrice": 355.63,
+              "regularMarketTime": 1794430801,
+              "time_ny": "2026-11-11T16:00:01-05:00",
+              "equal_to_nasdaq": true
+            },
+            "sources": [
+              {
+                "url": "https://api.nasdaq.com/api/quote/AAPL/info?assetclass=stocks",
+                "method": "GET",
+                "retrieved_at": "2026-11-12T02:13:31.705965+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/nasdaq_info_AAPL.json"
+              },
+              {
+                "url": "https://api.nasdaq.com/api/quote/AAPL/historical?assetclass=stocks&fromdate=2026-11-10&todate=2026-11-11&limit=10",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:12:55.428208+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/nasdaq_AAPL.json"
+              },
+              {
+                "url": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?range=5d&interval=1d&events=history",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:13:21.275722+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/yahoo_AAPL.json"
+              }
+            ]
+          },
+          {
+            "symbol": "MSFT",
+            "company": "Microsoft Corporation Common Stock",
+            "trade_date": "2026-11-11",
+            "timezone": "America/New_York",
+            "currency": "USD",
+            "value": "521.125",
+            "reference": "533.16",
+            "change": "-12.035",
+            "change_pct": "-2.257296",
+            "display_change_pct": "-2.26",
+            "value_type": "Nasdaq closed-market primaryData last sale, dated Nov11; not yet available in historical daily file",
+            "source_reported_change": "-12.035",
+            "source_reported_change_pct": "-2.26%",
+            "source_reported_timestamp": "Nov 11, 2026",
+            "source_market_status": "Closed",
+            "yahoo_meta_crosscheck": {
+              "regularMarketPrice": 521.125,
+              "regularMarketTime": 1794430800,
+              "time_ny": "2026-11-11T16:00:00-05:00",
+              "equal_to_nasdaq": true
+            },
+            "sources": [
+              {
+                "url": "https://api.nasdaq.com/api/quote/MSFT/info?assetclass=stocks",
+                "method": "GET",
+                "retrieved_at": "2026-11-12T02:13:31.706205+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/nasdaq_info_MSFT.json"
+              },
+              {
+                "url": "https://api.nasdaq.com/api/quote/MSFT/historical?assetclass=stocks&fromdate=2026-11-10&todate=2026-11-11&limit=10",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:12:55.428482+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/nasdaq_MSFT.json"
+              },
+              {
+                "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?range=5d&interval=1d&events=history",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:13:21.275844+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/yahoo_MSFT.json"
+              }
+            ]
+          },
+          {
+            "symbol": "NVDA",
+            "company": "NVIDIA Corporation Common Stock",
+            "trade_date": "2026-11-11",
+            "timezone": "America/New_York",
+            "currency": "USD",
+            "value": "173.73",
+            "reference": "168.89",
+            "change": "4.84",
+            "change_pct": "2.865771",
+            "display_change_pct": "2.87",
+            "value_type": "Nasdaq closed-market primaryData last sale, dated Nov11; not yet available in historical daily file",
+            "source_reported_change": "+4.84",
+            "source_reported_change_pct": "+2.87%",
+            "source_reported_timestamp": "Nov 11, 2026",
+            "source_market_status": "Closed",
+            "yahoo_meta_crosscheck": {
+              "regularMarketPrice": 173.73,
+              "regularMarketTime": 1794430800,
+              "time_ny": "2026-11-11T16:00:00-05:00",
+              "equal_to_nasdaq": true
+            },
+            "sources": [
+              {
+                "url": "https://api.nasdaq.com/api/quote/NVDA/info?assetclass=stocks",
+                "method": "GET",
+                "retrieved_at": "2026-11-12T02:13:31.706335+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/nasdaq_info_NVDA.json"
+              },
+              {
+                "url": "https://api.nasdaq.com/api/quote/NVDA/historical?assetclass=stocks&fromdate=2026-11-10&todate=2026-11-11&limit=10",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:12:55.429541+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/nasdaq_NVDA.json"
+              },
+              {
+                "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?range=5d&interval=1d&events=history",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:13:21.276317+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/yahoo_NVDA.json"
+              }
+            ]
+          },
+          {
+            "symbol": "AMZN",
+            "company": "Amazon.com, Inc. Common Stock",
+            "trade_date": "2026-11-11",
+            "timezone": "America/New_York",
+            "currency": "USD",
+            "value": "266.17",
+            "reference": "270.87",
+            "change": "-4.70",
+            "change_pct": "-1.735150",
+            "display_change_pct": "-1.74",
+            "value_type": "Nasdaq closed-market primaryData last sale, dated Nov11; not yet available in historical daily file",
+            "source_reported_change": "-4.70",
+            "source_reported_change_pct": "-1.74%",
+            "source_reported_timestamp": "Nov 11, 2026",
+            "source_market_status": "Closed",
+            "yahoo_meta_crosscheck": {
+              "regularMarketPrice": 266.17,
+              "regularMarketTime": 1794430801,
+              "time_ny": "2026-11-11T16:00:01-05:00",
+              "equal_to_nasdaq": true
+            },
+            "sources": [
+              {
+                "url": "https://api.nasdaq.com/api/quote/AMZN/info?assetclass=stocks",
+                "method": "GET",
+                "retrieved_at": "2026-11-12T02:13:31.706632+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/nasdaq_info_AMZN.json"
+              },
+              {
+                "url": "https://api.nasdaq.com/api/quote/AMZN/historical?assetclass=stocks&fromdate=2026-11-10&todate=2026-11-11&limit=10",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:12:55.429652+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/nasdaq_AMZN.json"
+              },
+              {
+                "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMZN?range=5d&interval=1d&events=history",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:13:21.276441+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/yahoo_AMZN.json"
+              }
+            ]
+          },
+          {
+            "symbol": "GOOGL",
+            "company": "Alphabet Inc. Class A Common Stock",
+            "trade_date": "2026-11-11",
+            "timezone": "America/New_York",
+            "currency": "USD",
+            "value": "293.45",
+            "reference": "287.38",
+            "change": "6.07",
+            "change_pct": "2.112186",
+            "display_change_pct": "2.11",
+            "value_type": "Nasdaq closed-market primaryData last sale, dated Nov11; not yet available in historical daily file",
+            "source_reported_change": "+6.07",
+            "source_reported_change_pct": "+2.11%",
+            "source_reported_timestamp": "Nov 11, 2026",
+            "source_market_status": "Closed",
+            "yahoo_meta_crosscheck": {
+              "regularMarketPrice": 293.45,
+              "regularMarketTime": 1794430800,
+              "time_ny": "2026-11-11T16:00:00-05:00",
+              "equal_to_nasdaq": true
+            },
+            "sources": [
+              {
+                "url": "https://api.nasdaq.com/api/quote/GOOGL/info?assetclass=stocks",
+                "method": "GET",
+                "retrieved_at": "2026-11-12T02:13:31.706944+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/nasdaq_info_GOOGL.json"
+              },
+              {
+                "url": "https://api.nasdaq.com/api/quote/GOOGL/historical?assetclass=stocks&fromdate=2026-11-10&todate=2026-11-11&limit=10",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:12:55.429756+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/nasdaq_GOOGL.json"
+              },
+              {
+                "url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?range=5d&interval=1d&events=history",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:13:21.276555+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/yahoo_GOOGL.json"
+              }
+            ]
+          },
+          {
+            "symbol": "META",
+            "company": "Meta Platforms, Inc. Class A Common Stock",
+            "trade_date": "2026-11-11",
+            "timezone": "America/New_York",
+            "currency": "USD",
+            "value": "628.77",
+            "reference": "641.39",
+            "change": "-12.62",
+            "change_pct": "-1.967602",
+            "display_change_pct": "-1.97",
+            "value_type": "Nasdaq closed-market primaryData last sale, dated Nov11; not yet available in historical daily file",
+            "source_reported_change": "-12.62",
+            "source_reported_change_pct": "-1.97%",
+            "source_reported_timestamp": "Nov 11, 2026",
+            "source_market_status": "Closed",
+            "yahoo_meta_crosscheck": {
+              "regularMarketPrice": 628.77,
+              "regularMarketTime": 1794430801,
+              "time_ny": "2026-11-11T16:00:01-05:00",
+              "equal_to_nasdaq": true
+            },
+            "sources": [
+              {
+                "url": "https://api.nasdaq.com/api/quote/META/info?assetclass=stocks",
+                "method": "GET",
+                "retrieved_at": "2026-11-12T02:13:31.707132+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/nasdaq_info_META.json"
+              },
+              {
+                "url": "https://api.nasdaq.com/api/quote/META/historical?assetclass=stocks&fromdate=2026-11-10&todate=2026-11-11&limit=10",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:12:55.429860+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/nasdaq_META.json"
+              },
+              {
+                "url": "https://query1.finance.yahoo.com/v8/finance/chart/META?range=5d&interval=1d&events=history",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:13:21.276678+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/yahoo_META.json"
+              }
+            ]
+          },
+          {
+            "symbol": "TSLA",
+            "company": "Tesla, Inc. Common Stock",
+            "trade_date": "2026-11-11",
+            "timezone": "America/New_York",
+            "currency": "USD",
+            "value": "390.8163",
+            "reference": "379.78",
+            "change": "11.0363",
+            "change_pct": "2.905972",
+            "display_change_pct": "2.91",
+            "value_type": "Nasdaq closed-market primaryData last sale, dated Nov11; not yet available in historical daily file",
+            "source_reported_change": "+11.0363",
+            "source_reported_change_pct": "+2.91%",
+            "source_reported_timestamp": "Nov 11, 2026",
+            "source_market_status": "Closed",
+            "yahoo_meta_crosscheck": {
+              "regularMarketPrice": 390.84,
+              "regularMarketTime": 1794430801,
+              "time_ny": "2026-11-11T16:00:01-05:00",
+              "equal_to_nasdaq": false
+            },
+            "sources": [
+              {
+                "url": "https://api.nasdaq.com/api/quote/TSLA/info?assetclass=stocks",
+                "method": "GET",
+                "retrieved_at": "2026-11-12T02:13:31.707248+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/nasdaq_info_TSLA.json"
+              },
+              {
+                "url": "https://api.nasdaq.com/api/quote/TSLA/historical?assetclass=stocks&fromdate=2026-11-10&todate=2026-11-11&limit=10",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:12:55.429963+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/nasdaq_TSLA.json"
+              },
+              {
+                "url": "https://query1.finance.yahoo.com/v8/finance/chart/TSLA?range=5d&interval=1d&events=history",
+                "method": "GET",
+                "request_body": null,
+                "retrieved_at": "2026-11-12T02:13:21.276803+00:00",
+                "http_status": 200,
+                "raw_evidence_file": "/Users/kaide/.hermes/cache/scratch/kmb1112-evidence/yahoo_TSLA.json"
+              }
+            ]
+          }
+        ]
+      },
+      "validation": {
+        "twse_source_date_valid": true,
+        "taifex_source_date_valid": true,
+        "common_cutoff_minute": "101200",
+        "cash_arithmetic_all_rows_valid": true,
+        "futures_long_minus_short_all_rows_valid": true,
+        "us_index_count": 5,
+        "mag7_count": 7,
+        "raw_evidence_count": 46,
+        "unsupported_values_fabricated": false
+      }
+    },
+    "news": {
+      "research_date": "2026-11-12",
+      "timezone": "Asia/Taipei",
+      "cutoff_local": "2026-11-12T10:12:33+08:00",
+      "scope": "台灣11月12日上午所見11月11日美國交易日隔夜新聞；資料擷取稍晚於鎖定時間。非開盤前08:30快照。",
+      "editorial_lead_zh": "AI股反彈不等於利率壓力解除：CoreWeave財報帶動科技與半導體情緒修復，但美元偏強、黃金跌破4,000美元，美債11日休市，不能把10日殖利率當成11日新收盤。加密ETF11日尚缺BlackRock資料，暫列淨流出不能當全日定稿。",
+      "news": [
+        {
+          "title_zh": "CoreWeave財報後AI交易回暖，仍須區分成長與獲利",
+          "source_date": "2026-11-11",
+          "source_display_updated": "November 11, 2026 5:17 PM（頁面未明示時區，不自行轉換）",
+          "event_date": "2026-11-10",
+          "facts_zh": [
+            "Reuters隔夜市場回顧：Nasdaq約漲1.6%、S&P 500約漲1.3%、Dow約漲0.5%；半導體類股約漲5.6%，CoreWeave約漲20%。此為通訊社四捨五入市場回顧，不是交易所精確收盤表，也不將其半導體數字自行標為SOX。",
+            "CoreWeave原始公告上調2026營收指引至130億至133億美元，資本支出指引370億至390億美元；Q4利息費用預估10.5億至11.5億美元。",
+            "Reuters所述2028年調整後獲利目標屬未來目標，並非目前GAAP已獲利。"
+          ],
+          "taiwan_inference_zh": "AI伺服器ODM、電源散熱、高速互連與PCB/CCL短線情緒偏正面；融資成本及實際交付仍是中期風險。不能直接推成台廠已新增訂單或認列收入。",
+          "urls": [
+            "https://www.charlotteobserver.com/news/business/article318037756.html",
+            "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx",
+            "https://wsau.com/2026/11/10/coreweave-beats-quarterly-revenue-estimates-as-ai-demand-defies-growing-doubts/"
+          ],
+          "evidence": "Reuters授權轉載內文與公司IR原始公告；11月10日財報是背景事件，不冒充11日晚間新發布。"
+        },
+        {
+          "title_zh": "Waller鷹派訊號仍是利率背景，並非隔夜新決議",
+          "event_time": "2026-11-10T04:00:00-05:00",
+          "facts_zh": [
+            "Fed官方講稿：Waller傾向12月升息25基點；對核心CPI約0.3%或更高的條件情境，提出應考慮50基點升息。",
+            "這是官員個人立場及條件式主張，不是FOMC已決定升息。"
+          ],
+          "taiwan_inference_zh": "長久期科技估值、美元融資與外資風險偏好仍受壓；與AI股單日反彈可同時成立。",
+          "urls": [
+            "https://www.federalreserve.gov/newsevents/speech/waller20261110a.htm",
+            "https://www.federalreserve.gov/newsevents/speech/files/waller20261110a.pdf"
+          ],
+          "evidence": "官方原文；日期較舊，僅作已知政策背景"
+        },
+        {
+          "title_zh": "H200出口管制漏洞報導，勿誤寫成新禁令或Nvidia直接售予黑名單學校",
+          "source_date": "2026-11-11",
+          "facts_zh": [
+            "Reuters報導西北工業大學10月透過中國境內供應商購得兩顆H200，並提及租用算力紀錄。"
+          ],
+          "taiwan_inference_zh": "可能增添AI晶片出口合規及政策波動風險，但未查得因此已發布新禁令。",
+          "urls": [
+            "https://www.reuters.com/world/pla-linked-chinese-university-bought-nvidia-h200-chips-despite-us-blacklist-2026-11-11/",
+            "https://www.fidelity.com/news/article/default/202611110440MIDNIGHTUSEQUITY_A3751366"
+          ],
+          "evidence": "Reuters完整搜尋索引與MT Newswires轉述；Reuters本文403。列二線候選，不視為直接查閱採購原始文件。",
+          "publish_priority": "secondary_candidate"
+        }
+      ],
+      "cross_assets": {
+        "gold": {
+          "instrument": "XAU/USD spot",
+          "value_usd_per_oz": 3983.2,
+          "change_pct": -1.21,
+          "as_of": "11月11日美國尾盤，報導快照；非官方統一收盤，也非11月12日10:12即時報價",
+          "source_display_timestamp": "Published Nov 11, 2026 10:00 PM; Updated 10:10 PM；頁面未明示時區",
+          "url": "https://www.kitco.com/news/article/2026-11-11/gold-falls-below-4000-dollar-surges-fed-hike-bets-rise-kitco-pm-report",
+          "corroboration_url": "https://www.charlotteobserver.com/news/business/article318037756.html",
+          "corroboration": "Reuters授權轉載確認跌約1%、跌回4,000美元以下；精確3983.20僅Kitco報價。",
+          "caveat": "Kitco標示AI輔助撰稿、編輯覆核；保留此來源限制。Reuters另有18:51 UTC快照3986.79、12月期金結算4000.50的搜尋結果，本文未開啟，不與現貨或尾盤報價混用。"
+        },
+        "usd": {
+          "instrument": "US dollar index (DXY)",
+          "approx_value": 102.9,
+          "approx_change_pct": 0.7,
+          "as_of": "11月11日美國交易時段報導快照；非官方收盤",
+          "url": "https://www.kitco.com/news/article/2026-11-11/gold-falls-below-4000-dollar-surges-fed-hike-bets-rise-kitco-pm-report",
+          "corroboration_url": "https://www.charlotteobserver.com/news/business/article318037756.html",
+          "corroboration": "Reuters回顧稱美元指數觸及2025年4月以來高位，美元兌日圓接近160；未取用盤中較早102.5混充收盤。"
+        },
+        "treasury": {
+          "observation_date": "2026-11-10",
+          "status": "latest_official_daily_reference; 11月11日Veterans Day現券休市",
+          "official_constant_maturity_yield_pct": {
+            "2y": 4.73,
+            "10y": 4.98,
+            "30y": 5.35
+          },
+          "prior_observation_date": "2026-11-09",
+          "prior_yield_pct": {
+            "2y": 4.56,
+            "10y": 4.88,
+            "30y": 5.26
+          },
+          "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve",
+          "holiday_confirmation_url": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+          "caveat": "官方固定到期殖利率不是通訊社盤中成交殖利率；不與Reuters10日盤中2Y4.731%、10Y4.988%當成相同定義。FRED索引僅至11月9日4.88%，落後財政部CSV，不拿來替換。"
+        },
+        "crypto": {
+          "source": "CoinGecko direct API",
+          "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd,btc&include_24hr_change=true&include_last_updated_at=true",
+          "retrieved_at": "2026-11-12T02:13:05.915534+00:00",
+          "btc_usd": 73785,
+          "btc_24h_change_pct": 0.5653528373567019,
+          "btc_source_updated_at": "2026-11-12T02:12:47+00:00",
+          "eth_usd": 2056.03,
+          "eth_24h_change_pct": 0.3344774869946174,
+          "eth_source_updated_at": "2026-11-12T02:12:40+00:00",
+          "eth_btc_reported": 0.02789824,
+          "eth_btc_reported_24h_change_pct": -0.04920196070084828,
+          "eth_btc_derived_from_usd": 0.027865148742969442,
+          "status": "近即時聚合行情，資料時間約台北10:12，晚於鎖定時間數秒；非交易所收盤",
+          "caveat": "API的BTC/BTC竟回傳1.001189，且其直接ETH/BTC與同次USD價格相除有落差；主文宜用USD交叉推算約0.02787並標計算值，不將直接報價及其漲跌幅混用。BTC與ETH原始更新時間相差7秒。"
+        }
+      },
+      "etf_flows": {
+        "unit": "USD million",
+        "definition": "Farside各基金淨申贖估計，非ETF股價、成交量或鏈上轉帳；11日缺值不等於0",
+        "retrieval": "第一次web_extract取到完整日期表；二次web_extract只回導航說明，HTTP原站403，瀏覽器Cloudflare驗證牆。以下是實際取到的表格版本，未聲稱刷新定稿。",
+        "btc": {
+          "url": "https://farside.co.uk/btc/",
+          "latest_complete_date": "2026-11-10",
+          "latest_complete_total": -95.0,
+          "latest_complete_funds": {
+            "IBIT": -78.2,
+            "FBTC": -36.8,
+            "BITB": 0,
+            "ARKB": 0,
+            "BTCO": 0,
+            "EZBC": 0,
+            "BRRR": 0,
+            "HODL": 0,
+            "BTCW": 0,
+            "MSBT": 20.0,
+            "GBTC": 0,
+            "BTC": 0
+          },
+          "latest_partial_date": "2026-11-11",
+          "displayed_partial_total": -30.1,
+          "reported_funds": {
+            "IBIT": null,
+            "FBTC": 0,
+            "BITB": 0,
+            "ARKB": 0,
+            "BTCO": 0,
+            "EZBC": 0,
+            "BRRR": 0,
+            "HODL": 0,
+            "BTCW": 0,
+            "MSBT": 9.0,
+            "GBTC": -39.1,
+            "BTC": 0
+          },
+          "missing_funds": [
+            "IBIT"
+          ],
+          "status": "partial_not_final",
+          "editorial_zh": "11月10日完整列淨流出9,500萬美元；11月11日暫列淨流出3,010萬美元，IBIT未報，不可作全日總額。"
+        },
+        "eth": {
+          "url": "https://farside.co.uk/eth/",
+          "latest_complete_date": "2026-11-10",
+          "latest_complete_total": -1.3,
+          "latest_complete_funds": {
+            "ETHA": 0,
+            "ETHB": 1.1,
+            "FETH": 0,
+            "ETHW": 0,
+            "TETH": -0.4,
+            "ETHV": 0,
+            "QETH": 0,
+            "EZET": 0,
+            "MSSE": 0,
+            "ETHE": 0,
+            "ETH": -2.0
+          },
+          "latest_partial_date": "2026-11-11",
+          "displayed_partial_total": -9.7,
+          "reported_funds": {
+            "ETHA": null,
+            "ETHB": null,
+            "FETH": -4.1,
+            "ETHW": -4.8,
+            "TETH": 0,
+            "ETHV": 0,
+            "QETH": 0,
+            "EZET": -0.8,
+            "MSSE": 0,
+            "ETHE": 0,
+            "ETH": 0
+          },
+          "missing_funds": [
+            "ETHA",
+            "ETHB"
+          ],
+          "status": "partial_not_final",
+          "editorial_zh": "11月10日完整列淨流出130萬美元；11月11日暫列淨流出970萬美元，ETHA、ETHB未報，不可作全日總額。"
+        }
+      },
+      "official_calendar": [
+        {
+          "event": "鴻海FY26 Q3法說",
+          "event_date": "2026-11-12",
+          "event_time_taipei": "15:00",
+          "status": "scheduled_not_released_at_cutoff",
+          "url": "https://www.foxconn.com/en-us/investor-relations/investor-relations-activities/event-calendar",
+          "time_corroboration_url": "https://irplatform.tdcc.com.tw/ir/event/list?offset=41&max=20&lang=zh",
+          "caveat": "公司官網搜尋索引確認日期；15:00由集保IR平台索引與多個日曆交叉確認，提取正文遺失時間欄。不得預寫結果。"
+        },
+        {
+          "event": "美國每週初領失業救濟金",
+          "event_time_et": "2026-11-12T08:30:00-05:00",
+          "event_time_taipei": "2026-11-12T21:30:00+08:00",
+          "status": "scheduled_not_released_at_cutoff",
+          "url": "https://oui.doleta.gov/unemploy/claims_arch.asp",
+          "caveat": "官方例行週四08:30 EST發布；11月12日不在假日例外清單，未填預測或實際值。"
+        },
+        {
+          "event": "Fed Barr演說：Artificial Intelligence and Inequality",
+          "event_time_et": "2026-11-12T10:00:00-05:00",
+          "event_time_taipei": "2026-11-12T23:00:00+08:00",
+          "status": "scheduled",
+          "url": "https://www.federalreserve.gov/newsevents/2026-november.htm",
+          "caveat": "演說主題是AI與不平等，不先假定將釋出利率訊號。"
+        },
+        {
+          "event": "美國30年期公債標售",
+          "event_date_et": "2026-11-12",
+          "status": "official_tentative_schedule",
+          "url": "https://home.treasury.gov/system/files/221/TentativeAuctionScheduleQ42026.pdf",
+          "caveat": "官方暫定表確認日期；本次未取得正式標售公告時間，故不填13:00或台北換算時間，也不填得標利率。"
+        },
+        {
+          "event": "美國10月PPI",
+          "event_time_et": "2026-11-13T08:30:00-05:00",
+          "event_time_taipei": "2026-11-13T21:30:00+08:00",
+          "status": "scheduled",
+          "url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+          "caveat": "不是11月12日晚間。BLS日曆10月CPI列11月10日已發布，不能照慣例誤填成11月12日CPI。"
+        },
+        {
+          "event": "10月27–28日FOMC會議紀要",
+          "event_time_et": "2026-11-18T14:00:00-05:00",
+          "event_time_taipei": "2026-11-19T03:00:00+08:00",
+          "status": "scheduled",
+          "url": "https://www.federalreserve.gov/newsevents/2026-november.htm"
+        }
+      ],
+      "quality_boundaries": [
+        "未查核Trump/Musk當日X原文，不產出直接發文或社群情緒結論。",
+        "沒有以WorldMonitor摘要替代官方來源；此包不需要WorldMonitor即可取得主要資料。",
+        "金價、美元是11日晚盤報導快照；美債是10日官方日資料；加密是12日上午API快照，三種時間基準明確分開。",
+        "Reuters市場回顧末段寫Wednesday yields surge，但同篇亦明言11日美債休市；不採用該矛盾句，官方日期表及休市日曆優先。",
+        "無repository修改、無對外發佈。"
+      ],
+      "issues": [
+        "Coinbase API TLS驗證失敗，未降低TLS驗證；改用CoinGecko直接API。",
+        "Treasury舊TextView網址404、XML超時；改用正式CSV透過web_extract成功。",
+        "Farside原站403/Cloudflare，完整表僅首次擷取成功；已明確標示未定稿與重抓限制。",
+        "系統python沒有bs4，未安裝；改用標準庫處理。"
+      ]
+    },
+    "ark_audit": {
+      "audit_date": "2026-11-12",
+      "audited_at": "2026-11-12T02:15:04.043508+00:00",
+      "mode": "read-only originals and repository; audit output only",
+      "source_path": "/Users/kaide/Pictures/方舟運算截圖/ark_stocks_latest.json",
+      "resolved_source_path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-12_09-05-05/ark_stocks.json",
+      "expected_run": "2026-11-12_09-05-05",
+      "resolved_target_matches": true,
+      "source_sha256": "c6986fc01997b0001d426718cf74fbce8d04cad090c567c9d2bc10c094778389",
+      "success": {
+        "ok": true,
+        "status": "success",
+        "date": "2026-11-12",
+        "startedAt": "2026-11-12T09:05:05+08:00",
+        "finishedAt": "2026-11-12T09:08:09+08:00",
+        "runId": "2026-11-12_09-05-05"
+      },
+      "source_generatedAt": "2026-11-12T01:08:09.480746+00:00",
+      "source_generated_taipei_date": "2026-11-12",
+      "hashes": [
+        {
+          "file": "ark_ocr.json",
+          "expected": "802b942f1c0747c0857b9a6dbdf749c9b7ec07d4b7c6fd73b4800198f5d11337",
+          "actual": "802b942f1c0747c0857b9a6dbdf749c9b7ec07d4b7c6fd73b4800198f5d11337",
+          "ok": true
+        },
+        {
+          "file": "ark_stocks.json",
+          "expected": "c6986fc01997b0001d426718cf74fbce8d04cad090c567c9d2bc10c094778389",
+          "actual": "c6986fc01997b0001d426718cf74fbce8d04cad090c567c9d2bc10c094778389",
+          "ok": true
+        },
+        {
+          "file": "ark_stocks_ax.json",
+          "expected": "9f7a6faaf380562f1bffc2b533158078341ef7e2126c7a70e2816db168dc2cdd",
+          "actual": "9f7a6faaf380562f1bffc2b533158078341ef7e2126c7a70e2816db168dc2cdd",
+          "ok": true
+        },
+        {
+          "file": "ark_validation.json",
+          "expected": "e4f4d9a3d21e7b2541eda84631757ee3c6e75292277ba0d290365dc919294bf4",
+          "actual": "e4f4d9a3d21e7b2541eda84631757ee3c6e75292277ba0d290365dc919294bf4",
+          "ok": true
+        },
+        {
+          "file": "ark_indicators.json",
+          "expected": "00224a290d4ff350e1c69d8b52c7c516303e5b03d47417e01f663c336bdc8847",
+          "actual": "00224a290d4ff350e1c69d8b52c7c516303e5b03d47417e01f663c336bdc8847",
+          "ok": true
+        },
+        {
+          "file": "00_運算五指標.png",
+          "expected": "ef8acf2a6c695487b157a3e306ca095752c342f751572989b8b05f659d28d8e8",
+          "actual": "ef8acf2a6c695487b157a3e306ca095752c342f751572989b8b05f659d28d8e8",
+          "ok": true
+        },
+        {
+          "file": "01_風控水位.png",
+          "expected": "33de1354db2de6e334494243b8a4826908efa9076b4b74bdfa4a8ea1baba1186",
+          "actual": "33de1354db2de6e334494243b8a4826908efa9076b4b74bdfa4a8ea1baba1186",
+          "ok": true
+        },
+        {
+          "file": "02_ETF價值區_1.png",
+          "expected": "73d42992b656a33230ea5bd396a3fb065406d8f488b949f8b634e57af677c09a",
+          "actual": "73d42992b656a33230ea5bd396a3fb065406d8f488b949f8b634e57af677c09a",
+          "ok": true
+        },
+        {
+          "file": "03_ETF價值區_2.png",
+          "expected": "6e45e7f08ac1c7d87caa53aafd5d1fb2263d2b0443d83a3f65b9bb3845c08b52",
+          "actual": "6e45e7f08ac1c7d87caa53aafd5d1fb2263d2b0443d83a3f65b9bb3845c08b52",
+          "ok": true
+        },
+        {
+          "file": "04_ETF升溫區_1.png",
+          "expected": "0ec3ea7f3fdabf9c642718d2b1165ea2383b0ef727122bbbc108525f9653bbc4",
+          "actual": "0ec3ea7f3fdabf9c642718d2b1165ea2383b0ef727122bbbc108525f9653bbc4",
+          "ok": true
+        },
+        {
+          "file": "05_ETF升溫區_2.png",
+          "expected": "cc1743ce666a1010daf0cce3a32e3bf558d12acfeaaaff65ba1bfcea37743f22",
+          "actual": "cc1743ce666a1010daf0cce3a32e3bf558d12acfeaaaff65ba1bfcea37743f22",
+          "ok": true
+        },
+        {
+          "file": "06_產業價值區_1.png",
+          "expected": "5d00ecc9be3946b841eb37cc0e2c07291b9ebe369ad41424fa0b65d7d13a74bd",
+          "actual": "5d00ecc9be3946b841eb37cc0e2c07291b9ebe369ad41424fa0b65d7d13a74bd",
+          "ok": true
+        },
+        {
+          "file": "07_產業價值區_2.png",
+          "expected": "f22fa4437d60394e74f913d3ade7bda23dbc8219741e0906fa8434522fbff941",
+          "actual": "f22fa4437d60394e74f913d3ade7bda23dbc8219741e0906fa8434522fbff941",
+          "ok": true
+        },
+        {
+          "file": "08_產業價值區_3.png",
+          "expected": "2d1d74493f720b8473b13a2dd0cd06f4a03704cbcc8be2d9d1927f098f3583c3",
+          "actual": "2d1d74493f720b8473b13a2dd0cd06f4a03704cbcc8be2d9d1927f098f3583c3",
+          "ok": true
+        },
+        {
+          "file": "09_產業價值區_4.png",
+          "expected": "25f5267b81f05b29a44a6da169201b581e6d750c7891aca475a242765e478574",
+          "actual": "25f5267b81f05b29a44a6da169201b581e6d750c7891aca475a242765e478574",
+          "ok": true
+        },
+        {
+          "file": "10_產業價值區_5.png",
+          "expected": "ca80968df173ad945d53f0fee15dbfff00a058517513a296a83a072adf500478",
+          "actual": "ca80968df173ad945d53f0fee15dbfff00a058517513a296a83a072adf500478",
+          "ok": true
+        },
+        {
+          "file": "11_產業價值區_6.png",
+          "expected": "409d92318749a82794feffec479e73d394ccf60fe94f3503bb13d331de26761f",
+          "actual": "409d92318749a82794feffec479e73d394ccf60fe94f3503bb13d331de26761f",
+          "ok": true
+        },
+        {
+          "file": "12_產業升溫區_1.png",
+          "expected": "7b8d9919874bb107e25e7ed0d29a4d31c506c3fc1b0ff6dc44cf802ed0cdd412",
+          "actual": "7b8d9919874bb107e25e7ed0d29a4d31c506c3fc1b0ff6dc44cf802ed0cdd412",
+          "ok": true
+        },
+        {
+          "file": "13_產業升溫區_2.png",
+          "expected": "c64f417c68023760cf7e9ff09c011055b88d9d6fcd723f5f995742745665b39b",
+          "actual": "c64f417c68023760cf7e9ff09c011055b88d9d6fcd723f5f995742745665b39b",
+          "ok": true
+        },
+        {
+          "file": "14_產業升溫區_3.png",
+          "expected": "95f67b391e0794e589ac4097babd4533b3ac8d9d3fb94ce379bd67e7e3a8d3ee",
+          "actual": "95f67b391e0794e589ac4097babd4533b3ac8d9d3fb94ce379bd67e7e3a8d3ee",
+          "ok": true
+        },
+        {
+          "file": "15_產業升溫區_4.png",
+          "expected": "11d63598b65ed7ff99ddb3001307ffa56bd2bc2cc8c38a8a0cddc22a5a09a94e",
+          "actual": "11d63598b65ed7ff99ddb3001307ffa56bd2bc2cc8c38a8a0cddc22a5a09a94e",
+          "ok": true
+        },
+        {
+          "file": "16_產業升溫區_5.png",
+          "expected": "4a3dfb6339e7871103c32ebfe461d6ca912158173579207796b6cc4b45aa50e1",
+          "actual": "4a3dfb6339e7871103c32ebfe461d6ca912158173579207796b6cc4b45aa50e1",
+          "ok": true
+        },
+        {
+          "file": "17_產業升溫區_6.png",
+          "expected": "0f7a494e8be0aba47bbd582490a2cf9b25948c9c607027c5918fba389e69abef",
+          "actual": "0f7a494e8be0aba47bbd582490a2cf9b25948c9c607027c5918fba389e69abef",
+          "ok": true
+        },
+        {
+          "file": "capture_manifest.jsonl",
+          "expected": "557e59ced178660cf7eaf57963789ab298718c475bc052c0d87701c51ab1ae8c",
+          "actual": "557e59ced178660cf7eaf57963789ab298718c475bc052c0d87701c51ab1ae8c",
+          "ok": true
+        },
+        {
+          "file": "ark_ax_rows.jsonl",
+          "expected": "e884ef0b93c524238b86cac76a34bbadaf5667c36403959bfc2b4836143c1cc7",
+          "actual": "e884ef0b93c524238b86cac76a34bbadaf5667c36403959bfc2b4836143c1cc7",
+          "ok": true
+        }
+      ],
+      "all_success_hashes_verified": 25,
+      "trading_day": {
+        "ok": true,
+        "status": "confirmed",
+        "stage": "trading_day_check",
+        "reason": "年度行事曆開市；台北市停班與交易所特殊停市查核通過。",
+        "runId": "2026-11-12_09-05-05",
+        "version": "20261030T102633-6e4b3b613515",
+        "trigger": "launchagent-entry",
+        "date": "2026-11-12",
+        "timezone": "Asia/Taipei",
+        "startedAt": "2026-11-12T09:05:05+08:00",
+        "finishedAt": "2026-11-12T09:05:05+08:00",
+        "generatedAt": "2026-11-12T09:05:05+08:00",
+        "elapsedSeconds": 0,
+        "elapsedHuman": "0m 0s",
+        "tokenUsage": {
+          "tokens": 0,
+          "note": "Local automation; no LLM API used by this job."
+        },
+        "source": "local-market-dgpa-html",
+        "localStatusFile": "/Users/kaide/Library/Application Support/com.kaide.taiwan-market-day/market-status.json",
+        "manual": false,
+        "checkedAt": "2026-11-12T01:05:05.403Z",
+        "validUntil": "2026-11-12T01:08:05.085Z"
+      },
+      "section_checks": {
+        "ETF價值區": {
+          "actual": 10,
+          "expected": 10,
+          "summary": 10,
+          "ax": 10,
+          "validation": {
+            "ok": true,
+            "ocrCount": 10,
+            "axCount": 10,
+            "missingInAx": [],
+            "missingInOcr": [],
+            "nameDifferences": []
+          },
+          "ranks_contiguous": true
+        },
+        "ETF升溫區": {
+          "actual": 7,
+          "expected": 7,
+          "summary": 7,
+          "ax": 7,
+          "validation": {
+            "ok": true,
+            "ocrCount": 7,
+            "axCount": 7,
+            "missingInAx": [],
+            "missingInOcr": [],
+            "nameDifferences": []
+          },
+          "ranks_contiguous": true
+        },
+        "產業價值區": {
+          "actual": 30,
+          "expected": 30,
+          "summary": 30,
+          "ax": 30,
+          "validation": {
+            "ok": true,
+            "ocrCount": 30,
+            "axCount": 30,
+            "missingInAx": [],
+            "missingInOcr": [],
+            "nameDifferences": []
+          },
+          "ranks_contiguous": true
+        },
+        "產業升溫區": {
+          "actual": 30,
+          "expected": 30,
+          "summary": 30,
+          "ax": 30,
+          "validation": {
+            "ok": true,
+            "ocrCount": 30,
+            "axCount": 30,
+            "missingInAx": [],
+            "missingInOcr": [],
+            "nameDifferences": []
+          },
+          "ranks_contiguous": true
+        }
+      },
+      "total_cards": 77,
+      "unique_symbols": 77,
+      "duplicate_codes_in_final_rows": {},
+      "upstream_duplicates_removed": 25,
+      "code_format_policy": "4 digit equity, 5 digit ETF, optional ETF letter suffix, or six-digit DR; no normalization",
+      "invalid_code_format": [],
+      "name_differences_ax": [],
+      "names_official_map_verified": false,
+      "price_differences": [
+        {
+          "section": "ETF價值區",
+          "code": "00918",
+          "name": "大華優利高填息30",
+          "ocr_price": "33.01",
+          "ax_price": "33",
+          "kind": "numeric_snapshot_difference",
+          "sourceFile": "02_ETF價值區_1.png",
+          "ocr_columns": [
+            {
+              "x": 252.0,
+              "y": 776.0,
+              "text": "70.11(-0.33%)"
+            },
+            {
+              "x": 295.0,
+              "y": 744.0,
+              "text": "33.01"
+            },
+            {
+              "x": 418.0,
+              "y": 742.0,
+              "text": "33.12"
+            },
+            {
+              "x": 430.0,
+              "y": 774.0,
+              "text": "0%"
+            }
+          ],
+          "ax_columns": [
+            "33",
+            "▼0.12(-0.36%)",
+            "33.12",
+            "0%",
+            "台灣",
+            "3"
+          ],
+          "ax_description": "大華優利高填息30, 00918, 33, ▼0.12(-0.36%), 33.12, 0%, 台灣, 3"
+        },
+        {
+          "section": "ETF價值區",
+          "code": "00898",
+          "name": "國泰基因免疫革命",
+          "ocr_price": "11.32",
+          "ax_price": null,
+          "kind": "missing_price_replaced_by_nonprice_column",
+          "sourceFile": "03_ETF價值區_2.png",
+          "ocr_columns": [
+            {
+              "x": 302.0,
+              "y": 638.0,
+              "text": "(-%)"
+            },
+            {
+              "x": 412.0,
+              "y": 637.0,
+              "text": "0.27%"
+            },
+            {
+              "x": 420.0,
+              "y": 605.0,
+              "text": "11.32"
+            }
+          ],
+          "ax_columns": [
+            "-",
+            "(-%)",
+            "11.32",
+            "0.27%",
+            "全球",
+            "5"
+          ],
+          "ax_description": "國泰基因免疫革命, 00898, -, (-%), 11.32, 0.27%, 全球, 5"
+        },
+        {
+          "section": "ETF價值區",
+          "code": "00938",
+          "name": "凱基優選30",
+          "ocr_price": "26.6",
+          "ax_price": null,
+          "kind": "missing_price_replaced_by_nonprice_column",
+          "sourceFile": "03_ETF價值區_2.png",
+          "ocr_columns": [
+            {
+              "x": 302.0,
+              "y": 746.0,
+              "text": "(-%)"
+            },
+            {
+              "x": 411.0,
+              "y": 745.0,
+              "text": "0.49%"
+            },
+            {
+              "x": 423.0,
+              "y": 712.0,
+              "text": "26.6"
+            }
+          ],
+          "ax_columns": [
+            "-",
+            "(-%)",
+            "26.6",
+            "0.49%",
+            "台灣",
+            "2"
+          ],
+          "ax_description": "凱基優選30, 00938, -, (-%), 26.6, 0.49%, 台灣, 2"
+        },
+        {
+          "section": "ETF升溫區",
+          "code": "00986B",
+          "name": "FT金融債10+",
+          "ocr_price": "9.77",
+          "ax_price": null,
+          "kind": "missing_price_replaced_by_nonprice_column",
+          "sourceFile": "04_ETF升溫區_1.png",
+          "ocr_columns": [
+            {
+              "x": 302.0,
+              "y": 452.0,
+              "text": "(-%)"
+            },
+            {
+              "x": 405.0,
+              "y": 451.0,
+              "text": "-0.44%"
+            },
+            {
+              "x": 425.0,
+              "y": 418.0,
+              "text": "9.77"
+            }
+          ],
+          "ax_columns": [
+            "-",
+            "(-%)",
+            "9.77",
+            "-0.44%",
+            "美國",
+            "1"
+          ],
+          "ax_description": "FT金融債10+, 00986B, -, (-%), 9.77, -0.44%, 美國, 1"
+        },
+        {
+          "section": "ETF升溫區",
+          "code": "00856B",
+          "name": "永豐1-3年美公債",
+          "ocr_price": "38.83",
+          "ax_price": null,
+          "kind": "missing_price_replaced_by_nonprice_column",
+          "sourceFile": "04_ETF升溫區_1.png",
+          "ocr_columns": [
+            {
+              "x": 302.0,
+              "y": 668.0,
+              "text": "(-%)"
+            },
+            {
+              "x": 405.0,
+              "y": 665.0,
+              "text": "-0.26%"
+            },
+            {
+              "x": 416.0,
+              "y": 635.0,
+              "text": "38.83"
+            }
+          ],
+          "ax_columns": [
+            "-",
+            "(-%)",
+            "38.83",
+            "-0.26%",
+            "美國",
+            "7"
+          ],
+          "ax_description": "永豐1-3年美公債, 00856B, -, (-%), 38.83, -0.26%, 美國, 7"
+        },
+        {
+          "section": "ETF升溫區",
+          "code": "00992B",
+          "name": "街口優息非投債",
+          "ocr_price": "10.18",
+          "ax_price": null,
+          "kind": "missing_price_replaced_by_nonprice_column",
+          "sourceFile": "04_ETF升溫區_1.png",
+          "ocr_columns": [
+            {
+              "x": 302.0,
+              "y": 776.0,
+              "text": "(-%)"
+            },
+            {
+              "x": 406.0,
+              "y": 773.0,
+              "text": "-0.06%"
+            },
+            {
+              "x": 419.0,
+              "y": 742.5,
+              "text": "10.18"
+            }
+          ],
+          "ax_columns": [
+            "-",
+            "(-%)",
+            "10.18",
+            "-0.06%",
+            "全球",
+            "0"
+          ],
+          "ax_description": "街口優息非投債, 00992B, -, (-%), 10.18, -0.06%, 全球, 0"
+        },
+        {
+          "section": "產業價值區",
+          "code": "2356",
+          "name": "英業達",
+          "ocr_price": "49.65",
+          "ax_price": "49.6",
+          "kind": "numeric_snapshot_difference",
+          "sourceFile": "06_產業價值區_1.png",
+          "ocr_columns": [
+            {
+              "x": 226.0,
+              "y": 453.0,
+              "text": "71.55(-3.03%)"
+            },
+            {
+              "x": 268.0,
+              "y": 420.0,
+              "text": "49.65"
+            },
+            {
+              "x": 386.0,
+              "y": 434.0,
+              "text": "-18.93"
+            },
+            {
+              "x": 515.0,
+              "y": 434.0,
+              "text": "46.0"
+            }
+          ],
+          "ax_columns": [
+            "49.6",
+            "▼1.6(-3.13%)",
+            "-18.93",
+            "46.02",
+            "43.08",
+            "4.17",
+            "1.61",
+            "0.94",
+            "84.74",
+            "108.26",
+            "66.21",
+            "-101.35",
+            "286.78",
+            "26年",
+            "伺服器組裝代工"
+          ],
+          "ax_description": "英業達, 2356, 49.6, ▼1.6(-3.13%), -18.93, 46.02, 43.08, 4.17, 1.61, 0.94, 84.74, 108.26, 66.21, -101.35, 286.78, 26年, 伺服器組裝代工"
+        },
+        {
+          "section": "產業價值區",
+          "code": "3711",
+          "name": "日月光投控",
+          "ocr_price": "615",
+          "ax_price": "614",
+          "kind": "numeric_snapshot_difference",
+          "sourceFile": "08_產業價值區_3.png",
+          "ocr_columns": [
+            {
+              "x": 240.0,
+              "y": 685.0,
+              "text": "72(-0.32%)"
+            },
+            {
+              "x": 281.0,
+              "y": 652.0,
+              "text": "615"
+            },
+            {
+              "x": 401.0,
+              "y": 666.0,
+              "text": "0.55"
+            },
+            {
+              "x": 518.0,
+              "y": 666.0,
+              "text": "47.1"
+            }
+          ],
+          "ax_columns": [
+            "614",
+            "▼3(-0.49%)",
+            "0.55",
+            "47.13",
+            "32.18",
+            "22.1",
+            "13.57",
+            "11.42",
+            "63.53",
+            "115.6",
+            "80.62",
+            "7.33",
+            "433.37",
+            "9年",
+            "IC封裝測試"
+          ],
+          "ax_description": "日月光投控, 3711, 614, ▼3(-0.49%), 0.55, 47.13, 32.18, 22.1, 13.57, 11.42, 63.53, 115.6, 80.62, 7.33, 433.37, 9年, IC封裝測試"
+        },
+        {
+          "section": "產業價值區",
+          "code": "4958",
+          "name": "臻鼎-KY",
+          "ocr_price": "455",
+          "ax_price": "454.5",
+          "kind": "numeric_snapshot_difference",
+          "sourceFile": "08_產業價值區_3.png",
+          "ocr_columns": [
+            {
+              "x": 248.0,
+              "y": 900.0,
+              "text": "76(-1.3%)"
+            },
+            {
+              "x": 279.0,
+              "y": 867.0,
+              "text": "455"
+            },
+            {
+              "x": 403.0,
+              "y": 880.0,
+              "text": "3.18"
+            },
+            {
+              "x": 515.0,
+              "y": 881.0,
+              "text": "39.9"
+            }
+          ],
+          "ax_columns": [
+            "454.5",
+            "▼6.5(-1.41%)",
+            "3.18",
+            "39.99",
+            "24.75",
+            "27.72",
+            "13.49",
+            "10.7",
+            "43.29",
+            "170.24",
+            "132.88",
+            "-232.81",
+            "67.09",
+            "15年",
+            "軟板"
+          ],
+          "ax_description": "臻鼎-KY, 4958, 454.5, ▼6.5(-1.41%), 3.18, 39.99, 24.75, 27.72, 13.49, 10.7, 43.29, 170.24, 132.88, -232.81, 67.09, 15年, 軟板"
+        },
+        {
+          "section": "產業價值區",
+          "code": "2454",
+          "name": "聯發科",
+          "ocr_price": "4,030",
+          "ax_price": "4,020",
+          "kind": "numeric_snapshot_difference",
+          "sourceFile": "11_產業價值區_6.png",
+          "ocr_columns": [
+            {
+              "x": 256.1,
+              "y": 745.3,
+              "text": "440(1%)"
+            },
+            {
+              "x": 267.0,
+              "y": 717.0,
+              "text": "4,030"
+            },
+            {
+              "x": 393.0,
+              "y": 729.0,
+              "text": "-0.67"
+            },
+            {
+              "x": 524.0,
+              "y": 727.0,
+              "text": "5.7"
+            }
+          ],
+          "ax_columns": [
+            "4,020",
+            "▲30(0.75%)",
+            "-0.67",
+            "5.77",
+            "5.35",
+            "46.2",
+            "15.03",
+            "16.17",
+            "45.06",
+            "123.94",
+            "88.4",
+            "-237.35",
+            "-68.02",
+            "27年",
+            "IC設計"
+          ],
+          "ax_description": "聯發科, 2454, 4,020, ▲30(0.75%), -0.67, 5.77, 5.35, 46.2, 15.03, 16.17, 45.06, 123.94, 88.4, -237.35, -68.02, 27年, IC設計"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "8099",
+          "name": "大世科",
+          "ocr_price": "156.5",
+          "ax_price": "157",
+          "kind": "numeric_snapshot_difference",
+          "sourceFile": "12_產業升溫區_1.png",
+          "ocr_columns": [
+            {
+              "x": 245.0,
+              "y": 668.0,
+              "text": "46(3.99%)"
+            },
+            {
+              "x": 270.0,
+              "y": 635.0,
+              "text": "156.5"
+            },
+            {
+              "x": 386.0,
+              "y": 650.0,
+              "text": "-16.36"
+            },
+            {
+              "x": 519.0,
+              "y": 648.0,
+              "text": "87.0"
+            }
+          ],
+          "ax_columns": [
+            "157",
+            "▲6.5(4.32%)",
+            "-16.36",
+            "87.01",
+            "29.67",
+            "22.59",
+            "7.48",
+            "5.82",
+            "56.68",
+            "166.19",
+            "112.35",
+            "-494.38",
+            "-1,408.35",
+            "24年",
+            "系統整合"
+          ],
+          "ax_description": "大世科, 8099, 157, ▲6.5(4.32%), -16.36, 87.01, 29.67, 22.59, 7.48, 5.82, 56.68, 166.19, 112.35, -494.38, -1,408.35, 24年, 系統整合"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "6148",
+          "name": "驊宏資",
+          "ocr_price": "53.8",
+          "ax_price": "54.1",
+          "kind": "numeric_snapshot_difference",
+          "sourceFile": "13_產業升溫區_2.png",
+          "ocr_columns": [
+            {
+              "x": 238.0,
+              "y": 676.0,
+              "text": "40.7(1.32%)"
+            },
+            {
+              "x": 276.0,
+              "y": 644.0,
+              "text": "53.8"
+            },
+            {
+              "x": 388.0,
+              "y": 657.0,
+              "text": "107.59"
+            }
+          ],
+          "ax_columns": [
+            "54.1",
+            "▲1(1.88%)",
+            "107.59",
+            "145.1",
+            "-17.15",
+            "25.84",
+            "3.85",
+            "3.77",
+            "53.25",
+            "178.5",
+            "146.04",
+            "-64.7",
+            "-75.58",
+            "8年",
+            "系統整合"
+          ],
+          "ax_description": "驊宏資, 6148, 54.1, ▲1(1.88%), 107.59, 145.1, -17.15, 25.84, 3.85, 3.77, 53.25, 178.5, 146.04, -64.7, -75.58, 8年, 系統整合"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "1802",
+          "name": "台玻",
+          "ocr_price": "80",
+          "ax_price": "80.1",
+          "kind": "numeric_snapshot_difference",
+          "sourceFile": "15_產業升溫區_4.png",
+          "ocr_columns": [
+            {
+              "x": 242.0,
+              "y": 694.0,
+              "text": "43.3(4.3%)"
+            },
+            {
+              "x": 286.0,
+              "y": 660.0,
+              "text": "80"
+            },
+            {
+              "x": 394.0,
+              "y": 674.0,
+              "text": "12.04"
+            },
+            {
+              "x": 515.0,
+              "y": 675.0,
+              "text": "56.4"
+            }
+          ],
+          "ax_columns": [
+            "80.1",
+            "▲3.4(4.43%)",
+            "12.04",
+            "56.49",
+            "22.62",
+            "31.6",
+            "23.94",
+            "19.91",
+            "41.86",
+            "134.5",
+            "89.16",
+            "39.06",
+            "12.84",
+            "2年",
+            "玻璃"
+          ],
+          "ax_description": "台玻, 1802, 80.1, ▲3.4(4.43%), 12.04, 56.49, 22.62, 31.6, 23.94, 19.91, 41.86, 134.5, 89.16, 39.06, 12.84, 2年, 玻璃"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "3703",
+          "name": "欣陸",
+          "ocr_price": "23.4",
+          "ax_price": "23.35",
+          "kind": "numeric_snapshot_difference",
+          "sourceFile": "15_產業升溫區_4.png",
+          "ocr_columns": [
+            {
+              "x": 225.0,
+              "y": 801.0,
+              "text": "70.45(-1.89%)"
+            },
+            {
+              "x": 276.0,
+              "y": 769.0,
+              "text": "23.4"
+            },
+            {
+              "x": 386.0,
+              "y": 783.0,
+              "text": "-33.39"
+            },
+            {
+              "x": 515.0,
+              "y": 783.0,
+              "text": "49.5"
+            }
+          ],
+          "ax_columns": [
+            "23.35",
+            "▼0.5(-2.1%)",
+            "-33.39",
+            "49.59",
+            "7.13",
+            "20.37",
+            "13.72",
+            "11.58",
+            "70.8",
+            "127.51",
+            "38.35",
+            "-39.04",
+            "-543.76",
+            "11年",
+            "營造工程"
+          ],
+          "ax_description": "欣陸, 3703, 23.35, ▼0.5(-2.1%), -33.39, 49.59, 7.13, 20.37, 13.72, 11.58, 70.8, 127.51, 38.35, -39.04, -543.76, 11年, 營造工程"
+        },
+        {
+          "section": "產業升溫區",
+          "code": "8455",
+          "name": "大拓-KY",
+          "ocr_price": "-10.64",
+          "ax_price": null,
+          "kind": "missing_price_replaced_by_nonprice_column",
+          "sourceFile": "16_產業升溫區_5.png",
+          "ocr_columns": [
+            {
+              "x": 278.0,
+              "y": 594.0,
+              "text": "(-%)"
+            },
+            {
+              "x": 387.0,
+              "y": 575.0,
+              "text": "-10.64"
+            },
+            {
+              "x": 516.0,
+              "y": 575.0,
+              "text": "18.4"
+            }
+          ],
+          "ax_columns": [
+            "-",
+            "(-%)",
+            "-10.64",
+            "18.46",
+            "11.68",
+            "13.77",
+            "2.63",
+            "1.45",
+            "57.5",
+            "106.01",
+            "96",
+            "-8.6",
+            "-8.74",
+            "1年",
+            "機械"
+          ],
+          "ax_description": "大拓-KY, 8455, -, (-%), -10.64, 18.46, 11.68, 13.77, 2.63, 1.45, 57.5, 106.01, 96, -8.6, -8.74, 1年, 機械"
+        }
+      ],
+      "price_difference_count": 15,
+      "price_anomalies": [
+        {
+          "code": "910322",
+          "kind": "missing_price",
+          "ax_price": null,
+          "name": "康師傅-DR"
+        },
+        {
+          "code": "8455",
+          "kind": "nonpositive_price",
+          "price": "-10.64",
+          "ax_price": null
+        }
+      ],
+      "water": {
+        "current": 72.4,
+        "source": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-12_09-05-05/ark_stocks.json#/riskControl/value",
+        "screenshot_visual_verified": "01_風控水位.png shows 持股配置建議72.4%",
+        "previous_trading_date": "2026-11-11",
+        "previous_water_level": 76.8,
+        "change_percentage_points": -4.4,
+        "direction": "下降",
+        "comparison_is_provisional": false,
+        "previous_open_evidence": {
+          "classification": "OPEN supported by dated market-wide traded minute stored in local repository; not weekday inference",
+          "path": "/Users/kaide/Documents/Morning-Brief/data/issues/20261111.json",
+          "json_pointer": "/market/tw_index",
+          "quote": {
+            "value": "43,079.20",
+            "previous_close": 42711.92,
+            "change": 367.28,
+            "change_pct": 0.8599,
+            "source": "twse_minutes",
+            "reference_source": "twse_quote",
+            "raw_bar": {
+              "c": "43079.20",
+              "s": "1884",
+              "t": "1794362400000",
+              "ts": "100000"
+            },
+            "data_as_of": "2026-11-11T10:00:00+08:00",
+            "source_url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+            "line": "43,079.20 / +0.86%（11/11 10:00）"
+          },
+          "date_adjacency": "2026-11-11 is the immediately preceding calendar date; dated nonempty market-wide minute establishes trading occurred"
+        },
+        "history_evidence": [
+          {
+            "path": "/Users/kaide/Documents/Morning-Brief/water-level-history.json",
+            "record": {
+              "date": "2026-11-11",
+              "water_level": 76.8,
+              "scenario_id": "03",
+              "scenario_label": "03 高位控速"
+            }
+          },
+          {
+            "path": "/Users/kaide/Documents/Morning-Brief/data/water-level-history.json",
+            "record": {
+              "date": "2026-11-11",
+              "water_level": 76.8,
+              "scenario_id": "03",
+              "scenario_label": "03 高位控速"
+            }
+          },
+          {
+            "path": "/Users/kaide/Documents/Morning-Brief/site/water-level-history.json",
+            "record": {
+              "date": "2026-11-11",
+              "water_level": 76.8,
+              "scenario_id": "03",
+              "scenario_label": "03 高位控速"
+            }
+          },
+          {
+            "path": "/Users/kaide/Documents/Morning-Brief/docs/water-level-history.json",
+            "record": {
+              "date": "2026-11-11",
+              "water_level": 76.8,
+              "scenario_id": "03",
+              "scenario_label": "03 高位控速"
+            }
+          }
+        ],
+        "log_evidence": {
+          "path": "/Users/kaide/Documents/Morning-Brief/water-level-log.json",
+          "record": {
+            "date": "2026-11-11",
+            "holding_level": "76.8%",
+            "market_state": "03 高位控速",
+            "cover": "高位控速",
+            "systemic_risk": "中高",
+            "vix": "19.46",
+            "taifex_night": "近月43,078 / +1.01%（11/11 10:00）",
+            "foreign_futures_net": "-103,473",
+            "main_theme": "台股延續反彈，但配置環境轉弱；營收支撐與利率壓力要分開看。",
+            "strategy": "先由風控決定可持有總額，再依固定價值標準配置；不因盤中上漲追價，也不以短期盈虧排名決定去留。",
+            "risk_control": "11/13台灣時間05:30看Cisco展望、21:30看美國PPI；數據前不追價、不重押。",
+            "previous_trading_date": "2026-11-10",
+            "previous_water_level": 80.4,
+            "change": -3.6,
+            "direction": "下降"
+          }
+        },
+        "issue_ark_evidence": {
+          "water_level": 76.8,
+          "holding_allocation_suggestion": "76.8%",
+          "prev": 80.4,
+          "previous_water_level": 80.4,
+          "delta": -3.6,
+          "change": -3.6,
+          "direction": "下降",
+          "as_of": "2026-11-11",
+          "source_time": "09:05–09:08",
+          "comparison_date": "2026-11-10",
+          "previous_trading_date": "2026-11-10",
+          "comparison_is_provisional": false,
+          "note": "方舟水位76.8%，較前一交易日11/10的80.4%下降3.6個百分點；配置環境轉弱，早盤上漲不等於風控空間增加。",
+          "interpretation": "方舟水位76.8%，較前一交易日11/10的80.4%下降3.6個百分點；配置環境轉弱，早盤上漲不等於風控空間增加。"
+        },
+        "previous_capture_provenance": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-11_09-05-04/ark_stocks.json",
+        "source_provenance_scope": "Previous-day water cross-checked against repository artifacts; original previous-day capture not rehashed in this audit."
+      },
+      "issues": [
+        {
+          "severity": "error",
+          "type": "price_column_contamination",
+          "codes": [
+            "00898",
+            "00938",
+            "00986B",
+            "00856B",
+            "00992B",
+            "8455"
+          ],
+          "evidence": "OCR populates price from later columns although AX current price is null. For 8455 screenshot visually confirms price dash and -10.64 belongs to 當收單月營收變動%. ETF numbers are later reference/NAV-column values, not current traded prices."
+        },
+        {
+          "severity": "warning",
+          "type": "numeric_ocr_ax_price_differences",
+          "codes": [
+            "00918",
+            "2356",
+            "3711",
+            "4958",
+            "2454",
+            "8099",
+            "6148",
+            "1802",
+            "3703"
+          ],
+          "evidence": "Different numeric prices across screenshot/OCR and AX; may reflect live updates between captures, not established OCR errors. Neither source proves a synchronized quote."
+        },
+        {
+          "severity": "warning",
+          "type": "validation_scope",
+          "evidence": "ark_validation.json ok=true validates counts, code presence and names; contains no price comparisons and does not reject negative 8455 price."
+        },
+        {
+          "severity": "info",
+          "type": "missing_price_preserved",
+          "code": "910322",
+          "evidence": "康師傅-DR has null price in both OCR and AX; six-digit DR code is not malformed."
+        },
+        {
+          "severity": "limitation",
+          "type": "official_symbol_map_not_checked",
+          "evidence": "Code/name agreement verified locally against AX, not exchange official name map. Preserve 5904 寶雅* and 00986B FT金融債10+ verbatim."
+        },
+        {
+          "severity": "info",
+          "type": "3044_screenshot_verified",
+          "evidence": "572 ▲52(10%) is visible and arithmetically consistent; prior issue withheld change is not carried into current normalization."
+        }
+      ],
+      "conclusion": "Capture integrity/date/counts/code-name agreement pass; price field audit FAILS. Water 72.4 versus preceding OPEN session 2026-11-11 76.8 = -4.4 percentage points.",
+      "normalized_zones": {
+        "path": "/Users/kaide/.hermes/cache/scratch/kmb1112-zones.json",
+        "schema_reference": "/Users/kaide/Documents/Morning-Brief/data/issues/20261111.json#/etf and #/stocks",
+        "field_policy": "Only etf/stocks containers, value/rising/overlap arrays, code/name/price/change/meta/stamp/source_file/source_rank and ETF nav/premium_discount. Original identities/order/ranks preserved from OCR stocks. Price/change/NAV/premium use same-run captured AX, never later market lookup. AX null means JSON null, rendered dash in meta. Numeric OCR/AX differences remain documented above; AX is selected consistently, not asserted simultaneous with screenshot.",
+        "null_prices": [
+          "00898",
+          "00938",
+          "00986B",
+          "00856B",
+          "00992B",
+          "910322",
+          "8455"
+        ],
+        "total_rows": 77
+      },
+      "screenshot_reviewed_evidence": [
+        {
+          "file": "01_風控水位.png",
+          "observation": "Visible 持股配置建議72.4%."
+        },
+        {
+          "file": "03_ETF價值區_2.png",
+          "codes": [
+            "00898",
+            "00938"
+          ],
+          "observation": "Both current prices are dash and changes (-%); 11.32/0.27% and 26.6/0.49% belong to 即時淨值/折溢價% columns, not price."
+        },
+        {
+          "file": "04_ETF升溫區_1.png",
+          "codes": [
+            "00986B",
+            "00856B",
+            "00992B"
+          ],
+          "observation": "All have current price dash and (-%); NAV/premium respectively 9.77/-0.44%, 38.83/-0.26%, 10.18/-0.06%."
+        },
+        {
+          "file": "14_產業升溫區_3.png",
+          "codes": [
+            "910322"
+          ],
+          "observation": "康師傅-DR current price dash and (-%); null price/change retained."
+        },
+        {
+          "file": "16_產業升溫區_5.png",
+          "codes": [
+            "8455"
+          ],
+          "observation": "大拓-KY current price dash and (-%); -10.64 belongs to 當收單月營收變動%, not current price; normalized price/change null."
+        },
+        {
+          "file": "10_產業價值區_5.png",
+          "codes": [
+            "3044"
+          ],
+          "observation": "健鼎 visibly 572 and ▲52(10%), matching AX. Arithmetic 52/(572-52)*100 = 10%; unlike previous issue, current screenshot is internally consistent. Preserve 572 and ▲52(10%)."
+        }
+      ],
+      "3044_check": {
+        "price": "572",
+        "change": "▲52(10%)",
+        "implied_previous": 520,
+        "computed_percent": 10.0,
+        "screenshot_matches_ax": true
+      }
+    }
+  },
+  "mag7_heading": "七巨頭最後成交價與本日訊號"
 }

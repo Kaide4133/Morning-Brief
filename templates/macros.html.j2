@@ -40,7 +40,7 @@
   <div class="mag7-price">
     <span class="v">{{ item.price }}</span>
     {%- if item.change_pct is not none %}
-    <span class="d {{ delta_class(item.change_pct) }}">{{ fmt_pct(item.change_pct, false) }} / {{ item.change_abs }}</span>
+    <span class="d {{ delta_class(item.change_pct) }}">{{ fmt_pct(item.change_pct) }} / {{ item.change_abs }}</span>
     {%- endif %}
   </div>
   <div class="mag7-signal"><strong>Today's Signal</strong>{{ item.signal }}</div>

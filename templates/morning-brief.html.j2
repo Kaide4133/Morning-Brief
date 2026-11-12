@@ -330,7 +330,7 @@
 
   <section class="section-zone" id="s10">
     <div class="container">
-      {{ m.section_head('X', 'SECTION', '七巨頭收盤與本日訊號', 'Magnificent Seven', 'X') }}
+      {{ m.section_head('X', 'SECTION', mag7_heading | default('七巨頭收盤與本日訊號'), 'Magnificent Seven', 'X') }}
       <div class="mag7-grid">
         {%- for item in mag7 %}
         {{ m.mag7_card(item) }}
