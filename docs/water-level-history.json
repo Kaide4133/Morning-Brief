@@ -1,6 +1,19 @@
 {
   "records": [
     {
+      "date": "2026-11-16",
+      "water_level": 69.9,
+      "scenario_id": "06",
+      "scenario_label": "06 風險收縮",
+      "previous_trading_date": "2026-11-13",
+      "previous_water_level": 70.0,
+      "change": -0.1,
+      "direction": "下降",
+      "comparison_date": "2026-11-13",
+      "comparison_is_provisional": false,
+      "source_sha256": "8a91830253168142808207cbdfbef2aac8aa233223973f2bbc2f41198f66b4a9"
+    },
+    {
       "date": "2026-11-13",
       "water_level": 70.0,
       "scenario_id": "03",

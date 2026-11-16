@@ -1,0 +1,223 @@
+{
+  "ok": true,
+  "status": "success",
+  "stage": "complete",
+  "reason": "",
+  "runId": "2026-11-16_09-05-05",
+  "version": "20261030T102633-6e4b3b613515",
+  "trigger": "launchagent-entry",
+  "date": "2026-11-16",
+  "timezone": "Asia/Taipei",
+  "startedAt": "2026-11-16T09:05:05+08:00",
+  "finishedAt": "2026-11-16T09:08:30+08:00",
+  "generatedAt": "2026-11-16T09:08:30+08:00",
+  "elapsedSeconds": 205,
+  "elapsedHuman": "3m 25s",
+  "tokenUsage": {
+    "tokens": 0,
+    "note": "Local automation; no LLM API used by this job."
+  },
+  "runDir": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-16_09-05-05",
+  "summary": {
+    "screenshots": 18,
+    "totalStocks": 77,
+    "sections": {
+      "ETF價值區": 10,
+      "ETF升溫區": 7,
+      "產業價值區": 30,
+      "產業升溫區": 30
+    },
+    "riskControl": "69.9%",
+    "axMatch": true,
+    "indicators": {
+      "全球散戶": 41,
+      "外資情緒": 63,
+      "位階增溫": 71,
+      "社交反指": 67,
+      "量能爆衝": 62
+    },
+    "indicatorsValidated": true
+  },
+  "sha256": {
+    "ark_ocr.json": "ad3f7f5dc75a48906ccb3c99e1fbcc8cf5c8e78fb97ff32ecf339c3c964eb9ee",
+    "ark_stocks.json": "8a91830253168142808207cbdfbef2aac8aa233223973f2bbc2f41198f66b4a9",
+    "ark_stocks_ax.json": "9fb0b7cf35bc6dcf8de0244e9db46dcb63b5c2317cb1f3d0ad0b46125740511f",
+    "ark_validation.json": "b716f93dc39840b61b0184af9bf9ec58f00cf2863db6c0b9e54289457807aa12",
+    "ark_indicators.json": "fdc38990bce8c772ef070b87f5e82c8fda2800467bac865716a8c87cff156287",
+    "00_運算五指標.png": "8666dbd859cb6db2aeaf456f73a593c9c30271c3e11f795131f7cb0becfa3f85",
+    "01_風控水位.png": "f80ce6784c5023df1af0dcc28e0bb84f2cfaca022d0ae5cecbef31b8b8aec556",
+    "02_ETF價值區_1.png": "98bb3dddb7cd363bf53b9f814bd9d741a0bcfb35135fccced23dbe997563a3d4",
+    "03_ETF價值區_2.png": "8dfbd0a310db0120030b1e69472bd2400d008b069647ea3c57d8ed0aac73f27d",
+    "04_ETF升溫區_1.png": "e91f4e2c2e0f90148631e09a80748cff17e0fc48f15fbd4df7c0ea3208d96329",
+    "05_ETF升溫區_2.png": "22ace4d1f734fe14351fedb1f355d4f50513fe226eb5b3502b62bbbfef9face9",
+    "06_產業價值區_1.png": "dcc713212cfec25a7eab0a8bc4da42aa5d54cf072d8bceec23e86c4defb3c6f7",
+    "07_產業價值區_2.png": "c417bcc483380ed4ab5eadfadedf7014e3f14e9fd6fdf3a03dabdddaa7006ae7",
+    "08_產業價值區_3.png": "845ab3d2e33306a50497115965a0a02d48b005976b3102a95a68190db06e35a9",
+    "09_產業價值區_4.png": "7047e92f2bbe589f4c6d1ef9e03ed0e262917ce2dca9616a9e2f67626e14ed6b",
+    "10_產業價值區_5.png": "a9d4aafcd1561b5bbec77fa27cf9ab32c4545d043b40c2483f118cf18863c162",
+    "11_產業價值區_6.png": "5f0074cddd568184bc7eb4021851fa22a27fba6cb027a3965622b7b500201fdc",
+    "12_產業升溫區_1.png": "dfee91170867fabdb1ed83038d683a225c3859ddbb05be27af04e00010e2b373",
+    "13_產業升溫區_2.png": "49574196d1f987304ad68bbdb5ead6720dfea0c33b35053c9cc9ea8ec062ec83",
+    "14_產業升溫區_3.png": "09a3e78881d9a72c737339015c5561be51668ed56202f265806df63cffef237c",
+    "15_產業升溫區_4.png": "39cd9d225fa0eba37f29389a90bf4b2b0e139dd5f89cb17ba674d29de60a3aaf",
+    "16_產業升溫區_5.png": "d9778bdb92779662f29ff8d11c269bfd205ea8279ba320abe76767ef99bef7fd",
+    "17_產業升溫區_6.png": "096f957f2c97a8a5879a80dcf58a7495d4ded78df9846d8aaba5a3a1d7f5522b",
+    "capture_manifest.jsonl": "4416a51914a2d9ed449e2366dd79c239ffe13f2d8203fb233e6f945760d17c5e",
+    "ark_ax_rows.jsonl": "bd8412bceecd5d0d2fab4007a555c6782bd8b5bdda0cfbee5c2c1b3b2922bb2f"
+  },
+  "outputs": {
+    "ark_ocr": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-16_09-05-05/ark_ocr.json",
+    "ark_stocks": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-16_09-05-05/ark_stocks.json",
+    "ark_stocks_ax": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-16_09-05-05/ark_stocks_ax.json",
+    "ark_validation": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-16_09-05-05/ark_validation.json",
+    "ark_indicators": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-16_09-05-05/ark_indicators.json"
+  },
+  "timing": {
+    "testRun": false,
+    "startedAt": "2026-11-16T09:05:05.764+08:00",
+    "finishedAt": "2026-11-16T09:08:30.426+08:00",
+    "totalSeconds": 205.426,
+    "events": [
+      {
+        "stage": "script_start",
+        "epoch": 1794791105.764436,
+        "elapsedSeconds": 0.764,
+        "timestamp": "2026-11-16T09:05:05.764+08:00"
+      },
+      {
+        "stage": "login_ready",
+        "epoch": 1794791119.3167,
+        "elapsedSeconds": 14.317,
+        "timestamp": "2026-11-16T09:05:19.316+08:00"
+      },
+      {
+        "stage": "risk_captured",
+        "epoch": 1794791149.6341681,
+        "elapsedSeconds": 44.634,
+        "timestamp": "2026-11-16T09:05:49.634+08:00"
+      },
+      {
+        "stage": "etf_value_captured",
+        "epoch": 1794791171.988899,
+        "elapsedSeconds": 66.989,
+        "timestamp": "2026-11-16T09:06:11.988+08:00"
+      },
+      {
+        "stage": "etf_heating_captured",
+        "epoch": 1794791195.843912,
+        "elapsedSeconds": 90.844,
+        "timestamp": "2026-11-16T09:06:35.843+08:00"
+      },
+      {
+        "stage": "industry_value_captured",
+        "epoch": 1794791252.54285,
+        "elapsedSeconds": 147.543,
+        "timestamp": "2026-11-16T09:07:32.542+08:00"
+      },
+      {
+        "stage": "industry_heating_captured",
+        "epoch": 1794791306.968307,
+        "elapsedSeconds": 201.968,
+        "timestamp": "2026-11-16T09:08:26.968+08:00"
+      },
+      {
+        "stage": "ocr_generated",
+        "epoch": 1794791310.220861,
+        "elapsedSeconds": 205.221,
+        "timestamp": "2026-11-16T09:08:30.220+08:00"
+      },
+      {
+        "stage": "ax_stocks_generated",
+        "epoch": 1794791310.263679,
+        "elapsedSeconds": 205.264,
+        "timestamp": "2026-11-16T09:08:30.263+08:00"
+      },
+      {
+        "stage": "ocr_stocks_generated",
+        "epoch": 1794791310.3171608,
+        "elapsedSeconds": 205.317,
+        "timestamp": "2026-11-16T09:08:30.317+08:00"
+      },
+      {
+        "stage": "ax_ocr_validated",
+        "epoch": 1794791310.3583732,
+        "elapsedSeconds": 205.358,
+        "timestamp": "2026-11-16T09:08:30.358+08:00"
+      },
+      {
+        "stage": "output_validated",
+        "epoch": 1794791310.408448,
+        "elapsedSeconds": 205.408,
+        "timestamp": "2026-11-16T09:08:30.408+08:00"
+      },
+      {
+        "stage": "complete",
+        "epoch": 1794791310.426013,
+        "elapsedSeconds": 205.426,
+        "timestamp": "2026-11-16T09:08:30.426+08:00"
+      }
+    ],
+    "segments": [
+      {
+        "from": "script_start",
+        "to": "login_ready",
+        "seconds": 13.552
+      },
+      {
+        "from": "login_ready",
+        "to": "risk_captured",
+        "seconds": 30.317
+      },
+      {
+        "from": "risk_captured",
+        "to": "etf_value_captured",
+        "seconds": 22.355
+      },
+      {
+        "from": "etf_value_captured",
+        "to": "etf_heating_captured",
+        "seconds": 23.855
+      },
+      {
+        "from": "etf_heating_captured",
+        "to": "industry_value_captured",
+        "seconds": 56.699
+      },
+      {
+        "from": "industry_value_captured",
+        "to": "industry_heating_captured",
+        "seconds": 54.425
+      },
+      {
+        "from": "industry_heating_captured",
+        "to": "ocr_generated",
+        "seconds": 3.253
+      },
+      {
+        "from": "ocr_generated",
+        "to": "ax_stocks_generated",
+        "seconds": 0.043
+      },
+      {
+        "from": "ax_stocks_generated",
+        "to": "ocr_stocks_generated",
+        "seconds": 0.053
+      },
+      {
+        "from": "ocr_stocks_generated",
+        "to": "ax_ocr_validated",
+        "seconds": 0.041
+      },
+      {
+        "from": "ax_ocr_validated",
+        "to": "output_validated",
+        "seconds": 0.05
+      },
+      {
+        "from": "output_validated",
+        "to": "complete",
+        "seconds": 0.018
+      }
+    ]
+  }
+}

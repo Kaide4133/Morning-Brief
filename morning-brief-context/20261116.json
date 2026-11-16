@@ -1,0 +1,98 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-11-16",
+  "valid_for_trading_date": "2026-11-16",
+  "data_as_of": "2026-11-16",
+  "stale": false,
+  "issue_no": 125,
+  "scenario": {
+    "id": "06",
+    "slug": "risk-contraction",
+    "label": "風險收縮",
+    "confidence": 1.0,
+    "reason": "11/16 10:10台股跌3.14%，前一美股交易日費半跌3.43%、10年期美債殖利率5.15%，故採風險收縮姿態；方舟水位69.9%較70.0%僅降0.1個百分點，並非水位急降。",
+    "source": "manual_override",
+    "classifier_suggestion": "06"
+  },
+  "water": {
+    "level": 69.9,
+    "previous": 70.0,
+    "change": -0.1,
+    "direction": "falling",
+    "previous_trading_date": "2026-11-13",
+    "comparison_date": "2026-11-13",
+    "comparison_is_provisional": false
+  },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "reduce_risk_review",
+    "risk_posture": "risk_off",
+    "water_policy": {
+      "direction": "falling",
+      "change": -0.1,
+      "interpretation": "方舟水位69.9%，較11/13的70.0%小降0.1個百分點；風險收縮依據是台股急跌與外部利率、半導體壓力，非水位劇烈變動。"
+    },
+    "scenario_context": {
+      "id": "06",
+      "label": "風險收縮",
+      "confidence": 1.0
+    },
+    "policy_focus": [
+      "保留現金，先檢查弱勢與集中部位；價值名單等承接確認，不追升溫股。",
+      "利率與半導體雙重壓力未解；人事傳聞不等於砍單，反彈也不等於止跌。",
+      "11/13收漲1.35%後，今10:10跌3.14%；費半前一美股交易日跌3.43%。",
+      "路透經DZRH轉載報導，美國財長貝森特主張輝達尋求外部執行長並檢視出口合規。本次未核對公司原始公告或申報，人事與合規說法保留歸屬，不視為新任命已確認，更不能推成台灣供應鏈砍單。"
+    ],
+    "systemic_risk": "偏高",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
+  "action_guidance": {
+    "risk_bias": "risk_off",
+    "allow_add": false,
+    "allow_trim": true,
+    "deploy_mode": "reduce_exposure",
+    "trim": {
+      "allowed": true,
+      "mode": "reduce_exposure",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": false,
+      "mode": "disabled",
+      "conditions": [
+        "risk_off_no_new_exposure"
+      ]
+    },
+    "rebuy": {
+      "allowed": false,
+      "mode": "disabled_until_stabilized",
+      "conditions": [
+        "risk_bias_improves",
+        "water_stabilizes"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 1.0,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "風險收縮",
+    "summary": "11/16 10:10台股跌3.14%，前一美股交易日費半跌3.43%、10年期美債殖利率5.15%，故採風險收縮姿態；方舟水位69.9%較70.0%僅降0.1個百分點，並非水位急降。"
+  },
+  "source": {
+    "issue_file": "data/issues/20261116.json",
+    "generated_at": "2026-11-16T10:21:25+08:00"
+  }
+}

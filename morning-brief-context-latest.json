@@ -1,61 +1,60 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-11-13",
-  "valid_for_trading_date": "2026-11-13",
-  "data_as_of": "2026-11-13",
+  "date": "2026-11-16",
+  "valid_for_trading_date": "2026-11-16",
+  "data_as_of": "2026-11-16",
   "stale": false,
-  "issue_no": 124,
+  "issue_no": 125,
   "scenario": {
-    "id": "03",
-    "slug": "high-level-speed-control",
-    "label": "高位控速",
+    "id": "06",
+    "slug": "risk-contraction",
+    "label": "風險收縮",
     "confidence": 1.0,
-    "reason": "台股在前日大跌後早盤強彈，但水位由72.4下降至70.0；美股半導體弱勢、輝達人事異動及PPI事件風險仍在。配置空間並非枯竭，方向卻轉弱，採高位控速，不把反彈當全面擴張。",
+    "reason": "11/16 10:10台股跌3.14%，前一美股交易日費半跌3.43%、10年期美債殖利率5.15%，故採風險收縮姿態；方舟水位69.9%較70.0%僅降0.1個百分點，並非水位急降。",
     "source": "manual_override",
-    "classifier_suggestion": "05"
+    "classifier_suggestion": "06"
   },
   "water": {
-    "level": 70.0,
-    "previous": 72.4,
-    "change": -2.4,
+    "level": 69.9,
+    "previous": 70.0,
+    "change": -0.1,
     "direction": "falling",
-    "previous_trading_date": "2026-11-12",
-    "comparison_date": "2026-11-12",
+    "previous_trading_date": "2026-11-13",
+    "comparison_date": "2026-11-13",
     "comparison_is_provisional": false
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
-    "short_term_bias": "cautious_review",
-    "risk_posture": "balanced_cautious",
+    "short_term_bias": "reduce_risk_review",
+    "risk_posture": "risk_off",
     "water_policy": {
       "direction": "falling",
-      "change": -2.4,
-      "interpretation": "方舟水位70.0%，較前一交易日11/12的72.4%下降2.4個百分點；配置環境轉弱，不因早盤急彈放大部位。"
+      "change": -0.1,
+      "interpretation": "方舟水位69.9%，較11/13的70.0%小降0.1個百分點；風險收縮依據是台股急跌與外部利率、半導體壓力，非水位劇烈變動。"
     },
     "scenario_context": {
-      "id": "03",
-      "label": "高位控速",
+      "id": "06",
+      "label": "風險收縮",
       "confidence": 1.0
     },
     "policy_focus": [
-      "先由風控決定可持有總額，再依固定價值標準配置；不以短期盈虧排名決定去留。",
-      "11/13今晚21:30美國PPI；11/18約05:20輝達財報。事件前不追價、不重押。",
-      "09:33加權漲3.09%；昨夜費半跌0.54%、輝達跌4.34%，內外走勢分化。",
-      "NVIDIA於11/12公告黃仁勳辭任總裁、執行長與董事，財務長Colette Kress暫代執行長；公司表示營運、客戶承諾與產品路線圖持續。人事風險需觀察，不能直接推成台灣供應鏈砍單。"
+      "保留現金，先檢查弱勢與集中部位；價值名單等承接確認，不追升溫股。",
+      "利率與半導體雙重壓力未解；人事傳聞不等於砍單，反彈也不等於止跌。",
+      "11/13收漲1.35%後，今10:10跌3.14%；費半前一美股交易日跌3.43%。",
+      "路透經DZRH轉載報導，美國財長貝森特主張輝達尋求外部執行長並檢視出口合規。本次未核對公司原始公告或申報，人事與合規說法保留歸屬，不視為新任命已確認，更不能推成台灣供應鏈砍單。"
     ],
-    "systemic_risk": "中高",
+    "systemic_risk": "偏高",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
   },
   "action_guidance": {
-    "risk_bias": "balanced_cautious",
-    "allow_add": true,
+    "risk_bias": "risk_off",
+    "allow_add": false,
     "allow_trim": true,
-    "deploy_mode": "slow_selective_add",
-    "max_initial_deploy_pct": 0.25,
+    "deploy_mode": "reduce_exposure",
     "trim": {
       "allowed": true,
-      "mode": "selective_trim",
+      "mode": "reduce_exposure",
       "max_overshoot_pct": 0.25,
       "priority": [
         "positive_return_overheated_branch",
@@ -65,23 +64,18 @@
       ]
     },
     "deploy": {
-      "allowed": true,
-      "mode": "slow_selective_add",
-      "max_initial_deploy_pct": 0.25,
+      "allowed": false,
+      "mode": "disabled",
       "conditions": [
-        "conditional_only",
-        "core_or_high_quality_only",
-        "pullback_confirmed",
-        "no_chase"
+        "risk_off_no_new_exposure"
       ]
     },
     "rebuy": {
-      "allowed": true,
-      "mode": "wait_for_pullback",
+      "allowed": false,
+      "mode": "disabled_until_stabilized",
       "conditions": [
-        "sold_name_drawdown_2_to_3_pct",
-        "MA20_support",
-        "murphy_right_side_reconfirmation"
+        "risk_bias_improves",
+        "water_stabilizes"
       ]
     },
     "trim_priority": [
@@ -94,11 +88,11 @@
     "source": "morning_brief_classifier"
   },
   "editorial": {
-    "state_label": "高位控速",
-    "summary": "台股在前日大跌後早盤強彈，但水位由72.4下降至70.0；美股半導體弱勢、輝達人事異動及PPI事件風險仍在。配置空間並非枯竭，方向卻轉弱，採高位控速，不把反彈當全面擴張。"
+    "state_label": "風險收縮",
+    "summary": "11/16 10:10台股跌3.14%，前一美股交易日費半跌3.43%、10年期美債殖利率5.15%，故採風險收縮姿態；方舟水位69.9%較70.0%僅降0.1個百分點，並非水位急降。"
   },
   "source": {
-    "issue_file": "data/issues/20261113.json",
-    "generated_at": "2026-11-13T09:51:02+08:00"
+    "issue_file": "data/issues/20261116.json",
+    "generated_at": "2026-11-16T10:21:25+08:00"
   }
 }
