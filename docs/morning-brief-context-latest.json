@@ -1,27 +1,27 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-11-16",
-  "valid_for_trading_date": "2026-11-16",
-  "data_as_of": "2026-11-16",
+  "date": "2026-11-17",
+  "valid_for_trading_date": "2026-11-17",
+  "data_as_of": "2026-11-17",
   "stale": false,
-  "issue_no": 125,
+  "issue_no": 126,
   "scenario": {
     "id": "06",
     "slug": "risk-contraction",
     "label": "風險收縮",
     "confidence": 1.0,
-    "reason": "11/16 10:10台股跌3.14%，前一美股交易日費半跌3.43%、10年期美債殖利率5.15%，故採風險收縮姿態；方舟水位69.9%較70.0%僅降0.1個百分點，並非水位急降。",
+    "reason": "昨日台股急跌、法人賣超且美股科技與波動壓力延續，早盤仍劇烈震盪，故保持風險控制；水位77.1%較69.9%上升7.2個百分點是配置環境改善，並非水位下降。",
     "source": "manual_override",
-    "classifier_suggestion": "06"
+    "classifier_suggestion": "05"
   },
   "water": {
-    "level": 69.9,
-    "previous": 70.0,
-    "change": -0.1,
-    "direction": "falling",
-    "previous_trading_date": "2026-11-13",
-    "comparison_date": "2026-11-13",
+    "level": 77.1,
+    "previous": 69.9,
+    "change": 7.2,
+    "direction": "rising",
+    "previous_trading_date": "2026-11-16",
+    "comparison_date": "2026-11-16",
     "comparison_is_provisional": false
   },
   "leader_policy": {
@@ -29,9 +29,9 @@
     "short_term_bias": "reduce_risk_review",
     "risk_posture": "risk_off",
     "water_policy": {
-      "direction": "falling",
-      "change": -0.1,
-      "interpretation": "方舟水位69.9%，較11/13的70.0%小降0.1個百分點；風險收縮依據是台股急跌與外部利率、半導體壓力，非水位劇烈變動。"
+      "direction": "rising",
+      "change": 7.2,
+      "interpretation": "目前情境要求風險收縮，暫停新增曝險；先檢查過熱、非護城河與槓桿風險。"
     },
     "scenario_context": {
       "id": "06",
@@ -39,10 +39,10 @@
       "confidence": 1.0
     },
     "policy_focus": [
-      "保留現金，先檢查弱勢與集中部位；價值名單等承接確認，不追升溫股。",
-      "利率與半導體雙重壓力未解；人事傳聞不等於砍單，反彈也不等於止跌。",
-      "11/13收漲1.35%後，今10:10跌3.14%；費半前一美股交易日跌3.43%。",
-      "路透經DZRH轉載報導，美國財長貝森特主張輝達尋求外部執行長並檢視出口合規。本次未核對公司原始公告或申報，人事與合規說法保留歸屬，不視為新任命已確認，更不能推成台灣供應鏈砍單。"
+      "按風控決定總部位、按價值決定配置；保留子彈，等承接而非追開盤反彈。",
+      "今晚美國數據、明晨輝達財報接連登場；不追價、不重押單一結果。",
+      "昨日加權跌6.03%、法人賣超1,143.94億元；今09:30仍跌0.90%。",
+      "美國BIS於11/16宣布針對經第三地資料中心遠端使用先進運算晶片的限制規則，重點是防止規避既有出口管制；AI伺服器與晶片客戶合規值得留意，但不等於台廠訂單全面取消。"
     ],
     "systemic_risk": "偏高",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
@@ -89,10 +89,10 @@
   },
   "editorial": {
     "state_label": "風險收縮",
-    "summary": "11/16 10:10台股跌3.14%，前一美股交易日費半跌3.43%、10年期美債殖利率5.15%，故採風險收縮姿態；方舟水位69.9%較70.0%僅降0.1個百分點，並非水位急降。"
+    "summary": "昨日台股急跌、法人賣超且美股科技與波動壓力延續，早盤仍劇烈震盪，故保持風險控制；水位77.1%較69.9%上升7.2個百分點是配置環境改善，並非水位下降。"
   },
   "source": {
-    "issue_file": "data/issues/20261116.json",
-    "generated_at": "2026-11-16T10:27:25+08:00"
+    "issue_file": "data/issues/20261117.json",
+    "generated_at": "2026-11-17T09:36:05+08:00"
   }
 }
