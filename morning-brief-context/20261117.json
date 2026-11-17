@@ -1,0 +1,98 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-11-17",
+  "valid_for_trading_date": "2026-11-17",
+  "data_as_of": "2026-11-17",
+  "stale": false,
+  "issue_no": 126,
+  "scenario": {
+    "id": "06",
+    "slug": "risk-contraction",
+    "label": "風險收縮",
+    "confidence": 1.0,
+    "reason": "昨日台股急跌、法人賣超且美股科技與波動壓力延續，早盤仍劇烈震盪，故保持風險控制；水位77.1%較69.9%上升7.2個百分點是配置環境改善，並非水位下降。",
+    "source": "manual_override",
+    "classifier_suggestion": "05"
+  },
+  "water": {
+    "level": 77.1,
+    "previous": 69.9,
+    "change": 7.2,
+    "direction": "rising",
+    "previous_trading_date": "2026-11-16",
+    "comparison_date": "2026-11-16",
+    "comparison_is_provisional": false
+  },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "reduce_risk_review",
+    "risk_posture": "risk_off",
+    "water_policy": {
+      "direction": "rising",
+      "change": 7.2,
+      "interpretation": "目前情境要求風險收縮，暫停新增曝險；先檢查過熱、非護城河與槓桿風險。"
+    },
+    "scenario_context": {
+      "id": "06",
+      "label": "風險收縮",
+      "confidence": 1.0
+    },
+    "policy_focus": [
+      "按風控決定總部位、按價值決定配置；保留子彈，等承接而非追開盤反彈。",
+      "今晚美國數據、明晨輝達財報接連登場；不追價、不重押單一結果。",
+      "昨日加權跌6.03%、法人賣超1,143.94億元；今09:30仍跌0.90%。",
+      "美國BIS於11/16宣布針對經第三地資料中心遠端使用先進運算晶片的限制規則，重點是防止規避既有出口管制；AI伺服器與晶片客戶合規值得留意，但不等於台廠訂單全面取消。"
+    ],
+    "systemic_risk": "偏高",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
+  "action_guidance": {
+    "risk_bias": "risk_off",
+    "allow_add": false,
+    "allow_trim": true,
+    "deploy_mode": "reduce_exposure",
+    "trim": {
+      "allowed": true,
+      "mode": "reduce_exposure",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": false,
+      "mode": "disabled",
+      "conditions": [
+        "risk_off_no_new_exposure"
+      ]
+    },
+    "rebuy": {
+      "allowed": false,
+      "mode": "disabled_until_stabilized",
+      "conditions": [
+        "risk_bias_improves",
+        "water_stabilizes"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 1.0,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "風險收縮",
+    "summary": "昨日台股急跌、法人賣超且美股科技與波動壓力延續，早盤仍劇烈震盪，故保持風險控制；水位77.1%較69.9%上升7.2個百分點是配置環境改善，並非水位下降。"
+  },
+  "source": {
+    "issue_file": "data/issues/20261117.json",
+    "generated_at": "2026-11-17T09:38:32+08:00"
+  }
+}
