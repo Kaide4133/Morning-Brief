@@ -1,0 +1,2011 @@
+{
+  "schema_version": "morning_brief.issue.v2",
+  "date": "2026-11-19",
+  "issue_no": 128,
+  "day": "THURSDAY",
+  "data_as_of": "2026-11-19",
+  "brief_label": "截圖補全版",
+  "session_label": "11/19截圖補全｜行情13:10盤中｜美股11/18",
+  "source_ark": "使用者當日截圖；水位採指定替換圖",
+  "title": "昨日小漲後今日重挫，水位續升但承接失守",
+  "hero": {
+    "headline": "昨日小漲後今日重挫，水位續升但承接失守",
+    "subhead": "輝達財報未能扭轉估值壓力，台股再遭賣壓；配置環境改善，不等於價格止跌。",
+    "reader_subhead": "輝達財報未能扭轉估值壓力，台股再遭賣壓；配置環境改善，不等於價格止跌。"
+  },
+  "strategy": {
+    "thesis": "水位小升，價格重挫；配置與進場分開決定。",
+    "tape": "加權13:10跌4.19%；此前外資與法人賣壓待消化。",
+    "playbook": "保留現金彈性；價值區分批等承接，升溫區不追急拉。",
+    "risk": "FOMC紀要已公布；估值與槓桿風險仍在，不重押單一反彈。",
+    "reader": {
+      "thesis": "水位小升，價格重挫；配置與進場分開決定。",
+      "tape": "加權13:10跌4.19%；此前外資與法人賣壓待消化。",
+      "playbook": "保留現金彈性；價值區分批等承接，升溫區不追急拉。",
+      "risk": "FOMC紀要已公布；估值與槓桿風險仍在，不重押單一反彈。"
+    }
+  },
+  "ark": {
+    "water_level": 79.7,
+    "holding_allocation_suggestion": "79.7%",
+    "prev": 79.1,
+    "previous_water_level": 79.1,
+    "delta": 0.6,
+    "change": 0.6,
+    "direction": "上升",
+    "as_of": "2026-11-19",
+    "source_time": null,
+    "captured_at": null,
+    "source_display_context": {
+      "outer": "2026.11.19 上午9:13",
+      "inner_phone": "09:12"
+    },
+    "comparison_date": "2026-11-18",
+    "previous_trading_date": "2026-11-18",
+    "comparison_is_provisional": false,
+    "source_file": "data/sources/20261119-user-screenshots/img_8718c562dbdc.jpg",
+    "source_sha256": "39b6ae548ce1d7723d1d8361143865731a442df845e1a826532c17a4b7cdd49f",
+    "note": "方舟水位79.7%，較前一交易日11/18的79.1%上升0.6個百分點；不把配置空間當成加滿訊號。",
+    "update_countdown": "52:42",
+    "countdown_is_source_context": true,
+    "countdown_days": null
+  },
+  "etf": {
+    "value": [
+      {
+        "code": "0055",
+        "name": "元大MSCI金融",
+        "price": "46.98",
+        "change": "▼1.3 (-2.69%)",
+        "source_file": "img_b105bcced58e.jpg",
+        "source_sha256": "8940fc8e8c9b4639e5823d5c24fcce262c2dd86804b04b84b27fdcd428ccdb72",
+        "raw_text": "0055|元大MSCI金融|46.98|-1.3|-2.69|47.25|-0.57",
+        "confidence": "high",
+        "stamp": "value",
+        "nav": "47.25",
+        "premium_discount": "-0.57%",
+        "meta": "股價 46.98｜▼1.3 (-2.69%)｜即時淨值 47.25｜折溢價 -0.57%",
+        "source_files": [
+          "img_b105bcced58e.jpg"
+        ]
+      },
+      {
+        "code": "00897",
+        "name": "富邦基因免疫生技",
+        "price": "13.36",
+        "change": "▼0.1 (-0.74%)",
+        "source_file": "img_b105bcced58e.jpg",
+        "source_sha256": "8940fc8e8c9b4639e5823d5c24fcce262c2dd86804b04b84b27fdcd428ccdb72",
+        "raw_text": "00897|富邦基因免疫生技|13.36|-0.1|-0.74|13.33|0.23",
+        "confidence": "high",
+        "stamp": "value",
+        "nav": "13.33",
+        "premium_discount": "0.23%",
+        "meta": "股價 13.36｜▼0.1 (-0.74%)｜即時淨值 13.33｜折溢價 0.23%",
+        "source_files": [
+          "img_b105bcced58e.jpg"
+        ]
+      },
+      {
+        "code": "00939",
+        "name": "統一台灣高息動能",
+        "price": "22.47",
+        "change": "▼0.62 (-2.69%)",
+        "source_file": "img_b105bcced58e.jpg",
+        "source_sha256": "8940fc8e8c9b4639e5823d5c24fcce262c2dd86804b04b84b27fdcd428ccdb72",
+        "raw_text": "00939|統一台灣高息動能|22.47|-0.62|-2.69|22.52|-0.22",
+        "confidence": "high",
+        "stamp": "value",
+        "nav": "22.52",
+        "premium_discount": "-0.22%",
+        "meta": "股價 22.47｜▼0.62 (-2.69%)｜即時淨值 22.52｜折溢價 -0.22%",
+        "source_files": [
+          "img_b105bcced58e.jpg",
+          "img_dd4211e21afb.jpg"
+        ]
+      },
+      {
+        "code": "00701",
+        "name": "國泰股利精選30",
+        "price": "40.15",
+        "change": "▼0.61 (-1.50%)",
+        "source_file": "img_b105bcced58e.jpg",
+        "source_sha256": "8940fc8e8c9b4639e5823d5c24fcce262c2dd86804b04b84b27fdcd428ccdb72",
+        "raw_text": "00701|國泰股利精選30|40.15|-0.61|-1.50|40.23|-0.2",
+        "confidence": "high",
+        "stamp": "value",
+        "nav": "40.23",
+        "premium_discount": "-0.2%",
+        "meta": "股價 40.15｜▼0.61 (-1.50%)｜即時淨值 40.23｜折溢價 -0.2%",
+        "source_files": [
+          "img_b105bcced58e.jpg",
+          "img_dd4211e21afb.jpg"
+        ]
+      },
+      {
+        "code": "00875",
+        "name": "國泰網路資安",
+        "price": "60.2",
+        "change": "▲3.75 (+6.64%)",
+        "source_file": "img_b105bcced58e.jpg",
+        "source_sha256": "8940fc8e8c9b4639e5823d5c24fcce262c2dd86804b04b84b27fdcd428ccdb72",
+        "raw_text": "00875|國泰網路資安|60.2|3.75|6.64|59.41|1.33",
+        "confidence": "high",
+        "stamp": "value",
+        "nav": "59.41",
+        "premium_discount": "1.33%",
+        "meta": "股價 60.2｜▲3.75 (+6.64%)｜即時淨值 59.41｜折溢價 1.33%",
+        "source_files": [
+          "img_b105bcced58e.jpg",
+          "img_dd4211e21afb.jpg"
+        ]
+      },
+      {
+        "code": "00960",
+        "name": "野村全球航運龍頭",
+        "price": "20.62",
+        "change": "▼0.63 (-2.96%)",
+        "source_file": "img_b105bcced58e.jpg",
+        "source_sha256": "8940fc8e8c9b4639e5823d5c24fcce262c2dd86804b04b84b27fdcd428ccdb72",
+        "raw_text": "00960|野村全球航運龍頭|20.62|-0.63|-2.96|20.86|-0.96",
+        "confidence": "high",
+        "stamp": "value",
+        "nav": "20.86",
+        "premium_discount": "-0.96%",
+        "meta": "股價 20.62｜▼0.63 (-2.96%)｜即時淨值 20.86｜折溢價 -0.96%",
+        "source_files": [
+          "img_b105bcced58e.jpg",
+          "img_dd4211e21afb.jpg"
+        ]
+      },
+      {
+        "code": "00918",
+        "name": "大華優利高填息30",
+        "price": "30.6",
+        "change": "▼0.91 (-2.89%)",
+        "source_file": "img_b105bcced58e.jpg",
+        "source_sha256": "8940fc8e8c9b4639e5823d5c24fcce262c2dd86804b04b84b27fdcd428ccdb72",
+        "raw_text": "00918|大華優利高填息30|30.6|-0.91|-2.89|30.56|0.13",
+        "confidence": "high",
+        "stamp": "value",
+        "nav": "30.56",
+        "premium_discount": "0.13%",
+        "meta": "股價 30.6｜▼0.91 (-2.89%)｜即時淨值 30.56｜折溢價 0.13%",
+        "source_files": [
+          "img_b105bcced58e.jpg",
+          "img_dd4211e21afb.jpg"
+        ]
+      },
+      {
+        "code": "00731",
+        "name": "復華富時高息低波",
+        "price": "90.85",
+        "change": "▼2.5 (-2.68%)",
+        "source_file": "img_b105bcced58e.jpg",
+        "source_sha256": "8940fc8e8c9b4639e5823d5c24fcce262c2dd86804b04b84b27fdcd428ccdb72",
+        "raw_text": "00731|復華富時高息低波|90.85|-2.5|-2.68|91.09|-0.26",
+        "confidence": "high",
+        "stamp": "value",
+        "nav": "91.09",
+        "premium_discount": "-0.26%",
+        "meta": "股價 90.85｜▼2.5 (-2.68%)｜即時淨值 91.09｜折溢價 -0.26%",
+        "source_files": [
+          "img_b105bcced58e.jpg",
+          "img_dd4211e21afb.jpg"
+        ]
+      },
+      {
+        "code": "00919",
+        "name": "群益台灣精選高息",
+        "price": "29.15",
+        "change": "▼0.84 (-2.80%)",
+        "source_file": "img_dd4211e21afb.jpg",
+        "source_sha256": "ebd0c3df0ce246d6e35130933ad9ad3380e003dc673a764d3de1e4d6d9969fa7",
+        "raw_text": "00919|群益台灣精選高息|29.15|-0.84|-2.80|29.16|-0.03",
+        "confidence": "high",
+        "stamp": "value",
+        "nav": "29.16",
+        "premium_discount": "-0.03%",
+        "meta": "股價 29.15｜▼0.84 (-2.80%)｜即時淨值 29.16｜折溢價 -0.03%",
+        "source_files": [
+          "img_dd4211e21afb.jpg"
+        ]
+      },
+      {
+        "code": "00878",
+        "name": "國泰永續高股息",
+        "price": "29.78",
+        "change": "▼0.87 (-2.84%)",
+        "source_file": "img_dd4211e21afb.jpg",
+        "source_sha256": "ebd0c3df0ce246d6e35130933ad9ad3380e003dc673a764d3de1e4d6d9969fa7",
+        "raw_text": "00878|國泰永續高股息|29.78|-0.87|-2.84|29.73|0.17",
+        "confidence": "high",
+        "stamp": "value",
+        "nav": "29.73",
+        "premium_discount": "0.17%",
+        "meta": "股價 29.78｜▼0.87 (-2.84%)｜即時淨值 29.73｜折溢價 0.17%",
+        "source_files": [
+          "img_dd4211e21afb.jpg"
+        ]
+      }
+    ],
+    "rising": [
+      {
+        "code": "00683L",
+        "name": "期元大美元指正2",
+        "price": "23.56",
+        "change": "▲0.12 (+0.51%)",
+        "source_file": "img_02bfc1abe721.jpg",
+        "source_sha256": "f2e236341ded64227aabe856cc051c24bb9596cbc4f66db8c85edca9cd040cb2",
+        "raw_text": "00683L|期元大美元指正2|23.56|0.12|0.51|23.64|-0.34",
+        "confidence": "high",
+        "stamp": "rising",
+        "nav": "23.64",
+        "premium_discount": "-0.34%",
+        "meta": "股價 23.56｜▲0.12 (+0.51%)｜即時淨值 23.64｜折溢價 -0.34%",
+        "source_files": [
+          "img_02bfc1abe721.jpg"
+        ]
+      },
+      {
+        "code": "00682U",
+        "name": "期元大美元指數",
+        "price": null,
+        "change": null,
+        "source_file": "img_02bfc1abe721.jpg",
+        "source_sha256": "f2e236341ded64227aabe856cc051c24bb9596cbc4f66db8c85edca9cd040cb2",
+        "raw_text": "00682U|期元大美元指數|-|-|-|21.62|-0.74",
+        "confidence": "high",
+        "stamp": "rising",
+        "nav": "21.62",
+        "premium_discount": "-0.74%",
+        "meta": "股價 —｜漲跌 —｜即時淨值 21.62｜折溢價 -0.74%",
+        "source_files": [
+          "img_02bfc1abe721.jpg"
+        ]
+      },
+      {
+        "code": "00652",
+        "name": "富邦印度",
+        "price": "36.4",
+        "change": "▲0.04 (+0.11%)",
+        "source_file": "img_02bfc1abe721.jpg",
+        "source_sha256": "f2e236341ded64227aabe856cc051c24bb9596cbc4f66db8c85edca9cd040cb2",
+        "raw_text": "00652|富邦印度|36.4|0.04|0.11|36.82|-1.14",
+        "confidence": "high",
+        "stamp": "rising",
+        "nav": "36.82",
+        "premium_discount": "-1.14%",
+        "meta": "股價 36.4｜▲0.04 (+0.11%)｜即時淨值 36.82｜折溢價 -1.14%",
+        "source_files": [
+          "img_02bfc1abe721.jpg"
+        ]
+      },
+      {
+        "code": "00673R",
+        "name": "期元大S&P原油反1",
+        "price": "11.41",
+        "change": "▲0.21 (+1.88%)",
+        "source_file": "img_02bfc1abe721.jpg",
+        "source_sha256": "f2e236341ded64227aabe856cc051c24bb9596cbc4f66db8c85edca9cd040cb2",
+        "raw_text": "00673R|期元大S&P原油反1|11.41|0.21|1.88|11.43|-0.17",
+        "confidence": "high",
+        "stamp": "rising",
+        "nav": "11.43",
+        "premium_discount": "-0.17%",
+        "meta": "股價 11.41｜▲0.21 (+1.88%)｜即時淨值 11.43｜折溢價 -0.17%",
+        "source_files": [
+          "img_02bfc1abe721.jpg"
+        ]
+      },
+      {
+        "code": "00865B",
+        "name": "國泰US短期公債",
+        "price": "50.9",
+        "change": "▼0.05 (-0.10%)",
+        "source_file": "img_02bfc1abe721.jpg",
+        "source_sha256": "f2e236341ded64227aabe856cc051c24bb9596cbc4f66db8c85edca9cd040cb2",
+        "raw_text": "00865B|國泰US短期公債|50.9|-0.05|-0.10|50.94|-0.08",
+        "confidence": "high",
+        "stamp": "rising",
+        "nav": "50.94",
+        "premium_discount": "-0.08%",
+        "meta": "股價 50.9｜▼0.05 (-0.10%)｜即時淨值 50.94｜折溢價 -0.08%",
+        "source_files": [
+          "img_02bfc1abe721.jpg"
+        ]
+      },
+      {
+        "code": "00653L",
+        "name": "富邦印度正2",
+        "price": "50.65",
+        "change": "▲0.35 (+0.70%)",
+        "source_file": "img_02bfc1abe721.jpg",
+        "source_sha256": "f2e236341ded64227aabe856cc051c24bb9596cbc4f66db8c85edca9cd040cb2",
+        "raw_text": "00653L|富邦印度正2|50.65|0.35|0.70|50.83|-0.35",
+        "confidence": "high",
+        "stamp": "rising",
+        "nav": "50.83",
+        "premium_discount": "-0.35%",
+        "meta": "股價 50.65｜▲0.35 (+0.70%)｜即時淨值 50.83｜折溢價 -0.35%",
+        "source_files": [
+          "img_02bfc1abe721.jpg"
+        ]
+      },
+      {
+        "code": "00689R",
+        "name": "國泰20年美債反1",
+        "price": "23.55",
+        "change": "▼0.14 (-0.59%)",
+        "source_file": "img_02bfc1abe721.jpg",
+        "source_sha256": "f2e236341ded64227aabe856cc051c24bb9596cbc4f66db8c85edca9cd040cb2",
+        "raw_text": "00689R|國泰20年美債反1|23.55|-0.14|-0.59|23.63|-0.36",
+        "confidence": "high",
+        "stamp": "rising",
+        "nav": "23.63",
+        "premium_discount": "-0.36%",
+        "meta": "股價 23.55｜▼0.14 (-0.59%)｜即時淨值 23.63｜折溢價 -0.36%",
+        "source_files": [
+          "img_02bfc1abe721.jpg"
+        ]
+      }
+    ],
+    "overlap": [],
+    "overlap_names": {},
+    "value_note": "價值區是配置候選，不代表當日價格已止跌；截圖價格保留原值。",
+    "rising_note": "升溫訊號不等於買點；重疊標的保留於兩區。"
+  },
+  "stocks": {
+    "value": [
+      {
+        "code": "2356",
+        "name": "英業達",
+        "price": "40.55",
+        "change": "▼1.75 (-4.14%)",
+        "source_file": "img_15c73f38a8ea.jpg",
+        "source_sha256": "4bb55317dcc71669000744335c9be2a48d4676bd8e737a96de9bc39380a59447",
+        "raw_text": "2356|英業達|40.55|-1.75|-4.14|84.74|伺服器組裝代工",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "伺服器組裝代工",
+        "debt_ratio": "84.74",
+        "meta": "股價 40.55｜▼1.75 (-4.14%)｜負債比率 84.74%",
+        "source_files": [
+          "img_15c73f38a8ea.jpg"
+        ]
+      },
+      {
+        "code": "3706",
+        "name": "神達",
+        "price": "57.5",
+        "change": "▼2.3 (-3.85%)",
+        "source_file": "img_15c73f38a8ea.jpg",
+        "source_sha256": "4bb55317dcc71669000744335c9be2a48d4676bd8e737a96de9bc39380a59447",
+        "raw_text": "3706|神達|57.5|-2.3|-3.85|57.31|伺服器組裝代工",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "伺服器組裝代工",
+        "debt_ratio": "57.31",
+        "meta": "股價 57.5｜▼2.3 (-3.85%)｜負債比率 57.31%",
+        "source_files": [
+          "img_15c73f38a8ea.jpg"
+        ]
+      },
+      {
+        "code": "2347",
+        "name": "聯強",
+        "price": "74.3",
+        "change": "▲0.8 (+1.09%)",
+        "source_file": "img_15c73f38a8ea.jpg",
+        "source_sha256": "4bb55317dcc71669000744335c9be2a48d4676bd8e737a96de9bc39380a59447",
+        "raw_text": "2347|聯強|74.3|0.8|1.09|70.60|3C通路商",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "3C通路商",
+        "debt_ratio": "70.60",
+        "meta": "股價 74.3｜▲0.8 (+1.09%)｜負債比率 70.60%",
+        "source_files": [
+          "img_15c73f38a8ea.jpg"
+        ]
+      },
+      {
+        "code": "2376",
+        "name": "技嘉",
+        "price": "260",
+        "change": "▼16.5 (-5.97%)",
+        "source_file": "img_15c73f38a8ea.jpg",
+        "source_sha256": "4bb55317dcc71669000744335c9be2a48d4676bd8e737a96de9bc39380a59447",
+        "raw_text": "2376|技嘉|260|-16.5|-5.97|79.08|板卡",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "板卡",
+        "debt_ratio": "79.08",
+        "meta": "股價 260｜▼16.5 (-5.97%)｜負債比率 79.08%",
+        "source_files": [
+          "img_15c73f38a8ea.jpg"
+        ]
+      },
+      {
+        "code": "3034",
+        "name": "聯詠",
+        "price": "436.5",
+        "change": "▼21.5 (-4.69%)",
+        "source_file": "img_15c73f38a8ea.jpg",
+        "source_sha256": "4bb55317dcc71669000744335c9be2a48d4676bd8e737a96de9bc39380a59447",
+        "raw_text": "3034|聯詠|436.5|-21.5|-4.69|33.43|驅動IC",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "驅動IC",
+        "debt_ratio": "33.43",
+        "meta": "股價 436.5｜▼21.5 (-4.69%)｜負債比率 33.43%",
+        "source_files": [
+          "img_15c73f38a8ea.jpg"
+        ]
+      },
+      {
+        "code": "3702",
+        "name": "大聯大",
+        "price": "80.2",
+        "change": "▼1.3 (-1.60%)",
+        "source_file": "img_15c73f38a8ea.jpg",
+        "source_sha256": "4bb55317dcc71669000744335c9be2a48d4676bd8e737a96de9bc39380a59447",
+        "raw_text": "3702|大聯大|80.2|-1.3|-1.60|85.41|IC零組件通路商",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "IC零組件通路商",
+        "debt_ratio": "85.41",
+        "meta": "股價 80.2｜▼1.3 (-1.60%)｜負債比率 85.41%",
+        "source_files": [
+          "img_15c73f38a8ea.jpg"
+        ]
+      },
+      {
+        "code": "6669",
+        "name": "緯穎",
+        "price": "1410",
+        "change": "▼65 (-4.41%)",
+        "source_file": "img_15c73f38a8ea.jpg",
+        "source_sha256": "4bb55317dcc71669000744335c9be2a48d4676bd8e737a96de9bc39380a59447",
+        "raw_text": "6669|緯穎|1410|-65|-4.41|72.73|伺服器組裝代工",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "伺服器組裝代工",
+        "debt_ratio": "72.73",
+        "meta": "股價 1410｜▼65 (-4.41%)｜負債比率 72.73%",
+        "source_files": [
+          "img_15c73f38a8ea.jpg"
+        ]
+      },
+      {
+        "code": "2382",
+        "name": "廣達",
+        "price": "262.5",
+        "change": "▼2.5 (-0.94%)",
+        "source_file": "img_15c73f38a8ea.jpg",
+        "source_sha256": "4bb55317dcc71669000744335c9be2a48d4676bd8e737a96de9bc39380a59447",
+        "raw_text": "2382|廣達|262.5|-2.5|-0.94|84.54|伺服器組裝代工",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "伺服器組裝代工",
+        "debt_ratio": "84.54",
+        "meta": "股價 262.5｜▼2.5 (-0.94%)｜負債比率 84.54%",
+        "source_files": [
+          "img_15c73f38a8ea.jpg",
+          "img_18d66e9fa56d.jpg"
+        ]
+      },
+      {
+        "code": "5289",
+        "name": "宜鼎",
+        "price": "772",
+        "change": "▼64 (-7.66%)",
+        "source_file": "img_18d66e9fa56d.jpg",
+        "source_sha256": "04556aad4531f7cdb38cee28b558dcbd2311e76e3bfffdb846ab037f03bb5949",
+        "raw_text": "5289|宜鼎|772|-64|-7.66|41.51|工業電腦",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "工業電腦",
+        "debt_ratio": "41.51",
+        "meta": "股價 772｜▼64 (-7.66%)｜負債比率 41.51%",
+        "source_files": [
+          "img_18d66e9fa56d.jpg"
+        ]
+      },
+      {
+        "code": "4958",
+        "name": "臻鼎-KY",
+        "price": "344",
+        "change": "▼38 (-9.95%)",
+        "source_file": "img_18d66e9fa56d.jpg",
+        "source_sha256": "04556aad4531f7cdb38cee28b558dcbd2311e76e3bfffdb846ab037f03bb5949",
+        "raw_text": "4958|臻鼎-KY|344|-38|-9.95|43.29|軟板",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "軟板",
+        "debt_ratio": "43.29",
+        "meta": "股價 344｜▼38 (-9.95%)｜負債比率 43.29%",
+        "source_files": [
+          "img_18d66e9fa56d.jpg"
+        ]
+      },
+      {
+        "code": "3042",
+        "name": "晶技",
+        "price": "117",
+        "change": "▼11.5 (-8.95%)",
+        "source_file": "img_18d66e9fa56d.jpg",
+        "source_sha256": "04556aad4531f7cdb38cee28b558dcbd2311e76e3bfffdb846ab037f03bb5949",
+        "raw_text": "3042|晶技|117|-11.5|-8.95|23.97|石英元件",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "石英元件",
+        "debt_ratio": "23.97",
+        "meta": "股價 117｜▼11.5 (-8.95%)｜負債比率 23.97%",
+        "source_files": [
+          "img_18d66e9fa56d.jpg"
+        ]
+      },
+      {
+        "code": "3711",
+        "name": "日月光投控",
+        "price": "504",
+        "change": "▼44 (-8.03%)",
+        "source_file": "img_18d66e9fa56d.jpg",
+        "source_sha256": "04556aad4531f7cdb38cee28b558dcbd2311e76e3bfffdb846ab037f03bb5949",
+        "raw_text": "3711|日月光投控|504|-44|-8.03|63.53|IC封裝測試",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "IC封裝測試",
+        "debt_ratio": "63.53",
+        "meta": "股價 504｜▼44 (-8.03%)｜負債比率 63.53%",
+        "source_files": [
+          "img_18d66e9fa56d.jpg"
+        ]
+      },
+      {
+        "code": "3231",
+        "name": "緯創",
+        "price": "156",
+        "change": "▼6 (-3.70%)",
+        "source_file": "img_18d66e9fa56d.jpg",
+        "source_sha256": "04556aad4531f7cdb38cee28b558dcbd2311e76e3bfffdb846ab037f03bb5949",
+        "raw_text": "3231|緯創|156|-6|-3.70|78.59|電腦及周邊產品",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "電腦及周邊產品",
+        "debt_ratio": "78.59",
+        "meta": "股價 156｜▼6 (-3.70%)｜負債比率 78.59%",
+        "source_files": [
+          "img_18d66e9fa56d.jpg"
+        ]
+      },
+      {
+        "code": "2301",
+        "name": "光寶科",
+        "price": "193.5",
+        "change": "▼14.5 (-6.97%)",
+        "source_file": "img_18d66e9fa56d.jpg",
+        "source_sha256": "04556aad4531f7cdb38cee28b558dcbd2311e76e3bfffdb846ab037f03bb5949",
+        "raw_text": "2301|光寶科|193.5|-14.5|-6.97|62.88|電源供應器",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "電源供應器",
+        "debt_ratio": "62.88",
+        "meta": "股價 193.5｜▼14.5 (-6.97%)｜負債比率 62.88%",
+        "source_files": [
+          "img_18d66e9fa56d.jpg"
+        ]
+      },
+      {
+        "code": "6414",
+        "name": "樺漢",
+        "price": "314.5",
+        "change": "▼12.5 (-3.82%)",
+        "source_file": "img_18d66e9fa56d.jpg",
+        "source_sha256": "04556aad4531f7cdb38cee28b558dcbd2311e76e3bfffdb846ab037f03bb5949",
+        "raw_text": "6414|樺漢|314.5|-12.5|-3.82|70.03|工業電腦",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "工業電腦",
+        "debt_ratio": "70.03",
+        "meta": "股價 314.5｜▼12.5 (-3.82%)｜負債比率 70.03%",
+        "source_files": [
+          "img_18d66e9fa56d.jpg",
+          "img_529e0403056d.jpg"
+        ]
+      },
+      {
+        "code": "5347",
+        "name": "世界",
+        "price": "116.5",
+        "change": "▼7.5 (-6.05%)",
+        "source_file": "img_529e0403056d.jpg",
+        "source_sha256": "6d31e61f66df93d9bb15488fd8fac77e451cef525a5458894614677b9e93d21a",
+        "raw_text": "5347|世界|116.5|-7.5|-6.05|55.47|晶圓代工",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "晶圓代工",
+        "debt_ratio": "55.47",
+        "meta": "股價 116.5｜▼7.5 (-6.05%)｜負債比率 55.47%",
+        "source_files": [
+          "img_529e0403056d.jpg"
+        ]
+      },
+      {
+        "code": "2357",
+        "name": "華碩",
+        "price": "800",
+        "change": "▼41 (-4.88%)",
+        "source_file": "img_529e0403056d.jpg",
+        "source_sha256": "6d31e61f66df93d9bb15488fd8fac77e451cef525a5458894614677b9e93d21a",
+        "raw_text": "2357|華碩|800|-41|-4.88|64.23|電腦及周邊產品",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "電腦及周邊產品",
+        "debt_ratio": "64.23",
+        "meta": "股價 800｜▼41 (-4.88%)｜負債比率 64.23%",
+        "source_files": [
+          "img_529e0403056d.jpg"
+        ]
+      },
+      {
+        "code": "2404",
+        "name": "漢唐",
+        "price": "897",
+        "change": "▼30 (-3.24%)",
+        "source_file": "img_529e0403056d.jpg",
+        "source_sha256": "6d31e61f66df93d9bb15488fd8fac77e451cef525a5458894614677b9e93d21a",
+        "raw_text": "2404|漢唐|897|-30|-3.24|77.52|無塵室工程",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "無塵室工程",
+        "debt_ratio": "77.52",
+        "meta": "股價 897｜▼30 (-3.24%)｜負債比率 77.52%",
+        "source_files": [
+          "img_529e0403056d.jpg"
+        ]
+      },
+      {
+        "code": "5434",
+        "name": "崇越",
+        "price": "432.5",
+        "change": "▼41 (-8.66%)",
+        "source_file": "img_529e0403056d.jpg",
+        "source_sha256": "6d31e61f66df93d9bb15488fd8fac77e451cef525a5458894614677b9e93d21a",
+        "raw_text": "5434|崇越|432.5|-41|-8.66|53.47|半導體設備",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "半導體設備",
+        "debt_ratio": "53.47",
+        "meta": "股價 432.5｜▼41 (-8.66%)｜負債比率 53.47%",
+        "source_files": [
+          "img_529e0403056d.jpg"
+        ]
+      },
+      {
+        "code": "2027",
+        "name": "大成鋼",
+        "price": "45.8",
+        "change": "▼0.65 (-1.40%)",
+        "source_file": "img_529e0403056d.jpg",
+        "source_sha256": "6d31e61f66df93d9bb15488fd8fac77e451cef525a5458894614677b9e93d21a",
+        "raw_text": "2027|大成鋼|45.8|-0.65|-1.40|40.70|不鏽鋼產品",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "不鏽鋼產品",
+        "debt_ratio": "40.70",
+        "meta": "股價 45.8｜▼0.65 (-1.40%)｜負債比率 40.70%",
+        "source_files": [
+          "img_529e0403056d.jpg"
+        ]
+      },
+      {
+        "code": "2890",
+        "name": "永豐金",
+        "price": "39.1",
+        "change": "▼1.3 (-3.22%)",
+        "source_file": "img_529e0403056d.jpg",
+        "source_sha256": "6d31e61f66df93d9bb15488fd8fac77e451cef525a5458894614677b9e93d21a",
+        "raw_text": "2890|永豐金|39.1|-1.3|-3.22|93.30|金控",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "金控",
+        "debt_ratio": "93.30",
+        "meta": "股價 39.1｜▼1.3 (-3.22%)｜負債比率 93.30%",
+        "source_files": [
+          "img_529e0403056d.jpg"
+        ]
+      },
+      {
+        "code": "8069",
+        "name": "元太",
+        "price": "132.5",
+        "change": "▼8 (-5.69%)",
+        "source_file": "img_529e0403056d.jpg",
+        "source_sha256": "6d31e61f66df93d9bb15488fd8fac77e451cef525a5458894614677b9e93d21a",
+        "raw_text": "8069|元太|132.5|-8|-5.69|34.32|顯示器",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "顯示器",
+        "debt_ratio": "34.32",
+        "meta": "股價 132.5｜▼8 (-5.69%)｜負債比率 34.32%",
+        "source_files": [
+          "img_529e0403056d.jpg",
+          "img_6a145528f5fb.jpg"
+        ]
+      },
+      {
+        "code": "2330",
+        "name": "台積電",
+        "price": "2100",
+        "change": "▼75 (-3.45%)",
+        "source_file": "img_6a145528f5fb.jpg",
+        "source_sha256": "d62e435bfc1bce228138df588167c42e20f0cbb916d201797fc021d7d3ba2a49",
+        "raw_text": "2330|台積電|2100|-75|-3.45|29.94|晶圓代工",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "晶圓代工",
+        "debt_ratio": "29.94",
+        "meta": "股價 2100｜▼75 (-3.45%)｜負債比率 29.94%",
+        "source_files": [
+          "img_6a145528f5fb.jpg",
+          "img_b5a18ad317e1.jpg"
+        ]
+      },
+      {
+        "code": "1513",
+        "name": "中興電",
+        "price": "138.5",
+        "change": "▼5 (-3.48%)",
+        "source_file": "img_6a145528f5fb.jpg",
+        "source_sha256": "d62e435bfc1bce228138df588167c42e20f0cbb916d201797fc021d7d3ba2a49",
+        "raw_text": "1513|中興電|138.5|-5|-3.48|55.46|機電工程",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "機電工程",
+        "debt_ratio": "55.46",
+        "meta": "股價 138.5｜▼5 (-3.48%)｜負債比率 55.46%",
+        "source_files": [
+          "img_6a145528f5fb.jpg",
+          "img_b5a18ad317e1.jpg"
+        ]
+      },
+      {
+        "code": "6139",
+        "name": "亞翔",
+        "price": "549",
+        "change": "▼38 (-6.47%)",
+        "source_file": "img_6a145528f5fb.jpg",
+        "source_sha256": "d62e435bfc1bce228138df588167c42e20f0cbb916d201797fc021d7d3ba2a49",
+        "raw_text": "6139|亞翔|549|-38|-6.47|73.57|無塵室工程",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "無塵室工程",
+        "debt_ratio": "73.57",
+        "meta": "股價 549｜▼38 (-6.47%)｜負債比率 73.57%",
+        "source_files": [
+          "img_6a145528f5fb.jpg",
+          "img_b5a18ad317e1.jpg"
+        ]
+      },
+      {
+        "code": "2379",
+        "name": "瑞昱",
+        "price": "726",
+        "change": "▼8 (-1.09%)",
+        "source_file": "img_6a145528f5fb.jpg",
+        "source_sha256": "d62e435bfc1bce228138df588167c42e20f0cbb916d201797fc021d7d3ba2a49",
+        "raw_text": "2379|瑞昱|726|-8|-1.09|67.30|IC設計",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "IC設計",
+        "debt_ratio": "67.30",
+        "meta": "股價 726｜▼8 (-1.09%)｜負債比率 67.30%",
+        "source_files": [
+          "img_6a145528f5fb.jpg",
+          "img_b5a18ad317e1.jpg"
+        ]
+      },
+      {
+        "code": "2454",
+        "name": "聯發科",
+        "price": "3720",
+        "change": "▼220 (-5.58%)",
+        "source_file": "img_6a145528f5fb.jpg",
+        "source_sha256": "d62e435bfc1bce228138df588167c42e20f0cbb916d201797fc021d7d3ba2a49",
+        "raw_text": "2454|聯發科|3720|-220|-5.58|50.94|IC設計",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "IC設計",
+        "debt_ratio": "50.94",
+        "meta": "股價 3720｜▼220 (-5.58%)｜負債比率 50.94%",
+        "source_files": [
+          "img_6a145528f5fb.jpg",
+          "img_b5a18ad317e1.jpg"
+        ]
+      },
+      {
+        "code": "6670",
+        "name": "復盛應用",
+        "price": "260.5",
+        "change": "▼5.5 (-2.07%)",
+        "source_file": "img_6a145528f5fb.jpg",
+        "source_sha256": "d62e435bfc1bce228138df588167c42e20f0cbb916d201797fc021d7d3ba2a49",
+        "raw_text": "6670|復盛應用|260.5|-5.5|-2.07|35.53|高爾夫球",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "高爾夫球",
+        "debt_ratio": "35.53",
+        "meta": "股價 260.5｜▼5.5 (-2.07%)｜負債比率 35.53%",
+        "source_files": [
+          "img_6a145528f5fb.jpg",
+          "img_b5a18ad317e1.jpg"
+        ]
+      },
+      {
+        "code": "3293",
+        "name": "鈊象",
+        "price": "792",
+        "change": "▼7 (-0.88%)",
+        "source_file": "img_6a145528f5fb.jpg",
+        "source_sha256": "d62e435bfc1bce228138df588167c42e20f0cbb916d201797fc021d7d3ba2a49",
+        "raw_text": "3293|鈊象|792|-7|-0.88|23.59|軟體遊戲",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "軟體遊戲",
+        "debt_ratio": "23.59",
+        "meta": "股價 792｜▼7 (-0.88%)｜負債比率 23.59%",
+        "source_files": [
+          "img_6a145528f5fb.jpg",
+          "img_b5a18ad317e1.jpg"
+        ]
+      },
+      {
+        "code": "1476",
+        "name": "儒鴻",
+        "price": "384.5",
+        "change": "▲0.5 (+0.13%)",
+        "source_file": "img_b5a18ad317e1.jpg",
+        "source_sha256": "a371be5043e68d9e70b2cc4b012e09f0e456d5b62c14d16ffc2be18651dcd279",
+        "raw_text": "1476|儒鴻|384.5|0.5|0.13|16.78|成衣",
+        "confidence": "high",
+        "stamp": "value",
+        "industry": "成衣",
+        "debt_ratio": "16.78",
+        "meta": "股價 384.5｜▲0.5 (+0.13%)｜負債比率 16.78%",
+        "source_files": [
+          "img_b5a18ad317e1.jpg"
+        ]
+      }
+    ],
+    "rising": [
+      {
+        "code": "6199",
+        "name": "天品",
+        "price": "172.5",
+        "change": "▲1 (+0.58%)",
+        "source_file": "img_68b6e2975bf7.jpg",
+        "source_sha256": "e5d02fbfc046d8703ec9412abaf9d348f0306a9c512c3c4fc33809206449cb6e",
+        "raw_text": "6199|天品|172.5|1|0.58|34.73|傳產其他",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "傳產其他",
+        "debt_ratio": "34.73",
+        "meta": "股價 172.5｜▲1 (+0.58%)｜負債比率 34.73%",
+        "source_files": [
+          "img_68b6e2975bf7.jpg"
+        ]
+      },
+      {
+        "code": "5324",
+        "name": "士開",
+        "price": "12.45",
+        "change": "▼0.05 (-0.40%)",
+        "source_file": "img_68b6e2975bf7.jpg",
+        "source_sha256": "e5d02fbfc046d8703ec9412abaf9d348f0306a9c512c3c4fc33809206449cb6e",
+        "raw_text": "5324|士開|12.45|-0.05|-0.40|86.90|餐飲",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "餐飲",
+        "debt_ratio": "86.90",
+        "meta": "股價 12.45｜▼0.05 (-0.40%)｜負債比率 86.90%",
+        "source_files": [
+          "img_68b6e2975bf7.jpg"
+        ]
+      },
+      {
+        "code": "8426",
+        "name": "紅木-KY",
+        "price": "23.65",
+        "change": "▼0.05 (-0.21%)",
+        "source_file": "img_68b6e2975bf7.jpg",
+        "source_sha256": "e5d02fbfc046d8703ec9412abaf9d348f0306a9c512c3c4fc33809206449cb6e",
+        "raw_text": "8426|紅木-KY|23.65|-0.05|-0.21|50.05|建材",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "建材",
+        "debt_ratio": "50.05",
+        "meta": "股價 23.65｜▼0.05 (-0.21%)｜負債比率 50.05%",
+        "source_files": [
+          "img_68b6e2975bf7.jpg"
+        ]
+      },
+      {
+        "code": "9933",
+        "name": "中鼎",
+        "price": "56.6",
+        "change": "▼0.9 (-1.57%)",
+        "source_file": "img_68b6e2975bf7.jpg",
+        "source_sha256": "e5d02fbfc046d8703ec9412abaf9d348f0306a9c512c3c4fc33809206449cb6e",
+        "raw_text": "9933|中鼎|56.6|-0.9|-1.57|78.37|營造工程",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "營造工程",
+        "debt_ratio": "78.37",
+        "meta": "股價 56.6｜▼0.9 (-1.57%)｜負債比率 78.37%",
+        "source_files": [
+          "img_68b6e2975bf7.jpg"
+        ]
+      },
+      {
+        "code": "8455",
+        "name": "大拓-KY",
+        "price": "35",
+        "change": "▼0.1 (-0.28%)",
+        "source_file": "img_68b6e2975bf7.jpg",
+        "source_sha256": "e5d02fbfc046d8703ec9412abaf9d348f0306a9c512c3c4fc33809206449cb6e",
+        "raw_text": "8455|大拓-KY|35|-0.1|-0.28|57.23|機械",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "機械",
+        "debt_ratio": "57.23",
+        "meta": "股價 35｜▼0.1 (-0.28%)｜負債比率 57.23%",
+        "source_files": [
+          "img_68b6e2975bf7.jpg"
+        ]
+      },
+      {
+        "code": "4807",
+        "name": "日成-KY",
+        "price": "37",
+        "change": "▲2.5 (+7.25%)",
+        "source_file": "img_68b6e2975bf7.jpg",
+        "source_sha256": "e5d02fbfc046d8703ec9412abaf9d348f0306a9c512c3c4fc33809206449cb6e",
+        "raw_text": "4807|日成-KY|37|2.5|7.25|44.71|文化創意",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "文化創意",
+        "debt_ratio": "44.71",
+        "meta": "股價 37｜▲2.5 (+7.25%)｜負債比率 44.71%",
+        "source_files": [
+          "img_68b6e2975bf7.jpg"
+        ]
+      },
+      {
+        "code": "7584",
+        "name": "樂意",
+        "price": "44.45",
+        "change": "▲4 (+9.89%)",
+        "source_file": "img_68b6e2975bf7.jpg",
+        "source_sha256": "e5d02fbfc046d8703ec9412abaf9d348f0306a9c512c3c4fc33809206449cb6e",
+        "raw_text": "7584|樂意|44.45|4|9.89|39.06|軟體遊戲",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "軟體遊戲",
+        "debt_ratio": "39.06",
+        "meta": "股價 44.45｜▲4 (+9.89%)｜負債比率 39.06%",
+        "source_files": [
+          "img_68b6e2975bf7.jpg"
+        ]
+      },
+      {
+        "code": "2540",
+        "name": "愛山林",
+        "price": "48.75",
+        "change": "▲1.25 (+2.63%)",
+        "source_file": "img_68b6e2975bf7.jpg",
+        "source_sha256": "e5d02fbfc046d8703ec9412abaf9d348f0306a9c512c3c4fc33809206449cb6e",
+        "raw_text": "2540|愛山林|48.75|1.25|2.63|81.27|地產代銷",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "地產代銷",
+        "debt_ratio": "81.27",
+        "meta": "股價 48.75｜▲1.25 (+2.63%)｜負債比率 81.27%",
+        "source_files": [
+          "img_68b6e2975bf7.jpg",
+          "img_bbb502503b05.jpg"
+        ]
+      },
+      {
+        "code": "4174",
+        "name": "浩鼎",
+        "price": "69.8",
+        "change": "▼7.7 (-9.94%)",
+        "source_file": "img_bbb502503b05.jpg",
+        "source_sha256": "32ff2728957e837f6984b63bdfc3d6cdab078686c8c500d0375aa4d29743e69c",
+        "raw_text": "4174|浩鼎|69.8|-7.7|-9.94|26.21|製藥業",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "製藥業",
+        "debt_ratio": "26.21",
+        "meta": "股價 69.8｜▼7.7 (-9.94%)｜負債比率 26.21%",
+        "source_files": [
+          "img_bbb502503b05.jpg"
+        ]
+      },
+      {
+        "code": "1476",
+        "name": "儒鴻",
+        "price": "384.5",
+        "change": "▲0.5 (+0.13%)",
+        "source_file": "img_bbb502503b05.jpg",
+        "source_sha256": "32ff2728957e837f6984b63bdfc3d6cdab078686c8c500d0375aa4d29743e69c",
+        "raw_text": "1476|儒鴻|384.5|0.5|0.13|16.78|成衣",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "成衣",
+        "debt_ratio": "16.78",
+        "meta": "股價 384.5｜▲0.5 (+0.13%)｜負債比率 16.78%",
+        "source_files": [
+          "img_bbb502503b05.jpg"
+        ]
+      },
+      {
+        "code": "6904",
+        "name": "伯鑫",
+        "price": null,
+        "change": null,
+        "source_file": "img_bbb502503b05.jpg",
+        "source_sha256": "32ff2728957e837f6984b63bdfc3d6cdab078686c8c500d0375aa4d29743e69c",
+        "raw_text": "6904|伯鑫|-|-|-|39.29|工具機",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "工具機",
+        "debt_ratio": "39.29",
+        "meta": "股價 —｜漲跌 —｜負債比率 39.29%",
+        "source_files": [
+          "img_bbb502503b05.jpg"
+        ]
+      },
+      {
+        "code": "5511",
+        "name": "德昌",
+        "price": "71.3",
+        "change": "▲0.4 (+0.56%)",
+        "source_file": "img_bbb502503b05.jpg",
+        "source_sha256": "32ff2728957e837f6984b63bdfc3d6cdab078686c8c500d0375aa4d29743e69c",
+        "raw_text": "5511|德昌|71.3|0.4|0.56|53.25|營造工程",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "營造工程",
+        "debt_ratio": "53.25",
+        "meta": "股價 71.3｜▲0.4 (+0.56%)｜負債比率 53.25%",
+        "source_files": [
+          "img_bbb502503b05.jpg"
+        ]
+      },
+      {
+        "code": "910322",
+        "name": "康師傅-DR",
+        "price": "28.35",
+        "change": "▼0.3 (-1.05%)",
+        "source_file": "img_bbb502503b05.jpg",
+        "source_sha256": "32ff2728957e837f6984b63bdfc3d6cdab078686c8c500d0375aa4d29743e69c",
+        "raw_text": "910322|康師傅-DR|28.35|-0.3|-1.05|72.93|飲料相關",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "飲料相關",
+        "debt_ratio": "72.93",
+        "meta": "股價 28.35｜▼0.3 (-1.05%)｜負債比率 72.93%",
+        "source_files": [
+          "img_bbb502503b05.jpg"
+        ]
+      },
+      {
+        "code": "8415",
+        "name": "大國鋼",
+        "price": "42.2",
+        "change": "▲0.6 (+1.44%)",
+        "source_file": "img_bbb502503b05.jpg",
+        "source_sha256": "32ff2728957e837f6984b63bdfc3d6cdab078686c8c500d0375aa4d29743e69c",
+        "raw_text": "8415|大國鋼|42.2|0.6|1.44|32.08|鋼鐵產品",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "鋼鐵產品",
+        "debt_ratio": "32.08",
+        "meta": "股價 42.2｜▲0.6 (+1.44%)｜負債比率 32.08%",
+        "source_files": [
+          "img_bbb502503b05.jpg"
+        ]
+      },
+      {
+        "code": "3054",
+        "name": "立萬利",
+        "price": "60.9",
+        "change": "▼1.4 (-2.25%)",
+        "source_file": "img_bbb502503b05.jpg",
+        "source_sha256": "32ff2728957e837f6984b63bdfc3d6cdab078686c8c500d0375aa4d29743e69c",
+        "raw_text": "3054|立萬利|60.9|-1.4|-2.25|9.16|生技其他",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "生技其他",
+        "debt_ratio": "9.16",
+        "meta": "股價 60.9｜▼1.4 (-2.25%)｜負債比率 9.16%",
+        "source_files": [
+          "img_bbb502503b05.jpg",
+          "img_2f67448aab1f.jpg"
+        ]
+      },
+      {
+        "code": "3293",
+        "name": "鈊象",
+        "price": "792",
+        "change": "▼7 (-0.88%)",
+        "source_file": "img_2f67448aab1f.jpg",
+        "source_sha256": "e638be3bc58d6f6ce8d03873d97e02a7b71fbb5256085054be86aa4457ed3909",
+        "raw_text": "3293|鈊象|792|-7|-0.88|23.59|軟體遊戲",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "軟體遊戲",
+        "debt_ratio": "23.59",
+        "meta": "股價 792｜▼7 (-0.88%)｜負債比率 23.59%",
+        "source_files": [
+          "img_2f67448aab1f.jpg"
+        ]
+      },
+      {
+        "code": "6743",
+        "name": "安普新",
+        "price": "34.35",
+        "change": "▼0.8 (-2.28%)",
+        "source_file": "img_2f67448aab1f.jpg",
+        "source_sha256": "e638be3bc58d6f6ce8d03873d97e02a7b71fbb5256085054be86aa4457ed3909",
+        "raw_text": "6743|安普新|34.35|-0.8|-2.28|74.68|消費性電子產品",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "消費性電子產品",
+        "debt_ratio": "74.68",
+        "meta": "股價 34.35｜▼0.8 (-2.28%)｜負債比率 74.68%",
+        "source_files": [
+          "img_2f67448aab1f.jpg"
+        ]
+      },
+      {
+        "code": "2852",
+        "name": "第一保",
+        "price": "28.15",
+        "change": "▼0.8 (-2.76%)",
+        "source_file": "img_2f67448aab1f.jpg",
+        "source_sha256": "e638be3bc58d6f6ce8d03873d97e02a7b71fbb5256085054be86aa4457ed3909",
+        "raw_text": "2852|第一保|28.15|-0.8|-2.76|51.21|保險",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "保險",
+        "debt_ratio": "51.21",
+        "meta": "股價 28.15｜▼0.8 (-2.76%)｜負債比率 51.21%",
+        "source_files": [
+          "img_2f67448aab1f.jpg"
+        ]
+      },
+      {
+        "code": "6108",
+        "name": "競國",
+        "price": "38.25",
+        "change": "▼4.25 (-10.00%)",
+        "source_file": "img_2f67448aab1f.jpg",
+        "source_sha256": "e638be3bc58d6f6ce8d03873d97e02a7b71fbb5256085054be86aa4457ed3909",
+        "raw_text": "6108|競國|38.25|-4.25|-10.00|59.58|硬板",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "硬板",
+        "debt_ratio": "59.58",
+        "meta": "股價 38.25｜▼4.25 (-10.00%)｜負債比率 59.58%",
+        "source_files": [
+          "img_2f67448aab1f.jpg"
+        ]
+      },
+      {
+        "code": "5206",
+        "name": "坤悅",
+        "price": "24.4",
+        "change": "▼0.6 (-2.40%)",
+        "source_file": "img_2f67448aab1f.jpg",
+        "source_sha256": "e638be3bc58d6f6ce8d03873d97e02a7b71fbb5256085054be86aa4457ed3909",
+        "raw_text": "5206|坤悅|24.4|-0.6|-2.40|70.58|營造工程",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "營造工程",
+        "debt_ratio": "70.58",
+        "meta": "股價 24.4｜▼0.6 (-2.40%)｜負債比率 70.58%",
+        "source_files": [
+          "img_2f67448aab1f.jpg"
+        ]
+      },
+      {
+        "code": "9935",
+        "name": "慶豐富",
+        "price": "19.7",
+        "change": "▼0.6 (-2.96%)",
+        "source_file": "img_2f67448aab1f.jpg",
+        "source_sha256": "e638be3bc58d6f6ce8d03873d97e02a7b71fbb5256085054be86aa4457ed3909",
+        "raw_text": "9935|慶豐富|19.7|-0.6|-2.96|68.86|家居用品",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "家居用品",
+        "debt_ratio": "68.86",
+        "meta": "股價 19.7｜▼0.6 (-2.96%)｜負債比率 68.86%",
+        "source_files": [
+          "img_2f67448aab1f.jpg"
+        ]
+      },
+      {
+        "code": "2636",
+        "name": "台驊控股",
+        "price": "70.3",
+        "change": "▼1.8 (-2.50%)",
+        "source_file": "img_2f67448aab1f.jpg",
+        "source_sha256": "e638be3bc58d6f6ce8d03873d97e02a7b71fbb5256085054be86aa4457ed3909",
+        "raw_text": "2636|台驊控股|70.3|-1.8|-2.50|56.45|航運其他",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "航運其他",
+        "debt_ratio": "56.45",
+        "meta": "股價 70.3｜▼1.8 (-2.50%)｜負債比率 56.45%",
+        "source_files": [
+          "img_2f67448aab1f.jpg",
+          "img_6c1243cfdda9.jpg"
+        ]
+      },
+      {
+        "code": "1323",
+        "name": "永裕",
+        "price": "22.55",
+        "change": "▼0.65 (-2.80%)",
+        "source_file": "img_6c1243cfdda9.jpg",
+        "source_sha256": "c58606dd4a2b6a178b5aab73283d280a230b39c1da4b1e9444bafe4687e90f37",
+        "raw_text": "1323|永裕|22.55|-0.65|-2.80|41.53|塑膠製品",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "塑膠製品",
+        "debt_ratio": "41.53",
+        "meta": "股價 22.55｜▼0.65 (-2.80%)｜負債比率 41.53%",
+        "source_files": [
+          "img_6c1243cfdda9.jpg",
+          "img_9fd2b18058e3.jpg"
+        ]
+      },
+      {
+        "code": "2618",
+        "name": "長榮航",
+        "price": "46.4",
+        "change": "▼0.4 (-0.85%)",
+        "source_file": "img_6c1243cfdda9.jpg",
+        "source_sha256": "c58606dd4a2b6a178b5aab73283d280a230b39c1da4b1e9444bafe4687e90f37",
+        "raw_text": "2618|長榮航|46.4|-0.4|-0.85|59.55|航運其他",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "航運其他",
+        "debt_ratio": "59.55",
+        "meta": "股價 46.4｜▼0.4 (-0.85%)｜負債比率 59.55%",
+        "source_files": [
+          "img_6c1243cfdda9.jpg",
+          "img_9fd2b18058e3.jpg"
+        ]
+      },
+      {
+        "code": "2610",
+        "name": "華航",
+        "price": "22.5",
+        "change": "▼0.4 (-1.75%)",
+        "source_file": "img_6c1243cfdda9.jpg",
+        "source_sha256": "c58606dd4a2b6a178b5aab73283d280a230b39c1da4b1e9444bafe4687e90f37",
+        "raw_text": "2610|華航|22.5|-0.4|-1.75|72.31|航運其他",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "航運其他",
+        "debt_ratio": "72.31",
+        "meta": "股價 22.5｜▼0.4 (-1.75%)｜負債比率 72.31%",
+        "source_files": [
+          "img_6c1243cfdda9.jpg",
+          "img_9fd2b18058e3.jpg"
+        ]
+      },
+      {
+        "code": "4106",
+        "name": "雃博",
+        "price": "24.35",
+        "change": "▲0.05 (+0.21%)",
+        "source_file": "img_6c1243cfdda9.jpg",
+        "source_sha256": "c58606dd4a2b6a178b5aab73283d280a230b39c1da4b1e9444bafe4687e90f37",
+        "raw_text": "4106|雃博|24.35|0.05|0.21|20.94|醫療器材",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "醫療器材",
+        "debt_ratio": "20.94",
+        "meta": "股價 24.35｜▲0.05 (+0.21%)｜負債比率 20.94%",
+        "source_files": [
+          "img_6c1243cfdda9.jpg",
+          "img_9fd2b18058e3.jpg"
+        ]
+      },
+      {
+        "code": "3004",
+        "name": "豐達科",
+        "price": "123.5",
+        "change": "▼6 (-4.63%)",
+        "source_file": "img_6c1243cfdda9.jpg",
+        "source_sha256": "c58606dd4a2b6a178b5aab73283d280a230b39c1da4b1e9444bafe4687e90f37",
+        "raw_text": "3004|豐達科|123.5|-6|-4.63|60.17|航天軍工",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "航天軍工",
+        "debt_ratio": "60.17",
+        "meta": "股價 123.5｜▼6 (-4.63%)｜負債比率 60.17%",
+        "source_files": [
+          "img_6c1243cfdda9.jpg",
+          "img_9fd2b18058e3.jpg"
+        ]
+      },
+      {
+        "code": "3489",
+        "name": "森寶",
+        "price": "22.6",
+        "change": "▼0.3 (-1.31%)",
+        "source_file": "img_6c1243cfdda9.jpg",
+        "source_sha256": "c58606dd4a2b6a178b5aab73283d280a230b39c1da4b1e9444bafe4687e90f37",
+        "raw_text": "3489|森寶|22.6|-0.3|-1.31|78.19|營造工程",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "營造工程",
+        "debt_ratio": "78.19",
+        "meta": "股價 22.6｜▼0.3 (-1.31%)｜負債比率 78.19%",
+        "source_files": [
+          "img_6c1243cfdda9.jpg",
+          "img_9fd2b18058e3.jpg"
+        ]
+      },
+      {
+        "code": "6470",
+        "name": "宇智",
+        "price": "44.2",
+        "change": "▼2 (-4.33%)",
+        "source_file": "img_6c1243cfdda9.jpg",
+        "source_sha256": "c58606dd4a2b6a178b5aab73283d280a230b39c1da4b1e9444bafe4687e90f37",
+        "raw_text": "6470|宇智|44.2|-2|-4.33|31.98|網路設備",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "網路設備",
+        "debt_ratio": "31.98",
+        "meta": "股價 44.2｜▼2 (-4.33%)｜負債比率 31.98%",
+        "source_files": [
+          "img_6c1243cfdda9.jpg",
+          "img_9fd2b18058e3.jpg"
+        ]
+      },
+      {
+        "code": "5348",
+        "name": "正能量智能",
+        "price": "15.8",
+        "change": "▼1.55 (-8.93%)",
+        "source_file": "img_9fd2b18058e3.jpg",
+        "source_sha256": "a6f3a5230e3d9710710f9eb77182c19131a42e5516d30c56e6fd264bd60c8394",
+        "raw_text": "5348|正能量智能|15.8|-1.55|-8.93|44.32|無線通訊設備",
+        "confidence": "high",
+        "stamp": "rising",
+        "industry": "無線通訊設備",
+        "debt_ratio": "44.32",
+        "meta": "股價 15.8｜▼1.55 (-8.93%)｜負債比率 44.32%",
+        "source_files": [
+          "img_9fd2b18058e3.jpg"
+        ]
+      }
+    ],
+    "overlap": [
+      "1476",
+      "3293"
+    ],
+    "overlap_names": {
+      "1476": "儒鴻",
+      "3293": "鈊象"
+    },
+    "value_note": "價值區是配置候選，不代表當日價格已止跌；截圖價格保留原值。",
+    "rising_note": "升溫訊號不等於買點；重疊標的保留於兩區。"
+  },
+  "market": {
+    "tw_index": {
+      "value": "38,512.04",
+      "change": -1682.87,
+      "change_pct": -4.186773897491001,
+      "previous_close": 40194.91,
+      "data_as_of": "2026-11-19T13:10:00+08:00",
+      "session": "intraday_not_close",
+      "line": "38,512.04 / -4.19%（11/19 13:10盤中）",
+      "source_url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_t00.tw&json=1&delay=0&_=1795065026"
+    },
+    "futures": {
+      "value": null,
+      "change": null,
+      "change_pct": null,
+      "data_as_of": null,
+      "line": "截止13:10報價未核實；不以收盤價補作盤中價",
+      "note": "Current retrieved quote is after cutoff and excluded from this Morning Brief."
+    },
+    "foreign_oi": {
+      "value": "-99,438口（11/18）",
+      "net": -99438,
+      "data_as_of": "2026-11-18",
+      "source_url": "https://www.taifex.com.tw/cht/3/futContractsDate?queryDate=2026/11/18&commodityId=TXF",
+      "note": "外資臺股期貨未平倉多空淨額；非當日交易口數。"
+    },
+    "systemic_risk": "偏高",
+    "sox": {
+      "value": "9,652.80",
+      "change": 9.919921875,
+      "change_pct": 0.10287302129192027,
+      "data_as_of": "2026-11-18",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?range=10d&interval=1d"
+    },
+    "vix": {
+      "value": "24.56",
+      "change": -0.899999618530273,
+      "change_pct": -3.53495542377752,
+      "data_as_of": "2026-11-18",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?range=10d&interval=1d"
+    },
+    "institutional": [
+      {
+        "name": "自營商(自行買賣)",
+        "buy_twd": 14251624227,
+        "sell_twd": 8779836830,
+        "net_twd": 5471787397,
+        "net_100m_twd": 54.71787397,
+        "data_as_of": "2026-11-18"
+      },
+      {
+        "name": "自營商(避險)",
+        "buy_twd": 50883591688,
+        "sell_twd": 60556649167,
+        "net_twd": -9673057479,
+        "net_100m_twd": -96.73057479,
+        "data_as_of": "2026-11-18"
+      },
+      {
+        "name": "投信",
+        "buy_twd": 40778487727,
+        "sell_twd": 24166903638,
+        "net_twd": 16611584089,
+        "net_100m_twd": 166.11584089,
+        "data_as_of": "2026-11-18"
+      },
+      {
+        "name": "外資及陸資(不含外資自營商)",
+        "buy_twd": 438758111970,
+        "sell_twd": 515321787919,
+        "net_twd": -76563675949,
+        "net_100m_twd": -765.63675949,
+        "data_as_of": "2026-11-18"
+      },
+      {
+        "name": "外資自營商",
+        "buy_twd": 0,
+        "sell_twd": 0,
+        "net_twd": 0,
+        "net_100m_twd": 0.0,
+        "data_as_of": "2026-11-18"
+      },
+      {
+        "name": "合計",
+        "buy_twd": 544671815612,
+        "sell_twd": 608825177554,
+        "net_twd": -64153361942,
+        "net_100m_twd": -641.53361942,
+        "data_as_of": "2026-11-18"
+      }
+    ]
+  },
+  "indicator_availability": {
+    "status": "unavailable_source_has_no_numeric_scores",
+    "reason": "截圖僅有五指標指針，未提供數字；本期不換算分數。",
+    "values": {
+      "全球散戶": null,
+      "外資情緒": null,
+      "位階增溫": null,
+      "社交反指": null,
+      "量能爆衝": null
+    },
+    "source_image": "data/sources/20261119-user-screenshots/img_8718c562dbdc.jpg",
+    "source_sha256": "39b6ae548ce1d7723d1d8361143865731a442df845e1a826532c17a4b7cdd49f",
+    "captured_at": null,
+    "available_at": null,
+    "method": "none: user prohibits inferring dial numbers"
+  },
+  "temperature": {
+    "vix_note": "11/18美股正常盤VIX收24.56，回落3.53%，但仍高於20；不是台股賣壓解除的證明。",
+    "signal_headline": "配置小升，價格承接仍弱",
+    "signal_note": "方舟水位79.7%，較前一交易日11/18的79.1%上升0.6個百分點；不把配置空間當成加滿訊號。"
+  },
+  "editorial": {
+    "pull_quote": "水位給配置空間，價格決定進場節奏。",
+    "body": "11/19加權13:10為38,512.04點、跌4.19%；11/18外資賣超765.64億元、法人合計賣超641.53億元，是前一交易日資料，不代表今日流量。 昨日小漲未改變今天的脆弱結構。水位續升0.6個百分點，不等於要立刻提高部位；先看跌勢能否收斂，再看價值股是否守穩。"
+  },
+  "home": {
+    "thesis_blurb": "昨日小漲後今日重挫，水位續升但承接失守；輝達財報未能扭轉估值壓力，台股再遭賣壓；配置環境改善，不等於價格止跌。",
+    "recent_summary": "水位79.7%、上升0.6個百分點；加權13:10跌4.19%，先守部位與承接。",
+    "water_note": "方舟水位79.7%，較前一交易日11/18的79.1%上升0.6個百分點；不把配置空間當成加滿訊號。",
+    "risk_tagline": "風險收縮｜水位小升、價格待穩"
+  },
+  "validation": {
+    "strengthened": [
+      "方舟水位79.7%，較前一交易日11/18的79.1%上升0.6個百分點；不把配置空間當成加滿訊號。",
+      "ETF價值區10檔、升溫區7檔；產業價值區30檔、升溫區30檔，儒鴻與鈊象為產業雙區重疊。",
+      "美股11/18那指與費半小幅上漲，但只足以稱為局部價格修復。"
+    ],
+    "pressure": [
+      "11/19加權13:10為38,512.04點、跌4.19%；11/18外資賣超765.64億元、法人合計賣超641.53億元，是前一交易日資料，不代表今日流量。",
+      "輝達11/18正常盤下跌2.89%；強勁財報未消除估值與領導層不確定性。營運需求與股價評價必須分開，不能直接推成台廠已取得新增訂單。",
+      "11/19台北凌晨公布的10月FOMC紀要，討論AI投資回報落差、複雜融資與避險基金槓桿如何放大衝擊；這是已公布的會議紀錄，不是新的升降息決議。"
+    ],
+    "long_term": [
+      "AI算力需求仍須以出貨、毛利與現金流驗證；股價便宜與產業成長不是同一層判斷。",
+      "美元、利率與實際ETF申贖交叉驗證，不從價格上漲倒推資金流入。"
+    ]
+  },
+  "intelligence": {
+    "trump": [
+      {
+        "time": "11/19查核窗",
+        "content": "本期未核實川普新增同日原始貼文或已生效措施；不把談判意向當成關稅、出口管制的正式變更。"
+      }
+    ],
+    "musk": "本期未核實馬斯克、Tesla、SpaceX或Starlink新增同日原始貼文。既有產品規劃不能當作今日新訂單；相關電源、配電或航太標的仍須各自通過價格與營收確認。",
+    "policy": [
+      "11/19台北凌晨公布的10月FOMC紀要，討論AI投資回報落差、複雜融資與避險基金槓桿如何放大衝擊；這是已公布的會議紀錄，不是新的升降息決議。",
+      "輝達11/18正常盤下跌2.89%；強勁財報未消除估值與領導層不確定性。營運需求與股價評價必須分開，不能直接推成台廠已取得新增訂單。",
+      "美股風險不是單一財報數字：融資成本、估值與政策能否交付，會共同影響AI供應鏈的持倉承受度。"
+    ]
+  },
+  "mag7": [
+    {
+      "name": "Apple",
+      "ticker": "AAPL｜11/18正常盤收盤",
+      "price": "352.45",
+      "change_abs": "+0.54",
+      "change_pct": 0.15345075141437176,
+      "data_as_of": "2026-11-18",
+      "session": "regular_session_close_not_afterhours",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?range=10d&interval=1d",
+      "tier": "neutral",
+      "tier_label": "相對強弱",
+      "signal": "微升、相對抗跌，仍不代表市場全面回流。"
+    },
+    {
+      "name": "Microsoft",
+      "ticker": "MSFT｜11/18正常盤收盤",
+      "price": "508.29",
+      "change_abs": "+2.05",
+      "change_pct": 0.40494989532490283,
+      "data_as_of": "2026-11-18",
+      "session": "regular_session_close_not_afterhours",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?range=10d&interval=1d",
+      "tier": "neutral",
+      "tier_label": "相對強弱",
+      "signal": "小幅修復，雲端與AI資本支出須看自身價格續航。"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA｜11/18正常盤收盤",
+      "price": "150.96",
+      "change_abs": "-4.50",
+      "change_pct": -2.8946351509443202,
+      "data_as_of": "2026-11-18",
+      "session": "regular_session_close_not_afterhours",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?range=10d&interval=1d",
+      "tier": "neutral",
+      "tier_label": "相對強弱",
+      "signal": "財報後仍跌，需求與估值修復不同步。"
+    },
+    {
+      "name": "Amazon",
+      "ticker": "AMZN｜11/18正常盤收盤",
+      "price": "267.74",
+      "change_abs": "+9.85",
+      "change_pct": 3.819448224610498,
+      "data_as_of": "2026-11-18",
+      "session": "regular_session_close_not_afterhours",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AMZN?range=10d&interval=1d",
+      "tier": "neutral",
+      "tier_label": "相對強弱",
+      "signal": "相對領先，但單日漲幅不是持續淨流入證據。"
+    },
+    {
+      "name": "Alphabet",
+      "ticker": "GOOGL｜11/18正常盤收盤",
+      "price": "282.44",
+      "change_abs": "+2.24",
+      "change_pct": 0.7994254592394305,
+      "data_as_of": "2026-11-18",
+      "session": "regular_session_close_not_afterhours",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?range=10d&interval=1d",
+      "tier": "neutral",
+      "tier_label": "相對強弱",
+      "signal": "小幅反彈，仍須確認後續承接。"
+    },
+    {
+      "name": "Meta",
+      "ticker": "META｜11/18正常盤收盤",
+      "price": "616.38",
+      "change_abs": "-2.49",
+      "change_pct": -0.4023446368414585,
+      "data_as_of": "2026-11-18",
+      "session": "regular_session_close_not_afterhours",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/META?range=10d&interval=1d",
+      "tier": "neutral",
+      "tier_label": "相對強弱",
+      "signal": "仍下跌，風險偏好未全面修復。"
+    },
+    {
+      "name": "Tesla",
+      "ticker": "TSLA｜11/18正常盤收盤",
+      "price": "383.72",
+      "change_abs": "+3.61",
+      "change_pct": 0.9497292910634031,
+      "data_as_of": "2026-11-18",
+      "session": "regular_session_close_not_afterhours",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/TSLA?range=10d&interval=1d",
+      "tier": "neutral",
+      "tier_label": "相對強弱",
+      "signal": "反彈偏強，不由單日行情推定新訂單。"
+    }
+  ],
+  "analysis": {
+    "us_close": "11/18標普收7,323.63點、跌0.23%，那指24,429.88點、漲0.42%，道瓊50,198.17點、跌1.11%；費半9,652.80點、漲0.10%，VIX24.56。科技局部修復與傳統股走弱並存，不能稱為全面止跌。",
+    "tx_night": "截至13:10未取得可核實的同步臺指期報價，故不回填收盤價，也不計算基差。外資臺股期貨未平倉淨額採11/18的-99,438口（多單9,922、空單109,360）；與當日交易淨額-2,620口為不同欄位。",
+    "axes": {
+      "thesis": "方舟水位79.7%，較前一交易日11/18的79.1%上升0.6個百分點；不把配置空間當成加滿訊號。",
+      "policy": "11/19台北凌晨公布的10月FOMC紀要，討論AI投資回報落差、複雜融資與避險基金槓桿如何放大衝擊；這是已公布的會議紀錄，不是新的升降息決議。",
+      "risk": "11/19加權13:10為38,512.04點、跌4.19%；11/18外資賣超765.64億元、法人合計賣超641.53億元，是前一交易日資料，不代表今日流量。 不因配置水位上升而忽視個股下跌、槓桿與流動性風險。"
+    }
+  },
+  "conclusion": "今日一句話：<em>水位續升只是配置空間，重挫後先等承接，不急著把空間用滿。</em>",
+  "appendix": {
+    "after_hours": "本期補全11/19方舟截圖；行情維持原13:10盤中觀察，不因延後製作而改成收盤版。美股用11/18已完成正常盤，未核實盤後交易；法人與期貨部位採11/18。截圖價格保留原值；替換水位圖顯示上午9:13、內層09:12，僅作顯示脈絡，並非獨立驗證的拍攝或公開時間。",
+    "map_bullets": [
+      "輝達財報與估值壓力 → 晶圓代工、伺服器、板卡及電源供應鏈；只作產業觀察，不聲稱各公司新訂單。",
+      "FOMC紀要的AI融資與槓桿提醒 → 留意高估值、擴產融資與流動性，不把紀要當成今晚待公布事件。",
+      "ETF升溫出現美元、印度、原油反向與美債反向商品；這是候選清單，不是已配置的投資組合，也不是實際資金流。",
+      "儒鴻與鈊象同時位於產業價值及升溫兩區；雙區訊號仍不免除個股停損與進場條件。"
+    ],
+    "execution": "風控先決定總部位，再用價值與價格決定配置；不追急拉、不補滿、不用事後資訊回填成交。"
+  },
+  "disclaimer": "Kelvin Wiggly Morning Brief｜2026/11/19 截圖補全版。僅供研究參考，非投資建議。",
+  "scenario_id": "06",
+  "lock_scenario": true,
+  "scenario_reason": "11/19加權13:10跌4.19%，此前外資與法人賣壓仍待消化，維持風險收縮；水位79.7%較11/18的79.1%上升0.6個百分點，是配置環境小幅改善，並非水位下降。",
+  "capital_flow": {
+    "headline": "美元偏強、加密ETF仍流出，風險偏好未全面回來",
+    "stance": "defensive fragmented; actual flows distinguished from prices",
+    "summary": "11/18 BTC ETF -306.5百萬美元、ETH ETF -39.8百萬美元；美元偏強。黃金與美債實際資金流未核實，不從價格倒推。",
+    "assets": [
+      {
+        "asset": "黃金 Gold",
+        "role": "reserve hedge",
+        "evidence": "11/18 Yahoo GC=F日線3741.90；僅價格證據，未驗證當期WGC淨申購。",
+        "flow_signal": "unconfirmed",
+        "confidence": "low",
+        "watch": "WGC實際持倉與淨申購是否確認防禦需求",
+        "tone": "neutral"
+      },
+      {
+        "asset": "Bitcoin BTC",
+        "role": "high-volatility scarce risk asset",
+        "evidence": "{\"date\": \"18 Nov 2026\", \"columns\": [\"(148.7)\", \"(69.3)\", \"(36.6)\", \"(19.3)\", \"0.0\", \"0.0\", \"0.0\", \"(1.8)\", \"0.0\", \"0.0\", \"(20.3)\", \"(10.5)\"], \"total\": -306.5, \"complete\": true, \"sum\": -306.5, \"url\": \"https://farside.co.uk/btc/?brief=20261119\"}; Farside official table read again on 2026-11-19, full 12 fund columns total -306.5 US$m.",
+        "flow_signal": "outflow",
+        "confidence": "medium",
+        "watch": "complete issuer flow reporting and price trigger",
+        "tone": "neutral"
+      },
+      {
+        "asset": "ethereum",
+        "role": "separate crypto risk sleeve",
+        "evidence": "{\"date\": \"18 Nov 2026\", \"columns\": [\"(17.4)\", \"(5.4)\", \"0.0\", \"0.0\", \"0.0\", \"0.0\", \"0.0\", \"0.0\", \"0.0\", \"(2.0)\", \"(15.0)\"], \"total\": -39.8, \"complete\": true, \"sum\": -39.8, \"url\": \"https://farside.co.uk/eth/?brief=20261119\"}; Farside official table read again on 2026-11-19, full 11 fund columns total -39.8 US$m.",
+        "flow_signal": "outflow",
+        "confidence": "medium",
+        "watch": "ETH/BTC and ETF reversal",
+        "tone": "neutral"
+      },
+      {
+        "asset": "USD cash",
+        "role": "liquidity",
+        "evidence": "11/18美元指數103.86，前日103.49；匯價偏強，不是美元貨幣基金申購數據。",
+        "flow_signal": "price_only",
+        "confidence": "low",
+        "watch": "DXY reversal",
+        "tone": "neutral"
+      },
+      {
+        "asset": "US Treasury duration",
+        "role": "rate-sensitive defensive duration",
+        "evidence": "官方Treasury文字表404；Yahoo ^TNX 11/18為5.066%，僅利率價格代理，未主張債券實際淨流入。",
+        "flow_signal": "unconfirmed",
+        "confidence": "low",
+        "watch": "official 2Y/10Y/30Y curve",
+        "tone": "neutral"
+      },
+      {
+        "asset": "equity risk",
+        "role": "growth beta",
+        "evidence": "11/19加權13:10為38,512.04點、跌4.19%；11/18外資賣超765.64億元、法人合計賣超641.53億元，是前一交易日資料，不代表今日流量。 11/18美股局部修復，不視為實際基金流入。",
+        "flow_signal": "price_only",
+        "confidence": "medium for prices, low for flow",
+        "watch": "SOX/Nasdaq follow-through",
+        "tone": "neutral"
+      }
+    ],
+    "interpretation": [
+      "實際ETF淨申贖偏弱；美股與加密價格不代表淨買入。",
+      "黃金實際流量和美債持倉仍無完整證據，不強制歸類全面避險。"
+    ],
+    "confirmation": [
+      "BTC、ETH各自價格轉強且完整ETF流量改善，才提高風險確認。",
+      "台股縮小跌幅、守低與後續承接須同時觀察。"
+    ],
+    "caveat": "各資產頻率分開；不將價格、成交量或WorldMonitor估算視為實際淨申購。",
+    "as_of": "美股/美元/黃金/加密日線與ETF流量2026-11-18；台股2026-11-19 13:10盤中",
+    "reader": {
+      "headline": "美元偏強、加密ETF仍流出，風險偏好未全面回來",
+      "flow": "11/18比特幣與以太幣ETF均淨流出；美元偏強只是價格證據。",
+      "meaning": "科技小彈與VIX回落，是局部修復，尚非全面資金回流。",
+      "action": "台股重挫先守現金彈性，水位小升不等於加滿。",
+      "watch": "低點承接、科技續航、美元反轉與ETF申贖。"
+    },
+    "crypto_relative_strength": {
+      "eth_btc_ratio": 0.028176316718905234,
+      "date": "2026-11-18",
+      "basis": "same UTC daily close date; not asynchronous current quotes",
+      "btc_price": 62987.265625,
+      "eth_price": 1774.7491455078125,
+      "derivatives": null,
+      "stablecoin_flows": null,
+      "news_weight": 0
+    }
+  },
+  "research": {
+    "retrieval_manifest": "data/research/20261119/retrieval-manifest.json",
+    "prior_public_edition": "data/public-market/20261119.json",
+    "source_precedence": "2026-11-19 user screenshot rows and explicit replacement water supersede prior edition; 2026-11-18 source historical only",
+    "actual_capture_time": null,
+    "publication_time": null,
+    "original_intraday_cutoff": "2026-11-19 13:10 Asia/Taipei",
+    "late_reconstruction_note": "Retain original 13:10 intraday market contract. Retrieved same-day final close/flows/futures are preserved only as excluded research, not backfilled into the Morning Brief.",
+    "btc_eth_flow_verified": {
+      "btc": {
+        "date": "18 Nov 2026",
+        "columns": [
+          "(148.7)",
+          "(69.3)",
+          "(36.6)",
+          "(19.3)",
+          "0.0",
+          "0.0",
+          "0.0",
+          "(1.8)",
+          "0.0",
+          "0.0",
+          "(20.3)",
+          "(10.5)"
+        ],
+        "total": -306.5,
+        "complete": true,
+        "sum": -306.5,
+        "url": "https://farside.co.uk/btc/?brief=20261119"
+      },
+      "eth": {
+        "date": "18 Nov 2026",
+        "columns": [
+          "(17.4)",
+          "(5.4)",
+          "0.0",
+          "0.0",
+          "0.0",
+          "0.0",
+          "0.0",
+          "0.0",
+          "0.0",
+          "(2.0)",
+          "(15.0)"
+        ],
+        "total": -39.8,
+        "complete": true,
+        "sum": -39.8,
+        "url": "https://farside.co.uk/eth/?brief=20261119"
+      }
+    },
+    "market_and_water_arithmetic": {
+      "water_delta": 0.6,
+      "taiex_change": -1682.87,
+      "taiex_change_pct": -4.186773897491001,
+      "foreign_oi_net": -99438
+    },
+    "source_health": {
+      "x": "No same-day original post verified; no synthetic X signals",
+      "treasury": "Official URL 404; exact official curve withheld, Yahoo yield proxy only",
+      "farside": "urllib 403 but web_extract successfully retrieved complete official BTC and ETH tables",
+      "five_indicators": "Numeric scores absent and user prohibits inference: null, no snapshot/publication event fabricated"
+    },
+    "excluded_after_cutoff": [
+      "twse-market.json 11/19 close row",
+      "twse-institutional.json 11/19 final flows",
+      "taifex-mis.json 13:44:59 quote",
+      "taifex-oi.html 11/19 final positions"
+    ]
+  },
+  "ark_source_validation": {
+    "audit_at": "2026-11-19T08:37:47.495218+00:00",
+    "source_type": "user_screenshots_visual_transcription",
+    "manifest": "data/sources/20261119-user-screenshots/manifest.json",
+    "manifest_sha256": "a923ad1878fa8e6d57cb6b39020b7778a8dc2dd16519da264399b3c806da00b6",
+    "reconstructed_source": "data/sources/20261119-user-screenshots/reconstructed-ark.json",
+    "source_sha256": "5da14ce28dd0798d59c882ce32756a252e7c4a9bd909b0a577c65718034f1fb5",
+    "all_manifest_hashes_match": true,
+    "original_image_count": 14,
+    "replacement_image_count": 1,
+    "image_count": 15,
+    "zone_counts": {
+      "etf.value": 10,
+      "etf.rising": 7,
+      "stocks.value": 30,
+      "stocks.rising": 30
+    },
+    "observed_complete_rows": 103,
+    "capture_duplicate_count": 26,
+    "row_count": 77,
+    "unique_ticker_count": 75,
+    "overlaps": {
+      "etf": [],
+      "stocks": [
+        "1476",
+        "3293"
+      ]
+    },
+    "prior_water": {
+      "date": "2026-11-18",
+      "water_level": 79.1,
+      "source_path": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-18_09-05-03/ark_stocks.json",
+      "sha256": "6f55684cb1fafb9576618e43018030e6beddb2769ed63a189370e89b39abf5ff",
+      "success_ok": true,
+      "stage": "complete",
+      "official_open_witness": [
+        "115/11/18",
+        "13,560,477,251",
+        "1,075,174,308,798",
+        "5,047,336",
+        "40,194.91",
+        "102.80"
+      ],
+      "calendar_source": "https://www.twse.com.tw/exchangeReport/FMTQIK?response=json&date=20261119"
+    },
+    "water_supersession": {
+      "superseded_image": "img_269f71de7293.jpg",
+      "superseded_water": 80.7,
+      "effective_image": "img_8718c562dbdc.jpg",
+      "effective_water": 79.7,
+      "authority": "explicit user: 水位改用這張",
+      "observed_at": "2026-11-19T08:37:47.491297+00:00",
+      "capture_timestamp": null,
+      "membership_effect": "none"
+    },
+    "capture_timestamp": null
+  },
+  "xurl_signal_layer": {
+    "status": "no_material_signal",
+    "signals_count": 0,
+    "included_in_revision": false,
+    "note": "No same-day original post verified; carry no prior-day signals into today."
+  },
+  "research_sources": [
+    {
+      "title": "twse-market",
+      "url": "https://www.twse.com.tw/exchangeReport/FMTQIK?response=json&date=20261119"
+    },
+    {
+      "title": "twse-institutional",
+      "url": "https://www.twse.com.tw/fund/BFI82U?response=json&dayDate=20261119&type=day"
+    },
+    {
+      "title": "taifex-oi",
+      "url": "https://www.taifex.com.tw/cht/3/futContractsDate?queryDate=2026/11/19&commodityId=TXF"
+    },
+    {
+      "title": "taifex-oi-prior",
+      "url": "https://www.taifex.com.tw/cht/3/futContractsDate?queryDate=2026/11/18&commodityId=TXF"
+    },
+    {
+      "title": "treasury",
+      "url": "https://home.treasury.gov/resource-center-data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026"
+    },
+    {
+      "title": "fed-minutes",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm"
+    },
+    {
+      "title": "btc-flow",
+      "url": "https://farside.co.uk/btc/?brief=20261119"
+    },
+    {
+      "title": "eth-flow",
+      "url": "https://farside.co.uk/eth/?brief=20261119"
+    },
+    {
+      "title": "yahoo-AAPL",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?range=10d&interval=1d"
+    },
+    {
+      "title": "yahoo-MSFT",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?range=10d&interval=1d"
+    },
+    {
+      "title": "yahoo-NVDA",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?range=10d&interval=1d"
+    },
+    {
+      "title": "yahoo-AMZN",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMZN?range=10d&interval=1d"
+    },
+    {
+      "title": "yahoo-GOOGL",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?range=10d&interval=1d"
+    },
+    {
+      "title": "yahoo-META",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/META?range=10d&interval=1d"
+    },
+    {
+      "title": "yahoo-TSLA",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/TSLA?range=10d&interval=1d"
+    },
+    {
+      "title": "yahoo-SOX",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?range=10d&interval=1d"
+    },
+    {
+      "title": "yahoo-VIX",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?range=10d&interval=1d"
+    },
+    {
+      "title": "yahoo-GSPC",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=10d&interval=1d"
+    },
+    {
+      "title": "yahoo-IXIC",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=10d&interval=1d"
+    },
+    {
+      "title": "yahoo-DJI",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?range=10d&interval=1d"
+    },
+    {
+      "title": "yahoo-DX-Y.NYB",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=10d&interval=1d"
+    },
+    {
+      "title": "yahoo-GC-F",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=10d&interval=1d"
+    },
+    {
+      "title": "yahoo-BTC-USD",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?range=10d&interval=1d"
+    },
+    {
+      "title": "yahoo-ETH-USD",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETH-USD?range=10d&interval=1d"
+    },
+    {
+      "title": "yahoo-TNX",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=10d&interval=1d"
+    },
+    {
+      "title": "NVIDIA Reuters 11/18",
+      "url": "https://www.staradvertiser.com/2026/11/18/breaking-news/nvidia-retreats-as-strong-outlook-fails-to-dispel-uncertainty/"
+    }
+  ]
+}

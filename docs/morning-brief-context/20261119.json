@@ -1,0 +1,98 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-11-19",
+  "valid_for_trading_date": "2026-11-19",
+  "data_as_of": "2026-11-19",
+  "stale": false,
+  "issue_no": 128,
+  "scenario": {
+    "id": "06",
+    "slug": "risk-contraction",
+    "label": "風險收縮",
+    "confidence": 1.0,
+    "reason": "11/19加權13:10跌4.19%，此前外資與法人賣壓仍待消化，維持風險收縮；水位79.7%較11/18的79.1%上升0.6個百分點，是配置環境小幅改善，並非水位下降。",
+    "source": "manual_override",
+    "classifier_suggestion": "05"
+  },
+  "water": {
+    "level": 79.7,
+    "previous": 79.1,
+    "change": 0.6,
+    "direction": "rising",
+    "previous_trading_date": "2026-11-18",
+    "comparison_date": "2026-11-18",
+    "comparison_is_provisional": false
+  },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "reduce_risk_review",
+    "risk_posture": "risk_off",
+    "water_policy": {
+      "direction": "rising",
+      "change": 0.6,
+      "interpretation": "目前情境要求風險收縮，暫停新增曝險；先檢查過熱、非護城河與槓桿風險。"
+    },
+    "scenario_context": {
+      "id": "06",
+      "label": "風險收縮",
+      "confidence": 1.0
+    },
+    "policy_focus": [
+      "保留現金彈性；價值區分批等承接，升溫區不追急拉。",
+      "FOMC紀要已公布；估值與槓桿風險仍在，不重押單一反彈。",
+      "加權13:10跌4.19%；此前外資與法人賣壓待消化。",
+      "11/19台北凌晨公布的10月FOMC紀要，討論AI投資回報落差、複雜融資與避險基金槓桿如何放大衝擊；這是已公布的會議紀錄，不是新的升降息決議。"
+    ],
+    "systemic_risk": "偏高",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
+  "action_guidance": {
+    "risk_bias": "risk_off",
+    "allow_add": false,
+    "allow_trim": true,
+    "deploy_mode": "reduce_exposure",
+    "trim": {
+      "allowed": true,
+      "mode": "reduce_exposure",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": false,
+      "mode": "disabled",
+      "conditions": [
+        "risk_off_no_new_exposure"
+      ]
+    },
+    "rebuy": {
+      "allowed": false,
+      "mode": "disabled_until_stabilized",
+      "conditions": [
+        "risk_bias_improves",
+        "water_stabilizes"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 1.0,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "風險收縮",
+    "summary": "11/19加權13:10跌4.19%，此前外資與法人賣壓仍待消化，維持風險收縮；水位79.7%較11/18的79.1%上升0.6個百分點，是配置環境小幅改善，並非水位下降。"
+  },
+  "source": {
+    "issue_file": "data/issues/20261119.json",
+    "generated_at": "2026-11-19T16:37:47+08:00"
+  }
+}

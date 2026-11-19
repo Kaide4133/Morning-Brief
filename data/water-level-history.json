@@ -1,6 +1,35 @@
 {
   "records": [
     {
+      "date": "2026-11-19",
+      "water_level": 79.7,
+      "scenario_id": "06",
+      "scenario_label": "06 風險收縮",
+      "previous_trading_date": "2026-11-18",
+      "previous_water_level": 79.1,
+      "change": 0.6,
+      "direction": "上升",
+      "comparison_date": "2026-11-18",
+      "comparison_is_provisional": false,
+      "source_sha256": "39b6ae548ce1d7723d1d8361143865731a442df845e1a826532c17a4b7cdd49f",
+      "source_file": "data/sources/20261119-user-screenshots/img_8718c562dbdc.jpg",
+      "captured_at": null,
+      "source_display_context": {
+        "outer": "2026.11.19 上午9:13",
+        "inner_phone": "09:12"
+      },
+      "water_supersession": {
+        "superseded_image": "img_269f71de7293.jpg",
+        "superseded_water": 80.7,
+        "effective_image": "img_8718c562dbdc.jpg",
+        "effective_water": 79.7,
+        "authority": "explicit user: 水位改用這張",
+        "observed_at": "2026-11-19T08:37:47.491297+00:00",
+        "capture_timestamp": null,
+        "membership_effect": "none"
+      }
+    },
+    {
       "date": "2026-11-18",
       "water_level": 79.1,
       "scenario_id": "06",

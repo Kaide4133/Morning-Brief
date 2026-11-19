@@ -119,14 +119,24 @@
           </div>
         </div>
         <div class="countdown-panel">
+          {% if ark.countdown_is_source_context | default(false) %}
+          <div class="countdown-label">截圖更新倒數 · 非即時計時</div>
+          <div class="countdown-time" data-source-countdown="true">{{ ark.update_countdown }}</div>
+          {% else %}
           <div class="countdown-label">更新倒數 · Next Update</div>
           <div class="countdown-time" id="holdingCountdown" aria-live="polite">30<span class="blink">:</span>00</div>
+          {% endif %}
         </div>
       </div>
 {% if indicator_display is defined %}
       <div class="five-indicators" aria-label="方舟五指標">
         {% for item in indicator_display.rows %}<div class="indicator-row"><span>{{ item.name }}</span><div class="indicator-track" role="meter" aria-label="{{ item.name }}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ item.value }}"><i style="width:{{ item.value }}%"></i></div><b>{{ item.value }}</b></div>{% endfor %}
       </div>
+{% elif indicator_unavailable is defined %}
+      <div class="five-indicators" aria-label="方舟五指標，數值未提供">
+        {% for name in indicator_unavailable.names %}<div class="indicator-row"><span>{{ name }}</span><div class="indicator-track" aria-label="{{ name }}數值未提供"></div><b>—</b></div>{% endfor %}
+      </div>
+      <p class="zone-note">{{ indicator_unavailable.reason }}</p>
 {% endif %}
     </div>
   </section>

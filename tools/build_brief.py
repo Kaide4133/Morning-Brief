@@ -271,7 +271,23 @@ def enrich_issue(data: dict) -> dict:
     snapshots = latest_by_date(load_store(ROOT / 'data' / 'indicator-snapshots.json'))
     observation = snapshots.get(data['date'])
     if data['date'] >= '2026-11-02' and observation is None:
-        raise ValueError('Five-indicator snapshot required for this issue date; import its explicitly dated source before building.')
+        # A source with unlabeled analog dials is not a numeric observation.
+        # Keep the normal fail-closed rule; permit only hash-backed explicit nulls.
+        import hashlib
+        availability = data.get('indicator_availability') or {}
+        source_path = (ROOT / availability.get('source_image', '')).resolve()
+        valid_missing = (
+            availability.get('status') == 'unavailable_source_has_no_numeric_scores'
+            and availability.get('captured_at') is None
+            and availability.get('reason')
+            and source_path.is_relative_to(ROOT.resolve())
+            and source_path.is_file()
+            and hashlib.sha256(source_path.read_bytes()).hexdigest() == availability.get('source_sha256')
+            and availability.get('values') == {name: None for name in NAMES}
+        )
+        if not valid_missing:
+            raise ValueError('Five-indicator snapshot required for this issue date; import its explicitly dated source or provide hash-backed unavailable numeric scores.')
+        data['indicator_unavailable'] = {'names': NAMES, 'reason': availability['reason']}
     if observation:
         ark = data.get('ark', {})
         previous_date = ark.get('previous_trading_date') if ark.get('comparison_is_provisional') is False else None

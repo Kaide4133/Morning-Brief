@@ -1,0 +1,418 @@
+{
+  "twse-market": {
+    "url": "https://www.twse.com.tw/exchangeReport/FMTQIK?response=json&date=20261119",
+    "fetched_at": "2026-11-19T08:24:10.308717+00:00",
+    "sha256": "d0d35c771b0ebd1f3da8786b866f4660661f912caeb70b13082756d2c2f6df16",
+    "bytes": 1553,
+    "last_rows": [
+      [
+        "115/11/18",
+        "13,560,477,251",
+        "1,075,174,308,798",
+        "5,047,336",
+        "40,194.91",
+        "102.80"
+      ],
+      [
+        "115/11/19",
+        "15,282,042,940",
+        "930,987,418,697",
+        "6,310,047",
+        "38,426.89",
+        "-1,768.02"
+      ]
+    ],
+    "stat": "OK"
+  },
+  "twse-institutional": {
+    "url": "https://www.twse.com.tw/fund/BFI82U?response=json&dayDate=20261119&type=day",
+    "fetched_at": "2026-11-19T08:24:10.317794+00:00",
+    "sha256": "8844b4407f87fefa706870c877281512516d03041c1e9aac3385f1af897277fc",
+    "bytes": 1465,
+    "last_rows": [
+      [
+        "外資自營商",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "合計",
+        "445,477,922,248",
+        "491,580,772,839",
+        "-46,102,850,591"
+      ]
+    ],
+    "stat": "OK"
+  },
+  "taifex-oi": {
+    "url": "https://www.taifex.com.tw/cht/3/futContractsDate?queryDate=2026/11/19&commodityId=TXF",
+    "fetched_at": "2026-11-19T08:24:10.919669+00:00",
+    "sha256": "ff102b0cf12e64ef9d6bfed6cf2772d5066280f572f279d471fe778ac0e0dcc4",
+    "bytes": 313023
+  },
+  "taifex-oi-prior": {
+    "url": "https://www.taifex.com.tw/cht/3/futContractsDate?queryDate=2026/11/18&commodityId=TXF",
+    "fetched_at": "2026-11-19T08:24:10.679737+00:00",
+    "sha256": "9d7da519e5ef9e90d6b2d766056f740c0a58e3d6a23494ca75532fce17906e96",
+    "bytes": 313047
+  },
+  "treasury": {
+    "url": "https://home.treasury.gov/resource-center-data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+    "error": "HTTP Error 404: Not Found"
+  },
+  "fed-minutes": {
+    "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm",
+    "fetched_at": "2026-11-19T08:24:10.721203+00:00",
+    "sha256": "8aac110981ad98ca9682be0da407f45fee175cfb00da88331d51c26f12c6a259",
+    "bytes": 122840
+  },
+  "btc-flow": {
+    "url": "https://farside.co.uk/btc/?brief=20261119",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  "eth-flow": {
+    "url": "https://farside.co.uk/eth/?brief=20261119",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  "yahoo-AAPL": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?range=10d&interval=1d",
+    "fetched_at": "2026-11-19T08:24:10.501286+00:00",
+    "sha256": "7d859a122b103bff5b8c04fa1a297e5d2518738f30a82f41729b6d9d09a83e39",
+    "bytes": 2272,
+    "last_rows": [
+      {
+        "date": "2026-11-16",
+        "close": 352.7799987792969
+      },
+      {
+        "date": "2026-11-17",
+        "close": 351.9100036621094
+      },
+      {
+        "date": "2026-11-18",
+        "close": 352.45001220703125
+      }
+    ]
+  },
+  "yahoo-MSFT": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?range=10d&interval=1d",
+    "fetched_at": "2026-11-19T08:24:10.349605+00:00",
+    "sha256": "e73e284087233372e26a841bbc49092d53348864fc3e66779a5bac9358cf51da",
+    "bytes": 2237,
+    "last_rows": [
+      {
+        "date": "2026-11-16",
+        "close": 517.989990234375
+      },
+      {
+        "date": "2026-11-17",
+        "close": 506.239990234375
+      },
+      {
+        "date": "2026-11-18",
+        "close": 508.2900085449219
+      }
+    ]
+  },
+  "yahoo-NVDA": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?range=10d&interval=1d",
+    "fetched_at": "2026-11-19T08:24:10.459745+00:00",
+    "sha256": "019e1ec53f0f5f440305a1d5eda27556a577cb4123016599c6fa17a0120a8777",
+    "bytes": 2325,
+    "last_rows": [
+      {
+        "date": "2026-11-16",
+        "close": 156.13999938964844
+      },
+      {
+        "date": "2026-11-17",
+        "close": 155.4600067138672
+      },
+      {
+        "date": "2026-11-18",
+        "close": 150.9600067138672
+      }
+    ]
+  },
+  "yahoo-AMZN": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMZN?range=10d&interval=1d",
+    "fetched_at": "2026-11-19T08:24:10.465473+00:00",
+    "sha256": "445152fdd619e2f739d1ecee2cf5c3e09c5eae1ab98aeb6c89639ab4d5ad3620",
+    "bytes": 2278,
+    "last_rows": [
+      {
+        "date": "2026-11-16",
+        "close": 257.75
+      },
+      {
+        "date": "2026-11-17",
+        "close": 257.8900146484375
+      },
+      {
+        "date": "2026-11-18",
+        "close": 267.739990234375
+      }
+    ]
+  },
+  "yahoo-GOOGL": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?range=10d&interval=1d",
+    "fetched_at": "2026-11-19T08:24:10.523558+00:00",
+    "sha256": "8ee9c76f65830f8cb9d8dbd24e4b215c3fb045733ff09e8642bcee90c35161d0",
+    "bytes": 2298,
+    "last_rows": [
+      {
+        "date": "2026-11-16",
+        "close": 283.7200012207031
+      },
+      {
+        "date": "2026-11-17",
+        "close": 280.20001220703125
+      },
+      {
+        "date": "2026-11-18",
+        "close": 282.44000244140625
+      }
+    ]
+  },
+  "yahoo-META": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/META?range=10d&interval=1d",
+    "fetched_at": "2026-11-19T08:24:10.689949+00:00",
+    "sha256": "751fc9aed940bfe702d4dc9539e22c8edbb9008c2b105f8a2feea37fb34f86bd",
+    "bytes": 2247,
+    "last_rows": [
+      {
+        "date": "2026-11-16",
+        "close": 626.4099731445312
+      },
+      {
+        "date": "2026-11-17",
+        "close": 618.8699951171875
+      },
+      {
+        "date": "2026-11-18",
+        "close": 616.3800048828125
+      }
+    ]
+  },
+  "yahoo-TSLA": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/TSLA?range=10d&interval=1d",
+    "fetched_at": "2026-11-19T08:24:10.688900+00:00",
+    "sha256": "9ce2c899b64e517788c20313b7d6acd4348c78e8adea06eae548cf94ee5b4df5",
+    "bytes": 2263,
+    "last_rows": [
+      {
+        "date": "2026-11-16",
+        "close": 379.739990234375
+      },
+      {
+        "date": "2026-11-17",
+        "close": 380.1099853515625
+      },
+      {
+        "date": "2026-11-18",
+        "close": 383.7200012207031
+      }
+    ]
+  },
+  "yahoo-SOX": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?range=10d&interval=1d",
+    "fetched_at": "2026-11-19T08:24:10.808358+00:00",
+    "sha256": "512a73b56e042430c26183d076f55035724f831fa8d8fcc3c704ffd5e241fcf1",
+    "bytes": 2106,
+    "last_rows": [
+      {
+        "date": "2026-11-16",
+        "close": 9610.650390625
+      },
+      {
+        "date": "2026-11-17",
+        "close": 9642.8798828125
+      },
+      {
+        "date": "2026-11-18",
+        "close": 9652.7998046875
+      }
+    ]
+  },
+  "yahoo-VIX": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?range=10d&interval=1d",
+    "fetched_at": "2026-11-19T08:24:10.731760+00:00",
+    "sha256": "9a4a455612f3222d8adc4a76f93b5b1523b30b1091719d9c8d51d2cc1f777050",
+    "bytes": 2184,
+    "last_rows": [
+      {
+        "date": "2026-11-16",
+        "close": 22.90999984741211
+      },
+      {
+        "date": "2026-11-17",
+        "close": 25.459999084472656
+      },
+      {
+        "date": "2026-11-18",
+        "close": 24.559999465942383
+      }
+    ]
+  },
+  "yahoo-GSPC": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=10d&interval=1d",
+    "fetched_at": "2026-11-19T08:24:10.842680+00:00",
+    "sha256": "6a3c07fa31dad04917102f633b5c73e7c803ff965f85a368cb86e72b6b02feec",
+    "bytes": 2217,
+    "last_rows": [
+      {
+        "date": "2026-11-16",
+        "close": 7416.58984375
+      },
+      {
+        "date": "2026-11-17",
+        "close": 7340.52978515625
+      },
+      {
+        "date": "2026-11-18",
+        "close": 7323.6298828125
+      }
+    ]
+  },
+  "yahoo-IXIC": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=10d&interval=1d",
+    "fetched_at": "2026-11-19T08:24:10.837905+00:00",
+    "sha256": "2e07561b3fcc72fe1552cb65efc5769444072281a9a6248d1f018d0971dac3d4",
+    "bytes": 2185,
+    "last_rows": [
+      {
+        "date": "2026-11-16",
+        "close": 24509.759765625
+      },
+      {
+        "date": "2026-11-17",
+        "close": 24328.380859375
+      },
+      {
+        "date": "2026-11-18",
+        "close": 24429.880859375
+      }
+    ]
+  },
+  "yahoo-DJI": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?range=10d&interval=1d",
+    "fetched_at": "2026-11-19T08:24:10.937868+00:00",
+    "sha256": "211f5f582ff80334afc3395c3362f649a830d6a4f593ad3874557defeb2eece2",
+    "bytes": 2133,
+    "last_rows": [
+      {
+        "date": "2026-11-16",
+        "close": 51608.171875
+      },
+      {
+        "date": "2026-11-17",
+        "close": 50759.421875
+      },
+      {
+        "date": "2026-11-18",
+        "close": 50198.171875
+      }
+    ]
+  },
+  "yahoo-DX-Y.NYB": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=10d&interval=1d",
+    "fetched_at": "2026-11-19T08:24:10.898051+00:00",
+    "sha256": "3d860006a0f3953494b7d08852da065a94fe2c718ac49cd7be65d5e276d5b493",
+    "bytes": 2200,
+    "last_rows": [
+      {
+        "date": "2026-11-16",
+        "close": 103.55000305175781
+      },
+      {
+        "date": "2026-11-17",
+        "close": 103.48999786376953
+      },
+      {
+        "date": "2026-11-18",
+        "close": 103.86000061035156
+      }
+    ]
+  },
+  "yahoo-GC-F": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=10d&interval=1d",
+    "fetched_at": "2026-11-19T08:24:11.049280+00:00",
+    "sha256": "4016b930f9b7c02cd784918e04421daa4300f104639da90d8d01eb7c51366d7a",
+    "bytes": 1975,
+    "last_rows": [
+      {
+        "date": "2026-11-16",
+        "close": 3853.0
+      },
+      {
+        "date": "2026-11-17",
+        "close": 3864.199951171875
+      },
+      {
+        "date": "2026-11-18",
+        "close": 3741.89990234375
+      }
+    ]
+  },
+  "yahoo-BTC-USD": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?range=10d&interval=1d",
+    "fetched_at": "2026-11-19T08:24:10.948752+00:00",
+    "sha256": "4cb587045bce52357a21f079d3f8b40f2db84eca2161f4dcf3a3ceb3c34dab88",
+    "bytes": 2085,
+    "last_rows": [
+      {
+        "date": "2026-11-16",
+        "close": 64855.84375
+      },
+      {
+        "date": "2026-11-17",
+        "close": 64893.9453125
+      },
+      {
+        "date": "2026-11-18",
+        "close": 62987.265625
+      }
+    ]
+  },
+  "yahoo-ETH-USD": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETH-USD?range=10d&interval=1d",
+    "fetched_at": "2026-11-19T08:24:11.001437+00:00",
+    "sha256": "5aa0405bd5362ef7f967c9fd3d9ce3b0536123fe7d76a8bc911d3c772d3c2ad5",
+    "bytes": 2291,
+    "last_rows": [
+      {
+        "date": "2026-11-16",
+        "close": 1819.27587890625
+      },
+      {
+        "date": "2026-11-17",
+        "close": 1822.9613037109375
+      },
+      {
+        "date": "2026-11-18",
+        "close": 1774.7491455078125
+      }
+    ]
+  },
+  "yahoo-TNX": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=10d&interval=1d",
+    "fetched_at": "2026-11-19T08:24:11.039789+00:00",
+    "sha256": "cdce079f1f61c1fbd43469dff958a96c3e32177c02ca058c6e70e12a2e1d258e",
+    "bytes": 2233,
+    "last_rows": [
+      {
+        "date": "2026-11-16",
+        "close": 5.120999813079834
+      },
+      {
+        "date": "2026-11-17",
+        "close": 5.103000164031982
+      },
+      {
+        "date": "2026-11-18",
+        "close": 5.065999984741211
+      }
+    ]
+  }
+}

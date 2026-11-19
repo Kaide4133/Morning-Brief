@@ -1,27 +1,27 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-11-18",
-  "valid_for_trading_date": "2026-11-18",
-  "data_as_of": "2026-11-18",
+  "date": "2026-11-19",
+  "valid_for_trading_date": "2026-11-19",
+  "data_as_of": "2026-11-19",
   "stale": false,
-  "issue_no": 127,
+  "issue_no": 128,
   "scenario": {
     "id": "06",
     "slug": "risk-contraction",
     "label": "風險收縮",
     "confidence": 1.0,
-    "reason": "昨日台股續跌、法人賣超，今早開高後轉弱且美股波動升溫，因此維持風險控制；水位79.1%較77.1%上升2.0個百分點是配置環境改善，並非水位下降。",
+    "reason": "11/19加權13:10跌4.19%，此前外資與法人賣壓仍待消化，維持風險收縮；水位79.7%較11/18的79.1%上升0.6個百分點，是配置環境小幅改善，並非水位下降。",
     "source": "manual_override",
-    "classifier_suggestion": "04"
+    "classifier_suggestion": "05"
   },
   "water": {
-    "level": 79.1,
-    "previous": 77.1,
-    "change": 2.0,
+    "level": 79.7,
+    "previous": 79.1,
+    "change": 0.6,
     "direction": "rising",
-    "previous_trading_date": "2026-11-17",
-    "comparison_date": "2026-11-17",
+    "previous_trading_date": "2026-11-18",
+    "comparison_date": "2026-11-18",
     "comparison_is_provisional": false
   },
   "leader_policy": {
@@ -30,8 +30,8 @@
     "risk_posture": "risk_off",
     "water_policy": {
       "direction": "rising",
-      "change": 2.0,
-      "interpretation": "方舟水位79.1%，較前一交易日11/17的77.1%上升2.0個百分點；配置環境改善，仍須等待價格承接。價格與外部波動仍弱，因此暫停新增曝險，並非水位下降。"
+      "change": 0.6,
+      "interpretation": "目前情境要求風險收縮，暫停新增曝險；先檢查過熱、非護城河與槓桿風險。"
     },
     "scenario_context": {
       "id": "06",
@@ -39,10 +39,10 @@
       "confidence": 1.0
     },
     "policy_focus": [
-      "風控決定總部位，價值決定配置；不以單一財報利多追價加滿。",
-      "今晚21:30美國新屋開工／建照，11/19凌晨03:00公布FOMC紀要；不追價、不重押單一結果。",
-      "昨日加權跌2.31%、法人賣超576.11億元；今09:52仍跌0.50%。",
-      "輝達今晨已公布Q3營收1,158億美元、資料中心1,076億美元；Q4營收展望1,300億美元±3%，但毛利率預估降至71–72%。Rubin已開始出貨支持AI需求，仍不能推定台廠訂單與獲利同步上升。"
+      "保留現金彈性；價值區分批等承接，升溫區不追急拉。",
+      "FOMC紀要已公布；估值與槓桿風險仍在，不重押單一反彈。",
+      "加權13:10跌4.19%；此前外資與法人賣壓待消化。",
+      "11/19台北凌晨公布的10月FOMC紀要，討論AI投資回報落差、複雜融資與避險基金槓桿如何放大衝擊；這是已公布的會議紀錄，不是新的升降息決議。"
     ],
     "systemic_risk": "偏高",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
@@ -89,10 +89,10 @@
   },
   "editorial": {
     "state_label": "風險收縮",
-    "summary": "昨日台股續跌、法人賣超，今早開高後轉弱且美股波動升溫，因此維持風險控制；水位79.1%較77.1%上升2.0個百分點是配置環境改善，並非水位下降。"
+    "summary": "11/19加權13:10跌4.19%，此前外資與法人賣壓仍待消化，維持風險收縮；水位79.7%較11/18的79.1%上升0.6個百分點，是配置環境小幅改善，並非水位下降。"
   },
   "source": {
-    "issue_file": "data/issues/20261118.json",
-    "generated_at": "2026-11-18T10:05:24+08:00"
+    "issue_file": "data/issues/20261119.json",
+    "generated_at": "2026-11-19T16:37:47+08:00"
   }
 }

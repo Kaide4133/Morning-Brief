@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-11-19T08:37:48.021238+00:00",
+  "original_images": 14,
+  "replacement_images": 1,
+  "files": 15,
+  "observed_rows": 103,
+  "within_zone_duplicates_removed": 26,
+  "membership_rows": 77,
+  "counts": {
+    "etf.value": 10,
+    "etf.rising": 7,
+    "stocks.value": 30,
+    "stocks.rising": 30
+  },
+  "unique_codes": 75,
+  "overlaps": {
+    "etf": [],
+    "stocks": [
+      "1476",
+      "3293"
+    ]
+  },
+  "water": 79.7,
+  "previous_water": 79.1,
+  "water_delta": 0.6,
+  "five_indicators": "five labels, null numeric scores; no inferred values or capture timestamp",
+  "effective_scenario": {
+    "id": "06",
+    "slug": "risk-contraction",
+    "label": "風險收縮",
+    "confidence": 1.0,
+    "reason": "11/19加權13:10跌4.19%，此前外資與法人賣壓仍待消化，維持風險收縮；水位79.7%較11/18的79.1%上升0.6個百分點，是配置環境小幅改善，並非水位下降。",
+    "source": "manual_override",
+    "classifier_suggestion": "05"
+  },
+  "technical_records": 75,
+  "missing": 0,
+  "all_latest_series_date": "2026-11-19",
+  "html_sha256": "8e2b4162af6c47875c2e7cea6a22ae702da3f2cf719f92d1c37785f0037a801c",
+  "source_manifest_sha256": "a923ad1878fa8e6d57cb6b39020b7778a8dc2dd16519da264399b3c806da00b6",
+  "reconstruction_sha256": "5da14ce28dd0798d59c882ce32756a252e7c4a9bd909b0a577c65718034f1fb5",
+  "checks": "PASS"
+}

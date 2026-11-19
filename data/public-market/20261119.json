@@ -1654,5 +1654,11 @@
     "unique_codes_count": 76,
     "usage": "11/18 historical observations only; not 11/19 membership, water, allocation, or trading authorization"
   },
-  "updated_at": "2026-11-19T13:28:16.769974+08:00"
+  "updated_at": "2026-11-19T13:28:16.769974+08:00",
+  "superseded_by": {
+    "issue_file": "data/issues/20261119.json",
+    "source_manifest": "data/sources/20261119-user-screenshots/manifest.json",
+    "reason": "14 source images plus user water replacement complete today zones; effective water 79.7",
+    "changed_at": "2026-11-19T08:37:48.020276+00:00"
+  }
 }
