@@ -14,7 +14,11 @@
     "latest_source": "/Users/kaide/Pictures/方舟運算截圖/方舟完整截圖_2026-11-18_09-05-03/ark_stocks.json",
     "sha256": "6f55684cb1fafb9576618e43018030e6beddb2769ed63a189370e89b39abf5ff",
     "validation_ok": true,
-    "do_not_promote_to_today": true
+    "do_not_promote_to_today": true,
+    "source_date": "2026-11-18",
+    "source_capture_started_at": "2026-11-18T09:05:03+08:00",
+    "source_capture_finished_at": "2026-11-18T09:08:12+08:00",
+    "source_generated_at": "2026-11-18T01:08:12.328443+00:00"
   },
   "etf": {
     "value": [],
@@ -1316,5 +1320,339 @@
       "content": "[Skip to main content](https://home.treasury.gov/resource-center-data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value=2026#main-content)\n\n![Dot gov](https://home.treasury.gov/libraries/uswds/src/img/icon-dot-gov.svg)\n\n**Official websites use .gov**\n\nA **.gov** website belongs to an official government organization in the United States.\n\n\n![Https](https://home.treasury.gov/libraries/uswds/src/img/icon-https.svg)\n\n**Secure .gov websites use HTTPS**\n\nA **lock**\n(LockA locked padlock)\nor **https://** means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.\n\n[![Seal of the U.S. Department of the Treasury, 1789](https://home.treasury.gov/themes/custom/hamilton/logo.svg)](https://home.treasury.gov/ \"Home\")\n\n## Page Not Found\n\nThe requested page could not be found.",
       "error": "HTTP 404 from origin: Not Found"
     }
-  ]
+  ],
+  "prior_day_ark_context": {
+    "source_date": "2026-11-18",
+    "capture_started_at": "2026-11-18T09:05:03+08:00",
+    "capture_finished_at": "2026-11-18T09:08:12+08:00",
+    "source_generated_at": "2026-11-18T01:08:12.328443+00:00",
+    "source_run_id": "2026-11-18_09-05-03",
+    "source_sha256": "6f55684cb1fafb9576618e43018030e6beddb2769ed63a189370e89b39abf5ff",
+    "status": "historical_context_only",
+    "valid_for_trading_date": null,
+    "trade_authorization": false,
+    "water_level": 79.1,
+    "zones": {
+      "ETF價值區": [
+        {
+          "code": "0055",
+          "name": "元大MSCI金融"
+        },
+        {
+          "code": "00939",
+          "name": "統一台灣高息動能"
+        },
+        {
+          "code": "00701",
+          "name": "國泰股利精選30"
+        },
+        {
+          "code": "00897",
+          "name": "富邦基因免疫生技"
+        },
+        {
+          "code": "00875",
+          "name": "國泰網路資安"
+        },
+        {
+          "code": "00918",
+          "name": "大華優利高填息30"
+        },
+        {
+          "code": "00960",
+          "name": "野村全球航運龍頭"
+        },
+        {
+          "code": "00731",
+          "name": "復華富時高息低波"
+        },
+        {
+          "code": "00919",
+          "name": "群益台灣精選高息"
+        },
+        {
+          "code": "00938",
+          "name": "凱基優選30"
+        }
+      ],
+      "ETF升溫區": [
+        {
+          "code": "00653L",
+          "name": "富邦印度正2"
+        },
+        {
+          "code": "00652",
+          "name": "富邦印度"
+        },
+        {
+          "code": "00681R",
+          "name": "元大美債20反1"
+        },
+        {
+          "code": "00689R",
+          "name": "國泰20年美債反1"
+        },
+        {
+          "code": "00683L",
+          "name": "期元大美元指正2"
+        },
+        {
+          "code": "00682U",
+          "name": "期元大美元指數"
+        },
+        {
+          "code": "00865B",
+          "name": "國泰US短期公債"
+        }
+      ],
+      "產業價值區": [
+        {
+          "code": "2347",
+          "name": "聯強"
+        },
+        {
+          "code": "2356",
+          "name": "英業達"
+        },
+        {
+          "code": "3706",
+          "name": "神達"
+        },
+        {
+          "code": "3702",
+          "name": "大聯大"
+        },
+        {
+          "code": "2382",
+          "name": "廣達"
+        },
+        {
+          "code": "2376",
+          "name": "技嘉"
+        },
+        {
+          "code": "3034",
+          "name": "聯詠"
+        },
+        {
+          "code": "6669",
+          "name": "緯穎"
+        },
+        {
+          "code": "5289",
+          "name": "宜鼎"
+        },
+        {
+          "code": "2027",
+          "name": "大成鋼"
+        },
+        {
+          "code": "3711",
+          "name": "日月光投控"
+        },
+        {
+          "code": "3231",
+          "name": "緯創"
+        },
+        {
+          "code": "4958",
+          "name": "臻鼎-KY"
+        },
+        {
+          "code": "6414",
+          "name": "樺漢"
+        },
+        {
+          "code": "3042",
+          "name": "晶技"
+        },
+        {
+          "code": "2404",
+          "name": "漢唐"
+        },
+        {
+          "code": "2357",
+          "name": "華碩"
+        },
+        {
+          "code": "2301",
+          "name": "光寶科"
+        },
+        {
+          "code": "5347",
+          "name": "世界"
+        },
+        {
+          "code": "8069",
+          "name": "元太"
+        },
+        {
+          "code": "1513",
+          "name": "中興電"
+        },
+        {
+          "code": "2379",
+          "name": "瑞昱"
+        },
+        {
+          "code": "2890",
+          "name": "永豐金"
+        },
+        {
+          "code": "6139",
+          "name": "亞翔"
+        },
+        {
+          "code": "2330",
+          "name": "台積電"
+        },
+        {
+          "code": "5434",
+          "name": "崇越"
+        },
+        {
+          "code": "2454",
+          "name": "聯發科"
+        },
+        {
+          "code": "6670",
+          "name": "復盛應用"
+        },
+        {
+          "code": "3293",
+          "name": "鈊象"
+        },
+        {
+          "code": "1476",
+          "name": "儒鴻"
+        }
+      ],
+      "產業升溫區": [
+        {
+          "code": "4174",
+          "name": "浩鼎"
+        },
+        {
+          "code": "5324",
+          "name": "士開"
+        },
+        {
+          "code": "910322",
+          "name": "康師傅-DR"
+        },
+        {
+          "code": "9933",
+          "name": "中鼎"
+        },
+        {
+          "code": "1323",
+          "name": "永裕"
+        },
+        {
+          "code": "6199",
+          "name": "天品"
+        },
+        {
+          "code": "2618",
+          "name": "長榮航"
+        },
+        {
+          "code": "5511",
+          "name": "德昌"
+        },
+        {
+          "code": "5206",
+          "name": "坤悅"
+        },
+        {
+          "code": "2852",
+          "name": "第一保"
+        },
+        {
+          "code": "3489",
+          "name": "森寶"
+        },
+        {
+          "code": "5548",
+          "name": "安倉"
+        },
+        {
+          "code": "1476",
+          "name": "儒鴻"
+        },
+        {
+          "code": "6904",
+          "name": "伯鑫"
+        },
+        {
+          "code": "3054",
+          "name": "立萬利"
+        },
+        {
+          "code": "4106",
+          "name": "雃博"
+        },
+        {
+          "code": "4807",
+          "name": "日成-KY"
+        },
+        {
+          "code": "6751",
+          "name": "智聯服務"
+        },
+        {
+          "code": "6108",
+          "name": "競國"
+        },
+        {
+          "code": "6697",
+          "name": "東捷資訊"
+        },
+        {
+          "code": "6743",
+          "name": "安普新"
+        },
+        {
+          "code": "4105",
+          "name": "東洋"
+        },
+        {
+          "code": "9935",
+          "name": "慶豐富"
+        },
+        {
+          "code": "2880",
+          "name": "華南金"
+        },
+        {
+          "code": "2468",
+          "name": "華經"
+        },
+        {
+          "code": "8099",
+          "name": "大世科"
+        },
+        {
+          "code": "6140",
+          "name": "訊達"
+        },
+        {
+          "code": "6148",
+          "name": "驊宏資"
+        },
+        {
+          "code": "7584",
+          "name": "樂意"
+        },
+        {
+          "code": "2471",
+          "name": "資通"
+        }
+      ]
+    },
+    "zone_membership_count": 77,
+    "unique_codes_count": 76,
+    "usage": "11/18 historical observations only; not 11/19 membership, water, allocation, or trading authorization"
+  },
+  "updated_at": "2026-11-19T13:28:16.769974+08:00"
 }
