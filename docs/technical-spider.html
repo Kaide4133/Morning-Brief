@@ -21,8 +21,9 @@
   <p class="subtitle">單檔優先 · 多方/空方/中性 型態矩陣 · 交易計畫</p>
   <div class="meta-row" aria-label="系統資訊">
     <span class="meta-chip">版本 v0.7.0</span>
-    <span class="meta-chip" id="metaDataDate">資料日期 2026-11-19</span>
-    <span class="meta-chip" id="metaPoolSize">資料池 75 檔</span>
+    <span class="meta-chip" id="metaDataDate">資料日期 2026-11-20</span>
+    <span class="meta-chip">7檔尚無當日成交K線，暫不分析：00682U、5523、9931、5548、6904、1259、910322</span>
+    <span class="meta-chip" id="metaPoolSize">可用 68／候選 75 檔</span>
     <span class="meta-chip">模式 精簡標註</span>
   </div>
   <p class="version-note" id="versionNote">v0.7.0 · 交易紀律引擎 · 訊號驗證 / 時間停滯 / 加倉資格 / 量能活躍 / 過熱清倉 · 資料載入中</p>
@@ -2407,7 +2408,7 @@
       $('loadStatus').textContent =
         '資料池已載入 ' + pool.records.length + ' 檔 · 截至 ' + (pool.as_of || '—');
       $('metaDataDate').textContent = '資料日期 ' + (pool.as_of || '—');
-      $('metaPoolSize').textContent = '資料池 ' + pool.records.length + ' 檔';
+      $('metaPoolSize').textContent = '可用 ' + pool.records.length + '／候選 ' + 75 + ' 檔';
       $('versionNote').textContent =
         'v0.7.0 · 交易紀律引擎 · 訊號驗證 / 時間停滯 / 加倉資格 / 量能活躍 / 過熱清倉 · 資料截至 ' +
         (pool.as_of || '—');
