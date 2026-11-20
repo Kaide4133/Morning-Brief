@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-20",
+  "first_live_verified_at": "2026-11-20T01:44:54Z",
+  "published_commit": "ac3429179f5810ff99a8def92d6d3a2b22d56b1e",
+  "live_checks": [
+    {
+      "file": "20261120-stock-news-kelvin.html",
+      "status": 200,
+      "hash_matches": true
+    },
+    {
+      "file": "index.html",
+      "status": 200,
+      "hash_matches": true
+    },
+    {
+      "file": "morning-brief-context-latest.json",
+      "status": 200,
+      "hash_matches": true
+    },
+    {
+      "file": "technical-data.json",
+      "status": 200,
+      "hash_matches": true
+    }
+  ],
+  "card_count": 77,
+  "unique_symbols": 75,
+  "zones": [
+    10,
+    7,
+    30,
+    30
+  ],
+  "water": {
+    "level": 83.9,
+    "previous": 79.7,
+    "change": 4.2
+  },
+  "technical": {
+    "candidate_count": 75,
+    "executed_bar_records": 68,
+    "unavailable": [
+      "00682U",
+      "5523",
+      "9931",
+      "5548",
+      "6904",
+      "1259",
+      "910322"
+    ],
+    "all_retained_terminal_dates": "2026-11-20",
+    "min_daily_bars": 250,
+    "min_weekly_bars": 52,
+    "quote_only_excluded_from_engine": true
+  },
+  "browser_mobile_width": 390,
+  "browser_overflow": false,
+  "local_edits_preserved": true,
+  "legacy_rebuild_workflow": "Failed on historical strategy.reader.risk >72; no bot commit; Pages deployed exact verified artifacts successfully."
+}
