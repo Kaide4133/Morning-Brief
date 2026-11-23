@@ -1,60 +1,59 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-11-20",
-  "valid_for_trading_date": "2026-11-20",
-  "data_as_of": "2026-11-20",
+  "date": "2026-11-23",
+  "valid_for_trading_date": "2026-11-23",
+  "data_as_of": "2026-11-23",
   "stale": false,
-  "issue_no": 129,
+  "issue_no": 130,
   "scenario": {
-    "id": "06",
-    "slug": "risk-contraction",
-    "label": "風險收縮",
-    "confidence": 1.0,
-    "reason": "美股全面走弱、VIX上升，台股早盤續跌3.69%，採風險收縮；水位83.9%較11/19的79.7%上升4.2個百分點，是配置環境改善而非水位下降。",
-    "source": "manual_override",
-    "classifier_suggestion": "05"
+    "id": "08",
+    "slug": "event-wait",
+    "label": "事件觀望",
+    "confidence": 0.72,
+    "reason": "重大事件/財報/休市或盤面資料未完整反映，方向需等事件落地",
+    "source": "classifier"
   },
   "water": {
-    "level": 83.9,
-    "previous": 79.7,
-    "change": 4.2,
+    "level": 87.6,
+    "previous": 83.9,
+    "change": 3.7,
     "direction": "rising",
-    "previous_trading_date": "2026-11-19",
-    "comparison_date": "2026-11-19",
+    "previous_trading_date": "2026-11-20",
+    "comparison_date": "2026-11-20",
     "comparison_is_provisional": false
   },
   "leader_policy": {
     "source": "morning_brief_editorial_policy",
-    "short_term_bias": "reduce_risk_review",
-    "risk_posture": "risk_off",
+    "short_term_bias": "event_wait",
+    "risk_posture": "event_wait",
     "water_policy": {
       "direction": "rising",
-      "change": 4.2,
-      "interpretation": "方舟水位83.9%，較前一交易日11/19的79.7%上升4.2個百分點；配置環境改善，但不代表下跌中的價格已止穩。 目前市場仍偏弱，保留現金彈性。"
+      "change": 3.7,
+      "interpretation": "重大事件尚未落地，暫停新增與非必要調節；等待事件解析。"
     },
     "scenario_context": {
-      "id": "06",
-      "label": "風險收縮",
-      "confidence": 1.0
+      "id": "08",
+      "label": "事件觀望",
+      "confidence": 0.72
     },
     "policy_focus": [
-      "價值區先排優先順序，等承接再分批；升溫區不追急拉。",
-      "今晚23:00美國消費信心終值與通膨預期；數據前不追價、不重押。",
-      "09:26加權跌3.69%；美股三大指數跌逾2%，VIX升至28.44。",
-      "美股對AI投資回報的疑慮未退。路透報導Anthropic上市未能紓解科技股壓力；個別公司募資或股價表現，不等於台灣供應鏈新增訂單。"
+      "價值區先排序；若反彈能守住早盤低點、上漲家數擴大，再考慮分批。升溫區不追急拉。",
+      "11/25 21:30公布美國GDP修正與個人所得支出；感恩節縮短交易週，留意流動性。",
+      "加權09:14跌0.31%；美股上週五費半跌10.73%，VIX升至35.89。",
+      "金管會自11/23起限制低於前一營業日收盤價的融券及借券賣出，最低融券保證金由130%提高至150%；券商及期貨商辦理業務避險有例外。"
     ],
     "systemic_risk": "偏高",
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
   },
   "action_guidance": {
-    "risk_bias": "risk_off",
+    "risk_bias": "event_wait",
     "allow_add": false,
-    "allow_trim": true,
-    "deploy_mode": "reduce_exposure",
+    "allow_trim": false,
+    "deploy_mode": "wait_for_event_resolution",
     "trim": {
-      "allowed": true,
-      "mode": "reduce_exposure",
+      "allowed": false,
+      "mode": "wait_for_event_resolution",
       "max_overshoot_pct": 0.25,
       "priority": [
         "positive_return_overheated_branch",
@@ -65,17 +64,16 @@
     },
     "deploy": {
       "allowed": false,
-      "mode": "disabled",
+      "mode": "wait_for_event_resolution",
       "conditions": [
-        "risk_off_no_new_exposure"
+        "event_resolved"
       ]
     },
     "rebuy": {
       "allowed": false,
-      "mode": "disabled_until_stabilized",
+      "mode": "wait_for_event_resolution",
       "conditions": [
-        "risk_bias_improves",
-        "water_stabilizes"
+        "event_resolved"
       ]
     },
     "trim_priority": [
@@ -84,15 +82,15 @@
       "leveraged_etf_overheat",
       "low_efficiency_small_branch"
     ],
-    "confidence": 1.0,
+    "confidence": 0.72,
     "source": "morning_brief_classifier"
   },
   "editorial": {
-    "state_label": "風險收縮",
-    "summary": "美股全面走弱、VIX上升，台股早盤續跌3.69%，採風險收縮；水位83.9%較11/19的79.7%上升4.2個百分點，是配置環境改善而非水位下降。"
+    "state_label": "事件觀望",
+    "summary": "重大事件/財報/休市或盤面資料未完整反映，方向需等事件落地"
   },
   "source": {
-    "issue_file": "data/issues/20261120.json",
-    "generated_at": "2026-11-20T09:40:58+08:00"
+    "issue_file": "data/issues/20261123.json",
+    "generated_at": "2026-11-23T09:21:01+08:00"
   }
 }
