@@ -1,11 +1,11 @@
 {
   "schema_version": "morning_brief_context.v1",
   "taxonomy_version": "ark_eight_regime.v1",
-  "date": "2026-11-23",
-  "valid_for_trading_date": "2026-11-23",
-  "data_as_of": "2026-11-23",
+  "date": "2026-11-24",
+  "valid_for_trading_date": "2026-11-24",
+  "data_as_of": "2026-11-24",
   "stale": false,
-  "issue_no": 130,
+  "issue_no": 131,
   "scenario": {
     "id": "08",
     "slug": "event-wait",
@@ -15,12 +15,12 @@
     "source": "classifier"
   },
   "water": {
-    "level": 87.6,
-    "previous": 83.9,
-    "change": 3.7,
-    "direction": "rising",
-    "previous_trading_date": "2026-11-20",
-    "comparison_date": "2026-11-20",
+    "level": 85.4,
+    "previous": 87.6,
+    "change": -2.2,
+    "direction": "falling",
+    "previous_trading_date": "2026-11-23",
+    "comparison_date": "2026-11-23",
     "comparison_is_provisional": false
   },
   "leader_policy": {
@@ -28,8 +28,8 @@
     "short_term_bias": "event_wait",
     "risk_posture": "event_wait",
     "water_policy": {
-      "direction": "rising",
-      "change": 3.7,
+      "direction": "falling",
+      "change": -2.2,
       "interpretation": "重大事件尚未落地，暫停新增與非必要調節；等待事件解析。"
     },
     "scenario_context": {
@@ -38,12 +38,12 @@
       "confidence": 0.72
     },
     "policy_focus": [
-      "價值區先排序；若反彈能守住早盤低點、上漲家數擴大，再考慮分批。升溫區不追急拉。",
-      "11/25 21:30公布美國GDP修正與個人所得支出；感恩節縮短交易週，留意流動性。",
-      "加權09:14跌0.31%；美股上週五費半跌10.73%，VIX升至35.89。",
-      "金管會自11/23起限制低於前一營業日收盤價的融券及借券賣出，最低融券保證金由130%提高至150%；券商及期貨商辦理業務避險有例外。"
+      "先排價值區，觀察開盤缺口能否守住、買盤是否擴及非權值股；升溫區和槓桿商品不追急拉。",
+      "11/25 21:30公布美國GDP第二次估值與10月個人所得及支出；感恩節縮短交易週，留意流動性。",
+      "11/24 09:14加權漲9.09%，臺指期12月合約觸及漲停；前一晚費半漲14.03%。",
+      "NVIDIA 11/23正式宣布黃仁勳立即恢復總裁、CEO及董事職務；Harvey Jones續任董事長、Colette Kress續任財務長。這是人事與治理事件，不是新增營收。"
     ],
-    "systemic_risk": "偏高",
+    "systemic_risk": null,
     "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
   },
   "action_guidance": {
@@ -90,7 +90,7 @@
     "summary": "重大事件/財報/休市或盤面資料未完整反映，方向需等事件落地"
   },
   "source": {
-    "issue_file": "data/issues/20261123.json",
-    "generated_at": "2026-11-23T09:21:01+08:00"
+    "issue_file": "data/issues/20261124.json",
+    "generated_at": "2026-11-24T09:20:25+08:00"
   }
 }
