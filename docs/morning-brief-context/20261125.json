@@ -1,0 +1,97 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-11-25",
+  "valid_for_trading_date": "2026-11-25",
+  "data_as_of": "2026-11-25",
+  "stale": false,
+  "issue_no": 132,
+  "scenario": {
+    "id": "06",
+    "slug": "risk-contraction",
+    "label": "風險收縮",
+    "confidence": 0.84,
+    "reason": "SOX -7.88% 急跌、台股 -5.43% 明顯回檔，風險預算收縮",
+    "source": "classifier"
+  },
+  "water": {
+    "level": 83.6,
+    "previous": 85.4,
+    "change": -1.8,
+    "direction": "falling",
+    "previous_trading_date": "2026-11-24",
+    "comparison_date": "2026-11-24",
+    "comparison_is_provisional": false
+  },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "reduce_risk_review",
+    "risk_posture": "risk_off",
+    "water_policy": {
+      "direction": "falling",
+      "change": -1.8,
+      "interpretation": "目前情境要求風險收縮，暫停新增曝險；先檢查過熱、非護城河與槓桿風險。"
+    },
+    "scenario_context": {
+      "id": "06",
+      "label": "風險收縮",
+      "confidence": 0.84
+    },
+    "policy_focus": [
+      "先看台積電與半導體能否止跌，再看跌勢是否擴及非科技股；不急著接急跌。",
+      "今晚21:30美國公布第三季GDP第二次估值及10月個人所得與支出（含PCE）。",
+      "09:44加權跌5.43%、臺指期跌5.83%；隔夜費半跌7.88%。",
+      "美國新關稅仍是調查後可能採取的措施，尚不能視為已生效。"
+    ],
+    "systemic_risk": "波動仍高",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
+  "action_guidance": {
+    "risk_bias": "risk_off",
+    "allow_add": false,
+    "allow_trim": true,
+    "deploy_mode": "reduce_exposure",
+    "trim": {
+      "allowed": true,
+      "mode": "reduce_exposure",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": false,
+      "mode": "disabled",
+      "conditions": [
+        "risk_off_no_new_exposure"
+      ]
+    },
+    "rebuy": {
+      "allowed": false,
+      "mode": "disabled_until_stabilized",
+      "conditions": [
+        "risk_bias_improves",
+        "water_stabilizes"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 0.84,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "風險收縮",
+    "summary": "SOX -7.88% 急跌、台股 -5.43% 明顯回檔，風險預算收縮"
+  },
+  "source": {
+    "issue_file": "data/issues/20261125.json",
+    "generated_at": "2026-11-25T09:48:43+08:00"
+  }
+}
