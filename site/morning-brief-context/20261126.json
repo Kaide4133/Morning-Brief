@@ -1,0 +1,104 @@
+{
+  "schema_version": "morning_brief_context.v1",
+  "taxonomy_version": "ark_eight_regime.v1",
+  "date": "2026-11-26",
+  "valid_for_trading_date": "2026-11-26",
+  "data_as_of": "2026-11-26",
+  "stale": false,
+  "issue_no": 133,
+  "scenario": {
+    "id": "03",
+    "slug": "high-level-speed-control",
+    "label": "高位控速",
+    "confidence": 1.0,
+    "reason": "台股早盤急跌後反彈，但水位小幅續降、隔夜費半仍弱，先控制追價速度，等待買盤擴散。",
+    "source": "manual_override",
+    "classifier_suggestion": "08"
+  },
+  "water": {
+    "level": 82.8,
+    "previous": 83.6,
+    "change": -0.8,
+    "direction": "falling",
+    "previous_trading_date": "2026-11-25",
+    "comparison_date": "2026-11-25",
+    "comparison_is_provisional": false
+  },
+  "leader_policy": {
+    "source": "morning_brief_editorial_policy",
+    "short_term_bias": "cautious_review",
+    "risk_posture": "balanced_cautious",
+    "water_policy": {
+      "direction": "falling",
+      "change": -0.8,
+      "interpretation": "水位下降，優先檢查調節與控速；佈局需小額且有回測/承接確認。"
+    },
+    "scenario_context": {
+      "id": "03",
+      "label": "高位控速",
+      "confidence": 1.0
+    },
+    "policy_focus": [
+      "先看台積電與半導體反彈能否放量延續；若權值漲勢收斂、跟漲家數不足，不追高。",
+      "美股11/26感恩節休市，11/27提早收盤（台灣時間11/28 02:00）。",
+      "09:13加權漲2.27%、12月臺指期漲2.52%；隔夜費半跌0.65%。",
+      "美方提出涵蓋台灣等14個經濟體的301調查後續措施，目前是提案，不是已生效關稅。"
+    ],
+    "systemic_risk": "VIX 28.29，波動偏高",
+    "moorlock_use": "Use as top-level market/water/policy gate only; ticker-level seven-engine signals still decide candidates."
+  },
+  "action_guidance": {
+    "risk_bias": "balanced_cautious",
+    "allow_add": true,
+    "allow_trim": true,
+    "deploy_mode": "slow_selective_add",
+    "max_initial_deploy_pct": 0.25,
+    "trim": {
+      "allowed": true,
+      "mode": "selective_trim",
+      "max_overshoot_pct": 0.25,
+      "priority": [
+        "positive_return_overheated_branch",
+        "non_moat_branch",
+        "leveraged_etf_overheat",
+        "low_efficiency_small_branch"
+      ]
+    },
+    "deploy": {
+      "allowed": true,
+      "mode": "slow_selective_add",
+      "max_initial_deploy_pct": 0.25,
+      "conditions": [
+        "conditional_only",
+        "core_or_high_quality_only",
+        "pullback_confirmed",
+        "no_chase"
+      ]
+    },
+    "rebuy": {
+      "allowed": true,
+      "mode": "wait_for_pullback",
+      "conditions": [
+        "sold_name_drawdown_2_to_3_pct",
+        "MA20_support",
+        "murphy_right_side_reconfirmation"
+      ]
+    },
+    "trim_priority": [
+      "positive_return_overheated_branch",
+      "non_moat_branch",
+      "leveraged_etf_overheat",
+      "low_efficiency_small_branch"
+    ],
+    "confidence": 1.0,
+    "source": "morning_brief_classifier"
+  },
+  "editorial": {
+    "state_label": "高位控速",
+    "summary": "台股早盤急跌後反彈，但水位小幅續降、隔夜費半仍弱，先控制追價速度，等待買盤擴散。"
+  },
+  "source": {
+    "issue_file": "data/issues/20261126.json",
+    "generated_at": "2026-11-26T09:17:45+08:00"
+  }
+}

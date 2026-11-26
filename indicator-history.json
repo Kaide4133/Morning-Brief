@@ -1704,6 +1704,18 @@
         "社交反指": 32,
         "量能爆衝": 27
       }
+    },
+    {
+      "date": "2026-11-26",
+      "water_level": 82.8,
+      "taiex_close": null,
+      "indicators": {
+        "全球散戶": 16,
+        "外資情緒": 68,
+        "位階增溫": 35,
+        "社交反指": 30,
+        "量能爆衝": 26
+      }
     }
   ],
   "snapshots": [
@@ -2330,6 +2342,43 @@
         {
           "name": "量能爆衝",
           "value": 27,
+          "approximate": true
+        }
+      ],
+      "available_at": null,
+      "first_publication": null
+    },
+    {
+      "date": "2026-11-26",
+      "revision": 1,
+      "captured_at": "2026-11-26T01:05:46Z",
+      "source_sha256": "a573c3dd854edfce7082288ab428a20157bf74a39ae14cbc819e8dadde1a7031",
+      "source_json_sha256": "231c32480a0fc6dce9d9807db3360c87b868c9c30199f25990df3b26e4cffbf7",
+      "estimation_method_version": "ark-screenshot-angle-estimate-v1",
+      "indicators": [
+        {
+          "name": "全球散戶",
+          "value": 16,
+          "approximate": true
+        },
+        {
+          "name": "外資情緒",
+          "value": 68,
+          "approximate": true
+        },
+        {
+          "name": "位階增溫",
+          "value": 35,
+          "approximate": true
+        },
+        {
+          "name": "社交反指",
+          "value": 30,
+          "approximate": true
+        },
+        {
+          "name": "量能爆衝",
+          "value": 26,
           "approximate": true
         }
       ],

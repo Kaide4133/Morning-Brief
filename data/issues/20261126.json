@@ -1,0 +1,2492 @@
+{
+  "ark": {
+    "water_level": 82.8,
+    "holding_allocation_suggestion": "82.8%",
+    "prev": 83.6,
+    "previous_water_level": 83.6,
+    "delta": -0.8,
+    "change": -0.8,
+    "direction": "下降",
+    "as_of": "2026-11-26",
+    "captured_at": "2026-11-26T01:05:46Z",
+    "source_time": "09:05",
+    "comparison_date": "2026-11-25",
+    "previous_trading_date": "2026-11-25",
+    "comparison_is_provisional": false,
+    "source_file": "data/sources/20261126-ark/ark_stocks.json",
+    "source_sha256": "5e15f2b88a495e5cbb6c4626670d292aea2291294a6e93d29bbf99821e56fee3",
+    "note": "方舟水位82.8%，較前一交易日11/25的83.6%下降0.8個百分點；配置空間收窄，不是實際持倉或賣出指令。"
+  },
+  "etf": {
+    "value": [
+      {
+        "code": "00875",
+        "name": "國泰網路資安",
+        "price": null,
+        "change": null,
+        "stamp": "value",
+        "rank": 1,
+        "source_file": "data/sources/20261126-ark/02_ETF價值區_1.png",
+        "source_sha256": "43178c0130f212acf5783218c07d5c4e4b9e269ddf8478ee0c4329bead42620c",
+        "price_status": "source_price_missing_nav_not_price",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "meta": "股價 —｜即時淨值 60.03｜折溢價 -2.38%",
+        "nav": "60.03",
+        "premium_discount": "-2.38%"
+      },
+      {
+        "code": "00678",
+        "name": "群益那斯達克生技",
+        "price": "46.76",
+        "change": "0(0%)",
+        "stamp": "value",
+        "rank": 2,
+        "source_file": "data/sources/20261126-ark/02_ETF價值區_1.png",
+        "source_sha256": "43178c0130f212acf5783218c07d5c4e4b9e269ddf8478ee0c4329bead42620c",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "meta": "股價 46.76｜0(0%)"
+      },
+      {
+        "code": "00960",
+        "name": "野村全球航運龍頭",
+        "price": "21.11",
+        "change": "▲0.11(0.52%)",
+        "stamp": "value",
+        "rank": 3,
+        "source_file": "data/sources/20261126-ark/02_ETF價值區_1.png",
+        "source_sha256": "43178c0130f212acf5783218c07d5c4e4b9e269ddf8478ee0c4329bead42620c",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "meta": "股價 21.11｜▲0.11(0.52%)"
+      },
+      {
+        "code": "00701",
+        "name": "國泰股利精選30",
+        "price": "39.05",
+        "change": "▲0.29(0.75%)",
+        "stamp": "value",
+        "rank": 4,
+        "source_file": "data/sources/20261126-ark/02_ETF價值區_1.png",
+        "source_sha256": "43178c0130f212acf5783218c07d5c4e4b9e269ddf8478ee0c4329bead42620c",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "meta": "股價 39.05｜▲0.29(0.75%)"
+      },
+      {
+        "code": "00939",
+        "name": "統一台灣高息動能",
+        "price": "21.52",
+        "change": "▲0.21(0.99%)",
+        "stamp": "value",
+        "rank": 5,
+        "source_file": "data/sources/20261126-ark/02_ETF價值區_1.png",
+        "source_sha256": "43178c0130f212acf5783218c07d5c4e4b9e269ddf8478ee0c4329bead42620c",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "meta": "股價 21.52｜▲0.21(0.99%)"
+      },
+      {
+        "code": "0055",
+        "name": "元大MSCI金融",
+        "price": "41.69",
+        "change": "▼0.02(-0.05%)",
+        "stamp": "value",
+        "rank": 6,
+        "source_file": "data/sources/20261126-ark/02_ETF價值區_1.png",
+        "source_sha256": "43178c0130f212acf5783218c07d5c4e4b9e269ddf8478ee0c4329bead42620c",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "meta": "股價 41.69｜▼0.02(-0.05%)"
+      },
+      {
+        "code": "00972",
+        "name": "野村日本動能高息",
+        "price": null,
+        "change": null,
+        "stamp": "value",
+        "rank": 7,
+        "source_file": "data/sources/20261126-ark/03_ETF價值區_2.png",
+        "source_sha256": "e23de73f4d2d7239c8bc2482fe28ffbdc77eb85d7e5088694440673385924270",
+        "price_status": "source_price_missing_nav_not_price",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "meta": "股價 —｜即時淨值 22.39｜折溢價 -0.8%",
+        "nav": "22.39",
+        "premium_discount": "-0.8%"
+      },
+      {
+        "code": "00918",
+        "name": "大華優利高填息30",
+        "price": "29.61",
+        "change": "▲0.18(0.61%)",
+        "stamp": "value",
+        "rank": 8,
+        "source_file": "data/sources/20261126-ark/03_ETF價值區_2.png",
+        "source_sha256": "e23de73f4d2d7239c8bc2482fe28ffbdc77eb85d7e5088694440673385924270",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "meta": "股價 29.61｜▲0.18(0.61%)"
+      },
+      {
+        "code": "00956",
+        "name": "中信日經高股息",
+        "price": null,
+        "change": null,
+        "stamp": "value",
+        "rank": 9,
+        "source_file": "data/sources/20261126-ark/03_ETF價值區_2.png",
+        "source_sha256": "e23de73f4d2d7239c8bc2482fe28ffbdc77eb85d7e5088694440673385924270",
+        "price_status": "source_price_missing_nav_not_price",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "meta": "股價 —｜即時淨值 13.45｜折溢價 -0.82%",
+        "nav": "13.45",
+        "premium_discount": "-0.82%"
+      },
+      {
+        "code": "00731",
+        "name": "復華富時高息低波",
+        "price": "87.95",
+        "change": "▲1.25(1.44%)",
+        "stamp": "value",
+        "rank": 10,
+        "source_file": "data/sources/20261126-ark/03_ETF價值區_2.png",
+        "source_sha256": "e23de73f4d2d7239c8bc2482fe28ffbdc77eb85d7e5088694440673385924270",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "meta": "股價 87.95｜▲1.25(1.44%)"
+      }
+    ],
+    "rising": [
+      {
+        "code": "00683L",
+        "name": "期元大美元指正2",
+        "price": "23.41",
+        "change": "▼0.18(-0.76%)",
+        "stamp": "rising",
+        "rank": 1,
+        "source_file": "data/sources/20261126-ark/04_ETF升溫區_1.png",
+        "source_sha256": "17e69b510dc840615b4afbe5c68978126b1dcedce327231504ffb9a809ca3b45",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "meta": "股價 23.41｜▼0.18(-0.76%)"
+      },
+      {
+        "code": "00666R",
+        "name": "富邦恒生國企反1",
+        "price": null,
+        "change": null,
+        "stamp": "rising",
+        "rank": 2,
+        "source_file": "data/sources/20261126-ark/04_ETF升溫區_1.png",
+        "source_sha256": "17e69b510dc840615b4afbe5c68978126b1dcedce327231504ffb9a809ca3b45",
+        "price_status": "source_price_missing_nav_not_price",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "meta": "股價 —｜即時淨值 10.37｜折溢價 -1.54%",
+        "nav": "10.37",
+        "premium_discount": "-1.54%"
+      },
+      {
+        "code": "00967B",
+        "name": "元大優息美債",
+        "price": "9.18",
+        "change": "▲0.02(0.22%)",
+        "stamp": "rising",
+        "rank": 3,
+        "source_file": "data/sources/20261126-ark/04_ETF升溫區_1.png",
+        "source_sha256": "17e69b510dc840615b4afbe5c68978126b1dcedce327231504ffb9a809ca3b45",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "meta": "股價 9.18｜▲0.02(0.22%)"
+      },
+      {
+        "code": "00682U",
+        "name": "期元大美元指數",
+        "price": null,
+        "change": null,
+        "stamp": "rising",
+        "rank": 4,
+        "source_file": "data/sources/20261126-ark/04_ETF升溫區_1.png",
+        "source_sha256": "17e69b510dc840615b4afbe5c68978126b1dcedce327231504ffb9a809ca3b45",
+        "price_status": "source_price_missing_nav_not_price",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "meta": "股價 —｜即時淨值 21.59｜折溢價 -0.56%",
+        "nav": "21.59",
+        "premium_discount": "-0.56%"
+      },
+      {
+        "code": "00849B",
+        "name": "中信EM主權債0-5",
+        "price": null,
+        "change": null,
+        "stamp": "rising",
+        "rank": 5,
+        "source_file": "data/sources/20261126-ark/04_ETF升溫區_1.png",
+        "source_sha256": "17e69b510dc840615b4afbe5c68978126b1dcedce327231504ffb9a809ca3b45",
+        "price_status": "source_price_missing_nav_not_price",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "meta": "股價 —｜即時淨值 38.67｜折溢價 -0.32%",
+        "nav": "38.67",
+        "premium_discount": "-0.32%"
+      },
+      {
+        "code": "00651R",
+        "name": "復華香港反1",
+        "price": null,
+        "change": null,
+        "stamp": "rising",
+        "rank": 6,
+        "source_file": "data/sources/20261126-ark/04_ETF升溫區_1.png",
+        "source_sha256": "17e69b510dc840615b4afbe5c68978126b1dcedce327231504ffb9a809ca3b45",
+        "price_status": "source_price_missing_nav_not_price",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "meta": "股價 —｜即時淨值 6｜折溢價 -2.17%",
+        "nav": "6",
+        "premium_discount": "-2.17%"
+      },
+      {
+        "code": "00674R",
+        "name": "期元大S&P黃金反1",
+        "price": "34.32",
+        "change": "▼0.28(-0.81%)",
+        "stamp": "rising",
+        "rank": 7,
+        "source_file": "data/sources/20261126-ark/05_ETF升溫區_2.png",
+        "source_sha256": "6e71be70ed70a363a5f2951a112419df258fe46dc65139807b158c8d97035d8b",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "meta": "股價 34.32｜▼0.28(-0.81%)"
+      }
+    ],
+    "overlap": [],
+    "overlap_names": []
+  },
+  "stocks": {
+    "value": [
+      {
+        "code": "3702",
+        "name": "大聯大",
+        "price": "74.9",
+        "change": "▲1(1.35%)",
+        "stamp": "value",
+        "rank": 1,
+        "source_file": "data/sources/20261126-ark/06_產業價值區_1.png",
+        "source_sha256": "6d7a348675bed6e08c0b0e6d3294781fcd416cffebb4adf72c1c58e8a94758f8",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "IC零組件通路商",
+        "meta": "股價 74.9｜▲1(1.35%)｜IC零組件通路商"
+      },
+      {
+        "code": "8069",
+        "name": "元太",
+        "price": "124.5",
+        "change": "▲4(3.32%)",
+        "stamp": "value",
+        "rank": 2,
+        "source_file": "data/sources/20261126-ark/06_產業價值區_1.png",
+        "source_sha256": "6d7a348675bed6e08c0b0e6d3294781fcd416cffebb4adf72c1c58e8a94758f8",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "顯示器",
+        "meta": "股價 124.5｜▲4(3.32%)｜顯示器"
+      },
+      {
+        "code": "2356",
+        "name": "英業達",
+        "price": "40.05",
+        "change": "▲0.75(1.91%)",
+        "stamp": "value",
+        "rank": 3,
+        "source_file": "data/sources/20261126-ark/06_產業價值區_1.png",
+        "source_sha256": "6d7a348675bed6e08c0b0e6d3294781fcd416cffebb4adf72c1c58e8a94758f8",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "伺服器組裝代工",
+        "meta": "股價 40.05｜▲0.75(1.91%)｜伺服器組裝代工"
+      },
+      {
+        "code": "2357",
+        "name": "華碩",
+        "price": "774",
+        "change": "▲5(0.65%)",
+        "stamp": "value",
+        "rank": 4,
+        "source_file": "data/sources/20261126-ark/06_產業價值區_1.png",
+        "source_sha256": "6d7a348675bed6e08c0b0e6d3294781fcd416cffebb4adf72c1c58e8a94758f8",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "電腦及周邊產品",
+        "meta": "股價 774｜▲5(0.65%)｜電腦及周邊產品"
+      },
+      {
+        "code": "8464",
+        "name": "億豐",
+        "price": "348",
+        "change": "▲3(0.87%)",
+        "stamp": "value",
+        "rank": 5,
+        "source_file": "data/sources/20261126-ark/06_產業價值區_1.png",
+        "source_sha256": "6d7a348675bed6e08c0b0e6d3294781fcd416cffebb4adf72c1c58e8a94758f8",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "家居用品",
+        "meta": "股價 348｜▲3(0.87%)｜家居用品"
+      },
+      {
+        "code": "2347",
+        "name": "聯強",
+        "price": "70",
+        "change": "0(0%)",
+        "stamp": "value",
+        "rank": 6,
+        "source_file": "data/sources/20261126-ark/06_產業價值區_1.png",
+        "source_sha256": "6d7a348675bed6e08c0b0e6d3294781fcd416cffebb4adf72c1c58e8a94758f8",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "3C通路商",
+        "meta": "股價 70｜0(0%)｜3C通路商"
+      },
+      {
+        "code": "3034",
+        "name": "聯詠",
+        "price": "429",
+        "change": "▲1.5(0.35%)",
+        "stamp": "value",
+        "rank": 7,
+        "source_file": "data/sources/20261126-ark/07_產業價值區_2.png",
+        "source_sha256": "9a5d170256d22e9f4d9a51002c79ba6bb4bce50ecc9edd4a534dfa0e700ef995",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "驅動IC",
+        "meta": "股價 429｜▲1.5(0.35%)｜驅動IC"
+      },
+      {
+        "code": "5289",
+        "name": "宜鼎",
+        "price": "778",
+        "change": "▲10(1.3%)",
+        "stamp": "value",
+        "rank": 8,
+        "source_file": "data/sources/20261126-ark/07_產業價值區_2.png",
+        "source_sha256": "9a5d170256d22e9f4d9a51002c79ba6bb4bce50ecc9edd4a534dfa0e700ef995",
+        "price_status": "primary_screenshot_price_change_arithmetic_checked_ax_capture_differs",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "工業電腦",
+        "meta": "股價 778｜▲10(1.3%)｜工業電腦"
+      },
+      {
+        "code": "2885",
+        "name": "元大金",
+        "price": "61.9",
+        "change": "▲0.4(0.65%)",
+        "stamp": "value",
+        "rank": 9,
+        "source_file": "data/sources/20261126-ark/07_產業價值區_2.png",
+        "source_sha256": "9a5d170256d22e9f4d9a51002c79ba6bb4bce50ecc9edd4a534dfa0e700ef995",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "金控",
+        "meta": "股價 61.9｜▲0.4(0.65%)｜金控"
+      },
+      {
+        "code": "5434",
+        "name": "崇越",
+        "price": "418.5",
+        "change": "▲9.5(2.32%)",
+        "stamp": "value",
+        "rank": 10,
+        "source_file": "data/sources/20261126-ark/07_產業價值區_2.png",
+        "source_sha256": "9a5d170256d22e9f4d9a51002c79ba6bb4bce50ecc9edd4a534dfa0e700ef995",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "半導體設備",
+        "meta": "股價 418.5｜▲9.5(2.32%)｜半導體設備"
+      },
+      {
+        "code": "5269",
+        "name": "祥碩",
+        "price": "1,090",
+        "change": "▲25(2.35%)",
+        "stamp": "value",
+        "rank": 11,
+        "source_file": "data/sources/20261126-ark/07_產業價值區_2.png",
+        "source_sha256": "9a5d170256d22e9f4d9a51002c79ba6bb4bce50ecc9edd4a534dfa0e700ef995",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "IC設計",
+        "meta": "股價 1,090｜▲25(2.35%)｜IC設計"
+      },
+      {
+        "code": "3706",
+        "name": "神達",
+        "price": "58.4",
+        "change": "▲0.4(0.69%)",
+        "stamp": "value",
+        "rank": 12,
+        "source_file": "data/sources/20261126-ark/08_產業價值區_3.png",
+        "source_sha256": "bd0c251e1ec8198a5e7f69dcc4e04045ef6aa9fd89e9e37f5a428f0e9d13af8b",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "伺服器組裝代工",
+        "meta": "股價 58.4｜▲0.4(0.69%)｜伺服器組裝代工"
+      },
+      {
+        "code": "3042",
+        "name": "晶技",
+        "price": "118.5",
+        "change": "▲5(4.41%)",
+        "stamp": "value",
+        "rank": 13,
+        "source_file": "data/sources/20261126-ark/08_產業價值區_3.png",
+        "source_sha256": "bd0c251e1ec8198a5e7f69dcc4e04045ef6aa9fd89e9e37f5a428f0e9d13af8b",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "石英元件",
+        "meta": "股價 118.5｜▲5(4.41%)｜石英元件"
+      },
+      {
+        "code": "3008",
+        "name": "大立光",
+        "price": "4,425",
+        "change": "▲400(9.94%)",
+        "stamp": "value",
+        "rank": 14,
+        "source_file": "data/sources/20261126-ark/08_產業價值區_3.png",
+        "source_sha256": "bd0c251e1ec8198a5e7f69dcc4e04045ef6aa9fd89e9e37f5a428f0e9d13af8b",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "光學鏡片與鏡頭",
+        "meta": "股價 4,425｜▲400(9.94%)｜光學鏡片與鏡頭"
+      },
+      {
+        "code": "1513",
+        "name": "中興電",
+        "price": "136.5",
+        "change": "▲3.5(2.63%)",
+        "stamp": "value",
+        "rank": 15,
+        "source_file": "data/sources/20261126-ark/08_產業價值區_3.png",
+        "source_sha256": "bd0c251e1ec8198a5e7f69dcc4e04045ef6aa9fd89e9e37f5a428f0e9d13af8b",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "機電工程",
+        "meta": "股價 136.5｜▲3.5(2.63%)｜機電工程"
+      },
+      {
+        "code": "2376",
+        "name": "技嘉",
+        "price": "263",
+        "change": "▲2(0.77%)",
+        "stamp": "value",
+        "rank": 16,
+        "source_file": "data/sources/20261126-ark/08_產業價值區_3.png",
+        "source_sha256": "bd0c251e1ec8198a5e7f69dcc4e04045ef6aa9fd89e9e37f5a428f0e9d13af8b",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "板卡",
+        "meta": "股價 263｜▲2(0.77%)｜板卡"
+      },
+      {
+        "code": "2379",
+        "name": "瑞昱",
+        "price": "705",
+        "change": "▲6(0.86%)",
+        "stamp": "value",
+        "rank": 17,
+        "source_file": "data/sources/20261126-ark/09_產業價值區_4.png",
+        "source_sha256": "954480cd0cacfee46f4ee57acbc99c3f8b487480ead985a1473e8209d811511e",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "IC設計",
+        "meta": "股價 705｜▲6(0.86%)｜IC設計"
+      },
+      {
+        "code": "2377",
+        "name": "微星",
+        "price": "127.5",
+        "change": "▲3.5(2.82%)",
+        "stamp": "value",
+        "rank": 18,
+        "source_file": "data/sources/20261126-ark/09_產業價值區_4.png",
+        "source_sha256": "954480cd0cacfee46f4ee57acbc99c3f8b487480ead985a1473e8209d811511e",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "板卡",
+        "meta": "股價 127.5｜▲3.5(2.82%)｜板卡"
+      },
+      {
+        "code": "2615",
+        "name": "萬海",
+        "price": "100",
+        "change": "▼0.5(-0.5%)",
+        "stamp": "value",
+        "rank": 19,
+        "source_file": "data/sources/20261126-ark/09_產業價值區_4.png",
+        "source_sha256": "954480cd0cacfee46f4ee57acbc99c3f8b487480ead985a1473e8209d811511e",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "貨櫃航運",
+        "meta": "股價 100｜▼0.5(-0.5%)｜貨櫃航運"
+      },
+      {
+        "code": "1476",
+        "name": "儒鴻",
+        "price": "371",
+        "change": "▲2.5(0.68%)",
+        "stamp": "value",
+        "rank": 20,
+        "source_file": "data/sources/20261126-ark/09_產業價值區_4.png",
+        "source_sha256": "954480cd0cacfee46f4ee57acbc99c3f8b487480ead985a1473e8209d811511e",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "成衣",
+        "meta": "股價 371｜▲2.5(0.68%)｜成衣"
+      },
+      {
+        "code": "3231",
+        "name": "緯創",
+        "price": "156",
+        "change": "▲4(2.63%)",
+        "stamp": "value",
+        "rank": 21,
+        "source_file": "data/sources/20261126-ark/09_產業價值區_4.png",
+        "source_sha256": "954480cd0cacfee46f4ee57acbc99c3f8b487480ead985a1473e8209d811511e",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "電腦及周邊產品",
+        "meta": "股價 156｜▲4(2.63%)｜電腦及周邊產品"
+      },
+      {
+        "code": "2404",
+        "name": "漢唐",
+        "price": "893",
+        "change": "▲18(2.06%)",
+        "stamp": "value",
+        "rank": 22,
+        "source_file": "data/sources/20261126-ark/10_產業價值區_5.png",
+        "source_sha256": "2d8ae46ed746adcbb43964c9f60e0b078b7b20c9fa32260f238ad0ac8fcb11d8",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "無塵室工程",
+        "meta": "股價 893｜▲18(2.06%)｜無塵室工程"
+      },
+      {
+        "code": "2027",
+        "name": "大成鋼",
+        "price": "44.4",
+        "change": "▲0.7(1.6%)",
+        "stamp": "value",
+        "rank": 23,
+        "source_file": "data/sources/20261126-ark/10_產業價值區_5.png",
+        "source_sha256": "2d8ae46ed746adcbb43964c9f60e0b078b7b20c9fa32260f238ad0ac8fcb11d8",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "不鏽鋼產品",
+        "meta": "股價 44.4｜▲0.7(1.6%)｜不鏽鋼產品"
+      },
+      {
+        "code": "6669",
+        "name": "緯穎",
+        "price": "1,470",
+        "change": "▲40(2.8%)",
+        "stamp": "value",
+        "rank": 24,
+        "source_file": "data/sources/20261126-ark/10_產業價值區_5.png",
+        "source_sha256": "2d8ae46ed746adcbb43964c9f60e0b078b7b20c9fa32260f238ad0ac8fcb11d8",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "伺服器組裝代工",
+        "meta": "股價 1,470｜▲40(2.8%)｜伺服器組裝代工"
+      },
+      {
+        "code": "2637",
+        "name": "慧洋-KY",
+        "price": "89.6",
+        "change": "▲0.8(0.9%)",
+        "stamp": "value",
+        "rank": 25,
+        "source_file": "data/sources/20261126-ark/10_產業價值區_5.png",
+        "source_sha256": "2d8ae46ed746adcbb43964c9f60e0b078b7b20c9fa32260f238ad0ac8fcb11d8",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "散裝航運",
+        "meta": "股價 89.6｜▲0.8(0.9%)｜散裝航運"
+      },
+      {
+        "code": "2330",
+        "name": "台積電",
+        "price": "2,135",
+        "change": "▼15(-0.7%)",
+        "stamp": "value",
+        "rank": 26,
+        "source_file": "data/sources/20261126-ark/10_產業價值區_5.png",
+        "source_sha256": "2d8ae46ed746adcbb43964c9f60e0b078b7b20c9fa32260f238ad0ac8fcb11d8",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "晶圓代工",
+        "meta": "股價 2,135｜▼15(-0.7%)｜晶圓代工"
+      },
+      {
+        "code": "2382",
+        "name": "廣達",
+        "price": "269.5",
+        "change": "▲8.5(3.26%)",
+        "stamp": "value",
+        "rank": 27,
+        "source_file": "data/sources/20261126-ark/11_產業價值區_6.png",
+        "source_sha256": "6c82e3f711c9a999af45f6cdb13a3e9c450e493c6f64c712913f6e71deb175e0",
+        "price_status": "primary_screenshot_price_change_arithmetic_checked_ax_capture_differs",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "伺服器組裝代工",
+        "meta": "股價 269.5｜▲8.5(3.26%)｜伺服器組裝代工"
+      },
+      {
+        "code": "3293",
+        "name": "鈊象",
+        "price": "782",
+        "change": "▲7(0.9%)",
+        "stamp": "value",
+        "rank": 28,
+        "source_file": "data/sources/20261126-ark/11_產業價值區_6.png",
+        "source_sha256": "6c82e3f711c9a999af45f6cdb13a3e9c450e493c6f64c712913f6e71deb175e0",
+        "price_status": "primary_screenshot_price_change_arithmetic_checked_ax_capture_differs",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "軟體遊戲",
+        "meta": "股價 782｜▲7(0.9%)｜軟體遊戲"
+      },
+      {
+        "code": "6139",
+        "name": "亞翔",
+        "price": "587",
+        "change": "▲32(5.77%)",
+        "stamp": "value",
+        "rank": 29,
+        "source_file": "data/sources/20261126-ark/11_產業價值區_6.png",
+        "source_sha256": "6c82e3f711c9a999af45f6cdb13a3e9c450e493c6f64c712913f6e71deb175e0",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "無塵室工程",
+        "meta": "股價 587｜▲32(5.77%)｜無塵室工程"
+      },
+      {
+        "code": "2603",
+        "name": "長榮",
+        "price": "254",
+        "change": "▲1.5(0.59%)",
+        "stamp": "value",
+        "rank": 30,
+        "source_file": "data/sources/20261126-ark/11_產業價值區_6.png",
+        "source_sha256": "6c82e3f711c9a999af45f6cdb13a3e9c450e493c6f64c712913f6e71deb175e0",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "貨櫃航運",
+        "meta": "股價 254｜▲1.5(0.59%)｜貨櫃航運"
+      }
+    ],
+    "rising": [
+      {
+        "code": "5903",
+        "name": "全家",
+        "price": null,
+        "change": null,
+        "stamp": "rising",
+        "rank": 1,
+        "source_file": "data/sources/20261126-ark/12_產業升溫區_1.png",
+        "source_sha256": "e64da96274268a8773743b9e5bcae40499038a014d5d26e945783aa9ef7d6e47",
+        "price_status": "unverified_withheld",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "百貨",
+        "meta": "股價 —｜百貨"
+      },
+      {
+        "code": "2597",
+        "name": "潤弘",
+        "price": "197.5",
+        "change": "▲4.5(2.33%)",
+        "stamp": "rising",
+        "rank": 2,
+        "source_file": "data/sources/20261126-ark/12_產業升溫區_1.png",
+        "source_sha256": "e64da96274268a8773743b9e5bcae40499038a014d5d26e945783aa9ef7d6e47",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "營造工程",
+        "meta": "股價 197.5｜▲4.5(2.33%)｜營造工程"
+      },
+      {
+        "code": "1341",
+        "name": "富林-KY",
+        "price": null,
+        "change": null,
+        "stamp": "rising",
+        "rank": 3,
+        "source_file": "data/sources/20261126-ark/12_產業升溫區_1.png",
+        "source_sha256": "e64da96274268a8773743b9e5bcae40499038a014d5d26e945783aa9ef7d6e47",
+        "price_status": "unverified_withheld",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "塑膠製品",
+        "meta": "股價 —｜塑膠製品"
+      },
+      {
+        "code": "6904",
+        "name": "伯鑫",
+        "price": null,
+        "change": null,
+        "stamp": "rising",
+        "rank": 4,
+        "source_file": "data/sources/20261126-ark/12_產業升溫區_1.png",
+        "source_sha256": "e64da96274268a8773743b9e5bcae40499038a014d5d26e945783aa9ef7d6e47",
+        "price_status": "unverified_withheld",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "工具機",
+        "meta": "股價 —｜工具機"
+      },
+      {
+        "code": "5601",
+        "name": "台聯櫃",
+        "price": null,
+        "change": null,
+        "stamp": "rising",
+        "rank": 5,
+        "source_file": "data/sources/20261126-ark/12_產業升溫區_1.png",
+        "source_sha256": "e64da96274268a8773743b9e5bcae40499038a014d5d26e945783aa9ef7d6e47",
+        "price_status": "unverified_withheld",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "航運其他",
+        "meta": "股價 —｜航運其他"
+      },
+      {
+        "code": "8342",
+        "name": "益張",
+        "price": null,
+        "change": null,
+        "stamp": "rising",
+        "rank": 6,
+        "source_file": "data/sources/20261126-ark/12_產業升溫區_1.png",
+        "source_sha256": "e64da96274268a8773743b9e5bcae40499038a014d5d26e945783aa9ef7d6e47",
+        "price_status": "unverified_withheld",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "家居用品",
+        "meta": "股價 —｜家居用品"
+      },
+      {
+        "code": "8426",
+        "name": "紅木-KY",
+        "price": null,
+        "change": null,
+        "stamp": "rising",
+        "rank": 7,
+        "source_file": "data/sources/20261126-ark/13_產業升溫區_2.png",
+        "source_sha256": "5778d92c5e4d414411f1f6ed95888c4dc596b602fc4edadb80ac61c0eea15982",
+        "price_status": "unverified_withheld",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "建材",
+        "meta": "股價 —｜建材"
+      },
+      {
+        "code": "8941",
+        "name": "關中",
+        "price": null,
+        "change": null,
+        "stamp": "rising",
+        "rank": 8,
+        "source_file": "data/sources/20261126-ark/13_產業升溫區_2.png",
+        "source_sha256": "5778d92c5e4d414411f1f6ed95888c4dc596b602fc4edadb80ac61c0eea15982",
+        "price_status": "unverified_withheld",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "家居用品",
+        "meta": "股價 —｜家居用品"
+      },
+      {
+        "code": "6199",
+        "name": "天品",
+        "price": "173",
+        "change": "▲0.5(0.29%)",
+        "stamp": "rising",
+        "rank": 9,
+        "source_file": "data/sources/20261126-ark/13_產業升溫區_2.png",
+        "source_sha256": "5778d92c5e4d414411f1f6ed95888c4dc596b602fc4edadb80ac61c0eea15982",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "傳產其他",
+        "meta": "股價 173｜▲0.5(0.29%)｜傳產其他"
+      },
+      {
+        "code": "2937",
+        "name": "集雅社",
+        "price": null,
+        "change": null,
+        "stamp": "rising",
+        "rank": 10,
+        "source_file": "data/sources/20261126-ark/13_產業升溫區_2.png",
+        "source_sha256": "5778d92c5e4d414411f1f6ed95888c4dc596b602fc4edadb80ac61c0eea15982",
+        "price_status": "unverified_withheld",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "家居用品",
+        "meta": "股價 —｜家居用品"
+      },
+      {
+        "code": "2640",
+        "name": "大車隊",
+        "price": "141",
+        "change": "▼1(-0.7%)",
+        "stamp": "rising",
+        "rank": 11,
+        "source_file": "data/sources/20261126-ark/13_產業升溫區_2.png",
+        "source_sha256": "5778d92c5e4d414411f1f6ed95888c4dc596b602fc4edadb80ac61c0eea15982",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "數位平台",
+        "meta": "股價 141｜▼1(-0.7%)｜數位平台"
+      },
+      {
+        "code": "5523",
+        "name": "豐謙",
+        "price": null,
+        "change": null,
+        "stamp": "rising",
+        "rank": 12,
+        "source_file": "data/sources/20261126-ark/14_產業升溫區_3.png",
+        "source_sha256": "38f500a72f311ba7d801f124afb0462154f0aff57fba7dbce2a90751ac8f132f",
+        "price_status": "unverified_withheld",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "營造工程",
+        "meta": "股價 —｜營造工程"
+      },
+      {
+        "code": "8349",
+        "name": "恒耀",
+        "price": null,
+        "change": null,
+        "stamp": "rising",
+        "rank": 13,
+        "source_file": "data/sources/20261126-ark/14_產業升溫區_3.png",
+        "source_sha256": "38f500a72f311ba7d801f124afb0462154f0aff57fba7dbce2a90751ac8f132f",
+        "price_status": "unverified_withheld",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "汽機車零組件",
+        "meta": "股價 —｜汽機車零組件"
+      },
+      {
+        "code": "2063",
+        "name": "世鎧",
+        "price": null,
+        "change": null,
+        "stamp": "rising",
+        "rank": 14,
+        "source_file": "data/sources/20261126-ark/14_產業升溫區_3.png",
+        "source_sha256": "38f500a72f311ba7d801f124afb0462154f0aff57fba7dbce2a90751ac8f132f",
+        "price_status": "unverified_withheld",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "鋼鐵產品",
+        "meta": "股價 —｜鋼鐵產品"
+      },
+      {
+        "code": "4767",
+        "name": "誠泰科技",
+        "price": null,
+        "change": null,
+        "stamp": "rising",
+        "rank": 15,
+        "source_file": "data/sources/20261126-ark/14_產業升溫區_3.png",
+        "source_sha256": "38f500a72f311ba7d801f124afb0462154f0aff57fba7dbce2a90751ac8f132f",
+        "price_status": "unverified_withheld",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "合成樹脂",
+        "meta": "股價 —｜合成樹脂"
+      },
+      {
+        "code": "6655",
+        "name": "科定",
+        "price": "139",
+        "change": "▲3.5(2.58%)",
+        "stamp": "rising",
+        "rank": 16,
+        "source_file": "data/sources/20261126-ark/14_產業升溫區_3.png",
+        "source_sha256": "38f500a72f311ba7d801f124afb0462154f0aff57fba7dbce2a90751ac8f132f",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "家居用品",
+        "meta": "股價 139｜▲3.5(2.58%)｜家居用品"
+      },
+      {
+        "code": "5007",
+        "name": "三星",
+        "price": "55.8",
+        "change": "▲0.3(0.54%)",
+        "stamp": "rising",
+        "rank": 17,
+        "source_file": "data/sources/20261126-ark/15_產業升溫區_4.png",
+        "source_sha256": "9e563669207e7c20ddf580439dbb1385c8392f515398f9f855077ad025eb3c8c",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "鋼鐵產品",
+        "meta": "股價 55.8｜▲0.3(0.54%)｜鋼鐵產品"
+      },
+      {
+        "code": "4106",
+        "name": "雃博",
+        "price": "24.35",
+        "change": "▲0.15(0.62%)",
+        "stamp": "rising",
+        "rank": 18,
+        "source_file": "data/sources/20261126-ark/15_產業升溫區_4.png",
+        "source_sha256": "9e563669207e7c20ddf580439dbb1385c8392f515398f9f855077ad025eb3c8c",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "醫療器材",
+        "meta": "股價 24.35｜▲0.15(0.62%)｜醫療器材"
+      },
+      {
+        "code": "4550",
+        "name": "長佳",
+        "price": null,
+        "change": null,
+        "stamp": "rising",
+        "rank": 19,
+        "source_file": "data/sources/20261126-ark/15_產業升溫區_4.png",
+        "source_sha256": "9e563669207e7c20ddf580439dbb1385c8392f515398f9f855077ad025eb3c8c",
+        "price_status": "unverified_withheld",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "機電工程",
+        "meta": "股價 —｜機電工程"
+      },
+      {
+        "code": "5489",
+        "name": "彩富",
+        "price": null,
+        "change": null,
+        "stamp": "rising",
+        "rank": 20,
+        "source_file": "data/sources/20261126-ark/15_產業升溫區_4.png",
+        "source_sha256": "9e563669207e7c20ddf580439dbb1385c8392f515398f9f855077ad025eb3c8c",
+        "price_status": "unverified_withheld",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "安全監控系統",
+        "meta": "股價 —｜安全監控系統"
+      },
+      {
+        "code": "6782",
+        "name": "視陽",
+        "price": "290.5",
+        "change": "▼1.5(-0.51%)",
+        "stamp": "rising",
+        "rank": 21,
+        "source_file": "data/sources/20261126-ark/15_產業升溫區_4.png",
+        "source_sha256": "9e563669207e7c20ddf580439dbb1385c8392f515398f9f855077ad025eb3c8c",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "應用生技",
+        "meta": "股價 290.5｜▼1.5(-0.51%)｜應用生技"
+      },
+      {
+        "code": "2756",
+        "name": "聯發國際",
+        "price": "65.4",
+        "change": "▲0.4(0.62%)",
+        "stamp": "rising",
+        "rank": 22,
+        "source_file": "data/sources/20261126-ark/16_產業升溫區_5.png",
+        "source_sha256": "b011bac3e16feb8717fb1a4f2633773919c21c0feced672b640cc584d2b6051a",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "餐飲",
+        "meta": "股價 65.4｜▲0.4(0.62%)｜餐飲"
+      },
+      {
+        "code": "9937",
+        "name": "全國",
+        "price": "53.9",
+        "change": "▲0.2(0.37%)",
+        "stamp": "rising",
+        "rank": 23,
+        "source_file": "data/sources/20261126-ark/16_產業升溫區_5.png",
+        "source_sha256": "b011bac3e16feb8717fb1a4f2633773919c21c0feced672b640cc584d2b6051a",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "石油",
+        "meta": "股價 53.9｜▲0.2(0.37%)｜石油"
+      },
+      {
+        "code": "1259",
+        "name": "安心",
+        "price": null,
+        "change": null,
+        "stamp": "rising",
+        "rank": 24,
+        "source_file": "data/sources/20261126-ark/16_產業升溫區_5.png",
+        "source_sha256": "b011bac3e16feb8717fb1a4f2633773919c21c0feced672b640cc584d2b6051a",
+        "price_status": "unverified_withheld",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "餐飲",
+        "meta": "股價 —｜餐飲"
+      },
+      {
+        "code": "5522",
+        "name": "遠雄",
+        "price": "61.1",
+        "change": "▼0.4(-0.65%)",
+        "stamp": "rising",
+        "rank": 25,
+        "source_file": "data/sources/20261126-ark/16_產業升溫區_5.png",
+        "source_sha256": "b011bac3e16feb8717fb1a4f2633773919c21c0feced672b640cc584d2b6051a",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "營造工程",
+        "meta": "股價 61.1｜▼0.4(-0.65%)｜營造工程"
+      },
+      {
+        "code": "5312",
+        "name": "寶島科",
+        "price": "91",
+        "change": "▲1.3(1.45%)",
+        "stamp": "rising",
+        "rank": 26,
+        "source_file": "data/sources/20261126-ark/16_產業升溫區_5.png",
+        "source_sha256": "b011bac3e16feb8717fb1a4f2633773919c21c0feced672b640cc584d2b6051a",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "傳產其他",
+        "meta": "股價 91｜▲1.3(1.45%)｜傳產其他"
+      },
+      {
+        "code": "4153",
+        "name": "鈺緯",
+        "price": null,
+        "change": null,
+        "stamp": "rising",
+        "rank": 27,
+        "source_file": "data/sources/20261126-ark/17_產業升溫區_6.png",
+        "source_sha256": "7b6c64ae4445da0018468a73f6045bf3a2afd9b6f74b2f150e36018e722bbf7c",
+        "price_status": "unverified_withheld",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "顯示器",
+        "meta": "股價 —｜顯示器"
+      },
+      {
+        "code": "7584",
+        "name": "樂意",
+        "price": "41.5",
+        "change": "▼0.7(-1.66%)",
+        "stamp": "rising",
+        "rank": 28,
+        "source_file": "data/sources/20261126-ark/17_產業升溫區_6.png",
+        "source_sha256": "7b6c64ae4445da0018468a73f6045bf3a2afd9b6f74b2f150e36018e722bbf7c",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "軟體遊戲",
+        "meta": "股價 41.5｜▼0.7(-1.66%)｜軟體遊戲"
+      },
+      {
+        "code": "5324",
+        "name": "士開",
+        "price": null,
+        "change": null,
+        "stamp": "rising",
+        "rank": 29,
+        "source_file": "data/sources/20261126-ark/17_產業升溫區_6.png",
+        "source_sha256": "7b6c64ae4445da0018468a73f6045bf3a2afd9b6f74b2f150e36018e722bbf7c",
+        "price_status": "unverified_withheld",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "餐飲",
+        "meta": "股價 —｜餐飲"
+      },
+      {
+        "code": "5276",
+        "name": "達輝-KY",
+        "price": "17.9",
+        "change": "▼0.65(-3.5%)",
+        "stamp": "rising",
+        "rank": 30,
+        "source_file": "data/sources/20261126-ark/17_產業升溫區_6.png",
+        "source_sha256": "7b6c64ae4445da0018468a73f6045bf3a2afd9b6f74b2f150e36018e722bbf7c",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked",
+        "identity_status": "ark_ax_ocr_agreement",
+        "numeric_evidence_source": "data/sources/20261126-ark/ark_stocks_ax.json",
+        "industry": "汽機車零組件",
+        "meta": "股價 17.9｜▼0.65(-3.5%)｜汽機車零組件"
+      }
+    ],
+    "overlap": [],
+    "overlap_names": []
+  },
+  "five_indicators": {
+    "date": "2026-11-26",
+    "captured_at": "2026-11-26T01:05:46Z",
+    "source_file": "data/sources/20261126-ark/ark_indicators.json",
+    "source_json_sha256": "231c32480a0fc6dce9d9807db3360c87b868c9c30199f25990df3b26e4cffbf7",
+    "source_image": "data/sources/20261126-ark/00_運算五指標.png",
+    "source_sha256": "a573c3dd854edfce7082288ab428a20157bf74a39ae14cbc819e8dadde1a7031",
+    "estimation_method_version": "ark-screenshot-angle-estimate-v1",
+    "indicators": [
+      {
+        "angleDegrees": 29.1,
+        "approximate": true,
+        "name": "全球散戶",
+        "pivot": {
+          "x": 47,
+          "y": 431
+        },
+        "status": "estimated",
+        "value": 16
+      },
+      {
+        "angleDegrees": 123.2,
+        "approximate": true,
+        "name": "外資情緒",
+        "pivot": {
+          "x": 160,
+          "y": 431
+        },
+        "status": "estimated",
+        "value": 68
+      },
+      {
+        "angleDegrees": 62.8,
+        "approximate": true,
+        "name": "位階增溫",
+        "pivot": {
+          "x": 272,
+          "y": 430
+        },
+        "status": "estimated",
+        "value": 35
+      },
+      {
+        "angleDegrees": 54.8,
+        "approximate": true,
+        "name": "社交反指",
+        "pivot": {
+          "x": 384,
+          "y": 431
+        },
+        "status": "estimated",
+        "value": 30
+      },
+      {
+        "angleDegrees": 46.2,
+        "approximate": true,
+        "name": "量能爆衝",
+        "pivot": {
+          "x": 497,
+          "y": 431
+        },
+        "status": "estimated",
+        "value": 26
+      }
+    ],
+    "scale": {
+      "left": 0,
+      "right": 100,
+      "top": 50
+    },
+    "available_at": null,
+    "publication_status": "unpublished"
+  },
+  "ark_source_validation": {
+    "source_target": "data/sources/20261126-ark/ark_stocks.json",
+    "source_sha256": "5e15f2b88a495e5cbb6c4626670d292aea2291294a6e93d29bbf99821e56fee3",
+    "latest_pointer_resolved": "data/sources/20261126-ark/ark_stocks.json",
+    "all_source_manifest_hashes_match": true,
+    "source_hash_checks": {
+      "ark_ocr.json": true,
+      "ark_stocks.json": true,
+      "ark_stocks_ax.json": true,
+      "ark_validation.json": true,
+      "ark_indicators.json": true,
+      "00_運算五指標.png": true,
+      "01_風控水位.png": true,
+      "02_ETF價值區_1.png": true,
+      "03_ETF價值區_2.png": true,
+      "04_ETF升溫區_1.png": true,
+      "05_ETF升溫區_2.png": true,
+      "06_產業價值區_1.png": true,
+      "07_產業價值區_2.png": true,
+      "08_產業價值區_3.png": true,
+      "09_產業價值區_4.png": true,
+      "10_產業價值區_5.png": true,
+      "11_產業價值區_6.png": true,
+      "12_產業升溫區_1.png": true,
+      "13_產業升溫區_2.png": true,
+      "14_產業升溫區_3.png": true,
+      "15_產業升溫區_4.png": true,
+      "16_產業升溫區_5.png": true,
+      "17_產業升溫區_6.png": true,
+      "capture_manifest.jsonl": true,
+      "ark_ax_rows.jsonl": true
+    },
+    "all_order_preserved": true,
+    "card_count": 77,
+    "unique_security_count": 77,
+    "zone_counts": {
+      "ETF價值區": 10,
+      "ETF升溫區": 7,
+      "產業價值區": 30,
+      "產業升溫區": 30
+    },
+    "rows": [
+      {
+        "code": "00875",
+        "section": "ETF價值區",
+        "rank": 1,
+        "source_file": "data/sources/20261126-ark/02_ETF價值區_1.png",
+        "price_status": "source_price_missing_nav_not_price"
+      },
+      {
+        "code": "00678",
+        "section": "ETF價值區",
+        "rank": 2,
+        "source_file": "data/sources/20261126-ark/02_ETF價值區_1.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "00960",
+        "section": "ETF價值區",
+        "rank": 3,
+        "source_file": "data/sources/20261126-ark/02_ETF價值區_1.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "00701",
+        "section": "ETF價值區",
+        "rank": 4,
+        "source_file": "data/sources/20261126-ark/02_ETF價值區_1.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "00939",
+        "section": "ETF價值區",
+        "rank": 5,
+        "source_file": "data/sources/20261126-ark/02_ETF價值區_1.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "0055",
+        "section": "ETF價值區",
+        "rank": 6,
+        "source_file": "data/sources/20261126-ark/02_ETF價值區_1.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "00972",
+        "section": "ETF價值區",
+        "rank": 7,
+        "source_file": "data/sources/20261126-ark/03_ETF價值區_2.png",
+        "price_status": "source_price_missing_nav_not_price"
+      },
+      {
+        "code": "00918",
+        "section": "ETF價值區",
+        "rank": 8,
+        "source_file": "data/sources/20261126-ark/03_ETF價值區_2.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "00956",
+        "section": "ETF價值區",
+        "rank": 9,
+        "source_file": "data/sources/20261126-ark/03_ETF價值區_2.png",
+        "price_status": "source_price_missing_nav_not_price"
+      },
+      {
+        "code": "00731",
+        "section": "ETF價值區",
+        "rank": 10,
+        "source_file": "data/sources/20261126-ark/03_ETF價值區_2.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "00683L",
+        "section": "ETF升溫區",
+        "rank": 1,
+        "source_file": "data/sources/20261126-ark/04_ETF升溫區_1.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "00666R",
+        "section": "ETF升溫區",
+        "rank": 2,
+        "source_file": "data/sources/20261126-ark/04_ETF升溫區_1.png",
+        "price_status": "source_price_missing_nav_not_price"
+      },
+      {
+        "code": "00967B",
+        "section": "ETF升溫區",
+        "rank": 3,
+        "source_file": "data/sources/20261126-ark/04_ETF升溫區_1.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "00682U",
+        "section": "ETF升溫區",
+        "rank": 4,
+        "source_file": "data/sources/20261126-ark/04_ETF升溫區_1.png",
+        "price_status": "source_price_missing_nav_not_price"
+      },
+      {
+        "code": "00849B",
+        "section": "ETF升溫區",
+        "rank": 5,
+        "source_file": "data/sources/20261126-ark/04_ETF升溫區_1.png",
+        "price_status": "source_price_missing_nav_not_price"
+      },
+      {
+        "code": "00651R",
+        "section": "ETF升溫區",
+        "rank": 6,
+        "source_file": "data/sources/20261126-ark/04_ETF升溫區_1.png",
+        "price_status": "source_price_missing_nav_not_price"
+      },
+      {
+        "code": "00674R",
+        "section": "ETF升溫區",
+        "rank": 7,
+        "source_file": "data/sources/20261126-ark/05_ETF升溫區_2.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "3702",
+        "section": "產業價值區",
+        "rank": 1,
+        "source_file": "data/sources/20261126-ark/06_產業價值區_1.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "8069",
+        "section": "產業價值區",
+        "rank": 2,
+        "source_file": "data/sources/20261126-ark/06_產業價值區_1.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "2356",
+        "section": "產業價值區",
+        "rank": 3,
+        "source_file": "data/sources/20261126-ark/06_產業價值區_1.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "2357",
+        "section": "產業價值區",
+        "rank": 4,
+        "source_file": "data/sources/20261126-ark/06_產業價值區_1.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "8464",
+        "section": "產業價值區",
+        "rank": 5,
+        "source_file": "data/sources/20261126-ark/06_產業價值區_1.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "2347",
+        "section": "產業價值區",
+        "rank": 6,
+        "source_file": "data/sources/20261126-ark/06_產業價值區_1.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "3034",
+        "section": "產業價值區",
+        "rank": 7,
+        "source_file": "data/sources/20261126-ark/07_產業價值區_2.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "5289",
+        "section": "產業價值區",
+        "rank": 8,
+        "source_file": "data/sources/20261126-ark/07_產業價值區_2.png",
+        "price_status": "primary_screenshot_price_change_arithmetic_checked_ax_capture_differs"
+      },
+      {
+        "code": "2885",
+        "section": "產業價值區",
+        "rank": 9,
+        "source_file": "data/sources/20261126-ark/07_產業價值區_2.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "5434",
+        "section": "產業價值區",
+        "rank": 10,
+        "source_file": "data/sources/20261126-ark/07_產業價值區_2.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "5269",
+        "section": "產業價值區",
+        "rank": 11,
+        "source_file": "data/sources/20261126-ark/07_產業價值區_2.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "3706",
+        "section": "產業價值區",
+        "rank": 12,
+        "source_file": "data/sources/20261126-ark/08_產業價值區_3.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "3042",
+        "section": "產業價值區",
+        "rank": 13,
+        "source_file": "data/sources/20261126-ark/08_產業價值區_3.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "3008",
+        "section": "產業價值區",
+        "rank": 14,
+        "source_file": "data/sources/20261126-ark/08_產業價值區_3.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "1513",
+        "section": "產業價值區",
+        "rank": 15,
+        "source_file": "data/sources/20261126-ark/08_產業價值區_3.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "2376",
+        "section": "產業價值區",
+        "rank": 16,
+        "source_file": "data/sources/20261126-ark/08_產業價值區_3.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "2379",
+        "section": "產業價值區",
+        "rank": 17,
+        "source_file": "data/sources/20261126-ark/09_產業價值區_4.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "2377",
+        "section": "產業價值區",
+        "rank": 18,
+        "source_file": "data/sources/20261126-ark/09_產業價值區_4.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "2615",
+        "section": "產業價值區",
+        "rank": 19,
+        "source_file": "data/sources/20261126-ark/09_產業價值區_4.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "1476",
+        "section": "產業價值區",
+        "rank": 20,
+        "source_file": "data/sources/20261126-ark/09_產業價值區_4.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "3231",
+        "section": "產業價值區",
+        "rank": 21,
+        "source_file": "data/sources/20261126-ark/09_產業價值區_4.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "2404",
+        "section": "產業價值區",
+        "rank": 22,
+        "source_file": "data/sources/20261126-ark/10_產業價值區_5.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "2027",
+        "section": "產業價值區",
+        "rank": 23,
+        "source_file": "data/sources/20261126-ark/10_產業價值區_5.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "6669",
+        "section": "產業價值區",
+        "rank": 24,
+        "source_file": "data/sources/20261126-ark/10_產業價值區_5.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "2637",
+        "section": "產業價值區",
+        "rank": 25,
+        "source_file": "data/sources/20261126-ark/10_產業價值區_5.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "2330",
+        "section": "產業價值區",
+        "rank": 26,
+        "source_file": "data/sources/20261126-ark/10_產業價值區_5.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "2382",
+        "section": "產業價值區",
+        "rank": 27,
+        "source_file": "data/sources/20261126-ark/11_產業價值區_6.png",
+        "price_status": "primary_screenshot_price_change_arithmetic_checked_ax_capture_differs"
+      },
+      {
+        "code": "3293",
+        "section": "產業價值區",
+        "rank": 28,
+        "source_file": "data/sources/20261126-ark/11_產業價值區_6.png",
+        "price_status": "primary_screenshot_price_change_arithmetic_checked_ax_capture_differs"
+      },
+      {
+        "code": "6139",
+        "section": "產業價值區",
+        "rank": 29,
+        "source_file": "data/sources/20261126-ark/11_產業價值區_6.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "2603",
+        "section": "產業價值區",
+        "rank": 30,
+        "source_file": "data/sources/20261126-ark/11_產業價值區_6.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "5903",
+        "section": "產業升溫區",
+        "rank": 1,
+        "source_file": "data/sources/20261126-ark/12_產業升溫區_1.png",
+        "price_status": "unverified_withheld"
+      },
+      {
+        "code": "2597",
+        "section": "產業升溫區",
+        "rank": 2,
+        "source_file": "data/sources/20261126-ark/12_產業升溫區_1.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "1341",
+        "section": "產業升溫區",
+        "rank": 3,
+        "source_file": "data/sources/20261126-ark/12_產業升溫區_1.png",
+        "price_status": "unverified_withheld"
+      },
+      {
+        "code": "6904",
+        "section": "產業升溫區",
+        "rank": 4,
+        "source_file": "data/sources/20261126-ark/12_產業升溫區_1.png",
+        "price_status": "unverified_withheld"
+      },
+      {
+        "code": "5601",
+        "section": "產業升溫區",
+        "rank": 5,
+        "source_file": "data/sources/20261126-ark/12_產業升溫區_1.png",
+        "price_status": "unverified_withheld"
+      },
+      {
+        "code": "8342",
+        "section": "產業升溫區",
+        "rank": 6,
+        "source_file": "data/sources/20261126-ark/12_產業升溫區_1.png",
+        "price_status": "unverified_withheld"
+      },
+      {
+        "code": "8426",
+        "section": "產業升溫區",
+        "rank": 7,
+        "source_file": "data/sources/20261126-ark/13_產業升溫區_2.png",
+        "price_status": "unverified_withheld"
+      },
+      {
+        "code": "8941",
+        "section": "產業升溫區",
+        "rank": 8,
+        "source_file": "data/sources/20261126-ark/13_產業升溫區_2.png",
+        "price_status": "unverified_withheld"
+      },
+      {
+        "code": "6199",
+        "section": "產業升溫區",
+        "rank": 9,
+        "source_file": "data/sources/20261126-ark/13_產業升溫區_2.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "2937",
+        "section": "產業升溫區",
+        "rank": 10,
+        "source_file": "data/sources/20261126-ark/13_產業升溫區_2.png",
+        "price_status": "unverified_withheld"
+      },
+      {
+        "code": "2640",
+        "section": "產業升溫區",
+        "rank": 11,
+        "source_file": "data/sources/20261126-ark/13_產業升溫區_2.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "5523",
+        "section": "產業升溫區",
+        "rank": 12,
+        "source_file": "data/sources/20261126-ark/14_產業升溫區_3.png",
+        "price_status": "unverified_withheld"
+      },
+      {
+        "code": "8349",
+        "section": "產業升溫區",
+        "rank": 13,
+        "source_file": "data/sources/20261126-ark/14_產業升溫區_3.png",
+        "price_status": "unverified_withheld"
+      },
+      {
+        "code": "2063",
+        "section": "產業升溫區",
+        "rank": 14,
+        "source_file": "data/sources/20261126-ark/14_產業升溫區_3.png",
+        "price_status": "unverified_withheld"
+      },
+      {
+        "code": "4767",
+        "section": "產業升溫區",
+        "rank": 15,
+        "source_file": "data/sources/20261126-ark/14_產業升溫區_3.png",
+        "price_status": "unverified_withheld"
+      },
+      {
+        "code": "6655",
+        "section": "產業升溫區",
+        "rank": 16,
+        "source_file": "data/sources/20261126-ark/14_產業升溫區_3.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "5007",
+        "section": "產業升溫區",
+        "rank": 17,
+        "source_file": "data/sources/20261126-ark/15_產業升溫區_4.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "4106",
+        "section": "產業升溫區",
+        "rank": 18,
+        "source_file": "data/sources/20261126-ark/15_產業升溫區_4.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "4550",
+        "section": "產業升溫區",
+        "rank": 19,
+        "source_file": "data/sources/20261126-ark/15_產業升溫區_4.png",
+        "price_status": "unverified_withheld"
+      },
+      {
+        "code": "5489",
+        "section": "產業升溫區",
+        "rank": 20,
+        "source_file": "data/sources/20261126-ark/15_產業升溫區_4.png",
+        "price_status": "unverified_withheld"
+      },
+      {
+        "code": "6782",
+        "section": "產業升溫區",
+        "rank": 21,
+        "source_file": "data/sources/20261126-ark/15_產業升溫區_4.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "2756",
+        "section": "產業升溫區",
+        "rank": 22,
+        "source_file": "data/sources/20261126-ark/16_產業升溫區_5.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "9937",
+        "section": "產業升溫區",
+        "rank": 23,
+        "source_file": "data/sources/20261126-ark/16_產業升溫區_5.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "1259",
+        "section": "產業升溫區",
+        "rank": 24,
+        "source_file": "data/sources/20261126-ark/16_產業升溫區_5.png",
+        "price_status": "unverified_withheld"
+      },
+      {
+        "code": "5522",
+        "section": "產業升溫區",
+        "rank": 25,
+        "source_file": "data/sources/20261126-ark/16_產業升溫區_5.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "5312",
+        "section": "產業升溫區",
+        "rank": 26,
+        "source_file": "data/sources/20261126-ark/16_產業升溫區_5.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "4153",
+        "section": "產業升溫區",
+        "rank": 27,
+        "source_file": "data/sources/20261126-ark/17_產業升溫區_6.png",
+        "price_status": "unverified_withheld"
+      },
+      {
+        "code": "7584",
+        "section": "產業升溫區",
+        "rank": 28,
+        "source_file": "data/sources/20261126-ark/17_產業升溫區_6.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      },
+      {
+        "code": "5324",
+        "section": "產業升溫區",
+        "rank": 29,
+        "source_file": "data/sources/20261126-ark/17_產業升溫區_6.png",
+        "price_status": "unverified_withheld"
+      },
+      {
+        "code": "5276",
+        "section": "產業升溫區",
+        "rank": 30,
+        "source_file": "data/sources/20261126-ark/17_產業升溫區_6.png",
+        "price_status": "ocr_ax_price_agreement_ax_change_arithmetic_checked"
+      }
+    ],
+    "field_trust": "Primary JSON preserves membership, rank and screenshot prices. AX confirms identity and industry; numeric changes require arithmetic checks. Missing AX source prices are withheld; ETF NAV is never substituted. Primary internally consistent screenshot price/change retained for asynchronous AX price differences.",
+    "trading_day_evidence": "data/sources/20261126-ark/trading_day.json",
+    "previous_water_source": "/Users/kaide/Documents/Morning-Brief/data/issues/20261125.json",
+    "publication_authorized": false
+  },
+  "date": "2026-11-26",
+  "data_as_of": "2026-11-26",
+  "source_ark": "當日方舟運算檔案",
+  "issue_no": 133,
+  "day": "THURSDAY",
+  "brief_label": "早盤觀察",
+  "session_label": "11/26 09:13盤中｜美股11/25完整收盤",
+  "title": "台股急跌後反彈，方舟水位續降",
+  "hero": {
+    "headline": "台股急跌後反彈，方舟水位續降",
+    "subhead": "台股早盤收復部分跌幅，但隔夜科技股仍弱；配置空間再縮，先看買盤能否延續。",
+    "reader_subhead": "台股早盤收復部分跌幅，但隔夜科技股仍弱；配置空間再縮，先看買盤能否延續。"
+  },
+  "strategy": {
+    "thesis": "方舟水位82.8%，較11/25的83.6%下降0.8個百分點，配置空間收窄。",
+    "tape": "09:13加權漲2.27%、12月臺指期漲2.52%；隔夜費半跌0.65%。",
+    "playbook": "先看台積電與半導體反彈能否放量延續；若權值漲勢收斂、跟漲家數不足，不追高。",
+    "risk": "美股11/26感恩節休市，11/27提早收盤（台灣時間11/28 02:00）。",
+    "reader": {
+      "thesis": "方舟水位82.8%，較11/25的83.6%下降0.8個百分點，配置空間收窄。",
+      "tape": "09:13加權漲2.27%、12月臺指期漲2.52%；隔夜費半跌0.65%。",
+      "playbook": "先看台積電與半導體反彈能否放量延續；若權值漲勢收斂、跟漲家數不足，不追高。",
+      "risk": "美股11/26感恩節休市，11/27提早收盤（台灣時間11/28 02:00）。"
+    }
+  },
+  "market": {
+    "tw_index": {
+      "value": "39,061.82",
+      "close": 39061.82,
+      "previous_close": 38195.43,
+      "change": 866.39,
+      "change_pct": 2.2683080148593695,
+      "data_as_of": "2026-11-26T09:13:00+08:00",
+      "source_url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw",
+      "evidence_file": "本地市場證據/twchart.raw",
+      "retrieved_at": "2026-11-26T01:14:22.860565+00:00",
+      "line": "39,061.82 / +2.27%（09:13盤中）",
+      "session": "intraday_not_close",
+      "quote_type": "completed_minute_close"
+    },
+    "futures": {
+      "value": "39,083.00",
+      "close": 39083.0,
+      "previous_close": 38123.0,
+      "change": 960.0,
+      "change_pct": 2.518164887338352,
+      "data_as_of": "2026-11-26T09:13:00+08:00",
+      "source_url": "https://mis.taifex.com.tw/futures/api/getChartData1M",
+      "evidence_file": "本地市場證據/txchart.raw",
+      "retrieved_at": "2026-11-26T01:14:35.447172+00:00",
+      "line": "39,083.00 / +2.52%（09:13盤中）",
+      "session": "intraday_not_close",
+      "quote_type": "completed_minute_close",
+      "contract": "2026-12",
+      "symbol": "TXFL6-F",
+      "request_body": {
+        "SymbolID": "TXFL6-F"
+      }
+    },
+    "basis": {
+      "value": 21.18,
+      "data_as_of": "2026-11-26T09:13:00+08:00",
+      "method": "futures minus spot; synchronized completed-minute closes"
+    },
+    "institutional": [
+      {
+        "institution": "自營商(自行買賣)",
+        "buy_twd": 10802832920,
+        "sell_twd": 18165685022,
+        "net_twd": -7362852102,
+        "net_twd_100m": -73.62852102,
+        "data_as_of": "2026-11-25",
+        "source_url": "https://www.twse.com.tw/rwd/zh/fund/BFI82U?dayDate=20261125&type=day&response=json"
+      },
+      {
+        "institution": "自營商(避險)",
+        "buy_twd": 54361558811,
+        "sell_twd": 59831923239,
+        "net_twd": -5470364428,
+        "net_twd_100m": -54.70364428,
+        "data_as_of": "2026-11-25",
+        "source_url": "https://www.twse.com.tw/rwd/zh/fund/BFI82U?dayDate=20261125&type=day&response=json"
+      },
+      {
+        "institution": "投信",
+        "buy_twd": 71743846506,
+        "sell_twd": 16709122211,
+        "net_twd": 55034724295,
+        "net_twd_100m": 550.34724295,
+        "data_as_of": "2026-11-25",
+        "source_url": "https://www.twse.com.tw/rwd/zh/fund/BFI82U?dayDate=20261125&type=day&response=json"
+      },
+      {
+        "institution": "外資及陸資(不含外資自營商)",
+        "buy_twd": 457832326822,
+        "sell_twd": 581487124975,
+        "net_twd": -123654798153,
+        "net_twd_100m": -1236.54798153,
+        "data_as_of": "2026-11-25",
+        "source_url": "https://www.twse.com.tw/rwd/zh/fund/BFI82U?dayDate=20261125&type=day&response=json"
+      },
+      {
+        "institution": "外資自營商",
+        "buy_twd": 0,
+        "sell_twd": 0,
+        "net_twd": 0,
+        "net_twd_100m": 0.0,
+        "data_as_of": "2026-11-25",
+        "source_url": "https://www.twse.com.tw/rwd/zh/fund/BFI82U?dayDate=20261125&type=day&response=json"
+      },
+      {
+        "institution": "合計",
+        "buy_twd": 594740565059,
+        "sell_twd": 676193855447,
+        "net_twd": -81453290388,
+        "net_twd_100m": -814.53290388,
+        "data_as_of": "2026-11-25",
+        "source_url": "https://www.twse.com.tw/rwd/zh/fund/BFI82U?dayDate=20261125&type=day&response=json"
+      }
+    ],
+    "foreign_oi": {
+      "value": "-105,709口（11/25）",
+      "net": -105709,
+      "long": 11439,
+      "short": 117148,
+      "trading_net": -2508,
+      "data_as_of": "2026-11-25",
+      "source_url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate",
+      "note": "前一交易日已完成未平倉部位，非今日盤中流量。"
+    },
+    "sox": {
+      "value": "8,774.86",
+      "close": 8774.86,
+      "previous_close": 8832.5,
+      "change": -57.64,
+      "change_pct": -0.6525898669685819,
+      "data_as_of": "2026-11-25",
+      "source_url": "https://api.nasdaq.com/api/quote/SOX/summary?assetclass=index",
+      "evidence_file": "本地市場證據/SOX-info.raw",
+      "retrieved_at": "2026-11-26T01:14:21.548496+00:00",
+      "line": "8,774.86 / -0.65%（11/25收盤）",
+      "session": "cash_close",
+      "quote_type": "official_summary_crosschecked_dated_distributor",
+      "date_evidence_file": "本地市場證據/SOX-yahoo.raw"
+    },
+    "ndx": {
+      "value": "26,046.90",
+      "close": 26046.9,
+      "previous_close": 26214.17,
+      "change": -167.27,
+      "change_pct": -0.6380900100975923,
+      "data_as_of": "2026-11-25",
+      "source_url": "https://api.nasdaq.com/api/quote/NDX/summary?assetclass=index",
+      "evidence_file": "本地市場證據/NDX-info.raw",
+      "retrieved_at": "2026-11-26T01:14:21.589627+00:00",
+      "line": "26,046.90 / -0.64%（11/25收盤）",
+      "session": "cash_close",
+      "quote_type": "official_summary_crosschecked_dated_distributor",
+      "date_evidence_file": "本地市場證據/NDX-yahoo.raw"
+    },
+    "spx": {
+      "value": "7,182.78",
+      "close": 7182.78,
+      "previous_close": 7201.09,
+      "change": -18.31,
+      "change_pct": -0.25426706234750573,
+      "data_as_of": "2026-11-25",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=10d&interval=1d",
+      "evidence_file": "本地市場證據/GSPC.raw",
+      "retrieved_at": "2026-11-26T01:14:21.657494+00:00",
+      "line": "7,182.78 / -0.25%（11/25收盤）",
+      "session": "cash_close",
+      "quote_type": "daily_close",
+      "timezone": "America/New_York"
+    },
+    "dow": {
+      "value": "50,182.95",
+      "close": 50182.95,
+      "previous_close": 50018.7,
+      "change": 164.25,
+      "change_pct": 0.3283771869320874,
+      "data_as_of": "2026-11-25",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?range=10d&interval=1d",
+      "evidence_file": "本地市場證據/DJI.raw",
+      "retrieved_at": "2026-11-26T01:14:21.653430+00:00",
+      "line": "50,182.95 / +0.33%（11/25收盤）",
+      "session": "cash_close",
+      "quote_type": "daily_close",
+      "timezone": "America/New_York"
+    },
+    "nasdaq": {
+      "value": "23,585.80",
+      "close": 23585.803,
+      "previous_close": 23733.54,
+      "change": -147.737,
+      "change_pct": -0.6224819390617666,
+      "data_as_of": "2026-11-25",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=10d&interval=1d",
+      "evidence_file": "本地市場證據/IXIC.raw",
+      "retrieved_at": "2026-11-26T01:14:21.630168+00:00",
+      "line": "23,585.80 / -0.62%（11/25收盤）",
+      "session": "cash_close",
+      "quote_type": "daily_close",
+      "timezone": "America/New_York"
+    },
+    "vix": {
+      "value": "28.29",
+      "close": 28.29,
+      "previous_close": 26.36,
+      "change": 1.93,
+      "change_pct": 7.321699544764795,
+      "data_as_of": "2026-11-25",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?range=10d&interval=1d",
+      "evidence_file": "本地市場證據/VIX.raw",
+      "retrieved_at": "2026-11-26T01:14:21.722801+00:00",
+      "line": "28.29 / +7.32%（11/25收盤）",
+      "session": "cash_close",
+      "quote_type": "daily_close",
+      "timezone": "America/New_York"
+    },
+    "systemic_risk": "VIX 28.29，波動偏高"
+  },
+  "mag7": [
+    {
+      "value": "355.58",
+      "close": 355.58,
+      "previous_close": 354.07,
+      "change": 1.51,
+      "change_pct": 0.4264693422204649,
+      "data_as_of": "2026-11-25",
+      "source_url": "https://api.nasdaq.com/api/quote/AAPL/info?assetclass=stocks",
+      "evidence_file": "本地市場證據/AAPL-info.raw",
+      "retrieved_at": "2026-11-26T01:14:21.482393+00:00",
+      "line": "355.58 / +0.43%",
+      "name": "Apple",
+      "ticker": "AAPL",
+      "price": "355.58",
+      "change_abs": "+1.51",
+      "tier": "neutral",
+      "tier_label": "收漲",
+      "signal": "逆勢上漲，留意相對強勢能否延續。",
+      "session": "cash_close",
+      "quote_type": "nasdaq_secondary_regular_session_close",
+      "source_timestamp": "Closed at Nov 25, 2026 4:00 PM ET",
+      "selected_source_block": "secondaryData",
+      "previous_close_evidence": "本地市場證據/AAPL-hist.raw",
+      "crosscheck_evidence": "本地市場證據/AAPL-yahoo.raw"
+    },
+    {
+      "value": "489.93",
+      "close": 489.93,
+      "previous_close": 496.13,
+      "change": -6.2,
+      "change_pct": -1.249672464878157,
+      "data_as_of": "2026-11-25",
+      "source_url": "https://api.nasdaq.com/api/quote/MSFT/info?assetclass=stocks",
+      "evidence_file": "本地市場證據/MSFT-info.raw",
+      "retrieved_at": "2026-11-26T01:14:21.506041+00:00",
+      "line": "489.93 / -1.25%",
+      "name": "Microsoft",
+      "ticker": "MSFT",
+      "price": "489.93",
+      "change_abs": "-6.20",
+      "tier": "neutral",
+      "tier_label": "收跌",
+      "signal": "收盤下跌，觀察能否守住反彈起點。",
+      "session": "cash_close",
+      "quote_type": "nasdaq_secondary_regular_session_close",
+      "source_timestamp": "Closed at Nov 25, 2026 4:00 PM ET",
+      "selected_source_block": "secondaryData",
+      "previous_close_evidence": "本地市場證據/MSFT-hist.raw",
+      "crosscheck_evidence": "本地市場證據/MSFT-yahoo.raw"
+    },
+    {
+      "value": "149.30",
+      "close": 149.3,
+      "previous_close": 155.38,
+      "change": -6.08,
+      "change_pct": -3.912987514480628,
+      "data_as_of": "2026-11-25",
+      "source_url": "https://api.nasdaq.com/api/quote/NVDA/info?assetclass=stocks",
+      "evidence_file": "本地市場證據/NVDA-info.raw",
+      "retrieved_at": "2026-11-26T01:14:21.508081+00:00",
+      "line": "149.30 / -3.91%",
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "price": "149.30",
+      "change_abs": "-6.08",
+      "tier": "neutral",
+      "tier_label": "收跌",
+      "signal": "盤中跌幅收斂，但收盤仍弱於費半；留意賣壓是否延續。",
+      "session": "cash_close",
+      "quote_type": "nasdaq_secondary_regular_session_close",
+      "source_timestamp": "Closed at Nov 25, 2026 4:00 PM ET",
+      "selected_source_block": "secondaryData",
+      "previous_close_evidence": "本地市場證據/NVDA-hist.raw",
+      "crosscheck_evidence": "本地市場證據/NVDA-yahoo.raw"
+    },
+    {
+      "value": "244.43",
+      "close": 244.43,
+      "previous_close": 252.29,
+      "change": -7.86,
+      "change_pct": -3.115462364738991,
+      "data_as_of": "2026-11-25",
+      "source_url": "https://api.nasdaq.com/api/quote/AMZN/info?assetclass=stocks",
+      "evidence_file": "本地市場證據/AMZN-info.raw",
+      "retrieved_at": "2026-11-26T01:14:21.495185+00:00",
+      "line": "244.43 / -3.12%",
+      "name": "Amazon",
+      "ticker": "AMZN",
+      "price": "244.43",
+      "change_abs": "-7.86",
+      "tier": "neutral",
+      "tier_label": "收跌",
+      "signal": "收盤下跌，觀察能否守住反彈起點。",
+      "session": "cash_close",
+      "quote_type": "nasdaq_secondary_regular_session_close",
+      "source_timestamp": "Closed at Nov 25, 2026 4:00 PM ET",
+      "selected_source_block": "secondaryData",
+      "previous_close_evidence": "本地市場證據/AMZN-hist.raw",
+      "crosscheck_evidence": "本地市場證據/AMZN-yahoo.raw"
+    },
+    {
+      "value": "273.10",
+      "close": 273.1,
+      "previous_close": 279.05,
+      "change": -5.95,
+      "change_pct": -2.1322343666009678,
+      "data_as_of": "2026-11-25",
+      "source_url": "https://api.nasdaq.com/api/quote/GOOGL/info?assetclass=stocks",
+      "evidence_file": "本地市場證據/GOOGL-info.raw",
+      "retrieved_at": "2026-11-26T01:14:21.495111+00:00",
+      "line": "273.10 / -2.13%",
+      "name": "Alphabet A",
+      "ticker": "GOOGL",
+      "price": "273.10",
+      "change_abs": "-5.95",
+      "tier": "neutral",
+      "tier_label": "收跌",
+      "signal": "收盤下跌，觀察能否守住反彈起點。",
+      "session": "cash_close",
+      "quote_type": "nasdaq_secondary_regular_session_close",
+      "source_timestamp": "Closed at Nov 25, 2026 4:00 PM ET",
+      "selected_source_block": "secondaryData",
+      "previous_close_evidence": "本地市場證據/GOOGL-hist.raw",
+      "crosscheck_evidence": "本地市場證據/GOOGL-yahoo.raw"
+    },
+    {
+      "value": "609.89",
+      "close": 609.89,
+      "previous_close": 589.82,
+      "change": 20.07,
+      "change_pct": 3.4027330371977893,
+      "data_as_of": "2026-11-25",
+      "source_url": "https://api.nasdaq.com/api/quote/META/info?assetclass=stocks",
+      "evidence_file": "本地市場證據/META-info.raw",
+      "retrieved_at": "2026-11-26T01:14:21.497008+00:00",
+      "line": "609.89 / +3.40%",
+      "name": "Meta",
+      "ticker": "META",
+      "price": "609.89",
+      "change_abs": "+20.07",
+      "tier": "neutral",
+      "tier_label": "收漲",
+      "signal": "逆勢上漲，留意相對強勢能否延續。",
+      "session": "cash_close",
+      "quote_type": "nasdaq_secondary_regular_session_close",
+      "source_timestamp": "Closed at Nov 25, 2026 4:00 PM ET",
+      "selected_source_block": "secondaryData",
+      "previous_close_evidence": "本地市場證據/META-hist.raw",
+      "crosscheck_evidence": "本地市場證據/META-yahoo.raw"
+    },
+    {
+      "value": "380.14",
+      "close": 380.14,
+      "previous_close": 384.68,
+      "change": -4.54,
+      "change_pct": -1.1802017261100135,
+      "data_as_of": "2026-11-25",
+      "source_url": "https://api.nasdaq.com/api/quote/TSLA/info?assetclass=stocks",
+      "evidence_file": "本地市場證據/TSLA-info.raw",
+      "retrieved_at": "2026-11-26T01:14:21.518695+00:00",
+      "line": "380.14 / -1.18%",
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "price": "380.14",
+      "change_abs": "-4.54",
+      "tier": "neutral",
+      "tier_label": "收跌",
+      "signal": "收盤下跌，觀察能否守住反彈起點。",
+      "session": "cash_close",
+      "quote_type": "nasdaq_secondary_regular_session_close",
+      "source_timestamp": "Closed at Nov 25, 2026 4:00 PM ET",
+      "selected_source_block": "secondaryData",
+      "previous_close_evidence": "本地市場證據/TSLA-hist.raw",
+      "crosscheck_evidence": "本地市場證據/TSLA-yahoo.raw"
+    }
+  ],
+  "research_sources": [
+    {
+      "title": "市場資料｜tw_index",
+      "url": "https://mis.twse.com.tw/stock/api/getChartOhlcStatis.jsp?ex=tse&ch=t00.tw"
+    },
+    {
+      "title": "市場資料｜futures",
+      "url": "https://mis.taifex.com.tw/futures/api/getChartData1M"
+    },
+    {
+      "title": "市場資料｜foreign_oi",
+      "url": "https://openapi.taifex.com.tw/v1/MarketDataOfMajorInstitutionalTradersDetailsOfFuturesContractsBytheDate"
+    },
+    {
+      "title": "市場資料｜sox",
+      "url": "https://api.nasdaq.com/api/quote/SOX/summary?assetclass=index"
+    },
+    {
+      "title": "市場資料｜ndx",
+      "url": "https://api.nasdaq.com/api/quote/NDX/summary?assetclass=index"
+    },
+    {
+      "title": "市場資料｜spx",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=10d&interval=1d"
+    },
+    {
+      "title": "市場資料｜dow",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?range=10d&interval=1d"
+    },
+    {
+      "title": "市場資料｜nasdaq",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=10d&interval=1d"
+    },
+    {
+      "title": "市場資料｜vix",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?range=10d&interval=1d"
+    },
+    {
+      "title": "路透盤中",
+      "url": "https://www.koreatimes.co.kr/world/20261126/nasdaq-sinks-about-4-as-ai-rout-fresh-trump-tariffs-spook-wall-st"
+    },
+    {
+      "title": "路透收盤",
+      "url": "https://www.koreatimes.co.kr/world/20261126/world-stocks-tumble-as-trump-tariffs-rattle-markets-ai-rally-fades"
+    },
+    {
+      "title": "路透另一版本",
+      "url": "https://www.koreatimes.co.kr/world/20261126/nasdaq-sp-500-ease-but-off-lows-of-the-day-as-investors-seek-bargains"
+    },
+    {
+      "title": "USTR 關稅提案",
+      "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural"
+    },
+    {
+      "title": "關稅背景",
+      "url": "https://www.koreatimes.co.kr/world/20261126/us-proposes-tariffs-over-excess-production-retains-15-cap-for-korea-japan-eu"
+    },
+    {
+      "title": "NYSE 行事曆",
+      "url": "https://www.nyse.com/trade/hours-calendars"
+    },
+    {
+      "title": "Bloomberg 跨資產快照",
+      "url": "https://www.swissinfo.ch/eng/stocks-pare-ai-driven-losses-as-dip-buyers-step-in%3a-markets-wrap/92432172"
+    },
+    {
+      "title": "路透美元",
+      "url": "https://www.heraldsun.com/news/business/article318243040.html"
+    },
+    {
+      "title": "路透金價",
+      "url": "https://www.koreatimes.co.kr/world/20261126/gold-falls-3-to-more-than-one-year-low-after-data-shows-us-inflation-rose-further"
+    },
+    {
+      "title": "期金收盤",
+      "url": "https://www.eoption.com/market-review-november-25-2026/"
+    },
+    {
+      "title": "跨資產交叉核對",
+      "url": "https://www.babypips.com/news/daily-financial-forex-market-recap-2026-11-25"
+    },
+    {
+      "title": "BTC ETF 申贖",
+      "url": "https://farside.co.uk/btc/"
+    },
+    {
+      "title": "ETH ETF 申贖",
+      "url": "https://farside.co.uk/eth/"
+    }
+  ],
+  "research": {
+    "market_verification": {
+      "status": "verified_with_documented_source_lag",
+      "mag7_count": 7,
+      "common_tw_minute": "2026-11-26T09:13:00+08:00",
+      "us_session": "2026-11-25",
+      "issues": [
+        "Nasdaq historical files lag at Nov24; Nov25 MAG7 use explicitly dated 4PM secondaryData, independently checked against Nov24 history and Yahoo regularMarketPrice. After-hours primaryData excluded.",
+        "Cboe VIX history lags Nov24; Nov25 VIX uses dated Yahoo daily row. SOX/NDX official summaries date-confirmed with Yahoo."
+      ],
+      "formulas": {
+        "change": "current - previous",
+        "change_pct": "(current / previous - 1) * 100",
+        "basis": "futures - spot"
+      },
+      "generated_at": "2026-11-26T01:15:34.315732+00:00"
+    },
+    "cross_asset_cut": "11/25 16:00 ET；美元為另外的路透晚盤截點，ETF完整資料為11/24"
+  },
+  "temperature": {
+    "vix_note": "11/25 VIX收28.29、漲7.32%。美股尾盤雖收斂跌幅，波動仍高。",
+    "signal_headline": "台股反彈，隔夜科技未完全回穩",
+    "signal_note": "方舟水位82.8%，較11/25的83.6%下降0.8個百分點，配置空間收窄。"
+  },
+  "editorial": {
+    "pull_quote": "反彈先看誰跟上，不只看加權指數翻紅。",
+    "body": "方舟水位82.8%，較11/25的83.6%下降0.8個百分點，配置空間收窄。 09:13加權漲2.27%、12月臺指期漲2.52%；隔夜費半跌0.65%。 11/25外資現貨賣超1,236.55億元，臺指期未平倉淨空105,709口；均非今早交易流量。 先看台積電與半導體反彈能否放量延續；若權值漲勢收斂、跟漲家數不足，不追高。"
+  },
+  "home": {
+    "thesis_blurb": "台股早盤收復部分跌幅，但隔夜科技股仍弱；配置空間再縮，先看買盤能否延續。",
+    "recent_summary": "09:13加權漲2.27%、12月臺指期漲2.52%；隔夜費半跌0.65%。"
+  },
+  "validation": {
+    "strengthened": [
+      "加權從前一交易日急跌中反彈，臺指期同分鐘為正價差。",
+      "ETF價值10檔、升溫7檔；產業兩區各30檔，均無雙區重疊。"
+    ],
+    "pressure": [
+      "方舟水位82.8%，較11/25的83.6%下降0.8個百分點，配置空間收窄。",
+      "11/25外資現貨賣超1,236.55億元，臺指期未平倉淨空105,709口；均非今早交易流量。",
+      "費半仍收低，VIX上升。"
+    ],
+    "long_term": [
+      "美方提出涵蓋台灣等14個經濟體的301調查後續措施，目前是提案，不是已生效關稅。",
+      "半導體與伺服器單日股價波動，不能推論訂單已下修。"
+    ]
+  },
+  "analysis": {
+    "us_close": "11/25 道瓊50,182.95（+0.33%）、標普7,182.78（-0.25%）、那斯達克23,585.80（-0.62%）、費半8,774.86（-0.65%）。",
+    "tx_night": "11/26 09:13日盤，12月臺指期39,083點、漲2.52%，同分鐘正價差21.18點；11/25加權收38,195.43點。",
+    "axes": {
+      "thesis": "09:13加權漲2.27%、12月臺指期漲2.52%；隔夜費半跌0.65%。",
+      "policy": "美方提出涵蓋台灣等14個經濟體的301調查後續措施，目前是提案，不是已生效關稅。",
+      "risk": "美股11/26感恩節休市，11/27提早收盤（台灣時間11/28 02:00）。"
+    }
+  },
+  "intelligence": {
+    "trump": [
+      {
+        "time": "11/25美國",
+        "content": "美方提出涵蓋台灣等14個經濟體的301調查後續措施，目前是提案，不是已生效關稅。"
+      }
+    ],
+    "musk": "未見可直接確認、足以改變今日研判的馬斯克新訊息。",
+    "policy": [
+      "美方提出涵蓋台灣等14個經濟體的301調查後續措施，目前是提案，不是已生效關稅。",
+      "美股11/26感恩節休市，11/27提早收盤（台灣時間11/28 02:00）。"
+    ]
+  },
+  "capital_flow": {
+    "headline": "金價回升、長債殖利率回落，資金方向仍待確認",
+    "stance": "區分價格回升與實際淨申購",
+    "summary": "11/25晚盤金價、比特幣與以太幣回升，長債殖利率回落；最近一筆完整的11/24美國現貨ETF資料仍是BTC、ETH同步淨流出。",
+    "as_of": "11/25美國16:00跨資產快照；美元為另截點；完整加密ETF申贖為11/24",
+    "assets": [
+      {
+        "asset": "黃金",
+        "role": "避險",
+        "evidence": "11/25 16:00 ET 現貨3,575.16美元（+0.5%）",
+        "flow_signal": "未核實同日淨流量",
+        "confidence": "價量與申贖日期分列",
+        "watch": "看現貨是否守住反彈與ETF持倉是否增加",
+        "tone": "neutral"
+      },
+      {
+        "asset": "美元",
+        "role": "匯率",
+        "evidence": "11/25路透晚盤DXY 103.62（−0.22%）；非同時點官方定盤",
+        "flow_signal": "未核實同日淨流量",
+        "confidence": "價量與申贖日期分列",
+        "watch": "看美元能否收復失地",
+        "tone": "neutral"
+      },
+      {
+        "asset": "美債",
+        "role": "久期",
+        "evidence": "11/25 16:00 ET 10年殖利率4.86%（−7基點）",
+        "flow_signal": "未核實同日淨流量",
+        "confidence": "價量與申贖日期分列",
+        "watch": "看長端殖利率跌勢是否延續",
+        "tone": "neutral"
+      },
+      {
+        "asset": "比特幣 BTC",
+        "role": "風險偏好",
+        "evidence": "11/25 16:00 ET 60,237.01美元（+0.7%）",
+        "flow_signal": "11/24美國現貨ETF淨流出2.314億美元；11/25未完整",
+        "confidence": "價量與申贖日期分列",
+        "watch": "看價格與完整ETF申贖是否同向",
+        "tone": "neutral"
+      },
+      {
+        "asset": "以太幣 ETH",
+        "role": "加密風險偏好",
+        "evidence": "11/25 16:00 ET 1,688.59美元（+0.6%）；相較BTC稍弱，ETH/BTC約0.02803",
+        "flow_signal": "11/24美國現貨ETF淨流出0.641億美元；11/25未完整",
+        "confidence": "價量與申贖日期分列",
+        "watch": "看ETH/BTC與完整ETF申贖是否同步轉強",
+        "tone": "neutral"
+      }
+    ],
+    "interpretation": [
+      "價格反彈不是淨流入；科技股收斂跌幅，還不能說風險偏好已恢復。"
+    ],
+    "confirmation": [
+      "先看台股反彈廣度、長債殖利率，以及下一筆完整的BTC與ETH現貨ETF申贖。"
+    ],
+    "caveat": "價格變動不等於資金流。",
+    "reader": {
+      "headline": "金價回升、長債殖利率回落，資金方向仍待確認",
+      "flow": "11/25晚盤金價、比特幣與以太幣回升，長債殖利率回落；最近一筆完整的11/24美國現貨ETF資料仍是BTC、ETH同步淨流出。",
+      "meaning": "價格反彈不是淨流入；科技股收斂跌幅，還不能說風險偏好已恢復。",
+      "action": "台股半導體先看反彈能否擴散；黃金或長債ETF先觀察，不因單日價格變動切換配置。",
+      "watch": "先看台股反彈廣度、長債殖利率，以及下一筆完整的BTC與ETH現貨ETF申贖。"
+    }
+  },
+  "conclusion": "今日一句話：<em>反彈先看能否擴散，水位續降不追高。</em>",
+  "appendix": {
+    "after_hours": "台股與臺指期為11/26 09:13盤中；美股與台股法人為11/25。方舟名單採11/26早盤快照，未能確認的報價留白。",
+    "map_bullets": [
+      "半導體、封裝與伺服器：觀察權值反彈能否帶動更多個股。",
+      "出口族群：關稅仍為提案，留意正式程序與適用範圍。",
+      "反向與槓桿ETF每日重設，不把升溫當成長期配置。"
+    ],
+    "execution": "先看台積電與半導體反彈能否放量延續；若權值漲勢收斂、跟漲家數不足，不追高。"
+  },
+  "disclaimer": "Kelvin Wiggly Morning Brief｜2026/11/26早盤觀察。僅供研究參考，非投資建議。",
+  "xurl_signal_layer": {
+    "status": "no_material_signal",
+    "signals_count": 0,
+    "included_in_revision": false
+  },
+  "lock_scenario": true,
+  "scenario_id": "03",
+  "scenario_reason": "台股早盤急跌後反彈，但水位小幅續降、隔夜費半仍弱，先控制追價速度，等待買盤擴散。"
+}
