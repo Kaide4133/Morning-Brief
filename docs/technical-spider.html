@@ -2408,7 +2408,7 @@
       $('loadStatus').textContent =
         '資料池已載入 ' + pool.records.length + ' 檔 · 截至 ' + (pool.as_of || '—');
       $('metaDataDate').textContent = '資料日期 ' + (pool.as_of || '—');
-      $('metaPoolSize').textContent = '可用 ' + pool.records.length + '／候選 ' + 75 + ' 檔';
+      $('metaPoolSize').textContent = '可用 ' + pool.records.length + '／候選 ' + ((data.meta || {}).universe_size || pool.records.length) + ' 檔';
       $('versionNote').textContent =
         'v0.7.0 · 交易紀律引擎 · 訊號驗證 / 時間停滯 / 加倉資格 / 量能活躍 / 過熱清倉 · 資料截至 ' +
         (pool.as_of || '—');

@@ -1,0 +1,67 @@
+{
+  "capturedAt" : "2026-11-27T01:05:33Z",
+  "indicators" : [
+    {
+      "angleDegrees" : 29.100000000000001,
+      "approximate" : true,
+      "name" : "全球散戶",
+      "pivot" : {
+        "x" : 47,
+        "y" : 431
+      },
+      "status" : "estimated",
+      "value" : 16
+    },
+    {
+      "angleDegrees" : 77.799999999999997,
+      "approximate" : true,
+      "name" : "外資情緒",
+      "pivot" : {
+        "x" : 160,
+        "y" : 431
+      },
+      "status" : "estimated",
+      "value" : 43
+    },
+    {
+      "angleDegrees" : 81.5,
+      "approximate" : true,
+      "name" : "位階增溫",
+      "pivot" : {
+        "x" : 272,
+        "y" : 430
+      },
+      "status" : "estimated",
+      "value" : 45
+    },
+    {
+      "angleDegrees" : 72.700000000000003,
+      "approximate" : true,
+      "name" : "社交反指",
+      "pivot" : {
+        "x" : 384,
+        "y" : 431
+      },
+      "status" : "estimated",
+      "value" : 40
+    },
+    {
+      "angleDegrees" : 58,
+      "approximate" : true,
+      "name" : "量能爆衝",
+      "pivot" : {
+        "x" : 497,
+        "y" : 431
+      },
+      "status" : "estimated",
+      "value" : 32
+    }
+  ],
+  "scale" : {
+    "left" : 0,
+    "right" : 100,
+    "top" : 50
+  },
+  "schemaVersion" : 1,
+  "sourceImage" : "00_運算五指標.png"
+}
